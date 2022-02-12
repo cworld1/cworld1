@@ -103,5 +103,5 @@ theme: inside
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/cworld1/cworld1.git
+  repository: https://github.com/cworld1/cworld1.github.io.git
   branch: master
