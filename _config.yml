@@ -99,9 +99,9 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: inside
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-# deploy:
-#   type: git
-#   repository: https://github.com/cworld1/cworld1.git
-#   branch: gh-pages
+Deployment
+# Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repository: https://github.com/cworld1/cworld1.git
+  branch: gh-pages
