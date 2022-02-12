@@ -1,0 +1,488 @@
+# ---------------------------------------------------------------
+# Basic
+# ---------------------------------------------------------------
+
+# Appearance
+appearance:
+  # Accent color, default '#2a2b33'
+  accent_color: '#659eb9'
+  # Font color, default '#363636'
+  foreground_color:
+  # Border color, default '#e0e0e0'
+  border_color:
+  # body background, default '#f5f7fa'
+  background:
+  # Sidebar background (when opened), default to accent_color
+  sidebar_background: '#f0f2f7'
+  # Card background, default '#fff'
+  card_background:
+
+  # All background settings above support image, e.g.,
+  # '//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png #f5f7fa' or
+  # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
+
+  # Maximum width of content
+  # content_width: 640
+
+  # Fonts
+  font:
+    # Url of font css file
+    # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
+    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+
+    # Base font which applied to body
+    base: "'Josefin Sans', 'PingFang SC'"
+    # Sidebar author font, fallback to `base`
+    logo: 'Lobster'
+    # Sidebar menu font, fallback to `base`
+    menu: 'Baloo Bhaijaan'
+    # Font for:
+    # - percentage on the fab button
+    # - month text on archives page
+    # - count
+    # - pager
+    # - toc index
+    # - category pill
+    # fallback to `base`
+    label: Montserrat
+    # Headline(h1, h2, h3, h4, h5, h6) font, fallback to `base`
+    heading:
+    # Code and code block
+    code: Inconsolata, monospace
+    # Base font for printing which applied to body
+    print:
+
+  # Code Syntax Highlighting
+  # Uses an architecture called "base16" (https://github.com/chriskempson/base16),
+  # the default theme is a customized Atelier Dune Light theme,
+  # please feel free to explore more.
+  highlight: [
+    '#ffffff', '#e0e0e0', '#d6d6d6', '#8e908c',
+    '#969896', '#4d4d4c', '#282a2e', '#1d1f21',
+    '#c82829', '#f5871f', '#eab700', '#718c00',
+    '#3e999f', '#4271ae', '#8959a8', '#a3685a'
+  ]
+
+  # Default Light by Chris Kempson (http://chriskempson.com)
+  # highlight: [
+  #   '#f8f8f8', '#e8e8e8', '#d8d8d8', '#b8b8b8',
+  #   '#585858', '#383838', '#282828', '#181818',
+  #   '#ab4642', '#dc9656', '#f7ca88', '#a1b56c',
+  #   '#86c1b9', '#7cafc2', '#ba8baf', '#a16946'
+  # ]
+
+  # Harmonic16 Light by Jannik Siebert (https://github.com/janniks)
+  # highlight: [
+  #   '#f7f9fb', '#e5ebf1', '#cbd6e2', '#aabcce',
+  #   '#627e99', '#405c79', '#223b54', '#0b1c2c',
+  #   '#bf8b56', '#bfbf56', '#8bbf56', '#56bf8b',
+  #   '#568bbf', '#8b56bf', '#bf568b', '#bf5656'
+  # ]
+
+  # Tomorrow Night by Chris Kempson (http://chriskempson.com)
+  # highlight: [
+  #   '#1d1f21', '#282a2e', '#373b41', '#969896',
+  #   '#b4b7b4', '#c5c8c6', '#e0e0e0', '#ffffff',
+  #   '#cc6666', '#de935f', '#f0c674', '#b5bd68',
+  #   '#8abeb7', '#81a2be', '#b294bb', '#a3685a'
+  # ]
+
+  darkmode:
+    accent_color: '#539bf5'
+    foreground_color: '#adbac7'
+    border_color: '#373e47'
+    background: '#22272e'
+    sidebar_background: '#22272e'
+    card_background: '#2d333b'
+    highlight: [
+      '#2d333b', '#444c56', '#3e4451', '#545862',
+      '#565c64', '#abb2bf', '#b6bdca', '#c8ccd4',
+      '#e06c75', '#d19a66', '#e5c07b', '#98c379',
+      '#56b6c2', '#61afef', '#c678dd', '#be5046'
+    ]
+
+# Sidebar profile
+profile:
+  # `email` is used for gravatar(https://en.gravatar.com),
+  # fallback to `hexo.config.email` if not specified
+  email: cworld0@qq.com
+
+  # You can set Avatar URL directly
+  avatar: https://gravatar.loli.net/avatar/85b870f6b1a177981d3e9566e3ad7264?s=400
+
+  bio: Stay hungry, Stay foolish. 求知若愚，虚怀若谷。
+
+# Sidebar navigation links
+menu:
+  🏠 Home: /
+  🔍 Search: /search
+  # 🎵 Music: /playlist
+  🔗 Link: /link
+  🧑‍💻 About: /about
+  # About: /about
+  # Links: /links
+  # Github: https://github.com/username
+
+# Social media URL
+sns:
+  # Built-in icons
+  # `email`, `feed`, `github`, `twitter`, `facebook`, `instagram`, `tumblr`, `dribbble`, `telegram`
+  # `youtube`, `hangouts`, `linkedin`, `pinterest`, `soundcloud`, `myspace`, `weibo`, `qq
+  - icon: email
+    title: 邮件联系我
+    url: # default to `profile.email`
+  - icon: qq
+    title: QQ
+    url: https://wpa.qq.com/msgrd?v=3&uin=903517499&site=qq&menu=yes
+  - title: 酷安
+    url: https://www.coolapk.com/u/1384771
+    template: |
+      <svg t="1644654153078" class="icon" viewBox="0 0 1922 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1687" data-darkreader-inline-fill="" width="200" height="200"><path d="M513.810604 0c308.858273 0 602.991192 297.820939 602.991192 297.820939l-132.287657 102.890399S723.386322 178.321089 513.810604 178.321089c-143.391802 0-329.062206 104.787859-329.062206 323.556901 0 213.250375 136.029126 334.594235 330.906216 334.594235C1023.05127 836.485587 1203.216369 0 1363.15081 0c104.787859 0 175.047303 244.772252 297.820938 450.406065 147.06646 246.349014 261.475239 472.814793 261.47524 481.660695 0 49.641277-46.380854 91.919878-79.479494 91.919878S1206.891026 577.255229 1206.891026 577.255229l148.910469-108.462516 189.345061 128.679812L1359.476153 259.230358c-57.912596 57.899234-336.424882 764.769642-834.628215 764.769642C329.970848 1023.986638 0 880.581473 0 500.047343 0 284.952958 162.687093 0 513.810604 0z" p-id="1688"></path></svg>
+  - icon: telegram
+    title: Telegram
+    url: https://t.me/cworld0
+  - icon: github
+    title: Github
+    url: https://github.com/cworld1
+  - icon: feed
+    title: Feed
+    url: # default to `hexo.config.feed.path`
+
+  # custom icon
+  # - title: Email me
+  #   url: # default to `profile.email`
+  #   template: <i class="fa fa-github"></i>
+  # - title: Love you
+  #   url:
+  #   template: |
+  #     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+
+# Sidebar footer copyright info
+footer:
+  # Set to false to hide.
+  copyright: '&copy; 2022 • <a href="">CWorld</a>'
+
+  # Set to false to hide Hexo link.
+  # powered: false
+
+  # Set to false to hide theme link.
+  # theme: false
+
+  # Custom text.
+  # custom: Hosted by <a target="_blank" rel="external nofollow"
+  #   href="https://pages.github.com/"><b>Github Pages</b></a>
+  custom: <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+
+
+# ---------------------------------------------------------------
+# Content
+# ---------------------------------------------------------------
+
+# Page
+page:
+  # Display Table of content, default to `true`
+  # toc: false
+
+  # Display reward, default to `false`
+  # reward: true
+  reward: true
+
+  # Display copyright notice, default to `false`
+  # copyright: true
+
+# Post
+post:
+  # per_page: 10
+  # reading_time: false
+  # reading_time:
+  #   wpm: 150
+  #   text: ":words words in :minutes min"
+
+  # The following settings are the same as the page
+  # toc: false
+  # reward: true
+  # copyright: true
+  reward: true
+  copyright: true
+
+# Archive
+archive:
+  # per_page: 10
+
+# Tag
+tag:
+  # per_page: 10
+
+# Category
+category:
+  # per_page: 10
+
+# Search
+search:
+  # Display a quick search button in fab
+  # fab: true
+
+  # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
+  # page: true
+  page: true
+
+  # Local search
+  # adapter:
+  #   range:
+  #     - post
+  #     - page
+  #   per_page: 20
+  #   limit: 10000
+  adapter:
+    range:
+      - post
+      - page
+    per_page: 20
+    limit: 10000
+
+  # Custom search
+  # adapter:
+  #   # Used for pagination
+  #   per_page: 10
+  #   # Optional
+  #   logo: //cdn.worldvectorlogo.com/logos/algolia.svg
+  #   request:
+  #     url: https://{APPLICATION_ID}-dsn.algolia.net/1/indexes/{INDEX}/query
+  #     method: post
+  #     # Available variables: :query, :per_page, :current
+  #     body: '{"query":":query","hitsPerPage":":per_page","page":":current"}'
+  #     headers:
+  #       X-Algolia-API-Key: {API_KEY}
+  #       X-Algolia-Application-Id: {APPLICATION_ID}
+  #       Content-Type: application/json; charset=UTF-8
+  #   keys:
+  #     # Used to retrieve result list
+  #     data: hits
+  #     # Used to retrieve current page number
+  #     current: page
+  #     # Used to retrieve total page number
+  #     total: nbPage
+  #     # Used to retrieve total hits number
+  #     hits: nbHits
+  #     # Used to retrieve cost time
+  #     time: processingTimeMS
+  #     # Used to retrieve title from per hit
+  #     title: _snippetResult.title.value
+  #     # Used to retrieve content from per hit
+  #     content: _snippetResult.content.value
+
+
+# ---------------------------------------------------------------
+# Content addons
+# ---------------------------------------------------------------
+
+# Prefix/Suffix of image URL, useful for CDN, for example,
+# `![cat](images/cat.gif)` will convert to
+# <img src="https://cdn.example.com/images/cat.gif?m=webp&q=80" alt="cat">
+assets:
+  # prefix: 'https://cdn.example.com'
+  # suffix: '?m=webp&q=80'
+
+# Table of content, enabled by default, set to `false` to disable.
+toc:
+  # The depth of toc, default to `3`, maximum to `4`.
+  # depth: 3
+
+  # Showing index before title, eg. 1.1 title, default to `true`
+  # index: true
+  index: true
+
+# Reward
+reward:
+  # Text which shows at the top.
+  # text: Buy me a cup of coffee ☕.
+  text: Buy me a cup of milk 🥛.
+
+  # Payment Methods
+  # qrcode, url and text must be set at least one
+  # wechat, alipay, paypal and bitcoin has a built-in icon,
+  # use `name` to apply
+  # methods:
+  #   - name: paypal
+  #     qrcode: paypal.jpg
+  #     url: https://paypal.me/imelmore
+  #     text: This is a paypal payment link
+  #     color: '#09bb07'
+  methods:
+    - name: wechat
+      qrcode: https://wx3.sinaimg.cn/large/0060ksKkly1g40ognw60lj30wt0wt0w8.jpg
+      url: https://weixin.qq.com/
+      text: 【施工中🚧请勿使用】
+      color: '#08c161'
+    - name: qq
+      qrcode: https://wx3.sinaimg.cn/large/0060ksKkly1gc47aujmojj30wt0wtn5z.jpg
+      url: https://im.qq.com/
+      text: QQ
+      color: '#0db7f2'
+
+# Copyright notice
+# It is possible to use front matter `copyright` to override this setting.
+copyright:
+  # Display author, default to `true`
+  # author: true
+
+  # Display link, default to `true`
+  # link: false
+
+  # license: Attribution-NonCommercial-NoDerivatives 4.0 International
+  #   (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
+  #   rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
+
+  # Display published date, default to `false`
+  # published: false
+  published: false
+
+  # Display updated date, default to `false`
+  # updated: false
+
+  # Custom text, override above settings
+  # custom: my copyright
+
+# Comments
+# Built-in support Disqus (https://disqus.com) and LiveRe (https://livere.com),
+# for other comment system, see plugins
+comments:
+  # disqus:
+  #   shortname: disqus_shortname
+  #   # Or you can set disqus script URL directly
+  #   script: //disqus_shortname.disqus.com/embed.js
+  #   # Autoload, default to `true`, set to `false` to display a button
+  #   autoload: false
+
+
+# ---------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------
+
+# URL prefix for theme statics
+static_prefix:
+
+# URL prefix for json data
+# If your json file is put in a cdn server,
+# set data_prefix as '//cdn.com/path/to/path/your_json_dir' and data_dir as 'your_json_dir'
+data_prefix:
+
+# Folder where json file will be generated to, default to 'api'
+data_dir:
+
+# Favicon, default to `favicon.ico`
+favicon:
+
+# Google analytics
+# ga: UA-00000000-0
+
+# SEO
+seo:
+  # Render structured-data in <head>, default to `false`
+  # structured_data: true
+  # Server-side rendering (SSR), default to `false`
+  # ssr: true
+
+# PWA
+pwa:
+  # Workbox (https://developers.google.com/web/tools/workbox/) is a JavaScript
+  # libraries for adding offline support to web apps,
+  # disabled by default, remove the hash to enable
+  # workbox:
+  #   # Workbox cdn, uses google by default, below is an example of using alicdn
+  #   cdn: https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js
+  #   module_path_prefix: https://g.alicdn.com/kg/workbox/3.3.0/
+  #   # Expire time in hour, 4 by default, set to 0 to be permanent,
+  #   # caches will be forcibly deleted the next time the site is updated.
+  #   expire: 4
+  #   # The worker script name, `sw.js` by default
+  #   name: sw.js
+  #   # Custom rules
+  #   rules:
+  #     - name: jsdelivr
+  #       strategy: staleWhileRevalidate
+  #       regex: https://cdn\\.jsdelivr\\.net
+  #     - name: gtm
+  #       strategy: staleWhileRevalidate
+  #       regex: https://www\\.googletagmanager\\.com\?id=.*
+  #     - name: gravatar
+  #       strategy: staleWhileRevalidate
+  #       regex: https://www\\.gravatar\\.com
+  #     - name: theme
+  #       strategy: staleWhileRevalidate
+  #       regex: /.*\\.(?:js|css|woff2|png|jpg|gif)$
+  #     - name: cdn
+  #       strategy: staleWhileRevalidate
+  #       regex: https://cdn\\.yourdomain\\.com
+  #     - name: json
+  #       strategy: cacheFirst
+  #       regex: your_data_prefix/.*\\.json
+
+  # manifest.json
+  # manifest:
+  #   short_name:
+  #   name:
+  #   start_url: /
+  #   theme_color: '#2a2b33'
+  #   background_color: '#2a2b33'
+  #   icons:
+  #     - src: icon-194x194.png
+  #       sizes: 194x194 512x512
+  #       type: image/png
+  #       purpose: any
+  #     - src: icon-144x144.png
+  #       sizes: 144x144
+  #       type: image/png
+  #       purpose: any
+
+# Plugins
+plugins:
+  # Built-in plugins
+  # - cipher:
+  #     placeholder: Passcode is required
+  #     excerpt: Content encrypted
+  # - palette:
+  #     col: 5
+  #     theme: [
+  #       '#673ab7',
+  #       '#3f51b5',
+  #       '#2196f3',
+  #       '#009688',
+  #       '#4caf50',
+  #       '#ff9800',
+  #       '#ff5722',
+  #       '#795548',
+  #       '#607D8B',
+  #       '#2a2b33'
+  #     ]
+  - cipher:
+      placeholder: 请输入密码解锁内容
+      excerpt: 内容已加密
+  - palette:
+      col: 5
+      theme: [
+        '#673ab7',
+        '#3f51b5',
+        '#2196f3',
+        '#009688',
+        '#4caf50',
+        '#ff9800',
+        '#ff5722',
+        '#795548',
+        '#607D8B',
+        '#2a2b33'
+      ]
+
+  # Global Inject script/style
+  # By default script will be injected into <body>, and style will be injected into <head>
+  # In general, script or style depends on their ext name.
+  # - xxx.css
+  # - xxx.jss
+  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+
+  # Dynamic inject html snippet
+  # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
+    # HTML code
+    # template: <script>...</script>
+    # Or a path relative to `hexo.base_dir`
+    # template: snippets/snippet-1.html
