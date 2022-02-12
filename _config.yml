@@ -99,7 +99,7 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: inside
 
-Deployment
+# Deployment
 # Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
