@@ -24,6 +24,6 @@
     "hexo-theme-inside": "^2.7.0-beta.23",
     "hexo-theme-landscape": "^0.0.3",
     "markdown-it": "^12.3.2",
-    "stylus": "^0.54.8"
+    "stylus": "^0.56.0"
   }
 }
