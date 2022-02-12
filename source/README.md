@@ -2,10 +2,6 @@
   
 ## 求知若愚，虚怀若谷
 
-
-<!-- <p align="center"> -->
-<!--   <img src="" width="100%" title="Intro Card" alt="Intro Card"> -->
-<!-- </p> -->
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=cworld1&show_icons=true&theme=radical&title_color=FFE652&text_color=71DFE7&hide_border=1&border_radius=10" alt="cworld1">
   </p>
