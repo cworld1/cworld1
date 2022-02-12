@@ -1,6 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "Hexo 旧旧",
+			"path": "..\\Hexo 旧旧"
+		},
+		{
+			"name": "Hexo",
 			"path": "."
 		}
 	],

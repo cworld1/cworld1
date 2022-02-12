@@ -28,10 +28,10 @@ appearance:
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+    url: //fonts.googleapis.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
 
     # Base font which applied to body
-    base: "'Josefin Sans', 'PingFang SC'"
+    base: 'Josefin Sans'
     # Sidebar author font, fallback to `base`
     logo: 'Lobster'
     # Sidebar menu font, fallback to `base`
@@ -137,7 +137,7 @@ sns:
   - title: 酷安
     url: https://www.coolapk.com/u/1384771
     template: |
-      <svg t="1644654153078" class="icon" viewBox="0 0 1922 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1687" data-darkreader-inline-fill="" width="200" height="200"><path d="M513.810604 0c308.858273 0 602.991192 297.820939 602.991192 297.820939l-132.287657 102.890399S723.386322 178.321089 513.810604 178.321089c-143.391802 0-329.062206 104.787859-329.062206 323.556901 0 213.250375 136.029126 334.594235 330.906216 334.594235C1023.05127 836.485587 1203.216369 0 1363.15081 0c104.787859 0 175.047303 244.772252 297.820938 450.406065 147.06646 246.349014 261.475239 472.814793 261.47524 481.660695 0 49.641277-46.380854 91.919878-79.479494 91.919878S1206.891026 577.255229 1206.891026 577.255229l148.910469-108.462516 189.345061 128.679812L1359.476153 259.230358c-57.912596 57.899234-336.424882 764.769642-834.628215 764.769642C329.970848 1023.986638 0 880.581473 0 500.047343 0 284.952958 162.687093 0 513.810604 0z" p-id="1688"></path></svg>
+      <svg t="1644654153078" class="icon" viewBox="0 0 1922 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1687" data-darkreader-inline-fill="" width="18" height="18"><path d="M513.810604 0c308.858273 0 602.991192 297.820939 602.991192 297.820939l-132.287657 102.890399S723.386322 178.321089 513.810604 178.321089c-143.391802 0-329.062206 104.787859-329.062206 323.556901 0 213.250375 136.029126 334.594235 330.906216 334.594235C1023.05127 836.485587 1203.216369 0 1363.15081 0c104.787859 0 175.047303 244.772252 297.820938 450.406065 147.06646 246.349014 261.475239 472.814793 261.47524 481.660695 0 49.641277-46.380854 91.919878-79.479494 91.919878S1206.891026 577.255229 1206.891026 577.255229l148.910469-108.462516 189.345061 128.679812L1359.476153 259.230358c-57.912596 57.899234-336.424882 764.769642-834.628215 764.769642C329.970848 1023.986638 0 880.581473 0 500.047343 0 284.952958 162.687093 0 513.810604 0z" p-id="1688"></path></svg>
   - icon: telegram
     title: Telegram
     url: https://t.me/cworld0
@@ -479,6 +479,8 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  # - https://gitee.com/cworld0/file/raw/master/js/clipboard.min.js
+  - https://cdn.jsdelivr.net/gh/cworld1/source@master/files/clipboard.js
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -486,3 +488,15 @@ plugins:
     # template: <script>...</script>
     # Or a path relative to `hexo.base_dir`
     # template: snippets/snippet-1.html
+  - position: [post, page] # 剪贴板
+    template: |
+      <script>
+        var elements = document.querySelectorAll(".highlight tr>.code");
+        for (var i = 0; i < elements.length; i++) { elements[i].innerHTML = '<button class="btn-copy" data-clipboard-snippet=""><svg t="1644686763820" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2062" data-darkreader-inline-fill="" width="16" height="16"><path d="M798.4 128h-72v-12.8c0-38.4-33.6-72-72-72h-97.6C555.2 17.6 537.6 0 512 0c-25.6 0-43.2 17.6-43.2 43.2h-97.6c-38.4 0-72 33.6-72 72V128h-72c-30.4 0-56 25.6-56 56v780.8c0 33.6 25.6 59.2 59.2 59.2h568c17.6 0 33.6-8 43.2-20.8 8-12.8 12.8-25.6 12.8-38.4V184C852.8 153.6 827.2 128 798.4 128zM384 128h256v84.8H384V128z m384 811.2H256V212.8h43.2v12.8c0 38.4 33.6 72 72 72h281.6c38.4 0 72-33.6 72-72v-12.8H768v726.4z" p-id="2063"></path></svg></button>' + elements[i].innerHTML };
+        new ClipboardJS('.btn-copy', { target: (trigger) => trigger.nextElementSibling });
+      </script>
+      <style>
+        .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}
+        .highlight:hover .btn-copy{opacity:1}
+      </style>
+      
