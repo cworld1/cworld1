@@ -101,7 +101,7 @@ theme: inside
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repository: https://github.com/cworld1/cworld1.github.io.git
-  branch: master
+# deploy:
+#   type: git
+#   repository: https://github.com/cworld1/cworld1.git
+#   branch: gh-pages
