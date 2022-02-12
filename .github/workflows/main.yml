@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: "16.13.x"
 
-      - name: Setup Hexo Dependencies
+      - name: 安装 Hexo 依赖
         run: |
           npm install hexo-cli -g
           npm install
