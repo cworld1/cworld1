@@ -49,8 +49,9 @@ jobs:
         run: | 
           git config --global user.name 'cworld1'
           git config --global user.email 'cworld0@qq.com'
+          git config --global core.autocrlf false
 
-      - name: Deploy Hexo 
+      - name: Deploy Hexo
         run: |
           hexo clean
           hexo generate
