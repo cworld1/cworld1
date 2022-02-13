@@ -13,7 +13,7 @@ appearance:
   # body background, default '#f5f7fa'
   background:
   # Sidebar background (when opened), default to accent_color
-  sidebar_background: '#f0f2f7'
+  sidebar_background: 'url(https://gitee.com/cworld0/file/raw/master/img/bg-photo.jpg) #475976'
   # Card background, default '#fff'
   card_background:
 
@@ -382,6 +382,7 @@ seo:
   # structured_data: true
   # Server-side rendering (SSR), default to `false`
   # ssr: true
+  structured_data: true
 
 # PWA
 pwa:
@@ -417,6 +418,23 @@ pwa:
   #     - name: json
   #       strategy: cacheFirst
   #       regex: your_data_prefix/.*\\.json
+  workbox:
+    module_path_prefix: https://g.alicdn.com/kg/workbox/3.6.3/
+    expire: 0
+    name: sw.js
+    rules:
+      # 使用 staleWhileRevalidate 策略缓存 jsdelivr 请求
+      - name: jsdelivr
+        strategy: staleWhileRevalidate
+        regex: https://cdn\\.jsdelivr\\.net
+      # 使用 cacheFirst 策略缓存静态资源
+      - name: theme
+        strategy: cacheFirst
+        regex: /.*\\.(?:js|css|woff2|png|jpg|gif)l;/span>
+      # 使用 cacheFirst 策略缓存 json 文件
+      - name: json
+        strategy: cacheFirst
+        regex: your_data_prefix/.*\\.json
 
   # manifest.json
   # manifest:
@@ -434,6 +452,17 @@ pwa:
   #       sizes: 144x144
   #       type: image/png
   #       purpose: any
+  manifest:
+    short_name: CWorld's Blog
+    name: CWorld's Blog
+    start_url: /
+    theme_color: '#659eb9'
+    background_color: '#f5f7fa'
+    icons: [{
+      "src": "favicon.ico",
+      "type": "image/ico",
+      "sizes": "256x256"
+    }]
 
 # Plugins
 plugins:
@@ -506,11 +535,15 @@ plugins:
       <script>
         Waline({
           el: '#waline',
-          serverURL: 'https://waline-blog-api-seven.vercel.app',
+          serverURL: 'waline-blog-api-ji201jyl6-cworld1.vercel.app',
           locale: {login:'登录(非必须)', placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒)'},
           visitor: true,
+          emoji: [
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+          ],
         });
       </script>
       <style>
-        :root{--waline-theme-color:var(--inside-accent-color);--waline-active-color:var(--inside-accent-color);--waline-text-color:var(--inside-foreground-color);--waline-bgcolor:var(--inside-background);--waline-bgcolor-light:var(--inside-card-background);--waline-bgcolor-hover:var(--inside-card-background);--waline-border-color:var(--inside-border-color);--waline-disable-bgcolor:var(--inside-card-background);--waline-disable-color:var(--inside-foreground-color);--waline-code-bgcolor:var(--inside-highlight-00);--waline-mobile-avatar-size:calc(var(--waline-avatar-size) * 11 / 13);--waline-badge-color:var(--inside-accent-color);--waline-info-bgcolor:var(--inside-background);--waline-avatar-radius:50%}
+        :root{--waline-theme-color:var(--inside-accent-color);--waline-active-color:var(--inside-accent-color);--waline-text-color:var(--inside-foreground-color);--waline-bgcolor:var(--inside-background);--waline-bgcolor-light:var(--inside-card-background);--waline-bgcolor-hover:var(--inside-card-background);--waline-border-color:var(--inside-border-color);--waline-disable-bgcolor:var(--inside-card-background);--waline-disable-color:var(--inside-foreground-color);--waline-code-bgcolor:var(--inside-highlight-00);--waline-mobile-avatar-size:calc(var(--waline-avatar-size) * 11 / 13);--waline-badge-color:var(--inside-accent-color);--waline-info-bgcolor:var(--inside-background);--waline-avatar-radius:50%}#waline .veditor{width:calc(100% - 2em)!important}
       </style>
