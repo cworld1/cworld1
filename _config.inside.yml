@@ -480,7 +480,7 @@ plugins:
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 不算子统计
   - https://cworld0.gitee.io/file/js/clipboard.min.js # 剪贴板
-  - https://cworld0.gitee.io/file/js/client.js # Waline 依赖
+  - https://cworld0.gitee.io/file/js/Waline.min.js # Waline 依赖
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -499,12 +499,18 @@ plugins:
         .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}
         .highlight:hover .btn-copy{opacity:1}
       </style>
+
   - position: comments
     template: |
       <div id="waline"></div>
       <script>
         Waline({
           el: '#waline',
-          serverURL: 'https://waline-blog-api-aankc6y27-cworld1.vercel.app',
+          serverURL: 'https://waline-blog-api-seven.vercel.app',
+          locale: {login:'登录(非必须)', placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒)'},
+          visitor: true,
         });
       </script>
+      <style>
+        :root{--waline-theme-color:var(--inside-accent-color);--waline-active-color:var(--inside-accent-color);--waline-text-color:var(--inside-foreground-color);--waline-bgcolor:var(--inside-background);--waline-bgcolor-light:var(--inside-card-background);--waline-bgcolor-hover:var(--inside-card-background);--waline-border-color:var(--inside-border-color);--waline-disable-bgcolor:var(--inside-card-background);--waline-disable-color:var(--inside-foreground-color);--waline-code-bgcolor:var(--inside-highlight-00);--waline-mobile-avatar-size:calc(var(--waline-avatar-size) * 11 / 13);--waline-badge-color:var(--inside-accent-color);--waline-info-bgcolor:var(--inside-background);--waline-avatar-radius:50%}
+      </style>
