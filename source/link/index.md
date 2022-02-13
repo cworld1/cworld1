@@ -7,180 +7,105 @@ copyright: false
 
 怎么可能有顺序呢，当然是随机的~
 
-<div class="friends">
-    <a class="brick" href="https://blog.cworld.top/">
-        <img class="blog-avatar" src="https://www.gravatar.com/avatar/85b870f6b1a177981d3e9566e3ad7264?s=200">
-        <div class="container">
-            <div class="name">CWorld's Blog</div>
-            <div class="motto">求知若愚，虚怀若谷</div>
-        </div>
-    </a>
-    <a class="brick" href="https://www.kindyear.cn">
-        <img class="blog-avatar" src="https://www.kindyear.cn/wp-content/uploads/2020/02/%E5%A4%B4%E5%83%8F.png">
-        <div class="container">
-            <div class="name">KD's Blog</div>
-            <div class="motto">杂乱的技术小站</div>
-        </div>
-    </a>
-    <a class="brick" href="https://orxing.top">
-        <img class="blog-avatar" src="https://orxing.top/img/avatar.jpg">
-        <div class="container">
-            <div class="name">OURONGXING</div>
-            <div class="motto">天生骄傲</div>
-        </div>
-    </a>
-    <a class="brick" href="https://blog.badapple.pro/">
-        <img class="blog-avatar" src="https://secure.gravatar.com/avatar/dbccf13f3f9601f2b33ae81ddf6444ae?s=640">
-        <div class="container">
-            <div class="name">东方幻梦</div>
-            <div class="motto">只是当时已惘然</div>
-        </div>
-    </a>
-    <a class="brick" href="https://meyyz.cn/">
-        <img class="blog-avatar" src="https://gravatar.loli.net/avatar/826f52e5853ce0ee454f9c9843be2c04?size=80&d=https%3a%2f%2fgravatar.loli.net%2favatar%2f9e63c80900d106cbbec5a9f4ea433a3e.jpg%3fsize%3d80">
-        <div class="container">
-            <div class="name">一叶竹</div>
-            <div class="motto">一壶清茶，一个故事。</div>
-        </div>
-    </a>
-    <a class="brick" href="https://guguga.cn/">
-        <img class="blog-avatar" src="https://s2.ax1x.com/2019/07/22/ePRmnO.png">
-        <div class="container">
-            <div class="name">Bark</div>
-            <div class="motto">Knowledge is Power</div>
-        </div>
-    </a>
-    <a class="brick" href="https://sanshiliuxiao.gitee.io/">
-        <img class="blog-avatar" src="https://i.loli.net/2019/01/28/5c4eca46c1d0b.png">
-        <div class="container">
-            <div class="name">椎咲良田</div>
-            <div class="motto">昨日、今日、明日</div>
-        </div>
-    </a>
-    <a class="brick" href="https://lemonadorable.gitee.io/">
-        <img class="blog-avatar" src="https://lemonadorable.gitee.io/img/avatar.png">
-        <div class="container">
-            <div class="name">自由灵的梦境</div>
-            <div class="motto">愿美梦成真</div>
-        </div>
-    </a>
-    <a class="brick" href="https://johnsonlee.site/">
-        <img class="blog-avatar" src="https://www.gravatar.com/avatar/f1e524cb14becd8a383b053699c61d15">
-        <div class="container">
-            <div class="name">Johnson</div>
-            <div class="motto long">行到水穷处 坐看云起时</div>
-        </div>
-    </a>
-    <a class="brick" href="https://www.bugteam.cn">
-        <img class="blog-avatar" src="https://cdn.v2ex.com/gravatar/2516d266850c3516962f9df809b417a3">
-        <div class="container">
-            <div class="name">Heven Kin</div>
-            <div class="motto">不去尝试，怎会成功</div>
-        </div>
-    </a>
-    <a class="brick" href="https://blog.ojhdt.com/">
-        <img class="blog-avatar" src="https://blog.ojhdt.com/icon.png">
-        <div class="container">
-            <div class="name">Ojhdt’s Blog</div>
-            <div class="motto">隐约雷鸣，阴霾天空</div>
-        </div>
-    </a>
-    <a class="brick" href="https://shimizublog.cn" target="_blank">
-        <img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/826990071/shimizu@v1.2.1/pixiv=id=60653379.jpg">
-        <div class="container">
-            <div class="name">冬马のホワイトアルバム</div>
-            <div class="motto long">这个国度..已然 没有我的容身之处了</div>
-        </div>
-    </a>
-    <a class="brick" href="https://blog.cyfan.top" target="_blank">
-        <img class="blog-avatar" src="https://npm.elemecdn.com/chenyfan-oss@3">
-        <div class="container">
-            <div class="name">陈YFの博客</div>
-            <div class="motto long">高雅的撸羊毛技巧</div>
-        </div>
-    </a>
-    <a class="brick" href="https://www.sansuiya.top" target="_blank">
-        <img class="blog-avatar" src="https://www.gravatar.com/avatar/4fdc8bc2ce1b784d50e9abbf27a1cdde?s=160">
-        <div class="container">
-            <div class="name">Sansui</div>
-            <div class="motto long">人生苦短，及时行乐。</div>
-        </div>
-    </a>
-    <a class="brick" href="https://kurumit3.top" target="_blank">
-        <img class="blog-avatar" src="https://rmt.dogedoge.com/fetch/kurumit3/storage/avatar.jpg?fmt=webp">
-        <div class="container">
-            <div class="name">绎梦机</div>
-            <div class="motto long">有限的记忆，无限的梦</div>
-        </div>
-    </a>
+<style>.f>ul{display:flex;flex-wrap:wrap;padding:0}.f>ul>li{-webkit-transition:all .3s ease;transition:all .3s ease;list-style:none}.f>ul>li{display:flex;margin:10px 10px 0 0;text-decoration:none;font-weight:300;padding:10px;border:solid 1px var(--inside-background);color:var(--inside-accent-color);border-radius:4px}.f>ul>li:hover{background-color:var(--inside-accent-color);color:#fff;border:solid 1px var(--inside-accent-color);box-shadow:0 2px 10px var(--inside-accent-color)}.f>ul>li:active{-webkit-transform:scale(0.95);-moz-transform:scale(0.95);-ms-transform:scale(0.95);-o-transform:scale(0.95);transform:scale(0.95)}.f>ul>li>p{margin:0}.f img{background-color:#fff0;color:#fff;border:solid 1px #dbdbdb;border-radius:50%;width:50px;height:50px}.f img:hover{animation:whirl 0.5s}@keyframes whirl{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.f>ul>li>ul{position:relative;margin-left:10px;padding:0}.f>ul>li>ul>li{list-style:none;text-align:center}.f>ul>li>ul>li:nth-child(1){font-size:14px}.f>ul>li>ul>li:nth-child(2){font-size:12px;margin-top:5px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.f>ul>li>ul>li:nth-child(3) a{position:absolute;right:0;top:0;height:52px;width:100%;text-decoration:none !important;border:none;color:transparent}@media(max-width:450px){.f>ul>li{margin-left:0;	width:100%}.f>ul>li>ul>li{text-align:start;max-width:200px !important}}</style>
+
+<div class="f">
+
+- ![](https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200)
+  - CWorld's Blog
+  - 求知若愚，虚怀若谷
+  - [](https://blog.cworld.top)
+
+- ![](https://www.kindyear.cn/wp-content/uploads/2021/12/B92C933A-F643-474F-A2E1-B2910102A90C.png)
+  - KD's Blog
+  - 杂乱的技术小站
+  - [](https://www.kindyear.cn)
+
+- ![](https://orxing.top/img/avatar.jpg)
+  - OURONGXING
+  - 天生骄傲
+  - [](https://orxing.top)
+
+- ![](https://ypy.mxlbs.cn/Oriental-Fantasy-logo-160.jpg)
+  - 东方幻梦
+  - 只是当时已惘然
+  - [](https://orxing.top)
+
+- ![](https://meyyz.cn/tx.png)
+  - 一叶竹
+  - 蜀江水碧蜀山青，圣主朝朝暮暮情
+  - [](https://meyyz.cn)
+
+- ![](https://thirdqq.qlogo.cn/g?b=sdk&k=VyrIfRuDgjHKOsfxbicZIUA&s=100&t=1635817743)
+  - Barkure
+  - 未来已来，将至已至
+  - [](https://guguga.cn)
+
+- ![](https://i.loli.net/2019/02/24/5c71bf051a8f2.jpg)
+  - 椎咲良田
+  - 快走吧 趁风停止之前
+  - [](https://sanshiliuxiao.top)
+
+- ![](https://blog.ojhdt.com/images/avatar.png)
+  - Ojhdt’s Blog
+  - 隐约雷鸣，阴霾天空
+  - [](https://blog.ojhdt.com)
+
+- ![](https://npm.elemecdn.com/chenyfan-oss@3)
+  - 陈YF的博客
+  - 一个在互联网角落挣扎的小小博客，很小很小
+  - [](https://blog.cyfan.top)
+
+- ![](https://gravatar.loli.net/avatar/804041e86cd7af1fa923d6639123b7ad?size=200)
+  - 绎梦机
+  - 有限的梦，无限的记忆
+  - [](https://kurumit3.top)
+
+
 </div>
-
-### 特殊链接
-
-<div class="friends">
-    <a class="brick" href="https://www.bandbbs.cn/">
-        <img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/Bandbbs/Bandbbs_CDN@1.5/PWA/pwa_logo.png">
-        <div class="container">
-            <div class="name">米坛</div>
-            <div class="motto">创造不一样</div>
-        </div>
-    </a>
-    <a class="brick" href="http://www.zhisou.cc">
-        <img class="blog-avatar" src="https://secure.gravatar.com/avatar/1ee71d9da3b0fc793f4ad544533ebde4?s=200">
-        <div class="container">
-            <div class="name">来语直搜</div>
-            <div class="motto">专注你的热爱</div>
-        </div>
-    </a>
-</div>
-
-### 友链手册
 
 <details>
-<summary style="outline:none">
-<div class="title">友链记录册</div>
-</summary>
-<div class="item">
-    <li>2020 09 36 —— 墨兰 修改</li>
-    <li>2020 07 09 —— 蒟蒻のBLOG 离开</li>
-    <li>2020 07 09 —— Vexsy 离开</li>
-    <li>2020 07 07 —— Raaynk’s Blog 消失</li>
-    <li>2020 07 07 —— 冬马的白色相簿 回归</li>
-    <li>2021 02 22 —— 半叶子 离开</li>
-    <li>2021 02 22 —— 冬马的白色相簿 消失</li>
-    <li>2021 02 02 —— Heven Kin 回归</li>
-    <li>2022 02 13 —— 理工小天使 消失</li>
-</div>
+<summary>友链记录册</summary>
+
+  - 2020 09 36 —— 墨兰 修改
+  - 2020 07 09 —— 蒟蒻のBLOG 离开
+  - 2020 07 09 —— Vexsy 离开
+  - 2020 07 07 —— Raaynk’s Blog 消失
+  - 2020 07 07 —— 冬马的白色相簿 回归
+  - 2021 02 22 —— 半叶子 离开
+  - 2021 02 22 —— 冬马的白色相簿 消失
+  - 2021 02 02 —— Heven Kin 回归
+  - 2022 02 13 —— 理工小天使 消失
+  - 2022 02 13 —— 自由灵的梦境 消失
+  - 2022 02 13 —— 冬马のホワイトアルバム 消失
+  - 2022 02 13 —— Sansui 消失
+
 </details>
 
-<style>
-.friends{display:flex;flex-wrap:wrap;}.friends .brick{-webkit-transition:all .3s ease;transition:all .3s ease;}.friends .brick{display:flex;margin:10px 10px 0 0;text-decoration:none;font-weight:300;padding:10px;background-color:#fff0;border:solid 1px #659eb929;color:#659eb9;text-align:center;border-radius:4px;overflow:hidden}.friends .brick:hover{background-color:#659eb9;color:#fff;border:solid 1px #659eb9;box-shadow:0 6px 16px 0 rgba(80, 178, 243, 0.35);}.blog-avatar:hover{animation:whirl 0.5s;}
-@keyframes whirl{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}.friends .brick:active{-webkit-transform:scale(0.95);-moz-transform:scale(0.95);-ms-transform:scale(0.95);-o-transform:scale(0.95);transform:scale(0.95);}.friends .brick .blog-avatar{background-color:#fff0;color:#fff;border:solid 1px #dbdbdb;border-radius:50%;width:50px;height:50px;}.friends .brick .container{margin-left:10px;}.friends .brick .container .name{font-size:14px;}.friends .brick .container .motto{font-size:12px;margin-top:5px;-webkit-box-orient:vertical;-webkit-line-clamp:1;}
-@media(max-width:450px){.friends .brick{width:100%;}.friends .brick .container{margin-left:0;width:100%;}.motto{width: 100% !important;}}.motto.long{width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.mdui-panel-item[open] .mdui-panel-item-arrow{transform:rotate(180deg);}.mdui-panel-item-body {height:auto!important;}
-</style>
+## 特殊链接
 
-### 本站模板
+<div class="f">
 
-```CWorld
+- ![](https://static.cloudflare.ltd/Bandbbs_CDN/PWA/pwa_icon_192.png)
+  - 米坛
+  - 创造不一样
+  - [](ttps://www.bandbbs.cn)
+
+</div>
+
+## 申请友链
+
+本站信息如下：
+
+```
 名称：CWorld's Blog
-链接：https://blog.cworld.top/
-图标：https://www.gravatar.com/avatar/85b870f6b1a177981d3e9566e3ad7264?s=200
-简介：求知若愚，虚怀若谷。
+简介：求知若愚，虚怀若谷
+链接：https://blog.cworld.top
+图标：https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 ```
 
-### 申请说明
+申请时还请按照这个模板留言。此外有关申请说明：
 
 - 不违反国家法律。
 - 请确保你的站点活着。
 - 在你的友链上添加本站。
-
-### 格式模板
-
-欢迎评论区留链接。
-
-```Example
-名称：<Name>
-链接：<Link>
-图标：<Icon>
-简介：<Word>
-```
