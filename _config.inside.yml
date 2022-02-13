@@ -499,8 +499,8 @@ plugins:
         .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}
         .highlight:hover .btn-copy{opacity:1}
       </style>
-  - position: comment
-    tempalte: |
+  - position: comments
+    template: |
       <div id="waline"></div>
       <script>
         Waline({
