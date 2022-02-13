@@ -310,15 +310,15 @@ reward:
   #     color: '#09bb07'
   methods:
     - name: wechat
-      qrcode: https://wx3.sinaimg.cn/large/0060ksKkly1g40ognw60lj30wt0wt0w8.jpg
+      qrcode: https://cworld0.gitee.io/file/img/wechat_qrcode.jpg
       url: https://weixin.qq.com/
-      text: 【施工中🚧请勿使用】
-      color: '#08c161'
-    - name: qq
-      qrcode: https://wx3.sinaimg.cn/large/0060ksKkly1gc47aujmojj30wt0wtn5z.jpg
-      url: https://im.qq.com/
-      text: QQ
-      color: '#0db7f2'
+      text: 微信
+      color: '#22ad38'
+    - name: alipay
+      qrcode: https://cworld0.gitee.io/file/img/alipay_qrcode.jpg
+      url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
+      text: 支付宝（点击前往）
+      color: '#1678ff'
 
 # Copyright notice
 # It is possible to use front matter `copyright` to override this setting.
@@ -335,7 +335,7 @@ copyright:
 
   # Display published date, default to `false`
   # published: false
-  published: false
+  published: true
 
   # Display updated date, default to `false`
   # updated: false
@@ -479,8 +479,8 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-  # - https://gitee.com/cworld0/file/raw/master/js/clipboard.min.js
-  - https://cdn.jsdelivr.net/gh/cworld1/source@master/files/clipboard.js
+  - https://cworld0.gitee.io/file/js/clipboard.min.js
+  # - https://cdn.jsdelivr.net/gh/cworld1/source@master/files/clipboard.js
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end

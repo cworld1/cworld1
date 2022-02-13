@@ -5,7 +5,7 @@ categories:
  - 项目
 tags: 
  - Userstyle
-thumbnail: 'https://wx1.sinaimg.cn/large/0060ksKkly1gc4gapocx0j318g0jzjwr.jpg #fff'
+thumbnail: 'https://cworld0.gitee.io/file/img/0060ksKkly1gc4gapocx0j318g0jzjwr.jpg #fff'
 ---
 
 ## 介绍

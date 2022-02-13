@@ -4,7 +4,7 @@ categories:
  - 资料
 tags: 
  - Hexo
-thumbnail: 'https://wx3.sinaimg.cn/large/0060ksKkgy1gc4g7ync5kj318g0jzn8l.jpg #111'
+thumbnail: 'https://cworld0.gitee.io/file/img/0060ksKkgy1gc4g7ync5kj318g0jzn8l.jpg #111'
 ---
 
 预置文档

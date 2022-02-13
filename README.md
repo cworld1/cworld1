@@ -1,21 +1,17 @@
-<div align="center">
-  
-## 求知若愚，虚怀若谷
+## Hi there 👋
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=cworld1&show_icons=true&theme=radical&title_color=FFE652&text_color=71DFE7&hide_border=1&border_radius=10" alt="cworld1">
-  </p>
+![CWorld's Github Stats](https://github-readme-stats.vercel.app/api?username=cworld1&theme=vue-dark&show_icons=true&hide_border=true&border_radius=10)
 
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cworld1&layout=compact&theme=vue-dark&hide_border=true&border_radius=10">
 
----
-### I Code in...
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cworld1&layout=compact&hide=html&title_color=FFE652&theme=radical&text_color=71DFE7&hide_border=1&border_radius=10" alt="cworld1">
-</p>
+### Most used language
 
-### You can checkout my blogs
-https://blog.cworld.top
-  
-  <img src="https://komarev.com/ghpvc/?username=cworld1&color=dc143c">
-  
-  </div>
+- 👨🏻‍💻 I’m a web developer
+- 🖖 I like using vue.js, also react
+- 💻 Using VSCode, with efficient work
+
+### Checkout my blog for more
+
+[blog.cworld.top](https://blog.cworld.top)
+
+![Profile views](https://komarev.com/ghpvc/?username=cworld1&color=41b883)
