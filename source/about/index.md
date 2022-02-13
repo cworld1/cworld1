@@ -7,11 +7,11 @@ comments: true
 <p id="hitokoto" style="text-align: center;">:D 获取中...</p>
 
 <script>
-fetch('https://v1.hitokoto.cn').then(function (res){
-    return res.json();
-}).then(function (data) {
-    document.getElementById('hitokoto').innerText = data.hitokoto;
-})
+    fetch('https://v1.hitokoto.cn').then(function (res){
+        return res.json();
+    }).then(function (data) {
+        document.getElementById('hitokoto').innerText = data.hitokoto;
+    })
 </script>
 
 ## 制作项目

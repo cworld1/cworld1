@@ -479,8 +479,8 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 不算子统计
-  - https://cworld0.gitee.io/file/js/clipboard.min.js # 
-  - https://cworld0.gitee.io/file/js/clipboard.min.js
+  - https://cworld0.gitee.io/file/js/clipboard.min.js # 剪贴板
+  # - https://cworld0.gitee.io/file/js/client.js # Waline 依赖
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -508,4 +508,3 @@ plugins:
           serverURL: 'https://waline-blog-api-aankc6y27-cworld1.vercel.app',
         });
       </script>
-      
