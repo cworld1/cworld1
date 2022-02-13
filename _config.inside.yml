@@ -310,12 +310,12 @@ reward:
   #     color: '#09bb07'
   methods:
     - name: wechat
-      qrcode: https://cworld0.gitee.io/file/img/wechat_qrcode.jpg
+      qrcode: https://gitee.com/cworld0/file/raw/master/img/wechat_qrcode.jpg
       url: https://weixin.qq.com/
       text: 微信
       color: '#22ad38'
     - name: alipay
-      qrcode: https://cworld0.gitee.io/file/img/alipay_qrcode.jpg
+      qrcode: https://gitee.com/cworld0/file/raw/master/img/alipay_qrcode.jpg
       url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
       text: 支付宝（点击前往）
       color: '#1678ff'
@@ -478,9 +478,9 @@ plugins:
   # In general, script or style depends on their ext name.
   # - xxx.css
   # - xxx.jss
-  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 不算子统计
+  - https://cworld0.gitee.io/file/js/clipboard.min.js # 
   - https://cworld0.gitee.io/file/js/clipboard.min.js
-  # - https://cdn.jsdelivr.net/gh/cworld1/source@master/files/clipboard.js
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -499,4 +499,13 @@ plugins:
         .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}
         .highlight:hover .btn-copy{opacity:1}
       </style>
+  - position: comment
+    tempalte: |
+      <div id="waline"></div>
+      <script>
+        Waline({
+          el: '#waline',
+          serverURL: 'https://waline-blog-api-aankc6y27-cworld1.vercel.app',
+        });
+      </script>
       

@@ -1,10 +1,11 @@
 ---
 title: Hello World
-categories: 
+date: 2020-09-26T20:40:51+08:00
+categories:
  - 资料
-tags: 
+tags:
  - Hexo
-thumbnail: 'https://cworld0.gitee.io/file/img/0060ksKkgy1gc4g7ync5kj318g0jzn8l.jpg #111'
+thumbnail: 'https://gitee.com/cworld0/file/raw/master/img/0060ksKkgy1gc4g7ync5kj318g0jzn8l.jpg #111'
 ---
 
 预置文档
