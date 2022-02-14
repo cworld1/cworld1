@@ -5,7 +5,7 @@ categories:
  - 资料
 tags: 
  - Hexo
-thumbnail: 'https://gitee.com/cworld0/file/raw/master/img/hello-world.jpg #111'
+thumbnail: 'thumbnail.jpg #111'
 ---
 
 预置文档

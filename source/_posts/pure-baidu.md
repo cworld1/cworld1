@@ -5,22 +5,22 @@ categories:
  - 项目
 tags: 
  - Userstyle
-thumbnail: 'https://gitee.com/cworld0/file/raw/master/img/pure-baidu.jpg #fff'
+thumbnail: 'thumbnail.jpg #fff'
 ---
 
 ## 介绍
 
 ### 宣传图
 
-![1](https://tvax2.sinaimg.cn/large/0060ksKkly1gadi4y7w70j30u01hcqf6.jpg)
+![1](post/pure-baidu/1.jpg)
 
-![2](https://tva4.sinaimg.cn/large/0060ksKkly1gadi5puixgj30u01hcqlr.jpg)
+![2](post/pure-baidu/2.jpg)
 
-![3](https://tvax3.sinaimg.cn/large/0060ksKkly1gadi5zyjmej30u01hcwzp.jpg)
+![3](post/pure-baidu/3.jpg)
 
-![4](https://tva3.sinaimg.cn/large/0060ksKkly1gadi605zgvj30u01hc7p5.jpg)
+![4](post/pure-baidu/4.jpg)
 
-![5](https://tva3.sinaimg.cn/large/0060ksKkly1gadi60cnbtj30u01hcndq.jpg)
+![5](post/pure-baidu/5.jpg)
 
 ### 酷安链接
 

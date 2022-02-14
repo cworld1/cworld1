@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -105,3 +105,8 @@ deploy:
   type: git
   repository: git@github.com:cworld1/cworld1.git
   branch: gh-pages
+
+# Plugins
+# marked:
+#   prependRoot: true
+#   postAsset: true
