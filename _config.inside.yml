@@ -281,7 +281,7 @@ search:
 assets:
   # prefix: 'https://cdn.example.com'
   # suffix: '?m=webp&q=80'
-  prefix: 'https://cdn.jsdelivr.net/gh/cworld1/cworld1'
+  prefix: 'https://cdn.jsdelivr.net/gh/cworld1/cworld1@gh-pages'
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
