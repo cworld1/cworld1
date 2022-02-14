@@ -17,7 +17,7 @@ comments: true
 - [Pure 百度](https://blog.cworld.top/post/pure-baidu) - 百度页面的美化模块
 - [Momotap](https://github.com/cworld1/momotap) - 一款与 Mikutap 类似的板垫音乐游戏
 - [Vue Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 Vue 时的一些代码记录
-- [Vue Login](https://github.com/cworld1/vue-login) 一个简单的 Vuejs 开发设计的登录程序
+- [Vue Login](https://github.com/cworld1/vue-login) - 一个简单的 Vuejs 开发设计的登录程序
 
 ## 个人简介
 
@@ -27,7 +27,13 @@ comments: true
 - 偏好音乐广泛，日语、电音、小众国语、小语种都有。习惯用 Apple Music 在线随机拨歌，偶尔也用用网易云。
 - 经常在玩 Genshin Impact 。偶尔会玩玩音游。腾讯网易游戏至今未实名。
 
-<details><summary>查看更多</summary>CWorld 原名其实是叫 ChangingWorld , “C”作为程序界高级语言的元老--C语言, 同样也是疯狂的首字母, 是对计算机领域锲而不舍精神的支持希望。而 ChangingWorld 则是说变迁世界, 我却不随大流, 做自己, 做独特。（编的真的非常有意义呢）</details>
+<details><summary>以及更多</summary>
+
+- 精通 Python, PHP, C++, Java, Typescipt, Go 等语言的拼写。
+- 熟悉 Windows、Linux、MacOS 开关机操作。
+- 能熟练操作 Office 全套的打开方式。
+
+</details>
 
 ## 天罗地网
 
@@ -47,12 +53,10 @@ comments: true
 
 ## 闲言碎语
 
-<details>
-<summary style="outline:none">为什么叫 CWorld ?</summary>
+<details><summary>为什么叫 CWorld ?</summary>
 CWorld 原名其实是叫 ChangingWorld , “C”作为程序界高级语言的元老--C语言, 同样也是疯狂的首字母, 是对计算机领域锲而不舍精神的支持希望。而 ChangingWorld 则是说变迁世界, 我却不随大流, 做自己, 做独特。（编的真的非常有意义呢）
 </details>
-<details>
-<summary style="outline:none">好奇都在玩些什么音游?</summary>
+<details><summary>好奇都在玩些什么音游?</summary>
 音游圈子的游戏差不多也都尝试过一圈。经常玩的有 Rhythm Doctor, Lanota, Musedash, Cytus II 。
 偶尔玩玩 Maimai, 阳春白雪, Phigros。不过因为手机/平板内存不够玩了又卸载倒是常事了。
 </details>

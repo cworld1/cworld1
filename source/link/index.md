@@ -7,7 +7,7 @@ copyright: false
 
 怎么可能有顺序呢，当然是随机的~
 
-<style>.f>ul{display:flex;flex-wrap:wrap;padding:0}.f>ul>li{-webkit-transition:all .3s ease;transition:all .3s ease;list-style:none}.f>ul>li{display:flex;margin:10px 10px 0 0;text-decoration:none;font-weight:300;padding:10px;background-color:var(--inside-background);color:var(--inside-accent-color);border-radius:4px}.f>ul>li:hover{color:#fff;background-color:var(--inside-accent-color);box-shadow:0 2px 10px var(--inside-accent-color);transform:translateY(-5px)}.f>ul>li:active{-webkit-transform:scale(0.95);-moz-transform:scale(0.95);-ms-transform:scale(0.95);-o-transform:scale(0.95);transform:scale(0.95)}.f>ul>li>p{margin:0}.f img{background-color:#fff0;color:#fff;border:solid 1px #dbdbdb;border-radius:50%;width:50px;height:50px}.f img:hover{animation:whirl .5s}@keyframes whirl{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.f>ul>li>ul{position:relative;margin-left:10px;padding:0}.f>ul>li>ul>li{list-style:none;text-align:center}.f>ul>li>ul>li:nth-child(1){font-size:14px}.f>ul>li>ul>li:nth-child(2){font-size:12px;margin-top:5px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.f>ul>li>ul>li:nth-child(3) a{position:absolute;right:0;top:0;height:52px;width:100%;text-decoration:none!important;border:0;color:transparent}@media(max-width:450px){.f>ul>li{margin-left:0;width:100%}.f>ul>li>ul>li{text-align:start;max-width:200px!important}}</style>
+<style>.f>ul{display:flex;flex-wrap:wrap;padding:0}.f>ul>li{-webkit-transition:all .3s ease;transition:all .3s ease;list-style:none}.f>ul>li{display:flex;margin:10px 10px 0 0;text-decoration:none;font-weight:300;padding:10px;background-color:var(--inside-background);color:var(--inside-accent-color);border-radius:4px}.f>ul>li:hover{color:#fff;background-color:var(--inside-accent-color);box-shadow:0 2px 10px var(--inside-accent-color);transform:translateY(-5px)}.f>ul>li:active{-webkit-transform:scale(0.95);-moz-transform:scale(0.95);-ms-transform:scale(0.95);-o-transform:scale(0.95);transform:scale(0.95)}.f>ul>li>p{margin:0}.f img{background-color:#fff0;color:#fff;border:solid 1px #dbdbdb;border-radius:50%;width:50px;height:50px;margin:0!important}.f img:hover{animation:whirl .5s}@keyframes whirl{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.f>ul>li>ul{position:relative;margin-left:10px;padding:0}.f>ul>li>ul>li{list-style:none;text-align:center}.f>ul>li>ul>li:nth-child(1){font-size:14px}.f>ul>li>ul>li:nth-child(2){font-size:12px;margin-top:5px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.f>ul>li>ul>li:nth-child(3) a{position:absolute;right:0;top:0;height:52px;width:100%;text-decoration:none!important;border:0;color:transparent}@media(max-width:450px){.f>ul>li{margin-left:0;width:100%}.f>ul>li>ul>li{text-align:start;max-width:200px!important}}</style>
 
 <div class="f">
 
@@ -60,7 +60,6 @@ copyright: false
   - 绎梦机
   - 有限的梦，无限的记忆
   - [](https://kurumit3.top)
-
 
 </div>
 

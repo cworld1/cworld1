@@ -1,0 +1,24 @@
+.φda {
+    background-color: var(--inside-accent-color);
+    transform: scale(2);
+    opacity: 0.4;
+    transition: .15s
+}
+.φda:focus,
+.φda:hover {
+    transform: scale(3);
+    opacity: 0.8;
+}
+@media (max-width: 675px) {
+    .φda {
+        opacity: 0.3;
+        transform: scale(3);
+    }
+    .φda:focus,
+    .φda:hover {
+        transform: scale(4);
+    }
+    .φh {
+        background-size: cover;
+    }
+}
