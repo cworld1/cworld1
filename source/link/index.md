@@ -11,7 +11,7 @@ copyright: false
 
 <div class="f">
 
-- ![](https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200)
+- ![](https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=400)
   - CWorld's Blog
   - 求知若愚，虚怀若谷
   - [](https://blog.cworld.top)

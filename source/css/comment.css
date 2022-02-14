@@ -1,4 +1,5 @@
 :root {
+    --waline-dark-grey: var(--inside-foreground-color);
     --waline-theme-color: var(--inside-accent-color);
     --waline-active-color: var(--inside-accent-color);
     --waline-text-color: var(--inside-foreground-color);

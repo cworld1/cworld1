@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     padding: 0;
 }
-/* 单个元素整体 */
+/* 单个友链 */
 .f > ul > li {
     transition: .3s ease;
     list-style: none;
@@ -22,10 +22,10 @@
     color: #fff;
     background-color: var(--inside-accent-color);
     box-shadow: 0 2px 4px 1px rgb(0 0 0 / 20%);
-    transform: translateY(-5px);
+    transform: scale(1.03);
 }
 .f > ul > li:active {
-    transform: scale(0.95);
+    transform: scale(0.97);
 }
 
 /* 头像 */
@@ -33,25 +33,14 @@
     margin: 0;
 }
 .f img {
-    background-color: #fff0;
-    color: #fff;
-    border: solid 1px #dbdbdb;
-    border-radius: 50%;
+    border: solid 1px var(--inside-border-color);
+    border-radius: 25px;
     width: 50px;
     height: 50px;
     margin: 0 !important;
+    max-width: fit-content;
 }
-.f img:hover {
-    animation: whirl 0.5s;
-}
-@keyframes whirl {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 /* 描述 */
 .f > ul > li > ul {
     position: relative;
@@ -78,9 +67,8 @@
     position: absolute;
     right: 0;
     top: 0;
-    height: 52px;
+    height: 100%;
     width: 100%;
-    text-decoration: none !important;
     border: none;
     color: transparent;
 }
@@ -89,8 +77,11 @@
         margin-left: 0;
         width: 100%;
     }
+    .f > ul > li > ul {
+        width: 100%;
+    }
     .f > ul > li > ul > li {
         text-align: start;
-        max-width: 200px !important;
+        max-width: 100% !important;
     }
 }

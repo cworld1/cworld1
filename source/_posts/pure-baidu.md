@@ -5,7 +5,7 @@ categories:
  - 项目
 tags: 
  - Userstyle
-thumbnail: 'https://gitee.com/cworld0/file/raw/master/img/0060ksKkly1gc4gapocx0j318g0jzjwr.jpg #fff'
+thumbnail: 'https://gitee.com/cworld0/file/raw/master/img/pure-baidu.jpg #fff'
 ---
 
 ## 介绍

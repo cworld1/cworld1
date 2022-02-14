@@ -116,7 +116,6 @@ profile:
 menu:
   🏠 Home: /
   🔍 Search: /search
-  # 🎵 Music: /playlist
   🔗 Link: /link
   🧑‍💻 About: /about
   # About: /about
@@ -310,12 +309,12 @@ reward:
   #     color: '#09bb07'
   methods:
     - name: wechat
-      qrcode: https://gitee.com/cworld0/file/raw/master/img/wechat_qrcode.jpg
+      qrcode: https://gitee.com/cworld0/file/raw/master/img/reward/wechat_qrcode.jpg
       url: https://weixin.qq.com/
       text: 微信
       color: '#22ad38'
     - name: alipay
-      qrcode: https://gitee.com/cworld0/file/raw/master/img/alipay_qrcode.jpg
+      qrcode: https://gitee.com/cworld0/file/raw/master/img/reward/alipay_qrcode.jpg
       url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
       text: 支付宝（点击前往）
       color: '#1678ff'
@@ -335,10 +334,10 @@ copyright:
 
   # Display published date, default to `false`
   # published: false
-  published: true
 
   # Display updated date, default to `false`
   # updated: false
+  updated: true
 
   # Custom text, override above settings
   # custom: my copyright
@@ -510,8 +509,9 @@ plugins:
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
   - js/Waline.min.js # Waline 依赖
   - js/clipboard.min.js # 剪贴板
-  - js/ripple.min.js #涟漪特效
-  - css/main.min.css
+  # - js/ripple.min.js # 涟漪特效
+  # - js/main.js # 自定义 JS
+  - css/main.min.css # 自定义 CSS
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -527,8 +527,7 @@ plugins:
         new ClipboardJS('.btn-copy', { target: (trigger) => trigger.nextElementSibling });
       </script>
       <style>
-        .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}
-        .highlight:hover .btn-copy{opacity:1}
+        .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}.highlight:hover .btn-copy{opacity:1}
       </style>
 
   - position: comments
@@ -541,8 +540,8 @@ plugins:
           locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
           visitor: true,
           emoji: [
-            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
-            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+            'https://gitee.com/cworld0/file/raw/master/img/weibo',
+            'https://gitee.com/cworld0/file/raw/master/img/bilibili',
           ],
         });
       </script>
