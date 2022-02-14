@@ -97,8 +97,8 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
           locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
           visitor: true,
           emoji: [
-            'https://gitee.com/cworld0/file/raw/master/img/weibo',
-            'https://gitee.com/cworld0/file/raw/master/img/bilibili',
+            'https://cworld0.gitee.io/file/img/weibo',
+            'https://cworld0.gitee.io/file/img/bilibili',
           ],
         });
       </script>

@@ -88,7 +88,7 @@ copyright: false
 - ![](https://static.cloudflare.ltd/Bandbbs_CDN/PWA/pwa_icon_192.png)
   - 米坛
   - 创造不一样
-  - [](ttps://www.bandbbs.cn)
+  - [](https://www.bandbbs.cn)
 
 </div>
 
