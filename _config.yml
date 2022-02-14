@@ -9,7 +9,7 @@ description: 'Stay hungry, Stay foolish. 求知若愚，虚怀若谷'
 keywords: cworld, blog, hexo
 author: CWorld
 language: zh-Hans
-timezone: 'Asia/Shanghai'
+timezone:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -28,7 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: "css"
+skip_render: "css/*"
 
 # Writing
 new_post_name: :title.md # File name of new posts

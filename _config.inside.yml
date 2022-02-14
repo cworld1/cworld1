@@ -507,7 +507,7 @@ plugins:
   # In general, script or style depends on their ext name.
   # - xxx.css
   # - xxx.jss
-  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 不算子统计
+  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
   - https://cworld0.gitee.io/file/js/clipboard.min.js # 剪贴板
   - https://cworld0.gitee.io/file/js/Waline.min.js # Waline 依赖
   - css/main.min.css

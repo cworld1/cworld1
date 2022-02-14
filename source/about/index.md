@@ -4,7 +4,7 @@ date: 2019-06-22 19:36:45
 comments: true
 ---
 
-<p style="text-align:center">『 <span id="hitokoto">:D 获取中...</sapn> 』</p>
+> <span id="hitokoto" style="color:var(--inside-accent-color)">:D 获取中...</sapn>
 
 <script>
     fetch('https://v1.hitokoto.cn').then((res) => res.json()).then((data) => {
