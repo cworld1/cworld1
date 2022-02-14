@@ -7,7 +7,7 @@ copyright: false
 
 怎么可能有顺序呢，当然是随机的~
 
-<link href="/css/link.min.css" rel="stylesheet">
+<link href="/static/css/link.min.css" rel="stylesheet">
 
 <div class="f">
 

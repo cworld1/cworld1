@@ -28,7 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: ["css/*", "js/*"]
+skip_render: ["static/*", "static/**/*", "static/**/**/*"]
 
 # Writing
 new_post_name: :title.md # File name of new posts

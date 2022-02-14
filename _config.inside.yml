@@ -370,7 +370,7 @@ data_prefix:
 data_dir:
 
 # Favicon, default to `favicon.ico`
-favicon:
+favicon: static/favicon.ico
 
 # Google analytics
 # ga: UA-00000000-0
@@ -507,11 +507,11 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
-  - js/Waline.min.js # Waline 依赖
-  - js/clipboard.min.js # 剪贴板
+  - https://cworld0.gitee.io/file/js/Waline.min.js # Waline 依赖
+  - https://cworld0.gitee.io/file/js/clipboard.min.js # 剪贴板
   # - js/ripple.min.js # 涟漪特效
   # - js/main.js # 自定义 JS
-  - css/main.min.css # 自定义 CSS
+  - static/css/main.min.css # 自定义 CSS
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -540,9 +540,9 @@ plugins:
           locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
           visitor: true,
           emoji: [
-            'https://cworld0.gitee.io/file/img/weibo',
-            'https://cworld0.gitee.io/file/img/bilibili',
+            'static/img/bilibili',
+            'static/img/weibo',
           ],
         });
       </script>
-      <link href="/css/comment.min.css" rel="stylesheet">
+      <link href="/static/css/comment.min.css" rel="stylesheet">
