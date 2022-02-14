@@ -508,8 +508,9 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
-  - https://cworld0.gitee.io/file/js/clipboard.min.js # 剪贴板
-  - https://cworld0.gitee.io/file/js/Waline.min.js # Waline 依赖
+  - js/Waline.min.js # Waline 依赖
+  - js/clipboard.min.js # 剪贴板
+  - js/ripple.min.js #涟漪特效
   - css/main.min.css
 
   # Dynamic inject html snippet
@@ -537,7 +538,7 @@ plugins:
         Waline({
           el: '#waline',
           serverURL: 'waline-blog-api-ji201jyl6-cworld1.vercel.app',
-          locale: {login:'登录(非必须)', placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒)'},
+          locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
           visitor: true,
           emoji: [
             'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
@@ -545,6 +546,4 @@ plugins:
           ],
         });
       </script>
-      <style>
-        :root{--waline-theme-color:var(--inside-accent-color);--waline-active-color:var(--inside-accent-color);--waline-text-color:var(--inside-foreground-color);--waline-bgcolor:var(--inside-background);--waline-bgcolor-light:var(--inside-card-background);--waline-bgcolor-hover:var(--inside-card-background);--waline-border-color:var(--inside-border-color);--waline-disable-bgcolor:var(--inside-card-background);--waline-disable-color:var(--inside-foreground-color);--waline-code-bgcolor:var(--inside-highlight-00);--waline-mobile-avatar-size:calc(var(--waline-avatar-size) * 11 / 13);--waline-badge-color:var(--inside-accent-color);--waline-info-bgcolor:var(--inside-background);--waline-avatar-radius:50%}#waline .veditor{width:calc(100% - 2em)!important}
-      </style>
+      <link href="/css/comment.min.css" rel="stylesheet">

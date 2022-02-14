@@ -6,31 +6,25 @@
 }
 /* 单个元素整体 */
 .f > ul > li {
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
+    transition: .3s ease;
     list-style: none;
 }
 .f > ul > li {
     display: flex;
-    margin: 10px 10px 0 0;
+    margin: 0 10px 10px 0;
     text-decoration: none;
-    font-weight: 300;
     padding: 10px;
     background-color: var(--inside-background);
     color: var(--inside-accent-color);
-    border-radius: 4px;
+    border-radius: 6px;
 }
 .f > ul > li:hover {
     color: #fff;
     background-color: var(--inside-accent-color);
-    box-shadow: 0 2px 10px var(--inside-accent-color);
+    box-shadow: 0 2px 4px 1px rgb(0 0 0 / 20%);
     transform: translateY(-5px);
 }
 .f > ul > li:active {
-    -webkit-transform: scale(0.95);
-    -moz-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    -o-transform: scale(0.95);
     transform: scale(0.95);
 }
 
@@ -45,7 +39,7 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    margin: 0!important;
+    margin: 0 !important;
 }
 .f img:hover {
     animation: whirl 0.5s;
@@ -74,10 +68,11 @@
 .f > ul > li > ul > li:nth-child(2) {
     font-size: 12px;
     margin-top: 5px;
-    max-width: 110px;
+    max-width: 108px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    opacity: 0.8;
 }
 .f > ul > li > ul > li:nth-child(3) a {
     position: absolute;
