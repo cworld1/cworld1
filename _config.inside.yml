@@ -541,8 +541,8 @@ plugins:
           locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
           visitor: true,
           emoji: [
-            'ststic/bilibili',
-            'ststic/weibo',
+            'static/bilibili',
+            'static/weibo',
           ],
         });
       </script>
