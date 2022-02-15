@@ -5,7 +5,7 @@ categories:
  - 资料
 tags: 
  - Hexo
-thumbnail: 'thumbnail.jpg #111'
+thumbnail: 'thumbnail.jpg #5273a0'
 ---
 
 预置文档

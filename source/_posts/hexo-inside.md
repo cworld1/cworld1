@@ -6,7 +6,7 @@ categories:
 tags:
  - Inside
  - Hexo
-thumbnail: 'thumbnail.jpg #111'
+thumbnail: 'thumbnail.jpg #5f7c8c'
 ---
 
 [Inside](https://github.com/ikeq/hexo-theme-inside) 是一款采用 SPA 打造的轻量级和功能丰富的 Hexo 主题。然而整体上作者采用了较为开放的丰富的自定义模式，所以很多功能都需要手动调整。

@@ -6,7 +6,7 @@ categories:
 tags:
  - Chrome
  - JavaScript
-thumbnail: 'https://tva3.sinaimg.cn/large/0060ksKkly1gnrs5rqtiqj30fe07vq42.jpg'
+thumbnail: 'thumbnail.jpg #7fd9da'
 ---
 
 ## 前言

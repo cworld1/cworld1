@@ -5,7 +5,7 @@ categories:
  - 项目
 tags: 
  - Userstyle
-thumbnail: 'thumbnail.jpg #fff'
+thumbnail: 'thumbnail.jpg #dfe1e2'
 ---
 
 ## 介绍
