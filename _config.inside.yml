@@ -281,7 +281,7 @@ search:
 assets:
   # prefix: 'https://cdn.example.com'
   # suffix: '?m=webp&q=80'
-  prefix: 'https://cdn.jsdelivr.net/gh/cworld1/cworld1@gh-pages'
+  prefix: 'https://gitee.com/cworld0/file/raw/master/'
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
@@ -310,13 +310,13 @@ reward:
   #     color: '#09bb07'
   methods:
     - name: wechat
-      qrcode: static/img/wechat_qrcode.jpg
+      qrcode: https://gitee.com/cworld0/file/raw/master/img/reward/wechat_qrcode.jpg
       url: https://weixin.qq.com/
       text: 微信
       color: '#22ad38'
     - name: alipay
       qrcode: static/img/alipay_qrcode.jpg
-      url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
+      url: https://gitee.com/cworld0/file/raw/master/img/reward/alipay_qrcode.jpg
       text: 支付宝（点击前往）
       color: '#1678ff'
 
@@ -508,8 +508,8 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
-  - https://cdn.jsdelivr.net/npm/@waline/client # Waline 依赖
-  - https://cdn.jsdelivr.net/gh/zenorocha/clipboard.js/dist/clipboard.min.js # 剪贴板
+  - https://cworld0.gitee.io/file/js/Waline.min.js # Waline 依赖
+  - https://cworld0.gitee.io/file/js/clipboard.min.js # 剪贴板
   # - js/ripple.min.js # 涟漪特效
   # - js/main.js # 自定义 JS
   - static/css/main.min.css # 自定义 CSS
