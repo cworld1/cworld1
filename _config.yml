@@ -4,9 +4,9 @@
 
 # Site
 title: CWorld's Blog
-subtitle: 'CWorld 的博客'
-description: 'Stay hungry, Stay foolish. 求知若愚，虚怀若谷'
-keywords: cworld, blog, hexo
+subtitle: Stay hungry, Stay foolish. 求知若愚，虚怀若谷
+description: CWorld 的个人博客, 是一个关于 CWorld 的个人站点
+keywords: cworld, blog, hexo, 博客, 个人
 author: CWorld
 language: zh-Hans
 timezone:

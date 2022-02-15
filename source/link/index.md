@@ -61,6 +61,11 @@ copyright: false
   - 有限的梦，无限的记忆
   - [](https://kurumit3.top)
 
+- [](https://cdn.jsdelivr.net/gh/1rz/static/images/me.webp)
+  - Wittoy's Blog
+  - 摸鱼天下第一
+  - [](https://blog.wittoy.com)
+
 - ![](https://blog.joyer.top/img/favicon.png)
   - Joyer的博客
   - 一只会唱Lahee~的龙

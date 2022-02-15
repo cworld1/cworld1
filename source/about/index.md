@@ -75,10 +75,13 @@ C*a(酷安：暴走の蜗牛)|2.00|2019\07\02
 
 ## 关于博客
 
-感谢以下项目/服务商为本博客提供服务支持：
+小站开通时间：2019 年 6 月 14 日
 
+感谢以下项目/服务商为本博客提供长期服务支持：
+
+- [x] 网站域名：
 - [x] 框架主题：[Hexo](https://hexo.io) + [inside](https://github.com/ikeq/hexo-theme-inside)
-- [x] 托管服务：[GitHub Pages](https://pages.github.com)、[Gitee Pages](https://gitee.com/help/categories/56)
+- [x] 网页托管：[GitHub Pages](https://pages.github.com)、[Gitee Pages](https://gitee.com/help/categories/56)
 - [x] 评论系统：[Waline](https://waline.js.org)
 - [x] 持续集成：[Github Actions](https://github.com/cworld1/cworld1/actions/workflows/hexo-auto-deploy.yml)
 - [x] 统计服务：[LeanCloud](https://console.leancloud.app)、[不蒜子](http://busuanzi.ibruce.info)
