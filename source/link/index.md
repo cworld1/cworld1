@@ -61,6 +61,16 @@ copyright: false
   - 有限的梦，无限的记忆
   - [](https://kurumit3.top)
 
+- ![](https://blog.joyer.top/img/favicon.png)
+  - Joyer的博客
+  - 一只会唱Lahee~的龙
+  - [](https://blog.joyer.top)
+
+- ![](https://mcenjoy.cn/avatar)
+  - Enjoy's blog
+  - 个人博客，记录生活点滴。
+  - [](https://mcenjoy.cn)
+
 </div>
 
 <details>
