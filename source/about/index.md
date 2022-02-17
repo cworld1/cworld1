@@ -16,8 +16,8 @@ comments: true
 
 - [Pure 百度](https://blog.cworld.top/post/pure-baidu) - 百度页面的美化模块
 - [Momotap](https://github.com/cworld1/momotap) - 一款与 Mikutap 类似的板垫音乐游戏
-- [Vue Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 Vue 时的一些代码记录
 - [Vue Login](https://github.com/cworld1/vue-login) - 一个简单的 Vuejs 开发设计的登录程序
+- [Vue Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 Vue 时的一些代码记录
 
 ## 个人简介
 

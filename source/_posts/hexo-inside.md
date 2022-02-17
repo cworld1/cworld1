@@ -23,14 +23,14 @@ permalink: /post/:title/ # 个人在这里相对喜欢这种简单的格式
 skip_render: ["css/*", "js/*"] # 便于在仓库内置各类文件
 deploy:
   type: git
-  repository: git@github.com:cworld1/cworld1.git # 这种写法更不容易报错
-  branch: gh-pages
+  repository: git@github.com:<用户名>/<仓库>.git # 这种写法更不容易报错
+  branch: <分支>
 ```
 
 ## Inside 主题配置
 
 - 想要像我那样侧栏用户名有漂亮的字体，配置应该额外调整：
-
+  
   ```yml
   appearance:
     # ...
@@ -41,8 +41,8 @@ deploy:
       menu: 'Baloo Bhaijaan'
   ```
 
-- 想要在社交按钮栏加上酷安，需要单独引入 svg 图标。
-
+- 想要在社交按钮栏加上自定义的按钮，需要单独引入 svg 图标。比如添加一个酷安的按钮：
+  
   ```yml
   sns:
     # ...
@@ -52,8 +52,8 @@ deploy:
         <svg t="1644654153078" class="icon" viewBox="0 0 1922 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1687" data-darkreader-inline-fill="" width="18" height="18"><path d="M513.810604 0c308.858273 0 602.991192 297.820939 602.991192 297.820939l-132.287657 102.890399S723.386322 178.321089 513.810604 178.321089c-143.391802 0-329.062206 104.787859-329.062206 323.556901 0 213.250375 136.029126 334.594235 330.906216 334.594235C1023.05127 836.485587 1203.216369 0 1363.15081 0c104.787859 0 175.047303 244.772252 297.820938 450.406065 147.06646 246.349014 261.475239 472.814793 261.47524 481.660695 0 49.641277-46.380854 91.919878-79.479494 91.919878S1206.891026 577.255229 1206.891026 577.255229l148.910469-108.462516 189.345061 128.679812L1359.476153 259.230358c-57.912596 57.899234-336.424882 764.769642-834.628215 764.769642C329.970848 1023.986638 0 880.581473 0 500.047343 0 284.952958 162.687093 0 513.810604 0z" p-id="1688"></path></svg>
   ```
 
-- 或者侧栏链接上加上 Emoji 看起来更好看：
-
+- 在侧栏配置上，名称前面加上 Emoji 看起来会更加美观：
+  
   ```yml
   menu:
   🏠 Home: /
@@ -78,7 +78,7 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
 
 ### 文档
 
-[Waline 官网](https://waline.js.org/)  
+[Waline 官网](https://waline.js.org/)
 
 [Waline on Github](https://github.com/walinejs/waline)
 
@@ -161,18 +161,19 @@ plugins:
 在友链页面按照如下格式写：
 
 - 提前引用 css 样式避免排版错乱
-
+  
   ```markdown
   <link href="/css/link.min.css" rel="stylesheet">
   ```
-
+  
   其文件压缩版也贴出来仅供参考：
+  
   ```css
   .f>ul{display:flex;flex-wrap:wrap;padding:0}.f>ul>li{transition:.3s ease;list-style:none}.f>ul>li{display:flex;margin:0 10px 10px 0;text-decoration:none;padding:10px;background-color:var(--inside-background);color:var(--inside-accent-color);border-radius:6px}.f>ul>li:hover{color:#fff;background-color:var(--inside-accent-color);box-shadow:0 2px 4px 1px rgb(0 0 0 / 20%);transform:scale(1.03)}.f>ul>li:active{transform:scale(0.97)}.f>ul>li>p{margin:0}.f img{border:solid 1px var(--inside-border-color);border-radius:25px;width:50px;height:50px;margin:0!important;max-width:fit-content}.f>ul>li>ul{position:relative;margin-left:10px;padding:0}.f>ul>li>ul>li{list-style:none;text-align:center}.f>ul>li>ul>li:nth-child(1){font-size:14px}.f>ul>li>ul>li:nth-child(2){font-size:12px;margin-top:5px;max-width:108px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;opacity:.8}.f>ul>li>ul>li:nth-child(3) a{position:absolute;right:0;top:0;height:100%;width:100%;border:0;color:transparent}@media(max-width:450px){.f>ul>li{margin-left:0;width:100%}.f>ul>li>ul{width:100%}.f>ul>li>ul>li{text-align:start;max-width:100%!important}}
   ```
 
 - 随后用一个 div 标签将需要优化展示的友链包裹起来即可。这样通过 Markdown 语法写出来的友链，真的是不知道要比手动写 html 标签要高到哪里去了。
-
+  
   ```markdown
   <div class="f">
   

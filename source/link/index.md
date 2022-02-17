@@ -36,7 +36,7 @@ copyright: false
   - 蜀江水碧蜀山青，圣主朝朝暮暮情
   - [](https://meyyz.cn)
 
-- ![](https://thirdqq.qlogo.cn/g?b=sdk&k=VyrIfRuDgjHKOsfxbicZIUA&s=100&t=1635817743)
+- ![](https://s2.ax1x.com/2019/07/22/ePRmnO.png)
   - Barkure
   - 未来已来，将至已至
   - [](https://guguga.cn)
@@ -75,6 +75,11 @@ copyright: false
   - Enjoy's blog
   - 个人博客，记录生活点滴。
   - [](https://mcenjoy.cn)
+
+- ![](https://gravatar.loli.net/avatar/b9fa18886cd3acb13fcd8ebfb6140c44?s=400)
+  - hiCasper
+  - 没有简介。
+  - [](http://hicasper.com)
 
 </div>
 
