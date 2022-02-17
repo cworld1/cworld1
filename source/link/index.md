@@ -110,6 +110,11 @@ copyright: false
   - 创造不一样
   - [](https://www.bandbbs.cn)
 
+- ![](https://avatars.githubusercontent.com/u/39395618?s=200&v=4)
+  - 十年之约
+  - 一个人的寂寞，一群人的狂欢
+  - [](https://www.foreverblog.cn/)
+
 </div>
 
 ## 申请友链
