@@ -281,7 +281,7 @@ search:
 assets:
   # prefix: 'https://cdn.example.com'
   # suffix: '?m=webp&q=80'
-  prefix: 'https://gitee.com/cworld0/file/raw/master/'
+  prefix: 'https://gitee.com/cworld0/file/raw/master'
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
@@ -508,8 +508,8 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
+  - https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js # 剪贴板
   - https://cworld0.gitee.io/file/js/Waline.min.js # Waline 依赖
-  - https://cworld0.gitee.io/file/js/clipboard.min.js # 剪贴板
   # - js/ripple.min.js # 涟漪特效
   # - js/main.js # 自定义 JS
   - static/css/main.min.css # 自定义 CSS

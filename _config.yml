@@ -107,6 +107,7 @@ deploy:
   branch: gh-pages
 
 # Plugins
-# marked:
-#   prependRoot: true
-#   postAsset: true
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
