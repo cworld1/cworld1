@@ -81,6 +81,11 @@ copyright: false
   - 没有简介。
   - [](http://hicasper.com)
 
+- ![](https://avatars.githubusercontent.com/u/45725145?v=4)
+  - Jinlk's blog
+  - 記錄生活點滴
+  - [](https://jinlk.site/)
+
 </div>
 
 <details>
