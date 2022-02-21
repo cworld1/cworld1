@@ -28,7 +28,7 @@ appearance:
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: //fonts.googleapis.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+    url: https://fonts.googleapis.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
 
     # Base font which applied to body
     base: 'Josefin Sans'
@@ -114,10 +114,11 @@ profile:
 
 # Sidebar navigation links
 menu:
-  🏠 Home: /
-  🔍 Search: /search
-  🔗 Link: /link
-  🧑‍💻 About: /about
+  🏠 主页: /
+  🔍 搜索: /search
+  🔗 友链: /link
+  🧑‍💻 关于: /about
+  🚇 开往未知: https://travellings.link
   # About: /about
   # Links: /links
   # Github: https://github.com/username
@@ -510,8 +511,6 @@ plugins:
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
   - https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js # 剪贴板
   - https://cworld0.gitee.io/file/js/Waline.min.js # Waline 依赖
-  # - js/ripple.min.js # 涟漪特效
-  # - js/main.js # 自定义 JS
   - static/css/main.min.css # 自定义 CSS
 
   # Dynamic inject html snippet
@@ -528,7 +527,7 @@ plugins:
         new ClipboardJS('.btn-copy', { target: (trigger) => trigger.nextElementSibling });
       </script>
       <style>
-        .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}.highlight:hover .btn-copy{opacity:1}
+        .btn-copy{position:absolute;right:5px;top:5px;border:0;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:var(--inside-foreground-color);opacity:0;transition:.3s}.highlight:hover .btn-copy{opacity:1}
       </style>
 
   - position: comments

@@ -3,7 +3,7 @@ title: 酷安 318 事件
 date: 2020-03-22T21:02:06+08:00
 categories: 
  - 随笔
-thumbnail: 'https://tva2.sinaimg.cn/large/0060ksKkly1gp7xgf0khxj30s704w0sx.jpg'
+thumbnail: 'thumbnail.jpg #e5efff'
 ---
 
 我们暂且用『载入酷安史册』来形容这7天的历史。
@@ -20,12 +20,12 @@ thumbnail: 'https://tva2.sinaimg.cn/large/0060ksKkly1gp7xgf0khxj30s704w0sx.jpg'
 
 原文实在找不到了，大概内容可以看下这位用户的回答。
 
-[半生瓜BalsamPear的回答 - 知乎](https://www.zhihu.com/question/380038074/answer/1086523661)
+[半生瓜BalsamPear的知乎回答](https://www.zhihu.com/question/380038074/answer/1086523661)
 
 @匿名游客(酷安官方人员) 的说法：[匿名游客的知乎回答](https://www.zhihu.com/question/380038074/answer/1086114857?utm_source=com.coolapk.market&utm_medium=social&utm_oi=968087657482534912)
 
 然而，更为过分的是，仅过了2天，又有人持续触犯了警戒线。
-在这样严峻的情况下，酷安小编最终发出了这样的动态： [酷安小编的酷安动态]([我们鼓励大家多交流，多发优质内容... 来自 酷安小编 - 酷安](https://www.coolapk.com/feed/17378785?shareKey=NWY4OWZkYzgzNWE0NWU3MjNjY2M~&shareUid=1384771&shareFrom=com.coolapk.market_10.0.3))
+在这样严峻的情况下，酷安小编最终发出了这样的动态： [酷安小编的酷安动态](https://www.coolapk.com/feed/17378785?shareKey=NWY4OWZkYzgzNWE0NWU3MjNjY2M~&shareUid=1384771&shareFrom=com.coolapk.market_10.0.3)
 
 “ 我们鼓励大家多交流，多发优质内容，但我们的红线是涉政涉黄涉恐，特别是很多人喜欢玩一些很危险的梗，还是我们太温柔，我发自内心的一直觉得酷友就像一家人，所以我们很珍惜每一位酷友，但这种宽容有好处也有坏处，还是请各位酷友多多珍惜这种氛围，珍惜自己的账号和设备，因为从此以后我们会非常严格，谢谢支持。”
 
