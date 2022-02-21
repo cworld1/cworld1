@@ -537,7 +537,7 @@ plugins:
       <script>
         Waline({
           el: '#waline',
-          serverURL: 'waline-blog-api-seven.vercel.app',
+          serverURL: 'waline-blog-api-fawbspa10-cworld1.vercel.app',
           locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
           visitor: true,
           emoji: [
