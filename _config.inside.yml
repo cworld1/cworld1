@@ -118,7 +118,6 @@ menu:
   🔍 搜索: /search
   🔗 友链: /link
   🧑‍💻 关于: /about
-  🚇 开往未知: https://travellings.link
   # About: /about
   # Links: /links
   # Github: https://github.com/username
@@ -160,7 +159,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy; 2022 • <a href="">CWorld</a>'
+  copyright: '&copy; 2022 • <a href="">CWorld</a>' • <span id="busuanzi_container_site_pv">总访问<span id="busuanzi_value_site_pv"></span>次</span>
 
   # Set to false to hide Hexo link.
   # powered: false
@@ -171,8 +170,6 @@ footer:
   # Custom text.
   # custom: Hosted by <a target="_blank" rel="external nofollow"
   #   href="https://pages.github.com/"><b>Github Pages</b></a>
-  custom: <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-
 
 # ---------------------------------------------------------------
 # Content
