@@ -159,7 +159,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy; 2022 • <a href="">CWorld</a>' • <span id="busuanzi_container_site_pv">总访问<span id="busuanzi_value_site_pv"></span>次</span>
+  copyright: '&copy; 2022 • <a href="">CWorld</a> • <span id="busuanzi_container_site_pv">总访问<span id="busuanzi_value_site_pv"></span>次</span>'
 
   # Set to false to hide Hexo link.
   # powered: false
