@@ -313,8 +313,8 @@ reward:
       text: 微信
       color: '#22ad38'
     - name: alipay
-      qrcode: static/img/alipay_qrcode.jpg
-      url: https://gitee.com/cworld0/file/raw/master/img/reward/alipay_qrcode.jpg
+      qrcode: https://gitee.com/cworld0/file/raw/master/img/reward/alipay_qrcode.jpg
+      url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
       text: 支付宝（点击前往）
       color: '#1678ff'
 
