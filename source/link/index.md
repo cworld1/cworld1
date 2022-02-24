@@ -26,10 +26,10 @@ copyright: false
   - 天生骄傲
   - [](https://orxing.top)
 
-- ![](https://ypy.mxlbs.cn/Oriental-Fantasy-logo-160.jpg)
+- ![](https://gravatar.loli.net/avatar/dbccf13f3f9601f2b33ae81ddf6444ae?s=200)
   - 东方幻梦
   - 只是当时已惘然
-  - [](https://orxing.top)
+  - [](https://blog.badapple.pro)
 
 - ![](https://meyyz.cn/tx.png)
   - 一叶竹
@@ -61,7 +61,7 @@ copyright: false
   - 有限的梦，无限的记忆
   - [](https://kurumit3.top)
 
-- [](https://cdn.jsdelivr.net/gh/1rz/static/images/me.webp)
+- [](https://npm.elemecdn.com/staticdn@0.0.3-rc.1/hexo/images/me.webp)
   - Wittoy's Blog
   - 摸鱼天下第一
   - [](https://blog.wittoy.com)
