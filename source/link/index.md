@@ -84,12 +84,22 @@ copyright: false
 - ![](https://avatars.githubusercontent.com/u/45725145?v=4)
   - Jinlk's blog
   - 記錄生活點滴
-  - [](https://jinlk.site/)
+  - [](https://jinlk.site)
 
 - ![](https://www.miaoer.xyz/weblogo.png)
   - 喵二の小博客
   - 缘，妙不可言
-  - [](https://www.miaoer.xyz/)
+  - [](https://www.miaoer.xyz)
+
+- ![](https://img1.baidu.com/it/u=1214290448,1946399589&fm=253&fmt=auto)
+  - Fly
+  - 相逢的人会再相逢
+  - [](http://flyme.cf)
+
+- ![](https://gitee.com/MuZii123/muzii/raw/master/IMG_20220224_140724.jpg)
+  - 木子のBlog
+  - 子非鱼，安知鱼之乐…
+  - [](muzii.cc)
 
 </div>
 
