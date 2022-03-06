@@ -33,6 +33,7 @@
   margin: 0;
 }
 .f img {
+  background-color: var(--inside-background);
   border: solid 1px var(--inside-border-color);
   border-radius: 25px;
   width: 50px;
