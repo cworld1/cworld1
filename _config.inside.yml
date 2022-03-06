@@ -5,7 +5,7 @@
 # Appearance
 appearance:
   # Accent color, default '#2a2b33'
-  accent_color: '#659eb9'
+  accent_color: "#659eb9"
   # Font color, default '#363636'
   foreground_color:
   # Border color, default '#e0e0e0'
@@ -13,7 +13,7 @@ appearance:
   # body background, default '#f5f7fa'
   background:
   # Sidebar background (when opened), default to accent_color
-  sidebar_background: 'url(https://gitee.com/cworld0/file/raw/master/img/bg-photo.jpg) #475976'
+  sidebar_background: "url(https://gitee.com/cworld0/file/raw/master/img/bg-photo.jpg) #475976"
   # Card background, default '#fff'
   card_background:
 
@@ -31,11 +31,11 @@ appearance:
     url: https://fonts.googleapis.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
 
     # Base font which applied to body
-    base: 'Josefin Sans'
+    base: "Josefin Sans"
     # Sidebar author font, fallback to `base`
-    logo: 'Lobster'
+    logo: "Lobster"
     # Sidebar menu font, fallback to `base`
-    menu: 'Baloo Bhaijaan'
+    menu: "Baloo Bhaijaan"
     # Font for:
     # - percentage on the fab button
     # - month text on archives page
@@ -56,12 +56,25 @@ appearance:
   # Uses an architecture called "base16" (https://github.com/chriskempson/base16),
   # the default theme is a customized Atelier Dune Light theme,
   # please feel free to explore more.
-  highlight: [
-    '#ffffff', '#e0e0e0', '#d6d6d6', '#8e908c',
-    '#969896', '#4d4d4c', '#282a2e', '#1d1f21',
-    '#c82829', '#f5871f', '#eab700', '#718c00',
-    '#3e999f', '#4271ae', '#8959a8', '#a3685a'
-  ]
+  highlight:
+    [
+      "#ffffff",
+      "#e0e0e0",
+      "#d6d6d6",
+      "#8e908c",
+      "#969896",
+      "#4d4d4c",
+      "#282a2e",
+      "#1d1f21",
+      "#c82829",
+      "#f5871f",
+      "#eab700",
+      "#718c00",
+      "#3e999f",
+      "#4271ae",
+      "#8959a8",
+      "#a3685a",
+    ]
 
   # Default Light by Chris Kempson (http://chriskempson.com)
   # highlight: [
@@ -88,18 +101,31 @@ appearance:
   # ]
 
   darkmode:
-    accent_color: '#539bf5'
-    foreground_color: '#adbac7'
-    border_color: '#373e47'
-    background: '#22272e'
-    sidebar_background: '#22272e'
-    card_background: '#2d333b'
-    highlight: [
-      '#2d333b', '#444c56', '#3e4451', '#545862',
-      '#565c64', '#abb2bf', '#b6bdca', '#c8ccd4',
-      '#e06c75', '#d19a66', '#e5c07b', '#98c379',
-      '#56b6c2', '#61afef', '#c678dd', '#be5046'
-    ]
+    accent_color: "#539bf5"
+    foreground_color: "#adbac7"
+    border_color: "#373e47"
+    background: "#22272e"
+    sidebar_background: "#22272e"
+    card_background: "#2d333b"
+    highlight:
+      [
+        "#2d333b",
+        "#444c56",
+        "#3e4451",
+        "#545862",
+        "#565c64",
+        "#abb2bf",
+        "#b6bdca",
+        "#c8ccd4",
+        "#e06c75",
+        "#d19a66",
+        "#e5c07b",
+        "#98c379",
+        "#56b6c2",
+        "#61afef",
+        "#c678dd",
+        "#be5046",
+      ]
 
 # Sidebar profile
 profile:
@@ -159,7 +185,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy; 2022 • <a href="">CWorld</a> • <span id="busuanzi_container_site_pv">总访问<span id="busuanzi_value_site_pv"></span>次</span>'
+  copyright: '&copy; 2022 • <a href="">CWorld</a> • <span id="busuanzi_container_site_pv">总访问 <span id="busuanzi_value_site_pv">喵喵喵</span> 次</span>'
 
   # Set to false to hide Hexo link.
   # powered: false
@@ -268,7 +294,6 @@ search:
   #     # Used to retrieve content from per hit
   #     content: _snippetResult.content.value
 
-
 # ---------------------------------------------------------------
 # Content addons
 # ---------------------------------------------------------------
@@ -279,7 +304,7 @@ search:
 assets:
   # prefix: 'https://cdn.example.com'
   # suffix: '?m=webp&q=80'
-  prefix: 'https://gitee.com/cworld0/file/raw/master'
+  prefix: "https://gitee.com/cworld0/file/raw/master"
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
@@ -311,12 +336,12 @@ reward:
       qrcode: https://gitee.com/cworld0/file/raw/master/img/reward/wechat_qrcode.jpg
       url: https://weixin.qq.com/
       text: 微信
-      color: '#22ad38'
+      color: "#22ad38"
     - name: alipay
       qrcode: https://gitee.com/cworld0/file/raw/master/img/reward/alipay_qrcode.jpg
       url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
       text: 支付宝（点击前往）
-      color: '#1678ff'
+      color: "#1678ff"
 
 # Copyright notice
 # It is possible to use front matter `copyright` to override this setting.
@@ -351,7 +376,6 @@ comments:
   #   script: //disqus_shortname.disqus.com/embed.js
   #   # Autoload, default to `true`, set to `false` to display a button
   #   autoload: false
-
 
 # ---------------------------------------------------------------
 # Misc
@@ -454,13 +478,9 @@ pwa:
     short_name: CWorld's Blog
     name: CWorld's Blog
     start_url: /
-    theme_color: '#659eb9'
-    background_color: '#f5f7fa'
-    icons: [{
-      "src": "favicon.ico",
-      "type": "image/ico",
-      "sizes": "256x256"
-    }]
+    theme_color: "#659eb9"
+    background_color: "#f5f7fa"
+    icons: [{ "src": "favicon.ico", "type": "image/ico", "sizes": "256x256" }]
 
 # Plugins
 plugins:
@@ -487,18 +507,19 @@ plugins:
       excerpt: 内容已加密
   - palette:
       col: 5
-      theme: [
-        '#673ab7',
-        '#3f51b5',
-        '#2196f3',
-        '#009688',
-        '#4caf50',
-        '#ff9800',
-        '#ff5722',
-        '#795548',
-        '#607D8B',
-        '#2a2b33'
-      ]
+      theme:
+        [
+          "#673ab7",
+          "#3f51b5",
+          "#2196f3",
+          "#009688",
+          "#4caf50",
+          "#ff9800",
+          "#ff5722",
+          "#795548",
+          "#607D8B",
+          "#2a2b33",
+        ]
 
   # Global Inject script/style
   # By default script will be injected into <body>, and style will be injected into <head>
@@ -512,10 +533,10 @@ plugins:
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
-    # HTML code
-    # template: <script>...</script>
-    # Or a path relative to `hexo.base_dir`
-    # template: snippets/snippet-1.html
+  # HTML code
+  # template: <script>...</script>
+  # Or a path relative to `hexo.base_dir`
+  # template: snippets/snippet-1.html
   - position: [post, page] # 剪贴板
     template: |
       <script>
@@ -529,7 +550,7 @@ plugins:
 
   - position: comments
     template: |
-      <div id="waline"></div>
+      <div id="waline">好像评论卡了欸，要不要刷新一下？✨</div>
       <script>
         Waline({
           el: '#waline',

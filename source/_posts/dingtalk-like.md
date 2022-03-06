@@ -2,11 +2,11 @@
 title: 钉钉一键点赞（最高 21 亿）
 date: 2020-03-03T23:21:47+08:00
 categories:
- - 教程
-tags: 
- - 钉钉
- - Fiddler
-thumbnail: 'thumbnail.jpg #650e83'
+  - 教程
+tags:
+  - 钉钉
+  - Fiddler
+thumbnail: "thumbnail.jpg #650e83"
 ---
 
 想必感兴趣的已经试过了连点器的畅快吧。在玩转这之前，这确实不失为一种强有力的手段。<!-- more -->然而如果这样的话，最多也就不过十万。这怎么能让博主折服呢，所以就从钉钉直播下手。在这之前，先对这个套壳钉钉有一个更深入的了解。
@@ -50,7 +50,7 @@ thumbnail: 'thumbnail.jpg #650e83'
 这样一来就可以直接修改了。将第一个框中的内容改为：
 
 ```javascript
-uploadLikesClick(B,10000000)
+uploadLikesClick(B, 10000000);
 ```
 
 第二个框中的 1e4 即为上传间隔，赋值为 0 即为清零操作。
@@ -67,17 +67,16 @@ uploadLikesClick(B,Math.ceil(10000000*Math.random()+1)),t.favorCountCache=1)},1e
 
 ### Fiddler 修改
 
-1. 首先你需要下载并修改好直播间网页并将其保存在本地。  
-2. 安装 [Fiddler](https://www.telerik.com/download/fiddler) 。  
+1. 首先你需要下载并修改好直播间网页并将其保存在本地。
+2. 安装 [Fiddler](https://www.telerik.com/download/fiddler) 。
 3. 打开 Fiddler 的 HTTPS 模式，位于 Tools - Options - HTTPS 。  
-   ![image](https://tvax4.sinaimg.cn/large/0060ksKkly1gciaaqmxk8j30f20a8mxk.jpg)  
+   ![image](https://tvax4.sinaimg.cn/large/0060ksKkly1gciaaqmxk8j30f20a8mxk.jpg)
 4. 配置 Autoresponder ，即在测试环境中将在线网页强制替换为本地网页。  
-   ![image](https://tvax2.sinaimg.cn/large/0060ksKkly1gciaf10k3gj30fz08474s.jpg)  
-5. 打开清理钉钉的网页缓存，位于%LOCALAPPDATA%\DIngtalk\Cache，删除全部 f 开头的文件。  
+   ![image](https://tvax2.sinaimg.cn/large/0060ksKkly1gciaf10k3gj30fz08474s.jpg)
+5. 打开清理钉钉的网页缓存，位于%LOCALAPPDATA%\DIngtalk\Cache，删除全部 f 开头的文件。
    > `%LOCALAPPDATA%` 为 `C:\Users\你的电脑用户名\AppData\Local`  
-   > Ps. 此步骤需在每次 **更改网页文件后和重新打开直播间之前** 完成，否则会导致替换失败。  
-6. 打开钉钉直播间，如果遇到错误没关系，多打开几次，当播放正常之后，点赞吧。  
-
+   > Ps. 此步骤需在每次 **更改网页文件后和重新打开直播间之前** 完成，否则会导致替换失败。
+6. 打开钉钉直播间，如果遇到错误没关系，多打开几次，当播放正常之后，点赞吧。
 
 ### 效果展示
 

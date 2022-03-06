@@ -1,11 +1,11 @@
 ---
 title: 免费 API 汇总
 date: 2019-07-10T13:18:58.576Z
-categories: 
- - 资源
-tags: 
- - API
-thumbnail: 'https://tva4.sinaimg.cn/large/0060ksKkly1gc1pp1u60oj318g0jzag9.jpg #1d72d8'
+categories:
+  - 资源
+tags:
+  - API
+thumbnail: "https://tva4.sinaimg.cn/large/0060ksKkly1gc1pp1u60oj318g0jzag9.jpg #1d72d8"
 ---
 
 ## 企业
@@ -18,15 +18,15 @@ thumbnail: 'https://tva4.sinaimg.cn/large/0060ksKkly1gc1pp1u60oj318g0jzag9.jpg #
 
 ### 项目
 
-### 姬长信API（稳定推荐）
+### 姬长信 API（稳定推荐）
 
-[Api简介](https://api.isoyu.com/)
+[Api 简介](https://api.isoyu.com/)
 
 接口太多，不列举了
 
 ### Free Api（全，稳定）
 
-[Api详情](https://www.free-api.com/)
+[Api 详情](https://www.free-api.com/)
 
 ### 网友 木芽
 
@@ -79,8 +79,7 @@ thumbnail: 'https://tva4.sinaimg.cn/large/0060ksKkly1gc1pp1u60oj318g0jzag9.jpg #
 [介绍](https://source.unsplash.com/)
 
 ```html
-示例
-https://source.unsplash.com/random/1920x1080?wallpapers
+示例 https://source.unsplash.com/random/1920x1080?wallpapers
 ```
 
 ### Lorempixel 随机
@@ -88,8 +87,7 @@ https://source.unsplash.com/random/1920x1080?wallpapers
 [介绍](http://lorempixel.com/)
 
 ```html
-示例
-http://lorempixel.com/1920/1080/
+示例 http://lorempixel.com/1920/1080/
 ```
 
 ### Lorem Picsum（速度较快，有灰度或模糊功能）
@@ -97,7 +95,5 @@ http://lorempixel.com/1920/1080/
 [介绍](https://picsum.photos/)
 
 ```html
-示例
-https://picsum.photos/1920/1080
-https://picsum.photos/1920/1080?blur=10
+示例 https://picsum.photos/1920/1080 https://picsum.photos/1920/1080?blur=10
 ```

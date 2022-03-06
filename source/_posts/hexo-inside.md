@@ -2,11 +2,11 @@
 title: Hexo 主题之 Inside 拓展篇
 date: 2022-02-14 23:15:28
 categories:
- - 教程
+  - 教程
 tags:
- - Inside
- - Hexo
-thumbnail: 'thumbnail.jpg #5f7c8c'
+  - Inside
+  - Hexo
+thumbnail: "thumbnail.jpg #5f7c8c"
 ---
 
 [Inside](https://github.com/ikeq/hexo-theme-inside) 是一款采用 SPA 打造的轻量级和功能丰富的 Hexo 主题。然而整体上作者采用了较为开放的丰富的自定义模式，所以很多功能都需要手动调整。
@@ -30,19 +30,19 @@ deploy:
 ## Inside 主题配置
 
 - 想要像我那样侧栏用户名有漂亮的字体，配置应该额外调整：
-  
+
   ```yml
   appearance:
     # ...
     font:
       url: //fonts.googleapis.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
-      base: 'Josefin Sans'
-      logo: 'Lobster' # 就是这款字体
-      menu: 'Baloo Bhaijaan'
+      base: "Josefin Sans"
+      logo: "Lobster" # 就是这款字体
+      menu: "Baloo Bhaijaan"
   ```
 
 - 想要在社交按钮栏加上自定义的按钮，需要单独引入 svg 图标。比如添加一个酷安的按钮：
-  
+
   ```yml
   sns:
     # ...
@@ -53,7 +53,7 @@ deploy:
   ```
 
 - 在侧栏配置上，名称前面加上 Emoji 看起来会更加美观：
-  
+
   ```yml
   menu:
   🏠 Home: /
@@ -66,7 +66,7 @@ deploy:
 
 这里采用 Star 数较高的一个自动 [Github Action](https://github.com/sma11black/hexo-action) ，提到了整个流程。如果不太懂，也可以参考别人的一些教程。这里提几个点：
 
-- 运行命令 `$ ssh-keygen -t rsa -C "username@example.com"` 时会提示一些选项，建议全部按回车默认选项。这会在你的用户名文件夹根目录下生成一个 `.ssh` 文件夹，得到两个文件，其中带.pub后缀的为公钥，另一个为私钥。两者可以填在同一个仓库不同分支，也可以填在不同的仓库。
+- 运行命令 `$ ssh-keygen -t rsa -C "username@example.com"` 时会提示一些选项，建议全部按回车默认选项。这会在你的用户名文件夹根目录下生成一个 `.ssh` 文件夹，得到两个文件，其中带.pub 后缀的为公钥，另一个为私钥。两者可以填在同一个仓库不同分支，也可以填在不同的仓库。
 - Github Actions 的配置文件应该在项目根目录下的 `.github` > `workflows` ，默认名称为 `main.yml` ，当然你也可以随意命名。将整个项目一起上传上去，Github Actions 会自动执行并生成渲染文件。
 - 自定义域名应该在项目的 `source` 目录中放一个 CNAME 文件。
 
@@ -87,32 +87,51 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
 除官网给出部分，博客这边配置也非常重要。由于 Inside 主题是直接通过变量达成夜间模式的切换的，所以就宣告着 Waline 自身夜间模式的报废。当然这并不影响夜间模式的效果。下面是我的配置。
 
 ```yml
-  - position: comments
-    template: |
-      <div id="waline"></div>
-      <script>
-        Waline({
-          el: '#waline',
-          serverURL: '<你的Vercel的url>',
-          locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
-          visitor: true,
-          emoji: [
-            'https://cworld0.gitee.io/file/img/weibo',
-            'https://cworld0.gitee.io/file/img/bilibili',
-          ],
-        });
-      </script>
-      <link href="/css/comment.min.css" rel="stylesheet">
+- position: comments
+  template: |
+    <div id="waline"></div>
+    <script>
+      Waline({
+        el: '#waline',
+        serverURL: '<你的Vercel的url>',
+        locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
+        visitor: true,
+        emoji: [
+          'https://cworld0.gitee.io/file/img/weibo',
+          'https://cworld0.gitee.io/file/img/bilibili',
+        ],
+      });
+    </script>
+    <link href="/css/comment.min.css" rel="stylesheet">
 ```
 
-其中页面/文章访问数的功能完全仅用于统计数据，暂时不打算做效果呈现。Leancloud 可以轻松查询到。Emoji 则采用了较为经典的微博和B站表情。
+其中页面/文章访问数的功能完全仅用于统计数据，暂时不打算做效果呈现。Leancloud 可以轻松查询到。Emoji 则采用了较为经典的微博和 B 站表情。
 
 评论样式内容较多而且为了方便维护，故单独引用文件。
 
 文件压缩版的贴一份仅供参考：
 
 ```css
-:root{--waline-dark-grey:var(--inside-foreground-color);--waline-theme-color:var(--inside-accent-color);--waline-active-color:var(--inside-accent-color);--waline-text-color:var(--inside-foreground-color);--waline-bgcolor:var(--inside-background);--waline-bgcolor-light:var(--inside-card-background);--waline-bgcolor-hover:var(--inside-card-background);--waline-border-color:var(--inside-border-color);--waline-disable-bgcolor:var(--inside-card-background);--waline-disable-color:var(--inside-foreground-color);--waline-code-bgcolor:var(--inside-highlight-00);--waline-mobile-avatar-size:calc(var(--waline-avatar-size) * 11 / 13);--waline-badge-color:var(--inside-accent-color);--waline-info-bgcolor:var(--inside-background);--waline-avatar-radius:50%}#waline .veditor{width:calc(100% - 2em)!important}
+:root {
+  --waline-dark-grey: var(--inside-foreground-color);
+  --waline-theme-color: var(--inside-accent-color);
+  --waline-active-color: var(--inside-accent-color);
+  --waline-text-color: var(--inside-foreground-color);
+  --waline-bgcolor: var(--inside-background);
+  --waline-bgcolor-light: var(--inside-card-background);
+  --waline-bgcolor-hover: var(--inside-card-background);
+  --waline-border-color: var(--inside-border-color);
+  --waline-disable-bgcolor: var(--inside-card-background);
+  --waline-disable-color: var(--inside-foreground-color);
+  --waline-code-bgcolor: var(--inside-highlight-00);
+  --waline-mobile-avatar-size: calc(var(--waline-avatar-size) * 11 / 13);
+  --waline-badge-color: var(--inside-accent-color);
+  --waline-info-bgcolor: var(--inside-background);
+  --waline-avatar-radius: 50%;
+}
+#waline .veditor {
+  width: calc(100% - 2em) !important;
+}
 ```
 
 ## 自定义小插件
@@ -161,27 +180,107 @@ plugins:
 在友链页面按照如下格式写：
 
 - 提前引用 css 样式避免排版错乱
-  
+
   ```markdown
   <link href="/css/link.min.css" rel="stylesheet">
   ```
-  
-  其文件压缩版也贴出来仅供参考：
-  
+
+  其 CSS 文件也贴出来仅供参考：
+
   ```css
-  .f>ul{display:flex;flex-wrap:wrap;padding:0}.f>ul>li{transition:.3s ease;list-style:none}.f>ul>li{display:flex;margin:0 10px 10px 0;text-decoration:none;padding:10px;background-color:var(--inside-background);color:var(--inside-accent-color);border-radius:6px}.f>ul>li:hover{color:#fff;background-color:var(--inside-accent-color);box-shadow:0 2px 4px 1px rgb(0 0 0 / 20%);transform:scale(1.03)}.f>ul>li:active{transform:scale(0.97)}.f>ul>li>p{margin:0}.f img{border:solid 1px var(--inside-border-color);border-radius:25px;width:50px;height:50px;margin:0!important;max-width:fit-content}.f>ul>li>ul{position:relative;margin-left:10px;padding:0}.f>ul>li>ul>li{list-style:none;text-align:center}.f>ul>li>ul>li:nth-child(1){font-size:14px}.f>ul>li>ul>li:nth-child(2){font-size:12px;margin-top:5px;max-width:108px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;opacity:.8}.f>ul>li>ul>li:nth-child(3) a{position:absolute;right:0;top:0;height:100%;width:100%;border:0;color:transparent}@media(max-width:450px){.f>ul>li{margin-left:0;width:100%}.f>ul>li>ul{width:100%}.f>ul>li>ul>li{text-align:start;max-width:100%!important}}
+  .f > ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .f > ul > li {
+    transition: 0.3s ease;
+    list-style: none;
+  }
+  .f > ul > li {
+    display: flex;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--inside-background);
+    color: var(--inside-accent-color);
+    border-radius: 6px;
+  }
+  .f > ul > li:hover {
+    color: #fff;
+    background-color: var(--inside-accent-color);
+    box-shadow: 0 2px 4px 1px rgb(0 0 0 / 20%);
+    transform: scale(1.03);
+  }
+  .f > ul > li:active {
+    transform: scale(0.97);
+  }
+  .f > ul > li > p {
+    margin: 0;
+  }
+  .f img {
+    border: solid 1px var(--inside-border-color);
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    margin: 0 !important;
+    max-width: fit-content;
+  }
+  .f > ul > li > ul {
+    position: relative;
+    margin-left: 10px;
+    padding: 0;
+  }
+  .f > ul > li > ul > li {
+    list-style: none;
+    text-align: center;
+  }
+  .f > ul > li > ul > li:nth-child(1) {
+    font-size: 14px;
+  }
+  .f > ul > li > ul > li:nth-child(2) {
+    font-size: 12px;
+    margin-top: 5px;
+    max-width: 108px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0.8;
+  }
+  .f > ul > li > ul > li:nth-child(3) a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    color: transparent;
+  }
+  @media (max-width: 450px) {
+    .f > ul > li {
+      margin-left: 0;
+      width: 100%;
+    }
+    .f > ul > li > ul {
+      width: 100%;
+    }
+    .f > ul > li > ul > li {
+      text-align: start;
+      max-width: 100% !important;
+    }
+  }
   ```
 
 - 随后用一个 div 标签将需要优化展示的友链包裹起来即可。这样通过 Markdown 语法写出来的友链，真的是不知道要比手动写 html 标签要高到哪里去了。
-  
+
   ```markdown
   <div class="f">
-  
+
   - ![](https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=400)
     - CWorld's Blog
     - 求知若愚，虚怀若谷
     - [](https://blog.cworld.top)
-  
+
   </div>
   ```
 

@@ -2,11 +2,11 @@
 title: Chrome 小恐龙无敌化
 date: 2021-02-18T15:55:58+08:00
 categories:
- - 教程
+  - 教程
 tags:
- - Chrome
- - JavaScript
-thumbnail: 'thumbnail.jpg #7fd9da'
+  - Chrome
+  - JavaScript
+thumbnail: "thumbnail.jpg #7fd9da"
 ---
 
 ## 前言
@@ -29,15 +29,15 @@ thumbnail: 'thumbnail.jpg #7fd9da'
 
 - 让小恐龙无敌：
 
-    `Runner.instance_.gameOver=function(){}`
+  `Runner.instance_.gameOver=function(){}`
 
 - 让小恐龙跑得更快（默认是 10，但是你可以手动修改*使它更快*）：
 
-    `Runner.instance_.setSpeed(20)`
+  `Runner.instance_.setSpeed(20)`
 
 - 让小恐龙跳得更高（默认是 10，但是你可以手动修改*使它更富有弹性*）：
 
-    `Runner.instance_.tRex.setJumpVelocity(20)`
+  `Runner.instance_.tRex.setJumpVelocity(20)`
 
 就像这样子：
 

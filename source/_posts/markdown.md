@@ -1,11 +1,11 @@
 ---
 title: Markdown 语法与学习记录
 date: 2019-07-10T13:18:58.576Z
-categories: 
- - 资料
-tags: 
- - Markdown
-thumbnail: 'https://tva2.sinaimg.cn/large/0060ksKkly1gc2xjnp5enj318g0jzthk.jpg #057f72'
+categories:
+  - 资料
+tags:
+  - Markdown
+thumbnail: "https://tva2.sinaimg.cn/large/0060ksKkly1gc2xjnp5enj318g0jzthk.jpg #057f72"
 ---
 
 Markdown 是一种轻量级的「标记语言」
@@ -20,7 +20,9 @@ Markdown 是一种轻量级且易于使用的语法，用于为您的写作设�
 语法突出显示代码块
 
 # 标题 1
+
 ## 标题 2
+
 ### 标题 3
 
 - 项目符号
@@ -54,13 +56,9 @@ Markdown 是一种轻量级且易于使用的语法，用于为您的写作设�
 
 通常编辑器根据代码片段适配合适的高亮方法，但你也可以用 ` ``` ` 包裹一段代码，并指定一种语言
 
-```markdown
-⁢⁢```javascript
-$(document).ready(function () {
-    alert('hello world');
-});
-⁢⁢```
-```
+````markdown
+⁢⁢`javascript $(document).ready(function () { alert('hello world'); }); ⁢⁢`
+````
 
 支持的语言：`1c, abnf, accesslog, actionscript, ada, apache, applescript, arduino, armasm, asciidoc, aspectj, autohotkey, autoit, avrasm, awk, axapta, bash, basic, bnf, brainfuck, cal, capnproto, ceylon, clean, clojure, clojure-repl, cmake, coffeescript, coq, cos, cpp, crmsh, crystal, cs, csp, css, d, dart, delphi, diff, django, dns, dockerfile, dos, dsconfig, dts, dust, ebnf, elixir, elm, erb, erlang, erlang-repl, excel, fix, flix, fortran, fsharp, gams, gauss, gcode, gherkin, glsl, go, golo, gradle, groovy, haml, handlebars, haskell, haxe, hsp, htmlbars, http, hy, inform7, ini, irpf90, java, javascript, json, julia, kotlin, lasso, ldif, leaf, less, lisp, livecodeserver, livescript, llvm, lsl, lua, makefile, markdown, mathematica, matlab, maxima, mel, mercury, mipsasm, mizar, mojolicious, monkey, moonscript, n1ql, nginx, nimrod, nix, nsis, objectivec, ocaml, openscad, oxygene, parser3, perl, pf, php, pony, powershell, processing, profile, prolog, protobuf, puppet, purebasic, python, q, qml, r, rib, roboconf, rsl, ruby, ruleslanguage, rust, scala, scheme, scilab, scss, smali, smalltalk, sml, sqf, sql, stan, stata, step21, stylus, subunit, swift, taggerscript, tap, tcl, tex, thrift, tp, twig, typescript, vala, vbnet, vbscript, vbscript-html, verilog, vhdl, vim, x86asm, xl, xml, xquery, yaml, zephir`
 
@@ -74,32 +72,30 @@ $(document).ready(function () {
 
 如你不需要代码高亮，可以用下面的方法禁用：
 
-```markdown
-⁢```nohighlight
-⁢```
-```
+````markdown
+⁢`nohighlight ⁢`
+````
 
 #### 标题
 
 文章内容较多时，可以用标题分段：
 
 ```markdown
-标题1
-======
+# 标题 1
 
-标题2
------
+## 标题 2
 
-## 大标题 ##
-### 小标题 ###
+## 大标题
+
+### 小标题
 ```
 
 #### 粗斜体
 
 ```markdown
-*斜体文本*    _斜体文本_
-**粗体文本**    __粗体文本__
-***粗斜体文本***    ___粗斜体文本___
+_斜体文本_ _斜体文本_
+**粗体文本** **粗体文本**
+**_粗斜体文本_** **_粗斜体文本_**
 ```
 
 #### 链接
@@ -118,8 +114,8 @@ $(document).ready(function () {
 这个链接用 yahoo 作为网址变量 [Yahoo!][yahoo].
 然后在文档的结尾为变量赋值（网址）
 
-  [1]: http://www.google.com/
-  [yahoo]: http://www.yahoo.com/
+[1]: http://www.google.com/
+[yahoo]: http://www.yahoo.com/
 ```
 
 #### 列表
@@ -128,8 +124,10 @@ $(document).ready(function () {
 
 ```markdown
 - 列表文本前使用 [减号+空格]
-+ 列表文本前使用 [加号+空格]
-* 列表文本前使用 [星号+空格]
+
+* 列表文本前使用 [加号+空格]
+
+- 列表文本前使用 [星号+空格]
 ```
 
 普通有序列表
@@ -137,31 +135,32 @@ $(document).ready(function () {
 ```markdown
 1. 列表前使用 [数字+空格]
 2. 我们会自动帮你添加数字
-7. 不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3
+3. 不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3
 ```
 
 列表嵌套
 
 1. 列出所有元素：
-```markdown
+
+````markdown
     - 无序列表元素 A
         1. 元素 A 的有序子列表
     - 前面加四个空格
 
 2. 列表里的多段换行：
-    前面必须加四个空格，
-    这样换行，整体的格式不会乱
+   前面必须加四个空格，
+   这样换行，整体的格式不会乱
 
 3. 列表里引用：
-    > 前面空一行
-    > 仍然需要在 >  前面加四个空格
+
+   > 前面空一行
+   > 仍然需要在 > 前面加四个空格
 
 4. 列表里代码段：
-    ⁢```
-    前面四个空格，之后按代码语法 ``` 书写
-    ⁢```
-        或者这样直接空八个，引入代码块
-```
+   ⁢`前面四个空格，之后按代码语法` 书写
+   ⁢```
+   或者这样直接空八个，引入代码块
+````
 
 #### 引用
 
@@ -176,7 +175,9 @@ $(document).ready(function () {
 
 ```markdown
 > 最外层引用
+>
 > > 多一个 > 嵌套一层引用
+> >
 > > > 可以嵌套很多层
 ```
 
@@ -185,18 +186,17 @@ $(document).ready(function () {
 ```markdown
 > - 这是引用里嵌套的一个列表
 > - 还可以有子列表
->     * 子列表需要从 - 之后延后四个空格开始
+>   - 子列表需要从 - 之后延后四个空格开始
 ```
 
 引用里嵌套代码块
 
-```markdown
+````markdown
 >     同样的，在前面加四个空格形成代码块
->  
-> ⁢```   .
-> 或者使用 ⁢``` 形成代码块
+>
+> ⁢` . 或者使用 ⁢` 形成代码块
 > ⁢```
-```
+````
 
 #### 图片
 
@@ -212,7 +212,7 @@ $(document).ready(function () {
 这个链接用 1 作为网址变量 [Google][1].
 然后在文档的结尾位变量赋值（网址）
 
- [1]: http://www.google.com/logo.png
+[1]: http://www.google.com/logo.png
 ```
 
 #### 换行
@@ -259,12 +259,12 @@ $(document).ready(function () {
 粗斜体
 
 ```markdown
-<b> Markdown 在此处同样适用，如 *加粗* </b>
+<b> Markdown 在此处同样适用，如 _加粗_ </b>
 ```
 
 #### 符号转义
 
-如果你的描述中需要用到 markdown 的符号，比如 _ # * 等，但又不想它被转义，这时候可以在这些符号前加反斜杠，如 `\_` `\#` `\*` 进行避免。
+如果你的描述中需要用到 markdown 的符号，比如 \_ # \* 等，但又不想它被转义，这时候可以在这些符号前加反斜杠，如 `\_` `\#` `\*` 进行避免。
 
 ```markdown
 \_不想这里的文本变斜体\_
@@ -276,10 +276,10 @@ $(document).ready(function () {
 支持 jsfiddle、gist、runjs、优酷视频，直接填写 url，在其之后会自动添加预览点击会展开相关内容。
 
 ```markdown
-http://{url_of_the_fiddle}/embedded/[{tabs}/[{style}]]/
+http://{url*of_the_fiddle}/embedded/[{tabs}/[{style}]]/
 https://gist.github.com/{gist_id}
 http://runjs.cn/detail/{id}
-http://v.youku.com/v_show/id_{video_id}.html
+http://v.youku.com/v_show/id*{video_id}.html
 ```
 
 #### 公式

@@ -1,9 +1,9 @@
 ---
 title: 各国语言缩写
 date: 2019-07-04 22:42:30
-categories: 
- - 资料
-tags: 
+categories:
+  - 资料
+tags:
 ---
 
 鉴于经常要用这些，所以写出来，方便自己用。

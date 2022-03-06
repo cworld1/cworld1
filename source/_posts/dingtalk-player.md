@@ -2,11 +2,11 @@
 title: 钉钉云课堂提取视频 & 倍速播放 & 学习进度
 date: 2020-03-03T23:21:47+08:00
 categories:
- - 教程
+  - 教程
 tags:
- - 钉钉
- - Fiddler
- - JavaScript
+  - 钉钉
+  - Fiddler
+  - JavaScript
 ---
 
 钉钉的云课堂比较反人类，不仅有水印影响观看体验，而且不支持倍速播放。<!-- more -->看讲课比较慢的老师的视频，无疑是一种煎熬。过于慢的速度，反而会影响效率。
@@ -17,7 +17,7 @@ tags:
 
 来自知乎用户 [cxy](https://www.zhihu.com/question/371593651/answer/1019733992)（方法及其简单粗暴，一看便懂。博主测试直播回看界面失效）
 
-首先，下载一个IDM（internet download manager），这个软件平时当多核下载器拿来下浏览器里的文件也是非常不错的。百度一下网上都有IDM的下载链接，浏览器插件也行。
+首先，下载一个 IDM（internet download manager），这个软件平时当多核下载器拿来下浏览器里的文件也是非常不错的。百度一下网上都有 IDM 的下载链接，浏览器插件也行。
 
 ![image](https://tvax3.sinaimg.cn/large/0060ksKkly1gc2uzjvsj3j30k00bvgmj.jpg)
 
@@ -112,8 +112,8 @@ static function OnBeforeResponse(oSession: Session) {
 替换成下面的代码，然后按下 `Ctrl+S` 来保存。
 
 > 下方代码已经整合 [【一劳永逸】钉钉云课堂倍速播放教程](https://www.cnblogs.com/1024th/p/12317158.html) 中的代码（看过这篇教程的，可以把原来的代码删掉用下面的）。  
-> 以下代码部分来自 [HTML5播放器增强插件](https://greasyfork.org/users/49622)，对原作者深表感谢！  
-> 以下代码参考 [aneasystone's blog: 通过FiddlerScript实现根据条件重发请求](https://www.aneasystone.com/archives/2015/03/reissue-requests-by-conditions-using-fiddlerscript.html)，对博主深表感谢！
+> 以下代码部分来自 [HTML5 播放器增强插件](https://greasyfork.org/users/49622)，对原作者深表感谢！  
+> 以下代码参考 [aneasystone's blog: 通过 FiddlerScript 实现根据条件重发请求](https://www.aneasystone.com/archives/2015/03/reissue-requests-by-conditions-using-fiddlerscript.html)，对博主深表感谢！
 
 ```javascript
 public static RulesOption("视频增强插件")
@@ -174,44 +174,44 @@ Log 选项卡中，每出现一条`Resquest has been Send.`说明学习进度增
 
 ##### 播放速度调节
 
-按键C：加速播放 +0.1  
-按键X：减速播放 -0.1  
-按键Z：正常速度播放
+按键 C：加速播放 +0.1  
+按键 X：减速播放 -0.1  
+按键 Z：正常速度播放
 
 #### 播放时间定位
 
-方向键右→：快进3秒  
-方向键左←：后退3秒  
-按键F：下一帧  
-按键D：上一帧  
+方向键右 →：快进 3 秒  
+方向键左 ←：后退 3 秒  
+按键 F：下一帧  
+按键 D：上一帧
 
 #### 音量调节
 
-方向键上↑：音量升高 1%  
-方向键下↓：音量降低 1%  
+方向键上 ↑：音量升高 1%  
+方向键下 ↓：音量降低 1%
 
 ##### 图像参数调节
 
-按键E：亮度增加%  
-按键W：亮度减少%  
-按键T：对比度增加%  
-按键R：对比度减少%  
-按键U：饱和度增加%  
-按键Y：饱和度减少%  
-按键O：色相增加 1 度  
-按键I：色相减少 1 度  
-按键K：模糊增加 1 px  
-按键J：模糊减少 1 px  
-按键Q：图像复位  
+按键 E：亮度增加%  
+按键 W：亮度减少%  
+按键 T：对比度增加%  
+按键 R：对比度减少%  
+按键 U：饱和度增加%  
+按键 Y：饱和度减少%  
+按键 O：色相增加 1 度  
+按键 I：色相减少 1 度  
+按键 K：模糊增加 1 px  
+按键 J：模糊减少 1 px  
+按键 Q：图像复位
 
 ##### 画面调节
 
-按键S：画面旋转 90 度  
-按键回车：进入全屏（只支持部分网站 B站，油管）  
+按键 S：画面旋转 90 度  
+按键回车：进入全屏（只支持部分网站 B 站，油管）
 
 ##### 兼容性问题
 
-可以使用组合键临时停用插件，例如 播放/暂停 默认为空格键，那么使用Ctrl+space(空格键)即可暂停使用一次插件。
+可以使用组合键临时停用插件，例如 播放/暂停 默认为空格键，那么使用 Ctrl+space(空格键)即可暂停使用一次插件。
 
 ## 备用方案
 
@@ -222,9 +222,10 @@ Log 选项卡中，每出现一条`Resquest has been Send.`说明学习进度增
 复制下面的代码，并粘贴到下图中的位置，然后按下 `Ctrl+S` 来保存。
 
 ```javascript
-var sToInsert = "<script src='https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js'></script><script>var vConsole = new VConsole();</script>"
+var sToInsert =
+  "<script src='https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js'></script><script>var vConsole = new VConsole();</script>";
 oSession.utilDecodeResponse();
-oSession.utilReplaceOnceInResponse('</head>', sToInsert + '</head>', 0);
+oSession.utilReplaceOnceInResponse("</head>", sToInsert + "</head>", 0);
 ```
 
 ![image](https://tvax2.sinaimg.cn/large/0060ksKkly1gc2vyxkvitj30vu091jrp.jpg)
@@ -246,7 +247,7 @@ oSession.utilReplaceOnceInResponse('</head>', sToInsert + '</head>', 0);
 在点击右下角绿色按钮弹出的控制台按照上一步的方法输入以下代码：
 
 ```javascript
-document.querySelector("video").playbackRate=2.0
+document.querySelector("video").playbackRate = 2.0;
 ```
 
 点击 OK。可以将钉钉内的视频变为二倍速。代码中的 2.0 可以换成其他的数字。
@@ -287,4 +288,4 @@ console.log(document.querySelector("video").src);
 
 ## 尾声
 
-这里已经推荐了很多钟方法，相信总有一种方法适合你。希望能好好利用工具，做些有利于学习的事，而不是仅仅用来刷分数ヾ(≧▽≦*)o
+这里已经推荐了很多钟方法，相信总有一种方法适合你。希望能好好利用工具，做些有利于学习的事，而不是仅仅用来刷分数ヾ(≧▽≦\*)o

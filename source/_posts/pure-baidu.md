@@ -1,11 +1,11 @@
 ---
 title: Pure 百度 - 质形色，始方圆
 date: 2019-07-12T09:50:18.285Z
-categories: 
- - 项目
-tags: 
- - Userstyle
-thumbnail: 'thumbnail.jpg #dfe1e2'
+categories:
+  - 项目
+tags:
+  - Userstyle
+thumbnail: "thumbnail.jpg #dfe1e2"
 ---
 
 ## 介绍
@@ -47,38 +47,38 @@ thumbnail: 'thumbnail.jpg #dfe1e2'
 
 ## 链接
 
-[`电脑版`](https://userstyles.org/styles/173673/pure)  [`手机版`](https://userstyles.org/styles/178663)
+[`电脑版`](https://userstyles.org/styles/173673/pure) [`手机版`](https://userstyles.org/styles/178663)
 
 ## 使用方法
 
 ### 支持软件
 
 - 支持电脑浏览器：
-  
+
   支持插件的浏览器几乎都能支持
 
 - 支持手机浏览器：
-  
+
   [`Firefox`](https://www.coolapk.com/apk/org.mozilla.firefox)、[`Kiwi Broswer`](https://www.coolapk.com/apk/com.kiwibrowser.browser)、[`Via`](https://www.coolapk.com/apk/mark.via)
 
-由于Via还没有研究好，添加后不生效，所以暂时不介绍这种，如果有会折腾的可以告诉我
+由于 Via 还没有研究好，添加后不生效，所以暂时不介绍这种，如果有会折腾的可以告诉我
 
 ### 支持插件
 
-- Userscript：油猴脚本Tampermonkey，ODM Sandbox 等
+- Userscript：油猴脚本 Tampermonkey，ODM Sandbox 等
 - CSS：Stylish，Stylus 等
 
 ### 步骤
 
-1. 下载上述插件任意一个，建议Stylish（方便日后更新）。
+1. 下载上述插件任意一个，建议 Stylish（方便日后更新）。
    ![2019-12-29 12-54-17](https://tva2.sinaimg.cn/large/0060ksKkly1gadi3ir3hbj30qh06awfg.jpg)
 
 2. 点击上述 Pure 百度的网址。
    ![2019-12-29 12-55-7](https://tvax2.sinaimg.cn/large/0060ksKkly1gadi4eg10wj30c2012a9u.jpg)
 
-3. 如果你用的CSS类，直接点击蓝色的“Install Style”，即可生效（如果没有看到，说明可能你的第一步没有完成）。
+3. 如果你用的 CSS 类，直接点击蓝色的“Install Style”，即可生效（如果没有看到，说明可能你的第一步没有完成）。
    ![2019-12-29 12-51-14](https://tva3.sinaimg.cn/large/0060ksKkly1gadi21c2t7j30ld0f80wy.jpg)
-   如果你用的Userscript类，网页下翻后点击蓝色小字“Install style as userscript”即可（这种方法甚至可以在不进行第一步的操作下进行）。
+   如果你用的 Userscript 类，网页下翻后点击蓝色小字“Install style as userscript”即可（这种方法甚至可以在不进行第一步的操作下进行）。
    ![2019-12-29 15-18-27](https://tva2.sinaimg.cn/large/0060ksKkly1gadm9ki2afj30bq0elglu.jpg)
 
 ## 新增
@@ -99,6 +99,7 @@ thumbnail: 'thumbnail.jpg #dfe1e2'
 作者：<a href="https://space.bilibili.com/274565604">彬彬有礼的有礼</a>
 
 日期：2019-12-31
+
 </details>
 
 <details>
@@ -108,5 +109,6 @@ thumbnail: 'thumbnail.jpg #dfe1e2'
 </summary>
 作者：<a href="https://www.yijingying.com/592">Healer</a>
 
-日期：2020年1月5日
+日期：2020 年 1 月 5 日
+
 </details>

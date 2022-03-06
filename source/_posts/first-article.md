@@ -1,8 +1,8 @@
 ---
 title: 我的第一篇 • 个人网站存在的意义
 date: 2019-06-14 16:24:38
-categories: 
- - 随笔
+categories:
+  - 随笔
 sticky: 1
 ---
 

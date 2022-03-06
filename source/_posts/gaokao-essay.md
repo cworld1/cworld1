@@ -1,8 +1,8 @@
 ---
 title: 高考随笔 ――― 我想
 date: 2020-09-26T20:40:51+08:00
-categories: 
- - 随笔
+categories:
+  - 随笔
 tags:
 ---
 

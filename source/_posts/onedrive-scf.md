@@ -1,25 +1,25 @@
 ---
 title: 利用腾讯云无服务器云函数搭建 OneDrive 网盘
 date: 2020-02-13T8:44:58.576Z
-categories: 
- - 教程
-tags: 
- - Onedrive
-thumbnail: 'https://tva1.sinaimg.cn/large/0060ksKkly1gbuhc4an2fj319c0a5gm2.jpg #006fff'
+categories:
+  - 教程
+tags:
+  - Onedrive
+thumbnail: "https://tva1.sinaimg.cn/large/0060ksKkly1gbuhc4an2fj319c0a5gm2.jpg #006fff"
 ---
 
 原理是用腾讯云的无服务器云函数配合 API 网关实现，不需要自己的服务器。
 
 <!-- more -->
 
-零成本搭建，实测运行机器的配置，8核16G内存（可以运行 System 命令链接 Shell 看），因此此方法搭建自己的大型网站完全够用。
+零成本搭建，实测运行机器的配置，8 核 16G 内存（可以运行 System 命令链接 Shell 看），因此此方法搭建自己的大型网站完全够用。
 
 腾讯云无服务器云函数（Serverless Cloud Function，SCF）是腾讯云为企业和开发者们提供的无服务器执行环境，帮助您在无需购买和管理服务器的情况下运行代码。您只需使用平台支持的语言编写核心代码并设置代码运行的条件，即可在腾讯云基础设施上弹性、安全地运行代码。SCF 是实时文件处理和数据处理等场景下理想的计算平台。
 
 ## 准备
 
 - OneDrive SCF 源码
-  
+
   这里给出仓库地址：
 
   最初版本 [OneDrive_SCF](https://github.com/Tai7sy/OneDrive_SCF)
@@ -29,7 +29,7 @@ thumbnail: 'https://tva1.sinaimg.cn/large/0060ksKkly1gbuhc4an2fj319c0a5gm2.jpg #
   三合一版本 [OneManager-php](https://github.com/qkqpttgf/OneManager-php)
 
 - 一个 OneDrive 账号
-  
+
   如果你想拥有一个不限量空间，可以尝试在网上找子账号，或者自己申请 [Office 365 E5 管理](https://baijiahao.baidu.com/s?id=1655579024801979058)
 
 - 一个腾讯云账号
@@ -37,7 +37,6 @@ thumbnail: 'https://tva1.sinaimg.cn/large/0060ksKkly1gbuhc4an2fj319c0a5gm2.jpg #
 ## 提要
 
 - 腾讯云的 API 网关还可以关联上自己的域名，从而脱离本身的随机域名。
-  
 - 如果你是 Office 365 E5 管理员并准备 90 天续期，或许这个可以帮助你长期保持活跃状态。
 
 ## 注意事项
@@ -63,6 +62,7 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
    ![腾讯云 SCF](https://tvax2.sinaimg.cn/large/0060ksKkly1gbuiu6ay46j30i2081q37.jpg)
 
 2. 函数服务-新建函数-空白函数
+
    > 后面如果想绑定自定义域名，只能绑定备案域名，所以刚开始新建函数的时候，我们最好选择香港地区，即从下图中的广州改为香港。
    > ![新建函数](https://tvax2.sinaimg.cn/large/0060ksKkly1gbuivuzqnqj30hl0a6t8v.jpg)
 
@@ -128,7 +128,7 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 > 如果需要 https，点击“点此前往”，然后点击申请免费证书。注意证书和域名自定义都需要添加解析。
 > ![2020-2-13 12-7-30](https://tva4.sinaimg.cn/large/0060ksKkly1gbun91d7xwj31an03kjre.jpg)
 
-添加蓝色提示框内的网站为CNAME解析。
+添加蓝色提示框内的网站为 CNAME 解析。
 
 访问链接即更换为：https://`你自己设置的域名`/`函数名`
 
@@ -142,7 +142,7 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
 ![image](https://tvax1.sinaimg.cn/large/0060ksKkly1gc2pstaum5j30al07qgll.jpg)
 
-选择管理API，点击右侧的编辑。
+选择管理 API，点击右侧的编辑。
 
 ![image](https://tva3.sinaimg.cn/large/0060ksKkly1gc2q19mjq8j318c09udgh.jpg)
 
@@ -152,7 +152,7 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
 ![image](https://tvax2.sinaimg.cn/large/0060ksKkly1gc2rdybj76j30l40d10sr.jpg)
 
-（看起来很像git代码托管平台的步骤）
+（看起来很像 git 代码托管平台的步骤）
 
 ![image](https://tva3.sinaimg.cn/large/0060ksKkly1gc2resp4goj30hx0claab.jpg)
 

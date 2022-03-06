@@ -1,20 +1,20 @@
 :root {
-    --waline-dark-grey: var(--inside-foreground-color);
-    --waline-theme-color: var(--inside-accent-color);
-    --waline-active-color: var(--inside-accent-color);
-    --waline-text-color: var(--inside-foreground-color);
-    --waline-bgcolor: var(--inside-background);
-    --waline-bgcolor-light: var(--inside-card-background);
-    --waline-bgcolor-hover: var(--inside-card-background);
-    --waline-border-color: var(--inside-border-color);
-    --waline-disable-bgcolor: var(--inside-card-background);
-    --waline-disable-color: var(--inside-foreground-color);
-    --waline-code-bgcolor: var(--inside-highlight-00);
-    --waline-mobile-avatar-size: calc(var(--waline-avatar-size) * 11 / 13);
-    --waline-badge-color: var(--inside-accent-color);
-    --waline-info-bgcolor: var(--inside-background);
-    --waline-avatar-radius: 50%;
+  --waline-dark-grey: var(--inside-foreground-color);
+  --waline-theme-color: var(--inside-accent-color);
+  --waline-active-color: var(--inside-accent-color);
+  --waline-text-color: var(--inside-foreground-color);
+  --waline-bgcolor: var(--inside-background);
+  --waline-bgcolor-light: var(--inside-card-background);
+  --waline-bgcolor-hover: var(--inside-card-background);
+  --waline-border-color: var(--inside-border-color);
+  --waline-disable-bgcolor: var(--inside-card-background);
+  --waline-disable-color: var(--inside-foreground-color);
+  --waline-code-bgcolor: var(--inside-highlight-00);
+  --waline-mobile-avatar-size: calc(var(--waline-avatar-size) * 11 / 13);
+  --waline-badge-color: var(--inside-accent-color);
+  --waline-info-bgcolor: var(--inside-background);
+  --waline-avatar-radius: 50%;
 }
 #waline .veditor {
-    width: calc(100% - 2em) !important;
+  width: calc(100% - 2em) !important;
 }
