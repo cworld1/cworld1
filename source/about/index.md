@@ -25,7 +25,7 @@ comments: true
 - 最喜欢编辑器 VS Code (来一句 yyds 应该不过分吧)。
 - 专长 Adobe 全家桶, UI 强迫症晚期 (但不会 Ae )。
 - 偏好音乐广泛，日语、电音、小众国语、小语种都有。习惯用 Apple Music 在线随机拨歌，偶尔也用用网易云。
-- 经常在玩 Genshin Impact 。偶尔会玩玩音游。腾讯网易游戏至今未实名。
+- 经常在玩 Genshin Impact。偶尔会玩玩音游。腾讯网易游戏至今未实名。
 
 <details><summary>以及更多</summary>
 
@@ -49,15 +49,15 @@ comments: true
 
   [![Twitter](https://img.shields.io/badge/dynamic/json?logo=twitter&label=Twitter&labelColor=A9CCE3&color=A9CCE3&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dtwitter%26queryKey%3DCWorld0&longCache=true&style=flat-square)](https://twitter.com/CWorld0)
 
-- 网名：主要有 `CWorld`, `CWorld0`, `CWorld1` 。
+- 网名：主要有 `CWorld`, `CWorld0`, `CWorld1`。
 
 ## 闲言碎语
 
-<details><summary>为什么叫 CWorld ?</summary>
-CWorld 原名其实是叫 ChangingWorld , “C”作为程序界高级语言的元老--C语言, 同样也是疯狂的首字母, 是对计算机领域锲而不舍精神的支持希望。而 ChangingWorld 则是说变迁世界, 我却不随大流, 做自己, 做独特。（编的真的非常有意义呢）
+<details><summary>为什么叫 CWorld？</summary>
+CWorld 原名其实是叫 ChangingWorld, “C”作为程序界高级语言的元老-- C 语言, 同样也是疯狂的首字母, 是对计算机领域锲而不舍精神的支持希望。而 ChangingWorld 则是说变迁世界, 我却不随大流, 做自己, 做独特。（编的真的非常有意义呢）
 </details>
 <details><summary>好奇都在玩些什么音游?</summary>
-音游圈子的游戏差不多也都尝试过一圈。经常玩的有 Rhythm Doctor, Lanota, Musedash, Cytus II 。
+音游圈子的游戏差不多也都尝试过一圈。经常玩的有 Rhythm Doctor, Lanota, Musedash, Cytus II 等。
 偶尔玩玩 Maimai, 阳春白雪, Phigros。不过因为手机/平板内存不够玩了又卸载倒是常事了。
 </details>
 
@@ -77,7 +77,7 @@ CWorld 原名其实是叫 ChangingWorld , “C”作为程序界高级语言的�
 
 感谢以下项目/服务商为本博客提供长期服务支持：
 
-- [x] 网站域名：
+- [x] 网站域名：[cworld.top](https://blog.cworld.top)
 - [x] 框架主题：[Hexo](https://hexo.io) + [inside](https://github.com/ikeq/hexo-theme-inside)
 - [x] 网页托管：[GitHub Pages](https://pages.github.com)、[Gitee Pages](https://gitee.com/help/categories/56)
 - [x] 评论系统：[Waline](https://waline.js.org)
