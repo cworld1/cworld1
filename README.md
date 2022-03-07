@@ -60,17 +60,12 @@
 ---
 
 <h2 align="center">Common Introduction</h2>
-
-<div style="width: 335px !important; margin: 0 auto">
-  <ul>
-    <li>👨🏻‍💻 I’m a web developer</li>
-    <li>🖖 I like using vue.js, also react</li>
-    <li>💻 Using VSCode, with efficient work</li>
-  </ul>
-</div>
+<p align="center">👨🏻‍💻 I’m a web developer 　　　　　　</p>
+<p align="center">🖖 I like using vue.js, also react　　　</p>
+<p align="center">💻 Using VSCode, with efficient work</p>
 
 <h3 align="center">
-  Checkout <a href="https://blog.cworld.top" target="_blank" style="background: #8888882e"> 𝑪𝑾𝒐𝒓𝒍𝒅'𝒔 𝑩𝒍𝒐𝒈</a> For More
+  Checkout <a href="https://blog.cworld.top" target="_blank"> 𝑪𝑾𝒐𝒓𝒍𝒅'𝒔 𝑩𝒍𝒐𝒈</a> For More
 </h3>
 
 <br />
