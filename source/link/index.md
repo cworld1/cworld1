@@ -171,3 +171,5 @@ copyright: false
 - 不违反国家法律。
 - 请确保你的站点活着。
 - 在你的友链上添加本站。
+
+<p align="center" style="color:var(--inside-accent-color)">那么，在下方留言吧 👇</p>
