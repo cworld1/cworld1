@@ -13,7 +13,7 @@ appearance:
   # body background, default '#f5f7fa'
   background:
   # Sidebar background (when opened), default to accent_color
-  sidebar_background: "url(https://sourcegraph.com/github.com/cworld1/cworld1@gh-pages/-/raw/static/bg-photo.jpg) #475976"
+  sidebar_background: "static/img/bg-photo.jpg) #475976"
   # Card background, default '#fff'
   card_background:
 
@@ -304,7 +304,7 @@ search:
 assets:
   # prefix: 'https://cdn.example.com'
   # suffix: '?m=webp&q=80'
-  prefix: "https://sourcegraph.com/github.com/cworld1/cworld1@gh-pages/-/raw"
+  # prefix: "https://sourcegraph.com/github.com/cworld1/cworld1@gh-pages/-/raw"
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
@@ -333,12 +333,12 @@ reward:
   #     color: '#09bb07'
   methods:
     - name: wechat
-      qrcode: https://sourcegraph.com/github.com/cworld1/cworld1@gh-pages/-/raw/static/reward/wechat_qrcode.jpg
+      qrcode: static/img/wechat_qrcode.jpg
       url: https://weixin.qq.com/
       text: 微信
       color: "#22ad38"
     - name: alipay
-      qrcode: https://sourcegraph.com/github.com/cworld1/cworld1@gh-pages/-/raw/static/reward/alipay_qrcode.jpg
+      qrcode: static/img/alipay_qrcode.jpg
       url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
       text: 支付宝（点击前往）
       color: "#1678ff"
@@ -558,8 +558,8 @@ plugins:
           locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
           visitor: true,
           emoji: [
-            'https://blog.cworld.top/static/bilibili',
-            'https://blog.cworld.top/static/weibo',
+            'https://blog.cworld.top/static/img/bilibili',
+            'https://blog.cworld.top/static/img/weibo',
           ],
         });
       </script>
