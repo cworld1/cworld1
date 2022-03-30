@@ -113,7 +113,7 @@ copyright: false
   - 缘，妙不可言
   - [](https://www.miaoer.xyz)
 
-- ![](https://gitee.com/MuZii123/muzii/raw/master/IMG_20220224_140724.jpg)
+- ![](https://wkphoto.cdn.bcebos.com/5882b2b7d0a20cf40dbbeebb66094b36acaf99ae.jpg)
   - 木子の Blog
   - 子非鱼，安知鱼之乐…
   - [](muzii.cc)
