@@ -528,7 +528,7 @@ plugins:
   # - xxx.jss
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
   - https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js # 剪贴板
-  - https://cworld0.gitee.io/file/js/Waline.min.js # Waline 依赖
+  - https://cdn.staticfile.org/waline/1.6.0/Waline.min.js # Waline 依赖
   - static/css/main.min.css # 自定义 CSS
 
   # Dynamic inject html snippet
