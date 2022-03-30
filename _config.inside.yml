@@ -13,7 +13,7 @@ appearance:
   # body background, default '#f5f7fa'
   background:
   # Sidebar background (when opened), default to accent_color
-  sidebar_background: "static/img/bg-photo.jpg) #475976"
+  sidebar_background: "static/img/bg-photo.jpg #475976"
   # Card background, default '#fff'
   card_background:
 
