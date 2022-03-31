@@ -116,7 +116,12 @@ copyright: false
 - ![](https://wkphoto.cdn.bcebos.com/5882b2b7d0a20cf40dbbeebb66094b36acaf99ae.jpg)
   - 木子の Blog
   - 子非鱼，安知鱼之乐…
-  - [](muzii.cc)
+  - [](http://muzii.cc)
+
+- ![](http://q1.qlogo.cn/g?b=qq&nk=1253496010@qq.com&s=640)
+  - NEKO#ΦωΦ
+  - 子聞こえるはずの声
+  - [](https://blog.jamsg.cn)
 
 </div>
 
