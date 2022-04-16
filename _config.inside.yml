@@ -530,6 +530,7 @@ plugins:
   - https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js # 剪贴板
   - https://cdn.staticfile.org/waline/1.6.0/Waline.min.js # Waline 依赖
   - static/css/main.min.css # 自定义 CSS
+  - static/js/main.min.js # 自定义 JSS
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -548,7 +549,7 @@ plugins:
         .btn-copy{position:absolute;right:5px;top:5px;border:0;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:var(--inside-foreground-color);opacity:0;transition:.3s}.highlight:hover .btn-copy{opacity:1}
       </style>
       <p align="center" id="readTimes"></P>
-      <script>document.getElementById("readTimes").innerHTML = `阅读量：<span id="${window.location.href.split("blog.cworld.top")[1]}" class="waline-visitor-count"/> 次`</script>
+      <script>document.getElementById("readTimes").innerHTML = `阅读量：<span id="${window.location.href.split("blog.cworld.top")[1]}" class="waline-visitor-count">不知道多少</span><span> 次</span>`</script>
 
   - position: comments
     template: |
