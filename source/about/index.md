@@ -23,17 +23,17 @@ comments: true
 
 - 正在学前端，这是我一直以来的追求方向。
 - 最喜欢编辑器 VS Code (来一句 yyds 应该不过分吧)。
-- 专长 Adobe 全家桶, UI 强迫症晚期 (但不会 Ae )。
+- 专长 Adobe 全家桶，UI 强迫症晚期 (但不会 Ae )。
 - 偏好音乐广泛，日语、电音、小众国语、小语种都有。习惯用 Apple Music 在线随机拨歌，偶尔也用用网易云。
 - 经常在玩 Genshin Impact。偶尔会玩玩音游。腾讯网易游戏至今未实名。
 
-<details><summary>以及更多</summary>
+::: collapse 以及更多
 
-- 精通 Python, PHP, C++, Java, Typescipt, Go 等语言的拼写。
+- 精通 Python，PHP，C++，Java，Typescipt，Go 等语言的拼写。
 - 熟悉 Windows、Linux、MacOS 开关机操作。
 - 能熟练操作 Office 全套的打开方式。
 
-</details>
+:::
 
 ## 天罗地网
 
@@ -49,27 +49,29 @@ comments: true
 
   [![Twitter](https://img.shields.io/badge/dynamic/json?logo=twitter&label=Twitter&labelColor=A9CCE3&color=A9CCE3&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dtwitter%26queryKey%3DCWorld0&longCache=true&style=flat-square)](https://twitter.com/CWorld0)
 
-- 网名：主要有 `CWorld`, `CWorld0`, `CWorld1`。
+- 网名：主要有 `CWorld`，`CWorld0`，`CWorld1`。
 
 ## 闲言碎语
 
-<details><summary>为什么叫 CWorld？</summary>
-CWorld 原名其实是叫 ChangingWorld, “C”作为程序界高级语言的元老-- C 语言, 同样也是疯狂的首字母, 是对计算机领域锲而不舍精神的支持希望。而 ChangingWorld 则是说变迁世界, 我却不随大流, 做自己, 做独特。（编的真的非常有意义呢）
-</details>
-<details><summary>好奇都在玩些什么音游?</summary>
-音游圈子的游戏差不多也都尝试过一圈。经常玩的有 Rhythm Doctor, Lanota, Musedash, Cytus II 等。
-偶尔玩玩 Maimai, 阳春白雪, Phigros。不过因为手机/平板内存不够玩了又卸载倒是常事了。
-</details>
+::: collapse 为什么叫 CWorld？
+CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的元老-- C 语言，同样也是疯狂的首字母，是对计算机领域锲而不舍精神的支持希望。而 ChangingWorld 则是说变迁世界，我却不随大流，做自己，做独特。（编的真的非常有意义呢）
+:::
+
+::: collapse 好奇都在玩些什么音游?
+音游圈子的游戏差不多也都尝试过一圈。经常玩的有 Lanota，Musedash，Cytus I，Rhythm Doctor 等。
+偶尔玩玩 Maimai，阳春白雪，Phigros。不过因为手机/平板内存不够玩了又卸载倒是常事了。
+:::
 
 ## 发电赞助
 
 赞助后请留言或者主动联系我谢谢。在此感谢以下捐助者：
 
-| 捐助者                   | 金额 | 日期       |
-| ------------------------ | ---- | ---------- |
-| C\*a(酷安：暴走の蜗牛)   | 2.00 | 2019\07\02 |
-| 华雄(QQ：1300\*\*\*\*71) | 5.00 | 2019\12\30 |
-| ◌(QQ：1934\*\*\*\*45)    | 3.00 | 2019\12\30 |
+| 捐助者                   | 金额   | 日期       |
+| ------------------------ | ----- | ---------- |
+| C\*a（酷安@暴走の蜗牛）   |  2.00 | 2019 07 02 |
+| 华雄(QQ：1300\*\*\*\*71) |  5.00 | 2019 12 30 |
+| ◌(QQ：1934\*\*\*\*45)    |  3.00 | 2019 12 30 |
+| 匿名                     | 20.00 | 2022 04 06  |
 
 ## 关于博客
 
