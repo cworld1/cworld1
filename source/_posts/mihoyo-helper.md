@@ -19,6 +19,14 @@ tags:
 
 > genshinhelper 从v2.0.0开始，分为 genshinhelper2 和 genshin-checkin-helper 两个项目，同时分离出 onepush 推送包。
 
+### 前言
+
+原神是少有的游戏本体和签到福利分离的游戏，玩家为了签到还要额外下载米游社 App。
+
+平心而论，目前的每日签到奖励真的不咋地，都知道是蚊子腿。事实上，你完全可以选择无视签到，不签也没啥大的损失；或者选择手动签到，但这样的话哪天忘记打卡了就很头疼。
+
+为了原石、摩拉和紫色经验书等签到奖励，这个项目应运而生，可以实现自动每日签到。
+
 ### 简介
 
 `genshinhelper`（原神签到小助手），前身为 `genshin-impact-helper`，可以自动化为你获取原神每日福利。
@@ -303,23 +311,20 @@ ONEPUSH={"notifier":"bark","params":{"markdown":false,"key":"xxxxxx"}}
 }
 ```
 
-```
-自定义推送:
-    method:                 必填,请求方式.默认: post.
-    url:                    必填,完整的自定义推送链接.
-    data:                   选填,发送的data.默认为空,可自行添加额外参数.
-    retcode_key:            必填,响应体返回的状态码的key.
-    retcode_value:          必填,响应体返回的状态码的value.
-    data_type:              选填,发送data的方式,可选params|json|data,默认: data.
-    merge_title_and_desp:   选填,是否将标题(应用名+运行状态)和运行结果合并.默认: false.
-    set_data_title:         必填,推送方式data中消息标题的key.
-    set_data_sub_title:     选填,推送方式data中消息正文的key.有的推送方式正文的key有次级结构,需配合set_data_title构造子级,与set_data_desp互斥.
-                                例如: 企业微信中,set_data_title填text,set_data_sub_title填content.
-    set_data_desp:          选填,推送方式data中消息正文的key.例如: server酱的为desp.
-                                与set_data_sub_title互斥,两者都填则本项不生效.
-```
+| 配置项               | 描述                                                         |
+| -------------------- | ------------------------------------------------------------ |
+| method               | 必填，请求方式。默认：post                                   |
+| url                  | 必填，完整的自定义推送链接                                   |
+| data                 | 选填，发送的data。默认为空，可自行添加额外参数               |
+| retcode_key          | 必填，响应体返回的状态码的 key                               |
+| retcode_value        | 必填，响应体返回的状态码的 value                             |
+| data_type            | 选填，发送data的方式，可选 params|json|data，默认：data                            |
+| merge_title_and_desp | 选填，是否将标题（应用名 + 运行状态）和运行结果合并。默认：false |
+| set_data_title       | 必填，推送方式 data 中消息标题的 key                         |
+| set_data_sub_title   | 选填，推送方式 data 中消息正文的 key。有的推送方式正文的 key 有次级结构，需配合 set_data_title 构造子级，与 set_data_desp 互斥。例如：企业微信中，set_data_title 填 text，set_data_sub_title 填 content |
+| set_data_desp        | 选填，推送方式 data 中消息正文的 key。例如：server 酱的为 desp，与 set_data_sub_title 互斥，两者都填则本项不生效 |
 
-例如写一个 ServerChan 的自定义推送：
+例如写一个 ServerChan 的自定义推送。
 
 查看文档得到 ServerChan 推送所需要的信息：
 
@@ -403,4 +408,3 @@ ONEPUSH={"notifier":"wechatworkbot","params":{"markdown":true,"key":"xxxxxx"}}
 ```
 
 :::
-
