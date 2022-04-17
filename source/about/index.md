@@ -25,7 +25,7 @@ comments: true
 - 最喜欢编辑器 VS Code (来一句 yyds 应该不过分吧)。
 - 专长 Adobe 全家桶，UI 强迫症晚期 (但不会 Ae )。
 - 偏好音乐广泛，日语、电音、小众国语、小语种都有。习惯用 Apple Music 在线随机拨歌，偶尔也用用网易云。
-- 经常在玩 Genshin Impact。偶尔会玩玩音游。腾讯网易游戏至今未实名。
+- 经常在玩 原神、音游和崩三。腾讯网易游戏至今未实名。
 
 ::: collapse 以及更多
 
@@ -59,7 +59,7 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 
 ::: collapse 好奇都在玩些什么音游?
 音游圈子的游戏差不多也都尝试过一圈。经常玩的有 Lanota，Musedash，Cytus I，Rhythm Doctor 等。
-偶尔玩玩 Maimai，阳春白雪，Phigros。不过因为手机/平板内存不够玩了又卸载倒是常事了。
+偶尔玩玩阳春白雪和 Phigros。不过因为平板内存不够玩了又卸载倒是常事了。
 :::
 
 ## 发电赞助
