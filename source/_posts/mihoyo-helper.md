@@ -43,7 +43,7 @@ tags:
 
 ## 运行方式与环境搭建
 
-![](runway-choose.jpg)
+![](post/mihoyo-helper/runway-choose.jpg)
 
 ::: collapse 方案1 终端运行
 
@@ -61,19 +61,19 @@ tags:
 
 前往 [云函数 SCF 管理控制台](https://console.cloud.tencent.com/scf/) -->`函数服务`-->`新建`-->`自定义创建`-->`基础配置`-->`本地上传zip包`-->`上传`-->`本地上传zip包`--> 选择下载的`genshinhelper-xxx-serverless.zip`压缩包-->`完成`
 
-![](new-server.png)
+![](post/mihoyo-helper/new-server.png)
 
 前往`genshinhelper`-->`函数管理`-->`函数配置`-->`编辑`
 
-![](edit-config.png)
+![](post/mihoyo-helper/edit-config.png)
 
 此处可以编辑环境变量。同时建议修改`执行超时时间`为`600`秒。
 
-![](add-variables.png)
+![](post/mihoyo-helper/add-variables.png)
 
 前往`genshinhelper`-->`触发管理`-->`新建触发器`--> 按下图进行配置。当然你也可以添加一个 `API 网关`，方便手动强制执行。
 
-![](triggers.png)
+![](post/mihoyo-helper/triggers.png)
 
 :::
 
