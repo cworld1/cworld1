@@ -2,7 +2,7 @@
   --waline-dark-grey: var(--inside-foreground-color);
   --waline-theme-color: var(--inside-accent-color);
   --waline-active-color: var(--inside-accent-color);
-  --waline-text-color: var(--inside-foreground-color);
+  --waline-color: var(--inside-foreground-color);
   --waline-bgcolor: var(--inside-background);
   --waline-bgcolor-light: var(--inside-card-background);
   --waline-bgcolor-hover: var(--inside-card-background);
