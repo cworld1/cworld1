@@ -548,8 +548,8 @@ plugins:
       <style>
         .btn-copy{position:absolute;right:5px;top:5px;border:0;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:var(--inside-foreground-color);opacity:0;transition:.3s}.highlight:hover .btn-copy{opacity:1}
       </style>
-      <p align="center" id="readTimes"></P>
-      <script>document.getElementById("readTimes").innerHTML = `阅读量：<span id="${window.location.href.split("blog.cworld.top")[1]}" class="waline-visitor-count">不知道多少</span><span> 次</span>`</script>
+      <p align="center" id="readTimes"></p>
+      <script>document.getElementById("readTimes").innerHTML = `<span id="${window.location.href.split("blog.cworld.top")[1]}" class="waline-pageview-count">???</span> 阅读 <span class="waline-comment-count" data-path="${window.location.href.split("blog.cworld.top")[1]}">???</span> 评论`</script>
 
   - position: comments
     template: |
