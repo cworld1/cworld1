@@ -23,7 +23,7 @@
     "hexo-renderer-marked": "^5.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-inside": "^2.7.0-beta.23",
+    "hexo-theme-inside": "^2.7.0",
     "hexo-theme-landscape": "^0.0.3",
     "markdown-it": "^13.0.1",
     "stylus": "^0.57.0"
