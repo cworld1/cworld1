@@ -111,6 +111,11 @@ copyright: false
   - Share Technology.
   - [](https://lanyundev.vercel.app)
 
+- ![](https://blog.lyr-2000.xyz/avatar.png)
+  - 凌冬的个人博客
+  - 过去不优秀，不代表未来不精彩
+  - [](https://blog.lyr-2000.xyz)
+
 </div>
 
 ::: collapse 友链记录册
