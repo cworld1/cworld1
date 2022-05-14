@@ -507,8 +507,7 @@ plugins:
       excerpt: 内容已加密
   - palette:
       col: 5
-      theme:
-        [
+      theme: [
           "#673ab7",
           "#3f51b5",
           "#2196f3",
