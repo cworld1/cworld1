@@ -15,9 +15,11 @@
   --waline-info-bgcolor: var(--inside-background);
   --waline-avatar-radius: 50%;
 }
-#waline .veditor {
+
+#waline .wl-editor {
   width: calc(100% - 2em) !important;
 }
-.v pre {
+
+#waline pre {
   border-color: var(--inside-highlight-01);
 }
