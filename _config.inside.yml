@@ -185,7 +185,10 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy; 2022 • <a href="">CWorld</a> • <span id="busuanzi_container_site_pv">总访问 <span id="busuanzi_value_site_pv">喵喵喵</span> 次</span>'
+  copyright: |
+    &copy;2022 • <a href="">CWorld</a> • 
+    <span id="busuanzi_container_site_pv">总访问 <span id="busuanzi_value_site_pv"></span> 次</span>
+    <script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>
 
   # Set to false to hide Hexo link.
   # powered: false
@@ -194,8 +197,10 @@ footer:
   # theme: false
 
   # Custom text.
-  # custom: Hosted by <a target="_blank" rel="external nofollow"
-  #   href="https://pages.github.com/"><b>Github Pages</b></a>
+  custom: |
+    由 <a href="https://www.upyun.com" target="blank" title="又拍云">
+    <img height="20" style="top:2px" src="https://cdn.yunyoujun.cn/img/logo/upyun-logo.png">
+    </a> 提供 CDN 加速
 
 # ---------------------------------------------------------------
 # Content
