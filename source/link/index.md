@@ -66,7 +66,7 @@ copyright: false
   - 摸鱼天下第一
   - [](https://blog.wittoy.com)
 
-- ![](https://blog.joyer.top/img/favicon.png)
+- ![](https://avatar.75cdn.workers.dev/?url=https%3A%2F%2Fseccdn.libravatar.org%2Favatar%2F08fcf342df77ad03fcad18399a2fcb74)
   - Joyer 的博客
   - 一只会唱 Lahee~的龙
   - [](https://blog.joyer.top)
@@ -154,12 +154,10 @@ copyright: false
 
 本站信息如下：
 
-```
-名称：CWorld's Blog
-简介：求知若愚，虚怀若谷
-链接：https://blog.cworld.top
-图标：https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
-```
+> 名称：CWorld's Blog
+> 简介：求知若愚，虚怀若谷
+> 链接：https://blog.cworld.top
+> 图标：https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 
 申请时还请按照这个模板留言。此外有关申请说明：
 
