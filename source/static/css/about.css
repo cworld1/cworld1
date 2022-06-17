@@ -1,12 +1,12 @@
 /* 整体 */
-#github_calendar {
+#github-calendar {
     padding: 10px;
     border-radius: 10px;
     background-color: var(--inside-background);
 }
 
 /* 热力图 */
-#github_calendar .js-calendar-graph {
+#github-calendar .js-calendar-graph {
     overflow-x: scroll;
 }
 
@@ -40,12 +40,12 @@ text.ContributionCalendar-label {
 }
 
 /* 描述 */
-#github_calendar .js-calendar-graph .width-full .float-left {
+#github-calendar .js-calendar-graph .width-full .float-left {
     display: none;
 }
 
 /* 详情 */
-#github_calendar .contrib-column {
+#github-calendar .contrib-column {
     padding: 15px 0;
     text-align: center;
     border-left: 1px solid var(--inside-border-color);
@@ -53,11 +53,11 @@ text.ContributionCalendar-label {
     font-size: 11px;
 }
 
-#github_calendar .contrib-column-first {
+#github-calendar .contrib-column-first {
     border-left: 0
 }
 
-#github_calendar .table-column {
+#github-calendar .table-column {
     display: table-cell;
     width: 1%;
     padding-right: 10px;
@@ -66,7 +66,7 @@ text.ContributionCalendar-label {
     color: var(--inside-highlight-05);
 }
 
-#github_calendar .contrib-number {
+#github-calendar .contrib-number {
     font-weight: 300;
     line-height: 1.3em;
     font-size: 24px;
