@@ -4,6 +4,9 @@ date: 2019-06-22 19:36:45
 comments: true
 ---
 
+<script src="https://cdn.staticfile.org/github-calendar/2.2.9/github-calendar.min.js"></script>
+<link href="/static/css/about.min.css" rel="stylesheet">
+
 > <span id="hitokoto" style="color:var(--inside-accent-color)">随机名言努力加载中...</sapn>
 
 <script>
@@ -19,12 +22,9 @@ comments: true
 - [Vue Login](https://github.com/cworld1/vue-login) - 一个简单的 Vuejs 开发设计的登录程序
 - [Vue Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 Vue 时的一些代码记录
 
-<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+<div id="github-calendar">Github 热力贡献图努力加载中...</div>
 
-<div class="github_calendar">Github 热力贡献图努力加载中...</div>
-
-<script>GitHubCalendar(".github_calendar", "cworld1");</script>
+<script>GitHubCalendar("#github-calendar", "cworld1");</script>
 
 ## 个人简介
 
