@@ -4,7 +4,7 @@ date: 2019-06-22 19:36:45
 comments: true
 ---
 
-<script src="https://cdn.staticfile.org/github-calendar/2.2.9/github-calendar.min.js"></script>
+<script src="/static/js/about.min.js"></script>
 <link href="/static/css/about.min.css" rel="stylesheet">
 
 > <span id="hitokoto" style="color:var(--inside-accent-color)">随机名言努力加载中...</sapn>
@@ -23,8 +23,6 @@ comments: true
 - [Vue Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 Vue 时的一些代码记录
 
 <div id="github-calendar">Github 热力贡献图努力加载中...</div>
-
-<script>GitHubCalendar("#github-calendar", "cworld1");</script>
 
 ## 个人简介
 
