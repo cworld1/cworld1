@@ -185,9 +185,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: |
-    <script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>
-    &copy;2022 • <a href="">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次
+  copyright: '&copy;2022 • <a href="">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次'
 
   # Set to false to hide Hexo link.
   # powered: false
@@ -530,9 +528,10 @@ plugins:
   # In general, script or style depends on their ext name.
   # - xxx.css
   # - xxx.jss
-  - https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js # 剪贴板
-  - https://cdn.staticfile.org/waline/2.4.2/waline.min.js # Waline 依赖
-  - https://cdn.staticfile.org/waline/2.4.2/waline.min.css
+  - https://busuanzi.icodeq.com/busuanzi.pure.mini.js # 不蒜子统计
+  - https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js # 剪贴板
+  - https://cdn.staticfile.org/waline/2.6.1/waline.min.js # Waline 依赖
+  - https://cdn.staticfile.org/waline/2.6.1/waline.min.css
   - static/css/main.min.css # 自定义 CSS
   - static/js/main.min.js # 自定义 JSS
 
