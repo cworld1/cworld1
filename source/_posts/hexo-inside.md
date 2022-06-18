@@ -89,16 +89,17 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
 ```yml
 - position: comments
   template: |
-    <div id="waline"></div>
+    <div id="waline">评论正在努力加载中...</div>
     <script>
-      Waline({
+      Waline.init({
         el: '#waline',
         serverURL: '<你的Vercel的url>',
-        locale: {placeholder:'欢迎评论。(填写邮箱可在被回复时收到邮件提醒，登录非必须)'},
-        visitor: true,
+        locale: {placeholder:'欢迎评论~'},
+        comment: true,
+        pageview: true,
         emoji: [
-          'https://cworld0.gitee.io/file/img/weibo',
-          'https://cworld0.gitee.io/file/img/bilibili',
+          'https://blog.cworld.top/static/img/bilibili',
+          'https://blog.cworld.top/static/img/weibo',
         ],
       });
     </script>
@@ -109,14 +110,14 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
 
 评论样式内容较多而且为了方便维护，故单独引用文件。
 
-文件压缩版的贴一份仅供参考：
+文件这里贴一份仅供参考：
 
 ```css
 :root {
   --waline-dark-grey: var(--inside-foreground-color);
   --waline-theme-color: var(--inside-accent-color);
   --waline-active-color: var(--inside-accent-color);
-  --waline-text-color: var(--inside-foreground-color);
+  --waline-color: var(--inside-foreground-color);
   --waline-bgcolor: var(--inside-background);
   --waline-bgcolor-light: var(--inside-card-background);
   --waline-bgcolor-hover: var(--inside-card-background);
@@ -129,8 +130,13 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
   --waline-info-bgcolor: var(--inside-background);
   --waline-avatar-radius: 50%;
 }
-#waline .veditor {
+
+#waline .wl-editor {
   width: calc(100% - 2em) !important;
+}
+
+#waline pre {
+  border-color: var(--inside-highlight-01);
 }
 ```
 
@@ -138,15 +144,14 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
 
 ### 站点访问统计
 
-在主题配置文件修改：
+Inside 提供了两个自定义片段位置。由于我的 `custom` 还有别的东西要放，这里就只写在 `copyright` 里。在主题配置文件修改：
 
 ```yml
 footer:
-  # ...
-  custom: <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-# ...
-plugins:
-  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 全局引入卜蒜子统计
+  # Set to false to hide.
+  copyright: |
+    <script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>
+    &copy;2022 • <a href="">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次
 ```
 
 ### 代码块快捷复制到剪贴板
