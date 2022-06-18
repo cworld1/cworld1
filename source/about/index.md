@@ -4,9 +4,6 @@ date: 2019-06-22 19:36:45
 comments: true
 ---
 
-<script src="/static/js/about.min.js"></script>
-<link href="/static/css/about.min.css" rel="stylesheet">
-
 > <span id="hitokoto" style="color:var(--inside-accent-color)">随机名言努力加载中...</sapn>
 
 <script>
@@ -22,6 +19,8 @@ comments: true
 - [Vue Login](https://github.com/cworld1/vue-login) - 一个简单的 Vuejs 开发设计的登录程序
 - [Vue Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 Vue 时的一些代码记录
 
+<script src="/static/js/about.min.js"></script>
+<link href="/static/css/about.min.css" rel="stylesheet">
 <div id="github-calendar">Github 热力贡献图努力加载中...</div>
 
 ## 个人简介
@@ -74,12 +73,12 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 
 赞助后请留言或者主动联系我谢谢。在此感谢以下捐助者：
 
-| 捐助者                   | 金额   | 日期       |
+| 捐助者                   | 金额  | 日期       |
 | ------------------------ | ----- | ---------- |
-| C\*a（酷安@暴走の蜗牛）   |  2.00 | 2019 07 02 |
-| 华雄(QQ：1300\*\*\*\*71) |  5.00 | 2019 12 30 |
-| ◌(QQ：1934\*\*\*\*45)    |  3.00 | 2019 12 30 |
-| 匿名                     | 20.00 | 2022 04 06  |
+| C\*a（酷安@暴走の蜗牛）  | 2.00  | 2019 07 02 |
+| 华雄(QQ：1300\*\*\*\*71) | 5.00  | 2019 12 30 |
+| ◌(QQ：1934\*\*\*\*45)    | 3.00  | 2019 12 30 |
+| 匿名                     | 20.00 | 2022 04 06 |
 
 ## 关于博客
 
