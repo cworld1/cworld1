@@ -186,9 +186,8 @@ sns:
 footer:
   # Set to false to hide.
   copyright: |
-    &copy;2022 • <a href="">CWorld</a> • 
-    <span id="busuanzi_container_site_pv">总访问 <span id="busuanzi_value_site_pv"></span> 次</span>
     <script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>
+    &copy;2022 • <a href="">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次
 
   # Set to false to hide Hexo link.
   # powered: false
@@ -512,7 +511,8 @@ plugins:
       excerpt: 内容已加密
   - palette:
       col: 5
-      theme: [
+      theme:
+        [
           "#673ab7",
           "#3f51b5",
           "#2196f3",
@@ -530,7 +530,6 @@ plugins:
   # In general, script or style depends on their ext name.
   # - xxx.css
   # - xxx.jss
-  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 卜蒜子统计
   - https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js # 剪贴板
   - https://cdn.staticfile.org/waline/2.4.2/waline.min.js # Waline 依赖
   - https://cdn.staticfile.org/waline/2.4.2/waline.min.css
