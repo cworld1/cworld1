@@ -1,6 +1,6 @@
 ---
 title: Markdown 语法与学习记录
-date: 2019-07-10T13:18:58.576Z
+date: 2019-07-10 13:18:58
 categories:
   - 资料
 tags:
@@ -56,9 +56,9 @@ Markdown 是一种轻量级且易于使用的语法，用于为您的写作设�
 
 通常编辑器根据代码片段适配合适的高亮方法，但你也可以用 ` ``` ` 包裹一段代码，并指定一种语言
 
-````markdown
+```markdown
 ⁢⁢`javascript $(document).ready(function () { alert('hello world'); }); ⁢⁢`
-````
+```
 
 支持的语言：`1c, abnf, accesslog, actionscript, ada, apache, applescript, arduino, armasm, asciidoc, aspectj, autohotkey, autoit, avrasm, awk, axapta, bash, basic, bnf, brainfuck, cal, capnproto, ceylon, clean, clojure, clojure-repl, cmake, coffeescript, coq, cos, cpp, crmsh, crystal, cs, csp, css, d, dart, delphi, diff, django, dns, dockerfile, dos, dsconfig, dts, dust, ebnf, elixir, elm, erb, erlang, erlang-repl, excel, fix, flix, fortran, fsharp, gams, gauss, gcode, gherkin, glsl, go, golo, gradle, groovy, haml, handlebars, haskell, haxe, hsp, htmlbars, http, hy, inform7, ini, irpf90, java, javascript, json, julia, kotlin, lasso, ldif, leaf, less, lisp, livecodeserver, livescript, llvm, lsl, lua, makefile, markdown, mathematica, matlab, maxima, mel, mercury, mipsasm, mizar, mojolicious, monkey, moonscript, n1ql, nginx, nimrod, nix, nsis, objectivec, ocaml, openscad, oxygene, parser3, perl, pf, php, pony, powershell, processing, profile, prolog, protobuf, puppet, purebasic, python, q, qml, r, rib, roboconf, rsl, ruby, ruleslanguage, rust, scala, scheme, scilab, scss, smali, smalltalk, sml, sqf, sql, stan, stata, step21, stylus, subunit, swift, taggerscript, tap, tcl, tex, thrift, tp, twig, typescript, vala, vbnet, vbscript, vbscript-html, verilog, vhdl, vim, x86asm, xl, xml, xquery, yaml, zephir`
 
@@ -72,9 +72,9 @@ Markdown 是一种轻量级且易于使用的语法，用于为您的写作设�
 
 如你不需要代码高亮，可以用下面的方法禁用：
 
-````markdown
+```markdown
 ⁢`nohighlight ⁢`
-````
+```
 
 #### 标题
 

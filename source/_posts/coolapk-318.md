@@ -1,6 +1,6 @@
 ---
 title: 酷安 318 事件
-date: 2020-03-22T21:02:06+08:00
+date: 2020-03-22 21:02:06
 categories:
   - 随笔
 thumbnail: "thumbnail.jpg #e5efff"

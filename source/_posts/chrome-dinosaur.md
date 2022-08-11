@@ -1,6 +1,6 @@
 ---
 title: Chrome 小恐龙无敌化
-date: 2021-02-18T15:55:58+08:00
+date: 2021-02-18 15:55:58
 categories:
   - 教程
 tags:
