@@ -167,9 +167,7 @@ var _typeof2 =
                             " &ndash; " +
                             M(i.current_streak_range[1], _)
                           : i.last_contributed
-                          ? "Last contributed in " +
-                            M(i.last_contributed, _) +
-                            "."
+                          ? "最后一次贡献于 " + M(i.last_contributed, _) + "."
                           : "Rock - Hard Place",
                         l = i.longest_streak
                           ? M(i.longest_streak_range[0], _) +
