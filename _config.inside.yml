@@ -194,10 +194,7 @@ footer:
   # theme: false
 
   # Custom text.
-  custom: |
-    由 <a href="https://www.upyun.com" target="blank" title="又拍云">
-    <img height="20" style="top:2px" src="https://cdn.yunyoujun.cn/img/logo/upyun-logo.png">
-    </a> 提供 CDN 加速
+  # custom:
 
 # ---------------------------------------------------------------
 # Content
