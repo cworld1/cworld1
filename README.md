@@ -19,14 +19,13 @@ src="https://github-readme-stats.vercel.app/api?username=cworld1&theme=vue-dark&
     />
 </details>
 
-👨🏻‍💻 I’m a web developer
+👨🏻‍💻 Web developer & programmer
 
-🖖 I like using vue.js, also react
+🖖 Agreessively using vue.js, also react
 
-💻 Using VSCode, with efficient work
+💻 VSCode & Sublime Text 4 with efficiency
 
 **→ Checkout** <a href="https://blog.cworld.top" target="_blank"> 𝑪𝑾𝒐𝒓𝒍𝒅'𝒔 𝑩𝒍𝒐𝒈</a> **For More**
 
 <!-- 跟踪统计信息 -->
-
-![](https://hit.yhype.me/github/profile?user_id=37377181)
+![hits](https://hit.yhype.me/github/profile?user_id=37377181)
