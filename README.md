@@ -11,9 +11,10 @@ src="https://github-readme-stats.vercel.app/api?username=cworld1&theme=vue-dark&
 ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 <details>
-  <summary style="cursor: pointer">The details...</summary>
+  <summary style="cursor: pointer">The language details...</summary>
     <img
       src="https://github-readme-stats.vercel.app/api/top-langs/?username=cworld1&layout=compact&theme=vue-dark&hide_border=true&border_radius=10"
     />
@@ -23,9 +24,6 @@ src="https://github-readme-stats.vercel.app/api?username=cworld1&theme=vue-dark&
 
 🖖 Agreessively using vue.js, also react
 
-💻 VSCode & Sublime Text 4 with efficiency
+💻 [VSCode](https://code.visualstudio.com/) & [Sublime Text 4](https://www.sublimetext.com/) with efficiency
 
 **→ Checkout** <a href="https://blog.cworld.top" target="_blank"> 𝑪𝑾𝒐𝒓𝒍𝒅'𝒔 𝑩𝒍𝒐𝒈</a> **For More**
-
-<!-- 跟踪统计信息 -->
-![hits](https://hit.yhype.me/github/profile?user_id=37377181)
