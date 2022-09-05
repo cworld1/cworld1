@@ -97,3 +97,7 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 - [x] 评论系统：[Waline](https://waline.js.org)
 - [x] 持续集成：[Github Actions](https://github.com/cworld1/cworld1/actions/workflows/hexo-auto-deploy.yml)
 - [x] 统计服务：[LeanCloud](https://console.leancloud.app) + [Waline](https://waline.js.org)、[自建不蒜子 API](https://busuanzi.icodeq.com/)
+
+PageSpeed Insights：
+
+![PageSpeed Insights](https://pagespeed-insights.herokuapp.com/?url=https://blog.cworld.top)
