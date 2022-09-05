@@ -527,8 +527,8 @@ plugins:
   # - xxx.jss
   - https://busuanzi.icodeq.com/busuanzi.pure.mini.js # 不蒜子统计
   - https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js # 剪贴板
-  - https://cdn.staticfile.org/waline/2.6.1/waline.min.js # Waline 依赖
-  - https://cdn.staticfile.org/waline/2.6.1/waline.min.css
+  - https://npm.elemecdn.com/@waline/client@v2/dist/waline.js # Waline 依赖
+  - https://npm.elemecdn.com/@waline/client@v2/dist/waline.css
   - static/css/main.min.css # 自定义 CSS
   - static/js/main.min.js # 自定义 JSS
 
