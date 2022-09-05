@@ -26,11 +26,6 @@ copyright: false
   - 天生骄傲
   - [](https://orxing.top)
 
-- ![](https://gravatar.loli.net/avatar/dbccf13f3f9601f2b33ae81ddf6444ae?s=200)
-  - 东方幻梦
-  - 只是当时已惘然
-  - [](https://blog.badapple.pro)
-
 - ![](https://meyyz.cn/tx.png)
   - 一叶竹
   - 蜀江水碧蜀山青，圣主朝朝暮暮情
@@ -41,11 +36,6 @@ copyright: false
   - 未来已来，将至已至
   - [](https://guguga.cn)
 
-- ![](https://i.loli.net/2019/02/24/5c71bf051a8f2.jpg)
-  - 椎咲良田
-  - 快走吧 趁风停止之前
-  - [](https://sanshiliuxiao.top)
-
 - ![](https://blog.ojhdt.com/images/avatar.png)
   - Ojhdt’s Blog
   - 隐约雷鸣，阴霾天空
@@ -55,16 +45,6 @@ copyright: false
   - 陈 YF 的博客
   - 一个在互联网角落挣扎的小小博客，很小很小
   - [](https://blog.cyfan.top)
-
-- ![](https://gravatar.loli.net/avatar/804041e86cd7af1fa923d6639123b7ad?size=200)
-  - 绎梦机
-  - 有限的梦，无限的记忆
-  - [](https://kurumit3.top)
-
-- [](https://npm.elemecdn.com/staticdn@0.0.3-rc.1/hexo/images/me.webp)
-  - Wittoy's Blog
-  - 摸鱼天下第一
-  - [](https://blog.wittoy.com)
 
 - ![](https://avatar.75cdn.workers.dev/?url=https%3A%2F%2Fseccdn.libravatar.org%2Favatar%2F08fcf342df77ad03fcad18399a2fcb74)
   - Joyer 的博客
@@ -91,30 +71,30 @@ copyright: false
   - 相逢的人会再相逢
   - [](http://flyme.cf)
 
-- ![](https://www.miaoer.xyz/weblogo.png)
+- ![](https://www.miaoer.xyz/weblogo.jpg)
   - 喵二の小博客
   - 缘，妙不可言
   - [](https://www.miaoer.xyz)
-
-- ![](https://wkphoto.cdn.bcebos.com/5882b2b7d0a20cf40dbbeebb66094b36acaf99ae.jpg)
-  - 木子の Blog
-  - 子非鱼，安知鱼之乐…
-  - [](http://muzii.cc)
 
 - ![](http://q1.qlogo.cn/g?b=qq&nk=1253496010@qq.com&s=640)
   - NEKO#ΦωΦ
   - 子聞こえるはずの声
   - [](https://blog.jamsg.cn)
 
-- ![](https://lanyundev.vercel.app/img/logo.jpg)
-  - LanYunのBlog
-  - Share Technology.
-  - [](https://lanyundev.vercel.app)
-
 - ![](https://blog.lyr-2000.xyz/avatar.png)
   - 凌冬的个人博客
   - 过去不优秀，不代表未来不精彩
   - [](https://blog.lyr-2000.xyz)
+
+- ![](https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png)
+  - 张洪Heo
+  - 分享设计与科技生活
+  - [](https://blog.zhheo.com)
+
+- ![](https://api.timochan.cn/apc/objects/icon/svhozp8tzm9vv9tu1v.png)
+  - TimochanのBlog
+  - Let's start learning
+  - [](https://www.timochan.cn/)
 
 </div>
 
@@ -132,6 +112,12 @@ copyright: false
 - 2022 02 13 自由灵的梦境 消失
 - 2022 02 13 冬马のホワイトアルバム 消失
 - 2022 02 13 Sansui 消失
+- 2022 09 01 椎咲良田 消失
+- 2022 09 01 木子のBlog 离开
+- 2022 09 01 LanYunのBlog 消失
+- 2022 09 01 Wittoy's Blog 消失
+- 2022 09 05 东方幻梦 离开
+- 2022 09 05 绎梦机 离开
 :::
 
 ## 特殊链接
@@ -145,7 +131,7 @@ copyright: false
 
 - ![](https://avatars.githubusercontent.com/u/39395618?s=200&v=4)
   - 十年之约
-  - 一个人的寂寞，一群人的狂欢。
+  - 本站已签约十年之约
   - [](https://www.foreverblog.cn)
 
 </div>
@@ -155,9 +141,9 @@ copyright: false
 本站信息如下：
 
 > 名称：CWorld's Blog
-> 简介：求知若愚，虚怀若谷
 > 链接：https://blog.cworld.top
 > 图标：https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
+> 简介：求知若愚，虚怀若谷
 
 申请时还请按照这个模板留言。此外有关申请说明：
 
