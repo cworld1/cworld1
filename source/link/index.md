@@ -11,88 +11,98 @@ copyright: false
 
 <div class="f">
 
-- ![](https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200)
+- ![](https://cdn.v2ex.com/gravatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200)
+
   - CWorld's Blog
   - 求知若愚，虚怀若谷
   - [](https://blog.cworld.top)
 
 - ![](https://www.kindyear.cn/wp-content/uploads/2021/12/B92C933A-F643-474F-A2E1-B2910102A90C.png)
+
   - KD's Blog
   - 杂乱的技术小站
   - [](https://www.kindyear.cn)
 
 - ![](https://orxing.top/img/avatar.jpg)
+
   - OURONGXING
   - 天生骄傲
   - [](https://orxing.top)
 
-- ![](https://meyyz.cn/tx.png)
-  - 一叶竹
-  - 蜀江水碧蜀山青，圣主朝朝暮暮情
-  - [](https://meyyz.cn)
-
 - ![](https://s2.ax1x.com/2019/07/22/ePRmnO.png)
+
   - Barkure
   - 未来已来，将至已至
   - [](https://guguga.cn)
 
 - ![](https://blog.ojhdt.com/images/avatar.png)
+
   - Ojhdt’s Blog
   - 隐约雷鸣，阴霾天空
   - [](https://blog.ojhdt.com)
 
 - ![](https://npm.elemecdn.com/chenyfan-oss@3)
+
   - 陈 YF 的博客
   - 一个在互联网角落挣扎的小小博客，很小很小
   - [](https://blog.cyfan.top)
 
 - ![](https://avatar.75cdn.workers.dev/?url=https%3A%2F%2Fseccdn.libravatar.org%2Favatar%2F08fcf342df77ad03fcad18399a2fcb74)
+
   - Joyer 的博客
   - 一只会唱 Lahee~的龙
   - [](https://blog.joyer.top)
 
 - ![](https://mcenjoy.cn/avatar)
+
   - Enjoy's blog
   - 个人博客，记录生活点滴。
   - [](https://mcenjoy.cn)
 
-- ![](https://gravatar.loli.net/avatar/b9fa18886cd3acb13fcd8ebfb6140c44?s=400)
+- ![](https://cdn.v2ex.com/gravatar//b9fa18886cd3acb13fcd8ebfb6140c44?s=200)
+
   - hiCasper
   - 没有简介。
   - [](http://hicasper.com)
 
 - ![](https://avatars.githubusercontent.com/u/45725145?v=4)
+
   - Jinlk's blog
   - 記錄生活點滴
   - [](https://jinlk.site)
 
 - ![](https://img1.baidu.com/it/u=1214290448,1946399589&fm=253&fmt=auto)
+
   - Fly
   - 相逢的人会再相逢
   - [](http://flyme.cf)
 
 - ![](https://www.miaoer.xyz/weblogo.jpg)
+
   - 喵二の小博客
   - 缘，妙不可言
   - [](https://www.miaoer.xyz)
 
 - ![](http://q1.qlogo.cn/g?b=qq&nk=1253496010@qq.com&s=640)
+
   - NEKO#ΦωΦ
   - 子聞こえるはずの声
   - [](https://blog.jamsg.cn)
 
 - ![](https://blog.lyr-2000.xyz/avatar.png)
+
   - 凌冬的个人博客
   - 过去不优秀，不代表未来不精彩
   - [](https://blog.lyr-2000.xyz)
 
 - ![](https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png)
-  - 张洪Heo
+
+  - 张洪 Heo
   - 分享设计与科技生活
   - [](https://blog.zhheo.com)
 
 - ![](https://api.timochan.cn/apc/objects/icon/svhozp8tzm9vv9tu1v.png)
-  - TimochanのBlog
+  - Timochan の Blog
   - Let's start learning
   - [](https://www.timochan.cn/)
 
@@ -101,6 +111,7 @@ copyright: false
 ::: collapse 友链记录册
 
 ::: timeline
+
 - 2020 07 09 蒟蒻の BLOG 离开
 - 2020 07 09 Vexsy 离开
 - 2020 07 07 Raaynk’s Blog 消失
@@ -113,18 +124,20 @@ copyright: false
 - 2022 02 13 冬马のホワイトアルバム 消失
 - 2022 02 13 Sansui 消失
 - 2022 09 01 椎咲良田 消失
-- 2022 09 01 木子のBlog 离开
-- 2022 09 01 LanYunのBlog 消失
+- 2022 09 01 木子の Blog 离开
+- 2022 09 01 LanYun の Blog 消失
 - 2022 09 01 Wittoy's Blog 消失
 - 2022 09 05 东方幻梦 离开
 - 2022 09 05 绎梦机 离开
-:::
+- 2022 11 09 一叶竹 消失
+  :::
 
 ## 特殊链接
 
 <div class="f">
 
 - ![](https://static.cloudflare.ltd/Bandbbs_CDN/PWA/pwa_icon_192.png)
+
   - 米坛
   - 创造不一样
   - [](https://www.bandbbs.cn)
@@ -142,7 +155,7 @@ copyright: false
 
 > 名称：CWorld's Blog
 > 链接：https://blog.cworld.top
-> 图标：https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
+> 图标：https://cdn.v2ex.com/gravatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 > 简介：求知若愚，虚怀若谷
 
 申请时还请按照这个模板留言。此外有关申请说明：
