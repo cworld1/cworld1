@@ -19,9 +19,9 @@ comments: true
 - [Pure 百度](https://blog.cworld.top/post/pure-baidu) - 一个百度页面的美化模块
 - [Momotap](https://github.com/cworld1/momotap) - 一款与 Mikutap 类似的板垫音乐游戏
 
-<link href="/static/css/about.min.css" rel="stylesheet">
+<!-- <link href="/static/css/about.min.css" rel="stylesheet">
 <div id="github-calendar">Github 热力贡献图努力加载中...</div>
-<link href="/static/js/about.min.js" rel="stylesheet">
+<link href="/static/js/about.min.js" rel="stylesheet"> -->
 
 ## 个人简介
 
