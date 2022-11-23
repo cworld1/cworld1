@@ -11,19 +11,13 @@ copyright: false
 
 <div class="f">
 
-- ![](https://cdn.v2ex.com/gravatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200)
+- ![](https://gravatar.loli.top/gravatar/1ffe42aa45a6b1444a786b1f32dfa8aa)
 
   - CWorld's Blog
   - 求知若愚，虚怀若谷
   - [](https://blog.cworld.top)
 
-- ![](https://www.kindyear.cn/wp-content/uploads/2021/12/B92C933A-F643-474F-A2E1-B2910102A90C.png)
-
-  - KD's Blog
-  - 杂乱的技术小站
-  - [](https://www.kindyear.cn)
-
-- ![](https://orxing.top/img/avatar.jpg)
+- ![](https://gravatar.loli.top/avatar/27bfab48edf72b1cda99f9bcbe286a78)
 
   - OURONGXING
   - 天生骄傲
@@ -59,7 +53,7 @@ copyright: false
   - 个人博客，记录生活点滴。
   - [](https://mcenjoy.cn)
 
-- ![](https://cdn.v2ex.com/gravatar//b9fa18886cd3acb13fcd8ebfb6140c44?s=200)
+- ![](https://gravatar.loli.top/gravatar//b9fa18886cd3acb13fcd8ebfb6140c44?s=200)
 
   - hiCasper
   - 没有简介。
@@ -130,6 +124,7 @@ copyright: false
 - 2022 09 05 东方幻梦 离开
 - 2022 09 05 绎梦机 离开
 - 2022 11 09 一叶竹 消失
+- 2022 11 23 KD's Blog 消失
   :::
 
 ## 特殊链接
@@ -155,7 +150,7 @@ copyright: false
 
 > 名称：CWorld's Blog
 > 链接：https://blog.cworld.top
-> 图标：https://cdn.v2ex.com/gravatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
+> 图标：https://gravatar.loli.top/gravatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 > 简介：求知若愚，虚怀若谷
 
 申请时还请按照这个模板留言。此外有关申请说明：
