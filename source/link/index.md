@@ -41,7 +41,7 @@ copyright: false
   - 一个在互联网角落挣扎的小小博客，很小很小
   - [](https://blog.cyfan.top)
 
-- ![](https://avatar.75cdn.workers.dev/?url=https%3A%2F%2Fseccdn.libravatar.org%2Favatar%2F08fcf342df77ad03fcad18399a2fcb74)
+- ![](https://gravatar.loli.top/avatar/08fcf342df77ad03fcad18399a2fcb74)
 
   - Joyer 的博客
   - 一只会唱 Lahee~的龙
