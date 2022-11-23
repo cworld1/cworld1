@@ -11,13 +11,13 @@ copyright: false
 
 <div class="f">
 
-- ![](https://dn-qiniu-avatar.qbox.me/gravatar/1ffe42aa45a6b1444a786b1f32dfa8aa)
+- ![](https://gravatar.loli.top/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa)
 
   - CWorld's Blog
   - 求知若愚，虚怀若谷
   - [](https://blog.cworld.top)
 
-- ![](https://dn-qiniu-avatar.qbox.me/avatar/27bfab48edf72b1cda99f9bcbe286a78)
+- ![](https://gravatar.loli.top/avatar/27bfab48edf72b1cda99f9bcbe286a78)
 
   - OURONGXING
   - 天生骄傲
@@ -53,7 +53,7 @@ copyright: false
   - 个人博客，记录生活点滴。
   - [](https://mcenjoy.cn)
 
-- ![](https://dn-qiniu-avatar.qbox.me/gravatar/b9fa18886cd3acb13fcd8ebfb6140c44?s=200)
+- ![](https://gravatar.loli.top/avatar/b9fa18886cd3acb13fcd8ebfb6140c44?s=200)
 
   - hiCasper
   - 没有简介。
@@ -138,9 +138,15 @@ copyright: false
   - [](https://www.bandbbs.cn)
 
 - ![](https://avatars.githubusercontent.com/u/39395618?s=200&v=4)
+
   - 十年之约
   - 本站已签约十年之约
   - [](https://www.foreverblog.cn)
+
+- ![](https://lzwdot.com/img/favicon.ico)
+  - 前端大刘
+  - 记录和分享，每天进步一点点！
+  - [](https://lzwdot.com/)
 
 </div>
 
@@ -150,7 +156,7 @@ copyright: false
 
 > 名称：CWorld's Blog
 > 链接：https://blog.cworld.top
-> 图标：https://dn-qiniu-avatar.qbox.me/gravatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
+> 图标：https://gravatar.loli.top/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 > 简介：求知若愚，虚怀若谷
 
 申请时还请按照这个模板留言。此外有关申请说明：
