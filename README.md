@@ -24,6 +24,6 @@ src="https://github-readme-stats.vercel.app/api?username=cworld1&theme=vue-dark&
 
 🖖 Agreessively using vue.js, also react
 
-💻 [VSCode](https://code.visualstudio.com/) & [Sublime Text 4](https://www.sublimetext.com/) with efficiency
+💻 [VSCode](https://code.visualstudio.com/) & [Neovim](https://neovim.io/) with efficiency
 
 **→ Checkout** <a href="https://blog.cworld.top" target="_blank"> 𝑪𝑾𝒐𝒓𝒍𝒅'𝒔 𝑩𝒍𝒐𝒈</a> **For More**
