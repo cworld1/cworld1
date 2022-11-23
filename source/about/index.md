@@ -14,14 +14,12 @@ comments: true
 
 ## 制作项目
 
-- [R Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 R 语言时的一些代码记录
+- [Linux Learning](https://github.com/cworld1/linux-learning) - 关于 CWorld 在学习 Linux 时的一些代码记录
+- [R Learning](https://github.com/cworld1/r-learning) - 关于 CWorld 在学习 R 语言时的一些代码记录
 - [Vue Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 Vue 时的一些代码记录
+- [C Learning](https://github.com/cworld1/c-learning) - 关于 CWorld 在学习 C 语言时的一些代码记录
 - [Pure 百度](https://blog.cworld.top/post/pure-baidu) - 一个百度页面的美化模块
 - [Momotap](https://github.com/cworld1/momotap) - 一款与 Mikutap 类似的板垫音乐游戏
-
-<!-- <link href="/static/css/about.min.css" rel="stylesheet">
-<div id="github-calendar">Github 热力贡献图努力加载中...</div>
-<link href="/static/js/about.min.js" rel="stylesheet"> -->
 
 ## 个人简介
 
@@ -93,11 +91,7 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 - [x] 网站域名：[cworld.top](https://blog.cworld.top)
 - [x] 框架主题：[Hexo](https://hexo.io) + [Inside theme](https://github.com/ikeq/hexo-theme-inside)
 - [x] 网站托管：[Netlify](https://www.netlify.com/)、[GitHub Pages](https://pages.github.com)
-- [ ] 资源加速：[Staticfile CDN](https://staticfile.org/)、[又拍云](https://www.upyun.com/)
+- [ ] 资源加速：[Staticfile CDN](https://staticfile.org/)
 - [x] 评论系统：[Waline](https://waline.js.org)
 - [x] 持续集成：[Github Actions](https://github.com/cworld1/cworld1/actions/workflows/hexo-auto-deploy.yml)
 - [x] 统计服务：[LeanCloud](https://console.leancloud.app) + [Waline](https://waline.js.org)、[自建不蒜子 API](https://busuanzi.icodeq.com/)
-
-PageSpeed Insights：
-
-![PageSpeed Insights](https://pagespeed-insights.herokuapp.com/?url=https://blog.cworld.top)
