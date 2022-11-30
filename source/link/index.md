@@ -144,9 +144,15 @@ copyright: false
   - [](https://www.foreverblog.cn)
 
 - ![](https://lzwdot.com/img/favicon.ico)
+
   - 前端大刘
   - 记录和分享，每天进步一点点！
   - [](https://lzwdot.com/)
+
+- ![](https://kuizuo.cn/img/icons/icon-192.png)
+  - 愧怍
+  - 保持学习，希望在有限的时间内，学到无限的可能
+  - [](https://kuizuo.cn/)
 
 </div>
 
