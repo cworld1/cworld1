@@ -84,7 +84,18 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 
 ## 关于博客
 
-小站开通时间：2019 年 6 月 14 日
+::: timeline
+
+- 2019-06-14 小站在这个时间点发芽，开始使用 Hexo 搭建博客
+- 2019-07-08 小站在 Gitee 上部署了第一个版本
+- 2019-07-31 买下了人生第一个域名 [cworld.top](https://cworld.top)
+- 2020-01-24 小站搬迁至 Coding，从此成功绑定了域名 [cworld.top](https://blog.cworld.top)
+- 2022-02-12 小站搬迁至 Netlify，并在 Github 上开源
+- 2022-02-17 小站签约了 [十年之约](www.foreverblog.cn) 项目
+
+:::
+
+小站开通时间：
 
 感谢以下项目/服务商为本博客提供长期服务支持：
 
