@@ -96,9 +96,16 @@ copyright: false
   - [](https://blog.zhheo.com)
 
 - ![](https://api.timochan.cn/apc/objects/icon/svhozp8tzm9vv9tu1v.png)
+
   - Timochan の Blog
   - Let's start learning
   - [](https://www.timochan.cn/)
+
+- ![](https://kuizuo.cn/img/icons/icon-192.png)
+
+  - 愧怍
+  - 保持学习，希望在有限的时间内，学到无限的可能
+  - [](https://kuizuo.cn/)
 
 </div>
 
@@ -143,16 +150,11 @@ copyright: false
   - 本站已签约十年之约
   - [](https://www.foreverblog.cn)
 
-- ![](https://lzwdot.com/img/favicon.ico)
+- ![](https://lzwdot.com/img/android-chrome-192x192.png)
 
   - 前端大刘
   - 记录和分享，每天进步一点点！
   - [](https://lzwdot.com/)
-
-- ![](https://kuizuo.cn/img/icons/icon-192.png)
-  - 愧怍
-  - 保持学习，希望在有限的时间内，学到无限的可能
-  - [](https://kuizuo.cn/)
 
 </div>
 
