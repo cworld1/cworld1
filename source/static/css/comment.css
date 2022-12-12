@@ -23,3 +23,11 @@
 #waline pre {
   border-color: var(--inside-highlight-01);
 }
+
+.wl-card .wl-quote {
+  border-color: var(--inside-border-color);
+}
+
+.wl-browser {
+  display: none;
+}
