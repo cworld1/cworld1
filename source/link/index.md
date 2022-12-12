@@ -150,7 +150,7 @@ copyright: false
   - 本站已签约十年之约
   - [](https://www.foreverblog.cn)
 
-- ![](https://lzwdot.com/img/android-chrome-192x192.png)
+- ![](https://gcore.jsdelivr.net/gh/lzwdot/lzwdot.github.io@gh-pages/img/android-chrome-192x192.png)
 
   - 前端大刘
   - 记录和分享，每天进步一点点！
