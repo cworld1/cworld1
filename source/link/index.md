@@ -11,13 +11,13 @@ copyright: false
 
 <div class="f">
 
-- ![](https://gravatar.loli.top/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa)
+- ![](https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa)
 
   - CWorld's Blog
   - 求知若愚，虚怀若谷
   - [](https://blog.cworld.top)
 
-- ![](https://gravatar.loli.top/avatar/27bfab48edf72b1cda99f9bcbe286a78)
+- ![](https://cravatar.cn/avatar/27bfab48edf72b1cda99f9bcbe286a78)
 
   - OURONGXING
   - 天生骄傲
@@ -41,7 +41,7 @@ copyright: false
   - 一个在互联网角落挣扎的小小博客，很小很小
   - [](https://blog.cyfan.top)
 
-- ![](https://gravatar.loli.top/avatar/08fcf342df77ad03fcad18399a2fcb74)
+- ![](https://cravatar.cn/avatar/08fcf342df77ad03fcad18399a2fcb74)
 
   - Joyer 的博客
   - 一只会唱 Lahee~的龙
@@ -53,7 +53,7 @@ copyright: false
   - 个人博客，记录生活点滴。
   - [](https://mcenjoy.cn)
 
-- ![](https://gravatar.loli.top/avatar/b9fa18886cd3acb13fcd8ebfb6140c44?s=200)
+- ![](https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44)
 
   - hiCasper
   - 没有简介。
@@ -89,7 +89,7 @@ copyright: false
   - 过去不优秀，不代表未来不精彩
   - [](https://blog.lyr-2000.xyz)
 
-- ![](https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png)
+- ![](https://cravatar.cn/avatar/62d8c76b1fd8822cd95efe0abec26b70)
 
   - 张洪 Heo
   - 分享设计与科技生活
@@ -107,32 +107,46 @@ copyright: false
   - 保持学习，希望在有限的时间内，学到无限的可能
   - [](https://kuizuo.cn/)
 
+- ![](https://blog.linsnow.cn/img/avatar.png)
+
+  - L1nSn0w’s Blog
+  - 无限进步.🎈
+  - [](https://blog.linsnow.cn/)
+
+- ![](https://lanyundev.com/img/logo.jpg.webp)
+
+  - LanYun の Blog
+  - Share Technology.
+  - [](https://lanyundev.com/)
+
 </div>
 
 ::: collapse 友链记录册
 
 ::: timeline
 
-- 2020 07 09 蒟蒻の BLOG 离开
-- 2020 07 09 Vexsy 离开
-- 2020 07 07 Raaynk’s Blog 消失
-- 2020 07 07 冬马的白色相簿 回归
-- 2021 02 22 半叶子 离开
-- 2021 02 22 冬马的白色相簿 消失
-- 2021 02 02 Heven Kin 回归
-- 2022 02 13 理工小天使 消失
-- 2022 02 13 自由灵的梦境 消失
-- 2022 02 13 冬马のホワイトアルバム 消失
-- 2022 02 13 Sansui 消失
-- 2022 09 01 椎咲良田 消失
-- 2022 09 01 木子の Blog 离开
-- 2022 09 01 LanYun の Blog 消失
-- 2022 09 01 Wittoy's Blog 消失
-- 2022 09 05 东方幻梦 离开
-- 2022 09 05 绎梦机 离开
-- 2022 11 09 一叶竹 消失
-- 2022 11 23 KD's Blog 消失
-  :::
+- 2020-07-09 蒟蒻の BLOG 离开
+- 2020-07-09 Vexsy 离开
+- 2020-07-07 Raaynk’s Blog 消失
+- 2020-07-07 冬马的白色相簿 回归
+- 2021-02-22 半叶子 离开
+- 2021-02-22 冬马的白色相簿 消失
+- 2021-02-02 Heven Kin 回归
+- 2022-02-13 理工小天使 消失
+- 2022-02-13 自由灵的梦境 消失
+- 2022-02-13 冬马のホワイトアルバム 消失
+- 2022-02-13 Sansui 消失
+- 2022-09-01 椎咲良田 消失
+- 2022-09-01 木子の Blog 离开
+- 2022-09-01 LanYun の Blog 消失
+- 2022-09-01 Wittoy's Blog 消失
+- 2022-09-05 东方幻梦 离开
+- 2022-09-05 绎梦机 离开
+- 2022-11-09 一叶竹 消失
+- 2022-11-23 KD's Blog 消失
+- 2022-02-13 LanYun の Blog 回归
+
+:::
 
 ## 特殊链接
 
@@ -164,7 +178,7 @@ copyright: false
 
 > 名称：CWorld's Blog
 > 链接：https://blog.cworld.top
-> 图标：https://gravatar.loli.top/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
+> 图标：https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 > 简介：求知若愚，虚怀若谷
 
 申请时还请按照这个模板留言。此外有关申请说明：
