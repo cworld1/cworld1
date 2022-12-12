@@ -45,7 +45,7 @@
   background: var(--waline-bgcolor);
   padding: 7px 16px;
   border-radius: 4.75em;
-  color: var(--inside-accent-color);
+  color: var(--inside-color);
 }
 .wl-reaction-img {
   height: 20px;
@@ -69,13 +69,11 @@
   font-size: 1em;
   line-height: 20px;
 }
-.wl-reaction li.active .wl-reaction-votes {
-  background: none;
-  color: var(--waline-color);
-}
+.wl-reaction li.active .wl-reaction-votes,
 .wl-reaction li.active .wl-reaction-text {
-  color: var(--waline-color);
+  background: none;
+  color: var(--waline-white);
 }
 .wl-reaction li.active {
-  background: var(--inside-accent-color-04);
+  background: var(--waline-theme-color);
 }
