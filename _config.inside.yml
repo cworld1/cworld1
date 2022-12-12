@@ -553,7 +553,7 @@ plugins:
   - position: comments
     template: |
       <div id="waline">好像评论卡了欸，要不要刷新一下？✨</div>
-      <script>
+      <script type="module">
         import { init } from "https://cdn.cbd.int/@waline/client@v2/dist/waline.mjs";
         init({
           el: "#waline",
