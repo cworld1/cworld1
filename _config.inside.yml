@@ -564,6 +564,7 @@ plugins:
           pageview: true,
           comment: true,
           locale: {
+              reaction0: "喜欢",
               placeholder: "欢迎评论。(填写邮箱可在被回复时收到邮件提醒)",
               login: "登录(非必须)",
           },

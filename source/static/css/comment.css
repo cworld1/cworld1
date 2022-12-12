@@ -1,3 +1,4 @@
+/* 基础配色 */
 :root {
   --waline-dark-grey: var(--inside-foreground-color);
   --waline-theme-color: var(--inside-accent-color);
@@ -15,19 +16,66 @@
   --waline-info-bgcolor: var(--inside-background);
   --waline-avatar-radius: 50%;
 }
-
-#waline .wl-editor {
-  width: calc(100% - 2em) !important;
-}
-
 #waline pre {
   border-color: var(--inside-highlight-01);
 }
-
 .wl-card .wl-quote {
   border-color: var(--inside-border-color);
 }
 
+/* 编辑框修复 */
+#waline .wl-editor {
+  width: calc(100% - 2em) !important;
+}
+
+/* 屏蔽浏览器内核显示 */
 .wl-browser {
+  display: none !important;
+}
+
+/* 互动面板 */
+.wl-reaction {
+  margin-bottom: 0.75em;
+}
+.wl-reaction h4 {
   display: none;
+}
+.wl-reaction li {
+  flex-direction: row;
+  background: var(--waline-bgcolor);
+  padding: 7px 16px;
+  border-radius: 4.75em;
+  color: var(--inside-accent-color);
+}
+.wl-reaction-img {
+  height: 20px;
+  width: auto;
+  display: flex;
+}
+.wl-reaction-votes {
+  position: inherit;
+  top: auto;
+  right: auto;
+  border: none;
+  padding: 0;
+  margin: 0 2px 0 7px;
+  border-radius: 1em;
+  background: none;
+  line-height: 20px;
+  font-size: 0.75em;
+  font-weight: normal;
+}
+.wl-reaction-text {
+  font-size: 1em;
+  line-height: 20px;
+}
+.wl-reaction li.active .wl-reaction-votes {
+  background: none;
+  color: var(--waline-color);
+}
+.wl-reaction li.active .wl-reaction-text {
+  color: var(--waline-color);
+}
+.wl-reaction li.active {
+  background: var(--inside-accent-color-04);
 }
