@@ -140,10 +140,11 @@ profile:
 
 # Sidebar navigation links
 menu:
-  🏠 主页: /
+  📃 博客: /
   🔍 搜索: /search
   🔗 友链: /link
   🧑‍💻 关于: /about
+  🏠 主页: https://www.cworld.top/
   # About: /about
   # Links: /links
   # Github: https://github.com/username
