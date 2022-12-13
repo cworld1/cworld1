@@ -1,7 +1,7 @@
 {
   "name": "cworld-blog",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.2",
+  "private": false,
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
@@ -29,7 +29,7 @@
     "stylus": "^0.59.0"
   },
   "description": "<img src=\"https://github-readme-stats.vercel.app/api?username=cworld1&theme=vue-dark&show_icons=true&hide_border=true&border_radius=10\" alt=\"Stats\" width=\"440\" align=\"right\"/>",
-  "main": "dist/index.html",
+  "main": "public/index.html",
   "devDependencies": {},
   "repository": {
     "type": "git",
