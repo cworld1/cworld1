@@ -1,1 +1,1 @@
-{"short_name":"CWorld's Blog","name":"CWorld's Blog","start_url":"/","theme_color":"#659eb9","background_color":"#f5f7fa","icons":[{"src":"favicon.ico","type":"image/ico","sizes":"256x256"}],"description":"CWorld 的个人博客, 是一个关于 CWorld 的个人站点","display":"minimal-ui"}
+{"short_name":"CWorld Blog","name":"CWorld's Blog","start_url":"/?source=pwa","theme_color":"#659eb9","background_color":"#f5f7fa","icons":[{"src":"/favicon.ico","type":"image/ico","sizes":"256x256"}],"description":"CWorld 的个人博客, 是一个关于 CWorld 的个人站点","display":"minimal-ui"}

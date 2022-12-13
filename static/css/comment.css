@@ -67,7 +67,7 @@
 .wl-reaction-text {
   font-size: 1em;
   line-height: 20px;
-  color: var(--waline-color);
+  color: var(--waline-theme-color);
 }
 .wl-reaction li.active .wl-reaction-votes,
 .wl-reaction li.active .wl-reaction-text {
