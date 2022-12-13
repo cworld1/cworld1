@@ -164,6 +164,12 @@ copyright: false
   - 本站已签约十年之约
   - [](https://www.foreverblog.cn)
 
+- ![](https://blog.cworld.top/static/img/links/wormhole.jpg)
+
+  - 虫洞
+  - 随机前往十年之约的成员博客
+  - [](https://www.foreverblog.cn/go.html)
+
 - ![](https://gcore.jsdelivr.net/gh/lzwdot/lzwdot.github.io@gh-pages/img/android-chrome-192x192.png)
 
   - 前端大刘
