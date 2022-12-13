@@ -304,7 +304,7 @@ search:
 assets:
   # prefix: 'https://cdn.example.com'
   # suffix: '?m=webp&q=80'
-  prefix: "https://gcore.jsdelivr.net/gh/cworld1/cworld1@gh-pages"
+  prefix: "https://cdn.cbd.int/cworld-blog@1/public"
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
@@ -382,12 +382,12 @@ comments:
 # ---------------------------------------------------------------
 
 # URL prefix for theme statics
-static_prefix: https://cdn.jsdelivr.net/gh/ikeq/hexo-theme-inside@2.6.4/source/
+static_prefix: "https://gcore.jsdelivr.net/gh/ikeq/hexo-theme-inside@2.7.0/source/"
 
 # URL prefix for json data
 # If your json file is put in a cdn server,
 # set data_prefix as '//cdn.com/path/to/path/your_json_dir' and data_dir as 'your_json_dir'
-data_prefix:
+data_prefix: "https://cdn.cbd.int/cworld-blog@1/public/api"
 
 # Folder where json file will be generated to, default to 'api'
 data_dir:
@@ -441,14 +441,14 @@ pwa:
   #       strategy: cacheFirst
   #       regex: your_data_prefix/.*\\.json
   workbox:
-    module_path_prefix: https://g.alicdn.com/kg/workbox/3.6.3/
-    expire: 0
+    cdn: https://cdn.cbd.int/workbox-sw@6.5.4/build/workbox-sw.js
+    module_path_prefix: https://cdn.cbd.int/workbox-sw@6.5.4/build/
     name: sw.js
     rules:
       # 使用 staleWhileRevalidate 策略缓存 jsdelivr 请求
       - name: jsdelivr
         strategy: staleWhileRevalidate
-        regex: https://cdn\\.jsdelivr\\.net
+        regex: https://gcore\\.jsdelivr\\.net
       # 使用 cacheFirst 策略缓存静态资源
       - name: theme
         strategy: cacheFirst
@@ -475,12 +475,12 @@ pwa:
   #       type: image/png
   #       purpose: any
   manifest:
-    short_name: CWorld's Blog
-    name: CWorld's Blog
-    start_url: /
+    short_name: CWorld Blog
+    name: "CWorld's Blog"
+    start_url: /?source=pwa
     theme_color: "#659eb9"
     background_color: "#f5f7fa"
-    icons: [{ "src": "favicon.ico", "type": "image/ico", "sizes": "256x256" }]
+    icons: [{ "src": "/favicon.ico", "type": "image/ico", "sizes": "256x256" }]
 
 # Plugins
 plugins:
@@ -506,7 +506,6 @@ plugins:
       placeholder: 请输入密码解锁内容
       excerpt: 内容已加密
   - palette:
-      col: 5
       theme:
         [
           "#673ab7",
@@ -517,9 +516,10 @@ plugins:
           "#ff9800",
           "#ff5722",
           "#795548",
-          "#607D8B",
+          "#607d8B",
           "#2a2b33",
         ]
+      col: 5
 
   # Global Inject script/style
   # By default script will be injected into <body>, and style will be injected into <head>
