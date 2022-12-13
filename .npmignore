@@ -1,5 +1,4 @@
 # Hexo
-public/
 .deploy*/
 .DS_Store
 Thumbs.db
@@ -7,7 +6,14 @@ db.json
 *.log
 _multiconfig.yml
 
-# Modules
-node_modules/
+# For npm
+!public/
+.github/
+scaffolds/
+source/
+themes/
+_config.yml
+_config.inside.yml
+
 # VSCode
 *.code-workspace
