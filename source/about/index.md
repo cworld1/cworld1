@@ -6,7 +6,7 @@ comments: true
 
 > <span id="hitokoto" style="color:var(--inside-accent-color)">鸡汤金句努力加载中...</sapn>
 
-## 制作项目
+## 我的项目
 
 - [Linux Learning](https://github.com/cworld1/linux-learning) - 关于 CWorld 在学习 Linux 时的一些代码记录
 - [R Learning](https://github.com/cworld1/r-learning) - 关于 CWorld 在学习 R 语言时的一些代码记录
@@ -14,6 +14,10 @@ comments: true
 - [C Learning](https://github.com/cworld1/c-learning) - 关于 CWorld 在学习 C 语言时的一些代码记录
 - [Pure 百度](https://blog.cworld.top/post/pure-baidu) - 一个百度页面的美化模块
 - [Momotap](https://github.com/cworld1/momotap) - 一款与 Mikutap 类似的板垫音乐游戏
+
+Github Activities:
+
+![Github Activities](https://ghchart.rshah.org/659eb9/cworld1)
 
 ## 个人简介
 
