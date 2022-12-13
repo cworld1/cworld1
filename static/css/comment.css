@@ -45,7 +45,6 @@
   background: var(--waline-bgcolor);
   padding: 7px 16px;
   border-radius: 4.75em;
-  color: var(--inside-color);
 }
 .wl-reaction-img {
   height: 20px;
@@ -68,6 +67,7 @@
 .wl-reaction-text {
   font-size: 1em;
   line-height: 20px;
+  color: var(--waline-color);
 }
 .wl-reaction li.active .wl-reaction-votes,
 .wl-reaction li.active .wl-reaction-text {
