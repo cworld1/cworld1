@@ -304,7 +304,7 @@ search:
 assets:
   # prefix: 'https://cdn.example.com'
   # suffix: '?m=webp&q=80'
-  prefix: "https://cdn.cbd.int/cworld-blog@v1/public"
+  prefix: "https://cdn.cbd.int/cworld-blog@latest/public"
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
@@ -387,7 +387,7 @@ static_prefix: "https://gcore.jsdelivr.net/gh/ikeq/hexo-theme-inside@2.7.0/sourc
 # URL prefix for json data
 # If your json file is put in a cdn server,
 # set data_prefix as '//cdn.com/path/to/path/your_json_dir' and data_dir as 'your_json_dir'
-data_prefix: "https://cdn.cbd.int/cworld-blog@v1/public/api/"
+data_prefix: "https://cdn.cbd.int/cworld-blog@latest/public/api/"
 
 # Folder where json file will be generated to, default to 'api'
 data_dir:
@@ -556,7 +556,8 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://busuanzi.icodeq.com/busuanzi.pure.mini.js # 不蒜子统计
-  -  # Waline 依赖
+  - https://cdn.cbd.int/clipboard@v2/dist/clipboard.min.js # 剪贴板
+  - https://cdn.cbd.int/cworld-blog@latest/public/static/js/waline.min.js # Waline 依赖
   - static/css/main.min.css # 自定义 CSS
   - static/js/main.min.js # 自定义 JSS
 
@@ -568,7 +569,6 @@ plugins:
   # template: snippets/snippet-1.html
   - position: [post, page] # 剪贴板 + 阅读量
     template: |
-      <script src="https://cdn.cbd.int/clipboard@2/dist/clipboard.min.js"></script>
       <script>
         var elements = document.querySelectorAll(".highlight tr>.code");
         for (var i = 0; i < elements.length; i++) { elements[i].innerHTML = '<button class="btn-copy" data-clipboard-snippet=""><svg t="1644686763820" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2062" data-darkreader-inline-fill="" width="16" height="16"><path d="M798.4 128h-72v-12.8c0-38.4-33.6-72-72-72h-97.6C555.2 17.6 537.6 0 512 0c-25.6 0-43.2 17.6-43.2 43.2h-97.6c-38.4 0-72 33.6-72 72V128h-72c-30.4 0-56 25.6-56 56v780.8c0 33.6 25.6 59.2 59.2 59.2h568c17.6 0 33.6-8 43.2-20.8 8-12.8 12.8-25.6 12.8-38.4V184C852.8 153.6 827.2 128 798.4 128zM384 128h256v84.8H384V128z m384 811.2H256V212.8h43.2v12.8c0 38.4 33.6 72 72 72h281.6c38.4 0 72-33.6 72-72v-12.8H768v726.4z" p-id="2063"></path></svg></button>' + elements[i].innerHTML };
@@ -583,13 +583,12 @@ plugins:
   - position: comments
     template: |
       <div id="waline">好像评论卡了欸，要不要刷新一下？✨</div>
-      <script src="https://cdn.cbd.int/cworld-blog@v1/public/static/js/waline.min.js"></script>
       <script>
         Waline.init({
           el: "#waline",
           serverURL: "https://waline.cworld.top",
           emoji: ["https://blog.cworld.top/static/img/bmoji"],
-          reaction: ["https://cdn.cbd.int/cworld-blog@v1/public/static/img/comment-like.png"],
+          reaction: ["https://cdn.cbd.int/cworld-blog@latest/public/static/img/comment-like.png"],
           search: false,
           pageview: true,
           comment: true,
@@ -601,4 +600,4 @@ plugins:
         });
       </script>
       <link href="https://cdn.cbd.int/@waline/client@v2/dist/waline.css" rel="stylesheet">
-      <link href="https://cdn.cbd.int/cworld-blog@v1/public/static/css/comment.min.css" rel="stylesheet">
+      <link href="https://cdn.cbd.int/cworld-blog@latest/public/static/css/comment.min.css" rel="stylesheet">
