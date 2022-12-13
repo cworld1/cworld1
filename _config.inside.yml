@@ -557,7 +557,7 @@ plugins:
   # - xxx.jss
   - https://busuanzi.icodeq.com/busuanzi.pure.mini.js # 不蒜子统计
   - https://cdn.cbd.int/clipboard@v2/dist/clipboard.min.js # 剪贴板
-  - https://cdn.cbd.int/cworld-blog@latest/public/static/js/waline.min.js # Waline 依赖
+  - https://cdn.cbd.int/@waline/client@v2/dist/waline.js # Waline 依赖
   - static/css/main.min.css # 自定义 CSS
   - static/js/main.min.js # 自定义 JSS
 
