@@ -6,22 +6,26 @@ comments: true
 
 > <span id="hitokoto" style="color:var(--inside-accent-color)">鸡汤金句努力加载中...</sapn>
 
+Developer / Designer
+
+[🏫 西南大学](http://swu.edu.cn/) 全日制本科生。主要研究大数据科学、前端开发和神经网络学习。
+
 ## 我的项目
 
-- [Linux Learning](https://github.com/cworld1/linux-learning) - 关于 CWorld 在学习 Linux 时的一些代码记录
-- [R Learning](https://github.com/cworld1/r-learning) - 关于 CWorld 在学习 R 语言时的一些代码记录
-- [Vue Learning](https://github.com/cworld1/vue-learning) - 关于 CWorld 在学习 Vue 时的一些代码记录
-- [C Learning](https://github.com/cworld1/c-learning) - 关于 CWorld 在学习 C 语言时的一些代码记录
-- [Pure 百度](https://blog.cworld.top/post/pure-baidu) - 一个百度页面的美化模块
-- [Momotap](https://github.com/cworld1/momotap) - 一款与 Mikutap 类似的板垫音乐游戏
+- [Linux Learning](https://linux.cworld.top/) | [Github](https://github.com/cworld1/linux-learning)： 学习 Linux 时的部分笔记记录
+- [R Learning](https://r.cworld.top/) | [Github](https://github.com/cworld1/r-learning)：学习 R 语言时的部分代码 & 笔记记录
+- [Vue Learning](https://github.com/cworld1/vue-learning)：学习 Vue 时的部分代码 & 笔记记录
+- [C Learning](https://github.com/cworld1/c-learning)：学习 C 语言时的部分代码 & 笔记记录
+- [Pure 百度](https://blog.cworld.top/post/pure-baidu)：百度搜索页面的美化模块
+- [Pure 必应&Material You](https://greasyfork.org/zh-CN/scripts/440462) | [Source Code](https://greasyfork.org/zh-CN/scripts/440462/code)：必应搜索页面的美化模块
+- [Momotap](https://cworld1.github.io/momotap/) | [Github](https://cworld1.github.io/momotap/)：一款与 Mikutap 类似的板垫音乐游戏
 
 Github Activities:
 
 ![Github Activities](https://ghchart.rshah.org/659eb9/cworld1)
 
-## 个人简介
+## 泛泛而谈
 
-- 西南大学在校大学牲。
 - 正在学前端，尽管这只是出于个人兴趣。
 - 最喜欢的编辑器是 VSCode（有时也会用 Neovim、Sublime Text）。
 - Adobe 全家桶比较熟练，UI 强迫症晚期。
@@ -43,49 +47,49 @@ Github Activities:
 <link href="/static/css/about.min.css" rel="stylesheet">
 <div id="stats">
 
-- <i class="icon" style="color:#2ca5e0">&#xe7e2;</i>
+- <i class="a-icon" style="color:#2ca5e0">&#xe7e2;</i>
 
   - Telegram
   - Follows：<span class="telegram">加载中...</span>
   - [](https://t.me/cworld0_cn)
 
-- <i class="icon" style="color:var(--inside-foreground-color)">&#xe7d1;</i>
+- <i class="a-icon" style="color:var(--inside-foreground-color)">&#xe7d1;</i>
 
   - Github
   - Follows：<span class="github">加载中...</span>
   - [](https://github.com/cworld1)
 
-- <i class="icon" style="color:#1da1f2">&#xe7e3;</i>
+- <i class="a-icon" style="color:#1da1f2">&#xe7e3;</i>
 
   - Twitter
   - Follows：<span class="twitter">加载中...</span>
   - [](https://twitter.com/CWorld0)
 
-- <i class="icon" style="color:#fe7398">&#xe7c8;</i>
+- <i class="a-icon" style="color:#fe7398">&#xe7c8;</i>
 
   - Bilibili
   - 粉丝数：<span class="bilibili">加载中...</span>
   - [](https://space.bilibili.com/388346465)
 
-- <i class="icon" style="color:#e71f19">&#xe7e4;</i>
+- <i class="a-icon" style="color:#e71f19">&#xe7e4;</i>
 
   - Weibo
   - 粉丝数：<span class="weibo">加载中...</span>
   - [](https://weibo.com/5501674056)
 
-- <i class="icon" style="color:#0084ff">&#xe7e5;</i>
+- <i class="a-icon" style="color:#0084ff">&#xe7e5;</i>
 
   - Zhihu
   - 粉丝数：<span class="zhihu">加载中...</span>
   - [](https://www.zhihu.com/people/wolf-03/answers)
 
-- <i class="icon" style="color:#11ab60">&#xe66b;</i>
+- <i class="a-icon" style="color:#11ab60">&#xe66b;</i>
 
   - Coolapk
   - 粉丝数：<span class="coolapk">6330</span>
   - [](https://www.coolapk.com/u/1384771)
 
-- <i class="icon" style="color:#50769d">&#xe7e1;</i>
+- <i class="a-icon" style="color:#50769d">&#xe7e1;</i>
 
   - Steam
   - 游戏数量：<span class="steamgames">加载中...</span>
