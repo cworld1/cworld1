@@ -9,7 +9,7 @@ copyright: false
 
 <link href="/static/css/link.min.css" rel="stylesheet">
 
-<div class="f">
+<div id="f">
 
 - ![](https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa)
 
@@ -17,13 +17,13 @@ copyright: false
   - 求知若愚，虚怀若谷
   - [](https://blog.cworld.top)
 
-- ![](https://cravatar.cn/avatar/27bfab48edf72b1cda99f9bcbe286a78)
+- ![](https://www.kindyear.cn/logo.png)
 
-  - OURONGXING
-  - 天生骄傲
-  - [](https://orxing.top)
+  - KD 的网络小屋
+  - 技施于手，道养于心
+  - [](https://www.kindyear.cn/)
 
-- ![](https://s2.ax1x.com/2019/07/22/ePRmnO.png)
+- ![](https://cravatar.cn/avatar/c80a41a5465ee8c279f7b065b029009f)
 
   - Barkure
   - 未来已来，将至已至
@@ -119,32 +119,52 @@ copyright: false
   - Share Technology.
   - [](https://lanyundev.com/)
 
+- ![](http://server.lilhu-coppa.top/uploads/1670940536791.jpg)
+- 鲨鱼辣椒
+- Keep real
+- [](http://lilhu-coppa.top/)
+
 </div>
+
+::: collapse 不太活跃的博客
+
+<div class="f">
+
+- ![](https://cravatar.cn/avatar/27bfab48edf72b1cda99f9bcbe286a78)
+
+  - OURONGXING
+  - 天生骄傲
+  - [](https://orxing.top)
+
+</div>
+
+:::
 
 ::: collapse 友链记录册
 
 ::: timeline
 
-- 2020-07-09 蒟蒻の BLOG 离开
-- 2020-07-09 Vexsy 离开
-- 2020-07-07 Raaynk’s Blog 消失
-- 2020-07-07 冬马的白色相簿 回归
-- 2021-02-22 半叶子 离开
-- 2021-02-22 冬马的白色相簿 消失
-- 2021-02-02 Heven Kin 回归
-- 2022-02-13 理工小天使 消失
-- 2022-02-13 自由灵的梦境 消失
-- 2022-02-13 冬马のホワイトアルバム 消失
-- 2022-02-13 Sansui 消失
-- 2022-09-01 椎咲良田 消失
-- 2022-09-01 木子の Blog 离开
-- 2022-09-01 LanYun の Blog 消失
-- 2022-09-01 Wittoy's Blog 消失
-- 2022-09-05 东方幻梦 离开
-- 2022-09-05 绎梦机 离开
-- 2022-11-09 一叶竹 消失
-- 2022-11-23 KD's Blog 消失
-- 2022-02-13 LanYun の Blog 回归
+- 2020-07-09 `蒟蒻の BLOG` 离开
+- 2020-07-09 `Vexsy` 离开
+- 2020-07-07 `Raaynk’s Blog` 消失
+- 2020-07-07 `冬马的白色相簿` 回归
+- 2021-02-22 `半叶子` 离开
+- 2021-02-22 `冬马的白色相簿` 消失
+- 2021-02-02 `Heven Kin` 回归
+- 2022-02-13 `理工小天使` 消失
+- 2022-02-13 `自由灵的梦境` 消失
+- 2022-02-13 `冬马のホワイトアルバム` 消失
+- 2022-02-13 `Sansui` 消失
+- 2022-09-01 `椎咲良田` 消失
+- 2022-09-01 `木子の Blog` 离开
+- 2022-09-01 `LanYun の Blog` 消失
+- 2022-09-01 `Wittoy's Blog` 消失
+- 2022-09-05 `东方幻梦` 离开
+- 2022-09-05 `绎梦机` 离开
+- 2022-11-09 `一叶竹` 消失
+- 2022-11-23 `KD's Blog` 消失
+- 2022-02-13 `LanYun の Blog` 回归
+- 2022-12-14 `KD 的网络小屋` 回归
 
 :::
 
@@ -164,7 +184,7 @@ copyright: false
   - 本站已签约十年之约
   - [](https://www.foreverblog.cn)
 
-- ![](https://blog.cworld.top/static/img/links/wormhole.jpg)
+- ![](https://blog.cworld.top/static/img/links/wormhole.png)
 
   - 虫洞
   - 随机前往十年之约的成员博客
