@@ -28,7 +28,7 @@ appearance:
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: https://fonts.googleapis.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+    url: https://fonts.sourcegcdn.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
 
     # Base font which applied to body
     base: "Josefin Sans"
@@ -186,7 +186,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy;2022 • <a href="">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次'
+  copyright: '&copy;2022 • <a href="https://www.cworld.top/">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次'
 
   # Set to false to hide Hexo link.
   # powered: false
@@ -445,10 +445,10 @@ pwa:
     module_path_prefix: https://cdn.cbd.int/workbox-sw@6.5.4/build/
     name: sw.js
     rules:
-      # 使用 staleWhileRevalidate 策略缓存 jsdelivr 请求
-      - name: jsdelivr
+      # 使用 staleWhileRevalidate 策略缓存 BCD CDN 请求
+      - name: cbd_cdn
         strategy: staleWhileRevalidate
-        regex: https://gcore\\.jsdelivr\\.net
+        regex: https://cdn\\.cbd\\.int
       # 使用 cacheFirst 策略缓存静态资源
       - name: theme
         strategy: cacheFirst
@@ -481,35 +481,26 @@ pwa:
     theme_color: "#659eb9"
     background_color: "#f5f7fa"
     icons:
-      [
-        {
-          "src": "/static/favicon.ico",
-          "type": "image/ico",
-          "sizes": "256x256",
-        },
-        {
-          "src": "/static/avatar.jpg",
-          "type": "image/jpg",
-          "sizes": "480x480",
-        },
-      ]
+      - src: "/static/pwa/icon-192x192.png"
+        sizes: 192x192
+        type: image/png
+        purpose: any
+      - src: "/static/pwa/apple-touch-icon-144x144.png"
+        type: "image/png"
+        sizes": "144x144"
+        purpose: any
+    display: standalone
     shortcuts:
-      [
-        {
-          "name": "友链",
-          "short_name": "Links",
-          "description": "查看 CWorld 和 ta 的朋友们",
-          "url": "/link?source=pwa",
-          "icons": [{ "src": "/static/pwa/link.png", "sizes": "200x200" }],
-        },
-        {
-          "name": "关于",
-          "short_name": "About",
-          "description": "关于 CWorld 和留言板",
-          "url": "/about?source=pwa",
-          "icons": [{ "src": "/static/pwa/about.png", "sizes": "200x200" }],
-        },
-      ]
+      - name: 友链
+        short_name: Links
+        description: 查看 CWorld 和 ta 的朋友们
+        url: "/link?source=pwa"
+        icons": [{ "src": "/static/pwa/link.png", "sizes": "200x200" }]
+      - name": 关于
+        short_name: About
+        description: 关于 CWorld 和留言板
+        url: "/about?source=pwa"
+        icons: [{ "src": "/static/pwa/about.png", "sizes": "200x200" }]
 
 # Plugins
 plugins:
