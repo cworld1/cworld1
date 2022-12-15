@@ -51,6 +51,9 @@
   width: auto;
   display: flex;
 }
+.wl-reaction-img img {
+  max-width: 100%;
+}
 .wl-reaction-votes {
   position: inherit;
   top: auto;
