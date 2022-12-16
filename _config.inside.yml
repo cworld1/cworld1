@@ -442,7 +442,7 @@ pwa:
   #       regex: your_data_prefix/.*\\.json
   workbox:
     cdn: https://cdn.cbd.int/workbox-sw@6.5.4/build/workbox-sw.js
-    module_path_prefix: https://cdn.cbd.int/workbox-routing@6.5.4/build/
+    module_path_prefix: https://cdn.cbd.int/workbox-core@6.5.4/build/
     name: sw.js
     rules:
       # 使用 staleWhileRevalidate 策略缓存 CBD CDN 请求
@@ -481,26 +481,15 @@ pwa:
     theme_color: "#659eb9"
     background_color: "#f5f7fa"
     icons:
-      - src: "/static/pwa/icon-192x192.png"
+      - src: "/static/img/icon-192x192.png"
         sizes: 192x192
         type: image/png
         purpose: any
-      - src: "/static/pwa/apple-touch-icon-144x144.png"
+      - src: "/static/img/apple-touch-icon-144x144.png"
         type: "image/png"
         sizes": "144x144"
         purpose: any
     display: standalone
-    shortcuts:
-      - name: 友链
-        short_name: Links
-        description: 查看 CWorld 和 ta 的朋友们
-        url: "/link?source=pwa"
-        icons": [{ "src": "/static/pwa/link.png", "sizes": "200x200" }]
-      - name": 关于
-        short_name: About
-        description: 关于 CWorld 和留言板
-        url: "/about?source=pwa"
-        icons: [{ "src": "/static/pwa/about.png", "sizes": "200x200" }]
 
 # Plugins
 plugins:
