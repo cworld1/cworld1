@@ -2,9 +2,9 @@ fetch("static/cf-friends.json")
   .then((res) => res.json())
   .then((data) => {
     var str = "";
-    data.forEach(function (friend) {
+    data.friends.forEach(function (friend) {
       str += `<li>
-    <p><img src="${friend.image}" alt="" loading="lazy" class="φbp"></p>
+    <p><img src="${friend.avatar}" alt="" loading="lazy" class="φbp"></p>
     <ul>
     <li>${friend.title}</li>
     <li>${friend.intro}</li>
