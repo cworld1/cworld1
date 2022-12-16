@@ -9,7 +9,7 @@ copyright: false
 
 <link href="/static/css/link.min.css" rel="stylesheet">
 
-<div id="f">
+<div id="f" class="friend">
 
 - ![](https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa)
 
