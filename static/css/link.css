@@ -35,6 +35,7 @@
 /* 头像 */
 #f > ul > li > p {
   margin: 0;
+  width: 50px;
 }
 
 #f img {
