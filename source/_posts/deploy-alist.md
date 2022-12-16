@@ -1,9 +1,10 @@
 ---
-title: deploy-alist
+title: Alist 自建0成本部署
 date: 2022-12-15 02:06:47
 categories: 教程
 tags:
   - Alist
+thumbnail: "thumbnail.jpg #2f76d7"
 ---
 
 Alist 是一款支持多种存储的目录文件列表程序，后端基于 `gin`，前端使用 `react`。
