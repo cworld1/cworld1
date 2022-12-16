@@ -387,7 +387,7 @@ static_prefix: "https://gcore.jsdelivr.net/gh/ikeq/hexo-theme-inside@2.7.0/sourc
 # URL prefix for json data
 # If your json file is put in a cdn server,
 # set data_prefix as '//cdn.com/path/to/path/your_json_dir' and data_dir as 'your_json_dir'
-data_prefix: "https://cdn.cbd.int/cworld-blog@latest/public/api/"
+# data_prefix: "https://cdn.cbd.int/cworld-blog@latest/public/api/"
 
 # Folder where json file will be generated to, default to 'api'
 data_dir:
