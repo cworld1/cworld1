@@ -442,7 +442,7 @@ pwa:
   #       regex: your_data_prefix/.*\\.json
   workbox:
     cdn: https://cdn.cbd.int/workbox-sw@6.5.4/build/workbox-sw.js
-    module_path_prefix: https://cdn.cbd.int/workbox-core@6.5.4/build/
+    module_path_prefix: https://storage.googleapis.com/workbox-cdn/releases/6.5.4/
     name: sw.js
     rules:
       # 使用 staleWhileRevalidate 策略缓存 CBD CDN 请求
