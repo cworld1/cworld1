@@ -23,6 +23,12 @@ copyright: false
   - 技施于手，道养于心
   - [](https://www.kindyear.cn/)
 
+- ![](https://avatars.githubusercontent.com/u/45725145?v=4)
+
+  - Jinlk's blog
+  - 記錄生活點滴
+  - [](https://jinlk.site)
+
 - ![](https://cravatar.cn/avatar/c80a41a5465ee8c279f7b065b029009f)
 
   - Barkure
@@ -34,6 +40,12 @@ copyright: false
   - Ojhdt’s Blog
   - 隐约雷鸣，阴霾天空
   - [](https://blog.ojhdt.com)
+
+- ![](https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44)
+
+  - hiCasper
+  - 没有 BUG 的代码是不完美的
+  - [](http://hicasper.com)
 
 - ![](https://npm.elemecdn.com/chenyfan-oss@3)
 
@@ -52,18 +64,6 @@ copyright: false
   - Enjoy's blog
   - 个人博客，记录生活点滴。
   - [](https://mcenjoy.cn)
-
-- ![](https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44)
-
-  - hiCasper
-  - 没有简介。
-  - [](http://hicasper.com)
-
-- ![](https://avatars.githubusercontent.com/u/45725145?v=4)
-
-  - Jinlk's blog
-  - 記錄生活點滴
-  - [](https://jinlk.site)
 
 - ![](https://img1.baidu.com/it/u=1214290448,1946399589&fm=253&fmt=auto)
 
@@ -119,16 +119,17 @@ copyright: false
   - Share Technology.
   - [](https://lanyundev.com/)
 
-- ![](http://server.lilhu-coppa.top/uploads/1670940536791.jpg)
-- 鲨鱼辣椒
-- Keep real
-- [](http://lilhu-coppa.top/)
+- ![](https://blog.cworld.top/static/img/links/鲨鱼辣椒.jpg)
+
+  - 鲨鱼辣椒
+  - Keep real
+  - [](http://lilhu-coppa.top/)
 
 </div>
 
 ::: collapse 不太活跃的博客
 
-<div class="f">
+<div id="f">
 
 - ![](https://cravatar.cn/avatar/27bfab48edf72b1cda99f9bcbe286a78)
 
@@ -170,7 +171,7 @@ copyright: false
 
 ## 特殊链接
 
-<div class="f">
+<div id="f">
 
 - ![](https://static.cloudflare.ltd/Bandbbs_CDN/PWA/pwa_icon_192.png)
 
@@ -202,10 +203,10 @@ copyright: false
 
 本站信息如下：
 
-> 名称：CWorld's Blog
-> 链接：https://blog.cworld.top
 > 图标：https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
+> 名称：CWorld's Blog
 > 简介：求知若愚，虚怀若谷
+> 链接：https://blog.cworld.top
 
 申请时还请按照这个模板留言。此外有关申请说明：
 
