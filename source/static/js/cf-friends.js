@@ -6,7 +6,7 @@ fetch("static/cf-friends.json")
       str += `<li>
     <p><img src="${friend.avatar}" alt="" loading="lazy" class="φbp"></p>
     <ul>
-    <li>${friend.title}</li>
+    <li>${friend.name}</li>
     <li>${friend.intro}</li>
     <li><a href="${friend.link}" target="_blank"></a></li>
     </ul>
