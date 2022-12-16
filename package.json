@@ -1,6 +1,6 @@
 {
   "name": "cworld-blog",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "private": false,
   "scripts": {
     "build": "hexo generate",
