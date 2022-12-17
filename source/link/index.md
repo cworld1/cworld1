@@ -9,18 +9,14 @@ copyright: false
 
 <link href="/static/css/link.min.css" rel="stylesheet">
 
-<div id="f" class="cf-friends"><ul></ul></div>
+<div class="friends">
+<ul id="cf-links">稍等片刻，好友马上加载出来！</ul>
+</div>
 
 ::: collapse 不太活跃的博客
 
-<div id="f">
-
-- ![](https://cravatar.cn/avatar/27bfab48edf72b1cda99f9bcbe286a78)
-
-  - OURONGXING
-  - 天生骄傲
-  - [](https://orxing.top)
-
+<div class="friends">
+<ul id="inactive-links">稍等片刻，好友马上加载出来！</ul>
 </div>
 
 :::
@@ -55,32 +51,8 @@ copyright: false
 
 ## 特殊链接
 
-<div id="f">
-
-- ![](https://static.cloudflare.ltd/Bandbbs_CDN/PWA/pwa_icon_192.png)
-
-  - 米坛
-  - 创造不一样
-  - [](https://www.bandbbs.cn)
-
-- ![](https://avatars.githubusercontent.com/u/39395618?s=200&v=4)
-
-  - 十年之约
-  - 本站已签约十年之约
-  - [](https://www.foreverblog.cn)
-
-- ![](https://blog.cworld.top/static/img/links/wormhole.png)
-
-  - 虫洞
-  - 随机前往十年之约的成员博客
-  - [](https://www.foreverblog.cn/go.html)
-
-- ![](https://gcore.jsdelivr.net/gh/lzwdot/lzwdot.github.io@gh-pages/img/android-chrome-192x192.png)
-
-  - 前端大刘
-  - 记录和分享，每天进步一点点！
-  - [](https://lzwdot.com/)
-
+<div class="friends">
+<ul id="special-links">稍等片刻，好友马上加载出来！</ul>
 </div>
 
 ## 申请友链
@@ -94,10 +66,10 @@ copyright: false
 
 申请时还请按照这个模板留言。此外有关申请说明：
 
-- 不违反国家法律。
-- 请确保你的站点活着。
-- 在你的友链上添加本站。
+- 在你的友链上添加了本站；
+- 请确保你的站点活着；
+- 博客内容不违反国家法律。
 
 <p align="center" style="color:var(--inside-accent-color)">那么，在下方留言吧 👇</p>
 
-<script src="./static/js/cf-friends.min.js"></script>
+<script src="./static/js/link.min.js"></script>
