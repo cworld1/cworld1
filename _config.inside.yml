@@ -144,7 +144,7 @@ menu:
   🔍 搜索: /search
   🔗 友链: /link
   🧑‍💻 关于: /about
-  🏠 主页: https://www.cworld.top/
+  🏠 主页: https://cworld.top/
   # About: /about
   # Links: /links
   # Github: https://github.com/username
@@ -186,7 +186,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy;2022 • <a href="https://www.cworld.top/">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次'
+  copyright: '&copy;2022 • <a href="https://cworld.top/">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次'
 
   # Set to false to hide Hexo link.
   # powered: false
