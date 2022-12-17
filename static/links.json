@@ -5,12 +5,6 @@
       "desc": "列入友链朋友圈的好友",
       "link_list": [
         {
-          "name": "CWorld's Blog",
-          "intro": "求知若愚，虚怀若谷",
-          "link": "https://blog.cworld.top/",
-          "avatar": "https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa"
-        },
-        {
           "name": "KD 的网络小屋",
           "intro": "技施于手，道养于心",
           "link": "https://www.kindyear.cn/",
@@ -117,6 +111,24 @@
           "intro": "Keep real",
           "link": "http://lilhu-coppa.top/",
           "avatar": "https://blog.cworld.top/static/img/links/鲨鱼辣椒.jpg"
+        },
+        {
+          "name": "itsNeko",
+          "intro": "有源源就有我！",
+          "link": "https://dyfa.top/",
+          "avatar": "https://dyfa.top/usr/themes/Nabo-theme-typecho-main/image/logo.jpg"
+        },
+        {
+          "name": "Wallleap",
+          "intro": "Luwang's Blog",
+          "link": "https://myblog.wallleap.cn/",
+          "avatar": "https://gcore.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/avatar.jpg"
+        },
+        {
+          "name": "七云's Blog",
+          "intro": "我们终归落俗，但浪漫不死",
+          "link": "https://www.zets.cn/",
+          "avatar": "https://q3.qlogo.cn/g?b=sdk&k=UeVu6eVo5SdL2Eu7PiczvTw&s=640"
         }
       ]
     },
