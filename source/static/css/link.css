@@ -3,16 +3,15 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  transition: 0.3s ease;
 }
 
 /* 单个友链 */
 .friends > ul > li {
-  transition: 0.3s ease;
-  list-style: none;
-}
-
-.friends > ul > li {
   display: flex;
+  transition: 0.3s ease;
+  height: 52px;
+  list-style: none;
   margin: 0 10px 10px 0;
   text-decoration: none;
   padding: 10px;
@@ -36,13 +35,15 @@
 .friends > ul > li > p {
   margin: 0;
   width: 50px;
-}
-
-.friends img {
+  height: 50px;
   background-color: var(--inside-background);
   border: solid 1px var(--inside-border-color);
   border-radius: 25px;
-  width: 50px !important;
+}
+
+.friends img {
+  border-radius: 25px;
+  width: 50px;
   height: 50px;
   margin: 0 !important;
   max-width: fit-content;

@@ -59,10 +59,10 @@ copyright: false
 
 本站信息如下：
 
-> 图标：https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 > 名称：CWorld's Blog
 > 简介：求知若愚，虚怀若谷
-> 链接：https://blog.cworld.top
+> 链接：https://blog.cworld.top/
+> 图标：https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 
 申请时还请按照这个模板留言。此外有关申请说明：
 
