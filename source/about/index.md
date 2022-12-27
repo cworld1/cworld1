@@ -136,7 +136,7 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 - 2019-07-31 买下了人生第一个域名 [cworld.top](https://cworld.top)
 - 2020-01-24 小站搬迁至 Coding，从此绑定了域名 [blog.cworld.top](https://blog.cworld.top)
 - 2022-02-12 小站搬迁至 Netlify，并在 Github 上开源
-- 2022-02-17 小站签约了 [十年之约](https://www.foreverblog.cn) 项目
+- 2022-03-01 小站成功签约了并加入了 [十年之约](https://www.foreverblog.cn/blog/2788.html)
 
 :::
 
