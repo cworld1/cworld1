@@ -7,7 +7,7 @@ copyright: false
 
 怎么可能有顺序呢，当然是随机的~
 
-<link href="/static/css/link.min.css" rel="stylesheet">
+<link href="https://cdn.cbd.int/cworld-blog@latest/public/static/css/link.min.css" rel="stylesheet">
 
 <div class="friends">
 <ul id="cf-links">稍等片刻，好友马上加载出来！</ul>
@@ -49,6 +49,10 @@ copyright: false
 
 :::
 
+## 朋友们的最新文章
+
+<div id="hexo-circle-of-friends-root">努力加载ing...</div>
+
 ## 特殊链接
 
 <div class="friends">
@@ -73,3 +77,18 @@ copyright: false
 <p align="center" style="color:var(--inside-accent-color)">那么，在下方留言吧 👇</p>
 
 <script src="./static/js/link.min.js"></script>
+
+<script>
+    let UserConfig = {
+        // 填写你的api地址
+        private_api_url: 'https://links.cworld.top/',
+        // 点击加载更多时，一次最多加载几篇文章，默认10
+        page_turning_number: 10,
+        // 头像加载失败时，默认头像地址
+        error_img: 'https://cravatar.cn/avatar/57d8260dfb55501c37dde588e7c3852c',
+        // 进入页面时第一次的排序规则
+        sort_rule: 'created'
+    }
+</script>
+<script type="text/javascript" src="https://cdn.cbd.int/fcircle-theme-yyyz@v1/dist/app.min.js"></script>
+<script type="text/javascript" src="https://cdn.cbd.int/fcircle-theme-yyyz@v1/dist/bundle.js"></script>
