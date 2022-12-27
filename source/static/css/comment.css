@@ -19,7 +19,7 @@
 #waline pre {
   border-color: var(--inside-highlight-01);
 }
-.wl-card .wl-quote {
+.wl-card .quote {
   border-color: var(--inside-border-color);
 }
 
@@ -34,7 +34,50 @@
 }
 
 /* 互动面板 */
-.wl-reaction {
+.wl-reaction .reaction-list {
+  display: flex;
+}
+.wl-reaction .reaction-item {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  background: var(--waline-bgcolor);
+  padding: 7px 16px;
+  border-radius: 4.75em;
+}
+.wl-reaction .reaction-item.active {
+  background: var(--waline-theme-color);
+}
+.wl-reaction .reaction-item .reaction-img {
+  height: 20px;
+  width: auto;
+  display: flex;
+}
+.wl-reaction .reaction-item .reaction-text,
+.wl-reaction .reaction-item .reaction-votes {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--waline-theme-color);
+}
+.wl-reaction .reaction-item.active .reaction-text,
+.wl-reaction .reaction-item.active .reaction-votes {
+  color: var(--waline-bgcolor);
+}
+.wl-reaction img {
+  max-width: 20px;
+  margin-right: 5px;
+}
+.wl-reaction .reaction-votes,
+.wl-reaction .reaction-loading {
+  position: unset;
+  border: none;
+  font-weight: normal;
+  padding: 0;
+  background: none !important;
+}
+
+/* 互动面板 */
+/* .reaction {
   margin-bottom: 0.75em;
 }
 .wl-reaction h4 {
@@ -72,11 +115,11 @@
   line-height: 20px;
   color: var(--waline-theme-color);
 }
-.wl-reaction li.active .wl-reaction-votes,
-.wl-reaction li.active .wl-reaction-text {
+.wl-reaction li.active .reaction-votes,
+.wl-reaction li.active .reaction-text {
   background: none;
   color: var(--waline-white);
 }
 .wl-reaction li.active {
   background: var(--waline-theme-color);
-}
+} */
