@@ -140,9 +140,7 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 
 :::
 
-小站开通时间：
-
-感谢以下项目/服务商为本博客提供长期服务支持：
+小站的平稳运行和个性化定制也离不开以下优秀项目/服务商提供的资源和技术上的支持：
 
 - [x] 网站域名：[cworld.top](https://blog.cworld.top)
 - [x] 框架主题：[Hexo](https://hexo.io) + [Inside theme](https://github.com/ikeq/hexo-theme-inside)
@@ -150,6 +148,7 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 - [x] 资源加速：[CBD CDN](https://cdn.cbd.int/)
 - [x] 评论系统：[Waline](https://waline.js.org)
 - [x] 持续集成：[Github Actions](https://github.com/cworld1/cworld1/actions/workflows/hexo-auto-deploy.yml)
-- [x] 统计服务：[LeanCloud](https://console.leancloud.app) + [Waline](https://waline.js.org)、[自建不蒜子 API](https://busuanzi.icodeq.com/)
+- [x] 访问统计：[LeanCloud](https://console.leancloud.app) + [Waline](https://waline.js.org)、[自建不蒜子 API](https://busuanzi.icodeq.com/)
+- [x] 其他统计：[Substats](https://github.com/spencerwooo/substats)、[Circle of friends](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends)
 
 <script src="./static/js/about.min.js"></script>
