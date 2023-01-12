@@ -35,7 +35,7 @@
 /* 头像 */
 .friends > ul > li > p {
   margin: 0;
-  width: 50px;
+  width: 50px !important;
   height: 50px;
   background-color: var(--inside-background);
   border: solid 1px var(--inside-border-color);
