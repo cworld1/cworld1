@@ -71,34 +71,34 @@ thumbnail: "thumbnail.jpg #dfe1e2"
 ### 步骤
 
 1. 下载上述插件任意一个，建议 Stylish（方便日后更新）。
-   ![2019-12-29 12-54-17](https://tva2.sinaimg.cn/large/0060ksKkly1gadi3ir3hbj30qh06awfg.jpg)
+   ![image](post/chrome-dinosaur/di3ir3hbj30qh06awfg.jpg)
 
 2. 点击上述 Pure 百度的网址。
-   ![2019-12-29 12-55-7](https://tvax2.sinaimg.cn/large/0060ksKkly1gadi4eg10wj30c2012a9u.jpg)
+   ![image](post/chrome-dinosaur/di4eg10wj30c2012a9u.jpg)
 
 3. 如果你用的 CSS 类，直接点击蓝色的“Install Style”，即可生效（如果没有看到，说明可能你的第一步没有完成）。
-   ![2019-12-29 12-51-14](https://tva3.sinaimg.cn/large/0060ksKkly1gadi21c2t7j30ld0f80wy.jpg)
+   ![image](post/chrome-dinosaur/di21c2t7j30ld0f80wy.jpg)
    如果你用的 Userscript 类，网页下翻后点击蓝色小字“Install style as userscript”即可（这种方法甚至可以在不进行第一步的操作下进行）。
-   ![2019-12-29 15-18-27](https://tva2.sinaimg.cn/large/0060ksKkly1gadm9ki2afj30bq0elglu.jpg)
+   ![image](post/chrome-dinosaur/dm9ki2afj30bq0elglu.jpg)
 
 ## 新增
 
 ### 自定义选项
 
-![2](https://tvax4.sinaimg.cn/large/0060ksKkly1gah79y767sg30qs0msqd9.gif)
+![image](post/chrome-dinosaur/h79y767sg30qs0msqd9.gif)
 
 ## 推荐
 
 感谢一下推荐 Pure 百度的网友们：
 
-::: collapse [你从未见过的全新百度！PURE纯净百度安装教程](https://www.bilibili.com/video/av81381716/)
+::: collapse [你从未见过的全新百度！PURE 纯净百度安装教程](https://www.bilibili.com/video/av81381716/)
 
 - 作者：[彬彬有礼的有礼](https://space.bilibili.com/274565604)
 - 日期：2019-12-31
 
 :::
 
-::: collapse [这样搞百度！我是舒服了,你们随意 Pure百度主题美化](https://www.yijingying.com/592.html)
+::: collapse [这样搞百度！我是舒服了,你们随意 Pure 百度主题美化](https://www.yijingying.com/592.html)
 
 - 作者：[Healer](https://www.yijingying.com/592)
 - 日期：2020-01-05

@@ -2,14 +2,16 @@
 title: iChrome CSS 美化
 date: 2019-07-24 05:58:40
 categories:
+  - 教程
 tags:
+  - CSS
 ---
 
-一个 Chrome 插件 iChrome，功能齐全，但是有广告，所以以下代码就是来美化插件。
+一个 Chrome 插件 iChrome，功能齐全，但是有广告，所以以下代码就是来美化插件并去除“牛皮藓”。
 
 <!-- more -->
 
-![iChrome](https://tvax4.sinaimg.cn/large/0060ksKkly1gc1pxdp7drj30hq0b2n85.jpg)
+![iChrome](post/ichrome-css/ichrome.jpg)
 
 ## 使用方法
 

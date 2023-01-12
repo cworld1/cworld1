@@ -5,7 +5,7 @@ categories:
   - 资料
 tags:
   - Markdown
-thumbnail: "https://tva2.sinaimg.cn/large/0060ksKkly1gc2xjnp5enj318g0jzthk.jpg #057f72"
+thumbnail: "thumbnail.jpg #B5C6DA"
 ---
 
 Markdown 是一种轻量级的「标记语言」

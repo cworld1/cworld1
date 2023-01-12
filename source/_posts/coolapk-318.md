@@ -3,7 +3,7 @@ title: 酷安 318 事件
 date: 2020-03-22 21:02:06
 categories:
   - 随笔
-thumbnail: "thumbnail.jpg #e5efff"
+thumbnail: "thumbnail.jpg #28B17F"
 ---
 
 我们暂且用『载入酷安史册』来形容这 7 天的历史。

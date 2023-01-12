@@ -5,7 +5,7 @@ categories:
   - 教程
 tags:
   - Onedrive
-thumbnail: "https://tva1.sinaimg.cn/large/0060ksKkly1gbuhc4an2fj319c0a5gm2.jpg #006fff"
+thumbnail: "thumbnail.jpg #006fff"
 ---
 
 原理是用腾讯云的无服务器云函数配合 API 网关实现，不需要自己的服务器。
@@ -59,15 +59,15 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
 1. 打开进入腾讯云 SCF。
 
-   ![腾讯云 SCF](https://tvax2.sinaimg.cn/large/0060ksKkly1gbuiu6ay46j30i2081q37.jpg)
+   ![腾讯云 SCF](post/onedrive-scf/buiu6ay46j30i2081q37.jpg)
 
 2. 函数服务-新建函数-空白函数
 
    > 后面如果想绑定自定义域名，只能绑定备案域名，所以刚开始新建函数的时候，我们最好选择香港地区，即从下图中的广州改为香港。
-   > ![新建函数](https://tvax2.sinaimg.cn/large/0060ksKkly1gbuivuzqnqj30hl0a6t8v.jpg)
+   > ![新建函数](post/onedrive-scf/buivuzqnqj30hl0a6t8v.jpg)
 
    模板选择空白。填写函数名称，注意以后会以这个名称将作网址且难以更改。运行环境选 PHP7.2。
-   ![模板选择](https://tvax2.sinaimg.cn/large/0060ksKkly1gbukixrkfdj30g70cgdfx.jpg)
+   ![模板选择](post/onedrive-scf/bukixrkfdj30g70cgdfx.jpg)
 
 3. 函数配置
 
@@ -77,7 +77,7 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
    下载源码：[点击下载](https://sword.studio/go/aHR0cHM6Ly9naXRodWIuY29tL1RhaTdzeS9PbmVEcml2ZV9TQ0YvYXJjaGl2ZS9tYXN0ZXIuemlw)
 
-   ![选择](https://tvax4.sinaimg.cn/large/0060ksKkly1gbukrik5xxj30i80d4dhn.jpg)
+   ![选择](post/onedrive-scf/bukrik5xxj30i80d4dhn.jpg)
 
    > 博主在上传的时候因为是手机操作，所以先使用了压缩包的形式，结果提示错误。所以这里可能只能选择文件夹上传。
 
@@ -85,23 +85,23 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
    修改触发方式，开启集成响应。
 
-   ![2020-2-13 10-46-33](https://tva3.sinaimg.cn/large/0060ksKkly1gbukx28f6fj30uz0l5n1l.jpg)
+   ![2020-2-13 10-46-33](post/onedrive-scf/bukx28f6fj30uz0l5n1l.jpg)
 
 6. 进入网站，添加 API 密钥
 
-   ![2020-2-13 10-49-26](https://tvax1.sinaimg.cn/large/0060ksKkly1gbul0sz311j30sc0cxq5b.jpg)
+   ![2020-2-13 10-49-26](post/onedrive-scf/bul0sz311j30sc0cxq5b.jpg)
 
    选择中文，开始新建
 
-   ![2020-2-13 10-49-39](https://tvax2.sinaimg.cn/large/0060ksKkly1gbul29qzlgj30jo0ci0ty.jpg)
+   ![2020-2-13 10-49-39](post/onedrive-scf/bul29qzlgj30jo0ci0ty.jpg)
 
    接下来的窗口选择继续，然后新建密钥。
 
    回到函数配置，点击右上角的编辑，将获取的密钥粘贴入环境变量中。
 
-   ![2020-2-13 10-55-18](https://tva3.sinaimg.cn/large/0060ksKkly1gbul5zj6c3j313t0oagp4.jpg)
+   ![2020-2-13 10-55-18](post/onedrive-scf/bul5zj6c3j313t0oagp4.jpg)
 
-   ![2020-2-13 10-56-53](https://tva1.sinaimg.cn/large/0060ksKkly1gbul8tl7f4j30om0he405.jpg)
+   ![2020-2-13 10-56-53](post/onedrive-scf/bul8tl7f4j30om0he405.jpg)
 
 7. 完成配置
 
@@ -109,11 +109,11 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
    接下来会自动跳转到 OneDrive ，选择登录并继续，即可看到配置成功的界面。
 
-   ![2020-2-13 11-6-41](https://tva3.sinaimg.cn/large/0060ksKkly1gbuli0z99vj31410o7790.jpg)
+   ![2020-2-13 11-6-41](post/onedrive-scf/buli0z99vj31410o7790.jpg)
 
    回到函数配置，点击右上角的编辑，环境变量中继续添加：key 为 admin ，value 为你要设置的密码。
 
-   ![2020-2-13 11-7-54](https://tva1.sinaimg.cn/large/0060ksKkly1gbuliziisyj30lb0cc0tn.jpg)
+   ![2020-2-13 11-7-54](post/onedrive-scf/buliziisyj30lb0cc0tn.jpg)
 
    回到网址，刷新后左上角就可以登录进入后台了。点击更新并在下方进行相应配置。这样就基本完工了！
 
@@ -123,10 +123,10 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
 为了得到最简链接，自定义路径设为 `/` `发布`
 
-![2020-2-13 11-51-2](https://tvax4.sinaimg.cn/large/0060ksKkly1gbums87xr6j30q30hkjrv.jpg)
+![2020-2-13 11-51-2](post/onedrive-scf/bums87xr6j30q30hkjrv.jpg)
 
 > 如果需要 https，点击“点此前往”，然后点击申请免费证书。注意证书和域名自定义都需要添加解析。
-> ![2020-2-13 12-7-30](https://tva4.sinaimg.cn/large/0060ksKkly1gbun91d7xwj31an03kjre.jpg)
+> ![2020-2-13 12-7-30](post/onedrive-scf/bun91d7xwj31an03kjre.jpg)
 
 添加蓝色提示框内的网站为 CNAME 解析。
 
@@ -140,21 +140,21 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
 找到下图，点击服务名链接。
 
-![image](https://tvax1.sinaimg.cn/large/0060ksKkly1gc2pstaum5j30al07qgll.jpg)
+![image](post/onedrive-scf/c2pstaum5j30al07qgll.jpg)
 
 选择管理 API，点击右侧的编辑。
 
-![image](https://tva3.sinaimg.cn/large/0060ksKkly1gc2q19mjq8j318c09udgh.jpg)
+![image](post/onedrive-scf/c2q19mjq8j318c09udgh.jpg)
 
 将路径改为“/”，点击下一步直到完成即可。然后根据提示点击发布。
 
-![image](https://tva3.sinaimg.cn/large/0060ksKkly1gc2raxninpj30dz0adaal.jpg)
+![image](post/onedrive-scf/c2raxninpj30dz0adaal.jpg)
 
-![image](https://tvax2.sinaimg.cn/large/0060ksKkly1gc2rdybj76j30l40d10sr.jpg)
+![image](post/onedrive-scf/c2rdybj76j30l40d10sr.jpg)
 
 （看起来很像 git 代码托管平台的步骤）
 
-![image](https://tva3.sinaimg.cn/large/0060ksKkly1gc2resp4goj30hx0claab.jpg)
+![image](post/onedrive-scf/c2resp4goj30hx0claab.jpg)
 
 这时访问链接也终于更换为：https://`你自己设置的域名`
 
@@ -162,11 +162,11 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
 截图：
 
-![2020-2-13 11-23-49](https://tva1.sinaimg.cn/large/0060ksKkly1gbum1csl5aj30or0gzgna.jpg)
+![2020-2-13 11-23-49](post/onedrive-scf/bum1csl5aj30or0gzgna.jpg)
 
-![2020-2-13 11-24-34](https://tvax4.sinaimg.cn/large/0060ksKkly1gbum1w8ap7j30g50afaad.jpg)
+![2020-2-13 11-24-34](post/onedrive-scf/bum1w8ap7j30g50afaad.jpg)
 
-![2020-2-13 11-25-11](https://tvax2.sinaimg.cn/large/0060ksKkly1gbum28xu35j30ok0ddabj.jpg)
+![2020-2-13 11-25-11](post/onedrive-scf/bum28xu35j30ok0ddabj.jpg)
 
 以下美化仅适用于 classic 主题。
 
@@ -175,10 +175,10 @@ API 网关从 2019 年 12 月 4 日开始收费。请注意不要超过额度，
 
 腾讯云的函数界面中找到函数代码，下方窗口中选择 theme 文件夹的 classic.php 。找到`</head>`前的`</style>`，在这行前面追加以下代码。然后点击保存即可。
 
-![2020-2-13 11-15-49](https://tvax4.sinaimg.cn/large/0060ksKkly1gbulr9zy8uj30ei0c0aan.jpg)
+![2020-2-13 11-15-49](post/onedrive-scf/bulr9zy8uj30ei0c0aan.jpg)
 
 代码：
 
 ```css
-body{background:url(//tvax1.sinaimg.cn/large/0060ksKkly1gbs5b1as5ej31z4140wj0.jpg) !important;color:#000;font-family:Google Sans !important;}font{margin:39.5%;color:#989898;text-align:center;}a.login,body>div>li.operate{transition:.3s;…input#upload_submit{transition:.3s;border:none;border-radius:4px;background:#0000000d;padding:8px 11px;outline:none !important;}input#upload_submit:hover{background:#0088ff2e;color:#08f;}form[method="post"] table{background:#ffffffb5;border-radius:4px;border:none;padding:10px;border-spacing:10px;margin-bottom:10px;}form[method="post"] td{border:none;}form[method="post"] input,form[method="post"] select{transition:.3s;border:none;border-radius:4px;background:#0000000d;padding:8px 11px;outline:none !important;}form[method="post"] input[value="设置"]{background:#0088ff2e;color:#08f;}
+body{background:#DBDBDB !important;color:#000;font-family:Google Sans !important;}font{margin:39.5%;color:#989898;text-align:center;}a.login,body>div>li.operate{transition:.3s;…input#upload_submit{transition:.3s;border:none;border-radius:4px;background:#0000000d;padding:8px 11px;outline:none !important;}input#upload_submit:hover{background:#0088ff2e;color:#08f;}form[method="post"] table{background:#ffffffb5;border-radius:4px;border:none;padding:10px;border-spacing:10px;margin-bottom:10px;}form[method="post"] td{border:none;}form[method="post"] input,form[method="post"] select{transition:.3s;border:none;border-radius:4px;background:#0000000d;padding:8px 11px;outline:none !important;}form[method="post"] input[value="设置"]{background:#0088ff2e;color:#08f;}
 ```

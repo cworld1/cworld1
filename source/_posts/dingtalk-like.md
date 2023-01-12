@@ -6,7 +6,7 @@ categories:
 tags:
   - 钉钉
   - Fiddler
-thumbnail: "thumbnail.jpg #650e83"
+thumbnail: "thumbnail.jpg #640D80"
 ---
 
 想必感兴趣的已经试过了连点器的畅快吧。在玩转这之前，这确实不失为一种强有力的手段。<!-- more -->然而如果这样的话，最多也就不过十万。这怎么能让博主折服呢，所以就从钉钉直播下手。在这之前，先对这个套壳钉钉有一个更深入的了解。
@@ -17,7 +17,7 @@ thumbnail: "thumbnail.jpg #650e83"
 
 先研究一下点赞的运行逻辑：
 
-![点赞逻辑](https://tva3.sinaimg.cn/large/0060ksKkly1gchrtsmcgmj30wu08wwja.jpg)
+![点赞逻辑](post/dingtalk-like/hrtsmcgmj30wu08wwja.jpg)
 
 由于钉钉的客户端中的网络通讯加密，点赞数上传也不例外，所以我们从直播间网页上下功夫。
 
@@ -27,7 +27,7 @@ thumbnail: "thumbnail.jpg #650e83"
 
 ### 目标流程
 
-![目标](https://tva4.sinaimg.cn/large/0060ksKkly1gchsdqms0bj30w008o42u.jpg)
+![目标](post/dingtalk-like/hsdqms0bj30w008o42u.jpg)
 
 其中不对 favorCount 进行自增是为了确保赞数确实上传到服务器并进行了累加，这样会导致点击之后到数值显示有一定的延迟，一般在几秒钟。此时我们看到点击一次点赞按钮到一定时间后（源文件中是 1000ms ）将会触发上传操作。
 
@@ -39,11 +39,11 @@ thumbnail: "thumbnail.jpg #650e83"
 
 打开上述网址，`Ctrl + S` 保存。注意我们只需要 html 文件。
 
-![image](https://tva1.sinaimg.cn/large/0060ksKkly1gchtjjkwiaj30p50973zi.jpg)
+![image](post/dingtalk-like/htjjkwiaj30p50973zi.jpg)
 
 搜索 uploadLikesClick 字段，将看到一个函数。
 
-![image](https://tvax3.sinaimg.cn/large/0060ksKkly1gchtqqvj2uj30gg03jgm6.jpg)
+![image](post/dingtalk-like/htqqvj2uj30gg03jgm6.jpg)
 
 注意两个画框的地方，它们就是要修改的核心。
 
@@ -70,9 +70,9 @@ uploadLikesClick(B,Math.ceil(10000000*Math.random()+1)),t.favorCountCache=1)},1e
 1. 首先你需要下载并修改好直播间网页并将其保存在本地。
 2. 安装 [Fiddler](https://www.telerik.com/download/fiddler) 。
 3. 打开 Fiddler 的 HTTPS 模式，位于 Tools - Options - HTTPS 。  
-   ![image](https://tvax4.sinaimg.cn/large/0060ksKkly1gciaaqmxk8j30f20a8mxk.jpg)
+   ![image](post/dingtalk-like/iaaqmxk8j30f20a8mxk.jpg)
 4. 配置 Autoresponder ，即在测试环境中将在线网页强制替换为本地网页。  
-   ![image](https://tvax2.sinaimg.cn/large/0060ksKkly1gciaf10k3gj30fz08474s.jpg)
+   ![image](post/dingtalk-like/iaf10k3gj30fz08474s.jpg)
 5. 打开清理钉钉的网页缓存，位于%LOCALAPPDATA%\DIngtalk\Cache，删除全部 f 开头的文件。
    > `%LOCALAPPDATA%` 为 `C:\Users\你的电脑用户名\AppData\Local`  
    > Ps. 此步骤需在每次 **更改网页文件后和重新打开直播间之前** 完成，否则会导致替换失败。
@@ -80,7 +80,7 @@ uploadLikesClick(B,Math.ceil(10000000*Math.random()+1)),t.favorCountCache=1)},1e
 
 ### 效果展示
 
-![未标题-1](https://tvax3.sinaimg.cn/large/0060ksKkly1gcib1q0zv7j31ww0zcgxc.jpg)
+![image](post/dingtalk-like/ib1q0zv7j31ww0zcgxc.jpg)
 
 ### 注意事项
 

@@ -6,7 +6,7 @@ categories:
 tags:
   - Chrome
   - JavaScript
-thumbnail: "thumbnail.jpg #7fd9da"
+thumbnail: "thumbnail.jpg #7FD9DA"
 ---
 
 ## 前言
@@ -21,7 +21,7 @@ thumbnail: "thumbnail.jpg #7fd9da"
 
 来到熟悉的网页，按下罪恶的 F12：
 
-![image](https://tvax3.sinaimg.cn/large/0060ksKkly1gnrqyww7vej30vt0l7q40.jpg)
+![image](post/chrome-dinosaur/qyww7vej30vt0l7q40.jpg)
 
 看到控制台的 Console 了吗？点开就对了。
 
@@ -41,11 +41,11 @@ thumbnail: "thumbnail.jpg #7fd9da"
 
 就像这样子：
 
-![image](https://tvax1.sinaimg.cn/large/0060ksKkly1gnrra5xeekj30w90lkjsy.jpg)
+![image](post/chrome-dinosaur/ra5xeekj30w90lkjsy.jpg)
 
 问我最高多少分？我觉得应该是 999999 分。
 
-![本C的随手分数](https://tva3.sinaimg.cn/large/0060ksKkly1gnrrd4cvuej30vg0l43zl.jpg)
+![本C的随手分数](post/chrome-dinosaur/rd4cvuej30vg0l43zl.jpg)
 
 ## 后话
 

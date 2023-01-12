@@ -5,7 +5,7 @@ categories:
   - 资源
 tags:
   - CDN
-thumbnail: "https://tvax2.sinaimg.cn/large/0060ksKkly1gcfx2vhmd1j318g0jz788.jpg #fff"
+thumbnail: "thumbnail.png #72c5ff"
 ---
 
 最近总感觉自己的网站速度不行，又不想重新搭建（Hexo 的宗旨就是打造响应速度超快的轻量级博客嘛），所以这篇文章也就由此应运而生了。

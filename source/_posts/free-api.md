@@ -5,7 +5,7 @@ categories:
   - 资源
 tags:
   - API
-thumbnail: "https://tva4.sinaimg.cn/large/0060ksKkly1gc1pp1u60oj318g0jzag9.jpg #1d72d8"
+thumbnail: "thumbnail.jpg #26303A"
 ---
 
 ## 企业
