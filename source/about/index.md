@@ -86,7 +86,7 @@ Github Activities:
 - <i class="a-icon" style="color:#11ab60">&#xe66b;</i>
 
   - Coolapk
-  - 粉丝数：<span class="coolapk">6330</span>
+  - 粉丝数：<span class="coolapk">6340</span>
   - [](https://www.coolapk.com/u/1384771)
 
 - <i class="a-icon" style="color:#50769d">&#xe7e1;</i>
