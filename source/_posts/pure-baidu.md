@@ -71,21 +71,21 @@ thumbnail: "thumbnail.jpg #dfe1e2"
 ### 步骤
 
 1. 下载上述插件任意一个，建议 Stylish（方便日后更新）。
-   ![image](post/chrome-dinosaur/di3ir3hbj30qh06awfg.jpg)
+   ![image](post/pure-baidu/di3ir3hbj30qh06awfg.jpg)
 
 2. 点击上述 Pure 百度的网址。
-   ![image](post/chrome-dinosaur/di4eg10wj30c2012a9u.jpg)
+   ![image](post/pure-baidu/di4eg10wj30c2012a9u.jpg)
 
 3. 如果你用的 CSS 类，直接点击蓝色的“Install Style”，即可生效（如果没有看到，说明可能你的第一步没有完成）。
-   ![image](post/chrome-dinosaur/di21c2t7j30ld0f80wy.jpg)
+   ![image](post/pure-baidu/di21c2t7j30ld0f80wy.jpg)
    如果你用的 Userscript 类，网页下翻后点击蓝色小字“Install style as userscript”即可（这种方法甚至可以在不进行第一步的操作下进行）。
-   ![image](post/chrome-dinosaur/dm9ki2afj30bq0elglu.jpg)
+   ![image](post/pure-baidu/dm9ki2afj30bq0elglu.jpg)
 
 ## 新增
 
 ### 自定义选项
 
-![image](post/chrome-dinosaur/h79y767sg30qs0msqd9.gif)
+![image](post/pure-baidu/h79y767sg30qs0msqd9.gif)
 
 ## 推荐
 
