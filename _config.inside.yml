@@ -550,7 +550,7 @@ plugins:
   - position: [post, page] # 剪贴板 + 阅读量
     template: |
       <script>
-        var elements = document.querySelectorAll(".highlight tr>.code");
+        let elements = document.querySelectorAll(".highlight tr>.code");
         for (var i = 0; i < elements.length; i++) { elements[i].innerHTML = '<button class="btn-copy" data-clipboard-snippet=""><svg t="1644686763820" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2062" data-darkreader-inline-fill="" width="16" height="16"><path d="M798.4 128h-72v-12.8c0-38.4-33.6-72-72-72h-97.6C555.2 17.6 537.6 0 512 0c-25.6 0-43.2 17.6-43.2 43.2h-97.6c-38.4 0-72 33.6-72 72V128h-72c-30.4 0-56 25.6-56 56v780.8c0 33.6 25.6 59.2 59.2 59.2h568c17.6 0 33.6-8 43.2-20.8 8-12.8 12.8-25.6 12.8-38.4V184C852.8 153.6 827.2 128 798.4 128zM384 128h256v84.8H384V128z m384 811.2H256V212.8h43.2v12.8c0 38.4 33.6 72 72 72h281.6c38.4 0 72-33.6 72-72v-12.8H768v726.4z" p-id="2063"></path></svg></button>' + elements[i].innerHTML };
         new ClipboardJS('.btn-copy', { target: (trigger) => trigger.nextElementSibling });
       </script>
@@ -558,7 +558,10 @@ plugins:
         .btn-copy{position:absolute;right:5px;top:5px;border:0;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:var(--inside-foreground-color);opacity:0;transition:.3s}.highlight:hover .btn-copy{opacity:1}
       </style>
       <p align="center" id="readTimes"></p>
-      <script>document.getElementById("readTimes").innerHTML = `<span id="${window.location.href.split("blog.cworld.top")[1]}" class="waline-pageview-count">???</span> 阅读 <span class="waline-comment-count" data-path="${window.location.href.split("blog.cworld.top")[1]}">???</span> 评论`</script>
+      <script>
+        let path = window.location.href.split("blog.cworld.top")[1].split("#")[0].split("?")[0];
+        document.getElementById("readTimes").innerHTML = `<span class="waline-pageview-count" data-path="${path}">???</span> 阅读 <span class="waline-comment-count" data-path="${path}">???</span> 评论`;
+      </script>
 
   - position: comments
     template: |
