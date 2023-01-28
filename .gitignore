@@ -11,3 +11,4 @@ _multiconfig.yml
 node_modules/
 # VSCode
 *.code-workspace
+.vscode/
