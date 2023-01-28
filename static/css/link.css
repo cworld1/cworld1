@@ -44,10 +44,8 @@
 
 .friends img {
   border-radius: 25px;
-  width: 50px;
+  width: 50px !important;
   height: 50px;
-  margin: 0 !important;
-  max-width: fit-content;
 }
 
 /* 描述 */
