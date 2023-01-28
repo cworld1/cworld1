@@ -7,8 +7,6 @@ copyright: false
 
 怎么可能有顺序呢，当然是随机的~
 
-<link href="https://cdn.cbd.int/cworld-blog@latest/public/static/css/link.min.css" rel="stylesheet">
-
 <div class="friends">
 <ul id="cf-links">稍等片刻，好友马上加载出来！</ul>
 </div>
@@ -68,7 +66,7 @@ copyright: false
 > 链接：https://blog.cworld.top/
 > 图标：https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 
-申请时还请按照这个模板留言。此外有关申请说明：
+申请时还请按照这个模板留言（[提交 PR](https://github.com/cworld1/cworld1/blob/main/source/static/links.json) 或许也是个更快的办法）。此外有关申请说明：
 
 - 在你的友链上添加了本站；
 - 请确保你的站点活着；
@@ -76,8 +74,11 @@ copyright: false
 
 <p align="center" style="color:var(--inside-accent-color)">那么，在下方留言吧 👇</p>
 
+<!-- 加载友链 -->
+<link href="./static/css/link.min.css" rel="stylesheet">
 <script src="./static/js/link.min.js"></script>
 
+<!-- 加载朋友圈 -->
 <script>
     let UserConfig = {
         // 填写你的api地址
