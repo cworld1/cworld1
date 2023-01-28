@@ -21,6 +21,10 @@ Alist 是一款支持多种存储的目录文件列表程序，后端基于 `gin
 
 Alist 仓库地址：[Github](https://github.com/alist-org/alist)
 
+## 修改配置
+
+前往 fork 的仓库，修改 render.yaml 内的 `repo` 配置为自己的仓库地址。
+
 ## 创建数据库
 
 Alist 需要一个数据库，可选 sqlite3、mysql、postgres。这里选用提供免费服务的 [ElephantSQL](https://www.elephantsql.com/)。
@@ -75,6 +79,8 @@ Alist 需要一个数据库，可选 sqlite3、mysql、postgres。这里选用�
 我用的 postgres 数据库填的是 `disable`，也就是没用 SSL；大家按需选择即可。
 
 :::
+
+注：为了提升访问速度，建议额外配置环境变量 `CDN` 为 `https://npm.elemecdn.com/alist-web@【NPM官网查到的最新版本号】/dist/`，能一定程度上加快网页打开速度。
 
 ## 保持唤醒
 
