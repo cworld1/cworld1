@@ -1,6 +1,6 @@
 {
   "name": "cworld-blog",
-  "version": "1.1.5",
+  "version": "2.0.0",
   "private": false,
   "scripts": {
     "build": "hexo generate",
@@ -8,8 +8,11 @@
     "deploy": "hexo deploy",
     "server": "hexo server"
   },
+  "engines": {
+    "node": ">= 10"
+  },
   "hexo": {
-    "version": "6.2.0"
+    "version": "6.3.0"
   },
   "dependencies": {
     "hexo": "^6.3.0",
@@ -26,11 +29,11 @@
     "hexo-theme-inside": "^2.7.0",
     "hexo-theme-landscape": "^0.0.3",
     "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
     "stylus": "^0.59.0"
   },
+  "main": "index.html",
   "description": "The source of CWorld's blog",
-  "main": "public/index.html",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/cworld1/cworld1.git"
