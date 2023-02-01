@@ -13,7 +13,7 @@ appearance:
   # body background, default '#f5f7fa'
   background:
   # Sidebar background (when opened), default to accent_color
-  sidebar_background: "static/img/bg-photo.jpg #475976"
+  sidebar_background: "https://cdn.cbd.int/cworld-blog@latest/src/img/bg-photo.jpg #475976"
   # Card background, default '#fff'
   card_background:
 
@@ -333,12 +333,12 @@ reward:
   #     color: '#09bb07'
   methods:
     - name: wechat
-      qrcode: static/img/wechat_qrcode.jpg
+      qrcode: https://cdn.cbd.int/cworld-blog@latest/src/img/wechat_qrcode.jpg
       url: https://weixin.qq.com/
       text: 微信
       color: "#22ad38"
     - name: alipay
-      qrcode: static/img/alipay_qrcode.jpg
+      qrcode: https://cdn.cbd.int/cworld-blog@latest/src/img/alipay_qrcode.jpg
       url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
       text: 支付宝（点击前往）
       color: "#1678ff"
@@ -393,7 +393,7 @@ static_prefix: "https://gcore.jsdelivr.net/gh/ikeq/hexo-theme-inside@2.7.0/sourc
 data_dir:
 
 # Favicon, default to `favicon.ico`
-favicon: static/favicon.ico
+favicon: "https://cdn.cbd.int/cworld-blog@latest/src/favicon.ico"
 
 # Google analytics
 # ga: UA-00000000-0
@@ -481,11 +481,11 @@ pwa:
     theme_color: "#659eb9"
     background_color: "#f5f7fa"
     icons:
-      - src: "/static/img/icon-192x192.png"
+      - src: "https://cdn.cbd.int/cworld-blog@latest/src/img/icon-192x192.png"
         sizes: 192x192
         type: image/png
         purpose: any
-      - src: "/static/img/apple-touch-icon-144x144.png"
+      - src: "https://cdn.cbd.int/cworld-blog@latest/src/img/apple-touch-icon-144x144.png"
         type: "image/png"
         sizes": "144x144"
         purpose: any
@@ -538,8 +538,8 @@ plugins:
   - https://busuanzi.icodeq.com/busuanzi.pure.mini.js # 不蒜子统计
   - https://cdn.cbd.int/clipboard@v2/dist/clipboard.min.js # 剪贴板
   - https://cdn.cbd.int/@waline/client@v2/dist/waline.js # Waline 依赖
-  - static/css/main.min.css # 自定义 CSS
-  - static/js/main.min.js # 自定义 JSS
+  - https://cdn.cbd.int/cworld-blog@latest/src/css/main.min.css # 自定义 CSS
+  - https://cdn.cbd.int/cworld-blog@latest/src/js/main.min.js # 自定义 JSS
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -559,7 +559,7 @@ plugins:
       </style>
       <p align="center" id="readTimes"></p>
       <script>
-        let path = window.location.href.split("blog.cworld.top")[1].split("#")[0].split("?")[0];
+        let path = window.location.href.split("cworld.top")[1].split("#")[0].split("?")[0];
         document.getElementById("readTimes").innerHTML = `<span class="waline-pageview-count" data-path="${path}">???</span> 阅读 <span class="waline-comment-count" data-path="${path}">???</span> 评论`;
       </script>
 
@@ -570,8 +570,8 @@ plugins:
         Waline.init({
           el: "#waline",
           serverURL: "https://waline.cworld.top",
-          emoji: ["https://blog.cworld.top/static/img/bmoji"],
-          reaction: ["https://cdn.cbd.int/cworld-blog@latest/static/img/comment-like.png"],
+          emoji: ["https://blog.cworld.top/src/img/bmoji"],
+          reaction: ["https://cdn.cbd.int/cworld-blog@latest/src/img/comment-like.png"],
           search: false,
           pageview: true,
           comment: true,
@@ -583,4 +583,4 @@ plugins:
         });
       </script>
       <link href="https://cdn.cbd.int/@waline/client@v2/dist/waline.css" rel="stylesheet">
-      <link href="https://cdn.cbd.int/cworld-blog@latest/static/css/comment.min.css" rel="stylesheet">
+      <link href="https://cdn.cbd.int/cworld-blog@latest/src/css/comment.min.css" rel="stylesheet">

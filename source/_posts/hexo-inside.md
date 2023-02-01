@@ -98,8 +98,8 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
         comment: true,
         pageview: true,
         emoji: [
-          'https://blog.cworld.top/static/img/bilibili',
-          'https://blog.cworld.top/static/img/weibo',
+          'https://blog.cworld.top/src/img/bilibili',
+          'https://blog.cworld.top/src/img/weibo',
         ],
       });
     </script>

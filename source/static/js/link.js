@@ -4,7 +4,7 @@ function shuffle(arr) {
   });
 }
 
-fetch("static/links.json")
+fetch("src/links.json")
   .then((res) => res.json())
   .then((data) => {
     data.friends.forEach((dic) => {

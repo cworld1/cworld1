@@ -44,7 +44,7 @@ Github Activities:
 
 我的一些常见的社交平台：
 
-<link href="/static/css/about.min.css" rel="stylesheet">
+<link href="/src/css/about.min.css" rel="stylesheet">
 <div id="stats">
 
 - <i class="a-icon" style="color:#2ca5e0">&#xe7e2;</i>
@@ -151,4 +151,4 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 - [x] 访问统计：[LeanCloud](https://console.leancloud.app) + [Waline](https://waline.js.org)、[自建不蒜子 API](https://busuanzi.icodeq.com/)
 - [x] 其他统计：[Substats](https://github.com/spencerwooo/substats)、[Circle of friends](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends)
 
-<script src="./static/js/about.min.js"></script>
+<script src="./src/js/about.min.js"></script>
