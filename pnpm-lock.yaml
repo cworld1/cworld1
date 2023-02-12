@@ -1,8 +1,8 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   hexo: ^6.3.0
-  hexo-deployer-git: ^3.0.0
+  hexo-deployer-git: ^4.0.0
   hexo-generator-archive: ^2.0.0
   hexo-generator-category: ^2.0.0
   hexo-generator-feed: ^3.0.0
@@ -20,7 +20,7 @@ specifiers:
 
 dependencies:
   hexo: 6.3.0
-  hexo-deployer-git: 3.0.0
+  hexo-deployer-git: 4.0.0
   hexo-generator-archive: 2.0.0
   hexo-generator-category: 2.0.0
   hexo-generator-feed: 3.0.0
@@ -271,8 +271,6 @@ packages:
       on-headers: 1.0.2
       safe-buffer: 5.1.2
       vary: 1.1.2
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /concat-map/0.0.1:
@@ -287,8 +285,6 @@ packages:
       finalhandler: 1.1.2
       parseurl: 1.3.3
       utils-merge: 1.0.1
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /cross-spawn/7.0.3:
@@ -339,11 +335,6 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
     dependencies:
       ms: 2.0.0
     dev: false
@@ -541,8 +532,6 @@ packages:
       parseurl: 1.3.3
       statuses: 1.5.0
       unpipe: 1.0.0
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /form-data/4.0.0:
@@ -631,16 +620,16 @@ packages:
       tildify: 2.0.0
     dev: false
 
-  /hexo-deployer-git/3.0.0:
-    resolution: {integrity: sha512-U2Xewjab+rvUDNTcuYYnOxitkDXL3f5VMUH32jKDHs3OC4YFVGRoEaTTDVHskqr3KRi78Wohjc6BSRHOoG3oxA==}
-    engines: {node: '>=8.6.0'}
+  /hexo-deployer-git/4.0.0:
+    resolution: {integrity: sha512-28t1Q+4taB/UaBAP52W3mD/wcCwa2y2zBieUfBJFBZudbmVgiKJB5YedYILeyI5QByaUKAOwoupmdTbocdQ+CQ==}
+    engines: {node: '>=14'}
     dependencies:
       bluebird: 3.7.2
-      chalk: 4.1.2
-      hexo-fs: 3.1.0
+      hexo-fs: 4.1.1
       hexo-util: 2.7.0
-      moment: 2.29.4
+      luxon: 3.2.1
       nunjucks: 3.2.3
+      picocolors: 1.0.0
     transitivePeerDependencies:
       - chokidar
     dev: false
@@ -655,6 +644,16 @@ packages:
   /hexo-fs/3.1.0:
     resolution: {integrity: sha512-SfoDH7zlU9Iop+bAfEONXezbNIkpVX1QqjNCBYpapilZR+xVOCfTEdlNixanrKBbLGPb2fXqrdDBFgrKuiVGQQ==}
     engines: {node: '>=10.13.0'}
+    dependencies:
+      bluebird: 3.7.2
+      chokidar: 3.5.3
+      graceful-fs: 4.2.10
+      hexo-util: 2.7.0
+    dev: false
+
+  /hexo-fs/4.1.1:
+    resolution: {integrity: sha512-aDysNTyv8ElcerbFVbPLRXnYt+QDY6gAOZZ5DLbCxudY0Ywppqd+uZ03gZ2BDypIBvmNB27WYWYz76M+Yv/YXw==}
+    engines: {node: '>=14'}
     dependencies:
       bluebird: 3.7.2
       chokidar: 3.5.3
@@ -770,8 +769,6 @@ packages:
       open: 8.4.0
       picocolors: 1.0.0
       serve-static: 1.15.0
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /hexo-theme-inside/2.7.0:
@@ -1075,6 +1072,11 @@ packages:
       tslib: 2.5.0
     dev: false
 
+  /luxon/3.2.1:
+    resolution: {integrity: sha512-QrwPArQCNLAKGO/C+ZIilgIuDnEnKx5QYODdDtbFaxzsbZcc/a7WFq7MhsVYgRlwawLtvOUESTlfJ+hc/USqPg==}
+    engines: {node: '>=12'}
+    dev: false
+
   /markdown-it-container/3.0.0:
     resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
     dev: false
@@ -1199,8 +1201,6 @@ packages:
       depd: 2.0.0
       on-finished: 2.3.0
       on-headers: 1.0.2
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /ms/2.0.0:
@@ -1492,8 +1492,6 @@ packages:
       on-finished: 2.4.1
       range-parser: 1.2.1
       statuses: 2.0.1
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /serve-static/1.15.0:
@@ -1504,8 +1502,6 @@ packages:
       escape-html: 1.0.3
       parseurl: 1.3.3
       send: 0.18.0
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /setprototypeof/1.2.0:
