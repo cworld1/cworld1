@@ -17,9 +17,9 @@ Alist 是一款支持多种存储的目录文件列表程序，后端基于 `gin
 
 ## Fork 仓库
 
-首先，我们需要 Fork 一份 Alist 的仓库。（不会的自己使用搜索引擎）
+首先，我们需要 Fork 一份 Alist-render 的仓库。（不会的自己使用搜索引擎）
 
-Alist 仓库地址：[Github](https://github.com/alist-org/alist)
+Alist 仓库地址：[Github](https://github.com/alist-org/alist-render)
 
 ## 修改配置
 
@@ -87,5 +87,12 @@ Alist 需要一个数据库，可选 sqlite3、mysql、postgres。这里选用�
 由于 Render 15 分钟没访问会休眠，所以我们可以注册一个 [Uptimerobot](https://uptimerobot.com/) 或 [Checklyhq](https://www.checklyhq.com/) 类似的这种监视网站，添加一个监控，24 小时定时访问 render 上的项目，render 就不会休眠了。
 
 > Render 原本的免费计划是每月允许总共使用 750 小时，似乎是不计流量的，就部署一个项目来说完全够用。但是 render 官方宣布定价将从 2023 年 1 月 1 日开始更改，从每月使用 750 小时，改为了每月免费带宽 100GB 的流量。
+
+## 问题解决
+
+由于搭建的人开始变多，Render 官方也开始对 Alist 项目进行限制，导致部分人无法正常部署。解决方案：
+
+- 修改自己的仓库名，避免出现 Alist 字眼；
+- 将 `render.yaml` 中的 `repo` 配置为自己的仓库地址。
 
 最后感谢 [檐牙](https://www.zxma.top/) 提供的[参考](https://www.zxma.top/posts/438365eb)。
