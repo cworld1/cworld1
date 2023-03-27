@@ -1,42 +1,75 @@
 name: Hexo Auto Deploy
 
-on: [push]
+on:
+  push:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  # Hosted GitHub runners have 7 GB of memory available, let's use 6 GB
+  NODE_OPTIONS: --max-old-space-size=6144
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     name: A job to deploy blog.
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           submodules: true # Checkout private submodules(themes or something else).
 
+      # Setup pnpm
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 7
-
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 18
           cache: "pnpm"
 
+      # Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      # Deploy hexo blog website.
-      - name: Deploy
-        id: deploy
-        uses: sma11black/hexo-action@v1.0.3
-        with:
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
-          user_name: cworld1 # (or delete this input setting to use bot account)
-          user_email: cworld0@qq.com # (or delete this input setting to use bot account)
-          commit_msg: ${{ github.event.head_commit.message }} # (or delete this input setting to use hexo default settings)
+      # Build the site
+      - name: Build
+        run: pnpm build
 
-      # Use the output from the `deploy` step(use for test action)
-      - name: Get the output
+      # Publish to NPM registry
+      - name: Publish to NPM registry
         run: |
-          echo "${{ steps.deploy.outputs.notify }}"
+          cp ./package.json public && cp ./LICENSE public && cp ./README.md public
+          cd public && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
