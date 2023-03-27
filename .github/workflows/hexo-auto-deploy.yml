@@ -47,6 +47,7 @@ jobs:
         with:
           node-version: 18
           cache: "pnpm"
+          registry-url: https://registry.npmjs.org
 
       # Install dependencies
       - name: Install dependencies
@@ -55,14 +56,6 @@ jobs:
       # Build the site
       - name: Build
         run: pnpm build
-
-      # Publish to NPM registry
-      - name: Publish to NPM registry
-        working-directory: ./subdirectory
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          check-version: false
 
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
@@ -73,3 +66,17 @@ jobs:
           publish_branch: gh-pages
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
+
+      # Publish to NPM registry
+      - name: Prepare for NPM publish
+        run: cp ./package.json public && cp ./LICENSE public && cp ./README.md public
+      - name: Publish to NPM registry
+        #   uses: JS-DevTools/npm-publish@v1
+        #   with:
+        #     token: ${{ secrets.NPM_TOKEN }}
+        #     check-version: false
+        working-directory: ./public
+        run: |
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
