@@ -5,6 +5,7 @@ categories:
   - 教程
 tags:
   - Onedrive
+  - Serverless
 thumbnail: "thumbnail.jpg #006fff"
 ---
 
