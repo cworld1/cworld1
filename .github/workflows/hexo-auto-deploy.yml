@@ -57,11 +57,8 @@ jobs:
         run: pnpm build
 
       # Publish to NPM registry
-      - name: Prepare before publish to NPM registry
-        run: |
-          cp ./package.json public && cp ./LICENSE public && cp ./README.md public
-          cd public
       - name: Publish to NPM registry
+        working-directory: ./subdirectory
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
