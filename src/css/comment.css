@@ -84,6 +84,7 @@
 
 /* 评论字号 */
 .wl-card .wl-content,
-.wl-card .wl-nick {
+.wl-card .wl-nick,
+.wl-header input {
   font-size: inherit;
 }
