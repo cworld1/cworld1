@@ -57,12 +57,15 @@ jobs:
         run: pnpm build
 
       # Publish to NPM registry
-      - name: Publish to NPM registry
+      - name: Prepare before publish to NPM registry
         run: |
           cp ./package.json public && cp ./LICENSE public && cp ./README.md public
-          cd public && npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          cd public
+      - name: Publish to NPM registry
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          check-version: false
 
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
