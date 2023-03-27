@@ -62,7 +62,7 @@ Github Activities:
 - <i class="a-icon" style="color:#1da1f2">&#xe7e3;</i>
 
   - Twitter
-  - Follows：<span class="twitter">加载中...</span>
+  - Follows：<span class="twitter">29</span>
   - [](https://twitter.com/CWorld0)
 
 - <i class="a-icon" style="color:#fe7398">&#xe7c8;</i>

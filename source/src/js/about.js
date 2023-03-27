@@ -22,11 +22,11 @@ fetch("https://api.swo.moe/stats/github/cworld1")
     document.querySelector("#stats .github").innerText = data.count;
   });
 // twitter
-fetch("https://api.swo.moe/stats/twitter/cworld0")
-  .then((res) => res.json())
-  .then((data) => {
-    document.querySelector("#stats .twitter").innerText = data.count;
-  });
+// fetch("https://api.swo.moe/stats/twitter/cworld0")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     document.querySelector("#stats .twitter").innerText = data.count;
+//   });
 // bilibili
 fetch("https://api.swo.moe/stats/bilibili/388346465")
   .then((res) => res.json())
