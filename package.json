@@ -1,12 +1,17 @@
 {
   "name": "cworld-blog",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "private": false,
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "serve": "hexo server",
+    "post": "hexo new post",
+    "page": "hexo new page",
+    "draft": "hexo new draft",
+    "publish": "hexo publish",
+    "list": "hexo show"
   },
   "engines": {
     "node": ">= 10"
