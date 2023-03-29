@@ -16,7 +16,7 @@ ChatGPT 是一个基于 GPT-3.5-turbo 的聊天机器人，它可以通过简单
 
 在 [ChatGPT](https://chatgpt.com/) 上注册成功账号后，在 [API](https://chatgpt.com/api) 页面中，点击 `Get API Key` 按钮，即可获得你的 API Key。
 
-![Get ChatGPT API Key](chatgpt/Snipaste_2023-03-27_15-00-35.png)
+![Get ChatGPT API Key](post/chatgpt/Snipaste_2023-03-27_15-00-35.png)
 
 ## 其他办法
 
@@ -49,7 +49,7 @@ ChatGPT 是一个基于 GPT-3.5-turbo 的聊天机器人，它可以通过简单
   2. 点击右上角的 Create a Service
   3. 进入新建的 workers，选择 Quick Edit，将 [../dist/index.js](https://github.com/TBXark/ChatGPT-Telegram-Workers/blob/master/dist/index.js) 代码复制到编辑器中，保存。
 
-  ![Alt text](chatgpt/Snipaste_2023-03-27_15-17-14.png)
+  ![Alt text](post/chatgpt/Snipaste_2023-03-27_15-17-14.png)
 
 - 配置环境变量
 
@@ -162,6 +162,6 @@ PureWriter 中文名纯纯写作，是一款优秀的写作工具，支持 Windo
 
 在设置中可输入 ChatGPT 的 API Key 即可快速启用。注意纯纯写作不支持自定义 API Server，没有办法速通。
 
-![Pure Writer](chatgpt/6129538924557743150_119.jpg)
+![Pure Writer](post/chatgpt/6129538924557743150_119.jpg)
 
 除了 “时光机” 界面外，还能在打字界面调用，有效提升写作效率。当然你也可以单纯当作一款 ChatGPT 客户端。
