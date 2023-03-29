@@ -14,14 +14,13 @@
     "list": "hexo show"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 14"
   },
   "hexo": {
     "version": "6.3.0"
   },
   "dependencies": {
     "hexo": "^6.3.0",
-    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
@@ -32,10 +31,7 @@
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-inside": "^2.7.0",
-    "hexo-theme-landscape": "^0.0.3",
-    "markdown-it": "^13.0.1",
-    "markdown-it-container": "^3.0.0",
-    "stylus": "^0.59.0"
+    "markdown-it-container": "^3.0.0"
   },
   "main": "index.html",
   "description": "The source of CWorld's blog",
