@@ -71,10 +71,6 @@ jobs:
       - name: Prepare for NPM publish
         run: cp ./package.json public && cp ./LICENSE public && cp ./README.md public
       - name: Publish to NPM registry
-        #   uses: JS-DevTools/npm-publish@v1
-        #   with:
-        #     token: ${{ secrets.NPM_TOKEN }}
-        #     check-version: false
         working-directory: ./public
         run: |
           npm publish
