@@ -157,6 +157,9 @@
   height: auto;
   opacity: 0.5;
 }
+#cf-container .fa-calendar-alt {
+  display: none;
+}
 /* 序号 */
 #cf-container .cf-article-floor {
   top: auto;
