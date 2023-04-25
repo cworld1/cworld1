@@ -5,12 +5,6 @@
       "desc": "列入友链朋友圈的好友",
       "link_list": [
         {
-          "name": "KD 的网络小屋",
-          "intro": "技施于手，道养于心",
-          "link": "https://www.kindyear.cn/",
-          "avatar": "https://www.kindyear.cn/logo.png"
-        },
-        {
           "name": "Barkure",
           "intro": "未来已来，将至已至",
           "link": "https://guguga.cn/",
@@ -155,10 +149,10 @@
           "avatar": "https://cravatar.cn/avatar/27bfab48edf72b1cda99f9bcbe286a78"
         },
         {
-          "name": "NEKO#ΦωΦ",
-          "intro": "子聞こえるはずの声",
-          "link": "https://blog.jamsg.cn/",
-          "avatar": "http://q1.qlogo.cn/g?b=qq&nk=1253496010@qq.com&s=640"
+          "name": "KD 的网络小屋",
+          "intro": "技施于手，道养于心",
+          "link": "https://www.kindyear.cn/",
+          "avatar": "https://www.kindyear.cn/logo.png"
         }
       ]
     },
