@@ -5,12 +5,6 @@
       "desc": "列入友链朋友圈的好友",
       "link_list": [
         {
-          "name": "Barkure",
-          "intro": "未来已来，将至已至",
-          "link": "https://guguga.cn/",
-          "avatar": "https://cravatar.cn/avatar/c80a41a5465ee8c279f7b065b029009f"
-        },
-        {
           "name": "Ojhdt’s Blog",
           "intro": "隐约雷鸣，阴霾天空",
           "link": "https://blog.ojhdt.com/",
@@ -135,6 +129,24 @@
           "intro": "路在脚下，心系远方。",
           "link": "https://blog.young143.top/",
           "avatar": "https://blog.young143.top/img/a.jpg"
+        },
+        {
+          "name": "wsbのblog",
+          "intro": "己所不欲，勿施于人",
+          "link": "https://wsbblog.cn/",
+          "avatar": "https://wsbblog.cn/img/wsb.webp"
+        },
+        {
+          "name": "Wayne's Blog",
+          "intro": "以梦为马，不负韶华。",
+          "link": "https://wrans.top/",
+          "avatar": "https://cdn.staticaly.com/gh/wayne0926/myphoto@master/img/avatar.jpg"
+        },
+        {
+          "name": "丘卡饮品店",
+          "intro": "要来点喝的吗？",
+          "link": "https://blog.zerolacqua.top",
+          "avatar": "https://cdn.zerolacqua.top/images/avatar.png"
         }
       ]
     },
@@ -153,6 +165,12 @@
           "intro": "技施于手，道养于心",
           "link": "https://www.kindyear.cn/",
           "avatar": "https://www.kindyear.cn/logo.png"
+        },
+        {
+          "name": "Barkure",
+          "intro": "未来已来，将至已至",
+          "link": "https://guguga.cn/",
+          "avatar": "https://cravatar.cn/avatar/c80a41a5465ee8c279f7b065b029009f"
         }
       ]
     },

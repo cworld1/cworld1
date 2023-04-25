@@ -51,6 +51,8 @@ copyright: false
 - 2023-02-09 `Jinlk's blog` 消失
 - 2023-02-09 `L1nSn0w’s Blog` 回归
 - 2023-03-01 `NEKO#ΦωΦ` 消失
+- 2023-04-25 `Barkure` 消失
+- 2023-04-25 `KD 的网络小屋` 消失
 
 :::
 
