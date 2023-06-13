@@ -12,13 +12,24 @@ Developer / Designer
 
 ## 我的项目
 
+- [Neovim Config](https://github.com/cworld1/nvim-config)：我的个人 Neovim 配置文件
+- [Fluent Mail](https://github.com/cworld1/fluent-mail)：一款基于 Qt/C++ 的邮件客户端
+- [Kinect Camera Netural](https://github.com/cworld1/tcm): An AI program that using Kinect camera and shows netural network and human skeleton.
+- [Data Analysis Learning](https://da.cworld.top/) | [Github](https://github.com/cworld1/da-learning)：学习 Data Analysis 时的部分笔记记录
+- [Database Learning](https://db.cworld.top/) | [Github](https://github.com/cworld1/db-learning)：学习 Database 时的部分笔记记录
+- [Computer Network Learning](https://cn.cworld.top/) | [Github](https://github.com/cworld1/cn-learning)：学习 Computer Network 时的部分笔记记录
 - [Linux Learning](https://linux.cworld.top/) | [Github](https://github.com/cworld1/linux-learning)： 学习 Linux 时的部分笔记记录
 - [R Learning](https://r.cworld.top/) | [Github](https://github.com/cworld1/r-learning)：学习 R 语言时的部分代码 & 笔记记录
+- [Pure Bing&Material You](https://greasyfork.org/zh-CN/scripts/440462) | [Source Code](https://greasyfork.org/zh-CN/scripts/440462/code)：必应搜索页面的美化模块
+
+::: collapse 以及一些更早的项目
+
 - [Vue Learning](https://github.com/cworld1/vue-learning)：学习 Vue 时的部分代码 & 笔记记录
 - [C Learning](https://github.com/cworld1/c-learning)：学习 C 语言时的部分代码 & 笔记记录
-- [Pure 百度](https://blog.cworld.top/post/pure-baidu)：百度搜索页面的美化模块
-- [Pure 必应&Material You](https://greasyfork.org/zh-CN/scripts/440462) | [Source Code](https://greasyfork.org/zh-CN/scripts/440462/code)：必应搜索页面的美化模块
+- [Pure Baidu](https://blog.cworld.top/post/pure-baidu)：百度搜索页面的美化模块
 - [Momotap](https://cworld1.github.io/momotap/) | [Github](https://cworld1.github.io/momotap/)：一款与 Mikutap 类似的板垫音乐游戏
+
+:::
 
 Github Activities:
 
