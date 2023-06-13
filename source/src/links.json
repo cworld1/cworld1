@@ -5,12 +5,6 @@
       "desc": "列入友链朋友圈的好友",
       "link_list": [
         {
-          "name": "Ojhdt’s Blog",
-          "intro": "隐约雷鸣，阴霾天空",
-          "link": "https://blog.ojhdt.com/",
-          "avatar": "https://blog.ojhdt.com/images/avatar.png"
-        },
-        {
           "name": "hiCasper",
           "intro": "没有 BUG 的代码是不完美的",
           "link": "http://hicasper.com/",
