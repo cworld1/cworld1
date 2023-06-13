@@ -55,6 +55,8 @@ copyright: false
 - 2023-04-25 `KD 的网络小屋` 消失
 - 2023-06-13 `LyShark - 孤风洗剑` 消失
 - 2023-06-13 `Ojhdt’s Blog` 消失
+- 2023-06-13 `Barkure` 消失
+- 2023-06-13 `七云's Blog` 消失
 
 :::
 
@@ -105,4 +107,4 @@ copyright: false
         expire_days: 1, 
     }
 </script>
-<script type="text/javascript" src="https://cdn.cbd.int/fcircle-theme-yyyz@v1/dist/fcircle.min.js"></script>
+<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@v1/dist/fcircle.min.js"></script>

@@ -83,12 +83,6 @@
           "avatar": "https://gcore.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/avatar.jpg"
         },
         {
-          "name": "七云's Blog",
-          "intro": "我们终归落俗，但浪漫不死",
-          "link": "https://www.zets.cn/",
-          "avatar": "https://q3.qlogo.cn/g?b=sdk&k=UeVu6eVo5SdL2Eu7PiczvTw&s=640"
-        },
-        {
           "name": "大蛋糕的烘焙坊",
           "intro": "也许我们会分别，但我们将永远不会忘记彼此",
           "link": "https://lihaoyu.cn/",
@@ -153,12 +147,6 @@
           "intro": "技施于手，道养于心",
           "link": "https://www.kindyear.cn/",
           "avatar": "https://www.kindyear.cn/logo.png"
-        },
-        {
-          "name": "Barkure",
-          "intro": "未来已来，将至已至",
-          "link": "https://guguga.cn/",
-          "avatar": "https://cravatar.cn/avatar/c80a41a5465ee8c279f7b065b029009f"
         }
       ]
     },
