@@ -2,7 +2,7 @@
 title: Hexo 主题之 Inside 拓展篇
 date: 2022-02-14 23:15:28
 categories:
-  - 教程
+  - Tutorials
 tags:
   - Inside
   - Hexo

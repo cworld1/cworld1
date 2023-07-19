@@ -2,7 +2,7 @@
 title: 钉钉一键点赞（最高 21 亿）
 date: 2020-03-03 23:21:47
 categories:
-  - 教程
+  - Tutorials
 tags:
   - DingTalk
   - Fiddler

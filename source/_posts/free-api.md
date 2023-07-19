@@ -2,7 +2,7 @@
 title: 免费 API 汇总
 date: 2019-07-10 13:18:58
 categories:
-  - 资源
+  - Resource
 tags:
   - API
 thumbnail: "thumbnail.jpg #26303A"

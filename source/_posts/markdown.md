@@ -2,7 +2,7 @@
 title: Markdown 语法与学习记录
 date: 2019-07-10 13:18:58
 categories:
-  - 资料
+  - Docs
 tags:
   - Markdown
 thumbnail: "thumbnail.jpg #B5C6DA"

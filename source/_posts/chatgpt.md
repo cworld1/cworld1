@@ -2,7 +2,7 @@
 title: ChatGPT 深度使用与日用方案
 date: 2023-03-27 14:07:32
 categories:
-  - 教程
+  - Tutorials
 tags:
   - GPT-3.5-turbo
   - Python

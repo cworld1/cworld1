@@ -2,7 +2,7 @@
 title: 各国语言缩写
 date: 2019-07-04 22:42:30
 categories:
-  - 资料
+  - Docs
 tags:
   - Language
 ---

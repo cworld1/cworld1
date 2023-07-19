@@ -1,7 +1,8 @@
 ---
 title: Alist 自建0成本部署
 date: 2022-12-15 02:06:47
-categories: 教程
+categories:
+  - Tutorials
 tags:
   - Alist
 thumbnail: "thumbnail.jpg #2f76d7"

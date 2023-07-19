@@ -2,7 +2,7 @@
 title: 米哈游游戏（原神/崩坏3）自动签到
 date: 2022-04-17 17:10:14
 categories:
-  - 教程
+  - Tutorials
 tags:
   - Mihoyo
   - Python

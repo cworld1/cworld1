@@ -2,7 +2,7 @@
 title: Hello World
 date: 2019-06-14 16:24:38
 categories:
-  - 资料
+  - Docs
 tags:
   - Hexo
 thumbnail: "thumbnail.jpg #5273a0"

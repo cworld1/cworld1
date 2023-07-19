@@ -2,7 +2,7 @@
 title: iChrome CSS 美化
 date: 2019-07-24 05:58:40
 categories:
-  - 教程
+  - Tutorials
 tags:
   - CSS
 ---

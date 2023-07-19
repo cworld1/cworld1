@@ -2,7 +2,7 @@
 title: Xiaomi Redmi 4A (Rolex) 刷机集合
 date: 2019-07-03 12:19:12
 categories:
-  - 资源
+  - Resource
 tags:
   - Readmi 4A
 ---

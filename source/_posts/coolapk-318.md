@@ -2,7 +2,7 @@
 title: 酷安 318 事件
 date: 2020-03-22 21:02:06
 categories:
-  - 随笔
+  - Essay
 tags:
   - Coolapk
 thumbnail: "thumbnail.jpg #28B17F"
