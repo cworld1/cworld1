@@ -8,26 +8,31 @@ comments: true
 
 Developer / Designer
 
-[🏫 西南大学](http://swu.edu.cn/) 全日制本科生。主要研究大数据科学、前端开发和神经网络学习。
+Full-time undergraduate student at the [🏫 Sounthwestern University](http://swu.edu.cn/). Mainly learns research big data science, front-end development and neural network learning.
 
 ## 我的项目
 
-- [Neovim Config](https://github.com/cworld1/nvim-config)：我的个人 Neovim 配置文件
-- [Fluent Mail](https://github.com/cworld1/fluent-mail)：一款基于 Qt/C++ 的邮件客户端
+- [Dotfiles](https://github.com/cworld1/dotfiles): Personal Arch Linux dotfiles
+- [Matlab Learning](https://github.com/cworld1/matlab-learning): Some notes and code about learning Matlab
+- [Java Learning](https://github.com/cworld1/java-learning): Some notes and code about learning Java
+- [Neovim Config](https://github.com/cworld1/nvim-config): Personal Neovim config files
+- [PaiGram](https://github.com/PaiGramTeam/PaiGram): Telegram robot, query the official Genshin information
+- [Business Data Analysis](https://github.com/cworld1/business-data) | [Website](https://github.com/cworld1/business-data/blob/main/main.ipynb): Using python and jupyter notebook to analyze the data of electrical appliances, and then using the data to predict the sales of electrical appliances
+- [Fluent Mail](https://github.com/cworld1/fluent-mail): A program to send and recieve emails with attachments supported by C++, Qt and SQL
 - [Kinect Camera Netural](https://github.com/cworld1/tcm): An AI program that using Kinect camera and shows netural network and human skeleton.
-- [Data Analysis Learning](https://da.cworld.top/) | [Github](https://github.com/cworld1/da-learning)：学习 Data Analysis 时的部分笔记记录
-- [Database Learning](https://db.cworld.top/) | [Github](https://github.com/cworld1/db-learning)：学习 Database 时的部分笔记记录
-- [Computer Network Learning](https://cn.cworld.top/) | [Github](https://github.com/cworld1/cn-learning)：学习 Computer Network 时的部分笔记记录
-- [Linux Learning](https://linux.cworld.top/) | [Github](https://github.com/cworld1/linux-learning)： 学习 Linux 时的部分笔记记录
-- [R Learning](https://r.cworld.top/) | [Github](https://github.com/cworld1/r-learning)：学习 R 语言时的部分代码 & 笔记记录
-- [Pure Bing&Material You](https://greasyfork.org/zh-CN/scripts/440462) | [Source Code](https://greasyfork.org/zh-CN/scripts/440462/code)：必应搜索页面的美化模块
+- [Data Analysis Learning](https://github.com/cworld1/da-learning) | [Website](https://da.cworld.top/): Some notes and code about learning Data Analysis
+- [Database Learning](https://github.com/cworld1/db-learning) | [Website](https://db.cworld.top/): Some notes and code about learning Database
+- [Computer Network Learning](https://github.com/cworld1/cn-learning) | [Website](https://cn.cworld.top/): Some notes and code about learning Computer Network
 
 ::: collapse 以及一些更早的项目
 
-- [Vue Learning](https://github.com/cworld1/vue-learning)：学习 Vue 时的部分代码 & 笔记记录
-- [C Learning](https://github.com/cworld1/c-learning)：学习 C 语言时的部分代码 & 笔记记录
-- [Pure Baidu](https://blog.cworld.top/post/pure-baidu)：百度搜索页面的美化模块
-- [Momotap](https://cworld1.github.io/momotap/) | [Github](https://cworld1.github.io/momotap/)：一款与 Mikutap 类似的板垫音乐游戏
+- [Linux Learning](https://github.com/cworld1/linux-learning) | [Website](https://linux.cworld.top/): Some notes and code about learning Linux
+- [R Learning](https://github.com/cworld1/r-learning) | [Website](https://r.cworld.top/): Some notes and code about learning R language
+- [Pure Bing & Material You](https://greasyfork.org/zh-CN/scripts/440462/code) | [Website](https://greasyfork.org/zh-CN/scripts/440462/): Bing search page beautification module
+- [Vue Learning](https://github.com/cworld1/vue-learning): Some notes and code about learning Vue
+- [C Learning](https://github.com/cworld1/c-learning): Some notes and code about learning C language
+- [Pure Baidu](https://blog.cworld.top/post/pure-baidu): Baidu search page beautification module
+- [Momotap](https://github.com/cworld1/momotap) | [Website](https://cworld1.github.io/momotap/): A mainland China friendly version extracted from Momotap
 
 :::
 
@@ -37,8 +42,7 @@ Github Activities:
 
 ## 泛泛而谈
 
-- 正在学前端，尽管这只是出于个人兴趣。
-- 最喜欢的编辑器是 VSCode（有时也会用 Neovim、Sublime Text）。
+- 最喜欢的编辑器是 Neovim 和 VSCode（偶尔也会用 Sublime Text）。
 - Adobe 全家桶比较熟练，UI 强迫症晚期。
 - 偏好音乐广泛，日语、电音、小众国语、小语种都有。习惯用 Apple Music 在线随机拨歌，偶尔也用用网易云。
 - 常玩原神、崩坏三和音游。腾讯网易游戏至今未实名。
@@ -58,23 +62,23 @@ Github Activities:
 <link href="/src/css/about.min.css" rel="stylesheet">
 <div id="stats">
 
-- <i class="a-icon" style="color:#2ca5e0">&#xe7e2;</i>
-
-  - Telegram
-  - Follows：<span class="telegram">加载中...</span>
-  - [](https://t.me/cworld0_cn)
-
 - <i class="a-icon" style="color:var(--inside-foreground-color)">&#xe7d1;</i>
 
   - Github
   - Follows：<span class="github">加载中...</span>
   - [](https://github.com/cworld1)
 
-- <i class="a-icon" style="color:#1da1f2">&#xe7e3;</i>
+- <i class="a-icon" style="color:#2ca5e0">&#xe7e2;</i>
 
-  - Twitter
-  - Follows：<span class="twitter">29</span>
-  - [](https://twitter.com/CWorld0)
+  - Telegram
+  - Follows：<span class="telegram">加载中...</span>
+  - [](https://t.me/cworld0_cn)
+
+- <i class="a-icon" style="color:#11ab60">&#xe66b;</i>
+
+  - Coolapk
+  - 粉丝数：<span class="coolapk">6402</span>
+  - [](https://www.coolapk.com/u/1384771)
 
 - <i class="a-icon" style="color:#fe7398">&#xe7c8;</i>
 
@@ -82,23 +86,23 @@ Github Activities:
   - 粉丝数：<span class="bilibili">加载中...</span>
   - [](https://space.bilibili.com/388346465)
 
+- <i class="a-icon" style="color:#1da1f2">&#xe7e3;</i>
+
+  - Twitter
+  - Follows：<span class="twitter">29</span>
+  - [](https://twitter.com/CWorld0)
+
 - <i class="a-icon" style="color:#e71f19">&#xe7e4;</i>
 
   - Weibo
   - 粉丝数：<span class="weibo">加载中...</span>
-  - [](https://weibo.com/5501674056)
+  - [](https://weibo.com/cworld0)
 
 - <i class="a-icon" style="color:#0084ff">&#xe7e5;</i>
 
   - Zhihu
   - 粉丝数：<span class="zhihu">加载中...</span>
   - [](https://www.zhihu.com/people/wolf-03/answers)
-
-- <i class="a-icon" style="color:#11ab60">&#xe66b;</i>
-
-  - Coolapk
-  - 粉丝数：<span class="coolapk">6340</span>
-  - [](https://www.coolapk.com/u/1384771)
 
 - <i class="a-icon" style="color:#50769d">&#xe7e1;</i>
 
