@@ -537,6 +537,7 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://cdn.cbd.int/clipboard@v2/dist/clipboard.min.js # 剪贴板
+  - https://cdn.cbd.int/@waline/client@v2/dist/waline.js # Waline 依赖
   - https://cdn.cbd.int/cworld-blog@latest/src/css/main.min.css # 自定义 CSS
   - https://cdn.cbd.int/cworld-blog@latest/src/js/main.min.js # 自定义 JSS
 
@@ -549,7 +550,7 @@ plugins:
   - position: sidebar
     template: |
       <script>
-        import { pageviewCount } from 'https://unpkg.com/@waline/client/dist/pageview.mjs';
+        import { pageviewCount } from 'https://cdn.cbd.int/@waline/client/dist/pageview.mjs';
 
         pageviewCount({
           serverURL: 'https://waline.cworld.top',
@@ -576,12 +577,8 @@ plugins:
   - position: comments
     template: |
       <div id="waline">好像评论卡了欸，要不要刷新一下？✨</div>
-      <link href="https://cdn.cbd.int/@waline/client@v2/dist/waline.css" rel="stylesheet">
-      <link href="https://cdn.cbd.int/cworld-blog@latest/src/css/comment.min.css" rel="stylesheet">
       <script>
-        import { init } from 'https://cdn.cbd.int/@waline/client@v2/dist/waline.mjs';
-
-        init({
+        Waline.init({
           el: "#waline",
           serverURL: "https://waline.cworld.top",
           emoji: ["https://blog.cworld.top/src/img/bmoji"],
@@ -596,3 +593,5 @@ plugins:
           },
         });
       </script>
+      <link href="https://cdn.cbd.int/@waline/client@v2/dist/waline.css" rel="stylesheet">
+      <link href="https://cdn.cbd.int/cworld-blog@latest/src/css/comment.min.css" rel="stylesheet">
