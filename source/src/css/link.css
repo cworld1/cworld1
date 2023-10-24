@@ -46,6 +46,7 @@
   border-radius: 25px;
   width: 50px !important;
   height: 50px;
+  max-width: inherit;
 }
 
 /* 描述 */
@@ -86,7 +87,7 @@
 
 @media (max-width: 450px) {
   .friends > ul > li {
-    margin-left: 0;
+    margin-right: 0;
     width: 100%;
   }
 
