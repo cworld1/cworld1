@@ -83,8 +83,14 @@
 }
 
 /* 评论字号 */
-.wl-card .wl-content,
-.wl-card .wl-nick,
+.wl-header label,
+.wl-btn {
+  font-size: 0.95em;
+}
 .wl-header input {
+  font-size: 0.825em;
+}
+.wl-card .wl-content,
+.wl-card .wl-nick {
   font-size: inherit;
 }

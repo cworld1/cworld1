@@ -23,12 +23,6 @@
           "avatar": "https://cravatar.cn/avatar/08fcf342df77ad03fcad18399a2fcb74"
         },
         {
-          "name": "Enjoy's blog",
-          "intro": "个人博客，记录生活点滴。",
-          "link": "https://mcenjoy.cn/",
-          "avatar": "https://mcenjoy.cn/avatar"
-        },
-        {
           "name": "Fly",
           "intro": "相逢的人会再相逢",
           "link": "http://flyme.cf",
@@ -113,12 +107,6 @@
           "avatar": "https://www.young143.top/img/a.jpg"
         },
         {
-          "name": "wsbのblog",
-          "intro": "己所不欲，勿施于人",
-          "link": "https://wsbblog.cn/",
-          "avatar": "https://wsbblog.cn/img/wsb.webp"
-        },
-        {
           "name": "Wayne's Blog",
           "intro": "以梦为马，不负韶华。",
           "link": "https://wrans.top/",
@@ -129,6 +117,18 @@
           "intro": "要来点喝的吗？",
           "link": "https://blog.zerolacqua.top",
           "avatar": "https://cdn.zerolacqua.top/images/avatar.png"
+        },
+        {
+          "name": "LanMのBlog",
+          "intro": "轻舟已过万重山",
+          "link": "https://lanm.love/",
+          "avatar": "https://www.lanm.love/img/3.ico"
+        },
+        {
+          "name": "七云's Blog",
+          "intro": "我们终归落俗，但浪漫不死",
+          "link": "https://www.zets.cn/",
+          "avatar": "https://q3.qlogo.cn/g?b=sdk&k=UeVu6eVo5SdL2Eu7PiczvTw&s=640"
         }
       ]
     },
@@ -146,7 +146,13 @@
           "name": "KD 的网络小屋",
           "intro": "技施于手，道养于心",
           "link": "https://www.kindyear.cn/",
-          "avatar": "https://www.kindyear.cn/logo.png"
+          "avatar": "https://cravatar.cn/avatar/d4dafb023c76824a3bf05566cc322af1?s=256&r=g"
+        },
+        {
+          "name": "彬红茶博客",
+          "intro": "有趣的屎用博客doge",
+          "link": "http://blog.binhongtea.top/",
+          "avatar": "http://blog.binhongtea.top/images/studio.png"
         }
       ]
     },
