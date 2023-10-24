@@ -57,6 +57,9 @@ copyright: false
 - 2023-06-13 `Ojhdt’s Blog` 消失
 - 2023-06-13 `Barkure` 消失
 - 2023-06-13 `七云's Blog` 消失
+- 2023-10-24 `Enjoy's blog` 消失
+- 2023-10-24 `Wayne's Blog` 消失
+- 2023-10-24 `七云's Blog` 回归
 
 :::
 
