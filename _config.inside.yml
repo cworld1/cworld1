@@ -186,7 +186,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy;2023 • <a href="https://cworld.top/">CWorld</a> • 总访问 <span class="waline-pageview-count" data-path="/" /> 次'
+  copyright: '&copy;2023 • <a href="https://cworld.top/">CWorld</a> • 总访问 <span class="waline-pageview-count" data-path="/" />'
 
   # Set to false to hide Hexo link.
   # powered: false
@@ -550,9 +550,7 @@ plugins:
   - position: sidebar
     template: |
       <script>
-        import { pageviewCount } from 'https://cdn.cbd.int/@waline/client/dist/pageview.mjs';
-
-        pageviewCount({
+        Waline.pageviewCount({
           serverURL: 'https://waline.cworld.top',
           path: window.location.pathname,
         });
