@@ -28,7 +28,7 @@ appearance:
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: https://fonts.sourcegcdn.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+    url: https://fonts.googleapis.com/css?family=Lobster|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
 
     # Base font which applied to body
     base: "Josefin Sans"
@@ -186,7 +186,7 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy;2023 • <a href="https://cworld.top/">CWorld</a> • 总访问 <span id="busuanzi_value_site_pv"></span> 次'
+  copyright: '&copy;2023 • <a href="https://cworld.top/">CWorld</a> • 总访问 <span class="waline-pageview-count" data-path="/" /> 次'
 
   # Set to false to hide Hexo link.
   # powered: false
@@ -536,9 +536,7 @@ plugins:
   # In general, script or style depends on their ext name.
   # - xxx.css
   # - xxx.jss
-  - https://busuanzi.icodeq.com/busuanzi.pure.mini.js # 不蒜子统计
   - https://cdn.cbd.int/clipboard@v2/dist/clipboard.min.js # 剪贴板
-  - https://cdn.cbd.int/@waline/client@v2/dist/waline.js # Waline 依赖
   - https://cdn.cbd.int/cworld-blog@latest/src/css/main.min.css # 自定义 CSS
   - https://cdn.cbd.int/cworld-blog@latest/src/js/main.min.js # 自定义 JSS
 
@@ -548,6 +546,17 @@ plugins:
   # template: <script>...</script>
   # Or a path relative to `hexo.base_dir`
   # template: snippets/snippet-1.html
+  - position: sidebar
+    template: |
+      <script>
+        import { pageviewCount } from 'https://unpkg.com/@waline/client/dist/pageview.mjs';
+
+        pageviewCount({
+          serverURL: 'https://waline.cworld.top',
+          path: window.location.pathname,
+        });
+      </script>
+
   - position: [post, page] # 剪贴板 + 阅读量
     template: |
       <script>
@@ -567,8 +576,12 @@ plugins:
   - position: comments
     template: |
       <div id="waline">好像评论卡了欸，要不要刷新一下？✨</div>
+      <link href="https://cdn.cbd.int/@waline/client@v2/dist/waline.css" rel="stylesheet">
+      <link href="https://cdn.cbd.int/cworld-blog@latest/src/css/comment.min.css" rel="stylesheet">
       <script>
-        Waline.init({
+        import { init } from 'https://cdn.cbd.int/@waline/client@v2/dist/waline.mjs';
+
+        init({
           el: "#waline",
           serverURL: "https://waline.cworld.top",
           emoji: ["https://blog.cworld.top/src/img/bmoji"],
@@ -583,5 +596,3 @@ plugins:
           },
         });
       </script>
-      <link href="https://cdn.cbd.int/@waline/client@v2/dist/waline.css" rel="stylesheet">
-      <link href="https://cdn.cbd.int/cworld-blog@latest/src/css/comment.min.css" rel="stylesheet">
