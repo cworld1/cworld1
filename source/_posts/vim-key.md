@@ -1,5 +1,5 @@
 ---
-title: Vim 的一些快捷键
+title: Vim 的一些键位知识
 date: 2023-12-15 19:00:02
 categories:
   - Tutorials
@@ -8,8 +8,13 @@ tags:
 thumbnail: 'vim-featured-image.jpg #8C68B7'
 ---
 
+用了几年 Vim 有了一些心得，故有此文。
 
-从第一次尝试使用 Vim，到现在不管啥环境都要装个 Vim 插件，也差不多有两年多了。正如俗话所说“万事开头难”嘛，我和大多数的 Vim 初学者一样，也遇到了一段别扭且艰难的学习期。不过好在 Vim 已经让我尝到了一些甜头，这最终使我习惯并喜欢上了这套“反人类”的编辑逻辑。所以这一期就来讲讲 Vim 到底改怎么循序渐进地学习。
+<!-- more -->
+
+从第一次尝试使用 Vim，到现在不管啥环境都要装个 Vim 插件，也差不多有两年多了。正如俗话所说“万事开头难”嘛，我和大多数的 Vim 初学者一样，也遇到了一段别扭且艰难的学习期。不过好在 Vim 已经让我尝到了一些甜头，这最终使我习惯并喜欢上了这套“反人类”的编辑逻辑。所以这一期就来总结一下 Vim 的一些键位知识，也可以当成教程学习学习。
+
+此外关于我个人的使用上，在用 NeoVim、VSCodeVim 以及 IdeaVim，三家都很好用。不过目前我还只打算开源 NeoVim 的配置，有兴趣的可以看看我的配置仓库：[CWorld NVim Config - Github](https://github.com/cworld1/nvim-config)
 
 ## 最基础的内容
 
@@ -254,3 +259,13 @@ set clipboard+=unnamed
 - 宏录制：q + 自定义字母 (record macro)
 
   再按一次 q 结束。之后使用 @ + 自定义字母播放录制的操作宏
+
+## 最后的话
+
+嗯... 文章有亿点长了。如果实在不喜欢记这些东西，并且真的感觉 Vim 很反人类的话，建议停止尝试。适合自己的才是最好的。
+
+最后给一个一图流链接吧，个人感觉这个写的还蛮不错的。
+
+[Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
+
+![vi-vim-cheat-sheet](vim-key/vi-vim-cheat-sheet.png)
