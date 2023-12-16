@@ -5,7 +5,7 @@ categories:
   - Tutorials
 tags:
   - Vim
-thumbnail: 'vim-featured-image.jpg #8C68B7'
+thumbnail: 'vim-featured-image.webp #8C68B7'
 ---
 
 用了几年 Vim 有了一些心得，故有此文。
@@ -268,4 +268,4 @@ set clipboard+=unnamed
 
 [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 
-![vi-vim-cheat-sheet](vim-key/vi-vim-cheat-sheet.png)
+![vi-vim-cheat-sheet](vi-vim-cheat-sheet.png)
