@@ -268,4 +268,4 @@ set clipboard+=unnamed
 
 [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 
-![vi-vim-cheat-sheet](vi-vim-cheat-sheet.png)
+![vi-vim-cheat-sheet](post/vim-key/vi-vim-cheat-sheet.png)
