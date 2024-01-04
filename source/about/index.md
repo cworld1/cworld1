@@ -89,7 +89,7 @@ Github Activities:
 - <i class="a-icon" style="color:#1da1f2">&#xe7e3;</i>
 
   - Twitter
-  - Follows：<span class="twitter">29</span>
+  - Follows：<span class="twitter">31</span>
   - [](https://twitter.com/CWorld0)
 
 - <i class="a-icon" style="color:#e71f19">&#xe7e4;</i>
@@ -101,7 +101,7 @@ Github Activities:
 - <i class="a-icon" style="color:#0084ff">&#xe7e5;</i>
 
   - Zhihu
-  - 粉丝数：<span class="zhihu">加载中...</span>
+  - 粉丝数：<span class="zhihu">6</span>
   - [](https://www.zhihu.com/people/wolf-03/answers)
 
 - <i class="a-icon" style="color:#50769d">&#xe7e1;</i>
