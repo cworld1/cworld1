@@ -40,11 +40,11 @@ fetch("https://api.swo.moe/stats/weibo/5501674056")
     document.querySelector("#stats .weibo").innerText = data.count;
   });
 // zhihu
-fetch("https://api.swo.moe/stats/zhihu/wolf-03")
-  .then((res) => res.json())
-  .then((data) => {
-    document.querySelector("#stats .zhihu").innerText = data.count;
-  });
+// fetch("https://api.swo.moe/stats/zhihu/wolf-03")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     document.querySelector("#stats .zhihu").innerText = data.count;
+//   });
 // steamgames
 fetch("https://api.swo.moe/stats/steamgames/76561199021278120")
   .then((res) => res.json())
