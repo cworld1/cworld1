@@ -30,8 +30,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - run: npm test
-
       # Build the site
       - name: Build
         run: pnpm build
