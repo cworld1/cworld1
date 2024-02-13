@@ -1,9 +1,12 @@
+name: Publish NPM Package
+
 on:
   push:
     branches: release
 
 jobs:
   publish:
+    name: A job to publish npm package.
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -13,19 +16,19 @@ jobs:
 
       # Setup pnpm
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8
-      - name: Use Node.js 18
+      - name: Use Node.js 21
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 21
           cache: "pnpm"
           registry-url: https://registry.npmjs.org
       
       # Install dependencies
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm install
 
       - run: npm test
 
