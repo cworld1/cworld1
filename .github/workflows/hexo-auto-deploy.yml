@@ -2,7 +2,7 @@ name: Hexo Auto Deploy
 
 on:
   push:
-    branches: [main]
+    branches: main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: true # Checkout private submodules(themes or something else).
 
@@ -45,7 +45,7 @@ jobs:
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: "pnpm"
           registry-url: https://registry.npmjs.org
 
