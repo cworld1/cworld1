@@ -1,0 +1,43 @@
+on:
+  push:
+    branches: release
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Checkout private submodules(themes or something else).
+
+      # Setup pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "pnpm"
+          registry-url: https://registry.npmjs.org
+      
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm ci
+
+      - run: npm test
+
+      # Build the site
+      - name: Build
+        run: pnpm build
+
+      # Pack the package
+      - run: cp ./package.json public && cp ./LICENSE public && cp ./README.md public
+
+      # Publish
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./public

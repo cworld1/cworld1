@@ -66,13 +66,3 @@ jobs:
           publish_branch: gh-pages
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-
-      # Publish to NPM registry
-      - name: Prepare for NPM publish
-        run: cp ./package.json public && cp ./LICENSE public && cp ./README.md public
-      - name: Publish to NPM registry
-        working-directory: ./public
-        run: |
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
