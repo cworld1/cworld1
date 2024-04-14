@@ -18,8 +18,8 @@ Lans & Frameworks:
 ![Python](https://img.shields.io/badge/Py-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 <br>
-![SQL](https://img.shields.io/badge/SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 ![TS & Vue or React](https://img.shields.io/badge/TS%26Vue%2FReact-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 ![GO](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
