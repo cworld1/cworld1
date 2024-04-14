@@ -2,7 +2,7 @@ name: Hexo Auto Deploy
 
 on:
   push:
-    branches: [main]
+    branches: main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,19 +33,19 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: true # Checkout private submodules(themes or something else).
 
       # Setup pnpm
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8
-      - name: Use Node.js 18
+      - name: Use Node.js 21
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 21
           cache: "pnpm"
           registry-url: https://registry.npmjs.org
 
@@ -66,13 +66,3 @@ jobs:
           publish_branch: gh-pages
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-
-      # Publish to NPM registry
-      - name: Prepare for NPM publish
-        run: cp ./package.json public && cp ./LICENSE public && cp ./README.md public
-      - name: Publish to NPM registry
-        working-directory: ./public
-        run: |
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

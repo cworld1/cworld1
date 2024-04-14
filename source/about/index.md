@@ -12,6 +12,9 @@ Full-time undergraduate student at the [🏫 Sounthwestern University](http://sw
 
 ## 我的项目
 
+- [Notie](https://github.com/cworld1/notie): Android note App complies with Material You specifications, developed using Java
+- [Operation System Principle Learning](https://github.com/cworld1/osp-learning) | [Website](https://osp.cworld.top/): Operation System Principle
+- [Search Switcher](https://github.com/cworld1/search-switcher): Add links to each other in search engines
 - [Dotfiles](https://github.com/cworld1/dotfiles): Personal Arch Linux dotfiles
 - [Matlab Learning](https://github.com/cworld1/matlab-learning): Some notes and code about learning Matlab
 - [Java Learning](https://github.com/cworld1/java-learning): Some notes and code about learning Java
@@ -45,12 +48,12 @@ Github Activities:
 - 最喜欢的编辑器是 Neovim 和 VSCode（偶尔也会用 Sublime Text）。
 - Adobe 全家桶比较熟练，UI 强迫症晚期。
 - 偏好音乐广泛，日语、电音、小众国语、小语种都有。习惯用 Apple Music 在线随机拨歌，偶尔也用用网易云。
-- 常玩原神、崩坏三和音游。腾讯网易游戏至今未实名。
+- 游戏玩的比较杂，单机游戏游玩时间较长的应该是 2077、合金装备，手游的话原神、崩铁、方舟、音游都玩一点。腾讯网易游戏至今未实名。
 
 ::: collapse 以及更多
 
 - 精通 Python，PHP，C++，Java，Typescipt，Go 等语言的拼写。
-- 熟悉 Windows、Linux、MacOS 开关机操作。
+- 熟悉 Windows、Linux、macOS 开关机操作。
 - 能熟练操作 Office 全套的打开方式。
 
 :::
@@ -126,8 +129,8 @@ CWorld 原名其实是叫 ChangingWorld，“C”作为程序界高级语言的�
 
 ::: collapse 好奇都在玩些什么音游?
 
-音游圈子的游戏差不多也都尝试过一圈。经常玩的有 Lanota，Musedash，Cytus II，Rhythm Doctor 等。
-偶尔玩玩阳春白雪和 Phigros。不过因为平板内存不够玩了又卸载倒是常事了。
+音游圈子的游戏差不多也都尝试过一圈。经常玩的有 Cytus II，Lanota，Musedash 等。
+曾经玩过阳春白雪、Phigros、Rhythm Doctor、冰与火之舞。
 
 :::
 
