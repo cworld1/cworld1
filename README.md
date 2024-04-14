@@ -13,13 +13,14 @@ Checkout <a href="https://blog.cworld.top" target="_blank">𝑪𝑾𝒐𝒓𝒍�
 
 Lans & Frameworks:
 
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![C/C++](https://img.shields.io/badge/C%2FC++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-<br>
+![Python](https://img.shields.io/badge/Py-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![PL/SQL](https://img.shields.io/badge/PLSQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TS-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+<br>
+![SQL](https://img.shields.io/badge/SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![TS & Vue or React](https://img.shields.io/badge/TS%26Vue%2FReact-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![GO](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
 <details>
@@ -37,6 +38,5 @@ Coding with IDEs & Envs:
 
 ![NeoVim](https://img.shields.io/badge/NeoVim-57A143?style=for-the-badge&logo=neovim&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
-![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
 ![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
