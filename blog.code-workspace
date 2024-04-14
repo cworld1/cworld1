@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"conventionalCommits.scopes": [
+			"src",
+			"gh-actions",
+			"package",
+			"posts"
+		]
+	}
+}
