@@ -1,9 +1,9 @@
 ---
-title: "Example OG Social Image"
-publishDate: "27 January 2023"
-description: "An example post for Astro Cactus, detailing how to add a custom social image card in the frontmatter"
-tags: ["example", "blog", "image"]
-ogImage: "/social-card.png"
+title: 'Example OG Social Image'
+publishDate: '27 January 2023'
+description: 'An example post for Astro Cactus, detailing how to add a custom social image card in the frontmatter'
+tags: ['example', 'blog', 'image']
+ogImage: './social-card.png'
 ---
 
 ## Adding your own social image to a post
@@ -14,7 +14,7 @@ By adding the optional ogImage property to the frontmatter of a post, you opt ou
 If you open this markdown file `src/content/post/social-image.md` you'll see the ogImage property set to an image which lives in the public folder[^1].
 
 ```yaml
-ogImage: "/social-card.png"
+ogImage: '/social-card.png'
 ```
 
 You can view the one set for this template page [here](https://astro-cactus.chriswilliams.dev/social-card.png).
