@@ -1,0 +1,69 @@
+---
+import PageLayout from '@/layouts/BaseLayout.astro'
+import Section from '../../components/Section.astro'
+---
+
+<PageLayout meta={{ title: 'Home' }}>
+	<div class='w-full'>
+		<div class='mt-8 gap-x-10 lg:flex lg:items-start'>
+			<aside
+				class='sticky top-20 order-2 -me-28 hidden basis-60 lg:flex lg:flex-col'
+				style='flex-grow: 2; flex-shrink: 1; flex-basis: 30%;'
+			>
+				<h2 class='font-semibold'>TABLE OF CONTENTS</h2>
+				<ul class='text-card-foreground'>
+					<li>test</li>
+				</ul>
+			</aside>
+			<article
+				class='flex-grow break-words'
+				style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
+				data-pagefind-body
+			>
+				<div class='flex flex-wrap items-center gap-x-3 gap-y-2'>
+					<div>
+						<h1 class='mb-1 text-2xl font-bold'>General Talk</h1>
+						<ul class='ml-8 list-disc leading-relaxed text-muted-foreground'>
+							<li class='my-3'>
+								Favorite editors: Neovim and VSCode (sometimes Sublime Text is also used).
+							</li>
+							<li class='my-3'>Adobe Suit is quite proficient, with late stage UI OCD.</li>
+							<li class='my-3'>
+								A wide range of music preferences, including Japanese, electronic music, niche
+								Mandarin, and minority languages. I am used to randomly dialing songs online using
+								Apple Music, and occasionally use NetEase Cloud.
+							</li>
+							<li class='my-3'>
+								Often play Genshin Impact, Arknights. Tencent and NetEase Games have not yet
+								obtained their real name.
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h1 class='mb-1 text-2xl font-bold'>Projects</h1>
+						<ul class='ml-8 list-disc leading-relaxed text-muted-foreground'>
+							<li class='my-3'>
+								Favorite editors: Neovim and VSCode (sometimes Sublime Text is also used).
+							</li>
+							<li class='my-3'>Adobe Suit is quite proficient, with late stage UI OCD.</li>
+							<li class='my-3'>
+								A wide range of music preferences, including Japanese, electronic music, niche
+								Mandarin, and minority languages. I am used to randomly dialing songs online using
+								Apple Music, and occasionally use NetEase Cloud.
+							</li>
+							<li class='my-3'>
+								Often play Genshin Impact, Arknights. Tencent and NetEase Games have not yet
+								obtained their real name.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div
+			class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+		>
+			<slot />
+		</div>
+	</div>
+</PageLayout>
