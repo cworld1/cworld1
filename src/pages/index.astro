@@ -7,9 +7,6 @@ import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 
-import { Image } from 'astro:assets'
-import astro from '../assets/about-astro.png'
-
 import { getAllPosts, sortMDByDate } from '@/utils'
 
 const languages = ['lorem', 'ipsum']
@@ -25,34 +22,21 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 <PageLayout meta={{ title: 'Home' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
-			<Image
-				src={astro}
+			<img
+				src='https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
 				alt='profile photo'
-				class='h-28 w-auto rounded-full bg-[#FFBE98] p-2'
+				class='h-28 w-auto rounded-full border p-1'
 				loading='eager'
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Lorem ipsum dolor</h1>
-				<a
-					href='https://github.com/srleom/astro-theme-resume.git'
-					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-				>
-					<span class='relative flex items-center justify-center'>
-						<span
-							class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-						></span>
-						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-					</span>
-
-					<p class='font-medium'>Get free template</p>
-				</a>
+				<h1 class='text-3xl font-bold'>CWorld</h1>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
 					<Label title='Lorem Ipsum'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
-								d='M4.615 20q-.69 0-1.152-.462Q3 19.075 3 18.385v-9.77q0-.69.463-1.152Q3.925 7 4.615 7H9V5.615q0-.69.463-1.152Q9.925 4 10.615 4h2.77q.69 0 1.153.463q.462.462.462 1.152V7h4.385q.69 0 1.152.463q.463.462.463 1.152v9.77q0 .69-.462 1.152q-.463.463-1.153.463zm0-1h14.77q.23 0 .423-.192q.192-.193.192-.423v-9.77q0-.23-.192-.423Q19.615 8 19.385 8H4.615q-.23 0-.423.192Q4 8.385 4 8.615v9.77q0 .23.192.423q.193.192.423.192M10 7h4V5.615q0-.23-.192-.423Q13.615 5 13.385 5h-2.77q-.23 0-.423.192q-.192.193-.192.423zM4 19V8z'
+								d='M4.615 20q-.69 0-1.152-.462Q3 19.075 3 18.385v-9.77q0-.69.463-1.152Q3.925 7 4.615 7H9V5.615q0-.69.463-1.152Q9.925 4 10.615 4h2.77q.69 0 1.53.463q.462.462.462 1.152V7h4.385q.69 0 1.152.463q.463.462.463 1.152v9.77q0 .69-.462 1.152q-.463.463-1.153.463zm0-1h14.77q.23 0 .423-.192q.192-.193.192-.423v-9.77q0-.23-.192-.423Q19.615 8 19.385 8H4.615q-.23 0-.423.192Q4 8.385 4 8.615v9.77q0 .23.192.423q.193.192.423.192M10 7h4V5.615q0-.23-.192-.423Q13.615 5 13.385 5h-2.77q-.23 0-.423.192q-.192.193-.192.423zM4 19V8z'
 							></path></svg
 						>
 					</Label>
@@ -115,7 +99,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			)
 		}
 
-		<Section title='Experience'>
+		<!-- <Section title='Experience'>
 			<Card
 				heading='Lorem Ipsum'
 				subheading='Sit amet consectetur'
@@ -141,37 +125,28 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
 			/>
-		</Section>
+		</Section> -->
 
 		<Section title='Education'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
+				heading='Southwestern University'
+				subheading='Full-time undergraduate student'
+				date='Augest 2021 - July 2025'
 				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				altText='just a pic'
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
+					<!-- <li>
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
 						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
 					</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li> -->
 				</ul>
 			</Card>
-			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			/>
 		</Section>
 
-		<Section title='Projects'>
+		<Section title='Website List'>
 			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
 				<ProjectCard
 					href='https://www.google.com'
@@ -195,23 +170,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		<Section title='Certifications'>
 			<Card
 				as='a'
-				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.'
-				date='Mar 2024 - Mar 2024'
+				heading='Mathematical Modeling Competition'
+				subheading='Won the first prize of the national award in the National Mathematical Modeling Competition of "Higher Education Society"'
+				date='October 2023'
 				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				altText='Just a pic'
 				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
-			/>
-			<Card
-				as='a'
-				heading='Lorem ipsum, dolor sit amet'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.'
-				date='Mar 2029 - Mar 2032'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
+				href='http://www.mcm.edu.cn'
 			/>
 		</Section>
 
@@ -220,6 +185,24 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<SkillLayout title='Frontend' skills={frontend} />
 			<SkillLayout title='Backend' skills={backend} />
 			<SkillLayout title='Others' skills={others} />
+		</Section>
+
+		<Section title='General talk'>
+			<ul class='list-disc leading-relaxed text-muted-foreground'>
+				<li class='my-3'>
+					Favorite editors: Neovim and VSCode (sometimes Sublime Text is also used).
+				</li>
+				<li class='my-3'>Adobe Suit is quite proficient, with late stage UI OCD.</li>
+				<li class='my-3'>
+					A wide range of music preferences, including Japanese, electronic music, niche Mandarin,
+					and minority languages. I am used to randomly dialing songs online using Apple Music, and
+					occasionally use NetEase Cloud.
+				</li>
+				<li class='my-3'>
+					Often play Genshin Impact, Arknights. Tencent and NetEase Games have not yet obtained
+					their real name.
+				</li>
+			</ul>
 		</Section>
 	</div>
 	<a
