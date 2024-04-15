@@ -4,7 +4,7 @@ publishDate: 2019-07-10 13:18:58
 description: 'This post is purely for testing if the css is correct for the title on the page'
 tags:
   - API
-thumbnail: 'thumbnail.jpg #26303A'
+coverImage: { src: './thumbnail.jpg', alt: '#26303A' }
 ---
 
 ## 企业

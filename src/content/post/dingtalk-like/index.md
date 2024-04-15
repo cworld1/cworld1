@@ -6,7 +6,7 @@ tags:
   - DingTalk
   - Fiddler
   - JavaScript
-thumbnail: 'thumbnail.jpg #640D80'
+coverImage: { src: './thumbnail.jpg', alt: '#640D80' }
 ---
 
 想必感兴趣的已经试过了连点器的畅快吧。在玩转这之前，这确实不失为一种强有力的手段。<!-- more -->然而如果这样的话，最多也就不过十万。这怎么能让博主折服呢，所以就从钉钉直播下手。在这之前，先对这个套壳钉钉有一个更深入的了解。

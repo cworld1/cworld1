@@ -4,7 +4,7 @@ publishDate: 2020-03-22 21:02:06
 description: 'This post is purely for testing if the css is correct for the title on the page'
 tags:
   - Coolapk
-thumbnail: 'thumbnail.jpg #28B17F'
+coverImage: { src: './thumbnail.jpg', alt: '#28B17F' }
 ---
 
 我们暂且用『载入酷安史册』来形容这 7 天的历史。

@@ -5,7 +5,7 @@ description: 'This post is purely for testing if the css is correct for the titl
 tags:
   - Onedrive
   - Serverless
-thumbnail: 'thumbnail.jpg #006fff'
+coverImage: { src: './thumbnail.jpg', alt: '#006fff' }
 ---
 
 原理是用腾讯云的无服务器云函数配合 API 网关实现，不需要自己的服务器。

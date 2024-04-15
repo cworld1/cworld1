@@ -5,7 +5,7 @@ description: 'This post is purely for testing if the css is correct for the titl
 tags:
   - Userstyle
   - CSS
-thumbnail: 'thumbnail.jpg #dfe1e2'
+coverImage: { src: './thumbnail.jpg', alt: '#dfe1e2' }
 ---
 
 ## 介绍

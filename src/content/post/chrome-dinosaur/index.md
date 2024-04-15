@@ -5,7 +5,7 @@ description: 'This post is purely for testing if the css is correct for the titl
 tags:
   - Chrome
   - JavaScript
-thumbnail: 'thumbnail.jpg #7FD9DA'
+coverImage: { src: './thumbnail.jpg', alt: '#7FD9DA' }
 ---
 
 ## 前言

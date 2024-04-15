@@ -4,7 +4,7 @@ publishDate: 2019-06-14 16:24:38
 description: 'This post is purely for testing if the css is correct for the title on the page'
 tags:
   - Hexo
-thumbnail: 'thumbnail.jpg #5273a0'
+coverImage: { src: './thumbnail.jpg', alt: '#5273a0' }
 ---
 
 预置文档

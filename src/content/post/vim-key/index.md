@@ -4,7 +4,7 @@ publishDate: 2023-12-15 19:00:02
 description: 'This post is purely for testing if the css is correct for the title on the page'
 tags:
   - Vim
-thumbnail: 'vim-featured-image.webp #8C68B7'
+coverImage: { src: './vim-featured-image.webp', alt: '#8C68B7' }
 ---
 
 用了几年 Vim 有了一些心得，故有此文。
