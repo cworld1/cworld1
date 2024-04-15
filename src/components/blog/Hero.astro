@@ -20,10 +20,10 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
 {
 	data.coverImage && (
-		<div class='aspect-h-9 aspect-w-16 mb-6'>
+		<div class='mb-6'>
 			<Image
 				alt={data.coverImage.alt}
-				class='rounded-2xl object-cover'
+				class='h-auto w-full rounded-2xl object-contain'
 				fetchpriority='high'
 				loading='eager'
 				src={data.coverImage.src}
@@ -62,7 +62,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 				<path d='M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116' />
 				<path d='M6 9h-.01' />
 			</svg>
-			{data.tags.map((tag, i) => (
+			{data.tags.map((tag: string, i: number) => (
 				<div>
 					<a
 						aria-label={`View more blogs with the tag ${tag}`}
