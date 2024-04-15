@@ -1,19 +1,23 @@
 ---
 import type { HTMLTag, Polymorphic } from 'astro/types'
 import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
 
 import FormattedDate from '../FormattedDate.astro'
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 	post: CollectionEntry<'post'>
 	withDesc?: boolean
+	withCover?: boolean
 }
 
-const { as: Tag = 'div', post, withDesc = false } = Astro.props
+const { as: Tag = 'div', post, withDesc = false, withCover = false } = Astro.props
 const postDate = post.data.updatedDate ?? post.data.publishDate
 ---
 
-<li class='flex flex-col gap-2 sm:flex-row sm:gap-x-4 [&_q]:basis-full'>
+<li
+	class='relative flex basis-full flex-col gap-2 rounded-2xl border border-border bg-primary-foreground px-5 py-3 sm:flex-row sm:gap-x-4'
+>
 	<FormattedDate class='min-w-[120px]' date={postDate} />
 
 	<Tag>
@@ -33,4 +37,26 @@ const postDate = post.data.updatedDate ?? post.data.publishDate
 			)
 		}
 	</Tag>
+	{
+		withCover && post.data.coverImage && (
+			<Image
+				src={post.data.coverImage.src}
+				alt={post.data.coverImage.alt}
+				class='position-absolute w-50 z-1 right-0 top-0 rounded-2xl object-cover'
+				style={{
+					position: 'absolute',
+					top: 0,
+					right: 0,
+					width: '50%',
+					height: '100%',
+					zIndex: 0,
+					opacity: 0.3,
+					maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
+					msMaskImage: '-ms-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
+					WebkitMaskImage:
+						'-webkit-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)'
+				}}
+			/>
+		)
+	}
 </li>
