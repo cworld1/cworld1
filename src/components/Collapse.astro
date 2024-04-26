@@ -11,7 +11,7 @@ const { class: className, title, ...props } = Astro.props
 <collapse-component>
 	<div class={cn(className, 'rounded-xl border border-border py-3 px-5')} {...props}>
 		<div class='expandable-div flex cursor-pointer justify-between'>
-			<p style={{ margin: 0 }}>{title}</p>
+			<p class='m-0'>{title}</p>
 			<div class='expand-button transform transition-transform duration-200'>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -42,9 +42,7 @@ const { class: className, title, ...props } = Astro.props
 		}
 
 		connectedCallback() {
-			console.log(this)
 			const expandableDiv = this.querySelector('.expandable-div')
-			console.log(expandableDiv)
 			if (!expandableDiv) return
 			expandableDiv.addEventListener('click', () => {
 				let contentBox = this.querySelector('.content-box') as HTMLElement

@@ -1,26 +1,32 @@
 ---
-// import type { Component } from 'astro';
-
 import { cn } from '@/utils'
 
 interface Props {
 	class?: string
 	events: {
 		date: string
-		// content: Component
+		content: any
 	}[]
 }
 const { class: className, events, ...props } = Astro.props
 ---
 
 <div class={cn(className)} {...props}>
-	<div class='timeline'>
+	<ul class='pl-2'>
 		{
-			events.map((event) => (
-				<div class='flex flex-col gap-2'>
-					<div class='min-w-[120px]'>{event.date}</div>
-				</div>
+			events.map((event, index) => (
+				<li class='relative flex list-none gap-4 rounded-full'>
+					<span class='my-2 h-3 w-3 rounded-full border-2 border-muted-foreground' />
+					{index !== events.length - 1 && (
+						<span
+							class='absolute left-[10px] top-[20px] w-1 bg-border'
+							style={{ height: 'calc(100% - 4px)' }}
+						/>
+					)}
+					<samp class='my-1 min-w-[100px] text-right text-sm'>{event.date}</samp>
+					<div>{event.content}</div>
+				</li>
 			))
 		}
-	</div>
+	</ul>
 </div>

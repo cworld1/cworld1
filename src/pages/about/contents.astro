@@ -4,13 +4,6 @@ import Timeline from '@/components/Timeline.astro'
 import Sponsors from '@/components/about/Sponsors.astro'
 import { cn } from '@/utils'
 const { class: className, title, tools, ...props } = Astro.props
-
-const SPONSORS = [
-	{ name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
-	{ name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
-	{ name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
-	{ name: '匿', amount: '20.00', date: '2022-04-06' }
-]
 ---
 
 <div class={cn(className)} {...props}>
@@ -37,7 +30,7 @@ const SPONSORS = [
 	</ul>
 	<p>Github Activities:</p>
 	<p>
-		<img src='https://ghchart.rshah.org/659eb9/cworld1' />
+		<img src='https://ghchart.rshah.org/659eb9/cworld1' alt='github activities' />
 	</p>
 	<!-- social-networks -->
 	<h2 id='social-networks'>Social Networks</h2>
@@ -65,23 +58,45 @@ const SPONSORS = [
 		Please leave a message or contact me proactively after sponsorship. Thanks to the following
 		sponsors:
 	</p>
-	<Sponsors sponsors={SPONSORS} />
+	<Sponsors
+		sponsors={[
+			{ name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
+			{ name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
+			{ name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
+			{ name: '匿', amount: '20.00', date: '2022-04-06' }
+		]}
+	/>
 	<!-- about-blog -->
 	<h2 id='about-blog'>About Blog</h2>
 	<Timeline
 		events={[
 			{
-				date: '1999'
-				// content: <div>111</div>
+				date: '2019-06-14',
+				content: 'Website sprouted up and started using Hexo to build the blog'
+			},
+			{ date: '2019-07-08', content: 'Website has been deployed the first version on Gitee' },
+			{
+				date: '2019-07-31',
+				content:
+					'Bought my first domain in life <a href="https://cworld.top/" about="_blank">cworld.top</a>'
 			},
 			{
-				date: '1999'
-				// content: <div>111</div>
+				date: '2020-01-24',
+				content:
+					'Website runned in Coding, with the domain [blog.cworld.top](https://blog.cworld.top) bounded'
 			},
+			{ date: '2022-02-12', content: 'Moved to Netlify and open source it on Github' },
 			{
-				date: '1999'
-				// content: <div>111</div>
+				date: '2022-03-01',
+				content:
+					'Website successfully signed and joined [Forever Blog](https://www.foreverblog.cn/blog/2788.html)'
 			}
 		]}
 	/>
+	<!-- about-blog -->
+	<h2 id='about-blog'>About Blog</h2>
+	<p>
+		The smooth operation and personalized customization of website also rely on the resources and
+		technical support provided by the following excellent projects/service providers:
+	</p>
 </div>
