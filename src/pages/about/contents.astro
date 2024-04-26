@@ -1,0 +1,87 @@
+---
+import Collapse from '@/components/Collapse.astro'
+import Timeline from '@/components/Timeline.astro'
+import Sponsors from '@/components/about/Sponsors.astro'
+import { cn } from '@/utils'
+const { class: className, title, tools, ...props } = Astro.props
+
+const SPONSORS = [
+	{ name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
+	{ name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
+	{ name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
+	{ name: '匿', amount: '20.00', date: '2022-04-06' }
+]
+---
+
+<div class={cn(className)} {...props}>
+	<p>Developer / Designer</p>
+	<p>
+		Full-time undergraduate student at the <a href='http://swu.edu.cn/' target='_blank' title='swu'
+			>🏫 Sounthwestern University</a
+		>. Mainly learns research big data science, front-end development and neural network learning.
+	</p>
+	<!-- general-talk -->
+	<h2 id='general-talk'>General Talk</h2>
+	<ul>
+		<li>Favorite editors: Neovim and VSCode (sometimes Sublime Text is also used).</li>
+		<li>Adobe Suit is quite proficient, with late stage UI OCD.</li>
+		<li>
+			A wide range of music preferences, including Japanese, electronic music, niche Mandarin, and
+			minority languages. I am used to randomly dialing songs online using Apple Music, and
+			occasionally use NetEase Cloud.
+		</li>
+		<li>
+			Often play Genshin Impact, Arknights. Tencent and NetEase Games have not yet obtained their
+			real name.
+		</li>
+	</ul>
+	<p>Github Activities:</p>
+	<p>
+		<img src='https://ghchart.rshah.org/659eb9/cworld1' />
+	</p>
+	<!-- social-networks -->
+	<h2 id='social-networks'>Social Networks</h2>
+	<p>
+		The main network usernames include <code>CWorld</code>, <code>CWorld0</code>, and <code
+			>CWorld1</code
+		>.
+	</p>
+	<!-- gossips -->
+	<h2 id='gossips'>Gossips</h2>
+	<Collapse class='mb-4' title='Why called CWorld?'>
+		The original name is actually ChangingWorld, and "C" is the elder of high-level languages in the
+		programming world - C Language, also known as the crazy initials, is a support and hope for the
+		perseverance spirit in the field of computer science. And ChangingWorld means although world is
+		changing , but I won't follow the trend, be myself, be unique. (Wrote it randomly)
+	</Collapse>
+	<Collapse title='What kind of music games are playing?'>
+		I have tried almost all the games in the music game circle. Commonly played include Cytus II,
+		Lanota, Musedash, etc. I have played Yang Chun Bai Xue, Phigros, Rhythm Doctor, and Ice and Fire
+		Dance before.
+	</Collapse>
+	<!-- sponsorship -->
+	<h2 id='sponsorship'>Sponsorship</h2>
+	<p>
+		Please leave a message or contact me proactively after sponsorship. Thanks to the following
+		sponsors:
+	</p>
+	<Sponsors sponsors={SPONSORS} />
+	<!-- about-blog -->
+	<h2 id='about-blog'>About Blog</h2>
+	<Timeline
+		events={[
+			{
+				date: '1999'
+				// content: <div>111</div>
+			},
+			{
+				date: '1999'
+				// content: <div>111</div>
+			},
+			{
+				date: '1999'
+				// content: <div>111</div>
+			}
+		]}
+	/>
+</div>
