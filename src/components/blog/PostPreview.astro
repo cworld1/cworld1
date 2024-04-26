@@ -4,41 +4,80 @@ import type { CollectionEntry } from 'astro:content'
 import { Image } from 'astro:assets'
 
 import FormattedDate from '../FormattedDate.astro'
+import Button from '../Button.astro'
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 	post: CollectionEntry<'post'>
-	withDesc?: boolean
-	withCover?: boolean
+	detailed?: boolean
 }
 
-const { as: Tag = 'div', post, withDesc = false, withCover = false } = Astro.props
+const { as: Tag = 'div', post, detailed = false } = Astro.props
 const postDate = post.data.updatedDate ?? post.data.publishDate
 ---
 
 <li
-	class='relative flex basis-full flex-col gap-2 rounded-2xl border border-border bg-primary-foreground px-5 py-3 sm:flex-row sm:gap-x-4'
+	class='relative flex basis-full flex-col gap-2 rounded-2xl border border-border bg-background px-5 py-3 transition-colors ease-in-out hover:bg-primary-foreground sm:flex-row sm:gap-x-4'
 >
-	<FormattedDate class='min-w-[120px]' date={postDate} />
+	<FormattedDate class='min-w-[120px] text-xs' date={postDate} />
 
-	<Tag>
-		{post.data.draft && <span class='text-red-500'>(Draft) </span>}
+	<Tag class='flex-grow'>
+		<!-- title -->
 		<a
 			data-astro-prefetch
 			href={`/blog/${post.slug}/`}
-			class='transition-all hover:text-muted-foreground'
+			class='transition-color group w-full hover:text-muted-foreground'
 		>
-			{post.data.title}
+			<div class='flex justify-between'>
+				<div>
+					{post.data.draft && <span class='text-red-500'>(Draft) </span>}
+					{post.data.title}
+				</div>
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='16'
+					height='16'
+					viewBox='0 0 24 24'
+					fill='none'
+					stroke-width='2.5'
+					stroke-linecap='round'
+					stroke-linejoin='round'
+					class='my-1 stroke-current group-hover:stroke-primary group-hover:dark:stroke-white'
+					><line
+						x1='5'
+						y1='12'
+						x2='19'
+						y2='12'
+						class='translate-x-4 scale-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:scale-x-100'
+					></line><polyline
+						points='12 5 19 12 12 19'
+						class='translate-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1'
+					></polyline></svg
+				>
+			</div>
+			<!-- desc -->
+			{
+				detailed && (
+					<p class='mt-2 line-clamp-3 block text-sm italic text-muted-foreground'>
+						{post.data.description}
+					</p>
+				)
+			}
 		</a>
+		<!-- tags -->
 		{
-			withDesc && (
-				<p class='line-clamp-3 block text-sm italic text-muted-foreground'>
-					{post.data.description}
-				</p>
+			detailed && post.data.tags && (
+				<ul class='text-bgColor mt-2 flex flex-wrap gap-2'>
+					{post.data.tags.map((tag: string) => (
+						<li>
+							<Button title={tag} href={`/tags/${tag}/`} style='pill' />
+						</li>
+					))}
+				</ul>
 			)
 		}
 	</Tag>
 	{
-		withCover && post.data.coverImage && (
+		detailed && post.data.coverImage && (
 			<Image
 				src={post.data.coverImage.src}
 				alt={post.data.coverImage.alt}
