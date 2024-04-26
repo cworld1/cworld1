@@ -2,17 +2,35 @@
 import PageLayout from '../layouts/BaseLayout.astro'
 import Section from '../components/Section.astro'
 import Card from '../components/Card.astro'
-import ProjectCard from '../components/ProjectCard.astro'
+import ProjectCard from '../components/home/ProjectCard.astro'
 import Label from '../components/Label.astro'
-import SkillLayout from '../components/SkillLayout.astro'
+import SkillLayout from '../components/home/SkillLayout.astro'
+import Hitokoto from '@/components/home/Hitokoto.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
+import { Image } from 'astro:assets'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const languages = [
+	'C',
+	'C++',
+	'C#',
+	'Java',
+	'Python',
+	'Html',
+	'JavaScript',
+	'CSS',
+	'R',
+	'SQL',
+	'Go',
+	'Prolog',
+	'Php',
+	'Lua',
+	'Matlab'
+]
+const frontend = ['TypeScript', 'React', 'Redux', 'Vue', 'Pinia', 'Vite', 'Webpack']
+const backend = ['Flask', 'Nginx', 'NextJS']
+const others = ['Qt', 'PyQt', 'Qml', 'Android', 'Unity']
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -22,11 +40,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 <PageLayout meta={{ title: 'Home' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
-			<img
+			<Image
 				src='https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
 				alt='profile photo'
 				class='h-28 w-auto rounded-full border p-1'
 				loading='eager'
+				inferSize
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
@@ -186,27 +205,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<SkillLayout title='Backend' skills={backend} />
 			<SkillLayout title='Others' skills={others} />
 		</Section>
-
-		<Section title='General talk'>
-			<ul class='list-disc leading-relaxed text-muted-foreground'>
-				<li class='my-3'>
-					Favorite editors: Neovim and VSCode (sometimes Sublime Text is also used).
-				</li>
-				<li class='my-3'>Adobe Suit is quite proficient, with late stage UI OCD.</li>
-				<li class='my-3'>
-					A wide range of music preferences, including Japanese, electronic music, niche Mandarin,
-					and minority languages. I am used to randomly dialing songs online using Apple Music, and
-					occasionally use NetEase Cloud.
-				</li>
-				<li class='my-3'>
-					Often play Genshin Impact, Arknights. Tencent and NetEase Games have not yet obtained
-					their real name.
-				</li>
-			</ul>
-		</Section>
 	</div>
-	<a
-		href='https://github.com/srleom/astro-theme-resume.git'
+
+	<div
 		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 	>
 		<span class='relative flex items-center justify-center'>
@@ -216,6 +217,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
 		</span>
 
-		<p class='font-medium'>Get free template</p>
-	</a>
+		<Hitokoto />
+	</div>
 </PageLayout>
