@@ -79,6 +79,11 @@ Start numbering with offset:
 57. foo
 1. bar
 
+Todo list:
+
+- [ ] This is an incomplete item
+- [x] This is a complete item
+
 ## Code
 
 Inline `code`

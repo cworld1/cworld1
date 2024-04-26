@@ -83,7 +83,11 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 	data.updatedDate && (
 		<p class='mt-6 text-base'>
 			Last Updated:
-			<FormattedDate class='ms-1' date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
+			<FormattedDate
+				class='ms-1 text-sm'
+				date={data.updatedDate}
+				dateTimeOptions={dateTimeOptions}
+			/>
 		</p>
 	)
 }

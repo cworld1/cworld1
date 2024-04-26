@@ -183,110 +183,110 @@ plugins:
 
 在友链页面按照如下格式写：
 
-- 提前引用 css 样式避免排版错乱
+提前引用 css 样式避免排版错乱
 
-  ```markdown
-  <link href="/css/link.min.css" rel="stylesheet">
-  ```
+```markdown
+<link href="/css/link.min.css" rel="stylesheet">
+```
 
-  其 CSS 文件也贴出来仅供参考：
+其 CSS 文件也贴出来仅供参考：
 
-  ```css
-  .f > ul {
-  	display: flex;
-  	flex-wrap: wrap;
-  	padding: 0;
-  }
-  .f > ul > li {
-  	transition: 0.3s ease;
-  	list-style: none;
-  }
-  .f > ul > li {
-  	display: flex;
-  	margin: 0 10px 10px 0;
-  	text-decoration: none;
-  	padding: 10px;
-  	background-color: var(--inside-background);
-  	color: var(--inside-accent-color);
-  	border-radius: 6px;
-  }
-  .f > ul > li:hover {
-  	color: #fff;
-  	background-color: var(--inside-accent-color);
-  	box-shadow: 0 2px 4px 1px rgb(0 0 0 / 20%);
-  	transform: scale(1.03);
-  }
-  .f > ul > li:active {
-  	transform: scale(0.97);
-  }
-  .f > ul > li > p {
-  	margin: 0;
-  }
-  .f img {
-  	border: solid 1px var(--inside-border-color);
-  	border-radius: 25px;
-  	width: 50px;
-  	height: 50px;
-  	margin: 0 !important;
-  	max-width: fit-content;
-  }
-  .f > ul > li > ul {
-  	position: relative;
-  	margin-left: 10px;
-  	padding: 0;
-  }
-  .f > ul > li > ul > li {
-  	list-style: none;
-  	text-align: center;
-  }
-  .f > ul > li > ul > li:nth-child(1) {
-  	font-size: 14px;
-  }
-  .f > ul > li > ul > li:nth-child(2) {
-  	font-size: 12px;
-  	margin-top: 5px;
-  	max-width: 108px;
-  	overflow: hidden;
-  	text-overflow: ellipsis;
-  	white-space: nowrap;
-  	opacity: 0.8;
-  }
-  .f > ul > li > ul > li:nth-child(3) a {
-  	position: absolute;
-  	right: 0;
-  	top: 0;
-  	height: 100%;
-  	width: 100%;
-  	border: 0;
-  	color: transparent;
-  }
-  @media (max-width: 450px) {
-  	.f > ul > li {
-  		margin-left: 0;
-  		width: 100%;
-  	}
-  	.f > ul > li > ul {
-  		width: 100%;
-  	}
-  	.f > ul > li > ul > li {
-  		text-align: start;
-  		max-width: 100% !important;
-  	}
-  }
-  ```
+```css
+.f > ul {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+}
+.f > ul > li {
+	transition: 0.3s ease;
+	list-style: none;
+}
+.f > ul > li {
+	display: flex;
+	margin: 0 10px 10px 0;
+	text-decoration: none;
+	padding: 10px;
+	background-color: var(--inside-background);
+	color: var(--inside-accent-color);
+	border-radius: 6px;
+}
+.f > ul > li:hover {
+	color: #fff;
+	background-color: var(--inside-accent-color);
+	box-shadow: 0 2px 4px 1px rgb(0 0 0 / 20%);
+	transform: scale(1.03);
+}
+.f > ul > li:active {
+	transform: scale(0.97);
+}
+.f > ul > li > p {
+	margin: 0;
+}
+.f img {
+	border: solid 1px var(--inside-border-color);
+	border-radius: 25px;
+	width: 50px;
+	height: 50px;
+	margin: 0 !important;
+	max-width: fit-content;
+}
+.f > ul > li > ul {
+	position: relative;
+	margin-left: 10px;
+	padding: 0;
+}
+.f > ul > li > ul > li {
+	list-style: none;
+	text-align: center;
+}
+.f > ul > li > ul > li:nth-child(1) {
+	font-size: 14px;
+}
+.f > ul > li > ul > li:nth-child(2) {
+	font-size: 12px;
+	margin-top: 5px;
+	max-width: 108px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	opacity: 0.8;
+}
+.f > ul > li > ul > li:nth-child(3) a {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	border: 0;
+	color: transparent;
+}
+@media (max-width: 450px) {
+	.f > ul > li {
+		margin-left: 0;
+		width: 100%;
+	}
+	.f > ul > li > ul {
+		width: 100%;
+	}
+	.f > ul > li > ul > li {
+		text-align: start;
+		max-width: 100% !important;
+	}
+}
+```
 
-- 随后用一个 div 标签将需要优化展示的友链包裹起来即可。这样通过 Markdown 语法写出来的友链，真的是不知道要比手动写 html 标签要高到哪里去了。
+随后用一个 div 标签将需要优化展示的友链包裹起来即可。这样通过 Markdown 语法写出来的友链，真的是不知道要比手动写 html 标签要高到哪里去了。
 
-  ```markdown
-  <div class="f">
+```markdown
+<div class="f">
 
-  - ![](https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=400)
-    - CWorld's Blog
-    - 求知若愚，虚怀若谷
-    - [](https://blog.cworld.top)
+- ![](https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=400)
+  - CWorld's Blog
+  - 求知若愚，虚怀若谷
+  - [](https://blog.cworld.top)
 
-  </div>
-  ```
+</div>
+```
 
 ## 结尾
 
