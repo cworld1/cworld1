@@ -20,7 +20,7 @@ const postDate = post.data.updatedDate ?? post.data.publishDate
 >
 	<FormattedDate class='min-w-[120px] text-xs' date={postDate} />
 
-	<Tag class='flex-grow'>
+	<Tag class='z-10 flex-grow'>
 		<!-- title -->
 		<a
 			data-astro-prefetch
@@ -41,7 +41,7 @@ const postDate = post.data.updatedDate ?? post.data.publishDate
 					stroke-width='2.5'
 					stroke-linecap='round'
 					stroke-linejoin='round'
-					class='my-1 stroke-current group-hover:stroke-primary group-hover:dark:stroke-white'
+					class='my-1 stroke-muted-foreground group-hover:stroke-primary group-hover:dark:stroke-white'
 					><line
 						x1='5'
 						y1='12'
@@ -81,15 +81,8 @@ const postDate = post.data.updatedDate ?? post.data.publishDate
 			<Image
 				src={post.data.coverImage.src}
 				alt={post.data.coverImage.alt}
-				class='position-absolute w-50 z-1 right-0 top-0 rounded-2xl object-cover'
+				class='absolute right-0 top-0 z-0 h-full w-3/5 rounded-2xl object-cover opacity-30'
 				style={{
-					position: 'absolute',
-					top: 0,
-					right: 0,
-					width: '50%',
-					height: '100%',
-					zIndex: 0,
-					opacity: 0.3,
 					maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
 					msMaskImage: '-ms-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
 					WebkitMaskImage:
