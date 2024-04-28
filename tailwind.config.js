@@ -60,7 +60,7 @@ const config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
-				satoshi: ['Satoshi', 'sans'],
+				satoshi: ['Satoshi', 'sans']
 			}
 		}
 	}

@@ -13,7 +13,7 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.me',
+	site: 'https://cworld.top',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
@@ -45,4 +45,5 @@ export default defineConfig({
 	adapter: vercel({
 		webAnalytics: { enabled: true }
 	})
+	// adapter: netlify()
 })
