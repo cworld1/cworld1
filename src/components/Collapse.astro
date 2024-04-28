@@ -8,28 +8,39 @@ interface Props {
 const { class: className, title, ...props } = Astro.props
 ---
 
-<collapse-component>
+<collapse-component class='group/expand'>
   <div class={cn(className, 'rounded-xl border border-border py-3 px-5')} {...props}>
-    <div class='expandable-div flex cursor-pointer justify-between'>
-      <p class='m-0'>{title}</p>
-      <div class='expand-button transform transition-transform duration-200'>
+    <div class='group/highlight expand-title flex cursor-pointer justify-between'>
+      <p class='m-0 transition-colors group-hover/highlight:text-primary'>{title}</p>
+      <div class='expand-button'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          width='20'
-          height='20'
+          width='16'
+          height='16'
           viewBox='0 0 24 24'
-          slot='icon-before'
-          class='my-1'
+          fill='none'
+          stroke-width='2.5'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          class='my-1 stroke-muted-foreground transition-all group-hover/highlight:stroke-primary group-[.expanded]/expand:-rotate-90'
         >
-          <path
-            fill='currentColor'
-            d='M17.073 12.5L11.28 6.707L12 6l7 7l-7 7l-.72-.707L17.073 13.5H5v-1z'
-          >
-          </path>
+          <line
+            x1='5'
+            y1='12'
+            x2='19'
+            y2='12'
+            class='translate-x-1 scale-x-100 duration-300 ease-in-out group-[.expanded]/expand:translate-x-4 group-[.expanded]/expand:scale-x-0'
+          ></line>
+          <polyline
+            points='12 5 19 12 12 19'
+            class='translate-x-1 duration-300 ease-in-out group-[.expanded]/expand:translate-x-0'
+          ></polyline>
         </svg>
       </div>
     </div>
-    <div class='content-box max-h-0 opacity-0 transition-all duration-300 ease-in-out'>
+    <div
+      class='content-box max-h-0 opacity-0 transition-all duration-300 ease-in-out group-[.expanded]/expand:mt-2 group-[.expanded]/expand:max-h-screen group-[.expanded]/expand:opacity-100'
+    >
       <slot />
     </div>
   </div>
@@ -42,19 +53,14 @@ const { class: className, title, ...props } = Astro.props
     }
 
     connectedCallback() {
-      const expandableDiv = this.querySelector('.expandable-div')
-      if (!expandableDiv) return
-      expandableDiv.addEventListener('click', () => {
-        let contentBox = this.querySelector('.content-box') as HTMLElement
-        let expandButton = this.querySelector('.expand-button') as HTMLElement
-        if (contentBox.classList.contains('max-h-0')) {
-          contentBox.classList.remove('max-h-0', 'opacity-0')
-          contentBox.classList.add('max-h-screen', 'opacity-100', 'mt-2')
-          expandButton.style.transform = 'rotate(-90deg)'
+      const expandTitle = this.querySelector('.expand-title')
+      // const expandable = this.querySelector('.expandable')
+      if (!expandTitle) return
+      expandTitle.addEventListener('click', () => {
+        if (this.classList.contains('expanded')) {
+          this.classList.remove('expanded')
         } else {
-          contentBox.classList.remove('max-h-screen', 'opacity-100', 'mt-2')
-          contentBox.classList.add('max-h-0', 'opacity-0')
-          expandButton.style.transform = 'rotate(0deg)'
+          this.classList.add('expanded')
         }
       })
     }
