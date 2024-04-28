@@ -211,8 +211,8 @@ python -m genshinhelper
 
 ```json
 {
-	"COOKIE_MIHOYOBBS": "",
-	"DISCORD_WEBHOOK": ""
+  "COOKIE_MIHOYOBBS": "",
+  "DISCORD_WEBHOOK": ""
 }
 ```
 
@@ -224,9 +224,9 @@ JS 代码如下：
 
 ```javascript
 javascript: (function () {
-	let domain = document.domain
-	let cookie = document.cookie
-	prompt('Cookies: ' + domain, cookie)
+  let domain = document.domain
+  let cookie = document.cookie
+  prompt('Cookies: ' + domain, cookie)
 })()
 ```
 
@@ -262,10 +262,10 @@ javascript: (function () {
 
 ```json
 {
-	"notifier": "",
-	"params": {
-		"markdown": false
-	}
+  "notifier": "",
+  "params": {
+    "markdown": false
+  }
 }
 ```
 
@@ -299,16 +299,16 @@ ONEPUSH={"notifier":"bark","params":{"markdown":false,"key":"xxxxxx"}}
 
 ```json
 {
-	"method": "post",
-	"url": "",
-	"data": {},
-	"retcode_key": "",
-	"retcode_value": 200,
-	"data_type": "data",
-	"merge_title_and_desp": false,
-	"set_data_title": "",
-	"set_data_sub_title": "",
-	"set_data_desp": ""
+  "method": "post",
+  "url": "",
+  "data": {},
+  "retcode_key": "",
+  "retcode_value": 200,
+  "data_type": "data",
+  "merge_title_and_desp": false,
+  "set_data_title": "",
+  "set_data_sub_title": "",
+  "set_data_desp": ""
 }
 ```
 
@@ -337,16 +337,16 @@ ONEPUSH={"notifier":"bark","params":{"markdown":false,"key":"xxxxxx"}}
 
 ```json
 {
-	"method": "post",
-	"url": "https://sc.ftqq.com/{直接填写你的SCKEY}.send",
-	"data": {},
-	"retcode_key": "errno",
-	"retcode_value": 0,
-	"data_type": "data",
-	"merge_title_and_desp": true,
-	"set_data_title": "test",
-	"set_data_sub_title": "",
-	"set_data_desp": "desp"
+  "method": "post",
+  "url": "https://sc.ftqq.com/{直接填写你的SCKEY}.send",
+  "data": {},
+  "retcode_key": "errno",
+  "retcode_value": 0,
+  "data_type": "data",
+  "merge_title_and_desp": true,
+  "set_data_title": "test",
+  "set_data_sub_title": "",
+  "set_data_desp": "desp"
 }
 ```
 

@@ -222,7 +222,7 @@ Log 选项卡中，每出现一条`Resquest has been Send.`说明学习进度增
 
 ```javascript
 var sToInsert =
-	"<script src='https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js'></script><script>var vConsole = new VConsole();</script>"
+  "<script src='https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js'></script><script>var vConsole = new VConsole();</script>"
 oSession.utilDecodeResponse()
 oSession.utilReplaceOnceInResponse('</head>', sToInsert + '</head>', 0)
 ```

@@ -4,9 +4,9 @@ import type { HTMLAttributes } from 'astro/types'
 import { cn, getFormattedDate } from '@/utils'
 
 type Props = HTMLAttributes<'time'> & {
-	date: Date
-	dateTimeOptions?: Intl.DateTimeFormatOptions
-	class?: string
+  date: Date
+  dateTimeOptions?: Intl.DateTimeFormatOptions
+  class?: string
 }
 
 const { date, dateTimeOptions, class: className, ...attrs } = Astro.props
@@ -15,7 +15,7 @@ const postDate = getFormattedDate(date, dateTimeOptions)
 ---
 
 <samp class={cn(className, 'text-muted-foreground')} {...attrs}>
-	<time datetime={date.toISOString()}>
-		{postDate}
-	</time>
+  <time datetime={date.toISOString()}>
+    {postDate}
+  </time>
 </samp>

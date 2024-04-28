@@ -35,11 +35,11 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 {/* Font preloads */}
 <!-- <link rel='preload' href='/fonts/Satoshi-Variable.ttf' as='font' type='font/ttf' crossorigin />
 <link
-	rel='preload'
-	href='/fonts/Satoshi-VariableItalic.ttf'
-	as='font'
-	type='font/ttf'
-	crossorigin
+  rel='preload'
+  href='/fonts/Satoshi-VariableItalic.ttf'
+  as='font'
+  type='font/ttf'
+  crossorigin
 />
 <link rel='preload' href='/fonts/ClashDisplay-Variable.ttf' as='font' type='font/ttf' crossorigin /> -->
 
@@ -65,12 +65,12 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 <meta content='1200' property='og:image:width' />
 <meta content='630' property='og:image:height' />
 {
-	articleDate && (
-		<>
-			<meta content={siteConfig.author} property='article:author' />
-			<meta content={articleDate} property='article:published_time' />
-		</>
-	)
+  articleDate && (
+    <>
+      <meta content={siteConfig.author} property='article:author' />
+      <meta content={articleDate} property='article:published_time' />
+    </>
+  )
 }
 
 {/* Twitter */}

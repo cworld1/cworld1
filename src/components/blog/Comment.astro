@@ -4,42 +4,42 @@
 
 <div class='comment-component'>Comment seems to stuck. Try to refresh?✨</div>
 <script>
-	import { init } from '@waline/client'
-	init({
-		el: '.comment-component',
-		serverURL: 'https://waline.cworld.top',
-		// emoji: ['https://blog.cworld.top/src/img/bmoji'],
-		reaction: ['https://cdn.cbd.int/cworld-blog@latest/src/img/comment-like.png'],
-		// search: false,
-		pageview: true,
-		comment: true,
-		locale: {
-			reaction0: 'Like',
-			placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
-		}
-	})
+  import { init } from '@waline/client'
+  init({
+    el: '.comment-component',
+    serverURL: 'https://waline.cworld.top',
+    // emoji: ['https://blog.cworld.top/src/img/bmoji'],
+    reaction: ['https://cdn.cbd.int/cworld-blog@latest/src/img/comment-like.png'],
+    // search: false,
+    pageview: true,
+    comment: true,
+    locale: {
+      reaction0: 'Like',
+      placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
+    }
+  })
 </script>
 <style>
-	/* 基础配色 */
-	:root {
-		--waline-dark-grey: var(--inside-foreground-color);
-		--waline-theme-color: var(--inside-accent-color);
-		--waline-active-color: var(--inside-accent-color);
-		--waline-color: var(--inside-foreground-color);
-		--waline-bgcolor: var(--inside-background);
-		--waline-bgcolor-light: var(--inside-card-background);
-		--waline-bgcolor-hover: var(--inside-card-background);
-		--waline-border-color: var(--inside-border-color);
-		--waline-disable-bgcolor: var(--inside-card-background);
-		--waline-disable-color: var(--inside-foreground-color);
-		--waline-code-bgcolor: var(--inside-highlight-00);
-		--waline-mobile-avatar-size: calc(var(--waline-avatar-size) * 11 / 13);
-		--waline-badge-color: var(--inside-accent-color);
-		--waline-info-bgcolor: var(--inside-background);
-		--waline-avatar-radius: 50%;
-	}
-	/* 屏蔽浏览器内核显示 */
-	#waline .wl-browser {
-		display: none !important;
-	}
+  /* 基础配色 */
+  :root {
+    --waline-dark-grey: var(--inside-foreground-color);
+    --waline-theme-color: var(--inside-accent-color);
+    --waline-active-color: var(--inside-accent-color);
+    --waline-color: var(--inside-foreground-color);
+    --waline-bgcolor: var(--inside-background);
+    --waline-bgcolor-light: var(--inside-card-background);
+    --waline-bgcolor-hover: var(--inside-card-background);
+    --waline-border-color: var(--inside-border-color);
+    --waline-disable-bgcolor: var(--inside-card-background);
+    --waline-disable-color: var(--inside-foreground-color);
+    --waline-code-bgcolor: var(--inside-highlight-00);
+    --waline-mobile-avatar-size: calc(var(--waline-avatar-size) * 11 / 13);
+    --waline-badge-color: var(--inside-accent-color);
+    --waline-info-bgcolor: var(--inside-background);
+    --waline-avatar-radius: 50%;
+  }
+  /* 屏蔽浏览器内核显示 */
+  #waline .wl-browser {
+    display: none !important;
+  }
 </style>

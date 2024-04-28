@@ -13,37 +13,37 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://cworld.top',
-	integrations: [
-		expressiveCode(expressiveCodeOptions),
-		tailwind({
-			applyBaseStyles: false
-		}),
-		sitemap(),
-		mdx(),
-		icon()
-	],
-	markdown: {
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
-		rehypePlugins: [
-			[
-				rehypeExternalLinks,
-				{
-					target: '_blank',
-					rel: ['nofollow, noopener, noreferrer']
-				}
-			]
-		],
-		remarkRehype: {
-			footnoteLabelProperties: {
-				className: ['']
-			}
-		}
-	},
-	prefetch: true,
-	output: 'server',
-	adapter: vercel({
-		webAnalytics: { enabled: true }
-	})
-	// adapter: netlify()
+  site: 'https://cworld.top',
+  integrations: [
+    expressiveCode(expressiveCodeOptions),
+    tailwind({
+      applyBaseStyles: false
+    }),
+    sitemap(),
+    mdx(),
+    icon()
+  ],
+  markdown: {
+    remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+          rel: ['nofollow, noopener, noreferrer']
+        }
+      ]
+    ],
+    remarkRehype: {
+      footnoteLabelProperties: {
+        className: ['']
+      }
+    }
+  },
+  prefetch: true,
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  })
+  // adapter: netlify()
 })

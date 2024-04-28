@@ -113,29 +113,29 @@ Waline 基于 Valine，是一个干净纯粹但功能丰富的评论系统框架
 
 ```css
 :root {
-	--waline-dark-grey: var(--inside-foreground-color);
-	--waline-theme-color: var(--inside-accent-color);
-	--waline-active-color: var(--inside-accent-color);
-	--waline-color: var(--inside-foreground-color);
-	--waline-bgcolor: var(--inside-background);
-	--waline-bgcolor-light: var(--inside-card-background);
-	--waline-bgcolor-hover: var(--inside-card-background);
-	--waline-border-color: var(--inside-border-color);
-	--waline-disable-bgcolor: var(--inside-card-background);
-	--waline-disable-color: var(--inside-foreground-color);
-	--waline-code-bgcolor: var(--inside-highlight-00);
-	--waline-mobile-avatar-size: calc(var(--waline-avatar-size) * 11 / 13);
-	--waline-badge-color: var(--inside-accent-color);
-	--waline-info-bgcolor: var(--inside-background);
-	--waline-avatar-radius: 50%;
+  --waline-dark-grey: var(--inside-foreground-color);
+  --waline-theme-color: var(--inside-accent-color);
+  --waline-active-color: var(--inside-accent-color);
+  --waline-color: var(--inside-foreground-color);
+  --waline-bgcolor: var(--inside-background);
+  --waline-bgcolor-light: var(--inside-card-background);
+  --waline-bgcolor-hover: var(--inside-card-background);
+  --waline-border-color: var(--inside-border-color);
+  --waline-disable-bgcolor: var(--inside-card-background);
+  --waline-disable-color: var(--inside-foreground-color);
+  --waline-code-bgcolor: var(--inside-highlight-00);
+  --waline-mobile-avatar-size: calc(var(--waline-avatar-size) * 11 / 13);
+  --waline-badge-color: var(--inside-accent-color);
+  --waline-info-bgcolor: var(--inside-background);
+  --waline-avatar-radius: 50%;
 }
 
 #waline .wl-editor {
-	width: calc(100% - 2em) !important;
+  width: calc(100% - 2em) !important;
 }
 
 #waline pre {
-	border-color: var(--inside-highlight-01);
+  border-color: var(--inside-highlight-01);
 }
 ```
 
@@ -193,85 +193,85 @@ plugins:
 
 ```css
 .f > ul {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
 }
 .f > ul > li {
-	transition: 0.3s ease;
-	list-style: none;
+  transition: 0.3s ease;
+  list-style: none;
 }
 .f > ul > li {
-	display: flex;
-	margin: 0 10px 10px 0;
-	text-decoration: none;
-	padding: 10px;
-	background-color: var(--inside-background);
-	color: var(--inside-accent-color);
-	border-radius: 6px;
+  display: flex;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  padding: 10px;
+  background-color: var(--inside-background);
+  color: var(--inside-accent-color);
+  border-radius: 6px;
 }
 .f > ul > li:hover {
-	color: #fff;
-	background-color: var(--inside-accent-color);
-	box-shadow: 0 2px 4px 1px rgb(0 0 0 / 20%);
-	transform: scale(1.03);
+  color: #fff;
+  background-color: var(--inside-accent-color);
+  box-shadow: 0 2px 4px 1px rgb(0 0 0 / 20%);
+  transform: scale(1.03);
 }
 .f > ul > li:active {
-	transform: scale(0.97);
+  transform: scale(0.97);
 }
 .f > ul > li > p {
-	margin: 0;
+  margin: 0;
 }
 .f img {
-	border: solid 1px var(--inside-border-color);
-	border-radius: 25px;
-	width: 50px;
-	height: 50px;
-	margin: 0 !important;
-	max-width: fit-content;
+  border: solid 1px var(--inside-border-color);
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  margin: 0 !important;
+  max-width: fit-content;
 }
 .f > ul > li > ul {
-	position: relative;
-	margin-left: 10px;
-	padding: 0;
+  position: relative;
+  margin-left: 10px;
+  padding: 0;
 }
 .f > ul > li > ul > li {
-	list-style: none;
-	text-align: center;
+  list-style: none;
+  text-align: center;
 }
 .f > ul > li > ul > li:nth-child(1) {
-	font-size: 14px;
+  font-size: 14px;
 }
 .f > ul > li > ul > li:nth-child(2) {
-	font-size: 12px;
-	margin-top: 5px;
-	max-width: 108px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	opacity: 0.8;
+  font-size: 12px;
+  margin-top: 5px;
+  max-width: 108px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0.8;
 }
 .f > ul > li > ul > li:nth-child(3) a {
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	border: 0;
-	color: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  color: transparent;
 }
 @media (max-width: 450px) {
-	.f > ul > li {
-		margin-left: 0;
-		width: 100%;
-	}
-	.f > ul > li > ul {
-		width: 100%;
-	}
-	.f > ul > li > ul > li {
-		text-align: start;
-		max-width: 100% !important;
-	}
+  .f > ul > li {
+    margin-left: 0;
+    width: 100%;
+  }
+  .f > ul > li > ul {
+    width: 100%;
+  }
+  .f > ul > li > ul > li {
+    text-align: start;
+    max-width: 100% !important;
+  }
 }
 ```
 

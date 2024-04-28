@@ -18,58 +18,58 @@ tags:
 
 ```css
 .tab-container .tab > .ad-unit.bottom {
-	display: none !important;
+  display: none !important;
 }
 .store-detail .preview .widget,
 .widgets-container .widget {
-	background: #fffc;
-	backdrop-filter: blur(20px);
+  background: #fffc;
+  backdrop-filter: blur(20px);
 }
 .store-detail .preview .widget .wtooltip,
 .widgets-container .widget .wtooltip {
-	display: none !important;
+  display: none !important;
 }
 header.toolbar.floating .search input {
-	background: #fffc;
-	backdrop-filter: blur(20px);
-	box-shadow: 0 2px 10px 0 #0000005e;
+  background: #fffc;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 10px 0 #0000005e;
 }
 .store-detail .preview .widget .wdelete,
 .widgets-container .widget .wdelete {
-	color: black;
+  color: black;
 }
 .feedback-link .icon {
-	display: none !important;
+  display: none !important;
 }
 .bg-info {
-	right: 10px;
-	color: #fffc;
+  right: 10px;
+  color: #fffc;
 }
 .add-widget-link {
-	color: #fffc;
-	position: absolute;
+  color: #fffc;
+  position: absolute;
 }
 .menu-toggle .menu-button:hover {
-	background-color: #fff;
+  background-color: #fff;
 }
 .menu-toggle .menu-button:before {
-	color: black;
+  color: black;
 }
 .menu-toggle .menu-button {
-	background-color: #fffc;
+  background-color: #fffc;
 }
 .add-widget-link .icon {
-	text-shadow: 0 0 0 #fff0;
+  text-shadow: 0 0 0 #fff0;
 }
 button.material.fab {
-	background-color: #fffc;
+  background-color: #fffc;
 }
 .menu-container {
-	background: #fffc;
-	backdrop-filter: blur(20px);
-	box-shadow: 0 0 0 0 #fff0;
+  background: #fffc;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 0 0 #fff0;
 }
 .app.settings .page header {
-	background: #4080fe;
+  background: #4080fe;
 }
 ```

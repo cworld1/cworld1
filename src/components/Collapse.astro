@@ -2,62 +2,62 @@
 import { cn } from '@/utils'
 
 interface Props {
-	class?: string
-	title: string
+  class?: string
+  title: string
 }
 const { class: className, title, ...props } = Astro.props
 ---
 
 <collapse-component>
-	<div class={cn(className, 'rounded-xl border border-border py-3 px-5')} {...props}>
-		<div class='expandable-div flex cursor-pointer justify-between'>
-			<p class='m-0'>{title}</p>
-			<div class='expand-button transform transition-transform duration-200'>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					width='20'
-					height='20'
-					viewBox='0 0 24 24'
-					slot='icon-before'
-					class='my-1'
-				>
-					<path
-						fill='currentColor'
-						d='M17.073 12.5L11.28 6.707L12 6l7 7l-7 7l-.72-.707L17.073 13.5H5v-1z'
-					>
-					</path>
-				</svg>
-			</div>
-		</div>
-		<div class='content-box max-h-0 opacity-0 transition-all duration-300 ease-in-out'>
-			<slot />
-		</div>
-	</div>
+  <div class={cn(className, 'rounded-xl border border-border py-3 px-5')} {...props}>
+    <div class='expandable-div flex cursor-pointer justify-between'>
+      <p class='m-0'>{title}</p>
+      <div class='expand-button transform transition-transform duration-200'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='20'
+          height='20'
+          viewBox='0 0 24 24'
+          slot='icon-before'
+          class='my-1'
+        >
+          <path
+            fill='currentColor'
+            d='M17.073 12.5L11.28 6.707L12 6l7 7l-7 7l-.72-.707L17.073 13.5H5v-1z'
+          >
+          </path>
+        </svg>
+      </div>
+    </div>
+    <div class='content-box max-h-0 opacity-0 transition-all duration-300 ease-in-out'>
+      <slot />
+    </div>
+  </div>
 </collapse-component>
 
 <script>
-	class Collapse extends HTMLElement {
-		constructor() {
-			super()
-		}
+  class Collapse extends HTMLElement {
+    constructor() {
+      super()
+    }
 
-		connectedCallback() {
-			const expandableDiv = this.querySelector('.expandable-div')
-			if (!expandableDiv) return
-			expandableDiv.addEventListener('click', () => {
-				let contentBox = this.querySelector('.content-box') as HTMLElement
-				let expandButton = this.querySelector('.expand-button') as HTMLElement
-				if (contentBox.classList.contains('max-h-0')) {
-					contentBox.classList.remove('max-h-0', 'opacity-0')
-					contentBox.classList.add('max-h-screen', 'opacity-100', 'mt-2')
-					expandButton.style.transform = 'rotate(-90deg)'
-				} else {
-					contentBox.classList.remove('max-h-screen', 'opacity-100', 'mt-2')
-					contentBox.classList.add('max-h-0', 'opacity-0')
-					expandButton.style.transform = 'rotate(0deg)'
-				}
-			})
-		}
-	}
-	customElements.define('collapse-component', Collapse)
+    connectedCallback() {
+      const expandableDiv = this.querySelector('.expandable-div')
+      if (!expandableDiv) return
+      expandableDiv.addEventListener('click', () => {
+        let contentBox = this.querySelector('.content-box') as HTMLElement
+        let expandButton = this.querySelector('.expand-button') as HTMLElement
+        if (contentBox.classList.contains('max-h-0')) {
+          contentBox.classList.remove('max-h-0', 'opacity-0')
+          contentBox.classList.add('max-h-screen', 'opacity-100', 'mt-2')
+          expandButton.style.transform = 'rotate(-90deg)'
+        } else {
+          contentBox.classList.remove('max-h-screen', 'opacity-100', 'mt-2')
+          contentBox.classList.add('max-h-0', 'opacity-0')
+          expandButton.style.transform = 'rotate(0deg)'
+        }
+      })
+    }
+  }
+  customElements.define('collapse-component', Collapse)
 </script>

@@ -108,27 +108,27 @@ AMA（Ask Me Anything）原本指一种在线问答形式，这里只是一个 C
   const TELEGRAPH_URL = 'https://api.openai.com'
 
   addEventListener('fetch', (event) => {
-  	event.respondWith(handleRequest(event.request))
+    event.respondWith(handleRequest(event.request))
   })
 
   async function handleRequest(request) {
-  	const url = new URL(request.url)
-  	url.host = TELEGRAPH_URL.replace(/^https?:\/\//, '')
+    const url = new URL(request.url)
+    url.host = TELEGRAPH_URL.replace(/^https?:\/\//, '')
 
-  	const modifiedRequest = new Request(url.toString(), {
-  		headers: request.headers,
-  		method: request.method,
-  		body: request.body,
-  		redirect: 'follow'
-  	})
+    const modifiedRequest = new Request(url.toString(), {
+      headers: request.headers,
+      method: request.method,
+      body: request.body,
+      redirect: 'follow'
+    })
 
-  	const response = await fetch(modifiedRequest)
-  	const modifiedResponse = new Response(response.body, response)
+    const response = await fetch(modifiedRequest)
+    const modifiedResponse = new Response(response.body, response)
 
-  	// 添加允许跨域访问的响应头
-  	modifiedResponse.headers.set('Access-Control-Allow-Origin', '*')
+    // 添加允许跨域访问的响应头
+    modifiedResponse.headers.set('Access-Control-Allow-Origin', '*')
 
-  	return modifiedResponse
+    return modifiedResponse
   }
   ```
 
@@ -140,12 +140,12 @@ AMA（Ask Me Anything）原本指一种在线问答形式，这里只是一个 C
 
   ```json
   {
-  	"error": {
-  		"message": "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.",
-  		"type": "invalid_request_error",
-  		"param": null,
-  		"code": null
-  	}
+    "error": {
+      "message": "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.",
+      "type": "invalid_request_error",
+      "param": null,
+      "code": null
+    }
   }
   ```
 

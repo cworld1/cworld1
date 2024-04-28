@@ -4,71 +4,71 @@ import TOC from '@/components/blog/TOC.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import AboutContents from './contents.astro'
 const headings = [
-	{
-		depth: 2,
-		slug: 'general-talk',
-		text: 'General Talk'
-	},
-	{
-		depth: 2,
-		slug: 'social-networks',
-		text: 'Social Networks'
-	},
-	{
-		depth: 2,
-		slug: 'gossips',
-		text: 'Gossips'
-	},
-	{
-		depth: 2,
-		slug: 'sponsorship',
-		text: 'Sponsorship'
-	},
-	{
-		depth: 2,
-		slug: 'about-blog',
-		text: 'About Blog'
-	}
+  {
+    depth: 2,
+    slug: 'general-talk',
+    text: 'General Talk'
+  },
+  {
+    depth: 2,
+    slug: 'social-networks',
+    text: 'Social Networks'
+  },
+  {
+    depth: 2,
+    slug: 'gossips',
+    text: 'Gossips'
+  },
+  {
+    depth: 2,
+    slug: 'sponsorship',
+    text: 'Sponsorship'
+  },
+  {
+    depth: 2,
+    slug: 'about-blog',
+    text: 'About Blog'
+  }
 ]
 ---
 
 <PageLayout meta={{ title: 'About' }}>
-	<div class='w-full'>
-		<Button title='Back' href='/' style='button'>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				width='14'
-				height='14'
-				viewBox='0 0 24 24'
-				slot='icon-before'
-			>
-				<path
-					fill='currentColor'
-					d='m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z'
-				>
-				</path>
-			</svg>
-		</Button>
+  <div class='w-full'>
+    <Button title='Back' href='/' style='button'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='14'
+        height='14'
+        viewBox='0 0 24 24'
+        slot='icon-before'
+      >
+        <path
+          fill='currentColor'
+          d='m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z'
+        >
+        </path>
+      </svg>
+    </Button>
 
-		<div class='mt-8 gap-x-10 lg:flex lg:items-start'>
-			<TOC headings={headings} />
-			<article
-				class='flex-grow break-words'
-				style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
-				data-pagefind-body
-			>
-				<div
-					class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
-				>
-					<h1>About</h1>
-					<AboutContents />
-				</div>
-			</article>
-		</div>
-		<div
-			class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
-		>
-			<slot />
-		</div>
-	</div>
+    <div class='mt-8 gap-x-10 lg:flex lg:items-start'>
+      <TOC headings={headings} />
+      <article
+        class='flex-grow break-words'
+        style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
+        data-pagefind-body
+      >
+        <div
+          class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+        >
+          <h1>About</h1>
+          <AboutContents />
+        </div>
+      </article>
+    </div>
+    <div
+      class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+    >
+      <slot />
+    </div>
+  </div>
 </PageLayout>

@@ -2,29 +2,29 @@
 import { cn } from '@/utils'
 
 interface Props {
-	class?: string
-	sponsors: {
-		name: string
-		amount: string
-		date: string
-	}[]
+  class?: string
+  sponsors: {
+    name: string
+    amount: string
+    date: string
+  }[]
 }
 const { class: className, sponsors, ...props } = Astro.props
 ---
 
 <table class={cn(className)} {...props}>
-	<tr class='text-left'>
-		<th>Name</th>
-		<th>Amount</th>
-		<th>Date</th>
-	</tr>
-	{
-		sponsors.map((sponsor) => (
-			<tr>
-				<td>{sponsor.name}</td>
-				<td>{sponsor.amount}</td>
-				<td>{sponsor.date}</td>
-			</tr>
-		))
-	}
+  <tr class='text-left'>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Date</th>
+  </tr>
+  {
+    sponsors.map((sponsor) => (
+      <tr>
+        <td>{sponsor.name}</td>
+        <td>{sponsor.amount}</td>
+        <td>{sponsor.date}</td>
+      </tr>
+    ))
+  }
 </table>
