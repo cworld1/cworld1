@@ -1,6 +1,4 @@
 ---
-import { cn } from '@/utils'
-
 interface Props {
 	class?: string
 	events: {
@@ -11,7 +9,7 @@ interface Props {
 const { class: className, events, ...props } = Astro.props
 ---
 
-<div class={cn(className)} {...props}>
+<div class={className} {...props}>
 	<ul class='pl-2'>
 		{
 			events.map((event, index) => (
@@ -24,7 +22,7 @@ const { class: className, events, ...props } = Astro.props
 						/>
 					)}
 					<samp class='my-1 min-w-[100px] text-right text-sm'>{event.date}</samp>
-					<div>{event.content}</div>
+					<Fragment set:html={event.content} />
 				</li>
 			))
 		}
