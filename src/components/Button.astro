@@ -4,16 +4,72 @@ const { as: Tag = 'a', class: className, title, href, style = 'button' } = Astro
 ---
 
 <Tag
-	class={cn(
-		className,
-		'inline-flex items-center gap-x-1 rounded-lg bg-primary-foreground border border-border px-2 py-1 text-sm transition-all hover:bg-input',
-		!href && 'cursor-default',
-		style === 'pill' && 'rounded-xl'
-	)}
-	href={href}
-	data-astro-prefetch
+  class={cn(
+    className,
+    'group inline-flex items-center gap-x-1 rounded-lg bg-primary-foreground border border-border px-2 py-1 text-sm text-muted-foreground transition-all hover:bg-input',
+    !href && 'cursor-default',
+    style === 'pill' && 'rounded-xl'
+  )}
+  href={href}
+  data-astro-prefetch
 >
-	<slot name='icon-before' />
-	<p>{title}</p>
-	<slot name='icon-after' />
+  <slot name='icon-before'>
+    {
+      style === 'back' && (
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='16'
+          height='16'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke-width='2.5'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          class='stroke-muted-foreground group-hover:stroke-primary'
+        >
+          <line
+            x1='19'
+            y1='12'
+            x2='5'
+            y2='12'
+            class='translate-x-3 scale-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:scale-x-100'
+          />
+          <polyline
+            points='12 19 5 12 12 5'
+            class='translate-x-1 transition-all duration-300 ease-in-out group-hover:translate-x-0'
+          />
+        </svg>
+      )
+    }
+  </slot>
+  <p>{title}</p>
+  <slot name='icon-after'>
+    {
+      style === 'ahead' && (
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='16'
+          height='16'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke-width='2.5'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          class='my-1 stroke-muted-foreground group-hover:stroke-primary'
+        >
+          <line
+            x1='5'
+            y1='12'
+            x2='19'
+            y2='12'
+            class='translate-x-4 scale-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:scale-x-100'
+          />
+          <polyline
+            points='12 5 19 12 12 19'
+            class='translate-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1'
+          />
+        </svg>
+      )
+    }
+  </slot>
 </Tag>
