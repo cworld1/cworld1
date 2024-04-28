@@ -1,5 +1,18 @@
 ---
-
+const ITEMS = [
+	{
+		link: '/blog',
+		label: 'Blog'
+	},
+	{
+		link: '/projects',
+		label: 'Projects'
+	},
+	{
+		link: '/about',
+		label: 'About'
+	}
+]
 ---
 
 <header class='mb-12 flex w-full flex-wrap pb-3 text-sm sm:flex-nowrap sm:justify-start'>
@@ -10,24 +23,17 @@
 		<a class='flex-none text-xl font-semibold' href='/' aria-label='Brand'>CWorld Website</a>
 
 		<div class='flex flex-row items-center justify-center gap-x-5 sm:gap-x-7'>
-			<a
-				href='/blog'
-				class='flex-none text-[1.05rem] font-medium hover:text-foreground/75'
-				aria-label='Nav Menu Item'
-				>Blog
-			</a>
-			<a
-				href='/projects'
-				class='flex-none text-[1.05rem] font-medium hover:text-foreground/75'
-				aria-label='Nav Menu Item'
-				>Projects
-			</a>
-			<a
-				href='/about'
-				class='flex-none text-[1.05rem] font-medium hover:text-foreground/75'
-				aria-label='Nav Menu Item'
-				>About
-			</a>
+			{
+				ITEMS.map((item) => (
+					<a
+						href={item.link}
+						class='flex-none text-[1.05rem] font-medium hover:text-primary'
+						aria-label='Nav Menu Item'
+					>
+						{item.label}
+					</a>
+				))
+			}
 
 			<button
 				id='toggleDarkMode'
