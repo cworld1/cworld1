@@ -63,6 +63,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pagesv1
+          publish_branch: gh-pagesv2
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
