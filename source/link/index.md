@@ -79,7 +79,7 @@ copyright: false
 
 > 名称：CWorld's Blog
 > 简介：求知若愚，虚怀若谷
-> 链接：https://blog.cworld.top/
+> 链接：https://blogv1.cworld.top/
 > 图标：https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
 
 申请时还请按照这个模板留言（[提交 PR](https://github.com/cworld1/cworld1/blob/main/source/src/links.json) 或许也是个更快的办法）。此外有关申请说明：
