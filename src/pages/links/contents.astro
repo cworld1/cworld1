@@ -1,0 +1,81 @@
+---
+import links from '@/assets/links.json'
+import Collapse from '@/components/Collapse.astro'
+import Timeline from '@/components/Timeline.astro'
+import FriendList from '@/components/links/FriendList.astro'
+const { class: className, ...props } = Astro.props
+
+const friendlist = links.friends
+---
+
+<div class={className} {...props}>
+  <p>怎么可能有顺序呢，当然是随机的~</p>
+  <FriendList list={friendlist[0]} />
+  <Collapse title='不太活跃的博客'>
+    <FriendList list={friendlist[1]} />
+  </Collapse>
+  <Collapse title='友链记录册'>
+    <Timeline
+      events={[
+        { date: '2020-07-09', content: '蒟蒻の BLOG 离开' },
+        { date: '2020-07-09', content: 'Vexsy 离开' },
+        { date: '2020-07-07', content: 'Raaynk’s Blog 消失' },
+        { date: '2020-07-07', content: '冬马的白色相簿 回归' },
+        { date: '2021-02-22', content: '半叶子 离开' },
+        { date: '2021-02-22', content: '冬马的白色相簿 消失' },
+        { date: '2021-02-02', content: 'Heven Kin 回归' },
+        { date: '2022-02-13', content: '理工小天使 消失' },
+        { date: '2022-02-13', content: '自由灵的梦境 消失' },
+        { date: '2022-02-13', content: '冬马のホワイトアルバム 消失' },
+        { date: '2022-02-13', content: 'Sansui 消失' },
+        { date: '2022-09-01', content: '椎咲良田 消失' },
+        { date: '2022-09-01', content: '木子の Blog 离开' },
+        { date: '2022-09-01', content: 'LanYun の Blog 消失' },
+        { date: '2022-09-01', content: "Wittoy's Blog 消失" },
+        { date: '2022-09-05', content: '东方幻梦 离开' },
+        { date: '2022-09-05', content: '绎梦机 离开' },
+        { date: '2022-11-09', content: '一叶竹 消失' },
+        { date: '2022-11-23', content: "KD's Blog 消失" },
+        { date: '2022-02-13', content: 'LanYun の Blog 回归' },
+        { date: '2022-12-14', content: 'KD 的网络小屋 回归' },
+        { date: '2023-02-09', content: 'L1nSn0w’s Blog 消失' },
+        { date: '2023-02-09', content: '鲨鱼辣椒 消失' },
+        { date: '2023-02-09', content: "Jinlk's blog 消失" },
+        { date: '2023-02-09', content: 'L1nSn0w’s Blog 回归' },
+        { date: '2023-03-01', content: 'NEKO#ΦωΦ 消失' },
+        { date: '2023-04-25', content: 'Barkure 消失' },
+        { date: '2023-04-25', content: 'KD 的网络小屋 消失' },
+        { date: '2023-06-13', content: 'LyShark - 孤风洗剑 消失' },
+        { date: '2023-06-13', content: 'Ojhdt’s Blog 消失' },
+        { date: '2023-06-13', content: 'Barkure 消失' },
+        { date: '2023-06-13', content: "七云's Blog 消失" },
+        { date: '2023-10-24', content: "Enjoy's blog 消失" },
+        { date: '2023-10-24', content: "Wayne's Blog 消失" },
+        { date: '2023-10-24', content: "七云's Blog 回归" }
+      ]}
+    />
+  </Collapse>
+  <FriendList list={friendlist[2]} title='特殊友链' />
+  <!-- apply-links -->
+  <h2 id='apply-links'>申请友链</h2>
+  <p>本站信息如下：</p>
+  <blockquote>
+    <p>名称：CWorld's Blog</p>
+    <p>简介：求知若愚，虚怀若谷</p>
+    <p>链接：https://blog.cworld.top/</p>
+    <p>图标：https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200</p>
+  </blockquote>
+
+  <p>
+    申请时还请按照这个模板留言（<a
+      href='https://github.com/cworld1/cworld1/blob/main/source/src/links.json'
+      about='_blank'>提交 PR</a
+    > 或许也是个更快的办法）。此外有关申请说明：
+  </p>
+
+  <ul>
+    <li>在你的友链上添加了本站；</li>
+    <li>请确保你的站点活着；</li>
+    <li>博客内容不违反国家法律。</li>
+  </ul>
+</div>

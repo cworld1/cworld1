@@ -1,0 +1,47 @@
+---
+import Button from '@/components/Button.astro'
+import TOC from '@/components/blog/TOC.astro'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import Comment from '@/components/Comment.astro'
+import LinksContents from './contents.astro'
+const headings = [
+  {
+    depth: 2,
+    slug: 'special-links',
+    text: '特殊友链'
+  },
+  {
+    depth: 2,
+    slug: 'apply-links',
+    text: '申请友链'
+  }
+]
+---
+
+<PageLayout meta={{ title: 'Links' }}>
+  <div class='w-full'>
+    <Button title='Back' href='/' style='back' />
+
+    <div class='mt-8 gap-x-10 lg:flex lg:items-start'>
+      <TOC headings={headings} />
+      <article
+        class='flex-grow break-words'
+        style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
+        data-pagefind-body
+      >
+        <div
+          class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+        >
+          <h1>Links</h1>
+          <LinksContents />
+        </div>
+      </article>
+    </div>
+    <div
+      class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+    >
+      <Comment />
+      <slot />
+    </div>
+  </div>
+</PageLayout>
