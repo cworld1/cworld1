@@ -9,7 +9,7 @@ const { class: className, title, ...props } = Astro.props
 ---
 
 <collapse-component class='group/expand'>
-  <div class={cn(className, 'rounded-xl border border-border py-3 px-5')} {...props}>
+  <div class={cn(className, 'rounded-xl border border-border py-3 px-5 my-4')} {...props}>
     <div class='group/highlight expand-title flex cursor-pointer justify-between'>
       <p class='m-0 transition-colors group-hover/highlight:text-primary'>{title}</p>
       <div class='expand-button'>
@@ -22,7 +22,7 @@ const { class: className, title, ...props } = Astro.props
           stroke-width='2.5'
           stroke-linecap='round'
           stroke-linejoin='round'
-          class='my-1 stroke-muted-foreground transition-all group-hover/highlight:stroke-primary group-[.expanded]/expand:-rotate-90'
+          class='my-1 stroke-muted-foreground transition-all duration-300 group-hover/highlight:stroke-primary group-[.expanded]/expand:-rotate-90'
         >
           <line
             x1='5'
@@ -39,9 +39,13 @@ const { class: className, title, ...props } = Astro.props
       </div>
     </div>
     <div
-      class='content-box max-h-0 opacity-0 transition-all duration-300 ease-in-out group-[.expanded]/expand:mt-2 group-[.expanded]/expand:max-h-screen group-[.expanded]/expand:opacity-100'
+      class='content-box max-h-0 overflow-hidden opacity-0 transition-all ease-in-out group-[.expanded]/expand:mt-2 group-[.expanded]/expand:max-h-full group-[.expanded]/expand:opacity-100'
     >
-      <slot />
+      <div
+        class='invisible delay-300 group-[.expanded]/expand:visible group-[.expanded]/expand:delay-0'
+      >
+        <slot />
+      </div>
     </div>
   </div>
 </collapse-component>
