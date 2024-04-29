@@ -13,7 +13,7 @@ appearance:
   # body background, default '#f5f7fa'
   background:
   # Sidebar background (when opened), default to accent_color
-  sidebar_background: "https://cdn.cbd.int/cworld-blog@latest/src/img/bg-photo.jpg #475976"
+  sidebar_background: "/src/img/bg-photo.jpg #475976"
   # Card background, default '#fff'
   card_background:
 
@@ -301,7 +301,7 @@ search:
 assets:
   # prefix: 'https://cdn.example.com'
   # suffix: '?m=webp&q=80'
-  prefix: "https://cdn.cbd.int/cworld-blog@latest"
+  # prefix: "https://cdn.cbd.int/cworld-blog@latest"
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
@@ -330,12 +330,12 @@ reward:
   #     color: '#09bb07'
   methods:
     - name: wechat
-      qrcode: https://cdn.cbd.int/cworld-blog@latest/src/img/wechat_qrcode.jpg
+      qrcode: /src/img/wechat_qrcode.jpg
       url: https://weixin.qq.com/
       text: 微信
       color: "#22ad38"
     - name: alipay
-      qrcode: https://cdn.cbd.int/cworld-blog@latest/src/img/alipay_qrcode.jpg
+      qrcode: /src/img/alipay_qrcode.jpg
       url: https://qr.alipay.com/fkx19096dtno6xmggeb9sf8
       text: 支付宝（点击前往）
       color: "#1678ff"
@@ -384,14 +384,14 @@ static_prefix: "https://gcore.jsdelivr.net/gh/ikeq/hexo-theme-inside@2.7.0/sourc
 # URL prefix for json data
 # If your json file is put in a cdn server,
 # set data_prefix as '//cdn.com/path/to/path/your_json_dir' and data_dir as 'your_json_dir'
-data_prefix: "https://cdn.cbd.int/cworld-blog@latest/api/"
+# data_prefix: "https://cdn.cbd.int/cworld-blog@latest/api/"
 # 标记：网页内容加速
 
 # Folder where json file will be generated to, default to 'api'
 data_dir:
 
 # Favicon, default to `favicon.ico`
-favicon: "https://cdn.cbd.int/cworld-blog@latest/src/favicon.ico"
+favicon: "/src/favicon.ico"
 
 # Google analytics
 # ga: UA-00000000-0
@@ -479,11 +479,11 @@ pwa:
     theme_color: "#659eb9"
     background_color: "#f5f7fa"
     icons:
-      - src: "https://cdn.cbd.int/cworld-blog@latest/src/img/icon-192x192.png"
+      - src: "/src/img/icon-192x192.png"
         sizes: 192x192
         type: image/png
         purpose: any
-      - src: "https://cdn.cbd.int/cworld-blog@latest/src/img/apple-touch-icon-144x144.png"
+      - src: "/src/img/apple-touch-icon-144x144.png"
         type: "image/png"
         sizes": "144x144"
         purpose: any
@@ -534,9 +534,8 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - https://cdn.cbd.int/clipboard@v2/dist/clipboard.min.js # 剪贴板
-  - https://cdn.cbd.int/@waline/client@v2/dist/waline.js # Waline 依赖
-  - https://cdn.cbd.int/cworld-blog@latest/src/css/main.min.css # 自定义 CSS
-  - https://cdn.cbd.int/cworld-blog@latest/src/js/main.min.js # 自定义 JSS
+  - /src/css/main.min.css # 自定义 CSS
+  - /src/js/main.min.js # 自定义 JSS
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
