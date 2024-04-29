@@ -544,7 +544,7 @@ plugins:
   # Or a path relative to `hexo.base_dir`
   # template: snippets/snippet-1.html
 
-  - position: body_begin
+  - position: page
     template: <p>此博客已永久关闭，请前往 <a href="https://cworld.top/" about="_blank">新博客</a> 继续阅读</p>
 
   - position: [post, page] # 剪贴板 + 阅读量
