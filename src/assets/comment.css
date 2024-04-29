@@ -1,0 +1,53 @@
+/* 基础配色 */
+#waline {
+  /* 字体大小 */
+  --waline-font-size: 16px;
+
+  /* 常规颜色 */
+  --waline-white: hsl(var(--background) / var(--tw-bg-opacity));
+  --waline-light-grey: #999;
+  --waline-dark-grey: #666;
+
+  /* 主题色 */
+  --waline-theme-color: hsl(var(--foreground) / var(--tw-text-opacity));
+  --waline-active-color: hsl(var(--primary) / var(--tw-text-opacity));
+
+  /* 布局颜色 */
+  --waline-color: hsl(var(--muted-foreground) / var(--tw-text-opacity));
+  --waline-bg-color: hsl(var(--primary-foreground) / var(--tw-bg-opacity));
+  --waline-bg-color-light: hsl(var(--input) / var(--tw-bg-opacity));
+  --waline-bg-color-hover: #f0f0f0;
+  --waline-border-color: hsl(var(--border) / var(--tw-border-opacity));
+  --waline-disable-bg-color: #f8f8f8;
+  --waline-disable-color: #bbb;
+  --waline-code-bg-color: #282c34;
+
+  /* 特殊颜色 */
+  --waline-bq-color: #f0f0f0;
+
+  /* 头像 */
+  --waline-avatar-size: 3.25rem;
+  --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+
+  /* 徽章 */
+  --waline-badge-color: #3498db;
+  --waline-badge-font-size: 0.775em;
+
+  /* 信息 */
+  --waline-info-bg-color: var(--waline-bg-color-light);
+  --waline-info-color: var(--waline-color);
+  --waline-info-font-size: 0.625em;
+
+  /* 渲染选择 */
+  --waline-border: 1px solid var(--waline-border-color);
+  --waline-avatar-radius: 50%;
+  --waline-box-shadow: none;
+}
+/* 屏蔽浏览器内核显示 */
+#waline .wl-browser {
+  display: none !important;
+}
+/* Fix image margin */
+#waline img {
+  margin: 0;
+}

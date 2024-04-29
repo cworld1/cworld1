@@ -36,6 +36,10 @@ const { headings } = await post.render()
           <slot />
         </div>
       </article>
+    </div>
+    <div
+      class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+    >
       {!post.data.draft && <Comment />}
     </div>
     <button
