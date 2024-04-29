@@ -12,3 +12,8 @@ node_modules/
 # VSCode
 *.code-workspace
 .vscode/
+
+# Custom
+old_blog/
+.astro/
+src/env.d.ts
