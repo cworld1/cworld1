@@ -2,12 +2,11 @@
 import Collapse from '@/components/Collapse.astro'
 import Timeline from '@/components/Timeline.astro'
 import Sponsors from '@/components/about/Sponsors.astro'
-import { cn } from '@/utils'
 import { Image } from 'astro:assets'
 const { class: className, title, tools, ...props } = Astro.props
 ---
 
-<div class={cn(className)} {...props}>
+<div class={className} {...props}>
   <p>Developer / Designer</p>
   <p>
     Full-time undergraduate student at the <a href='http://swu.edu.cn/' target='_blank' title='swu'
@@ -31,7 +30,12 @@ const { class: className, title, tools, ...props } = Astro.props
   </ul>
   <p>Github Activities:</p>
   <p>
-    <Image src='https://ghchart.rshah.org/659eb9/cworld1' alt='github activities' inferSize />
+    <Image
+      src='https://ghchart.rshah.org/659eb9/cworld1'
+      alt='github activities'
+      inferSize
+      loading='lazy'
+    />
   </p>
   <!-- social-networks -->
   <h2 id='social-networks'>Social Networks</h2>
@@ -64,7 +68,7 @@ const { class: className, title, tools, ...props } = Astro.props
       { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
       { name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
       { name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
-      { name: '匿', amount: '20.00', date: '2022-04-06' }
+      { name: 'Anonymous', amount: '20.00', date: '2022-04-06' }
     ]}
   />
   <!-- about-blog -->
@@ -94,46 +98,44 @@ const { class: className, title, tools, ...props } = Astro.props
       }
     ]}
   />
-  <!-- about-blog -->
-  <h2 id='about-blog'>About Blog</h2>
   <p>
     The smooth operation and personalized customization of website also rely on the resources and
     technical support provided by the following excellent projects/service providers:
   </p>
   <ul>
-    <li>网站域名：<a href='https://blog.cworld.top' about='_blank'>cworld.top</a></li>
+    <li>Domain：<a href='https://cworld.top/' about='_blank'>cworld.top</a></li>
     <li>
-      框架主题：<a href='https://hexo.io' about='_blank'>Hexo</a> + <a
-        href='https://github.com/ikeq/hexo-theme-inside'
-        about='_blank'>Inside theme</a
+      Framework & Theme：<a href='https://astro.build/' about='_blank'>Astro</a> + <a
+        href='https://github.com/srleom/astro-theme-resume'
+        about='_blank'>Astro Theme Resume</a
       >
     </li>
     <li>
-      网站托管：<a href='https://www.netlify.com/' about='_blank'>Netlify</a>、<a
+      Site hosting：<a href='https://www.netlify.com/' about='_blank'>Netlify</a>、<a
         href='https://pages.github.com'
         about='_blank'>GitHub Pages</a
       >
     </li>
-    <li>资源加速：<a href='https://cdn.cbd.int/' about='_blank'>CBD CDN</a></li>
-    <li>评论系统：<a href='https://waline.js.org' about='_blank'>Waline</a></li>
-    <li>
-      持续集成：<a
-        href='https://github.com/cworld1/cworld1/actions/workflows/hexo-auto-deploy.yml'
+    <!-- <li>资源加速：<a href='https://cdn.cbd.int/' about='_blank'>CBD CDN</a></li> -->
+    <li>Comment system：<a href='https://waline.js.org' about='_blank'>Waline</a></li>
+    <!-- <li>
+      CI/CD：<a
+        href='https://github.com/cworld1/cworld1/actions/workflows/astro-deploy.yml'
         about='_blank'>Github Actions</a
       >
-    </li>
+    </li> -->
     <li>
-      访问统计：<a href='https://console.leancloud.app' about='_blank'>LeanCloud</a> +
-      <a href='https://waline.js.org' about='_blank'>Waline</a>、<a
+      Visits：<a href='https://console.leancloud.app/' about='_blank'>LeanCloud</a> +
+      <a href='https://waline.js.org/' about='_blank'>Waline</a>、<a
         href='https://busuanzi.icodeq.com/'
-        about='_blank'>自建不蒜子 API</a
+        about='_blank'>Self-built Busuanzi Api</a
       >
     </li>
-    <li>
+    <!-- <li>
       其他统计：<a href='https://github.com/spencerwooo/substats' about='_blank'>Substats</a>、<a
         href='https://github.com/Rock-Candy-Tea/hexo-circle-of-friends'
         about='_blank'>Circle of friends</a
       >
-    </li>
+    </li> -->
   </ul>
 </div>
