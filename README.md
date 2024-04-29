@@ -5,10 +5,10 @@ src="https://github-readme-stats.vercel.app/api?username=cworld1&count_private=t
 
 Data analyst & software engineer
 
-Checkout <a href="https://blog.cworld.top" target="_blank">𝑪𝑾𝒐𝒓𝒍𝒅'𝒔 𝑩𝒍𝒐𝒈</a> for more.
+Checkout <a href="https://cworld.top" target="_blank">𝑪𝑾𝒐𝒓𝒍𝒅'𝒔 𝑩𝒍𝒐𝒈</a> for more.
 
 [![Telegram](https://img.shields.io/badge/TG%20%E2%86%92-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/cworld0_cn)&nbsp;
-[![RSS](https://img.shields.io/badge/RSS%20%E2%86%92-FFA500?style=for-the-badge&logo=rss&logoColor=white)](https://blog.cworld.top/atom.xml)&nbsp;
+[![RSS](https://img.shields.io/badge/RSS%20%E2%86%92-FFA500?style=for-the-badge&logo=rss&logoColor=white)](https://cworld.top/rss.xml)&nbsp;
 [![visits](https://komarev.com/ghpvc/?username=cworld1&style=for-the-badge&label=VISITS&color=555555)](https://cworld.top/)
 
 Lans & Frameworks:
