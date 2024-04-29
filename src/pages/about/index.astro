@@ -2,6 +2,7 @@
 import Button from '@/components/Button.astro'
 import TOC from '@/components/blog/TOC.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
+import Comment from '@/components/Comment.astro'
 import AboutContents from './contents.astro'
 const headings = [
   {
@@ -54,6 +55,7 @@ const headings = [
     <div
       class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
     >
+      <Comment />
       <slot />
     </div>
   </div>

@@ -4,7 +4,7 @@ import '@waline/client/style'
 
 import BlogHero from '@/components/blog/Hero.astro'
 import TOC from '@/components/blog/TOC.astro'
-import Comment from '@/components/blog/Comment.astro'
+import Comment from '@/components/Comment.astro'
 import Button from '@/components/Button.astro'
 import PageLayout from './BaseLayout.astro'
 
@@ -35,8 +35,8 @@ const { headings } = await post.render()
         >
           <slot />
         </div>
-        {!post.data.draft && <Comment />}
       </article>
+      {!post.data.draft && <Comment />}
     </div>
     <button
       aria-label='Back to Top'
