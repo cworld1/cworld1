@@ -5,12 +5,6 @@
       "desc": "列入友链朋友圈的好友",
       "link_list": [
         {
-          "name": "hiCasper",
-          "intro": "没有 BUG 的代码是不完美的",
-          "link": "http://hicasper.com/",
-          "avatar": "https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44"
-        },
-        {
           "name": "陈 YF 的博客",
           "intro": "一个在互联网角落挣扎的小小博客，很小很小",
           "link": "https://blog.cyfan.top/",
@@ -33,12 +27,6 @@
           "intro": "缘，妙不可言",
           "link": "https://www.miaoer.xyz/",
           "avatar": "https://avatars.githubusercontent.com/u/66155308?v=4"
-        },
-        {
-          "name": "凌冬的个人博客",
-          "intro": "过去不优秀，不代表未来不精彩",
-          "link": "https://blog.lyr-2000.xyz/",
-          "avatar": "https://blog.lyr-2000.xyz/avatar.png"
         },
         {
           "name": "张洪 Heo",
@@ -77,12 +65,6 @@
           "avatar": "https://gcore.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/avatar.jpg"
         },
         {
-          "name": "大蛋糕的烘焙坊",
-          "intro": "也许我们会分别，但我们将永远不会忘记彼此",
-          "link": "https://lihaoyu.cn/",
-          "avatar": "https://r2.cakeskin.tk/avatar.webp"
-        },
-        {
           "name": "Cubik 的小站",
           "intro": "RECOMMENDED BY DR.CREATIVE",
           "link": "https://cubik65536.top/",
@@ -101,10 +83,10 @@
           "avatar": "https://blog.linsnow.cn/img/avatar.png"
         },
         {
-          "name": "Youngのbolg",
+          "name": "Y'Blog",
           "intro": "路在脚下，心系远方。",
           "link": "https://www.young143.top/",
-          "avatar": "https://www.young143.top/img/a.jpg"
+          "avatar": "https://www.young143.top/a.jpg"
         },
         {
           "name": "Wayne's Blog",
@@ -129,6 +111,12 @@
           "intro": "我们终归落俗，但浪漫不死",
           "link": "https://www.zets.cn/",
           "avatar": "https://q3.qlogo.cn/g?b=sdk&k=UeVu6eVo5SdL2Eu7PiczvTw&s=640"
+        },
+        {
+          "name": "KD 的网络小屋",
+          "intro": "技施于手，道养于心",
+          "link": "https://www.kindyear.cn/",
+          "avatar": "https://cravatar.cn/avatar/d4dafb023c76824a3bf05566cc322af1?s=169"
         }
       ]
     },
@@ -137,22 +125,10 @@
       "desc": "不太活跃的好友",
       "link_list": [
         {
-          "name": "OURONGXING",
-          "intro": "天生骄傲",
-          "link": "https://orxing.top/",
-          "avatar": "https://cravatar.cn/avatar/27bfab48edf72b1cda99f9bcbe286a78"
-        },
-        {
-          "name": "KD 的网络小屋",
-          "intro": "技施于手，道养于心",
-          "link": "https://www.kindyear.cn/",
-          "avatar": "https://cravatar.cn/avatar/d4dafb023c76824a3bf05566cc322af1?s=169"
-        },
-        {
-          "name": "彬红茶博客",
-          "intro": "有趣的屎用博客doge",
-          "link": "http://blog.binhongtea.top/",
-          "avatar": "http://blog.binhongtea.top/images/studio.png"
+          "name": "hiCasper",
+          "intro": "没有 BUG 的代码是不完美的",
+          "link": "http://hicasper.com/",
+          "avatar": "https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44"
         }
       ]
     },
