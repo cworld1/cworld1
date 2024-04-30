@@ -32,31 +32,29 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   )
 }
 {data.draft ? <span class='text-red-500'>(Draft)</span> : null}
-<div class='flex flex-wrap items-center gap-x-3 gap-y-2'>
-  <div class='flex text-xs leading-6 text-muted-foreground'>
-    <div class='flex items-center gap-2'>
-      <svg class='size-5'>
-        <use href='/src/assets/icons/ui.svg#mingcute-calendar-2-line'></use>
-      </svg>
-      <FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} />{' '}
-      {
-        data.updatedDate && (
-          <>
-            <span> / </span>
-            <span>
-              Updated:
-              <FormattedDate date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
-            </span>
-          </>
-        )
-      }
-    </div>
-    <div class='ml-3 flex items-center gap-2'>
-      <svg class='size-5'>
-        <use href='/src/assets/icons/ui.svg#mingcute-time-line'></use>
-      </svg>
-      {remarkPluginFrontmatter.minutesRead}
-    </div>
+<div class='flex flex-col gap-2 text-xs leading-6 text-muted-foreground sm:flex-row'>
+  <div class='flex items-center gap-1'>
+    <svg class='size-5'>
+      <use href='/src/assets/icons/ui.svg#mingcute-calendar-2-line'></use>
+    </svg>
+    <FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} />
+    {
+      data.updatedDate && (
+        <div class='flex items-center gap-1'>
+          <span> / </span>
+          <span>
+            Updated:
+            <FormattedDate date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
+          </span>
+        </div>
+      )
+    }
+  </div>
+  <div class='flex items-center gap-1'>
+    <svg class='size-5'>
+      <use href='/src/assets/icons/ui.svg#mingcute-time-line'></use>
+    </svg>
+    {remarkPluginFrontmatter.minutesRead}
   </div>
 </div>
 <h1 class='mt-2 text-3xl font-medium sm:mb-1'>
