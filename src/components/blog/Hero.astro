@@ -14,7 +14,7 @@ const {
 const { remarkPluginFrontmatter } = await render()
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
-  month: 'long'
+  month: 'short'
 }
 ---
 
@@ -33,19 +33,31 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 }
 {data.draft ? <span class='text-red-500'>(Draft)</span> : null}
 <div class='flex flex-wrap items-center gap-x-3 gap-y-2'>
-  <p class='text-xs text-muted-foreground'>
-    <FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} />{' '}
-    {
-      data.updatedDate && (
-        <span>
-          | Last Updated:
-          <FormattedDate date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
-        </span>
-      )
-    }
-    {' / '}
-    {remarkPluginFrontmatter.minutesRead}
-  </p>
+  <div class='flex text-xs leading-6 text-muted-foreground'>
+    <div class='flex items-center gap-2'>
+      <svg class='size-5'>
+        <use href='/src/assets/icons/ui.svg#mingcute-calendar-2-line'></use>
+      </svg>
+      <FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} />{' '}
+      {
+        data.updatedDate && (
+          <>
+            <span> / </span>
+            <span>
+              Updated:
+              <FormattedDate date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
+            </span>
+          </>
+        )
+      }
+    </div>
+    <div class='ml-3 flex items-center gap-2'>
+      <svg class='size-5'>
+        <use href='/src/assets/icons/ui.svg#mingcute-time-line'></use>
+      </svg>
+      {remarkPluginFrontmatter.minutesRead}
+    </div>
+  </div>
 </div>
 <h1 class='mt-2 text-3xl font-medium sm:mb-1'>
   {data.title}
@@ -54,22 +66,8 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 {
   !!data.tags?.length && (
     <div class='mt-3 flex flex-row items-center gap-x-1'>
-      <svg
-        aria-hidden='true'
-        class='me-1 inline-block h-6 w-6'
-        fill='none'
-        focusable='false'
-        stroke='currentColor'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='1.5'
-        viewBox='0 0 24 24'
-        xmlns='http://www.w3.org/2000/svg'
-      >
-        <path d='M0 0h24v24H0z' fill='none' stroke='none' />
-        <path d='M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z' />
-        <path d='M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116' />
-        <path d='M6 9h-.01' />
+      <svg class='size-5'>
+        <use href='/src/assets/icons/ui.svg#mingcute-tag-line' />
       </svg>
       {data.tags.map((tag: string, i: number) => (
         <div>
