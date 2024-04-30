@@ -35,7 +35,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 <div class='flex flex-col gap-2 text-xs leading-6 text-muted-foreground sm:flex-row'>
   <div class='flex items-center gap-1'>
     <svg class='size-5'>
-      <use href='/src/assets/icons/ui.svg#mingcute-calendar-2-line'></use>
+      <use href='/icons/ui.svg#mingcute-calendar-2-line'></use>
     </svg>
     <FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} />
     {
@@ -52,7 +52,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   </div>
   <div class='flex items-center gap-1'>
     <svg class='size-5'>
-      <use href='/src/assets/icons/ui.svg#mingcute-time-line'></use>
+      <use href='/icons/ui.svg#mingcute-time-line'></use>
     </svg>
     {remarkPluginFrontmatter.minutesRead}
   </div>
@@ -65,7 +65,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   !!data.tags?.length && (
     <div class='mt-3 flex flex-row items-center gap-x-1'>
       <svg class='size-5'>
-        <use href='/src/assets/icons/ui.svg#mingcute-tag-line' />
+        <use href='/icons/ui.svg#mingcute-tag-line' />
       </svg>
       {data.tags.map((tag: string, i: number) => (
         <div>
