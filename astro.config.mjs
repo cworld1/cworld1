@@ -19,10 +19,10 @@ export default defineConfig({
   trailingSlash: 'never',
   output: 'server',
   adapter: vercel({
-    webAnalytics: { enabled: true },
-    imagesConfig: {
-      sizes: [320, 640, 1280]
-    }
+    webAnalytics: { enabled: true }
+    // imagesConfig: {
+    //   sizes: [320, 640, 1280]
+    // }
     // imageService: true
     // isr: true // cache
   }),
