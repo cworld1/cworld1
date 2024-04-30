@@ -33,16 +33,45 @@ const { title, list: friendlist, ...props } = Astro.props
     friendlist.link_list.length !== 0 ? (
       shuffle(friendlist.link_list).map((frd: friend, index) => (
         <a href={frd.link} about='_blank' class='no-underline'>
-          <div class='relative h-full overflow-hidden rounded-2xl border border-border bg-background px-4 py-2'>
+          <div class='group relative h-full overflow-hidden rounded-2xl border border-border bg-background px-4 py-2'>
             <div class='relative z-10 flex h-full items-center gap-3'>
-              <Image
-                class='my-0 h-16 w-16 min-w-16 rounded-full'
-                src={frd.avatar}
-                height={80}
-                width={80}
-                alt='avatar'
-                loading={index < 12 ? 'eager' : 'lazy'}
-              />
+              <div class='relative h-16 w-16 min-w-16 overflow-hidden rounded-full'>
+                <Image
+                  class='my-0'
+                  src={frd.avatar}
+                  height={80}
+                  width={80}
+                  alt='avatar'
+                  loading={index < 12 ? 'eager' : 'lazy'}
+                />
+                <div class='absolute left-0 top-0 h-full w-full'>
+                  <div class='flex h-full w-full items-center justify-center bg-foreground opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50'>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='32'
+                      height='32'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      stroke-width='2.5'
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      class='mr-2 stroke-background'
+                    >
+                      <line
+                        x1='5'
+                        y1='12'
+                        x2='19'
+                        y2='12'
+                        class='translate-x-4 scale-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:scale-x-100'
+                      />
+                      <polyline
+                        points='12 5 19 12 12 19'
+                        class='translate-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1'
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
               <div>
                 <p class='my-2 line-clamp-1 text-sm'>{frd.name} </p>
                 <p class='my-2 line-clamp-2 text-xs text-muted-foreground'>{frd.intro}</p>
