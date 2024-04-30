@@ -34,7 +34,16 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 {data.draft ? <span class='text-red-500'>(Draft)</span> : null}
 <div class='flex flex-wrap items-center gap-x-3 gap-y-2'>
   <p class='text-xs text-muted-foreground'>
-    <FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} /> /{' '}
+    <FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} />{' '}
+    {
+      data.updatedDate && (
+        <span>
+          | Last Updated:
+          <FormattedDate date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
+        </span>
+      )
+    }
+    {' / '}
     {remarkPluginFrontmatter.minutesRead}
   </p>
 </div>
@@ -81,28 +90,15 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
 {
   !data.draft && (
-    <p class='mt-6 text-base text-muted-foreground'>
-      {data.updatedDate && (
-        <span>
-          Last Updated:
-          <FormattedDate
-            class='ms-1 text-sm'
-            date={data.updatedDate}
-            dateTimeOptions={dateTimeOptions}
-          />{' '}
-          |
-        </span>
-      )}
-      <div id='article-info'>
-        <span class='waline-pageview-count' data-path={`/blog/${slug}`}>
-          ???
-        </span>{' '}
-        views |
-        <span class='waline-comment-count' data-path={`/blog/${slug}`}>
-          ???
-        </span>{' '}
-        comments
-      </div>
-    </p>
+    <div id='article-info' class='mt-6 text-base text-sm text-muted-foreground'>
+      <span class='waline-pageview-count' data-path={`/blog/${slug}`}>
+        ???
+      </span>{' '}
+      views |
+      <span class='waline-comment-count' data-path={`/blog/${slug}`}>
+        ???
+      </span>{' '}
+      comments
+    </div>
   )
 }
