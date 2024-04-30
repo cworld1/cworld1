@@ -13,7 +13,19 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
+  // Top-Level Options
   site: 'https://cworld.top',
+  // base: '/docs',
+  trailingSlash: 'never',
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: { enabled: true },
+    imagesConfig: {
+      sizes: [320, 640, 1280]
+    }
+    // imageService: true
+    // isr: true // cache
+  }),
   integrations: [
     expressiveCode(expressiveCodeOptions),
     tailwind({
@@ -23,6 +35,15 @@ export default defineConfig({
     mdx(),
     icon()
   ],
+  // root: './my-project-directory',
+
+  // Prefetch Options
+  prefetch: true,
+
+  // Server Options
+  server: { host: true },
+
+  // Markdown Options
   markdown: {
     remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
     rehypePlugins: [
@@ -39,11 +60,5 @@ export default defineConfig({
         className: ['']
       }
     }
-  },
-  prefetch: true,
-  output: 'server',
-  adapter: vercel({
-    webAnalytics: { enabled: true }
-  })
-  // adapter: netlify()
+  }
 })
