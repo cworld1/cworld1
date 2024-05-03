@@ -81,7 +81,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
     {
       allPostsByDate.length > 0 && (
         <Section title='Posts'>
-          <ul class='flex flex-col gap-y-2'>
+          <ul class='flex flex-col gap-y-1.5 sm:gap-y-2'>
             {allPostsByDate.map((p) => (
               <li class='flex flex-col gap-x-2 sm:flex-row'>
                 <PostPreview post={p} />
