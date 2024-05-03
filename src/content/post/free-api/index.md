@@ -1,7 +1,7 @@
 ---
 title: 免费 API 汇总
 publishDate: 2019-07-10 13:18:58
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '免费 API 汇总，包括企业、网友、海外等。'
 tags:
   - API
 coverImage: { src: './thumbnail.jpg', alt: '#26303A' }

@@ -1,9 +1,8 @@
 ---
 title: Alist 自建0成本部署
 publishDate: 2022-12-15 02:06:47
-description: 'This post is purely for testing if the css is correct for the title on the page'
-tags:
-  - Alist
+description: 'Alist 是一款支持多种存储的目录文件列表程序，后端基于 `gin`，前端使用 `react`。'
+tags: ['Alist']
 coverImage: { src: './thumbnail.jpg', alt: '#2f76d7' }
 ---
 

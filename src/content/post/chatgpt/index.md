@@ -1,7 +1,7 @@
 ---
 title: ChatGPT 深度使用与日用方案
 publishDate: 2023-03-27 14:07:32
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: 'ChatGPT 是一个基于 GPT-3.5-turbo 的聊天机器人，它可以通过简单的 API 调用来实现与人类的对话。'
 tags:
   - GPT-3.5-turbo
   - Python

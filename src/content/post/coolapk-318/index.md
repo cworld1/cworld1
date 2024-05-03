@@ -1,7 +1,7 @@
 ---
 title: 酷安 318 事件
 publishDate: 2020-03-22 21:02:06
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '迟到一年的文章，本来不准备发出来的，如今发出来，也就算是最后的纪念吧。'
 tags:
   - Coolapk
 coverImage: { src: './thumbnail.jpg', alt: '#28B17F' }
@@ -12,8 +12,6 @@ coverImage: { src: './thumbnail.jpg', alt: '#28B17F' }
 （该文章于 2020-03-22 匆成，于 2020-04-04 发布）
 
 迟到一年的文章，本来不准备发出来的，如今发出来，也就算是最后的纪念吧。
-
-<!-- more -->
 
 ## 起因
 

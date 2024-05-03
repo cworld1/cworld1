@@ -1,7 +1,7 @@
 ---
 title: 各国语言缩写
 publishDate: 2019-07-04 22:42:30
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '鉴于经常要用这些，所以写出来，方便自己用。'
 tags:
   - Language
 ---

@@ -1,7 +1,7 @@
 ---
 title: Hello World
 publishDate: 2019-06-14 16:24:38
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '这是一篇 Hexo 预置文档。'
 tags:
   - Hexo
 coverImage: { src: './thumbnail.jpg', alt: '#5273a0' }

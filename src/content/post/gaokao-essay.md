@@ -1,13 +1,11 @@
 ---
 title: 高考随笔 —— 我想
 publishDate: 2020-09-26 20:40:51
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '博主已经踏入高三的坎了，所以给自己写诗歌随笔来激励自己。'
 tags: ['Personal']
 ---
 
 博主已经踏入高三的坎了，所以给自己写诗歌随笔来激励自己。
-
-<!-- more -->
 
 没有什么原因，
 只是突然地，我想。

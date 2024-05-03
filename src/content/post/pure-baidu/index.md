@@ -1,7 +1,7 @@
 ---
 title: Pure 百度 - 质形色，始方圆
 publishDate: 2019-07-12 09:50:18
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: 'Pure 百度 - 质形色，始方圆。'
 tags:
   - Userstyle
   - CSS

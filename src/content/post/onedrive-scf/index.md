@@ -1,7 +1,7 @@
 ---
 title: 利用腾讯云无服务器云函数搭建 OneDrive 网盘
 publishDate: 2020-02-13 8:44:58
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '原理是用腾讯云的无服务器云函数配合 API 网关实现，不需要自己的服务器。'
 tags:
   - Onedrive
   - Serverless
@@ -9,8 +9,6 @@ coverImage: { src: './thumbnail.jpg', alt: '#006fff' }
 ---
 
 原理是用腾讯云的无服务器云函数配合 API 网关实现，不需要自己的服务器。
-
-<!-- more -->
 
 零成本搭建，实测运行机器的配置，8 核 16G 内存（可以运行 System 命令链接 Shell 看），因此此方法搭建自己的大型网站完全够用。
 

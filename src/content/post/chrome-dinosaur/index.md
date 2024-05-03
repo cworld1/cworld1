@@ -1,7 +1,7 @@
 ---
 title: Chrome 小恐龙无敌化
 publishDate: 2021-02-18 15:55:58
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '众所周知，Chrome 含有一个彩蛋，画风清奇小恐龙游戏，可以通过断网和直接访问一下网址触发。'
 tags:
   - Chrome
   - JavaScript

@@ -1,14 +1,12 @@
 ---
 title: 我的第一篇 • 个人网站存在的意义
 publishDate: 2019-06-14 16:24:38
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '个人网站这个以前很时髦的名词正随着时间慢慢被人忘记，互联网的门槛越来越低，个人网站显然不再成为一个重要的入口。'
 ---
 
 个人网站这个以前很时髦的名词正随着时间慢慢被人忘记，互联网的门槛越来越低，个人网站显然不再成为一个重要的入口。甚至连电脑都已经不是首选的上网平台了。
 
 那么现在还有必要为自己搭建个人网站吗？
-
----
 
 ## 不是人人都有料
 

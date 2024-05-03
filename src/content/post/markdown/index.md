@@ -1,15 +1,13 @@
 ---
 title: Markdown 语法与学习记录
 publishDate: 2019-07-10 13:18:58
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: 'Markdown 是一种轻量级的「标记语言」。'
 tags:
   - Markdown
 coverImage: { src: './thumbnail.jpg', alt: '#B5C6DA' }
 ---
 
 Markdown 是一种轻量级的「标记语言」
-
-<!-- more -->
 
 ## Github 版本
 

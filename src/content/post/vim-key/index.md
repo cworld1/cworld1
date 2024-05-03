@@ -1,15 +1,13 @@
 ---
 title: Vim 的一些键位知识
 publishDate: 2023-12-15 19:00:02
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '用了几年 Vim 有了一些心得，故有此文。'
 tags:
   - Vim
 coverImage: { src: './vim-featured-image.webp', alt: '#8C68B7' }
 ---
 
 用了几年 Vim 有了一些心得，故有此文。
-
-<!-- more -->
 
 从第一次尝试使用 Vim，到现在不管啥环境都要装个 Vim 插件，也差不多有三年多了。正如俗话所说“万事开头难”嘛，我和大多数的 Vim 初学者一样，也遇到了一段别扭且艰难的学习期。不过好在 Vim 已经让我尝到了一些甜头，这最终使我习惯并喜欢上了这套“反人类”的编辑逻辑。所以这一期就来总结一下 Vim 的一些键位知识，也可以当成教程学习学习。
 

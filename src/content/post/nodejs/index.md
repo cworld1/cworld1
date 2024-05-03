@@ -1,7 +1,7 @@
 ---
 title: NodeJS 的一些相关技术
 publishDate: 2023-07-19 13:24:36
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: 'Node.js® is an open-source, cross-platform JavaScript runtime environment.'
 tags:
   - NodeJS
   - nvm
@@ -9,8 +9,6 @@ tags:
 ---
 
 Node.js® is an open-source, cross-platform JavaScript runtime environment.
-
-<!-- more -->
 
 ## nvm
 

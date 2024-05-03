@@ -1,7 +1,7 @@
 ---
 title: 米哈游游戏（原神/崩坏3）自动签到
 publishDate: 2022-04-17 17:10:14
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '这是一个关于原神签到小助手的指导教程。'
 tags:
   - Mihoyo
   - Python

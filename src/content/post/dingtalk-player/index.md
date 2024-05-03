@@ -1,14 +1,14 @@
 ---
 title: 钉钉云课堂提取视频 & 倍速播放 & 学习进度
 publishDate: 2020-03-03 23:21:47
-description: 'This post is purely for testing if the css is correct for the title on the page'
+description: '钉钉的云课堂比较反人类，不仅有水印影响观看体验，而且不支持倍速播放。'
 tags:
   - DingTalk
   - Fiddler
   - JavaScript
 ---
 
-钉钉的云课堂比较反人类，不仅有水印影响观看体验，而且不支持倍速播放。<!-- more -->看讲课比较慢的老师的视频，无疑是一种煎熬。过于慢的速度，反而会影响效率。
+看讲课比较慢的老师的视频，无疑是一种煎熬。过于慢的速度，反而会影响效率。
 
 教程由简单到难逐渐递增，不过玩法也越来越多，所以还请斟酌着看。
 
