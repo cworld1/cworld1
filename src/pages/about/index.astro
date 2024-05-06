@@ -5,6 +5,7 @@ import Sponsors from '@/components/about/Sponsors.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Comment from '@/components/Comment.astro'
 import ArticleInfo from '@/components/ArticleInfo.astro'
+import ToolSection from '@/components/about/ToolSection.astro'
 import { Image } from 'astro:assets'
 
 const headings = [
@@ -12,6 +13,11 @@ const headings = [
     depth: 2,
     slug: 'general-talk',
     text: 'General Talk'
+  },
+  {
+    depth: 2,
+    slug: 'tools',
+    text: 'Tools'
   },
   {
     depth: 2,
@@ -68,6 +74,93 @@ const headings = [
       loading='lazy'
     />
   </p>
+  <!-- tools -->
+  <h2 id='tools'>Tools</h2>
+  <p>Tools and software I use daily</p>
+  <ToolSection
+    class='mb-5'
+    title='Design'
+    tools={[
+      {
+        name: 'Photoshop',
+        description: 'Picture Editing',
+        href: 'https://www.adobe.com/products/photoshop',
+        iconPath: 'photoshop'
+      },
+      {
+        name: 'Premiere Pro',
+        description: 'Video Editing',
+        href: 'https://www.adobe.com/products/premiere',
+        iconPath: 'premiere'
+      },
+      {
+        name: 'Animate',
+        description: 'Animation Creating',
+        href: 'https://www.adobe.com/products/animate',
+        iconPath: 'animate'
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Productivity'
+    tools={[
+      {
+        name: 'Notion',
+        description: 'Note Taking',
+        href: 'https://www.notion.so/product',
+        iconPath: 'notion'
+      },
+      {
+        name: 'Firefox',
+        description: 'Broswer',
+        href: 'https://www.mozilla.org/en-US/firefox/',
+        iconPath: 'firefox'
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Development'
+    tools={[
+      {
+        name: 'VS Code',
+        description: 'IDE',
+        href: 'https://code.visualstudio.com/',
+        iconPath: 'vscode'
+      },
+      {
+        name: 'Neovim',
+        description: 'IDE',
+        href: 'https://neovim.io/',
+        iconPath: 'neovim'
+      },
+      {
+        name: 'Sublime Text',
+        description: 'IDE',
+        href: 'https://www.sublimetext.com/',
+        iconPath: 'sublime'
+      },
+      {
+        name: 'Unity Editor',
+        description: 'Game Engine',
+        href: 'https://unity.com/',
+        iconPath: 'unity'
+      },
+      {
+        name: 'Android Studio',
+        description: 'Android Development',
+        href: 'https://developer.android.com/studio',
+        iconPath: 'androidstudio'
+      },
+      {
+        name: 'ChatGPT',
+        description: 'AI',
+        href: 'https://chat.openai.com/',
+        iconPath: 'chatgpt'
+      }
+    ]}
+  />
   <!-- social-networks -->
   <h2 id='social-networks'>Social Networks</h2>
   <p>
