@@ -1,7 +1,6 @@
 ---
 import Collapse from '@/components/Collapse.astro'
 import Timeline from '@/components/Timeline.astro'
-import Sponsors from '@/components/about/Sponsors.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Comment from '@/components/Comment.astro'
 import ArticleInfo from '@/components/ArticleInfo.astro'
@@ -28,11 +27,6 @@ const headings = [
     depth: 2,
     slug: 'gossips',
     text: 'Gossips'
-  },
-  {
-    depth: 2,
-    slug: 'sponsorship',
-    text: 'Sponsorship'
   },
   {
     depth: 2,
@@ -181,20 +175,6 @@ const headings = [
     Lanota, Musedash, etc. I have played Yang Chun Bai Xue, Phigros, Rhythm Doctor, and Ice and Fire
     Dance before.
   </Collapse>
-  <!-- sponsorship -->
-  <h2 id='sponsorship'>Sponsorship</h2>
-  <p>
-    Please leave a message or contact me proactively after sponsorship. Thanks to the following
-    sponsors:
-  </p>
-  <Sponsors
-    sponsors={[
-      { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
-      { name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
-      { name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
-      { name: 'Anonymous', amount: '20.00', date: '2022-04-06' }
-    ]}
-  />
   <!-- about-blog -->
   <h2 id='about-blog'>About Blog</h2>
   <Timeline

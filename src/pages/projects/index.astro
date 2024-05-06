@@ -1,5 +1,7 @@
 ---
+import Button from '@/components/Button.astro'
 import Collapse from '@/components/Collapse.astro'
+import Sponsors from '@/components/projects/Sponsors.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
 
@@ -18,6 +20,11 @@ const headings = [
     depth: 2,
     slug: 'learnings',
     text: 'Learnings'
+  },
+  {
+    depth: 2,
+    slug: 'sponsorship',
+    text: 'Sponsorship'
   }
 ]
 ---
@@ -27,6 +34,7 @@ const headings = [
     If you think it would be useful or interesting to collaborate on a project, you can donate to
     support my work or contact me to discuss a project.
   </p>
+  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship' style='ahead' />
 
   <h2 id='applications'>Applications</h2>
   <ProjectSection
@@ -289,6 +297,21 @@ const headings = [
         description: "CWorld's personal website",
         links: [{ type: 'github', href: 'https://github.com/cworld1/cworld1' }]
       }
+    ]}
+  />
+
+  <!-- sponsorship -->
+  <h2 id='sponsorship'>Sponsorship</h2>
+  <p>
+    Please leave a message or contact me proactively after sponsorship. Thanks to the following
+    sponsors:
+  </p>
+  <Sponsors
+    sponsors={[
+      { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
+      { name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
+      { name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
+      { name: 'Anonymous', amount: '20.00', date: '2022-04-06' }
     ]}
   />
 </PageLayout>
