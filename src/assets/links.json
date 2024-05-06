@@ -158,13 +158,13 @@
           "name": "虫洞",
           "intro": "随机前往十年之约的成员博客",
           "link": "https://www.foreverblog.cn/go.html",
-          "avatar": "https://blog.cworld.top/src/img/links/wormhole.png"
+          "avatar": "/images/wormhole.png"
         },
         {
           "name": "前端大刘",
           "intro": "记录和分享，每天进步一点点！",
           "link": "https://lzwdot.com/",
-          "avatar": "https://gcore.jsdelivr.net/gh/lzwdot/lzwdot.github.io@gh-pages/img/android-chrome-192x192.png"
+          "avatar": "https://lzwdot.com/logo.svg"
         }
       ]
     }

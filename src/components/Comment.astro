@@ -19,8 +19,11 @@ import '@/assets/comment.css'
       init({
         el: '#waline',
         serverURL: 'https://waline.cworld.top',
-        // emoji: ['https://blog.cworld.top/src/img/bmoji'],
-        reaction: ['https://cdn.cbd.int/cworld-blog@latest/src/img/comment-like.png'],
+        emoji: [
+          'https://cdn.cbd.int/@waline/emojis@1.2.0/bmoji',
+          'https://cdn.cbd.int/@waline/emojis@1.2.0/weibo'
+        ],
+        reaction: ['/images/comment-like.png'],
         // search: false,
         pageview: true,
         comment: true,
