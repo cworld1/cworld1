@@ -1,15 +1,294 @@
 ---
+import Collapse from '@/components/Collapse.astro'
+import ProjectSection from '@/components/projects/ProjectSection.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
 
 const headings = [
   {
     depth: 2,
-    slug: 'tools',
-    text: 'Tools'
+    slug: 'applications',
+    text: 'Applications'
+  },
+  {
+    depth: 2,
+    slug: 'programs',
+    text: 'Programs'
+  },
+  {
+    depth: 2,
+    slug: 'learnings',
+    text: 'Learnings'
   }
 ]
 ---
 
 <PageLayout title='Projects' headings={headings}>
-  <!--  -->
+  <p>
+    If you think it would be useful or interesting to collaborate on a project, you can donate to
+    support my work or contact me to discuss a project.
+  </p>
+
+  <h2 id='applications'>Applications</h2>
+  <ProjectSection
+    project={[
+      {
+        name: '🤖 Notie',
+        description:
+          'Android note App complies with Material You specifications, developed using Java',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/notie' },
+          { type: 'release', href: 'https://github.com/cworld1/notie/releases' }
+        ]
+      },
+      {
+        name: '🪟 Fluent Mail',
+        description:
+          'A program to send and recieve emails with attachments supported by C++, Qt and SQL',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/fluent-mail' },
+          { type: 'release', href: 'https://github.com/cworld1/fluent-mail/releases' },
+          { type: 'doc', href: 'https://github.com/cworld1/fluent-mail' }
+        ]
+      },
+      {
+        name: '🤖 PureWeather',
+        description: 'Weather at a glance! Current and forecast weather for anywhere in the world!',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/PureWeather' },
+          { type: 'release', href: 'https://github.com/cworld1/PureWeather/releases' }
+        ]
+      }
+    ]}
+  />
+  <Collapse title='Some old projects'>
+    <ProjectSection
+      class='my-2'
+      project={[
+        {
+          name: 'Vue Login',
+          description: 'A simple Vue designed login program',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/vue-login' }]
+        },
+        {
+          name: 'Student Score System',
+          description:
+            'A student performance management system built using Qt and developed using C++',
+          links: [
+            { type: 'github', href: 'https://github.com/cworld1/stu-score-sys' },
+            { type: 'release', href: 'https://github.com/cworld1/stu-score-sys/releases' }
+          ]
+        },
+        {
+          name: 'Momotap',
+          description: 'A mainland China friendly version extracted from Momotap',
+          links: [
+            { type: 'github', href: 'https://github.com/cworld1/momotap' },
+            { type: 'site', href: 'https://cworld1.github.io/momotap' }
+          ]
+        },
+        {
+          name: 'Aircraft Booking System',
+          description: 'Aircraft booking system for terminal ui using C lan',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/aircraft-booking-system' }]
+        }
+      ]}
+    />
+  </Collapse>
+
+  <h2 id='programs'>Programs</h2>
+  <ProjectSection
+    project={[
+      {
+        name: '🤖 Arknights Telegram Bot',
+        description: 'Telegram Bot for Arknights',
+        links: [
+          { type: 'github', href: 'https://github.com/IJNKAWAKAZE/arknights_bot' },
+          { type: 'site', href: 'https://t.me/PtiIopsis_bot' },
+          {
+            type: 'doc',
+            href: 'https://github.com/IJNKAWAKAZE/arknights_bot/blob/main/docs/Development.md'
+          }
+        ]
+      },
+      {
+        name: '🤖 PaiGram',
+        description: 'Telegram robot, query the official Genshin information',
+        links: [
+          { type: 'github', href: 'https://github.com/PaiGramTeam/PaiGram' },
+          { type: 'site', href: 'https://t.me/PaimonMasterBot' },
+          { type: 'doc', href: 'https://docs.paimon.vip/' }
+        ]
+      },
+      {
+        name: '📷 Kinect Camera Netural',
+        description:
+          'An AI program that using Kinect camera and shows netural network and human skeleton.',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/tcm' }]
+      },
+      {
+        name: '🛠️ Gaussian NB',
+        description:
+          'Simulating the Parsimonious Bayesian Algorithm with Python and Finding the Probability Prediction of Breast Cancer ',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/gaussian-nb' }]
+      },
+      {
+        name: '📊 Business Data Analysis',
+        description:
+          'Using python and jupyter notebook to analyze the data of electrical appliances, and then using the data to predict the sales of electrical appliances',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/business-data' },
+          { type: 'site', href: 'https://github.com/cworld1/business-data/blob/main/main.ipynb' }
+        ]
+      }
+    ]}
+  />
+  <Collapse title='Some old projects'>
+    <ProjectSection
+      class='my-2'
+      project={[
+        {
+          name: 'Search Switcher',
+          description: 'Add links to each other in search engines',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/search-switcher' }]
+        },
+        {
+          name: 'Pure Baidu',
+          description: 'Baidu search page beautification module',
+          links: [
+            { type: 'doc', href: 'https://cworld.top/blog/pure-baidu' },
+            { type: 'site', href: 'https://userstyles.org/styles/173673/pure' }
+          ]
+        }
+      ]}
+    />
+  </Collapse>
+
+  <h2 id='learnings'>Learnings</h2>
+  <ProjectSection
+    class='my-2'
+    project={[
+      {
+        name: 'Unity Learning',
+        description: 'Some notes and code about learning Unity',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/unity-learning' }]
+      },
+      {
+        name: 'Matlab Learning',
+        description: 'Some notes and code about learning Matlab',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/matlab-learning' }]
+      },
+      {
+        name: 'Java Learning',
+        description: 'Some notes and code about learning Java',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/java-learning' }]
+      },
+      {
+        name: 'Operation System Principle Learning',
+        description: 'Some notes and code about CWorld learning Operating System Principle',
+        image: 'osp.cworld.top.png',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/osp-learning' },
+          { type: 'site', href: 'https://osp.cworld.top/' },
+          { type: 'doc', href: 'https://osp.cworld.top/README' }
+        ]
+      },
+      {
+        name: 'Computer Composition Principle Learning',
+        description: 'Some notes and code about CWorld learning Computer Composition Principle',
+        image: 'ccp.cworld.top.png',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/ccp-learning' },
+          { type: 'site', href: 'https://ccp.cworld.top/' },
+          { type: 'doc', href: 'https://ccp.cworld.top/README' }
+        ]
+      },
+      {
+        name: 'Database Learning',
+        description: 'Some notes and code about learning Database',
+        image: 'db.cworld.top.png',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/db-learning' },
+          { type: 'site', href: 'https://db.cworld.top/' },
+          { type: 'doc', href: 'https://db.cworld.top/intro' }
+        ]
+      },
+      {
+        name: 'Computer Network Learning',
+        description: 'Some notes and code about learning Computer Network',
+        image: 'cn.cworld.top.png',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/cn-learning' },
+          { type: 'site', href: 'https://cn.cworld.top/' },
+          { type: 'doc', href: 'https://cn.cworld.top/intro' }
+        ]
+      },
+      {
+        name: 'Data Analysis Learning',
+        description: 'Some notes and code about learning Data Analysis',
+        image: 'da.cworld.top.png',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/da-learning' },
+          { type: 'site', href: 'https://da.cworld.top/' }
+        ]
+      },
+      {
+        name: 'Linux Learning',
+        description: 'Some notes and code about learning Linux',
+        image: 'linux.cworld.top.png',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/linux-learning' },
+          { type: 'site', href: 'https://linux.cworld.top/' },
+          { type: 'doc', href: 'https://linux.cworld.top/docs' }
+        ]
+      },
+      {
+        name: 'R Learning',
+        description: 'Some notes and code about learning R language',
+        image: 'r.cworld.top.png',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/r-learning' },
+          { type: 'site', href: 'https://r.cworld.top/' }
+        ]
+      }
+    ]}
+  />
+
+  <Collapse title='Some old projects'>
+    <ProjectSection
+      class='my-2'
+      project={[
+        {
+          name: 'C Learning',
+          description: 'Some notes and code about learning C language',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/c-learning' }]
+        },
+        {
+          name: 'Vue Learning',
+          description: 'Some notes and code about learning Vue',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/vue-learning' }]
+        }
+      ]}
+    />
+  </Collapse>
+
+  <h2>Others</h2>
+  <ProjectSection
+    project={[
+      {
+        name: 'Dotfiles',
+        description: 'Personal *unix dotfiles',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/dotfiles' }]
+      },
+      {
+        name: 'Neovim Config',
+        description: 'Personal Neovim config files',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/nvim-config' }]
+      },
+      {
+        name: 'CWorld Website',
+        description: "CWorld's personal website",
+        links: [{ type: 'github', href: 'https://github.com/cworld1/cworld1' }]
+      }
+    ]}
+  />
 </PageLayout>
