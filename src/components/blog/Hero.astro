@@ -1,7 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import FormattedDate from '@/components/FormattedDate.astro'
+import ArticleInfo from '@/components/ArticleInfo.astro'
 import { Image } from 'astro:assets'
-import FormattedDate from '../FormattedDate.astro'
 
 interface Props {
   content: CollectionEntry<'post'>
@@ -84,17 +85,4 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   )
 }
 
-{
-  !data.draft && (
-    <div id='article-info' class='mt-6 text-base text-sm text-muted-foreground'>
-      <span class='waline-pageview-count' data-path={`/blog/${slug}`}>
-        ???
-      </span>{' '}
-      views |
-      <span class='waline-comment-count' data-path={`/blog/${slug}`}>
-        ???
-      </span>{' '}
-      comments
-    </div>
-  )
-}
+{!data.draft && <ArticleInfo path={`/blog/${slug}`} />}

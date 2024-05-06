@@ -4,6 +4,7 @@ import Timeline from '@/components/Timeline.astro'
 import Sponsors from '@/components/about/Sponsors.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Comment from '@/components/Comment.astro'
+import ArticleInfo from '@/components/ArticleInfo.astro'
 import { Image } from 'astro:assets'
 
 const headings = [
@@ -36,6 +37,7 @@ const headings = [
 ---
 
 <PageLayout title='About' headings={headings}>
+  <ArticleInfo path='/links' />
   <p>Developer / Designer</p>
   <p>
     Full-time undergraduate student at the <a href='http://swu.edu.cn/' target='_blank' title='swu'
