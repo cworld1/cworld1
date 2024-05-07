@@ -5,8 +5,8 @@ const { as: Tag = 'a', class: className, title, href, style = 'button' } = Astro
 
 <Tag
   class={cn(
-    className,
     'group inline-flex items-center gap-x-1 rounded-lg bg-primary-foreground border border-border px-2 py-1 text-sm text-muted-foreground transition-all hover:bg-input no-underline',
+    className,
     !href && 'cursor-default',
     style === 'pill' && 'rounded-xl'
   )}
@@ -42,7 +42,7 @@ const { as: Tag = 'a', class: className, title, href, style = 'button' } = Astro
       )
     }
   </slot>
-  <p class='mb-1 mt-0'>{title}</p>
+  {title && <p class='mt-0'>{title}</p>}
   <slot name='icon-after'>
     {
       style === 'ahead' && (
