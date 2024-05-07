@@ -6,6 +6,7 @@ import Comment from '@/components/Comment.astro'
 import ArticleInfo from '@/components/ArticleInfo.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 import { Image } from 'astro:assets'
+import Button from '@/components/Button.astro'
 
 const headings = [
   {
@@ -44,6 +45,7 @@ const headings = [
       >🏫 Sounthwestern University</a
     >. Mainly learns research big data science, front-end development and neural network learning.
   </p>
+  <Button title='Sponsor Me' class='w-fit' href='/projects#sponsorship' style='ahead' />
   <!-- general-talk -->
   <h2 id='general-talk'>General Talk</h2>
   <ul>
@@ -152,6 +154,30 @@ const headings = [
         description: 'AI',
         href: 'https://chat.openai.com/',
         iconPath: 'chatgpt'
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Environment'
+    tools={[
+      {
+        name: 'Arch Linux',
+        description: 'Linux Distribution',
+        href: 'https://archlinux.org/',
+        iconPath: 'archlinux'
+      },
+      {
+        name: 'MacOS Sonoma',
+        description: 'MacBook Air',
+        href: 'https://www.apple.com/macos/',
+        iconPath: 'apple'
+      },
+      {
+        name: 'Windows 11',
+        description: 'Leigion Y7000P',
+        href: 'https://news.microsoft.com/windows11-general-availability/',
+        iconPath: 'windows11'
       }
     ]}
   />
