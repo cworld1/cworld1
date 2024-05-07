@@ -17,12 +17,6 @@
           "avatar": "https://cravatar.cn/avatar/08fcf342df77ad03fcad18399a2fcb74"
         },
         {
-          "name": "Fly",
-          "intro": "相逢的人会再相逢",
-          "link": "http://flyme.cf",
-          "avatar": "https://img1.baidu.com/it/u=1214290448,1946399589&fm=253&fmt=auto"
-        },
-        {
           "name": "喵二の小博客",
           "intro": "缘，妙不可言",
           "link": "https://www.miaoer.xyz/",
@@ -135,6 +129,12 @@
           "intro": "没有 BUG 的代码是不完美的",
           "link": "http://hicasper.com/",
           "avatar": "https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44"
+        },
+        {
+          "name": "Fly",
+          "intro": "相逢的人会再相逢",
+          "link": "http://flyme.cf",
+          "avatar": "https://img1.baidu.com/it/u=1214290448,1946399589&fm=253&fmt=auto"
         }
       ]
     },
