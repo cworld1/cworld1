@@ -42,7 +42,7 @@ const { as: Tag = 'a', class: className, title, href, style = 'button' } = Astro
       )
     }
   </slot>
-  <p class='my-0'>{title}</p>
+  <p class='mb-1 mt-0'>{title}</p>
   <slot name='icon-after'>
     {
       style === 'ahead' && (
