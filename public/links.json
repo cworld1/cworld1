@@ -5,10 +5,10 @@
       "desc": "列入友链朋友圈的好友",
       "link_list": [
         {
-          "name": "陈 YF 的博客",
-          "intro": "一个在互联网角落挣扎的小小博客，很小很小",
-          "link": "https://blog.cyfan.top/",
-          "avatar": "https://npm.elemecdn.com/chenyfan-oss@3"
+          "name": "CyanFalse's Weblog",
+          "intro": "I'm CyanFalse,New to Here.",
+          "link": "https://blog.eurekac.cn/",
+          "avatar": "https://registry.npmmirror.com/chenyfan-oss/4.0.0/files/512.jpg"
         },
         {
           "name": "Joyer 的博客",
@@ -62,7 +62,7 @@
           "name": "Wallleap",
           "intro": "Luwang's Blog",
           "link": "https://myblog.wallleap.cn/",
-          "avatar": "https://gcore.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/avatar.jpg"
+          "avatar": "https://cravatar.cn/avatar/be1ccdcf025a92b98a92e331e1b3662a?size=256"
         },
         {
           "name": "Cubik 的小站",
