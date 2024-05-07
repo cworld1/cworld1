@@ -24,20 +24,18 @@ const list = [
     })
   },
   {
-    key: 'Link',
-    value: `https://cworld.top/blog/${slug}`
-  },
-  {
     key: 'Copyright',
     value: 'Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)'
+  },
+  {
+    key: 'Link',
+    value: `https://cworld.top/blog/${slug}`
   }
 ]
 ---
 
-<div
-  class={cn('relative rounded-xl border px-3 sm:px-4 py-1.5 sm:py-3 overflow-hidden', className)}
->
-  <svg class='absolute -top-4 right-0 size-20 opacity-10'>
+<div class={cn('relative rounded-xl border px-3 sm:px-4 py-1.5 sm:py-3', className)}>
+  <svg class='absolute right-4 top-4 size-20 opacity-10'>
     <use href='/icons/copyright-sponsor.svg#mingcute-copyright-line'></use>
   </svg>
   <ul class='my-0 list-none pl-0'>
@@ -49,7 +47,35 @@ const list = [
       ))
     }
   </ul>
+
+  <!-- functions -->
+  <div class='mt-2 flex flex-row gap-3'>
+    {
+      [
+        { id: 'copy-link', icon: 'mingcute-link-2-line' },
+        { id: 'get-qrcode', icon: 'mingcute-qrcode-2-line' },
+        { id: 'share-weibo', icon: 'mingcute-weibo-line' }
+      ].map(({ id, icon }) => (
+        <button
+          id={id}
+          class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+        >
+          <svg class='size-5'>
+            <use href={`/icons/copyright-sponsor.svg#${icon}`} />
+          </svg>
+        </button>
+      ))
+    }
+  </div>
+
+  <div
+    id='qrcode'
+    aria-expanded='false'
+    class='absolute z-10 -mt-4 box-content max-h-0 overflow-hidden rounded-xl border bg-primary-foreground p-4 opacity-0 transition-all duration-300 ease-in-out *:my-0 aria-expanded:max-h-[256px] aria-expanded:translate-y-4 aria-expanded:opacity-100'
+  >
+  </div>
 </div>
+
 <div class='mx-6 rounded-b-xl border border-t-0 px-3 pb-1.5 pt-1 sm:mx-8 sm:px-4'>
   <a
     href='/projects#sponsorship'
@@ -62,3 +88,42 @@ const list = [
     </svg>
   </a>
 </div>
+
+<script>
+  // @ts-ignore
+  import QRCode from '@/assets/qrcode'
+
+  const link = window.location.href
+
+  // copy link
+  const copyLink = document.getElementById('copy-link')
+  copyLink?.addEventListener('click', () => {
+    navigator.clipboard.writeText(link)
+  })
+
+  // get qrcode
+  function loadqrcode(qrcodeContainer: HTMLElement) {
+    if (!qrcodeContainer) throw new Error('qrcode container not found')
+    if (qrcodeContainer.innerHTML !== '') return
+    // @ts-ignore
+    new QRCode(qrcodeContainer, link)
+  }
+  const getQRCode = document.getElementById('get-qrcode')
+  const qrcodeContainer = document.getElementById('qrcode')
+  if (!qrcodeContainer) throw new Error('qrcode container not found')
+  getQRCode?.addEventListener('click', () => {
+    if (qrcodeContainer.ariaExpanded === 'true') {
+      qrcodeContainer.ariaExpanded = 'false'
+    } else {
+      loadqrcode(qrcodeContainer)
+      qrcodeContainer.ariaExpanded = 'true'
+    }
+  })
+
+  // share weibo
+  const shareWeibo = document.getElementById('share-weibo')
+  shareWeibo?.addEventListener('click', () => {
+    const shareUrl = `http://service.weibo.com/share/share.php?url=${link}&title=${document.title}&pic=https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=400`
+    window.open(shareUrl, '_blank')
+  })
+</script>
