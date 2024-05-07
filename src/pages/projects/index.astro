@@ -4,6 +4,9 @@ import Collapse from '@/components/Collapse.astro'
 import Sponsors from '@/components/projects/Sponsors.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
+import { Image } from 'astro:assets'
+import wechat from '@/assets/wechat-qrcode.jpg'
+import alipay from '@/assets/alipay-qrcode.jpg'
 
 const headings = [
   {
@@ -302,10 +305,29 @@ const headings = [
 
   <!-- sponsorship -->
   <h2 id='sponsorship'>Sponsorship</h2>
-  <p>
-    Please leave a message or contact me proactively after sponsorship. Thanks to the following
-    sponsors:
-  </p>
+  <p>Please leave a message or contact me proactively after sponsorship.</p>
+  <div class='flex flex-row justify-center gap-4'>
+    {
+      [
+        { name: 'WeChat', icon: 'mingcute-wechat-pay-line', image: wechat },
+        { name: 'Alipay', icon: 'mingcute-alipay-line', image: alipay }
+      ].map((item) => (
+        <div class='group relative overflow-hidden rounded-xl border'>
+          <div class='absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center transition-opacity group-hover:opacity-0'>
+            <svg class='size-20'>
+              <use href={`/icons/copyright-sponsor.svg#${item.icon}`} />
+            </svg>
+          </div>
+          <Image
+            class='m-0 max-w-72 opacity-30 blur-sm transition-opacity group-hover:opacity-100 group-hover:blur-none'
+            src={item.image}
+            alt={item.name}
+          />
+        </div>
+      ))
+    }
+  </div>
+  <p>Thanks to the following sponsors:</p>
   <Sponsors
     sponsors={[
       { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },

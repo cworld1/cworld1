@@ -12,7 +12,7 @@ interface Props {
 const { class: className, sponsors, ...props } = Astro.props
 ---
 
-<div class={cn('border px-3 py-3 rounded-xl', className)} {...props}>
+<div class={cn('border px-3 sm:px-4 py-2 rounded-xl', className)} {...props}>
   <table class='my-0'>
     <tr class='text-left'>
       <th>Name</th>
