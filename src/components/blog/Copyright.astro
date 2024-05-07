@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { cn, getFormattedDate } from '@/utils'
+
+interface Props {
+  content: CollectionEntry<'post'>
+  class?: string
+}
+
+const {
+  content: { slug, data },
+  class: className
+} = Astro.props
+
+const list = [
+  {
+    key: 'Author',
+    value: 'CWorld'
+  },
+  {
+    key: 'Update date',
+    value: getFormattedDate(data.updatedDate ? data.updatedDate : data.publishDate, {
+      month: 'long'
+    })
+  },
+  {
+    key: 'Link',
+    value: `https://cworld.top/blog/${slug}`
+  },
+  {
+    key: 'Copyright',
+    value: 'Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)'
+  }
+]
+---
+
+<div
+  class={cn('relative rounded-xl border px-3 sm:px-4 py-1.5 sm:py-3 overflow-hidden', className)}
+>
+  <svg class='absolute -top-4 right-0 size-20 opacity-10'>
+    <use href='/icons/copyright-sponsor.svg#mingcute-copyright-line'></use>
+  </svg>
+  <ul class='my-0 list-none pl-0'>
+    {
+      list.map(({ key, value }) => (
+        <li class='my-0 pl-0'>
+          <span class='inline-block min-w-24 font-bold'>{key}</span>: {value}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class='mx-6 rounded-b-xl border border-t-0 px-3 pb-1.5 pt-1 sm:mx-8 sm:px-4'>
+  <a
+    href='/projects#sponsorship'
+    class='flex justify-between text-muted-foreground no-underline'
+    target='_blank'
+  >
+    <div>Buy me a cup of coffee ☕.</div>
+    <svg class='m-1 size-5'>
+      <use href='/icons/copyright-sponsor.svg#mingcute-receive-money-line'></use>
+    </svg>
+  </a>
+</div>
