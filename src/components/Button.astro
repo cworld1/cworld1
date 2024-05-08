@@ -1,6 +1,6 @@
 ---
 import { cn } from '@/utils'
-const { as: Tag = 'a', class: className, title, href, style = 'button' } = Astro.props
+const { as: Tag = 'a', class: className, title, href, style = 'button', ...props } = Astro.props
 ---
 
 <Tag
@@ -12,8 +12,9 @@ const { as: Tag = 'a', class: className, title, href, style = 'button' } = Astro
   )}
   href={href}
   data-astro-prefetch
+  {...props}
 >
-  <slot name='icon-before'>
+  <slot name='before'>
     {
       style === 'back' && (
         <svg
@@ -43,7 +44,7 @@ const { as: Tag = 'a', class: className, title, href, style = 'button' } = Astro
     }
   </slot>
   {title && <p class='my-0'>{title}</p>}
-  <slot name='icon-after'>
+  <slot name='after'>
     {
       style === 'ahead' && (
         <svg
