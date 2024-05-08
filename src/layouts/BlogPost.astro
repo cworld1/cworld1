@@ -8,6 +8,7 @@ import Comment from '@/components/Comment.astro'
 import Button from '@/components/Button.astro'
 import PageLayout from './BaseLayout.astro'
 import Copyright from '@/components/blog/Copyright.astro'
+import ArticleBottom from '@/components/blog/ArticleBottom.astro'
 
 interface Props {
   post: CollectionEntry<'post'>
@@ -41,7 +42,11 @@ const { headings } = await post.render()
     <div
       class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
     >
+      <!-- copyright -->
       <Copyright content={post} />
+      <!-- article recommend -->
+      <ArticleBottom content={post} class='mt-3 sm:mt-6' />
+      <!-- comment -->
       {!post.data.draft && <Comment />}
     </div>
     <button
