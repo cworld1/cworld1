@@ -5,8 +5,8 @@ import PageLayout from '@/layouts/CommonPage.astro'
 import Comment from '@/components/Comment.astro'
 import ArticleInfo from '@/components/ArticleInfo.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
-import { Image } from 'astro:assets'
 import Button from '@/components/Button.astro'
+import Substats from '@/components/about/Substats.astro'
 
 const headings = [
   {
@@ -186,6 +186,8 @@ const headings = [
       >CWorld1</code
     >.
   </p>
+  <Substats />
+
   <!-- gossips -->
   <h2 id='gossips'>Gossips</h2>
   <Collapse title='Why called CWorld?'>
