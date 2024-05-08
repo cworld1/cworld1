@@ -5,11 +5,11 @@ export const siteConfig: SiteConfig = {
   // Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
   author: 'CWorld',
   // Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-  title: "CWorld's Blog",
+  title: 'CWorld Site',
   // Meta property used as the default description meta property
-  description: 'The official Astro Resume Theme',
+  description: 'Stay hungry, stay foolish',
   // HTML lang property, found in src/layouts/Base.astro L:18
-  lang: 'en-US',
+  lang: 'cn-ZH',
   // Meta property, found in src/components/BaseHead.astro L:42
   ogLocale: 'en_US',
   // Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
