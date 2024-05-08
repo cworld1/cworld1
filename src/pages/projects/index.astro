@@ -38,11 +38,24 @@ const headings = [
 ---
 
 <PageLayout title='Projects' headings={headings}>
+  <p>Github Activities:</p>
+  <p>
+    <Image
+      src='https://ghchart.rshah.org/659eb9/cworld1'
+      alt='github activities'
+      inferSize
+      loading='lazy'
+    />
+  </p>
   <p>
     If you think it would be useful or interesting to collaborate on a project, you can donate to
     support my work or contact me to discuss a project.
   </p>
-  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship' style='ahead' />
+  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
+    <svg class='size-5' slot='before'>
+      <use href='/icons/copyright-sponsor.svg#mingcute-receive-money-line'></use>
+    </svg>
+  </Button>
 
   <h2 id='applications'>Applications</h2>
   <ProjectSection
