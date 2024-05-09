@@ -28,9 +28,9 @@ const toc = generateToc(headings)
   // Feel free to remove this tag if you don't need this type of functionality.
 
   class TOC extends HTMLElement {
-    headings
-    tocLinks
-    activeLink
+    headings!: Element[]
+    tocLinks!: HTMLAnchorElement[]
+    activeLink!: HTMLAnchorElement | undefined
 
     constructor() {
       super()
@@ -40,15 +40,15 @@ const toc = generateToc(headings)
         document.querySelectorAll('article > #content > h2, article > #content > h3')
       )
       this.tocLinks = Array.from(this.querySelectorAll('a[href^="#"]'))
-      this.activeLink = null
+      this.activeLink = undefined
     }
 
-    updateActiveTOCItem = (entries) => {
+    updateActiveTOCItem = (entries: IntersectionObserverEntry[]) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue
 
         // old link should be inactive
-        if (this.activeLink !== null) {
+        if (this.activeLink !== undefined) {
           this.activeLink.ariaSelected = 'false'
         }
 
@@ -77,7 +77,7 @@ const toc = generateToc(headings)
         anchor.addEventListener('click', function (e) {
           e.preventDefault()
 
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
+          anchor.scrollIntoView({
             behavior: 'smooth'
           })
         })
