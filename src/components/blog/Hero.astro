@@ -23,7 +23,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   data.coverImage && (
     <div class='prose mb-6'>
       <Image
-        alt={data.coverImage.alt}
+        alt={data.coverImage.alt || data.title}
         class='h-auto w-full rounded-2xl object-contain'
         fetchpriority='high'
         loading='eager'
@@ -85,4 +85,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   )
 }
 
-{!data.draft && <ArticleInfo path={`/blog/${slug}`} />}
+<div class='mt-4'>
+  <blockquote class='text-sm text-muted-foreground'><q>{data.description}</q></blockquote>
+  {!data.draft && <ArticleInfo class='mt-1' path={`/blog/${slug}`} />}
+</div>

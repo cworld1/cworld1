@@ -9,8 +9,6 @@ tags:
 
 ## 前置准备
 
-ChatGPT 是一个基于 GPT-3.5-turbo 的聊天机器人，它可以通过简单的 API 调用来实现与人类的对话。
-
 关于如何注册 OPENAI，网上的方法已经很多了，这里不再赘述。这里简单讲解一下如何拿到 ChatGPT 的 API。
 
 在 [ChatGPT](https://chatgpt.com/) 上注册成功账号后，在 [API](https://chatgpt.com/api) 页面中，点击 `Get API Key` 按钮，即可获得你的 API Key。

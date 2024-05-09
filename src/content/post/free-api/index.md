@@ -4,7 +4,7 @@ publishDate: 2019-07-10 13:18:58
 description: '免费 API 汇总，包括企业、网友、海外等。'
 tags:
   - API
-coverImage: { src: './thumbnail.jpg', alt: '#26303A' }
+coverImage: { src: './thumbnail.jpg' }
 ---
 
 ## 企业

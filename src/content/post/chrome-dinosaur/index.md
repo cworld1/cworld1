@@ -5,7 +5,7 @@ description: '众所周知，Chrome 含有一个彩蛋，画风清奇小恐龙�
 tags:
   - Chrome
   - JavaScript
-coverImage: { src: './thumbnail.jpg', alt: '#7FD9DA' }
+coverImage: { src: './thumbnail.jpg' }
 ---
 
 ## 前言

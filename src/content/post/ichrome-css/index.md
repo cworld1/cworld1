@@ -6,8 +6,6 @@ tags:
   - CSS
 ---
 
-一个 Chrome 插件 iChrome，功能齐全，但是有广告，所以以下代码就是来美化插件并去除“牛皮藓”。
-
 ![iChrome](ichrome.jpg)
 
 ## 使用方法

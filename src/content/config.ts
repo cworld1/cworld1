@@ -24,7 +24,7 @@ const post = defineCollection({
       coverImage: z
         .object({
           src: image(),
-          alt: z.string()
+          alt: z.string().optional()
         })
         .optional(),
       draft: z.boolean().default(false),

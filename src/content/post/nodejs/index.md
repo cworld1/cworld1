@@ -8,8 +8,6 @@ tags:
   - fnm
 ---
 
-Node.js® is an open-source, cross-platform JavaScript runtime environment.
-
 ## nvm
 
 无论选择在 Windows 还是在 WSL 上安装，安装 Node.js 时还要作出其他选择。 建议使用版本管理器，因为版本变更速度非常快。 你可能需要根据所使用的不同项目的需求在多个版本的 Node.js 之间进行切换。 Node 版本管理器（通常称为 nvm）是安装多个版本的 Node.js 的最常见方法。 我们将演练安装 nvm 的步骤，然后使用它来安装 Node.js。
