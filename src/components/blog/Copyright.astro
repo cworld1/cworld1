@@ -90,9 +90,6 @@ const list = [
 </div>
 
 <script>
-  // @ts-ignore
-  import QRCode from '@/assets/qrcode'
-
   const link = window.location.href
 
   // copy link
@@ -101,11 +98,20 @@ const list = [
     navigator.clipboard.writeText(link)
   })
 
+  // share weibo
+  const shareWeibo = document.getElementById('share-weibo')
+  shareWeibo?.addEventListener('click', () => {
+    const shareUrl = `http://service.weibo.com/share/share.php?url=${link}&title=${document.title}&pic=https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=400`
+    window.open(shareUrl, '_blank')
+  })
+</script>
+
+<script is:inline>
+  import QRCode from '@/assets/qrcode'
   // get qrcode
-  function loadqrcode(qrcodeContainer: HTMLElement) {
+  function loadqrcode(qrcodeContainer) {
     if (!qrcodeContainer) throw new Error('qrcode container not found')
     if (qrcodeContainer.innerHTML !== '') return
-    // @ts-ignore
     new QRCode(qrcodeContainer, link)
   }
   const getQRCode = document.getElementById('get-qrcode')
@@ -118,12 +124,5 @@ const list = [
       loadqrcode(qrcodeContainer)
       qrcodeContainer.ariaExpanded = 'true'
     }
-  })
-
-  // share weibo
-  const shareWeibo = document.getElementById('share-weibo')
-  shareWeibo?.addEventListener('click', () => {
-    const shareUrl = `http://service.weibo.com/share/share.php?url=${link}&title=${document.title}&pic=https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=400`
-    window.open(shareUrl, '_blank')
   })
 </script>
