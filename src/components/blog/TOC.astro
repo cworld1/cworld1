@@ -28,7 +28,7 @@ const toc = generateToc(headings)
   // Feel free to remove this tag if you don't need this type of functionality.
 
   class TOC extends HTMLElement {
-    headings!: Element[]
+    headings!: HTMLElement[]
     tocLinks!: HTMLAnchorElement[]
     activeLink!: HTMLAnchorElement | undefined
 
@@ -48,17 +48,13 @@ const toc = generateToc(headings)
         if (!entry.isIntersecting) continue
 
         // old link should be inactive
-        if (this.activeLink !== undefined) {
-          this.activeLink.ariaSelected = 'false'
-        }
+        if (this.activeLink !== undefined) this.activeLink.ariaSelected = 'false'
 
         // get new link and replace it
         const newActiveLink = this.tocLinks.find(
           (link) => `#${entry.target.id}` === link.getAttribute('href')
         )
-        if (newActiveLink) {
-          newActiveLink.ariaSelected = 'true'
-        }
+        if (newActiveLink) newActiveLink.ariaSelected = 'true'
         this.activeLink = newActiveLink
       }
     }
@@ -73,11 +69,14 @@ const toc = generateToc(headings)
       )
 
       // smooth scroll
+      const self = this
       this.tocLinks.forEach((anchor) => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault()
-
-          anchor.scrollIntoView({
+          const directHeading = self.headings.find(
+            (heading) => `#${heading.id}` === this.getAttribute('href')
+          )
+          directHeading?.scrollIntoView({
             behavior: 'smooth'
           })
         })
