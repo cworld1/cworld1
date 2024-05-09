@@ -122,13 +122,64 @@
           "name": "安知鱼",
           "intro": "生活明朗，万物可爱",
           "link": "https://blog.anheyu.com/",
-          "avatar": "https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"
+          "avatar": "https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg",
+          "status": "unverified"
         },
         {
           "name": "林木木",
           "intro": "木木木木木",
           "link": "https://immmmm.com/",
-          "avatar": "https://cravatar.cn/avatar/ba83fa02fc4b2ba621514941307e21be?s=169"
+          "avatar": "https://cravatar.cn/avatar/ba83fa02fc4b2ba621514941307e21be?s=169",
+          "status": "unverified"
+        },
+        {
+          "name": "Ordis",
+          "intro": "船到桥头自然直，柳暗花明又一村",
+          "link": "https://imbhj.com/",
+          "avatar": "https://imbhj-cdn.oss-cn-hangzhou.aliyuncs.com/CDN3/202208032018823.png",
+          "status": "unverified"
+        },
+        {
+          "name": "猫羽のブログす",
+          "intro": "空中有颗星为你而亮",
+          "link": "https://www.maoyv.com/",
+          "avatar": "https://love-1307045615.cos.ap-chongqing.myqcloud.com/tx_574aac60d580c9f1_ys.jpg",
+          "status": "unverified"
+        },
+        {
+          "name": "陆陆侠的生活",
+          "intro": "安安~这里是陆陆侠的生活",
+          "link": "https://llx.life/",
+          "avatar": "https://llx.life/touxiang.png",
+          "status": "unverified"
+        },
+        {
+          "name": "字节君",
+          "intro": "热爱漫无边际，生活自有分寸",
+          "link": "https://blog.lvbyte.top/",
+          "avatar": "https://npm.elemecdn.com/lvbyte-cdn/20230104/%E8%8B%B9%E6%9E%9C.156l7bksen40.jpg",
+          "status": "unverified"
+        },
+        {
+          "name": "Kris Yan",
+          "intro": "無限進步 @Schale夏萊",
+          "link": "https://blog.krisyan.dev/",
+          "avatar": "https://avatars.githubusercontent.com/u/90099234",
+          "status": "unverified"
+        },
+        {
+          "name": "Lee’s Blog",
+          "intro": "内心丰盈者，独行也如众",
+          "link": "https://happylee.cn/",
+          "avatar": "https://happylee.cn/img/avatar.jpg",
+          "status": "unverified"
+        },
+        {
+          "name": "大大的小蜗牛",
+          "intro": "机会总是垂青于有准备的人",
+          "link": "https://www.eallion.com",
+          "avatar": "https://www.eallion.com/eallion.png",
+          "status": "unverified"
         }
       ]
     },
