@@ -14,8 +14,76 @@ const toc = generateToc(headings)
 ---
 
 <aside class='sticky top-20 order-2 -me-28 hidden basis-60 lg:flex lg:flex-col'>
-  <h2 class='font-semibold'>TABLE OF CONTENTS</h2>
-  <ul class='text-card-foreground'>
-    {toc.map((heading) => <TOCHeading heading={heading} />)}
-  </ul>
+  <toc-heading>
+    <h2 class='font-semibold'>TABLE OF CONTENTS</h2>
+    <ul class='text-card-foreground'>
+      {toc.map((heading) => <TOCHeading heading={heading} />)}
+    </ul>
+  </toc-heading>
 </aside>
+
+<script>
+  // This script tag is useful only if you want to display the TOC alongside the blog post...
+  // ... and highlight the section that the user is currently reading through.
+  // Feel free to remove this tag if you don't need this type of functionality.
+
+  class TOC extends HTMLElement {
+    headings
+    tocLinks
+    activeLink
+
+    constructor() {
+      super()
+
+      // initialize the headings and tocLinks
+      this.headings = Array.from(
+        document.querySelectorAll('article > #content > h2, article > #content > h3')
+      )
+      this.tocLinks = Array.from(this.querySelectorAll('a[href^="#"]'))
+      this.activeLink = null
+    }
+
+    updateActiveTOCItem = (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue
+
+        // old link should be inactive
+        if (this.activeLink !== null) {
+          this.activeLink.ariaSelected = 'false'
+        }
+
+        // get new link and replace it
+        const newActiveLink = this.tocLinks.find(
+          (link) => `#${entry.target.id}` === link.getAttribute('href')
+        )
+        if (newActiveLink) {
+          newActiveLink.ariaSelected = 'true'
+        }
+        this.activeLink = newActiveLink
+      }
+    }
+    connectedCallback() {
+      // set observer
+      this.headings.forEach((heading) =>
+        new IntersectionObserver(this.updateActiveTOCItem, {
+          root: null,
+          rootMargin: '0% 0% -50% 0%',
+          threshold: [1]
+        }).observe(heading)
+      )
+
+      // smooth scroll
+      this.tocLinks.forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          })
+        })
+      })
+    }
+  }
+
+  customElements.define('toc-heading', TOC)
+</script>

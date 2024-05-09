@@ -33,6 +33,7 @@ const { headings } = await post.render()
       <article class='flex-grow break-words' data-pagefind-body>
         <div id='blog-hero'><BlogHero content={post} /></div>
         <div
+          id='content'
           class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
         >
           <slot />
