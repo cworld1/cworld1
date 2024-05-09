@@ -5,14 +5,21 @@ import { Image } from 'astro:assets'
 
 import FormattedDate from '../FormattedDate.astro'
 import Button from '../Button.astro'
+import { cn } from '@/utils'
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
   post: CollectionEntry<'post'>
   detailed?: boolean
 }
 
-const { as: Tag = 'div', post, detailed = false } = Astro.props
-const postDate = post.data.updatedDate ?? post.data.publishDate
+const {
+  as: Tag = 'div',
+  post: { data, slug, render },
+  detailed = false
+} = Astro.props
+const postDate = data.updatedDate ?? data.publishDate
+
+const { remarkPluginFrontmatter } = await render()
 ---
 
 <li
@@ -24,13 +31,13 @@ const postDate = post.data.updatedDate ?? post.data.publishDate
     <!-- title -->
     <a
       data-astro-prefetch
-      href={`/blog/${post.slug}`}
+      href={`/blog/${slug}`}
       class='group w-full transition-all hover:text-primary'
     >
       <div class='flex justify-between'>
         <div>
-          {post.data.draft && <span class='text-red-500'>(Draft) </span>}
-          {post.data.title}
+          {data.draft && <span class='text-red-500'>(Draft) </span>}
+          {data.title}
         </div>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -54,20 +61,34 @@ const postDate = post.data.updatedDate ?? post.data.publishDate
           ></polyline></svg
         >
       </div>
-      <!-- desc -->
       {
         detailed && (
-          <p class='mt-2 line-clamp-3 block text-sm italic text-muted-foreground'>
-            {post.data.description}
-          </p>
+          <>
+            {/* desc */}
+            <p
+              class={cn(
+                'mt-2 line-clamp-3 block text-sm text-muted-foreground',
+                data.coverImage && 'mr-24'
+              )}
+            >
+              {data.description}
+            </p>
+            {/* reading time */}
+            <div class='my-1.5 flex items-center gap-1 text-sm italic leading-4 text-muted-foreground sm:my-2'>
+              <svg class='size-4'>
+                <use href='/icons/ui.svg#mingcute-time-line' />
+              </svg>
+              {remarkPluginFrontmatter.minutesRead}
+            </div>
+          </>
         )
       }
     </a>
     <!-- tags -->
     {
-      detailed && post.data.tags && (
+      detailed && data.tags && (
         <ul class='text-bgColor mt-2 flex flex-wrap gap-2'>
-          {post.data.tags.map((tag: string) => (
+          {data.tags.map((tag: string) => (
             <li>
               <Button title={tag} href={`/tags/${tag}`} style='pill' />
             </li>
@@ -77,10 +98,10 @@ const postDate = post.data.updatedDate ?? post.data.publishDate
     }
   </Tag>
   {
-    detailed && post.data.coverImage && (
+    detailed && data.coverImage && (
       <Image
-        src={post.data.coverImage.src}
-        alt={post.data.coverImage.alt || post.data.title}
+        src={data.coverImage.src}
+        alt={data.coverImage.alt || data.title}
         class='absolute right-0 top-0 z-0 h-full w-3/5 rounded-2xl object-cover opacity-30'
         style={{
           maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
