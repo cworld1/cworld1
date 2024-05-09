@@ -76,3 +76,4 @@ node_modules/
 # others
 .DS_Store
 old_blog
+ignore.*

@@ -1,5 +1,5 @@
 ---
-import type { TocItem } from '@/utils'
+import { cn, type TocItem } from '@/utils'
 
 interface Props {
   heading: TocItem
@@ -13,7 +13,10 @@ const {
 <li class={`${depth > 2 ? 'ms-2' : ''}`}>
   <a
     aria-label={`Scroll to section: ${text}`}
-    class={`block line-clamp-2  ${depth <= 2 ? 'mt-2' : 'mt-1 text-sm'} text-foreground/75 transition-all hover:text-foreground aria-selected:font-medium aria-selected:text-primary`}
+    class={cn(
+      'block line-clamp-2  text-foreground/75 transition-all hover:text-foreground aria-selected:font-medium aria-selected:text-primary',
+      depth <= 2 ? 'mt-2' : 'mt-1 text-sm'
+    )}
     href={`#${slug}`}>{text}</a
   >
   {
