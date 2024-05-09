@@ -8,6 +8,7 @@ export type SiteConfig = {
     locale: string | string[] | undefined
     options: Intl.DateTimeFormatOptions
   }
+  pageSize: number
 }
 
 export type PaginationLink = {

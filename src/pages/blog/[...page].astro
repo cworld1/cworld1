@@ -4,6 +4,7 @@ export const prerender = true
 import type { GetStaticPaths, Page } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 
+import { siteConfig } from '@/site-config'
 import Button from '@/components/Button.astro'
 import Pagination from '@/components/blog/Paginator.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
@@ -15,7 +16,10 @@ export const getStaticPaths = (async ({ paginate }) => {
   const allPostsByDate = sortMDByDate(allPosts)
   const uniqueTags = getUniqueTags(allPosts)
   const totalPosts = allPosts.length
-  return paginate(allPostsByDate, { pageSize: 10, props: { uniqueTags, totalPosts } })
+  return paginate(allPostsByDate, {
+    pageSize: siteConfig.pageSize,
+    props: { uniqueTags, totalPosts }
+  })
 }) satisfies GetStaticPaths
 
 interface Props {

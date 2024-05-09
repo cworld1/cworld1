@@ -20,7 +20,8 @@ export const siteConfig: SiteConfig = {
       month: 'short',
       year: 'numeric'
     }
-  }
+  },
+  pageSize: 8
 }
 
 export const menuLinks: Array<{ title: string; path: string }> = [
