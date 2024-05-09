@@ -80,7 +80,7 @@ const postDate = post.data.updatedDate ?? post.data.publishDate
     detailed && post.data.coverImage && (
       <Image
         src={post.data.coverImage.src}
-        alt={post.data.coverImage.alt}
+        alt={post.data.coverImage.alt || post.data.title}
         class='absolute right-0 top-0 z-0 h-full w-3/5 rounded-2xl object-cover opacity-30'
         style={{
           maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
