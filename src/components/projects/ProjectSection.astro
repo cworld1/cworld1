@@ -41,7 +41,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 class='absolute right-0 z-0 m-0 h-full w-1/2 object-cover opacity-40'
                 src={images[imagePath]()}
                 alt={project.name}
-                loading='lazy'
+                loading='eager'
                 style={{
                   maskImage:
                     'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
@@ -84,6 +84,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                     <a
                       href={link.href}
                       class='rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors sm:p-1.5'
+                      aria-label={link.type}
+                      target='_blank'
                     >
                       <svg class='size-5'>
                         <use href={`/icons/project.svg#${iconId}`} />
