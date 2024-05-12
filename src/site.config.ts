@@ -21,6 +21,8 @@ export const siteConfig: SiteConfig = {
       year: 'numeric'
     }
   },
+  // Customize
+  homeLink: 'https://cworld.top/',
   pageSize: 8
 }
 
