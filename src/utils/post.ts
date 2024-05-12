@@ -8,6 +8,22 @@ export async function getAllPosts() {
   })
 }
 
+export function groupAllPostsByYear(posts: Array<CollectionEntry<'post'>>) {
+  const postsByYear = posts.reduce(
+    (acc, post) => {
+      const year = (post.data.updatedDate ?? post.data.publishDate).getFullYear()
+      if (!acc[year]) {
+        acc[year] = []
+      }
+      acc[year].push(post)
+      return acc
+    },
+    {} as Record<number, Array<CollectionEntry<'post'>>>
+  )
+
+  return Object.entries(postsByYear).sort().reverse()
+}
+
 export function sortMDByDate(posts: Array<CollectionEntry<'post'>>) {
   return posts.sort((a, b) => {
     const aDate = new Date(a.data.updatedDate ?? a.data.publishDate).valueOf()

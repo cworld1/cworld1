@@ -1,0 +1,44 @@
+---
+export const prerender = true
+
+import Button from '@/components/Button.astro'
+import PostPreview from '@/components/blog/PostPreview.astro'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import { getAllPosts, groupAllPostsByYear, sortMDByDate } from '@/utils'
+
+const allPosts = await getAllPosts()
+const allPostsByDate = sortMDByDate(allPosts)
+const allPostsByYear = groupAllPostsByYear(allPostsByDate)
+
+const meta = {
+  description: 'A list of all the years of creating my posts',
+  title: 'All Years'
+}
+---
+
+<PageLayout meta={meta}>
+  <div class='w-full'>
+    <Button title='Back' href='/blog' style='back' />
+
+    <h1 class='mb-6 mt-5 text-2xl font-bold'>Posts by Years</h1>
+    {allPosts.length === 0 && <p>No posts yet.</p>}
+
+    {
+      allPostsByYear.map(([year, posts]) => (
+        <div class='relative mt-20'>
+          <h2
+            class='absolute -left-6 -top-16 z-0 text-9xl font-bold text-transparent opacity-5'
+            style='-webkit-text-stroke-width:2px;-webkit-text-stroke-color:hsl(var(--foreground)/var(--tw-text-opacity))'
+          >
+            <samp>{year}</samp>
+          </h2>
+          <ul class='flex flex-col text-start'>
+            {posts.map((p) => (
+              <PostPreview post={p} class='border-0 bg-transparent py-2 hover:bg-transparent' />
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</PageLayout>
