@@ -69,14 +69,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
     <Section title='About'>
       <p class='text-muted-foreground'>Developer / Designer</p>
       <p class='text-muted-foreground'>
-        Full-time undergraduate student at the <a
-          target='_blank'
-          title='swu'
-          href='http://swu.edu.cn/'>🏫 Sounthwestern University</a
-        >. Mainly learns research big data science, front-end development and neural network
-        learning.
+        Full-time undergraduate student of Computer Science. Slightly accomplished in researching
+        big data, front-end development and neural network learning.
       </p>
-      <Button title='More About Me' class='w-fit' href='/about' style='ahead' />
+      <Button title='More about me' class='w-fit self-end' href='/about' style='ahead' />
     </Section>
     {
       allPostsByDate.length > 0 && (
@@ -88,6 +84,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
               </li>
             ))}
           </ul>
+          <Button title='More posts' class='w-fit self-end' href='/blog' style='ahead' />
         </Section>
       )
     }
@@ -122,12 +119,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
     <Section title='Education'>
       <Card
+        as='a'
         heading='Southwestern University'
         subheading='Full-time undergraduate student'
         date='Augest 2021 - July 2025'
-        imagePath='/src/assets/about-astro.png'
-        altText='just a pic'
-        imageClass='h-12 w-auto md:-left-16'
+        href='http://swu.edu.cn/'
       >
         <ul class='ml-4 list-disc text-muted-foreground'>
           <!-- <li>
@@ -166,9 +162,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         heading='Mathematical Modeling Competition'
         subheading='Won the first prize of the national award in the National Mathematical Modeling Competition of "Higher Education Society"'
         date='October 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Just a pic'
-        imageClass='h-11 w-auto md:-left-16'
         href='http://www.mcm.edu.cn'
       />
     </Section>
