@@ -52,11 +52,19 @@ const { headings } = await post.render()
     </div>
     <button
       aria-label='Back to Top'
-      class='z-90 fixed bottom-8 end-4 flex h-8 w-8 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-primary-foreground text-3xl opacity-0 transition-all duration-300 hover:border-border/75 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 sm:end-8 sm:h-12 sm:w-12'
+      class='z-90 group fixed bottom-8 end-4 flex h-8 w-8 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-primary-foreground text-muted-foreground opacity-0 transition-all duration-300 hover:border-border/75 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 sm:end-8 sm:h-12 sm:w-12'
       data-show='false'
       id='to-top-btn'
     >
-      <svg class='size-6 text-muted-foreground'>
+      <div
+        class='absolute bottom-0 end-0 start-0 top-0 flex items-center justify-center transition-opacity group-hover:opacity-0 group-[.ended]:opacity-0'
+      >
+        <span class='text'>10</span>
+        <span class='text-xs'>%</span>
+      </div>
+      <svg
+        class='size-6 opacity-0 transition-opacity group-hover:opacity-100 group-[.ended]:opacity-100'
+      >
         <use href='/icons/ui.svg#mingcute-up-line'></use>
       </svg>
     </button>
@@ -65,7 +73,11 @@ const { headings } = await post.render()
 
 <script>
   const scrollBtn = document.getElementById('to-top-btn') as HTMLButtonElement
+  const scrollPercentEl = scrollBtn.children[0].children[0] as HTMLElement
   const targetHeader = document.getElementById('blog-hero') as HTMLDivElement
+  const articleElement = document.getElementById('content') as HTMLDivElement
+
+  // scroll to top
   function callback(entries: IntersectionObserverEntry[]) {
     entries.forEach((entry) => {
       // only show the scroll to top button when the heading is out of view
@@ -77,4 +89,28 @@ const { headings } = await post.render()
   })
   const observer = new IntersectionObserver(callback)
   observer.observe(targetHeader)
+
+  // scroll percentage
+  const scrollHeight = articleElement.scrollHeight // total height
+  const articleTop = articleElement.offsetTop // article top
+  const clientHeight = document.documentElement.clientHeight // client height
+
+  function calculateScrollPercent() {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+    if (scrollTop < articleTop) return
+    return Math.round(((scrollTop - articleTop) / (scrollHeight - clientHeight)) * 100)
+  }
+
+  document.addEventListener('scroll', () => {
+    const scrollPercent = calculateScrollPercent()
+    if (scrollPercent === undefined) return
+
+    // if percent is 100, percent won't need to show
+    if (scrollPercent < 100) {
+      scrollBtn.classList.remove('ended')
+      scrollPercentEl.innerHTML = scrollPercent.toString()
+    } else {
+      scrollBtn.classList.add('ended')
+    }
+  })
 </script>

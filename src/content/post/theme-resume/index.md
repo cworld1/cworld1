@@ -2,7 +2,7 @@
 title: 'Configs of Astro Theme Resume'
 description: '前段时间写了个前端项目，一时兴起，就顺便把博客也翻新了一遍。'
 publishDate: '2024-04-19'
-updatedDate: '2024-05-09'
+updatedDate: '2024-05-12'
 coverImage: { src: './cover.png', alt: 'astro theme resume' }
 tags: ['resume', 'astro', 'theme']
 ---
@@ -93,12 +93,13 @@ tags: ['resume', 'astro', 'theme']
 - [x] 添加前后文章快速跳转
 - [x] 添加文章数统计
 - [x] 添加目录指示高亮功能
+- [x] 优化回顶按钮显示当前阅读百分比
+- [x] 添加按年份归档展示文章功能
+- [x] 绑定内容同步到部分社区/频道
 - [ ] 添加内容搜索功能
-- [ ] 优化回顶按钮显示当前阅读百分比
 - [ ] 优化文章内容展示样式
 - [ ] 优化文章内容表格的展示和手机端优化
 - [ ] 优化顶部导航栏逻辑，实现下滚隐藏、上滚呼出
-- [ ] 绑定内容同步到部分社区/频道
 - [ ] 通知友链好友们修改信息
 - [ ] ...
 
