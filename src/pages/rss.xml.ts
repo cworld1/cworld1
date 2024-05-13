@@ -30,15 +30,15 @@ export const GET = async () => {
                 <enclosure url="${post.data.coverImage?.src.src}" />
             `,
       content: sanitizeHtml(parser.render(post.body), {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
-        transformTags: {
-          img: (tagName, attribs) => ({
-            tagName: tagName,
-            attribs: {
-              src: `_astro/${attribs.src}`
-            }
-          })
-        }
+        // allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
+        // transformTags: {
+        //   img: (tagName, attribs) => ({
+        //     tagName: tagName,
+        //     attribs: {
+        //       src: `_astro/${attribs.src}`
+        //     }
+        //   })
+        // }
       })
     }))
   })
