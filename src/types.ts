@@ -8,7 +8,6 @@ export type SiteConfig = {
     locale: string | string[] | undefined
     options: Intl.DateTimeFormatOptions
   }
-  homeLink: string
   pageSize: number
 }
 

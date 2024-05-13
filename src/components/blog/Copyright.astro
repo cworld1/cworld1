@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import { cn, getFormattedDate } from '@/utils'
-import { siteConfig } from '@/site-config'
 
 interface Props {
   content: CollectionEntry<'post'>
@@ -30,7 +29,7 @@ const list = [
   },
   {
     key: 'Link',
-    value: `${siteConfig.homeLink}blog/${slug}`
+    value: `${import.meta.env.SITE}/blog/${slug}`
   }
 ]
 ---

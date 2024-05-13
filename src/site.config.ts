@@ -1,6 +1,5 @@
 import type { SiteConfig } from '@/types'
 import type { AstroExpressiveCodeOptions } from 'astro-expressive-code'
-import defineConfig from 'astro.config.mjs'
 
 export const siteConfig: SiteConfig = {
   // Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
@@ -23,7 +22,6 @@ export const siteConfig: SiteConfig = {
     }
   },
   // Customize
-  homeLink: `${defineConfig.site}/`,
   pageSize: 8
 }
 
