@@ -38,6 +38,8 @@
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/markdown-it": "^14.1.1",
+    "@types/sanitize-html": "^2.11.0",
     "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
