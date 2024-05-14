@@ -60,7 +60,7 @@
 
           for (const [start, end] of indices) {
             highlightedText += text.slice(lastIndex, start) // 添加非匹配部分
-            highlightedText += `<span class="font-semibold">${text.slice(start, end + 1)}</span>` // 添加匹配部分
+            highlightedText += `<span class="font-semibold italic">${text.slice(start, end + 1)}</span>` // 添加匹配部分
             lastIndex = end + 1
           }
 
@@ -80,7 +80,7 @@
             return `<a href="/blog/${slug}" class='text-muted-foreground hover:text-muted-foreground'>
                 <li class='group py-2 sm:py-3 px-3 sm:px-5 flex flex-col gap-y-2 border rounded-xl transition-colors hover:bg-primary-foreground'>
                   <h2 class='text-base text-foreground group-hover:text-primary transition-colors'>${hlTitle}</h2>
-                  <p>${hlDesc}</p>
+                  <p class='text-sm'>${hlDesc}</p>
                   <div class='flex gap-x-3'>
                   ${data.tags
                     .map((tag: string) => {
