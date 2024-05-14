@@ -9,8 +9,10 @@ const { class: className, title, ...props } = Astro.props
 ---
 
 <collapse-component class='group/expand'>
-  <div class={cn(className, 'rounded-xl border border-border py-3 px-5 my-4')} {...props}>
-    <div class='group/highlight expand-title flex cursor-pointer justify-between'>
+  <div class={cn('rounded-xl border border-border px-5 my-4', className)} {...props}>
+    <div
+      class='group/highlight expand-title sticky top-0 z-20 flex cursor-pointer justify-between bg-background py-3'
+    >
       <p class='m-0 transition-colors group-hover/highlight:text-primary'>{title}</p>
       <div class='expand-button'>
         <svg
