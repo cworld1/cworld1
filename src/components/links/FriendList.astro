@@ -44,8 +44,8 @@ const { title, list: friendlist, ...props } = Astro.props
                   alt='avatar'
                   loading='eager'
                 />
-                <div class='absolute left-0 top-0 h-full w-full'>
-                  <div class='flex h-full w-full items-center justify-center bg-foreground opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50'>
+                <div class='absolute start-0 top-0 h-full w-full'>
+                  <div class='flex h-full w-full items-center justify-center rounded-full bg-foreground opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50'>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       width='32'
@@ -55,7 +55,7 @@ const { title, list: friendlist, ...props } = Astro.props
                       stroke-width='2.5'
                       stroke-linecap='round'
                       stroke-linejoin='round'
-                      class='mr-2 stroke-background'
+                      class='me-2 stroke-background'
                     >
                       <line
                         x1='5'
@@ -78,7 +78,7 @@ const { title, list: friendlist, ...props } = Astro.props
               </div>
             </div>
             <Image
-              class='absolute left-0 top-0 z-0 my-0 h-full w-2/3 object-cover opacity-15'
+              class='absolute start-0 top-0 z-0 my-0 h-full w-2/3 object-cover opacity-15'
               src={frd.avatar}
               height={80}
               width={80}

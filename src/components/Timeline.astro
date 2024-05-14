@@ -11,12 +11,12 @@ const { class: className, events, ...props } = Astro.props
 ---
 
 <div class={className} {...props}>
-  <ul class='pl-0 sm:pl-2'>
+  <ul class='ps-0 sm:ps-2'>
     {
       events.map((event, index) => (
-        <li class='group relative flex list-none gap-2 rounded-full pl-0 sm:gap-4'>
+        <li class='group relative flex list-none gap-2 rounded-full ps-0 sm:gap-4'>
           {/* circle */}
-          <span class='z-10 my-2 ml-2 h-3 w-3 min-w-3 rounded-full border-2 border-muted-foreground transition-transform group-hover:scale-125' />
+          <span class='z-10 my-2 ms-2 h-3 w-3 min-w-3 rounded-full border-2 border-muted-foreground transition-transform group-hover:scale-125' />
           {/* line */}
           {index !== events.length - 1 && (
             <span
