@@ -1,0 +1,137 @@
+---
+
+---
+
+<search-component>
+  <div class='flex flex-col'>
+    <aside class='form'>
+      <div class='relative my-4'>
+        <div class='absolute bottom-0 top-0 ml-3 flex items-center sm:ml-4'>
+          <svg class='size-5'>
+            <use href='/icons/header.svg#mingcute-search-2-line'></use>
+          </svg>
+        </div>
+        <input
+          type='search'
+          required
+          name='search'
+          id='search'
+          placeholder='Enter a search term…'
+          class='w-full rounded-xl border bg-transparent py-2 pl-10 pr-3 outline-none focus:border-foreground sm:py-3 sm:pl-12'
+        />
+      </div>
+    </aside>
+    <p id='searchReadout' class='mb-3 text-muted-foreground'></p>
+    <section aria-label='Search Results'>
+      <ul id='searchResults' class='flex flex-col gap-y-3 sm:gap-y-4'></ul>
+    </section>
+  </div>
+</search-component>
+
+<script>
+  import DOMPurify from 'dompurify'
+  import Fuse from 'fuse.js'
+  import { getAllPosts } from '@/utils'
+
+  class SearchComponent extends HTMLElement {
+    constructor() {
+      super()
+    }
+
+    connectedCallback() {
+      // selectors
+      const search = document.querySelector('#search') as HTMLInputElement
+      const searchReadout = document.querySelector('#searchReadout') as HTMLElement
+      const resultsList = document.querySelector('#searchResults') as HTMLElement
+
+      // functions
+      function updateSearchPageURL(search: string) {
+        const url = new URL(window.location.href)
+        url.searchParams.set('q', search)
+        window.history.replaceState(null, '', url)
+      }
+
+      function hlText(text: string, matches: any[], key: string) {
+        const match = matches.find((m) => m.key === key)
+        if (match) {
+          const { indices } = match
+          let highlightedText = ''
+          let lastIndex = 0
+
+          for (const [start, end] of indices) {
+            highlightedText += text.slice(lastIndex, start) // 添加非匹配部分
+            highlightedText += `<span class="font-semibold">${text.slice(start, end + 1)}</span>` // 添加匹配部分
+            lastIndex = end + 1
+          }
+
+          highlightedText += text.slice(lastIndex) // 添加剩余非匹配部分
+          return highlightedText
+        }
+
+        return text
+      }
+
+      function generateSearchList(results: any[]) {
+        return results
+          .map((r) => {
+            const { data, slug } = r.item
+            const hlTitle = hlText(data.title, r.matches, 'data.title')
+            const hlDesc = hlText(data.description, r.matches, 'data.description')
+            return `<a href="/blog/${slug}" class='text-muted-foreground hover:text-muted-foreground'>
+                <li class='group py-2 sm:py-3 px-3 sm:px-5 flex flex-col gap-y-2 border rounded-xl transition-colors hover:bg-primary-foreground'>
+                  <h2 class='text-base text-foreground group-hover:text-primary transition-colors'>${hlTitle}</h2>
+                  <p>${hlDesc}</p>
+                  <div class='flex gap-x-3'>
+                  ${data.tags
+                    .map((tag: string) => {
+                      return `<span>#${tag}</span>`
+                    })
+                    .join('')}
+                  </div>
+                </li>
+              </a>`
+          })
+          .join('')
+      }
+
+      function fetchSearchResults(fuse: any, search: string) {
+        const searchResult = fuse.search(search)
+
+        searchReadout.textContent = search ? `Search results for “${search}”` : ''
+        resultsList.innerHTML =
+          searchResult.length > 0
+            ? generateSearchList(searchResult)
+            : '<p class="text-center py-12">No results found…</p>'
+      }
+
+      ;(async () => {
+        try {
+          const posts = await getAllPosts()
+          const fuse = new Fuse(posts, {
+            keys: ['slug', 'data.title', 'data.description', 'data.tags'],
+            includeMatches: true,
+            minMatchCharLength: 2,
+            threshold: 0.4
+          })
+
+          const urlParams = DOMPurify.sanitize(
+            new URLSearchParams(window.location.search).get('q') ?? ''
+          )
+          if (urlParams) {
+            search.innerHTML = urlParams
+            fetchSearchResults(fuse, urlParams)
+          }
+          search.focus()
+
+          // event listeners
+          search.addEventListener('input', () => {
+            const searchTerm = DOMPurify.sanitize(search.value)
+            fetchSearchResults(fuse, searchTerm)
+            updateSearchPageURL(searchTerm)
+          })
+        } catch (e) {}
+      })()
+    }
+  }
+  customElements.define('search-component', SearchComponent)
+</script>

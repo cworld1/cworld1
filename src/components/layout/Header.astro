@@ -27,6 +27,7 @@ const ITEMS = [
     >
       <a class='flex-none text-xl font-semibold' href='/' aria-label='Brand'>CWorld Site</a>
 
+      <!-- menu -->
       <div class='flex gap-x-4 sm:gap-x-7'>
         <div
           id='headerExpandConetent'
@@ -48,6 +49,18 @@ const ITEMS = [
             }
           </div>
         </div>
+
+        <!-- buttons -->
+        <a href='/search'>
+          <button
+            class='relative rounded-md border border-border p-1.5 transition-all hover:bg-border'
+          >
+            <span class='sr-only'>Search</span>
+            <svg class='size-5'>
+              <use href='/icons/header.svg#mingcute-search-2-line'></use>
+            </svg>
+          </button>
+        </a>
 
         <button
           id='toggleDarkMode'
