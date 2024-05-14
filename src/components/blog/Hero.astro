@@ -21,13 +21,21 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
 {
   data.coverImage && (
-    <div class='prose mb-6'>
+    <div class='prose relative mb-6'>
       <Image
         alt={data.coverImage.alt || data.title}
-        class='h-auto w-full rounded-2xl object-contain'
+        class='relative z-10 h-auto w-full rounded-2xl object-contain'
         fetchpriority='high'
         loading='eager'
         src={data.coverImage.src}
+      />
+      <Image
+        alt={data.coverImage.alt || data.title}
+        fetchpriority='high'
+        loading='eager'
+        src={data.coverImage.src}
+        id='blurImage'
+        class='absolute left-0 top-4 z-0 mt-0 h-full w-full opacity-80 blur-xl transition-opacity duration-300'
       />
     </div>
   )
@@ -89,3 +97,24 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   <blockquote class='text-sm text-muted-foreground'><q>{data.description}</q></blockquote>
   {!data.draft && <ArticleInfo class='mt-1' path={`/blog/${slug}`} />}
 </div>
+
+<script>
+  const viewportHeight = window.innerHeight
+  const threshold1 = viewportHeight / 9
+  const threshold2 = (viewportHeight * 2) / 9
+  const threshold3 = (viewportHeight * 3) / 9
+  const image = document.getElementById('blurImage') as HTMLImageElement
+
+  window.addEventListener('scroll', () => {
+    const scrollDistance = window.scrollY
+    console.log(scrollDistance, threshold1, threshold2, threshold3)
+
+    if (scrollDistance >= threshold3) {
+      image.style.opacity = '0.2'
+    } else if (scrollDistance >= threshold2) {
+      image.style.opacity = '0.4'
+    } else if (scrollDistance >= threshold1) {
+      image.style.opacity = '0.8'
+    }
+  })
+</script>
