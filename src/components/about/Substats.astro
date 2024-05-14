@@ -97,7 +97,7 @@ for (let item of stats) {
   {
     stats.map(({ link, platform, icon, color, count, text }) => (
       <a
-        class='text-muted-foreground no-underline'
+        class='group text-muted-foreground no-underline'
         href={link}
         target='_blank'
         rel='noopener noreferrer'
@@ -111,7 +111,9 @@ for (let item of stats) {
               <use href={`/icons/${icon}`} />
             </svg>
           )}
-          <div class='flex-1 text-foreground'>{platform}</div>
+          <div class='flex-1 text-foreground transition-colors group-hover:text-primary'>
+            {platform}
+          </div>
           {count ? (
             <div class='flex items-center gap-1.5'>
               <samp>{count}</samp>
