@@ -19,28 +19,32 @@ const ITEMS = [
 ]
 ---
 
-<header-component class='group w-full'>
-  <header class='mb-12 flex flex-wrap pb-3 text-sm sm:flex-nowrap sm:justify-start'>
+<header-component
+  class='group sticky top-4 z-30 mb-12 w-full rounded-lg bg-background py-1 transition-all sm:rounded-2xl'
+>
+  <header class='flex flex-wrap text-sm sm:flex-nowrap sm:justify-start'>
     <nav
       class='relative mx-auto flex w-full items-center justify-between sm:flex sm:items-center'
       aria-label='global'
     >
-      <a class='flex-none text-xl font-semibold' href='/' aria-label='Brand'>CWorld Site</a>
+      <a class='flex-none text-xl font-semibold group-[.not-top]:ms-5' href='/' aria-label='Brand'
+        >CWorld Site</a
+      >
 
       <!-- menu -->
       <div class='flex gap-x-4 sm:gap-x-7'>
         <div
           id='headerExpandConetent'
-          class='absolute left-0 right-0 top-14 z-10 grid opacity-0 transition-all duration-300 group-[.expanded]:bg-background group-[.expanded]:pb-10 group-[.expanded]:opacity-100 sm:static sm:grid-rows-1 sm:bg-inherit sm:opacity-100 sm:group-[.expanded]:pb-0'
+          class='absolute end-0 start-0 top-12 z-10 grid rounded-lg py-1 opacity-0 transition-all duration-300 group-[.not-top]:border group-[.expanded]:bg-background group-[.not-top]:px-4 group-[.expanded]:opacity-100 sm:static sm:grid-rows-1 sm:border-0 sm:bg-inherit sm:px-0 sm:py-0 sm:opacity-100 sm:group-[.not-top]:border-0'
         >
           <div
-            class='flex flex-col items-center justify-center gap-5 overflow-hidden transition-colors sm:flex-row sm:gap-x-7'
+            class='flex flex-col items-center justify-center gap-x-5 gap-y-2 overflow-hidden transition-colors sm:flex-row sm:gap-x-7'
           >
             {
               ITEMS.map((item) => (
                 <a
                   href={item.link}
-                  class='w-full flex-none grow text-right text-[1.05rem] font-medium hover:text-primary sm:w-fit'
+                  class='w-full flex-none grow py-3 text-right text-[1.05rem] font-medium hover:text-primary sm:w-fit sm:py-2'
                   aria-label='Nav Menu Item'
                 >
                   {item.label}
@@ -51,50 +55,40 @@ const ITEMS = [
         </div>
 
         <!-- buttons -->
-        <a href='/search'>
+        <div class='flex gap-x-4 group-[.not-top]:me-1.5 group-[.not-top]:gap-x-2'>
+          <a href='/search'>
+            <button
+              class='rounded-md border p-1.5 transition-all hover:bg-border sm:group-[.not-top]:rounded-xl'
+            >
+              <span class='sr-only'>Search</span>
+              <svg class='size-5'>
+                <use href='/icons/header.svg#mingcute-search-2-line'></use>
+              </svg>
+            </button>
+          </a>
+
           <button
-            class='relative rounded-md border border-border p-1.5 transition-all hover:bg-border'
+            id='toggleDarkMode'
+            class='group/dark rounded-md border p-1.5 transition-all hover:bg-border sm:group-[.not-top]:rounded-xl'
           >
-            <span class='sr-only'>Search</span>
-            <svg class='size-5'>
-              <use href='/icons/header.svg#mingcute-search-2-line'></use>
+            <span class='sr-only'>Dark Theme</span>
+            <svg class='size-5 transition-all group-hover/dark:text-primary dark:hidden'>
+              <use href='/icons/header.svg#mingcute-sun-line'></use>
+            </svg>
+            <svg class='hidden size-5 transition-all group-hover/dark:text-primary dark:block'>
+              <use href='/icons/header.svg#mingcute-moon-stars-line'></use>
             </svg>
           </button>
-        </a>
-
-        <button
-          id='toggleDarkMode'
-          class='relative rounded-md border border-border p-1.5 transition-all hover:bg-border'
-        >
-          <span class='sr-only'>Dark Theme</span>
-          <svg class='size-5 transition-all dark:hidden'>
-            <use href='/icons/header.svg#mingcute-sun-line'></use>
-          </svg>
-          <svg class='hidden size-5 transition-all dark:block'>
-            <use href='/icons/header.svg#mingcute-moon-stars-line'></use>
-          </svg>
-        </button>
-        <button
-          id='toggleMenu'
-          class='relative rounded-md border border-border p-1.5 transition-all hover:bg-border sm:hidden'
-        >
-          <span class='sr-only'>Menu</span>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='16'
-            height='16'
-            class='size-5'
-            viewBox='0 0 24 24'
-            ><g fill='none'
-              ><path
-                d='M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'
-              ></path><path
-                fill='currentColor'
-                d='M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z'
-              ></path></g
-            ></svg
+          <button
+            id='toggleMenu'
+            class='rounded-md border p-1.5 transition-all hover:bg-border sm:hidden sm:group-[.not-top]:rounded-xl'
           >
-        </button>
+            <span class='sr-only'>Menu</span>
+            <svg class='size-5'>
+              <use href='/icons/header.svg#mingcute-menu-line'></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
@@ -107,6 +101,22 @@ const ITEMS = [
     }
 
     connectedCallback() {
+      // Header
+      let preScrollY = window.scrollY
+      if (preScrollY > 20) {
+        this.classList.add('not-top')
+      }
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          this.classList.add('not-top')
+        } else {
+          this.classList.remove('not-top')
+        }
+        this.dataset.show = (window.scrollY < 350 || window.scrollY < preScrollY).toString()
+        preScrollY = window.scrollY
+      })
+
       // Dark Mode
       function getCurrentTheme() {
         return localStorage.getItem('theme')
@@ -136,3 +146,30 @@ const ITEMS = [
   }
   customElements.define('header-component', Header)
 </script>
+
+<style>
+  header-component[data-show='false']:not(.expanded) {
+    transform: translateY(-4rem);
+  }
+  header-component.not-top {
+    box-shadow:
+      rgb(255, 255, 255) 0px 0px 0px 0px,
+      rgba(24, 24, 27, 0.05) 0px 0px 0px 1px,
+      rgba(39, 39, 42, 0.05) 0px 10px 15px -3px,
+      rgba(39, 39, 42, 0.05) 0px 4px 6px -4px;
+  }
+  @media (min-width: 800px) {
+    header-component.not-top {
+      width: 80%;
+    }
+  }
+  @media (max-width: 640px) {
+    .expanded.not-top #headerExpandConetent {
+      box-shadow:
+        rgb(255, 255, 255) 0px 0px 0px 0px,
+        rgba(24, 24, 27, 0.05) 0px 0px 0px 1px,
+        rgba(39, 39, 42, 0.05) 0px 10px 15px -3px,
+        rgba(39, 39, 42, 0.05) 0px 4px 6px -4px;
+    }
+  }
+</style>
