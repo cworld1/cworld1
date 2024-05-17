@@ -1,26 +1,9 @@
 ---
-const ITEMS = [
-  {
-    link: '/blog',
-    label: 'Blog'
-  },
-  {
-    link: '/projects',
-    label: 'Projects'
-  },
-  {
-    link: '/links',
-    label: 'Links'
-  },
-  {
-    link: '/about',
-    label: 'About'
-  }
-]
+import { menuLinks } from '@/site-config'
 ---
 
 <header-component
-  class='group sticky top-4 z-30 mb-16 w-full rounded-lg border border-transparent bg-background py-1 transition-all duration-300 sm:rounded-2xl [&.not-top]:border-border dark:[&.not-top]:bg-primary-foreground'
+  class='group sticky top-4 z-30 mb-16 box-content w-full rounded-lg border border-transparent bg-background py-1 transition-all duration-300 sm:rounded-2xl [&.not-top]:border-border dark:[&.not-top]:bg-primary-foreground'
 >
   <header class='flex flex-wrap text-sm sm:flex-nowrap sm:justify-start'>
     <nav
@@ -35,16 +18,16 @@ const ITEMS = [
       <div class='flex gap-x-4 sm:gap-x-7'>
         <div
           id='headerExpandConetent'
-          class='absolute end-0 start-0 top-12 z-10 grid py-1 opacity-0 transition-all duration-300 group-[.not-top]:rounded-lg group-[.not-top]:border group-[.expanded]:bg-background group-[.not-top]:px-4 group-[.expanded]:opacity-100 max-md:border-b sm:static sm:grid-rows-1 sm:border-0 sm:bg-inherit sm:px-0 sm:py-0 sm:opacity-100 sm:group-[.not-top]:border-0'
+          class='end-0 start-0 top-12 z-20 grid transition-all duration-300 group-[.not-top]:rounded-lg group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-primary-foreground max-md:border-b max-sm:absolute max-sm:pb-4 max-sm:pt-0 max-sm:opacity-0 max-sm:group-[.not-top]:border max-sm:group-[.expanded]:bg-background max-sm:group-[.not-top]:px-4 max-sm:group-[.not-top]:pb-2 max-sm:group-[.not-top]:pt-2 sm:grid-rows-1 sm:border-0'
         >
           <div
             class='flex flex-col items-center justify-center gap-x-5 gap-y-2 overflow-hidden transition-colors sm:flex-row sm:gap-x-7'
           >
             {
-              ITEMS.map((item) => (
+              menuLinks.map((item) => (
                 <a
                   href={item.link}
-                  class='w-full flex-none grow py-3 text-right text-[1.05rem] font-medium hover:text-primary sm:w-fit sm:py-2'
+                  class='w-full flex-none grow py-2 text-right text-[1.05rem] font-medium hover:text-primary sm:w-fit'
                   aria-label='Nav Menu Item'
                 >
                   {item.label}

@@ -11,6 +11,8 @@ export type SiteConfig = {
   pageSize: number
 }
 
+export type MenuLinks = Array<{ link: string; label: string }>
+
 export type PaginationLink = {
   url: string
   text?: string
