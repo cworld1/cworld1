@@ -34,7 +34,7 @@ const { headings } = await post.render()
         <div id='blog-hero'><BlogHero content={post} /></div>
         <div
           id='content'
-          class='prose prose-base prose-zinc mt-12 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+          class='prose prose-base prose-zinc mt-12 w-full text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
         >
           <slot />
         </div>
@@ -52,7 +52,7 @@ const { headings } = await post.render()
     </div>
     <button
       aria-label='Back to Top'
-      class='z-90 group fixed bottom-8 end-4 flex h-8 w-8 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-primary-foreground text-muted-foreground opacity-0 transition-all duration-300 hover:border-border/75 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 sm:end-8 sm:h-12 sm:w-12'
+      class='z-90 group fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-primary-foreground text-muted-foreground opacity-0 transition-all duration-300 hover:border-border/75 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 sm:end-8 sm:h-12 sm:w-12'
       data-show='false'
       id='to-top-btn'
     >
@@ -114,3 +114,24 @@ const { headings } = await post.render()
     }
   })
 </script>
+
+<style>
+  #content :global(table) {
+    table-layout: fixed !important;
+    width: 100%;
+  }
+  #content
+    :global(
+      :where(blockquote p:first-of-type):not(
+          :where([class~='not-prose'], [class~='not-prose'] *)
+        )::before
+    ),
+  #content
+    :global(
+      :where(blockquote p:first-of-type):not(
+          :where([class~='not-prose'], [class~='not-prose'] *)
+        )::after
+    ) {
+    display: none;
+  }
+</style>
