@@ -9,9 +9,9 @@ const { class: className, title, ...props } = Astro.props
 ---
 
 <collapse-component class='group/expand'>
-  <div class={cn('rounded-xl border border-border px-5 my-4', className)} {...props}>
+  <div class={cn('rounded-xl border border-border px-3 sm:px-4 my-4', className)} {...props}>
     <div
-      class='group/highlight expand-title sticky top-0 z-20 flex cursor-pointer justify-between bg-background py-3'
+      class='group/highlight expand-title sticky top-0 z-20 flex cursor-pointer justify-between bg-background py-2 sm:py-3'
     >
       <p class='m-0 transition-colors group-hover/highlight:text-primary'>{title}</p>
       <div class='expand-button'>
@@ -41,7 +41,7 @@ const { class: className, title, ...props } = Astro.props
       </div>
     </div>
     <div
-      class='expand-conetent grid opacity-0 transition-all duration-300 ease-in-out group-[.expanded]/expand:mt-2 group-[.expanded]/expand:opacity-100'
+      class='expand-conetent grid opacity-0 transition-all duration-300 ease-in-out group-[.expanded]/expand:mb-3 group-[.expanded]/expand:opacity-100 sm:group-[.expanded]/expand:mb-4'
     >
       <div class='overflow-hidden'>
         <slot />
@@ -57,11 +57,6 @@ const { class: className, title, ...props } = Astro.props
     }
 
     connectedCallback() {
-      var style = document.createElement('style')
-      style.innerHTML =
-        '.expand-conetent { grid-template-rows: 0fr} .expanded .expand-conetent {grid-template-rows: 1fr}'
-      this.appendChild(style)
-
       const expandTitle = this.querySelector('.expand-title')
       // const expandable = this.querySelector('.expandable')
       expandTitle?.addEventListener('click', () => {
@@ -75,3 +70,12 @@ const { class: className, title, ...props } = Astro.props
   }
   customElements.define('collapse-component', Collapse)
 </script>
+
+<style>
+  .expand-conetent {
+    grid-template-rows: 0fr;
+  }
+  .expanded .expand-conetent {
+    grid-template-rows: 1fr;
+  }
+</style>

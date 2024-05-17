@@ -58,12 +58,12 @@ const ITEMS = [
         <div class='flex gap-x-4 transition-all group-[.not-top]:me-1.5 group-[.not-top]:gap-x-2'>
           <a
             href='/search'
-              class='rounded-md border p-1.5 transition-all hover:bg-border sm:group-[.not-top]:rounded-xl'
-            >
-              <span class='sr-only'>Search</span>
-              <svg class='size-5'>
-                <use href='/icons/header.svg#mingcute-search-2-line'></use>
-              </svg>
+            class='rounded-md border p-1.5 transition-all hover:bg-border sm:group-[.not-top]:rounded-xl'
+          >
+            <span class='sr-only'>Search</span>
+            <svg class='size-5'>
+              <use href='/icons/header.svg#mingcute-search-2-line'></use>
+            </svg>
           </a>
 
           <button
@@ -129,10 +129,6 @@ const ITEMS = [
       })
 
       // Menu
-      var style = document.createElement('style')
-      style.innerHTML =
-        '@media(max-width:640px){#headerExpandConetent{grid-template-rows:0fr}.expanded #headerExpandConetent{grid-template-rows:1fr}}'
-      this.appendChild(style)
       const toggleMenuButton = this.querySelector('#toggleMenu')
       toggleMenuButton?.addEventListener('click', () => {
         if (this.classList.contains('expanded')) {
@@ -147,9 +143,7 @@ const ITEMS = [
 </script>
 
 <style>
-  header-component[data-show='false']:not(.expanded) {
-    transform: translateY(-4rem);
-  }
+  /* header-componnet */
   header-component.not-top {
     box-shadow:
       rgb(255, 255, 255) 0px 0px 0px 0px,
@@ -157,12 +151,23 @@ const ITEMS = [
       rgba(39, 39, 42, 0.05) 0px 10px 15px -3px,
       rgba(39, 39, 42, 0.05) 0px 4px 6px -4px;
   }
+  header-component[data-show='false']:not(.expanded) {
+    transform: translateY(-4.5rem);
+  }
   @media (min-width: 800px) {
     header-component.not-top {
       width: 80%;
     }
   }
+
+  /* header menu */
   @media (max-width: 640px) {
+    #headerExpandConetent {
+      grid-template-rows: 0fr;
+    }
+    .expanded #headerExpandConetent {
+      grid-template-rows: 1fr;
+    }
     .expanded.not-top #headerExpandConetent {
       box-shadow:
         rgb(255, 255, 255) 0px 0px 0px 0px,
