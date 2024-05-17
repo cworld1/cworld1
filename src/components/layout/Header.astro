@@ -20,7 +20,7 @@ const ITEMS = [
 ---
 
 <header-component
-  class='[&.not-top]:border-1 group sticky top-4 z-30 mb-16 w-full rounded-lg bg-background py-1 transition-all sm:rounded-2xl dark:[&.not-top]:bg-primary-foreground'
+  class='group sticky top-4 z-30 mb-16 w-full rounded-lg border border-transparent bg-background py-1 transition-all duration-300 sm:rounded-2xl [&.not-top]:border-border dark:[&.not-top]:bg-primary-foreground'
 >
   <header class='flex flex-wrap text-sm sm:flex-nowrap sm:justify-start'>
     <nav
@@ -35,7 +35,7 @@ const ITEMS = [
       <div class='flex gap-x-4 sm:gap-x-7'>
         <div
           id='headerExpandConetent'
-          class='absolute end-0 start-0 top-12 z-10 grid rounded-lg py-1 opacity-0 transition-all duration-300 group-[.not-top]:border group-[.expanded]:bg-background group-[.not-top]:px-4 group-[.expanded]:opacity-100 sm:static sm:grid-rows-1 sm:border-0 sm:bg-inherit sm:px-0 sm:py-0 sm:opacity-100 sm:group-[.not-top]:border-0'
+          class='absolute end-0 start-0 top-12 z-10 grid py-1 opacity-0 transition-all duration-300 group-[.not-top]:rounded-lg group-[.not-top]:border group-[.expanded]:bg-background group-[.not-top]:px-4 group-[.expanded]:opacity-100 max-md:border-b sm:static sm:grid-rows-1 sm:border-0 sm:bg-inherit sm:px-0 sm:py-0 sm:opacity-100 sm:group-[.not-top]:border-0'
         >
           <div
             class='flex flex-col items-center justify-center gap-x-5 gap-y-2 overflow-hidden transition-colors sm:flex-row sm:gap-x-7'
@@ -55,16 +55,15 @@ const ITEMS = [
         </div>
 
         <!-- buttons -->
-        <div class='flex gap-x-4 group-[.not-top]:me-1.5 group-[.not-top]:gap-x-2'>
-          <a href='/search'>
-            <button
+        <div class='flex gap-x-4 transition-all group-[.not-top]:me-1.5 group-[.not-top]:gap-x-2'>
+          <a
+            href='/search'
               class='rounded-md border p-1.5 transition-all hover:bg-border sm:group-[.not-top]:rounded-xl'
             >
               <span class='sr-only'>Search</span>
               <svg class='size-5'>
                 <use href='/icons/header.svg#mingcute-search-2-line'></use>
               </svg>
-            </button>
           </a>
 
           <button
