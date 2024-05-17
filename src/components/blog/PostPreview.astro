@@ -72,18 +72,29 @@ const { remarkPluginFrontmatter } = await render()
             {/* desc */}
             <p
               class={cn(
-                'mt-2 line-clamp-3 block text-sm text-muted-foreground',
+                'line-clamp-3 block pt-1 text-sm text-muted-foreground',
                 data.coverImage && 'me-24'
               )}
             >
               {data.description}
             </p>
-            {/* reading time */}
-            <div class='my-1.5 flex items-center gap-1 text-sm italic leading-4 text-muted-foreground sm:my-2'>
-              <svg class='size-4'>
-                <use href='/icons/ui.svg#mingcute-time-line' />
-              </svg>
-              {remarkPluginFrontmatter.minutesRead}
+            <div class='mb-1.5 flex items-center gap-2 pt-1.5 text-sm italic leading-4 text-muted-foreground sm:mb-2'>
+              {/* reading time */}
+              <span class='flex items-center gap-1'>
+                <svg class='size-4'>
+                  <use href='/icons/ui.svg#mingcute-time-line' />
+                </svg>
+                {remarkPluginFrontmatter.minutesRead}
+              </span>
+              {/* language */}
+              {data.language && (
+                <span class='flex items-center gap-1'>
+                  <svg class='size-4'>
+                    <use href='/icons/project.svg#mingcute-earth-2-line' />
+                  </svg>
+                  {data.language}
+                </span>
+              )}
             </div>
           </>
         )

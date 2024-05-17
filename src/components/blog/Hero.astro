@@ -40,8 +40,10 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
     </div>
   )
 }
+
 {data.draft ? <span class='text-red-500'>(Draft)</span> : null}
 <div class='flex flex-col gap-2 text-xs leading-6 text-muted-foreground sm:flex-row'>
+  <!-- article date -->
   <div class='flex items-center gap-1'>
     <svg class='size-5'>
       <use href='/icons/ui.svg#mingcute-calendar-2-line'></use>
@@ -59,13 +61,26 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
       )
     }
   </div>
+  <!-- times read -->
   <div class='flex items-center gap-1'>
     <svg class='size-5'>
       <use href='/icons/ui.svg#mingcute-time-line'></use>
     </svg>
     {remarkPluginFrontmatter.minutesRead}
   </div>
+  <!-- language -->
+  {
+    data.language && (
+      <span class='flex items-center gap-1'>
+        <svg class='size-5'>
+          <use href='/icons/project.svg#mingcute-earth-2-line' />
+        </svg>
+        {data.language}
+      </span>
+    )
+  }
 </div>
+
 <h1 class='mt-2 text-3xl font-medium sm:mb-1'>
   {data.title}
 </h1>
