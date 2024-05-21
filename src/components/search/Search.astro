@@ -118,7 +118,7 @@
             new URLSearchParams(window.location.search).get('q') ?? ''
           )
           if (urlParams) {
-            search.innerHTML = urlParams
+            search.innerText = urlParams
             fetchSearchResults(fuse, urlParams)
           }
           search.focus()
