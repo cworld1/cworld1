@@ -67,4 +67,4 @@ Coding with IDEs & Envs:
 ![Windows](https://img.shields.io/badge/-0078d4?style=for-the-badge&logo=windows-11&logoColor=white)
 ![Arch Linux](https://img.shields.io/badge/-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
 
-<!-- Sheild badge fom: https://github.com/alexandresanlim/Badges4-README.md-Profile -->
+<!-- Shields badge fom: https://github.com/alexandresanlim/Badges4-README.md-Profile -->
