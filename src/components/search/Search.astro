@@ -59,12 +59,12 @@
           let lastIndex = 0
 
           for (const [start, end] of indices) {
-            highlightedText += text.slice(lastIndex, start) // 添加非匹配部分
-            highlightedText += `<span class="font-semibold italic">${text.slice(start, end + 1)}</span>` // 添加匹配部分
+            highlightedText += text.slice(lastIndex, start) // add part that doesn't match
+            highlightedText += `<span class="font-semibold underline">${text.slice(start, end + 1)}</span>` // add matched
             lastIndex = end + 1
           }
 
-          highlightedText += text.slice(lastIndex) // 添加剩余非匹配部分
+          highlightedText += text.slice(lastIndex) // continuing add exsists
           return highlightedText
         }
 

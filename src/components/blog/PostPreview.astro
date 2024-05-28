@@ -103,7 +103,7 @@ const { remarkPluginFrontmatter } = await render()
     <!-- tags -->
     {
       detailed && data.tags && (
-        <ul class='text-bgColor mt-2 flex flex-wrap gap-2'>
+        <ul class='text-bgColor mt-3 flex flex-wrap gap-2'>
           {data.tags.map((tag: string) => (
             <li>
               <Button title={tag} href={`/tags/${tag}`} style='pill' />
