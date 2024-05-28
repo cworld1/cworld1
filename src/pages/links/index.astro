@@ -112,7 +112,7 @@ const friendlist = links.friends
   <Comment slot='bottom' />
 </PageLayout>
 
-<script>
+<script is:inline>
   let UserConfig = {
     // 填写你的api地址
     private_api_url: 'https://links.cworld.top/',
@@ -128,5 +128,5 @@ const friendlist = links.friends
     expire_days: 1
   }
   UserConfig = { ...UserConfig } // 这行只是为了让TypeScript不报错
-  import 'https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.13/dist/fcircle.min.js'
 </script>
+<script src='https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.13/dist/fcircle.min.js'></script>
