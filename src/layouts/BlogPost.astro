@@ -134,4 +134,11 @@ const { headings } = await post.render()
     ) {
     display: none;
   }
+  #content :global(h2:target::before),
+  #content :global(h3:target::before) {
+    display: inline-block;
+    content: '#';
+    margin-inline-start: -30px;
+    width: 30px;
+  }
 </style>
