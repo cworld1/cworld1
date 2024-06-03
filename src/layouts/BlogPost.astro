@@ -104,14 +104,10 @@ const { headings } = await post.render()
   document.addEventListener('scroll', () => {
     const scrollPercent = calculateScrollPercent()
     if (scrollPercent === undefined) return
+    scrollPercentEl.innerText = scrollPercent.toString()
 
-    // if percent is 100, percent won't need to show
-    if (scrollPercent < 100) {
-      scrollBtn.classList.remove('ended')
-      scrollPercentEl.innerText = scrollPercent.toString()
-    } else {
-      scrollBtn.classList.add('ended')
-    }
+    // If percent is 100, percent won't need to show
+    scrollBtn.classList.toggle('ended', scrollPercent > 100)
   })
 </script>
 

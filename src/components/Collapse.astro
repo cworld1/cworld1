@@ -66,11 +66,7 @@ const { class: className, title, ...props } = Astro.props
       const expandTitle = this.querySelector('.expand-title')
       // const expandable = this.querySelector('.expandable')
       expandTitle?.addEventListener('click', () => {
-        if (this.classList.contains('expanded')) {
-          this.classList.remove('expanded')
-        } else {
-          this.classList.add('expanded')
-        }
+        this.classList.toggle('expanded')
       })
     }
   }

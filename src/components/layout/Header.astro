@@ -87,15 +87,10 @@ import { menuLinks } from '@/site-config'
     connectedCallback() {
       // Header
       let preScrollY = window.scrollY
-      if (preScrollY > 20) {
-        this.classList.add('not-top')
-      }
+      this.classList.toggle('not-top', preScrollY > 20)
+
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-          this.classList.add('not-top')
-        } else {
-          this.classList.remove('not-top')
-        }
+        this.classList.toggle('not-top', window.scrollY > 20)
         this.dataset.show = (window.scrollY < 350 || window.scrollY < preScrollY).toString()
         preScrollY = window.scrollY
       })
@@ -115,11 +110,7 @@ import { menuLinks } from '@/site-config'
       // Menu
       const toggleMenuButton = this.querySelector('#toggleMenu')
       toggleMenuButton?.addEventListener('click', () => {
-        if (this.classList.contains('expanded')) {
-          this.classList.remove('expanded')
-        } else {
-          this.classList.add('expanded')
-        }
+        this.classList.toggle('expanded')
       })
     }
   }
