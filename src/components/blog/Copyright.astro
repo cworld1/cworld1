@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import { cn, getFormattedDate } from '@/utils'
+import { siteConfig } from '@/site-config'
 
 interface Props {
   content: CollectionEntry<'post'>
@@ -15,7 +16,7 @@ const {
 const list = [
   {
     key: 'Author',
-    value: 'CWorld'
+    value: siteConfig.author
   },
   {
     key: 'Update date',

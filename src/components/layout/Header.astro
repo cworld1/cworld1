@@ -1,5 +1,5 @@
 ---
-import { menuLinks } from '@/site-config'
+import { siteConfig, menuLinks } from '@/site-config'
 ---
 
 <header-component
@@ -11,9 +11,9 @@ import { menuLinks } from '@/site-config'
       aria-label='global'
     >
       <a
-        class='flex-none text-xl font-semibold transition-all duration-300 group-[.not-top]:ms-5'
+        class='flex-none text-xl font-semibold transition-all duration-300 group-[.not-top]:ms-3 sm:group-[.not-top]:ms-5'
         href='/'
-        aria-label='Brand'>CWorld Site</a
+        aria-label='Brand'>{siteConfig.title}</a
       >
 
       <!-- menu -->

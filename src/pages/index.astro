@@ -11,6 +11,7 @@ import { Image } from 'astro:assets'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 import Button from '@/components/Button.astro'
+import { siteConfig } from '@/site-config'
 
 const languages = [
   'C',
@@ -50,7 +51,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       />
 
       <div class='flex flex-col items-center gap-y-4'>
-        <h1 class='text-3xl font-bold'>CWorld</h1>
+        <h1 class='text-3xl font-bold'>{siteConfig.author}</h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
           <Label title='China'>
             <svg class='size-5' slot='icon'>
