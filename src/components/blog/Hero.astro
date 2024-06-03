@@ -120,16 +120,18 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   const threshold3 = (viewportHeight * 3) / 9
   const image = document.getElementById('blurImage') as HTMLImageElement
 
-  window.addEventListener('scroll', () => {
-    const scrollDistance = window.scrollY
-    console.log(scrollDistance, threshold1, threshold2, threshold3)
+  if (image) {
+    window.addEventListener('scroll', () => {
+      const scrollDistance = window.scrollY
+      console.log(scrollDistance, threshold1, threshold2, threshold3)
 
-    if (scrollDistance >= threshold3) {
-      image.style.opacity = '0.2'
-    } else if (scrollDistance >= threshold2) {
-      image.style.opacity = '0.4'
-    } else if (scrollDistance >= threshold1) {
-      image.style.opacity = '0.8'
-    }
-  })
+      if (scrollDistance >= threshold3) {
+        image.style.opacity = '0.2'
+      } else if (scrollDistance >= threshold2) {
+        image.style.opacity = '0.4'
+      } else if (scrollDistance >= threshold1) {
+        image.style.opacity = '0.8'
+      }
+    })
+  }
 </script>
