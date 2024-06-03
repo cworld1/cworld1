@@ -26,7 +26,8 @@ const { remarkPluginFrontmatter } = await render()
 
 <li
   class={cn(
-    'relative flex basis-full flex-col gap-2 rounded-2xl border border-border bg-background px-5 py-3 transition-colors ease-in-out hover:bg-primary-foreground sm:flex-row sm:gap-x-4',
+    'group/card relative flex basis-full flex-col gap-2 rounded-2xl border border-border bg-background transition-colors ease-in-out px-5 py-3 hover:bg-primary-foreground sm:flex-row sm:gap-x-4',
+    detailed && 'sm:py-5',
     className
   )}
 >
@@ -37,7 +38,7 @@ const { remarkPluginFrontmatter } = await render()
     <a
       data-astro-prefetch
       href={`/blog/${slug}`}
-      class='group w-full transition-all hover:text-primary'
+      class='group/link w-full transition-all hover:text-primary'
     >
       <div class='flex justify-between'>
         <div>
@@ -53,16 +54,16 @@ const { remarkPluginFrontmatter } = await render()
           stroke-width='2.5'
           stroke-linecap='round'
           stroke-linejoin='round'
-          class='my-1 stroke-muted-foreground group-hover:stroke-primary'
+          class='my-1 stroke-muted-foreground group-hover/link:stroke-primary'
           ><line
             x1='5'
             y1='12'
             x2='19'
             y2='12'
-            class='translate-x-4 scale-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:scale-x-100'
+            class='translate-x-4 scale-x-0 transition-all duration-300 ease-in-out group-hover/link:translate-x-1 group-hover/link:scale-x-100'
           ></line><polyline
             points='12 5 19 12 12 19'
-            class='translate-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1'
+            class='translate-x-0 transition-all duration-300 ease-in-out group-hover/link:translate-x-1'
           ></polyline></svg
         >
       </div>
@@ -78,7 +79,7 @@ const { remarkPluginFrontmatter } = await render()
             >
               {data.description}
             </p>
-            <div class='mb-1.5 flex items-center gap-2 pt-1.5 text-sm italic leading-4 text-muted-foreground sm:mb-2'>
+            <div class='mb-1.5 mt-1.5 flex items-center gap-2 text-sm italic leading-4 text-muted-foreground sm:mb-2 sm:mt-4'>
               {/* reading time */}
               <span class='flex items-center gap-1'>
                 <svg class='size-4'>
@@ -118,7 +119,7 @@ const { remarkPluginFrontmatter } = await render()
       <Image
         src={data.coverImage.src}
         alt={data.coverImage.alt || data.title}
-        class='absolute right-0 top-0 z-0 h-full w-3/5 rounded-2xl object-cover opacity-30'
+        class='absolute right-0 top-0 z-0 h-full w-3/5 rounded-2xl object-cover opacity-30 transition-opacity duration-300 group-hover/card:opacity-60'
         style={{
           maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
           msMaskImage: '-ms-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
