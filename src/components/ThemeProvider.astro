@@ -2,7 +2,8 @@
 
 ---
 
-<script>
+<!-- Use inline mode to quick load color, which can avoid splash -->
+<script is:inline>
   const lightModePref = window.matchMedia('(prefers-color-scheme: light)')
 
   // Get user preference from local storage or from browser preference
@@ -10,38 +11,35 @@
     return localStorage.getItem('theme') || (lightModePref.matches ? 'light' : 'dark')
   }
 
-  function setTheme(newTheme: string) {
-    const validThemes = ['light', 'dark']
-    if (!validThemes.includes(newTheme)) {
-      console.log(`Invalid theme value '${newTheme}' received. Expected 'light' or 'dark'.`)
+  function setTheme(theme, save = false) {
+    if (!['light', 'dark'].includes(theme)) {
+      console.log(`Invalid theme value '${theme}' received. Expected 'light' or 'dark'.`)
       return
     }
 
-    const root = document.documentElement
-    const isDarkModeEnabled = root.classList.contains('dark')
-    // If current dark theme and new theme is dark, return
-    if (
-      (isDarkModeEnabled && newTheme === 'dark') ||
-      (!isDarkModeEnabled && newTheme === 'light')
-    ) {
-      return
-    }
-    root.classList.toggle('dark')
+    if (save) localStorage.setItem('theme', theme)
+    document.documentElement.classList.toggle('dark', theme === 'dark')
+
+    // Set window theme-color
+    const metaColor = theme === 'dark' ? '#0B0B10' : '#FCFCFD'
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', metaColor)
   }
 
   // Initial Setup
   setTheme(getUserPref())
 
-  // View Transitions hook to restore theme
+  // View transitions hook to restore theme
   document.addEventListener('astro:after-swap', () => setTheme(getUserPref()))
 
   // Listen for theme-change custom event
   document.addEventListener('theme-change', (e) => {
-    const theme = (e as CustomEvent).detail.theme
+    const theme = e.detail.theme
     localStorage.setItem('theme', theme)
-    setTheme(theme)
+    setTheme(e.detail.theme, true)
   })
 
   // Listen for prefers-color-scheme change
-  lightModePref.addEventListener('change', (e) => setTheme(e.matches ? 'light' : 'dark'))
+  lightModePref.addEventListener('change', (e) => {
+    setTheme(e.matches ? 'light' : 'dark')
+  })
 </script>
