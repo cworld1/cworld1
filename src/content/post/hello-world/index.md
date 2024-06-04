@@ -4,7 +4,7 @@ publishDate: 2019-06-14 16:24:38
 description: '这是一篇 Hexo 预置文档。'
 tags:
   - Hexo
-coverImage: { src: './thumbnail.jpg' }
+coverImage: { src: './thumbnail.jpg', color: '#64574D' }
 ---
 
 欢迎来到 [Hexo](https://hexo.io/) ！这是你的第一篇文章。 有关详细信息，请查看 [文档](https://hexo.io/docs/) 。 如果您在使用 Hexo 时遇到任何问题，可以在 [故障排除](https://hexo.io/docs/troubleshooting.html) 中找到答案，或者您可以在 [GitHub](https://github.com/hexojs/hexo/issues) 上找到我。
