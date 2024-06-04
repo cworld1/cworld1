@@ -3,7 +3,7 @@ import { siteConfig, menuLinks } from '@/site-config'
 ---
 
 <header-component
-  class='group sticky top-4 z-30 mb-16 box-content w-full rounded-lg border border-transparent py-1 transition-all duration-300 sm:rounded-2xl [&.not-top]:border-border [&.not-top]:bg-background dark:[&.not-top]:bg-primary-foreground'
+  class='group sticky top-4 z-30 mb-16 box-content w-full rounded-xl border border-transparent py-1 transition-all duration-300 sm:rounded-2xl [&.not-top]:border-border [&.not-top]:bg-background dark:[&.not-top]:bg-primary-foreground'
 >
   <header class='flex flex-wrap text-sm sm:flex-nowrap sm:justify-start'>
     <nav
@@ -20,7 +20,7 @@ import { siteConfig, menuLinks } from '@/site-config'
       <div class='flex gap-x-4 sm:gap-x-7'>
         <div
           id='headerExpandConetent'
-          class='end-0 start-0 top-12 z-20 grid transition-all duration-300 group-[.not-top]:rounded-lg group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-primary-foreground max-md:border-b max-sm:absolute max-sm:pb-4 max-sm:pt-0 max-sm:opacity-0 max-sm:group-[.not-top]:border max-sm:group-[.expanded]:bg-background max-sm:group-[.not-top]:px-4 max-sm:group-[.not-top]:pb-2 max-sm:group-[.not-top]:pt-2 sm:grid-rows-1 sm:border-0'
+          class='end-0 start-0 top-12 z-20 grid transition-all duration-300 group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-primary-foreground max-md:border-b max-sm:absolute max-sm:pb-4 max-sm:pt-0 max-sm:opacity-0 max-sm:group-[.not-top]:border max-sm:group-[.expanded]:bg-background max-sm:group-[.not-top]:px-4 max-sm:group-[.not-top]:pb-2 max-sm:group-[.not-top]:pt-2 sm:grid-rows-1 sm:border-0'
         >
           <div
             class='flex flex-col items-center justify-center gap-x-5 gap-y-2 overflow-hidden transition-colors sm:flex-row sm:gap-x-7'
@@ -122,12 +122,12 @@ import { siteConfig, menuLinks } from '@/site-config'
   header-component.not-top {
     box-shadow:
       rgb(255, 255, 255) 0px 0px 0px 0px,
-      rgba(24, 24, 27, 0.05) 0px 0px 0px 1px,
-      rgba(39, 39, 42, 0.05) 0px 10px 15px -3px,
-      rgba(39, 39, 42, 0.05) 0px 4px 6px -4px;
+      rgba(24, 24, 27, 0.08) 0px 0px 0px 1px,
+      rgba(39, 39, 42, 0.08) 0px 10px 15px -3px,
+      rgba(39, 39, 42, 0.08) 0px 4px 6px -4px;
   }
   header-component[data-show='false']:not(.expanded) {
-    transform: translateY(-4.5rem);
+    transform: translateY(-5rem);
   }
   @media (min-width: 800px) {
     header-component.not-top {
@@ -146,9 +146,9 @@ import { siteConfig, menuLinks } from '@/site-config'
     .expanded.not-top #headerExpandConetent {
       box-shadow:
         rgb(255, 255, 255) 0px 0px 0px 0px,
-        rgba(24, 24, 27, 0.05) 0px 0px 0px 1px,
-        rgba(39, 39, 42, 0.05) 0px 10px 15px -3px,
-        rgba(39, 39, 42, 0.05) 0px 4px 6px -4px;
+        rgba(24, 24, 27, 0.08) 0px 0px 0px 1px,
+        rgba(39, 39, 42, 0.08) 0px 10px 15px -3px,
+        rgba(39, 39, 42, 0.08) 0px 4px 6px -4px;
     }
   }
 </style>
