@@ -39,7 +39,9 @@ export default defineConfig({
     sitemap(),
     mdx(),
     icon(),
-    playformCompress()
+    playformCompress({
+      exclude: ['./public/icons']
+    })
   ],
   // root: './my-project-directory',
 
