@@ -4,7 +4,7 @@ publishDate: 2019-07-10 13:18:58
 description: 'Markdown 是一种轻量级的「标记语言」。'
 tags:
   - Markdown
-coverImage: { src: './thumbnail.jpg' }
+coverImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 ---
 
 ## Github 版本

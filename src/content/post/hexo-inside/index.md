@@ -5,7 +5,7 @@ description: 'Inside 是一款采用 SPA 打造的轻量级和功能丰富的 He
 tags:
   - Inside
   - Hexo
-coverImage: { src: './thumbnail.jpg' }
+coverImage: { src: './thumbnail.jpg', color: '#5F7D8C' }
 ---
 
 [Inside](https://github.com/ikeq/hexo-theme-inside) 是一款采用 SPA 打造的轻量级和功能丰富的 Hexo 主题。然而整体上作者采用了较为开放的丰富的自定义模式，所以很多功能都需要手动调整。

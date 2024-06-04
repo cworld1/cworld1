@@ -1,9 +1,9 @@
 ---
-title: 'Configs of Astro Theme Resume'
+title: 'Astro Theme Resume 项目总结'
 description: '前段时间写了个前端项目，一时兴起，就顺便把博客也翻新了一遍。'
 publishDate: '2024-04-19'
 updatedDate: '2024-05-17'
-coverImage: { src: './cover.png', alt: 'astro theme resume' }
+coverImage: { src: './cover.png', alt: 'astro theme resume', color: '#203A43' }
 tags: ['resume', 'astro', 'theme']
 ---
 

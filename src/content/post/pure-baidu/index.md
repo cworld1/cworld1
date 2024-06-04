@@ -5,7 +5,7 @@ description: 'Pure 百度 - 质形色，始方圆。'
 tags:
   - Userstyle
   - CSS
-coverImage: { src: './thumbnail.jpg' }
+coverImage: { src: './thumbnail.jpg', color: '#DBDBDB' }
 ---
 
 ## 介绍
