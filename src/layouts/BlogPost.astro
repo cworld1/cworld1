@@ -114,7 +114,14 @@ const primaryColor = post.data.coverImage?.color
   })
 </script>
 
-<style>
+<style define:vars={{ primaryColor }}>
+  :global(.highlight) {
+    color: var(--primaryColor) !important;
+  }
+  /* :global(.highlight-hover:hover) {
+    color: var(--primaryColor) !important;
+  } */
+
   #content :global(table) {
     table-layout: fixed !important;
     width: 100%;

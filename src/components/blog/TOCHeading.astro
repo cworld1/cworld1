@@ -14,7 +14,7 @@ const {
   <a
     aria-label={`Scroll to section: ${text}`}
     class={cn(
-      'block line-clamp-2  text-foreground/75 transition-all hover:text-foreground aria-selected:font-medium aria-selected:text-primary',
+      'block line-clamp-2  text-foreground/75 transition-all hover:text-foreground [&.highlight]:font-medium [&.highlight]:text-primary',
       depth <= 3 ? 'mt-2.5' : 'mt-1 text-sm'
     )}
     href={`#${slug}`}>{text}</a
