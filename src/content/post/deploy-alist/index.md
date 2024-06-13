@@ -3,7 +3,7 @@ title: Alist 自建0成本部署
 publishDate: 2022-12-15 02:06:47
 description: 'Alist 是一款支持多种存储的目录文件列表程序，后端基于 `gin`，前端使用 `react`。'
 tags: ['Alist']
-coverImage: { src: './thumbnail.jpg', color: '#239BE6' }
+coverImage: { src: './thumbnail.jpg', color: '#3796ED' }
 ---
 
 这里提供 Alist 官方的传送门：[Github](https://github.com/alist-org/alist) | [Demo](https://pan.nn.ci/) | [文档](https://alist.nn.ci/zh/)

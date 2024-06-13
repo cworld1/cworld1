@@ -2,8 +2,8 @@
 title: 'Astro Theme Resume 项目总结'
 description: '前段时间写了个前端项目，一时兴起，就顺便把博客也翻新了一遍。'
 publishDate: '2024-04-19'
-updatedDate: '2024-05-17'
-coverImage: { src: './cover.png', alt: 'astro theme resume', color: '#203A43' }
+updatedDate: '2024-06-04'
+coverImage: { src: './cover.png', alt: 'astro theme resume', color: '#2F6484' }
 tags: ['resume', 'astro', 'theme']
 ---
 
@@ -100,6 +100,8 @@ tags: ['resume', 'astro', 'theme']
 - [x] 优化顶部导航栏逻辑，实现下滚隐藏、上滚呼出
 - [x] 优化文章内容展示样式
 - [x] 优化文章内容表格的展示和手机端优化
+- [x] 添加图片配色渐变特效
+- [ ] 完善主页网页小卡片
 - [ ] 通知友链好友们修改信息
 - [ ] ...
 
