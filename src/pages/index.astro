@@ -14,11 +14,11 @@ import Button from '@/components/Button.astro'
 import { siteConfig } from '@/site-config'
 
 const languages = [
+  'Python',
   'C',
   'C++',
   'C#',
   'Java',
-  'Python',
   'Html',
   'JavaScript',
   'CSS',
@@ -28,7 +28,9 @@ const languages = [
   'Prolog',
   'Php',
   'Lua',
-  'Matlab'
+  'Matlab',
+  'Rust',
+  'Shell'
 ]
 const frontend = ['TypeScript', 'React', 'Redux', 'Vue', 'Pinia', 'Vite', 'Webpack', 'Astro']
 const backend = ['Flask', 'Nginx', 'NextJS']
@@ -39,7 +41,7 @@ const allPosts = await getAllPosts()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
-<PageLayout meta={{ title: 'Home' }}>
+<PageLayout meta={{ title: 'Home' }} , highlightColor='#659EB966'>
   <div class='flex w-full flex-col gap-y-10'>
     <section class='flex flex-col items-center gap-y-7'>
       <Image
@@ -143,14 +145,18 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           heading='Website status'
           subheading='Record status of CWorld websites'
           imagePath='/src/assets/projects/status.cworld.top.png'
-          altText='Example'
         />
         <ProjectCard
           href='https://waline.cworld.top/ui'
           heading='Waline comment system'
           subheading='Back-end control comment panel'
           imagePath='/src/assets/projects/waline.cworld.top.png'
-          altText='Lorem, ipsum dolor sit'
+        />
+        <ProjectCard
+          href='https://onedrive.cworld.top/'
+          heading='Onedrive share'
+          subheading='A share space for onedrive'
+          imagePath='/src/assets/projects/onedrive.cworld.top.png'
         />
         <ProjectCard
           as='div'
