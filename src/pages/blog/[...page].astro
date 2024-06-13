@@ -63,7 +63,7 @@ const paginationProps = {
         <>
           <div class='grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8'>
             <section aria-label='Blog posts list'>
-              <div class='mb-3 flex justify-between text-sm sm:mb-5'>
+              <div class='mb-3 flex flex-col justify-between text-sm sm:mb-5 sm:flex-row'>
                 <span class='text-muted-foreground'>
                   Page {page.currentPage} - Showing {page.data.length} of {totalPosts} posts
                 </span>

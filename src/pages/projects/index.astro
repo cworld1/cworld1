@@ -358,20 +358,20 @@ const headings = [
   <!-- sponsorship -->
   <h2 id='sponsorship'>Sponsorship</h2>
   <p>Please leave a message or contact me proactively after sponsorship.</p>
-  <div class='flex flex-row justify-center gap-4'>
+  <div class='flex flex-col justify-center gap-4 sm:flex-row'>
     {
       [
         { name: 'WeChat', icon: 'mingcute-wechat-pay-line', image: wechat },
         { name: 'Alipay', icon: 'mingcute-alipay-line', image: alipay }
       ].map((item) => (
-        <div class='group relative overflow-hidden rounded-xl border'>
+        <div class='group relative justify-center overflow-hidden rounded-xl border bg-white'>
           <div class='absolute bottom-0 end-0 start-0 top-0 flex items-center justify-center transition-opacity group-hover:opacity-0'>
             <svg class='size-20'>
               <use href={`/icons/copyright-sponsor.svg#${item.icon}`} />
             </svg>
           </div>
           <Image
-            class='m-0 max-w-72 opacity-30 blur-sm transition-opacity group-hover:opacity-100 group-hover:blur-none'
+            class='mx-auto my-0 max-w-72 opacity-30 blur-sm transition-opacity group-hover:opacity-100 group-hover:blur-none'
             src={item.image}
             alt={item.name}
             loading='eager'
