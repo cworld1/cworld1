@@ -8,7 +8,7 @@
           "name": "CyanFalse's Weblog",
           "intro": "I'm CyanFalse,New to Here.",
           "link": "https://blog.eurekac.cn/",
-          "avatar": "https://registry.npmmirror.com/chenyfan-oss/4.0.0/files/512.jpg"
+          "avatar": "https://cravatar.cn/avatar/15359b6f2fe293366156959c8ab9476f"
         },
         {
           "name": "Joyer 的博客",
@@ -75,12 +75,6 @@
           "intro": "无限进步.🎈",
           "link": "https://blog.linsnow.cn/",
           "avatar": "https://blog.linsnow.cn/img/avatar.png"
-        },
-        {
-          "name": "Y'Blog",
-          "intro": "路在脚下，心系远方。",
-          "link": "https://www.young143.top/",
-          "avatar": "https://www.young143.top/a.jpg"
         },
         {
           "name": "Wayne's Blog",
@@ -184,16 +178,16 @@
       "desc": "不太活跃的好友",
       "link_list": [
         {
+          "name": "Y'Blog",
+          "intro": "路在脚下，心系远方。",
+          "link": "https://www.young143.top/",
+          "avatar": "https://www.young143.top/a.jpg"
+        },
+        {
           "name": "hiCasper",
           "intro": "没有 BUG 的代码是不完美的",
           "link": "http://hicasper.com/",
           "avatar": "https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44"
-        },
-        {
-          "name": "Fly",
-          "intro": "相逢的人会再相逢",
-          "link": "http://flyme.cf",
-          "avatar": "https://img1.baidu.com/it/u=1214290448,1946399589&fm=253&fmt=auto"
         }
       ]
     },
