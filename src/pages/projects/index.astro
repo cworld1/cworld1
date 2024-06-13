@@ -26,6 +26,11 @@ const headings = [
   },
   {
     depth: 2,
+    slug: 'others',
+    text: 'Others'
+  },
+  {
+    depth: 2,
     slug: 'gpg-signature',
     text: 'GPG Signature'
   },
@@ -61,7 +66,15 @@ const headings = [
   <ProjectSection
     project={[
       {
-        name: '🤖 Notie',
+        name: '📊 Novel Analysis [Web]',
+        description: 'A simple project for analyzing Chinese novels',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/novel-analysis' },
+          { type: 'site', href: 'https://na.cworld.top/' }
+        ]
+      },
+      {
+        name: '📒 Notie [Android]',
         description:
           'Android note App complies with Material You specifications, developed using Java',
         links: [
@@ -70,22 +83,27 @@ const headings = [
         ]
       },
       {
-        name: '🪟 Fluent Mail',
+        name: '💌 Fluent Mail [Desktop]',
         description:
           'A program to send and recieve emails with attachments supported by C++, Qt and SQL',
         links: [
           { type: 'github', href: 'https://github.com/cworld1/fluent-mail' },
-          { type: 'release', href: 'https://github.com/cworld1/fluent-mail/releases' },
-          { type: 'doc', href: 'https://github.com/cworld1/fluent-mail' }
+          { type: 'release', href: 'https://github.com/cworld1/fluent-mail/releases' }
         ]
       },
       {
-        name: '🤖 PureWeather',
-        description: 'Weather at a glance! Current and forecast weather for anywhere in the world!',
+        name: '⛅ PureWeather [Android]',
+        description: 'Weather at a glance! Current and forecast weather for anywhere in the world',
         links: [
           { type: 'github', href: 'https://github.com/cworld1/PureWeather' },
           { type: 'release', href: 'https://github.com/cworld1/PureWeather/releases' }
         ]
+      },
+      {
+        name: '📷 Kinect Camera Netural [Desktop]',
+        description:
+          'An AI program that using Kinect camera and shows netural network and human skeleton',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/tcm' }]
       }
     ]}
   />
@@ -93,12 +111,22 @@ const headings = [
     <ProjectSection
       project={[
         {
-          name: 'Vue Login',
+          name: 'Poker Hover Effect [Web]',
+          description: 'A demo HTML program that shows poker hover effect only using CSS',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/poker-hover-effect' }]
+        },
+        {
+          name: 'Effect of Browser Multi-Window Stacking [Web]',
+          description: 'A demo program that shows effect of browser multi-window stacking',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/browser-multiwin-stack' }]
+        },
+        {
+          name: 'Vue Login [Web]',
           description: 'A simple Vue designed login program',
           links: [{ type: 'github', href: 'https://github.com/cworld1/vue-login' }]
         },
         {
-          name: 'Student Score System',
+          name: 'Student Score System [Desktop]',
           description:
             'A student performance management system built using Qt and developed using C++',
           links: [
@@ -107,7 +135,7 @@ const headings = [
           ]
         },
         {
-          name: 'Momotap',
+          name: 'Momotap [Web]',
           description: 'A mainland China friendly version extracted from Momotap',
           links: [
             { type: 'github', href: 'https://github.com/cworld1/momotap' },
@@ -148,25 +176,14 @@ const headings = [
         ]
       },
       {
-        name: '📐 Poker Hover Effect',
-        description: 'A demo HTML program that shows poker hover effect only using CSS',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/poker-hover-effect' }]
-      },
-      {
-        name: '📐 Effect of Browser Multi-Window Stacking',
-        description: 'A demo program that shows effect of browser multi-window stacking',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/browser-multiwin-stack' }]
+        name: '📊 Novel Data',
+        description: 'The data repository of novel analysis',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/novel-data' }]
       },
       {
         name: '🧮 N Queens Problem',
         description: 'A solution of solving N Queens Problem',
         links: [{ type: 'github', href: 'https://github.com/cworld1/nqueens-problem' }]
-      },
-      {
-        name: '📷 Kinect Camera Netural',
-        description:
-          'An AI program that using Kinect camera and shows netural network and human skeleton.',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/tcm' }]
       },
       {
         name: '🛠️ Gaussian NB',
@@ -223,11 +240,6 @@ const headings = [
         name: 'Matlab Learning',
         description: 'Some notes and code about learning Matlab',
         links: [{ type: 'github', href: 'https://github.com/cworld1/matlab-learning' }]
-      },
-      {
-        name: 'Java Learning',
-        description: 'Some notes and code about learning Java',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/java-learning' }]
       },
       {
         name: 'Operation System Principle Learning',
@@ -303,6 +315,11 @@ const headings = [
   <Collapse title='Some old projects'>
     <ProjectSection
       project={[
+        {
+          name: 'Java Learning',
+          description: 'Some notes and code about learning Java',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/java-learning' }]
+        },
         {
           name: 'C Learning',
           description: 'Some notes and code about learning C language',
