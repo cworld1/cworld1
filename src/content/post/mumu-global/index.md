@@ -2,7 +2,7 @@
 title: 'Mumu 模拟器国际版优化指北'
 description: '最近重装了系统，发现 Mumu 模拟器的国际版已经跟进国内的进度，来到 Android 12 了。本着尝鲜的原则，打算优化优化作为日常使用。'
 publishDate: '2024-06-09'
-updatedDate: '2024-06-09'
+updatedDate: '2024-06-15'
 tags: ['Mumu', 'Simulator']
 ---
 
@@ -46,20 +46,19 @@ Mumu 国际版地址：[Mumu Player](https://www.mumuplayer.com/index.html)
 
 4. 前往系统设置 - 系统 - 可选功能 - 更多 Windows 功能，使图示两个选项保持关闭状态，避免与 Mumu 发生直接冲突。
 
-   ![system
-optional functions](PixPin_2024-06-09_17-03-54.png)
+   ![system optional functions](PixPin_2024-06-09_17-03-54.png)
 
 5. 前往系统设置 - 系统 - 显示 - 显卡，将 Mumu 添加进去，然后按需设置，不会设置可直接选择高性能。
 
    ![system graphic settings](PixPin_2024-06-09_17-09-43.png)
 
-6. 加固设定：如果你是 N 卡用户，前往 GeFore Experience，手动加入到游戏列表，保证一定被 Nvidia 应用优化到。
+6. 加固设定：如果你是 N 卡用户，前往 GeFore Experience / Nvidia App，手动加入到游戏列表，保证一定被 Nvidia 应用优化到。
 
-   ![alt text](PixPin_2024-06-09_17-13-34.png)
+   ![nvidia app](PixPin_2024-06-09_17-13-34.png)
 
 7. 前往 Mumu 本身设置，拉高配置，也可一定程度缓解卡顿问题。
 
-![mumu settings](PixPin_2024-06-09_17-05-48.png)
+   ![mumu settings](PixPin_2024-06-09_17-05-48.png)
 
 此外官网也有一些优化指南，如有必要可作参考。
 
