@@ -33,15 +33,11 @@ export default defineConfig({
   }),
   integrations: [
     expressiveCode(expressiveCodeOptions),
-    tailwind({
-      applyBaseStyles: false
-    }),
+    tailwind({ applyBaseStyles: false }),
     sitemap(),
     mdx(),
-    icon()
-    // playformCompress({
-    //   exclude: ['/output/static/icons/']
-    // })
+    icon(),
+    playformCompress({ SVG: false })
   ],
   // root: './my-project-directory',
 
