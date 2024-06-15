@@ -36,9 +36,6 @@ const toc = generateToc(headings)
       super()
 
       // initialize the headings and tocLinks
-      this.headings = Array.from(
-        document.querySelectorAll('article > #content > h2, article > #content > h3')
-      )
       this.tocLinks = Array.from(this.querySelectorAll('a[href^="#"]'))
       this.activeLink = undefined
     }
