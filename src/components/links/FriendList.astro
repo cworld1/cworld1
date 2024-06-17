@@ -33,11 +33,11 @@ const { title, list: friendlist, ...props } = Astro.props
     friendlist.link_list.length !== 0 ? (
       shuffle(friendlist.link_list).map((frd: friend) => (
         <a href={frd.link} target='_blank' class='no-underline'>
-          <div class='group relative h-full overflow-hidden rounded-2xl border border-border bg-background px-4 py-2 sm:py-3'>
+          <div class='group relative h-full overflow-hidden rounded-2xl border border-border bg-background px-4 py-2 transition-colors hover:bg-primary-foreground sm:py-3'>
             <div class='relative z-10 flex h-full items-center gap-3'>
               <div class='relative h-16 w-16 min-w-16 overflow-hidden rounded-full'>
                 <Image
-                  class='my-0'
+                  class='my-0 bg-white'
                   src={frd.avatar}
                   height={80}
                   width={80}
@@ -80,7 +80,7 @@ const { title, list: friendlist, ...props } = Astro.props
               </div>
             </div>
             <Image
-              class='absolute -start-2 top-0 z-0 my-0 h-full w-2/3 object-cover opacity-15'
+              class='absolute -start-2 top-0 z-0 my-0 h-full w-2/3 bg-white object-cover opacity-15'
               src={frd.avatar}
               height={80}
               width={80}

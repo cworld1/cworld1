@@ -29,10 +29,15 @@
 /* each article */
 #cf-container .cf-article,
 #cf-more {
+  transition: background-color 0.15s;
   border: 1px solid var(--lmm-border);
   border-radius: 1rem;
   margin: 0;
   padding: 0.875rem 1rem;
+}
+#cf-container .cf-article:hover,
+#cf-more:hover {
+  background-color: var(--lmm-border);
 }
 /* disable hover transform */
 #cf-container .cf-article:hover {
