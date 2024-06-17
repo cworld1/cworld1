@@ -17,7 +17,7 @@ import { siteConfig, menuLinks } from '@/site-config'
       >
 
       <!-- menu -->
-      <div class='flex gap-x-4 sm:gap-x-7'>
+      <div class='flex gap-x-4 sm:gap-x-6'>
         <div
           id='headerExpandConetent'
           class='end-0 start-0 top-12 z-20 grid transition-all duration-300 group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-primary-foreground max-md:border-b max-sm:absolute max-sm:pb-4 max-sm:pt-0 max-sm:opacity-0 max-sm:group-[.not-top]:border max-sm:group-[.expanded]:bg-background max-sm:group-[.not-top]:px-4 max-sm:group-[.not-top]:pb-2 max-sm:group-[.not-top]:pt-2 sm:grid-rows-1 sm:border-0'
@@ -36,21 +36,26 @@ import { siteConfig, menuLinks } from '@/site-config'
                 </a>
               ))
             }
+            <div class='flex w-full grow flex-row justify-end gap-x-3 sm:w-fit sm:gap-x-5'>
+              <a class='px-1 py-2' href='https://www.travellings.cn/go.html'>
+                <span class='sr-only'>Travelling</span>
+                <svg class='size-5'>
+                  <use href='/icons/header.svg#mingcute-train-2-line'></use>
+                </svg>
+              </a>
+
+              <a class='px-1 py-2' href='/search'>
+                <span class='sr-only'>Search</span>
+                <svg class='size-5'>
+                  <use href='/icons/header.svg#mingcute-search-2-line'></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- buttons -->
         <div class='flex gap-x-4 transition-all group-[.not-top]:me-1.5 group-[.not-top]:gap-x-2'>
-          <a
-            href='/search'
-            class='rounded-md border p-1.5 transition-all hover:bg-border sm:group-[.not-top]:rounded-xl'
-          >
-            <span class='sr-only'>Search</span>
-            <svg class='size-5'>
-              <use href='/icons/header.svg#mingcute-search-2-line'></use>
-            </svg>
-          </a>
-
           <button
             id='toggleDarkMode'
             class='group/dark rounded-md border p-1.5 transition-all hover:bg-border sm:group-[.not-top]:rounded-xl'
