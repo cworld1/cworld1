@@ -26,20 +26,35 @@ const { remarkPluginFrontmatter } = await render()
 
 <li
   class={cn(
-    'group/card relative flex basis-full flex-col gap-2 rounded-2xl border border-border bg-background transition-colors ease-in-out px-5 py-3 hover:bg-primary-foreground sm:flex-row sm:gap-x-4',
-    detailed && 'sm:py-5',
+    'group/card flex flex-col relative rounded-2xl border border-border bg-background transition-colors ease-in-out px-5 py-3 hover:bg-primary-foreground',
+    detailed && 'max-sm:px-4 sm:py-5',
     className
   )}
 >
-  <FormattedDate class='min-w-[95px] py-1 text-xs' date={postDate} />
+  <a
+    class={cn(
+      'group/link w-full flex flex-col transition-all hover:text-primary',
+      !detailed && 'sm:flex-row',
+      detailed && data.coverImage && 'max-md:pt-24'
+    )}
+    href={`/blog/${slug}`}
+    data-astro-prefetch
+  >
+    {
+      detailed && data.coverImage && (
+        <Image
+          src={data.coverImage.src}
+          alt={data.coverImage.alt || data.title}
+          class='cover-image absolute end-0 top-0 z-0 h-2/3 w-full rounded-2xl object-cover opacity-30 transition-opacity duration-300 group-hover/card:opacity-60 md:h-full md:w-3/5'
+          loading='eager'
+        />
+      )
+    }
 
-  <Tag class='z-10 flex-grow'>
-    <!-- title -->
-    <a
-      data-astro-prefetch
-      href={`/blog/${slug}`}
-      class='group/link w-full transition-all hover:text-primary'
-    >
+    <FormattedDate class='min-w-[95px] py-1 text-xs' date={postDate} />
+
+    <Tag class='z-10 flex-grow'>
+      <!-- title -->
       <div class='flex justify-between'>
         <div>
           {data.draft && <span class='text-red-500'>(Draft) </span>}
@@ -74,12 +89,12 @@ const { remarkPluginFrontmatter } = await render()
             <p
               class={cn(
                 'line-clamp-2 pt-1 text-sm text-muted-foreground sm:line-clamp-3',
-                data.coverImage && 'me-24'
+                data.coverImage && 'sm:me-24'
               )}
             >
               {data.description}
             </p>
-            <div class='mb-1.5 flex items-center gap-2 pt-1.5 text-sm italic leading-4 text-muted-foreground sm:mb-2 sm:pt-4'>
+            <div class='flex items-center gap-2 py-1.5 text-sm italic leading-4 text-muted-foreground sm:py-3'>
               {/* reading time */}
               <span class='flex items-center gap-1'>
                 <svg class='size-4'>
@@ -100,34 +115,42 @@ const { remarkPluginFrontmatter } = await render()
           </>
         )
       }
-    </a>
-    <!-- tags -->
-    {
-      detailed && data.tags && (
-        <ul class='text-bgColor mt-3 flex flex-wrap gap-2'>
-          {data.tags.map((tag: string) => (
-            <li>
-              <Button title={tag} href={`/tags/${tag}`} style='pill' />
-            </li>
-          ))}
-        </ul>
-      )
-    }
-  </Tag>
+    </Tag>
+  </a>
+  <!-- tags -->
   {
-    detailed && data.coverImage && (
-      <Image
-        src={data.coverImage.src}
-        alt={data.coverImage.alt || data.title}
-        class='absolute end-0 top-0 z-0 h-full w-2/3 rounded-2xl object-cover opacity-30 transition-opacity duration-300 group-hover/card:opacity-60 sm:w-3/5'
-        style={{
-          maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
-          msMaskImage: '-ms-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
-          WebkitMaskImage:
-            '-webkit-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)'
-        }}
-        loading='eager'
-      />
+    detailed && data.tags && (
+      <ul class='text-bgColor mt-1 flex flex-wrap gap-2'>
+        {data.tags.map((tag: string) => (
+          <li>
+            <Button title={tag} href={`/tags/${tag}`} style='pill' />
+          </li>
+        ))}
+      </ul>
     )
   }
 </li>
+
+<style>
+  .cover-image {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    -ms-mask-image: -ms-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    -webkit-mask-image: -webkit-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  @media (max-width: 768px) {
+    .cover-image {
+      mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+      -ms-mask-image: -ms-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+      -webkit-mask-image: -webkit-linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+  }
+</style>
