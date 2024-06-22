@@ -23,57 +23,80 @@ const list = [
     value: getFormattedDate(data.updatedDate ? data.updatedDate : data.publishDate, {
       month: 'long'
     })
-  },
-  {
-    key: 'Copyright',
-    value: 'Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)'
-  },
-  {
-    key: 'Link',
-    value: `${import.meta.env.SITE}/blog/${slug}`
   }
 ]
 ---
 
-<div class={cn('relative rounded-xl border px-3 sm:px-4 py-2 sm:py-3', className)}>
+<div
+  class={cn(
+    'relative flex flex-col gap-y-2 rounded-xl border px-3 sm:px-4 py-2 sm:py-3',
+    className
+  )}
+>
   <svg class='absolute end-4 top-4 size-20 opacity-10'>
     <use href='/icons/copyright-sponsor.svg#mingcute-copyright-line'></use>
   </svg>
-  <ul class='my-0 list-none ps-0'>
-    {
-      list.map(({ key, value }) => (
-        <li class='my-0 ps-0'>
-          <span class='inline-block min-w-24 font-medium text-foreground'>{key}</span>: {value}
-        </li>
-      ))
-    }
-  </ul>
 
-  <!-- functions -->
-  <div class='mt-2 flex flex-row gap-3'>
-    {
-      [
-        { id: 'copy-link', icon: 'mingcute-link-2-line' },
-        { id: 'get-qrcode', icon: 'mingcute-qrcode-2-line' },
-        { id: 'share-weibo', icon: 'mingcute-weibo-line' }
-      ].map(({ id, icon }) => (
-        <button
-          id={id}
-          class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
-        >
-          <svg class='size-5'>
-            <use href={`/icons/copyright-sponsor.svg#${icon}`} />
-          </svg>
-        </button>
-      ))
-    }
+  <!-- title & link -->
+  <div class='flex flex-col'>
+    <div class='text-foreground'>{data.title}</div>
+    <div class='text-sm'>{import.meta.env.SITE}/blog/{slug}</div>
   </div>
 
-  <div
-    id='qrcode'
-    aria-expanded='false'
-    class='absolute z-10 -mt-4 box-content max-h-0 overflow-hidden rounded-xl border bg-primary-foreground p-4 opacity-0 transition-all duration-300 ease-in-out *:my-0 aria-expanded:max-h-[256px] aria-expanded:translate-y-4 aria-expanded:opacity-100'
-  >
+  <!-- common info -->
+  <div class='flex flex-col justify-start gap-x-8 gap-y-1 max-sm:mb-2 sm:flex-row'>
+    <div class='flex gap-x-2 sm:min-w-16 sm:flex-col'>
+      <span class='text-foreground'>Author</span>
+      <span class='text-sm max-sm:place-self-center'>{siteConfig.author}</span>
+    </div>
+    <div class='flex gap-x-2 sm:min-w-16 sm:flex-col'>
+      <span class='text-foreground'>Update date</span>
+      <span class='text-sm max-sm:place-self-center'
+        >{
+          getFormattedDate(data.updatedDate ? data.updatedDate : data.publishDate, {
+            month: 'long'
+          })
+        }</span
+      >
+    </div>
+    <div class='flex gap-x-2 sm:min-w-16 sm:flex-col'>
+      <span class='text-foreground'>Copyright</span>
+      <a
+        class='text-sm text-muted-foreground max-sm:place-self-center'
+        href='https://creativecommons.org/licenses/by/4.0/'
+        target='_blank'
+      >
+        CC BY-NC-SA 4.0
+      </a>
+    </div>
+  </div>
+
+  <!-- functions -->
+  <div class='relative'>
+    <div class='flex flex-row gap-3'>
+      {
+        [
+          { id: 'copy-link', icon: 'mingcute-link-2-line' },
+          { id: 'get-qrcode', icon: 'mingcute-qrcode-2-line' },
+          { id: 'share-weibo', icon: 'mingcute-weibo-line' }
+        ].map(({ id, icon }) => (
+          <button
+            id={id}
+            class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+          >
+            <svg class='size-5'>
+              <use href={`/icons/copyright-sponsor.svg#${icon}`} />
+            </svg>
+          </button>
+        ))
+      }
+    </div>
+    <div
+      id='qrcode'
+      aria-expanded='false'
+      class='absolute z-10 -mt-2 box-content max-h-0 overflow-hidden rounded-xl border bg-primary-foreground p-4 opacity-0 transition-all duration-300 ease-in-out *:my-0 aria-expanded:max-h-[256px] aria-expanded:translate-y-4 aria-expanded:opacity-100'
+    >
+    </div>
   </div>
 </div>
 
