@@ -1,9 +1,13 @@
 ---
+import { cn } from '@/utils'
 
+const { class: className } = Astro.props
 ---
 
 <comment-component>
-  <div id='waline'>Comment seems to stuck. Try to refresh?✨</div>
+  <div id='waline' class={cn('not-prose', className)}>
+    Comment seems to stuck. Try to refresh?✨
+  </div>
 </comment-component>
 
 <script>
@@ -85,14 +89,12 @@
     --waline-box-shadow: none;
   }
 
-  /* remove display of reaction title */
+  /* reaction buttons */
   #waline :global(.wl-reaction-title) {
     display: none !important;
   }
-  /* Fix image margin */
-  #waline :global([data-waline] img),
-  #waline :global(.wl-reaction img) {
-    margin: 0;
+  #waline :global(.wl-reaction) {
+    overflow: visible;
   }
 
   @media (max-width: 640px) {
