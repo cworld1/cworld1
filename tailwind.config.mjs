@@ -1,5 +1,26 @@
 import { fontFamily } from 'tailwindcss/defaultTheme'
 
+const typographyConfig = {
+  DEFAULT: {
+    css: {
+      table: {
+        tableLayout: 'fixed !important',
+        width: '100%'
+      },
+      blockquote: {
+        borderWidth: '0.1rem',
+        borderRadius: '0.5rem',
+        paddingInline: '1.4rem 0 !important',
+        p: {
+          '&:first-of-type:before, &:first-of-type:after': {
+            display: 'none'
+          }
+        }
+      }
+    }
+  }
+}
+
 /** @type {import('tailwindcss').Config} */
 const config = {
   darkMode: ['class'],
@@ -9,6 +30,7 @@ const config = {
     aspectRatio: false
   },
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
+
   theme: {
     container: {
       center: true,
@@ -61,7 +83,8 @@ const config = {
       fontFamily: {
         sans: [...fontFamily.sans],
         satoshi: ['Satoshi', 'sans']
-      }
+      },
+      typography: typographyConfig
     }
   }
 }

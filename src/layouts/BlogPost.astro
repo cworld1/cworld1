@@ -51,7 +51,7 @@ const primaryColor = post.data.coverImage?.color
       <!-- article recommend -->
       <ArticleBottom content={post} class='mt-3 sm:mt-6' />
       <!-- comment -->
-      {!post.data.draft && <Comment />}
+      {!post.data.draft && <Comment class='mt-3 sm:mt-6' />}
     </div>
     <button
       aria-label='Back to Top'
@@ -122,29 +122,27 @@ const primaryColor = post.data.coverImage?.color
     color: var(--primaryColor) !important;
   } */
 
-  #content :global(table) {
-    table-layout: fixed !important;
-    width: 100%;
-  }
-  #content
-    :global(
-      :where(blockquote p:first-of-type):not(
-          :where([class~='not-prose'], [class~='not-prose'] *)
-        )::before
-    ),
-  #content
-    :global(
-      :where(blockquote p:first-of-type):not(
-          :where([class~='not-prose'], [class~='not-prose'] *)
-        )::after
-    ) {
-    display: none;
-  }
   #content :global(h2:target::before),
   #content :global(h3:target::before) {
     display: inline-block;
     content: '#';
     margin-inline-start: -30px;
     width: 30px;
+  }
+
+  #content :global(blockquote) {
+    position: relative;
+    overflow: hidden;
+  }
+  #content :global(blockquote::after) {
+    position: absolute;
+    content: '”';
+    top: -5.4rem;
+    right: 0;
+    font-size: 10rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+      sans-serif;
+    transform: rotate(-15deg);
+    opacity: 5%;
   }
 </style>
