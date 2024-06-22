@@ -3,6 +3,9 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 const typographyConfig = {
   DEFAULT: {
     css: {
+      img: {
+        borderRadius: 'var(--radius)'
+      },
       table: {
         tableLayout: 'fixed !important',
         width: '100%'
