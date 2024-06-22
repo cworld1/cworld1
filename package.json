@@ -31,6 +31,7 @@
     "fuse.js": "^7.0.0",
     "markdown-it": "^14.1.0",
     "mdast-util-to-string": "^4.0.0",
+    "node-html-parser": "^6.1.13",
     "reading-time": "^1.5.0",
     "rehype-external-links": "^3.0.0",
     "remark-unwrap-images": "^4.0.0",

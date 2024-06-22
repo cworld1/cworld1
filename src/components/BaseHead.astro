@@ -80,7 +80,12 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 <link href='/sitemap-index.xml' rel='sitemap' />
 
 {/* RSS auto-discovery */}
-<link href='/rss.xml' rel='alternate' title={siteConfig.title} type='application/rss+xml' />
+<link
+  rel='alternate'
+  type='application/rss+xml'
+  title={siteConfig.title}
+  href={`${Astro.site}rss.xml`}
+/>
 
 <meta content={Astro.generator} name='generator' />
 
