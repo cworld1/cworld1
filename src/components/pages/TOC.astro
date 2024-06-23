@@ -13,10 +13,10 @@ const { headings } = Astro.props
 const toc = generateToc(headings)
 ---
 
-<aside class='sticky top-40 order-2 -me-28 hidden basis-60 lg:flex lg:flex-col'>
+<aside class='sticky top-32 order-2 -me-24 basis-60 max-lg:hidden'>
   <toc-heading>
     <h2 class='font-semibold'>TABLE OF CONTENTS</h2>
-    <ul class='text-card-foreground'>
+    <ul class='mt-2 text-card-foreground'>
       {toc.map((heading) => <TOCHeading heading={heading} />)}
     </ul>
   </toc-heading>
@@ -27,58 +27,86 @@ const toc = generateToc(headings)
   // ... and highlight the section that the user is currently reading through.
   // Feel free to remove this tag if you don't need this type of functionality.
 
+  interface TOCLink {
+    element: HTMLAnchorElement
+    progressBar: HTMLElement
+    slug: string
+  }
+
+  interface HeadingProgress {
+    inView: boolean
+    progress: number
+  }
+
   class TOC extends HTMLElement {
-    headings!: HTMLElement[]
-    tocLinks!: HTMLAnchorElement[]
-    activeLink!: HTMLAnchorElement | undefined
+    headings: HTMLElement[] = []
+    tocLinks: TOCLink[] = []
+    headingProgress: Record<string, HeadingProgress> = {}
 
     constructor() {
       super()
 
       // initialize the headings and tocLinks
       this.headings = Array.from(document.querySelectorAll('article h2, article h3'))
-      this.tocLinks = Array.from(this.querySelectorAll('a[href^="#"]'))
-      this.activeLink = undefined
+      this.tocLinks = Array.from(this.querySelectorAll('a[href^="#"]')).map((link) => ({
+        element: link as HTMLAnchorElement,
+        progressBar: link.previousElementSibling as HTMLElement,
+        slug: (link.getAttribute('href') || '').substring(1)
+      }))
     }
 
-    updateActiveTOCItem = (entries: IntersectionObserverEntry[]) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue
+    updatePositionAndStyle = () => {
+      const windowHeight = window.innerHeight
+      const pageOffset = window.scrollY
+      const postOffset = (document.querySelector('article')?.offsetHeight || 0) + 156
 
-        // Old link should be inactive
-        if (this.activeLink !== undefined) this.activeLink.classList.remove('highlight')
+      this.headings.forEach((el, index) => {
+        let nextHeadingTop = this.headings[index + 1]?.offsetTop || postOffset
+        let range = [el.offsetTop - pageOffset, nextHeadingTop - pageOffset]
+        let sectionHeight = range[1] - range[0]
+        let progress = (windowHeight - range[0]) / sectionHeight
 
-        // Get new link and replace it
-        const newActiveLink = this.tocLinks.find(
-          (link) => `#${entry.target.id}` === link.getAttribute('href')
-        )
-        if (newActiveLink) newActiveLink.classList.add('highlight')
-        this.activeLink = newActiveLink
-      }
-    }
-    connectedCallback() {
-      // Set observer
-      this.headings.forEach((heading) =>
-        new IntersectionObserver(this.updateActiveTOCItem, {
-          root: null,
-          rootMargin: '0% 0% -50% 0%',
-          threshold: [1]
-        }).observe(heading)
-      )
+        this.headingProgress[el.id] = {
+          inView: range[0] < windowHeight && range[1] > 0,
+          progress: Math.max(0, Math.min(1, progress))
+        }
+      })
 
-      // Smooth scroll
-      const self = this
-      this.tocLinks.forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault()
-          const directHeading = self.headings.find(
-            (heading) => `#${heading.id}` === this.getAttribute('href')
+      this.tocLinks.forEach(({ element: el, progressBar: bar, slug }, i) => {
+        const { inView, progress } = this.headingProgress[slug]
+        if (this.headingProgress[slug]) {
+          el.classList.toggle('highlight', inView)
+          el.classList.toggle('highlight-bg-translucent', inView)
+          el.classList.toggle(
+            'rounded-t-2xl',
+            inView && (i == 0 || !this.headingProgress[this.tocLinks[i - 1]?.slug].inView)
           )
-          directHeading?.scrollIntoView({
-            behavior: 'smooth'
-          })
+          el.classList.toggle(
+            'rounded-b-2xl',
+            inView &&
+              (i == this.tocLinks.length - 1 ||
+                !this.headingProgress[this.tocLinks[i + 1]?.slug].inView)
+          )
+          bar.classList.toggle('readed', !inView && progress == 1)
+          bar.classList.toggle('highlight-bg', inView)
+          bar.style.setProperty('height', `${progress * 90}%`)
+        }
+      })
+    }
+
+    connectedCallback() {
+      // Smooth scroll
+      this.tocLinks.forEach((link) => {
+        link.element.addEventListener('click', (e) => {
+          e.preventDefault()
+          const directHeading = this.headings.find((heading) => heading.id === link.slug)
+          directHeading?.scrollIntoView({ behavior: 'smooth' })
         })
       })
+
+      // initial first and listen to scroll event
+      setInterval(this.updatePositionAndStyle, 100)
+      window.addEventListener('scroll', this.updatePositionAndStyle)
     }
   }
 
