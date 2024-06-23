@@ -3,7 +3,7 @@ title: 'Astro Theme Resume 项目总结'
 description: '前段时间写了个前端项目，一时兴起，就顺便把博客也翻新了一遍。'
 publishDate: '2024-04-19'
 updatedDate: '2024-06-23'
-coverImage: { src: './cover.png', alt: 'astro theme resume', color: '#2F6484' }
+coverImage: { src: './theme-astro-cover.jpg', alt: 'astro theme resume', color: '#3BA0C5' }
 tags: ['resume', 'astro', 'theme']
 ---
 
