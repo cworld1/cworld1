@@ -2,7 +2,7 @@
 title: 'Astro Theme Resume 项目总结'
 description: '前段时间写了个前端项目，一时兴起，就顺便把博客也翻新了一遍。'
 publishDate: '2024-04-19'
-updatedDate: '2024-06-04'
+updatedDate: '2024-06-23'
 coverImage: { src: './cover.png', alt: 'astro theme resume', color: '#2F6484' }
 tags: ['resume', 'astro', 'theme']
 ---
@@ -101,7 +101,11 @@ tags: ['resume', 'astro', 'theme']
 - [x] 优化文章内容展示样式
 - [x] 优化文章内容表格的展示和手机端优化
 - [x] 添加图片配色渐变特效
-- [ ] 完善主页网页小卡片
+- [x] 完善主页网页小卡片
+- [x] 部分组件针对移动端优化
+- [x] 优化版权声明样式
+- [x] 解决 RSS 中的图片资源链接问题 (Tks for article [Adding RSS Feed Content and Fixing Markdown Image Paths in Astro](https://billyle.dev/posts/adding-rss-feed-content-and-fixing-markdown-image-paths-in-astro))
+- [x] 优化目录树 (Tks for code [jw-12138/jw-12138.github.io](https://github.com/jw-12138/jw-12138.github.io/blob/main/src/components/toc.jsx))
 - [ ] 通知友链好友们修改信息
 - [ ] ...
 
