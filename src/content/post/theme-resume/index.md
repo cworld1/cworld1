@@ -74,7 +74,7 @@ tags: ['resume', 'astro', 'theme']
 - [x] 清洗评论数据，迁移到新博客
 - [x] 添加评论组件
 - [x] 完善页脚信息
-- [x] 添加浏览数、评论数统计组件
+- [x] 添加浏览数、评论数统计组件 (Tks for project [Waline](https://waline.js.org/guide/features/pageview.html))
 - [x] 关闭旧博客评论区
 - [x] 将旧博客地址迁移到 [blogv2.cworld.top](https://blogv2.cworld.top/)
 - [x] 添加旧域名跳转页面，实现文章直接跳转
@@ -96,14 +96,14 @@ tags: ['resume', 'astro', 'theme']
 - [x] 优化回顶按钮显示当前阅读百分比
 - [x] 添加按年份归档展示文章功能
 - [x] 绑定内容同步到部分社区/频道
-- [x] 添加内容搜索功能
+- [x] 添加内容搜索功能 (Tks for code [markhorn-dev/astro-sphere](https://github.com/markhorn-dev/astro-sphere/blob/main/src/components/Search.tsx))
 - [x] 优化顶部导航栏逻辑，实现下滚隐藏、上滚呼出
 - [x] 优化文章内容展示样式
 - [x] 优化文章内容表格的展示和手机端优化
 - [x] 添加图片配色渐变特效
 - [x] 完善主页网页小卡片
 - [x] 部分组件针对移动端优化
-- [x] 优化版权声明样式
+- [x] 优化版权声明样式 (Tks for theme [Hexo Theme Fluid](https://hexo.fluid-dev.com/posts/hello-fluid/))
 - [x] 解决 RSS 中的图片资源链接问题 (Tks for article [Adding RSS Feed Content and Fixing Markdown Image Paths in Astro](https://billyle.dev/posts/adding-rss-feed-content-and-fixing-markdown-image-paths-in-astro))
 - [x] 优化目录树 (Tks for code [jw-12138/jw-12138.github.io](https://github.com/jw-12138/jw-12138.github.io/blob/main/src/components/toc.jsx))
 - [ ] 通知友链好友们修改信息
