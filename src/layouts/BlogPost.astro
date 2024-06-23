@@ -22,7 +22,7 @@ const {
 const socialImage = ogImage ?? (coverImage ? coverImage.src.src : `/og-image/${slug}.png`)
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString()
 const { headings } = await post.render()
-const primaryColor = post.data.coverImage?.color
+const primaryColor = post.data.coverImage?.color ?? 'hsl(var(--primary) / var(--tw-text-opacity))'
 ---
 
 <PageLayout
@@ -118,9 +118,9 @@ const primaryColor = post.data.coverImage?.color
   :global(.highlight) {
     color: var(--primaryColor) !important;
   }
-  /* :global(.highlight-hover:hover) {
-    color: var(--primaryColor) !important;
-  } */
+  :global(.highlight-bg) {
+    background-color: var(--primaryColor) !important;
+  }
 
   #content :global(h2:target::before),
   #content :global(h3:target::before) {
