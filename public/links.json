@@ -163,17 +163,17 @@
           "status": "unverified"
         },
         {
-          "name": "林木木",
-          "intro": "木木木木木",
-          "link": "https://immmmm.com/",
-          "avatar": "https://cravatar.cn/avatar/ba83fa02fc4b2ba621514941307e21be?s=169",
-          "status": "unverified"
-        },
-        {
           "name": "Ordis",
           "intro": "船到桥头自然直，柳暗花明又一村",
           "link": "https://imbhj.com/",
           "avatar": "https://www.imbhj.com/img/avatar1.png",
+          "status": "unverified"
+        },
+        {
+          "name": "又见苍岚",
+          "intro": "蓝天依旧，明眸如初",
+          "link": "https://www.zywvvd.com/",
+          "avatar": "https://www.zywvvd.com/image/avatar.png",
           "status": "unverified"
         }
       ]
@@ -217,6 +217,12 @@
           "intro": "随机前往开往的成员博客",
           "link": "https://www.foreverblog.cn/go.html",
           "avatar": "https://www.travellings.cn/assets/travelling.png"
+        },
+        {
+          "name": "BlogFinder",
+          "intro": "聚合优秀的个人博客，发掘优质的个人博客文章和内容",
+          "link": "https://bf.zzxworld.com/s",
+          "avatar": "https://bf.zzxworld.com/images/favicon.png"
         },
         {
           "name": "前端大刘",
