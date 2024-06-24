@@ -24,7 +24,7 @@ const { class: className, events, ...props } = Astro.props
               style={{ height: 'calc(100% - 4px)' }}
             />
           )}
-          <samp class='my-1 min-w-[92px] text-right text-sm sm:min-w-[100px]'>{event.date}</samp>
+          <samp class='my-1 min-w-[80px] text-right text-sm sm:min-w-[90px]'>{event.date}</samp>
           <div>
             <Fragment set:html={event.content} />
           </div>
