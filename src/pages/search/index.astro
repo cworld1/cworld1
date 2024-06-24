@@ -9,8 +9,8 @@ import { getAllPosts } from '@/utils'
 const allPosts = await getAllPosts()
 
 const meta = {
-  description: 'A list of all the years of creating my posts',
-  title: 'All Years'
+  description: 'Search post of the blog',
+  title: 'Search'
 }
 ---
 
@@ -18,7 +18,12 @@ const meta = {
   <div class='w-full'>
     <Button title='Back' href='/blog' style='back' />
     <h1 class='mb-6 mt-5 text-2xl font-bold'>Search</h1>
-    <p>Enter a search term or phrase to search the blog.</p>
-    <Search posts={allPosts} />
+    <p>
+      Enter a search term or phrase to search the blog. If you cannot find what you want, try <a
+        href='https://cse.google.com.hk/cse?cx=220579155cae140a0'
+        target='_blank'>Google Powered</a
+      > one.
+    </p>
   </div>
+  <Search posts={allPosts} />
 </PageLayout>
