@@ -51,7 +51,7 @@ const GET = async (context: AstroGlobal) => {
     // configs
     trailingSlash: false,
     xmlns: { h: 'http://www.w3.org/TR/html4/' },
-    stylesheet: '/pretty-feed-v3.xsl',
+    stylesheet: '/scripts/pretty-feed-v3.xsl',
 
     // contents
     title: siteConfig.title,
