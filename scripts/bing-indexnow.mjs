@@ -2,6 +2,8 @@ import fetch from 'node-fetch'
 
 import { fetchSitemap, askForConfirmation, sitemapUrls } from './sitemap-lib.mjs'
 
+const HOST = 'cworld.top'
+
 async function main() {
   for (const sitemapUrl of sitemapUrls) {
     const urlList = await fetchSitemap(sitemapUrl)
@@ -32,9 +34,9 @@ async function sendIndexNowRequest(urlList) {
     'Content-Type': 'application/json; charset=utf-8'
   }
   const data = {
-    host: 'cworld.top',
-    key: 'c93c5640499046bc950c4a547923b519',
-    keyLocation: 'https://cworld.top/c93c5640499046bc950c4a547923b519.txt',
+    host: HOST,
+    key: process.env.INDEXNOW_API_KEY,
+    keyLocation: `https://${HOST}/${process.env.INDEXNOW_API_KEY}.txt`,
     urlList
   }
 
