@@ -41,7 +41,7 @@ const allPosts = await getAllPosts()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
-<PageLayout meta={{ title: 'Home' }} , highlightColor='#659EB966'>
+<PageLayout meta={{ title: 'Home' }} highlightColor='#659EB966'>
   <div class='flex w-full flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
     <section class='flex flex-col items-center gap-y-7'>
       <Image
