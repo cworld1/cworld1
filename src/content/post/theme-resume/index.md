@@ -106,13 +106,18 @@ tags: ['resume', 'astro', 'theme']
 - [x] 优化版权声明样式 (Tks for theme [Hexo Theme Fluid](https://hexo.fluid-dev.com/posts/hello-fluid/))
 - [x] 解决 RSS 中的图片资源链接问题 (Tks for article [Adding RSS Feed Content and Fixing Markdown Image Paths in Astro](https://billyle.dev/posts/adding-rss-feed-content-and-fixing-markdown-image-paths-in-astro))
 - [x] 优化目录树 (Tks for code [jw-12138/jw-12138.github.io](https://github.com/jw-12138/jw-12138.github.io/blob/main/src/components/toc.jsx))
+- [x] 优化 SEO
 - [ ] 通知友链好友们修改信息
 - [ ] ...
 
-要改的东西真的挺多的。不过样式好看，写起来得心应手，还算是愉快的。
+要改的东西真的挺多的。不过样式好看，写起来得心应手，还算是愉快的。展示一下 [PageSpeed Insights Result](https://pagespeed.web.dev/analysis/https-cworld-top/o229zrt5o4?form_factor=mobile&hl=en)：
+
+![alt text](<Screenshot 2024-06-26 204507.png>)
+
+~~拜托，满昏超帅的好不好！~~
 
 同以往一样，博客已开源至 [github - cworld1](https://github.com/cworld1/cworld1)，如果喜欢博客，欢迎 Fork 和 Star。但是请注意：
 
-- 不能保留与我有关的内容，包括但不限于：我的主页信息、所有博文、项目展示、友链、关于；
+- 不能保留与我有关的原创个人向内容，包括但不限于：我的主页信息、所有博文、项目展示、友链、关于（你的经历跟我又不一样）；
 - 根据 GPL-3 协议规定，项目应当仍然保持开源；
 - 可以不保留原仓库指向或文本说明。
