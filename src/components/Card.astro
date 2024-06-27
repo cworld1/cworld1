@@ -14,9 +14,9 @@ const { as: Tag = 'div', class: className, href, heading, subheading, date } = A
 >
   <div class='flex flex-col gap-y-1.5'>
     <div class='flex flex-col gap-y-0.5'>
-      <h1 class='text-lg font-medium'>{heading}</h1>
-      <h2 class='text-muted-foreground'>{subheading}</h2>
-      <h2 class='text-muted-foreground'>{date}</h2>
+      <h2 class='text-lg font-medium'>{heading}</h2>
+      <p class='text-muted-foreground'>{subheading}</p>
+      <p class='text-muted-foreground'>{date}</p>
     </div>
     <slot />
   </div>
