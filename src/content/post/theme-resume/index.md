@@ -2,7 +2,7 @@
 title: 'Astro Theme Resume 项目总结'
 description: '前段时间写了个前端项目，一时兴起，就顺便把博客也翻新了一遍。'
 publishDate: '2024-04-19'
-updatedDate: '2024-06-23'
+updatedDate: '2024-06-29'
 coverImage: { src: './theme-astro-cover.jpg', alt: 'astro theme resume', color: '#3BA0C5' }
 tags: ['resume', 'astro', 'theme']
 ---
@@ -59,6 +59,8 @@ tags: ['resume', 'astro', 'theme']
 
 目前博客的翻新进度：
 
+### Stage 1: Initial
+
 - [x] 更换框架
 - [x] 更换主题
 - [x] 修改主页
@@ -69,6 +71,9 @@ tags: ['resume', 'astro', 'theme']
 - [x] 对接后端，完成首次部署
 - [x] 利用 CI/CD 实现全自动部署
 - [x] 添加时间轴组件
+
+### Stage 2: Fix
+
 - [x] 清洗友链数据
 - [x] 添加友链组件
 - [x] 清洗评论数据，迁移到新博客
@@ -78,12 +83,18 @@ tags: ['resume', 'astro', 'theme']
 - [x] 关闭旧博客评论区
 - [x] 将旧博客地址迁移到 [blogv2.cworld.top](https://blogv2.cworld.top/)
 - [x] 添加旧域名跳转页面，实现文章直接跳转
+
+### Stage 3: Update
+
 - [x] 优化手机端顶部导航栏样式（为点击展开菜单式）
 - [x] 优化图标存储位置和存储方式
 - [x] 为部分内容添加图标，用以替换原有的文本描述
 - [x] 添加社交卡片（实时加载粉丝数等）
 - [x] 优化 RSS，添加简单样式和完整内容预览
 - [x] 完善使用工具组件
+
+### Stage 4: Develop
+
 - [x] 添加朋友圈组件
 - [x] 添加项目组件，把我写的一些有脸面的项目放进去
 - [x] 添加 GPG Key 板块， ~~证明是我写的代码~~
@@ -95,6 +106,9 @@ tags: ['resume', 'astro', 'theme']
 - [x] 添加目录指示高亮功能
 - [x] 优化回顶按钮显示当前阅读百分比
 - [x] 添加按年份归档展示文章功能
+
+### Stage 5: Prove
+
 - [x] 绑定内容同步到部分社区/频道
 - [x] 添加内容搜索功能 (Tks for code [markhorn-dev/astro-sphere](https://github.com/markhorn-dev/astro-sphere/blob/main/src/components/Search.tsx))
 - [x] 优化顶部导航栏逻辑，实现下滚隐藏、上滚呼出
@@ -103,10 +117,16 @@ tags: ['resume', 'astro', 'theme']
 - [x] 添加图片配色渐变特效
 - [x] 完善主页网页小卡片
 - [x] 部分组件针对移动端优化
+
+### Stage 6: Optimize
+
 - [x] 优化版权声明样式 (Tks for theme [Hexo Theme Fluid](https://hexo.fluid-dev.com/posts/hello-fluid/))
 - [x] 解决 RSS 中的图片资源链接问题 (Tks for article [Adding RSS Feed Content and Fixing Markdown Image Paths in Astro](https://billyle.dev/posts/adding-rss-feed-content-and-fixing-markdown-image-paths-in-astro))
 - [x] 优化目录树 (Tks for code [jw-12138/jw-12138.github.io](https://github.com/jw-12138/jw-12138.github.io/blob/main/src/components/toc.jsx))
 - [x] 优化 SEO
+- [x] 开启 SPA 路由
+- [x] 优化 Transition 性能，减少加载带来的闪烁
+- [x] 添加载入渐变动画 (Tks for project [markhorn-dev/astro-nano](https://github.com/markhorn-dev/astro-nano))
 - [ ] 通知友链好友们修改信息
 - [ ] ...
 
