@@ -19,9 +19,9 @@ const meta = {
 <PageLayout meta={meta}>
   <div class='w-full'>
     <Button title='Back' href='/blog' style='back' />
+<h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Posts by Years</h1>
 
-    <h1 class='mb-6 mt-5 text-2xl font-bold'>Posts by Years</h1>
-    {allPosts.length === 0 && <p>No posts yet.</p>}
+        {allPosts.length === 0 && <p>No posts yet.</p>}
 
     {
       allPostsByYear.map(([year, posts]) => (
