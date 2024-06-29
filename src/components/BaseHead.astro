@@ -100,6 +100,20 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
     </script>
   )
 }
+<script is:inline>
+  function animate() {
+    const animateElements = document.querySelectorAll('.animate')
+
+    animateElements.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.add('show')
+      }, index * 150)
+    })
+  }
+
+  document.addEventListener('DOMContentLoaded', animate)
+  document.addEventListener('astro:after-swap', animate)
+</script>
 
 {/* spa mode */}
 <ViewTransitions />
