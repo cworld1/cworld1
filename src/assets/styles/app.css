@@ -73,3 +73,8 @@
     @apply transition-colors hover:text-primary;
   }
 }
+
+html {
+  font-family: 'Satoshi', sans-serif;
+}
+
