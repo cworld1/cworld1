@@ -62,7 +62,7 @@ const paginationProps = {
       ) : (
         <>
           <div class='grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8'>
-            <section aria-label='Blog posts list'>
+            <section class='animate' aria-label='Blog posts list'>
               <div class='mb-3 flex flex-col justify-between text-sm sm:mb-5 sm:flex-row'>
                 <span class='text-muted-foreground'>
                   Page {page.currentPage} - Showing {page.data.length} of {totalPosts} posts
@@ -79,7 +79,7 @@ const paginationProps = {
               <Pagination {...paginationProps} />
             </section>
             {!!uniqueTags.length && (
-              <aside transition:persist='tags'>
+              <aside class='animate' transition:persist='tags'>
                 <h2 class='mb-4 flex items-center text-lg font-semibold'>
                   <svg class='me-2 size-6'>
                     <use href='/icons/ui.svg#mingcute-tag-2-line' />

@@ -21,7 +21,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 )
 ---
 
-<div class={cn(className)} {...props}>
+<div class={cn('animate', className)} {...props}>
   <div class='grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 sm:gap-y-4'>
     {
       project.map((project) => {

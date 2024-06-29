@@ -19,13 +19,13 @@ const meta = {
 <PageLayout meta={meta}>
   <div class='w-full'>
     <Button title='Back' href='/blog' style='back' />
-<h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Posts by Years</h1>
+    <h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Posts by Years</h1>
 
-        {allPosts.length === 0 && <p>No posts yet.</p>}
+    {allPosts.length === 0 && <p>No posts yet.</p>}
 
     {
       allPostsByYear.map(([year, posts]) => (
-        <div class='relative mt-20'>
+        <div class='animate relative mt-20'>
           <h2
             class='absolute -start-6 -top-20 z-0 text-9xl font-bold text-transparent opacity-10'
             style='-webkit-text-stroke-width:2px;-webkit-text-stroke-color:hsl(var(--foreground)/var(--tw-text-opacity))'
