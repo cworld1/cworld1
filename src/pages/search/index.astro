@@ -20,10 +20,11 @@ const meta = {
     <h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Search</h1>
 
       Enter a search term or phrase to search the blog. If you cannot find what you want, try <a
+        class='underline'
         href='https://cse.google.com.hk/cse?cx=220579155cae140a0'
         target='_blank'>Google Powered</a
       > one.
     </p>
+    <Search posts={allPosts} />
   </div>
-  <Search posts={allPosts} />
 </PageLayout>
