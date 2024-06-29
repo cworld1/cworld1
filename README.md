@@ -3,7 +3,7 @@
 <img
 src="https://github-readme-stats.vercel.app/api?username=cworld1&count_private=true&theme=vue-dark&show_icons=true&hide_border=true&border_radius=10&bg_color=2738493B&text_color=808080" alt="Stats" width="400" align="right"/>
 
-Data analyst & software engineer
+Dreams to be data analyst & software engineer
 
 Checkout <a href="https://cworld.top/" target="_blank">𝑪𝑾𝒐𝒓𝒍𝒅 𝑺𝒊𝒕𝒆</a> for more.
 
