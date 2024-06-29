@@ -1,8 +1,5 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import '@/assets/styles/app.css'
-
+import { ViewTransitions } from 'astro:transitions'
 import SpeedInsights from '@vercel/speed-insights/astro'
 import type { SiteMeta } from '@/types'
 import { siteConfig } from '@/site-config'
@@ -29,7 +26,7 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 <link rel='manifest' href='/favicon/site.webmanifest' />
 
 {/* Font preloads */}
-<!-- <link rel='preload' href='/fonts/Satoshi-Variable.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href='/fonts/Satoshi-Variable.ttf' as='font' type='font/ttf' crossorigin />
 <link
   rel='preload'
   href='/fonts/Satoshi-VariableItalic.ttf'
@@ -37,7 +34,7 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
   type='font/ttf'
   crossorigin
 />
-<link rel='preload' href='/fonts/ClashDisplay-Variable.ttf' as='font' type='font/ttf' crossorigin /> -->
+<!-- <link rel='preload' href='/fonts/ClashDisplay-Variable.ttf' as='font' type='font/ttf' crossorigin /> -->
 
 {/* Canonical URL */}
 <link rel='canonical' href={canonicalURL} />
@@ -92,7 +89,8 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 {/* Vercel speed insights */}
 <SpeedInsights />
 
-<!-- script -->
+
+{/* user script */}
 {
   import.meta.env.PROD && (
     <script>
@@ -102,3 +100,6 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
     </script>
   )
 }
+
+{/* spa mode */}
+<ViewTransitions />
