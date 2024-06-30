@@ -59,14 +59,15 @@ const toc = generateToc(headings)
 
     updatePositionAndStyle = () => {
       const windowHeight = window.innerHeight
-      const pageOffset = window.scrollY
-      const postOffset = (document.querySelector('article')?.offsetHeight || 0) + 156
+      const pageOffset =
+        window.scrollY - ((document.querySelector('#content') as HTMLElement)?.offsetTop || 0) + 314
+      const postOffset =
+        ((document.querySelector('#content') as HTMLElement)?.offsetHeight || 0) + 127
 
       this.headings.forEach((el, index) => {
-        let nextHeadingTop = this.headings[index + 1]?.offsetTop || postOffset
-        let range = [el.offsetTop - pageOffset, nextHeadingTop - pageOffset]
-        let sectionHeight = range[1] - range[0]
-        let progress = (windowHeight - range[0]) / sectionHeight
+        const nextHeadingTop = this.headings[index + 1]?.offsetTop || postOffset
+        const range = [el.offsetTop - pageOffset, nextHeadingTop - pageOffset - el.offsetHeight]
+        const progress = (windowHeight - range[0]) / (range[1] - range[0])
 
         this.headingProgress[el.id] = {
           inView: range[0] < windowHeight && range[1] > 0,
@@ -106,7 +107,7 @@ const toc = generateToc(headings)
         })
       })
 
-      // initial first and listen to scroll event
+      // Initial first and listen to scroll event
       setInterval(this.updatePositionAndStyle, 100)
       window.addEventListener('scroll', this.updatePositionAndStyle)
     }
