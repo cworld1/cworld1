@@ -1,14 +1,15 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import '@waline/client/style'
 
-import BlogHero from '@/components/blog/Hero.astro'
+import PageLayout from '@/layouts/BaseLayout.astro'
 import TOC from '@/components/pages/TOC.astro'
-import Comment from '@/components/Comment.astro'
-import Button from '@/components/Button.astro'
-import PageLayout from './BaseLayout.astro'
+import BlogHero from '@/components/blog/Hero.astro'
 import Copyright from '@/components/blog/Copyright.astro'
 import ArticleBottom from '@/components/blog/ArticleBottom.astro'
+import Comment from '@/components/Comment.astro'
+import Button from '@/components/Button.astro'
+
+import '@waline/client/style'
 
 interface Props {
   post: CollectionEntry<'post'>
@@ -33,11 +34,15 @@ const primaryColor = post.data.coverImage?.color ?? 'hsl(var(--primary) / var(--
     <Button title='Back' href='/blog' style='back' />
     <div class='mt-8 gap-x-10 lg:flex lg:items-start'>
       {!!headings.length && <TOC headings={headings} />}
-      <article class='flex-grow break-words' data-pagefind-body>
+      <article
+        class='flex-grow break-words'
+        style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
+        data-pagefind-body
+      >
         <div id='blog-hero'><BlogHero content={post} /></div>
         <div
           id='content'
-          class='animate prose prose-base prose-zinc mt-8 w-full text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+          class='animate prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
         >
           <slot />
         </div>
