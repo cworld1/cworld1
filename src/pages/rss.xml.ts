@@ -11,7 +11,7 @@ import sanitizeHtml from 'sanitize-html'
 import MarkdownIt from 'markdown-it'
 const parser = new MarkdownIt()
 
-// get dynamic import of images as a map collection
+// Get dynamic import of images as a map collection
 const imagesGlob = import.meta.glob<{ default: ImageMetadata }>(
   '/src/content/post/**/*.{jpeg,jpg,png,gif}' // add more image formats if needed
 )
@@ -23,11 +23,11 @@ const renderContent = async (post: CollectionEntry<'post'>, site: URL) => {
     const src = img.getAttribute('src')!
     // Relative paths that are optimized by Astro build
     if (src.startsWith('/images')) {
-      // images starting with `/images/` is the public dir
+      // Images starting with `/images/` is the public dir
       img.setAttribute('src', `${site}${src.replace('/', '')}`)
     } else {
       const imagePathPrefix = `/src/content/post/${post.slug}/${src.replace('./', '')}`
-      // call the dynamic import and return the module
+      // Call the dynamic import and return the module
       const imagePath = await imagesGlob[imagePathPrefix]?.()?.then((res) => res.default)
       if (imagePath) {
         img.setAttribute(
@@ -48,12 +48,12 @@ const GET = async (context: AstroGlobal) => {
   const siteUrl = context.site ?? new URL(import.meta.env.SITE)
 
   return rss({
-    // configs
+    // Basic configs
     trailingSlash: false,
     xmlns: { h: 'http://www.w3.org/TR/html4/' },
     stylesheet: '/scripts/pretty-feed-v3.xsl',
 
-    // contents
+    // Contents
     title: siteConfig.title,
     description: siteConfig.description,
     site: import.meta.env.SITE,
