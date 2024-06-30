@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import FormattedDate from '@/components/FormattedDate.astro'
-import ArticleInfo from '@/components/pages/PageInfo.astro'
+import PageInfo from '@/components/pages/PageInfo.astro'
 import { Image } from 'astro:assets'
 
 interface Props {
@@ -112,7 +112,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
   <div class='mt-3 italic'>
     <blockquote class='text-sm text-muted-foreground'><q>{data.description}</q></blockquote>
-    {!data.draft && <ArticleInfo class='mt-1' path={`/blog/${slug}`} />}
+    {!data.draft && <PageInfo class='mt-1' path={`/blog/${slug}`} />}
   </div>
 </div>
 

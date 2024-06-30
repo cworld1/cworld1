@@ -35,8 +35,7 @@ const headings = [
 const friendlist = links.friends
 ---
 
-<PageLayout title='Links' headings={headings}>
-  <ArticleInfo path='/links' class='italic' />
+<PageLayout title='Links' headings={headings} info='/links'>
   <p>怎么可能有顺序呢，当然是随机的~</p>
   <h2 id='common-links'>常规友链</h2>
   <FriendList list={friendlist[0]} />

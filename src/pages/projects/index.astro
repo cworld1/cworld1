@@ -4,7 +4,6 @@ import Collapse from '@/components/Collapse.astro'
 import Sponsors from '@/components/projects/Sponsors.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
-import ArticleInfo from '@/components/pages/PageInfo.astro'
 import { Image } from 'astro:assets'
 import wechat from '@/assets/wechat-qrcode.jpg'
 import alipay from '@/assets/alipay-qrcode.jpg'
@@ -43,8 +42,7 @@ const headings = [
 ]
 ---
 
-<PageLayout title='Projects' headings={headings}>
-  <ArticleInfo path='/projects' class='italic' hideComment='true' />
+<PageLayout title='Projects' headings={headings} info={{ slug: '/projects', hideComment: true }}>
   <p>Github Activities:</p>
   <p>
     <Image

@@ -1,16 +1,23 @@
 ---
 import type { MarkdownHeading } from 'astro'
 
-import Button from '@/components/Button.astro'
-import TOC from '@/components/pages/TOC.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
+import TOC from '@/components/pages/TOC.astro'
+import PageInfo from '@/components/pages/PageInfo.astro'
+import Button from '@/components/Button.astro'
 
 interface Props {
   title: string
   headings?: MarkdownHeading[]
+  info?:
+    | string
+    | {
+        slug: string
+        hideComment?: boolean
+      }
 }
 
-const { title, headings, ...props } = Astro.props
+const { title, headings, info, ...props } = Astro.props
 ---
 
 <PageLayout meta={{ title }} {...props}>
@@ -24,10 +31,19 @@ const { title, headings, ...props } = Astro.props
         style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
         data-pagefind-body
       >
+        <h1>{title}</h1>
+        {
+          info && (
+            <PageInfo
+              path={typeof info === 'string' ? info : info.slug}
+              hideComment={typeof info === 'object' && info.hideComment ? info.hideComment : false}
+              class='italic'
+            />
+          )
+        }
         <div
           class='prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
         >
-          <h1>{title}</h1>
           <slot />
         </div>
       </article>
