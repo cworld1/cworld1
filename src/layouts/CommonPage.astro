@@ -25,13 +25,15 @@ const { title, headings, info, ...props } = Astro.props
     <Button title='Back' href='/' style='back' />
 
     <div class='mt-8 gap-x-10 lg:flex lg:items-start'>
-      {headings && <TOC headings={headings} />}
+      {!!headings?.length && <TOC headings={headings} />}
       <article
         class='flex-grow break-words'
         style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
         data-pagefind-body
       >
-        <h1>{title}</h1>
+        <h1 class='text-2xl font-medium sm:mb-2 sm:text-3xl'>
+          {title}
+        </h1>
         {
           info && (
             <PageInfo
