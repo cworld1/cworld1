@@ -54,7 +54,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             )}
             <div
               class={cn(
-                'relative z-10 flex flex-col gap-y-2 px-3 py-2 sm:px-4 sm:py-3',
+                'relative z-10 flex flex-col gap-y-2 px-3 py-1.5 sm:px-4 sm:py-3',
                 imagePath && 'me-20'
               )}
             >
@@ -65,7 +65,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               >
                 {project.name}
               </a>
-              <div class='line-clamp-2 h-12 leading-snug text-muted-foreground'>
+              <div class='line-clamp-2 leading-snug text-muted-foreground sm:h-12'>
                 {project.description}
               </div>
               <div class='flex flex-row items-center gap-x-2 sm:gap-x-3'>
