@@ -14,3 +14,13 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (prefers-reduced-motion) {
+  .animate {
+    opacity: 0;
+    transform: translateY(5px);
+    transition:
+      opacity 0.1s ease,
+      transform 0.1s ease;
+  }
+}
