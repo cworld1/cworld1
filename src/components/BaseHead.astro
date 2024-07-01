@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
 import SpeedInsights from '@vercel/speed-insights/astro'
 import type { SiteMeta } from '@/types'
 import { siteConfig } from '@/site-config'
@@ -109,20 +108,26 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
     </script>
   )
 }
-<script is:inline>
-  function animate() {
-    const animateElements = document.querySelectorAll('.animate')
 
-    animateElements.forEach((element, index) => {
+{/* Transitions */}
+<script>
+  import type { TransitionBeforeSwapEvent } from 'astro:transitions/client'
+  document.addEventListener('astro:before-swap', (e) =>
+    [
+      ...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll('link[as="font"]')
+    ].forEach((link) => link.remove())
+  )
+
+  function animate() {
+    document.querySelectorAll('.animate').forEach((el, i) => {
       setTimeout(() => {
-        element.classList.add('show')
-      }, index * 150)
+        el.classList.add('show')
+      }, i * 150)
     })
   }
-
   document.addEventListener('DOMContentLoaded', animate)
   document.addEventListener('astro:after-swap', animate)
 </script>
 
 {/* spa mode */}
-<ViewTransitions />
+<!-- <ViewTransitions /> -->
