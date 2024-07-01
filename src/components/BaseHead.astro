@@ -2,6 +2,7 @@
 import SpeedInsights from '@vercel/speed-insights/astro'
 import type { SiteMeta } from '@/types'
 import { siteConfig } from '@/site-config'
+const isProd = import.meta.env.PROD
 
 type Props = SiteMeta
 
@@ -33,7 +34,6 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
   type='font/ttf'
   crossorigin
 />
-<!-- <link rel='preload' href='/fonts/ClashDisplay-Variable.ttf' as='font' type='font/ttf' crossorigin /> -->
 
 {/* Canonical URL */}
 <link rel='canonical' href={canonicalURL} />
@@ -85,30 +85,6 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 
 <meta content={Astro.generator} name='generator' />
 
-{/* Vercel speed insights */}
-<SpeedInsights />
-
-{/* Microsoft Clarity */}
-<script is:inline>
-  // prettier-ignore
-  ;(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "mygv3c21f9");
-</script>
-
-{/* user script */}
-{
-  import.meta.env.PROD && (
-    <script>
-      console.log( '%c CWorld Site %c https://cworld.top/',
-      'color:#fff;background:linear-gradient(90deg,#448bff,#44e9ff);padding:5px 0;',
-      'color:#000;background:linear-gradient(90deg,#44e9ff,#ffffff);padding:5px 10px 5px 0px;' )
-    </script>
-  )
-}
-
 {/* Transitions */}
 <script>
   import type { TransitionBeforeSwapEvent } from 'astro:transitions/client'
@@ -129,5 +105,16 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
   document.addEventListener('astro:after-swap', animate)
 </script>
 
-{/* spa mode */}
-<!-- <ViewTransitions /> -->
+{/* Vercel speed insights */}
+{isProd && <SpeedInsights />}
+
+{/* user script */}
+{
+  isProd && (
+    <script>
+      console.log( '%c CWorld Site %c https://cworld.top/',
+      'color:#fff;background:linear-gradient(90deg,#448bff,#44e9ff);padding:5px 0;',
+      'color:#000;background:linear-gradient(90deg,#44e9ff,#ffffff);padding:5px 10px 5px 0px;' )
+    </script>
+  )
+}
