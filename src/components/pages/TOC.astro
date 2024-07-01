@@ -60,7 +60,7 @@ const toc = generateToc(headings)
     updatePositionAndStyle = () => {
       const windowHeight = window.innerHeight
       const pageOffset =
-        window.scrollY - ((document.querySelector('#content') as HTMLElement)?.offsetTop || 0) + 314
+        window.scrollY - ((document.querySelector('#content') as HTMLElement)?.offsetTop || 0)
       const postOffset =
         ((document.querySelector('#content') as HTMLElement)?.offsetHeight || 0) + 127
 
