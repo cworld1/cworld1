@@ -1,17 +1,19 @@
 ---
-import PageLayout from '../layouts/BaseLayout.astro'
-import Section from '../components/home/Section.astro'
-import Card from '../components/Card.astro'
-import ProjectCard from '../components/home/ProjectCard.astro'
-import Label from '../components/home/Label.astro'
-import SkillLayout from '../components/home/SkillLayout.astro'
-import Hitokoto from '@/components/home/Hitokoto.astro'
-import PostPreview from '@/components/blog/PostPreview.astro'
 import { Image } from 'astro:assets'
 
-import { getAllPosts, sortMDByDate } from '@/utils'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import Section from '@/components/home/Section.astro'
+import Card from '@/components/Card.astro'
+import ProjectCard from '@/components/home/ProjectCard.astro'
+import Label from '@/components/home/Label.astro'
+import SkillLayout from '@/components/home/SkillLayout.astro'
+import Hitokoto from '@/components/home/Hitokoto.astro'
+import PostPreview from '@/components/blog/PostPreview.astro'
 import Button from '@/components/Button.astro'
 import { siteConfig } from '@/site-config'
+import { getAllPosts, sortMDByDate } from '@/utils'
+
+import avatar from '@/assets/avatar.png'
 
 const languages = [
   'Python',
@@ -45,11 +47,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
   <div class='flex w-full flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
     <section class='animate flex flex-col items-center gap-y-7'>
       <Image
-        src='https://cdn.sep.cc/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
+        src={avatar}
         alt='profile'
         class='h-28 w-auto rounded-full border p-1'
         loading='eager'
-        inferSize
       />
 
       <div class='flex flex-col items-center gap-y-4'>
