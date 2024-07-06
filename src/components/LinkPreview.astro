@@ -1,0 +1,70 @@
+---
+import { parseOpenGraph } from '@/utils'
+import { Image } from 'astro:assets'
+
+export interface Props {
+  /** URL to fetch Open Graph data. */
+  id: string
+  /** Hide any image or video even if set in the OpenGraph data. */
+  hideMedia?: boolean
+}
+
+const { id, hideMedia = false } = Astro.props
+
+const meta = await parseOpenGraph(id)
+const domain = meta?.url ? new URL(meta.url).hostname.replace('www.', '') : ''
+---
+
+{
+  meta && meta.title ? (
+    <div class='link-preview-container my-2 flex justify-center sm:my-4'>
+      <article
+        class:list={[
+          'link-preview flex max-w-[30rem] flex-col-reverse rounded-lg border',
+          {
+            'link-preview--has-video': !hideMedia && meta.video && meta.videoType,
+            'link-preview--no-media': hideMedia || !((meta.video && meta.videoType) || meta.image)
+          }
+        ]}
+      >
+        <div class='link-preview__content flex flex-col px-3 py-2 sm:px-5 sm:py-4'>
+          <header class='flex flex-row items-center gap-x-2'>
+            <a class='link-preview__title' href={id}>
+              {meta.title}
+            </a>
+            {domain && <small class='link-preview__domain'>({domain})</small>}
+          </header>
+          <small class='link-preview__description line-clamp-2'>{meta.description}</small>
+        </div>
+        {hideMedia ? null : meta.video && meta.videoType ? (
+          <video controls preload='metadata' width='1200' height='630'>
+            <source src={meta.video} type={meta.videoType} />
+          </video>
+        ) : meta.image ? (
+          <Image
+            class='m-0 rounded-b-none rounded-t-lg'
+            src={meta.image}
+            alt={meta.imageAlt || ''}
+            width='1200'
+            height='630'
+          />
+        ) : null}
+      </article>
+    </div>
+  ) : (
+    <div class='link-preview link-preview--no-metadata'>
+      <a href={id}>{id}</a>
+    </div>
+  )
+}
+
+<style>
+  /* Default styles */
+  .link-preview img,
+  .link-preview video {
+    aspect-ratio: 1200 / 630;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+</style>
