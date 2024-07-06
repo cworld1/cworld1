@@ -37,7 +37,7 @@ export const safeGet = makeSafeGetter<Record<string, any>>((res) => res.json())
  * @param url URL to fetch
  * @returns {Promise<Document | undefined>}
  */
-export const safeGetDOM = makeSafeGetter(async (res) => htmlParser.parse(await res.text()))
+const safeGetDOM = makeSafeGetter(async (res) => htmlParser.parse(await res.text()))
 
 /** Factory to create safe, caching fetch functions. */
 function makeSafeGetter<T>(
@@ -73,7 +73,7 @@ const urlOrNull = (url: string | null | undefined) => (url?.slice(0, 8) === 'htt
  * Loads and parses an HTML page to return Open Graph metadata.
  * @param pageUrl URL to parse
  */
-export async function parseOpenGraph(pageUrl: string) {
+async function parseOpenGraph(pageUrl: string) {
   const html = await safeGetDOM(pageUrl)
   if (!html) return
 
@@ -103,3 +103,5 @@ export async function parseOpenGraph(pageUrl: string) {
 
   return { title, description, image, imageAlt, url, video, videoType }
 }
+
+export { safeGetDOM, parseOpenGraph }
