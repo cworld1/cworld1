@@ -27,15 +27,21 @@ const domain = meta?.url ? new URL(meta.url).hostname.replace('www.', '') : ''
           }
         ]}
       >
-        <div class='link-preview__content flex flex-col px-3 py-2 sm:px-5 sm:py-4'>
-          <header class='flex flex-row items-center gap-x-2'>
-            <a class='link-preview__title' href={id}>
-              {meta.title}
-            </a>
-            {domain && <small class='link-preview__domain'>({domain})</small>}
-          </header>
-          <small class='link-preview__description line-clamp-2'>{meta.description}</small>
-        </div>
+        <a
+          class='group font-normal text-muted-foreground no-underline hover:text-muted-foreground'
+          href={id}
+          about='_blank'
+        >
+          <div class='link-preview__content flex flex-col gap-y-1 px-3 py-2 transition-colors group-hover:bg-primary-foreground sm:px-5 sm:py-4'>
+            <header class='flex flex-row items-center gap-x-2'>
+              <p class='link-preview__title my-0 line-clamp-1 font-medium text-foreground transition-colors group-hover:text-primary'>
+                {meta.title}
+              </p>
+              {domain && <small class='link-preview__domain'>({domain})</small>}
+            </header>
+            <p class='link-preview__description my-0 line-clamp-2'>{meta.description}</p>
+          </div>
+        </a>
         {hideMedia ? null : meta.video && meta.videoType ? (
           <video controls preload='metadata' width='1200' height='630'>
             <source src={meta.video} type={meta.videoType} />
