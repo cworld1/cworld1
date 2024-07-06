@@ -21,10 +21,10 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
 {
   data.coverImage && (
-    <div class='animate prose relative mb-6'>
+    <div class='hero-image animate prose relative mb-6'>
       <Image
         alt={data.coverImage.alt || data.title}
-        class='relative z-10 h-auto w-full rounded-2xl object-contain'
+        class='cover-image relative z-10 h-auto w-full rounded-2xl object-contain'
         fetchpriority='high'
         loading='eager'
         src={data.coverImage.src}
