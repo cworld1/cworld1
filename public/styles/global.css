@@ -2,6 +2,10 @@ html {
   font-family: 'Satoshi', sans-serif;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
 .animate {
   opacity: 0;
   transform: translateY(10px);
