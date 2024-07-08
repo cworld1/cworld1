@@ -20,7 +20,7 @@ const {
   data: { description, ogImage, coverImage, publishDate, title, updatedDate },
   slug
 } = post
-const socialImage = ogImage ?? (coverImage ? coverImage.src.src : `/og-image/${slug}.png`)
+const socialImage = ogImage ?? (coverImage ? coverImage.src.src : '/images/social-card.png')
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString()
 const { headings } = await post.render()
 const primaryColor = post.data.coverImage?.color ?? 'hsl(var(--primary) / var(--tw-text-opacity))'
