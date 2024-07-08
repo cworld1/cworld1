@@ -42,7 +42,7 @@ function askForConfirmation(prompt, onYes, onNo) {
     rl.question(`-> ${prompt} (yes/no): `, (answer) => {
       rl.close()
       if (answer.toLowerCase().trim() === 'no' || answer.toLowerCase().trim() === 'n') {
-        onYes().then(resolve) // Wait for onNo promise to resolve
+        onNo().then(resolve) // Wait for onNo promise to resolve
       } else {
         onYes().then(resolve) // Wait for onYes promise to resolve
       }
