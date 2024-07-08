@@ -12,19 +12,6 @@ const {
   content: { slug, data },
   class: className
 } = Astro.props
-
-const list = [
-  {
-    key: 'Author',
-    value: siteConfig.author
-  },
-  {
-    key: 'Update date',
-    value: getFormattedDate(data.updatedDate ? data.updatedDate : data.publishDate, {
-      month: 'long'
-    })
-  }
-]
 ---
 
 <div
