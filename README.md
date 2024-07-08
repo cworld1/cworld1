@@ -16,7 +16,7 @@ Lans & Frameworks:
 ![R](https://img.shields.io/badge/-276DC3?logo=r&logoColor=white)
 ![GO](https://img.shields.io/badge/-00ADD8?logo=go&logoColor=white)
 ![PHP](https://img.shields.io/badge/-777BB4?logo=php&logoColor=white)
-![C#](https://img.shields.io/badge/-239120?logo=csharp&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?&logo=csharp&logoColor=white)
 ![Lua](https://img.shields.io/badge/-2C2D72?logo=lua&logoColor=white)
 ![Rust](https://img.shields.io/badge/-FFF0E5?logo=rust&logoColor=black)
 
@@ -37,6 +37,7 @@ Lans & Frameworks:
 
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?logo=spring&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?&logo=Jupyter&logoColor=white)
+![astro](https://img.shields.io/badge/Astro-0C1222?logo=astro&logoColor=FDFDFE)
 <br/>
 ![Qt](https://img.shields.io/badge/-41CD52?logo=qt&logoColor=white)
 ![Android](https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white)
@@ -62,10 +63,10 @@ Lans & Frameworks:
 Coding with IDEs & Envs:
 
 ![NeoVim](https://img.shields.io/badge/-57A143?logo=neovim&logoColor=white)
-![VSCode](https://img.shields.io/badge/-0078D4?logo=visual%20studio%20code&logoColor=white)
+![VSCode](https://img.shields.io/badge/Vsc-0078D4?logo=visual%20studio%20code&logoColor=white)
 ![Sublime Text](https://img.shields.io/badge/-%23575757.svg?&logo=sublime-text&logoColor=important)
 ![macOS](https://img.shields.io/badge/-000000?logo=apple&logoColor=white)
-![Windows](https://img.shields.io/badge/-0078d4?logo=windows-11&logoColor=white)
+![Windows](https://img.shields.io/badge/Win-0078d4?logo=windows-11&logoColor=white)
 ![Arch Linux](https://img.shields.io/badge/-1793D1?logo=arch-linux&logoColor=white)
 
 <!-- Shields badge fom: https://github.com/alexandresanlim/Badges4-README.md-Profile -->
