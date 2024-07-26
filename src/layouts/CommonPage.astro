@@ -5,6 +5,7 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import TOC from '@/components/pages/TOC.astro'
 import PageInfo from '@/components/pages/PageInfo.astro'
 import Button from '@/components/Button.astro'
+import BackToTop from '@/components/pages/BackToTop.astro'
 
 interface Props {
   title: string
@@ -31,19 +32,24 @@ const { title, headings, info, ...props } = Astro.props
         style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
         data-pagefind-body
       >
-        <h1 class='text-2xl font-medium sm:mb-2 sm:text-3xl'>
-          {title}
-        </h1>
-        {
-          info && (
-            <PageInfo
-              path={typeof info === 'string' ? info : info.slug}
-              hideComment={typeof info === 'object' && info.hideComment ? info.hideComment : false}
-              class='italic'
-            />
-          )
-        }
+        <div id='hero'>
+          <h1 class='text-2xl font-medium sm:mb-2 sm:text-3xl'>
+            {title}
+          </h1>
+          {
+            info && (
+              <PageInfo
+                path={typeof info === 'string' ? info : info.slug}
+                hideComment={
+                  typeof info === 'object' && info.hideComment ? info.hideComment : false
+                }
+                class='italic'
+              />
+            )
+          }
+        </div>
         <div
+          id='content'
           class='prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
         >
           <slot />
@@ -55,5 +61,6 @@ const { title, headings, info, ...props } = Astro.props
     >
       <slot name='bottom' />
     </div>
+    <BackToTop header='hero' content='content' />
   </div>
 </PageLayout>
