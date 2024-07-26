@@ -12,6 +12,8 @@ import playformCompress from '@playform/compress'
 // Markdown
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex';
 import rehypeExternalLinks from 'rehype-external-links'
 
 // https://astro.build/config
@@ -37,7 +39,8 @@ export default defineConfig({
     sitemap(),
     mdx(),
     icon(),
-    playformCompress({ SVG: false })
+    playformCompress({ SVG: false }),
+
   ],
   // root: './my-project-directory',
 
@@ -49,8 +52,8 @@ export default defineConfig({
   },
   // Markdown Options
   markdown: {
-    remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
-    rehypePlugins: [
+    remarkPlugins: [remarkUnwrapImages, remarkMath, remarkReadingTime],
+    rehypePlugins: [rehypeKatex,
       [
         rehypeExternalLinks,
         {
@@ -64,5 +67,5 @@ export default defineConfig({
         className: ['']
       }
     }
-  }
+  },
 })
