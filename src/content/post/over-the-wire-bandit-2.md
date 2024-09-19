@@ -1,5 +1,5 @@
 ---
-title: 'Over the Wire - [01]Bandit (1)'
+title: 'Over the Wire - [01]Bandit (2)'
 description: 'This is the article chapter 02 of the series "Over the Wire - [01]Bandit".'
 publishDate: '2024-07-26'
 updatedDate: '2024-07-26'

@@ -1,8 +1,8 @@
 ---
 title: 'Over the Wire - [01]Bandit (3)'
 description: 'This is the article chapter 03 of the series "Over the Wire - [01]Bandit".'
-publishDate: '2024-07-26'
-updatedDate: '2024-07-26'
+publishDate: '2024-07-27'
+updatedDate: '2024-07-27'
 tags: ['Over the Wire', 'Bandit', 'Hacking Games', 'CTF', 'Linux']
 language: 'English'
 ---
