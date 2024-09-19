@@ -233,6 +233,12 @@
           "avatar": "https://static.cloudflare.ltd/Bandbbs_CDN/PWA/pwa_icon_192.png"
         },
         {
+          "name": "Lythriel Gallery",
+          "intro": "A website for sharing photography works",
+          "link": "https://lythriel.cn/",
+          "avatar": "https://q1.qlogo.cn/g?b=qq&amp;nk=1692892052&amp;s=200"
+        },
+        {
           "name": "十年之约",
           "intro": "本站已签约十年之约",
           "link": "https://www.foreverblog.cn/",
