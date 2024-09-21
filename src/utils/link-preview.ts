@@ -12,9 +12,14 @@ class LRU<K, V> extends Map<K, V> {
   }
 
   override set(key: K, value: V): this {
-    this.#touch(key, value)
-    if (this.size > this.maxSize) this.delete(this.keys().next().value)
-    return this
+    this.#touch(key, value);
+    if (this.size > this.maxSize) {
+      const firstKey = this.keys().next().value;
+      if (firstKey !== undefined) {
+        this.delete(firstKey);
+      }
+    }
+    return this;
   }
 
   #touch(key: K, value: V): void {

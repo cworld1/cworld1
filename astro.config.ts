@@ -37,7 +37,7 @@ export default defineConfig({
     sitemap(),
     mdx(),
     icon(),
-    playformCompress({ SVG: false })
+    // playformCompress({ SVG: false })
   ],
   // root: './my-project-directory',
 
