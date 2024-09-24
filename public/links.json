@@ -163,22 +163,7 @@
           "name": "L1nSn0w’s Blog",
           "intro": "无限进步.🎈",
           "link": "https://blog.linsnow.cn/",
-          "avatar": "https://blog.linsnow.cn/img/avatar.png",
-          "status": "unverified"
-        },
-        {
-          "name": "又见苍岚",
-          "intro": "蓝天依旧，明眸如初",
-          "link": "https://www.zywvvd.com/",
-          "avatar": "https://www.zywvvd.com/image/avatar.png",
-          "status": "unverified"
-        },
-        {
-          "name": "流年轻迹",
-          "intro": "开放，包容，共享，团结",
-          "link": "https://www.olive-r.cn/",
-          "avatar": "https://www.olive-r.cn/favicon.ico",
-          "status": "unverified"
+          "avatar": "https://blog.linsnow.cn/img/avatar.png"
         },
         {
           "name": "HamCQ 社区",
@@ -186,6 +171,12 @@
           "link": "https://forum.hamcq.cn/",
           "avatar": "ttps://forum.hamcq.cn/assets/avatars/f4HJalvYcIsdJdNZ.png",
           "status": "unverified"
+        },
+        {
+          "name": "Ordis",
+          "intro": "船到桥头自然直，柳暗花明又一村",
+          "link": "https://imbhj.com/",
+          "avatar": "https://www.imbhj.com/img/avatar1.png"
         }
       ]
     },
@@ -214,10 +205,10 @@
           "status": "unverified"
         },
         {
-          "name": "Ordis",
-          "intro": "船到桥头自然直，柳暗花明又一村",
-          "link": "https://imbhj.com/",
-          "avatar": "https://www.imbhj.com/img/avatar1.png",
+          "name": "流年轻迹",
+          "intro": "开放，包容，共享，团结",
+          "link": "https://www.olive-r.cn/",
+          "avatar": "https://www.olive-r.cn/favicon.ico",
           "status": "unverified"
         },
         {
@@ -225,6 +216,13 @@
           "intro": "博观而约取，厚积而薄发",
           "link": "https://bore.vip/",
           "avatar": "https://bore.vip/img/avatar.jpg",
+          "status": "unverified"
+        },
+        {
+          "name": "又见苍岚",
+          "intro": "蓝天依旧，明眸如初",
+          "link": "https://www.zywvvd.com/",
+          "avatar": "https://www.zywvvd.com/image/avatar.png",
           "status": "unverified"
         }
       ]
