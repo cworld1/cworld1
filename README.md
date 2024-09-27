@@ -63,8 +63,8 @@ Lans & Frameworks:
 Coding with IDEs & Envs:
 
 ![NeoVim](https://img.shields.io/badge/-57A143?logo=neovim&logoColor=white)
-![VSCode](https://img.shields.io/badge/Vsc-0078D4?logo=visual%20studio%20code&logoColor=white)
-![Sublime Text](https://img.shields.io/badge/-%23575757.svg?&logo=sublime-text&logoColor=important)
+![VSCode](https://img.shields.io/badge/VSC-0078D4?logo=visual%20studio%20code&logoColor=white)
+![Zed](https://img.shields.io/badge/-white?logo=zedindustries&logoColor=084CCF)
 ![macOS](https://img.shields.io/badge/-000000?logo=apple&logoColor=white)
 ![Windows](https://img.shields.io/badge/Win-0078d4?logo=windows-11&logoColor=white)
 ![Arch Linux](https://img.shields.io/badge/-1793D1?logo=arch-linux&logoColor=white)
