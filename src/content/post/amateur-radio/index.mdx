@@ -2,7 +2,7 @@
 title: 'A 类业余无线电台的那些事'
 description: '关于 A 类业余无线电台的个人向上手指北'
 publishDate: '2024-06-03'
-updatedDate: '2024-09-24'
+updatedDate: '2024-09-25'
 tags: ['Radio', 'HAM']
 coverImage: { src: './thumbnail.jpg', color: '#474747' }
 ---
@@ -32,6 +32,7 @@ import Collapse from '@/components/Collapse.astro'
 - [HamCQ 社区](https://forum.hamcq.cn/)
 - [HelloCQ 论坛](https://www.hellocq.net/)
 - [中国业余无线电论坛](http://bbs.cqcqcq.com/)
+- QSL 卡片交换：[QRZ](https://www.qrz.com/page/qsl.html)
 
 Wiki 百科类：
 
@@ -41,13 +42,16 @@ Wiki 百科类：
 工具：
 
 - 中继查询：[1](https://forum.hamcq.cn/relay)、[2](https://repeater.quickso.cn/)
+- [CTFever](https://c5r.app/) 工具箱（略硬核）
 - [快点 Ham 工具箱](https://ham.quickso.cn/)
+- [业余无线电卫星数据库](https://ham-dev.c5r.app/satellites)
+- 微信小程序：业余无线电工具集（中继查询更新非常及时！）
 
 书籍 & 正式文档（非深入学习不推荐）：
 
 - [业余无线电通信（第五版）](https://huangenet.lanzoub.com/i3hlV17yi3rg)
 - [HamStudy](https://hamstudy.org/)
-- 梅登黑德网格定位系统：[1](https://qth.quickso.cn/)、[2](https://liunan.github.io/crac/locatecode.html)
+- 梅登黑德网格定位系统：[1](https://ham-dev.c5r.app/maidenhead-grid)、[2](https://qth.quickso.cn/)、[3](https://liunan.github.io/crac/locatecode.html)（论大伙为什么这么喜欢重复造轮子）
 
 ## 考试
 
@@ -58,6 +62,8 @@ Wiki 百科类：
 准备考试推荐从这篇帖子开始：[中国 A 类业余无线电台操作证快速复习指北](https://www.jimmytian.com/archives/crac-aro-licence-a-review-guide.html)
 
 然后是这个非常全面的文档：[Github - Ham-license-type-a](https://github.com/jks-liu/zhihu/blob/master/ham-license-type-a.md)
+
+如果不自信可以看看这个 [考试题库解析](https://ham-dev.c5r.app/crac-question-bank)
 
 学完后可以直接上真题：
 
@@ -212,6 +218,42 @@ Wiki 百科类：
 
 </Collapse>
 
+某群友 BH8GCJ-OL39FM/DJ 也给出了一个很好记的口诀：
+
+<Collapse title='易记口诀'>
+
+- 申请设台十八岁，独立操作需要证。
+- 闪电电波是辐射，电台杂散是发射。
+- 有划分选划分，一个多个是分配，具体电台要指配。
+- HVU小到大，单位MHz。
+- 50，144为主要，唯一主要144。
+- 430-440为次要，主要业务是定导航。
+- 145.8-146MHz，435-438MHz两个频段不要占
+- 公安，三万，五千，顺序选
+- QRZ?谁叫我，M他台，N天电。
+- QTH是位置，ANT来是天线，频率后面带EQ，电台设备RIG。
+- OM是个老朋友，WX来是天气，73致意加祝愿。
+- 收信发信两个词，收发信机带VR。
+- DP偶极，GP接地，BEAM定向，YAGI八木，VER垂直。
+- 已知北京小于0日期改为前一天，已知UTC大24日期改为后一天。
+- EQ分区347，ITU分区有5个。
+- 安电流，伏电压，欧电阻，瓦功率。
+- KMGT369 12mμnp 均为负。
+- 5W 0.25W 0.4kW一百以内数选大。
+- 电源电压正到负，欧姆定律正反比。
+- 峰峰100三十五，峰值100为70，平均电压都为0。
+- dB单位无意义，dBi来找理想，dBd来半波长。
+- 信号强弱0.8。
+- 同轴电缆50欧，又怕水来又怕潮，使用方便影响小。
+- 无线电波光速快，3x10^8米/秒，其他介质小于1。
+- 两个组成电，磁场。频率增长波长短，波长要用300除。
+- 电池电压1.5，电动势为1.5，碱性电池不能充，失效要用电压档，元件短路电阻档。
+- 车载电源12V，微波炉用特高频，嘈杂环境用耳机。
+- LED二极管，LCD显示器，交变直流整流器，市电变低变压器。
+- 并电压，串电流，测电阻来欧姆表。
+
+</Collapse>
+
 ### 考试事宜
 
 笔者是重庆这边考的，故后文根据重庆展开。当然别的地区也可以作为参考。
@@ -289,4 +331,43 @@ Wiki 百科类：
 >
 > 除此以外的信息可前往 [核准代码工信部查询](https://ythzxfw.miit.gov.cn/resultQuery) 获取。
 
-[[笔者还在等呼号和设备的路上，后面可能还会更新系列文章]]
+### 玩弄设备
+
+相信到这一步的朋友看到各种功能都是相当懵的吧。不要慌，先看专业术语科普：
+
+[何谓中继、频率、频差、亚音、直频、倒频](http://bbs.cqcqcq.com/thread-44-1-1.html)
+
+- VFO: 第一种方式是 VFO 或可变频率振荡器。当您处于此模式并按下向上箭头向下箭头按钮时，频率将上升或下降。而在 VFO 模式下，您可以通过数字键盘编辑频率，并将其输入到菜单列表中进行信息编辑。当您在户外没有电脑时，可以快速编辑VFO，实现交流。它就像一个临时的沟通渠道。当然，如果你支持电台，你可以直接将 VFO 保存到频道模式。
+- MR: MR代表记忆。在此模式下，您将频率输入到存储通道中。您可以设置许多内存通道。使用时只需转动通道旋钮即可。
+
+如果你是和我一样购买的 uv-k6 的话，推荐前往 [合集·泉盛UV-K6调制视频](https://space.bilibili.com/1014755256/channel/collectiondetail?sid=1864062) 进一步查看详细具体操作。
+
+此外有关 uv-k5/6 的第三方固件及说明参考：[Github](https://github.com/losehu/uv-k5-firmware-custom)
+
+### 空中交流
+
+肯定有人空中一讲话就紧张啥都忘了。主要的几句模板准备好了，不会的可以自己拷贝改好保存，多念一念就熟悉了。
+
+- CQ、CQ、CQ。BH8GHG 呼叫。Bravo Hotel Golf Hotel Golf 呼叫，BH8GHG 呼叫。听到请回答。
+- Xxx，XXX，Xxx。BH8GHG 呼叫。Bravo Hotel Golf Hotel Golf 呼叫，BH8GHG 呼叫。听到请回答。
+- 插入！Breakin!
+
+对应转换表格（这个 [在线版](https://ham-dev.c5r.app/) 甚至有发音教学）：
+
+| 字母 - 单词 |            |              |             |
+| ----------- | ---------- | ------------ | ----------- |
+| A - Alpha   | H - Hotel  | N - November | U - Uniform |
+| B - Bravo   | I - India  | O - Oscar    | V - Victor  |
+| C - Charlie | J - Juliet | P - Papa     | W - Whisky  |
+| D - Delta   | K - Kilo   | Q - Quebec   | X - X-ray   |
+| E - Echo    | L - Lima   | R - Romeo    | Y - Yankee  |
+| F - Foxtrot | M - Mike   | S - Sierra   | Z - Zulu    |
+| G - Golf    |            | T - Tango    |
+
+### QSL 卡片
+
+成功获得呼号（Calldign）后可以前往 [QRZ](https://www.qrz.com/page/qsl.html) 注册并发布相关内容。（笔者的 [QEZ 地址](https://www.qrz.com/db/BH8GHG)）
+
+你可能需要：[这才弄明白 CQ zone 和 ITU zone](https://www.hellocq.net/forum/read.php?tid=253352)
+
+[[后面可能还会更新系列文章]]
