@@ -41,17 +41,18 @@ Wiki 百科类：
 
 工具：
 
-- 中继查询：[1](https://forum.hamcq.cn/relay)、[2](https://repeater.quickso.cn/)
-- [CTFever](https://c5r.app/) 工具箱（略硬核）
-- [快点 Ham 工具箱](https://ham.quickso.cn/)
-- [业余无线电卫星数据库](https://ham-dev.c5r.app/satellites)
 - 微信小程序：业余无线电工具集（中继查询更新非常及时！）
+- [快点 Ham 工具箱](https://ham.quickso.cn/)
+- [CTFever](https://c5r.app/) 工具箱（略硬核）
+- 中继查询：[1](https://forum.hamcq.cn/relay)
+- 梅登黑德网格定位系统：[1](https://ham-dev.c5r.app/maidenhead-grid)、[2](https://qth.quickso.cn/)、[3](https://liunan.github.io/crac/locatecode.html)（论大伙为什么这么喜欢重复造轮子）
+- APRS 地图：[1](https://aprs.tv/)、[2](https://aprs.fi)
+- [业余无线电卫星数据库](https://ham-dev.c5r.app/satellites)
 
 书籍 & 正式文档（非深入学习不推荐）：
 
 - [业余无线电通信（第五版）](https://huangenet.lanzoub.com/i3hlV17yi3rg)
 - [HamStudy](https://hamstudy.org/)
-- 梅登黑德网格定位系统：[1](https://ham-dev.c5r.app/maidenhead-grid)、[2](https://qth.quickso.cn/)、[3](https://liunan.github.io/crac/locatecode.html)（论大伙为什么这么喜欢重复造轮子）
 
 ## 考试
 
@@ -333,23 +334,25 @@ Wiki 百科类：
 
 ### 玩弄设备
 
-相信到这一步的朋友看到各种功能都是相当懵的吧。不要慌，先看专业术语科普：
+笔者当前使用的设备为泉盛 UV-K6 扩容版，并且写了一篇对应的博文：
 
-[何谓中继、频率、频差、亚音、直频、倒频](http://bbs.cqcqcq.com/thread-44-1-1.html)
-
-- VFO: 第一种方式是 VFO 或可变频率振荡器。当您处于此模式并按下向上箭头向下箭头按钮时，频率将上升或下降。而在 VFO 模式下，您可以通过数字键盘编辑频率，并将其输入到菜单列表中进行信息编辑。当您在户外没有电脑时，可以快速编辑VFO，实现交流。它就像一个临时的沟通渠道。当然，如果你支持电台，你可以直接将 VFO 保存到频道模式。
-- MR: MR代表记忆。在此模式下，您将频率输入到存储通道中。您可以设置许多内存通道。使用时只需转动通道旋钮即可。
-
-如果你是和我一样购买的 uv-k6 的话，推荐前往 [合集·泉盛UV-K6调制视频](https://space.bilibili.com/1014755256/channel/collectiondetail?sid=1864062) 进一步查看详细具体操作。
-
-此外有关 uv-k5/6 的第三方固件及说明参考：[Github](https://github.com/losehu/uv-k5-firmware-custom)
+<LinkPreview id='https://cworld.top/blog/uv-k6' />
 
 ### 空中交流
 
-肯定有人空中一讲话就紧张啥都忘了。主要的几句模板准备好了，不会的可以自己拷贝改好保存，多念一念就熟悉了。
+简版无线电通联规则：
+
+1. 等待数秒，确认无人通联
+2. 无人说话，喊 CQCQCQ，报呼号，等待友台呼叫
+3. 有人说话，喊插入，等待同意插入
+4. 听到有人喊 CQ,喊对方呼号，报自己呼号，等待确认抄收后，开始通联
+5. 听到有人喊插入，尽快请插入讲，报当前通联双方的呼号，等待插入方插入
+6. 听到有人呼叫自己，喊对方呼号，报自己呼号，等待确认
+
+日常空中交流用的模板：
 
 - CQ、CQ、CQ。BH8GHG 呼叫。Bravo Hotel Golf Hotel Golf 呼叫，BH8GHG 呼叫。听到请回答。
-- Xxx，XXX，Xxx。BH8GHG 呼叫。Bravo Hotel Golf Hotel Golf 呼叫，BH8GHG 呼叫。听到请回答。
+- Xxx，XXX，Xxx。这里是 BH8GHG。Bravo Hotel Golf Hotel Golf，这里是 BH8GHG。听到请回答。
 - 插入！Breakin!
 
 对应转换表格（这个 [在线版](https://ham-dev.c5r.app/) 甚至有发音教学）：
@@ -364,10 +367,20 @@ Wiki 百科类：
 | F - Foxtrot | M - Mike   | S - Sierra   | Z - Zulu    |
 | G - Golf    |            | T - Tango    |
 
+### 抄收记录
+
+部分地区会在审发证书的时候寄通讯记录本子，建议提前问老火腿是否提供，如不提供再自己按需打印/购买。这里提一些关于抄收的细节：
+
+- 设备：主流厂商：泉盛、泉益通（QYT）、宝峰、摩托罗拉（Motorola）等。（熟悉主流品牌名可以避免在抄收时尴尬地问对方写法）
+- RST：设备上的 S 代表场强，信号还可以的话就是 59，59 后边那个 9 看你的那个 S 表，S 表显示几你就报几，59那个5凭自己经验判断，一般好的信号在4和5，信号差就3，比3还差你无法判断的话直接回复对方无法抄收就行。
+
+
 ### QSL 卡片
 
 成功获得呼号（Calldign）后可以前往 [QRZ](https://www.qrz.com/page/qsl.html) 注册并发布相关内容。（笔者的 [QEZ 地址](https://www.qrz.com/db/BH8GHG)）
 
 你可能需要：[这才弄明白 CQ zone 和 ITU zone](https://www.hellocq.net/forum/read.php?tid=253352)
+
+QRZ 上传通讯日志：[qrz.com 以及 lotw 的使用以及设置](https://forum.hamcq.cn/d/1395)
 
 [[后面可能还会更新系列文章]]
