@@ -1,6 +1,6 @@
 ---
 title: '泉盛 UV-K6 上手指南'
-description: '解决买来不会玩 & 拓展玩法'
+description: '解决 UV-K6 买来不会玩 & 拓展玩法'
 publishDate: '2024-10-06'
 updatedDate: '2024-10-06'
 tags: ['Radio', 'UV-K6']
