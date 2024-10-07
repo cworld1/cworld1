@@ -59,6 +59,10 @@ tags: ['Radio', 'UV-K6']
 
 基础操作推荐 [合集·泉盛UV-K6调制视频](https://space.bilibili.com/1014755256/channel/collectiondetail?sid=1864062)。
 
+### 步进值调节
+
+参考 [https://www.bilibili.com/video/BV13a4y1S7ap](https://www.bilibili.com/video/BV13a4y1S7ap)。
+
 ### 联通中继
 
 > 摘自 [何谓中继、频率、频差、亚音、直频、倒频](http://bbs.cqcqcq.com/thread-44-1-1.html)
@@ -83,6 +87,10 @@ tags: ['Radio', 'UV-K6']
 
   > 误区：发射亚音时，接收方只有设置到亚音接收才能接收。错！事实上正相反。发射亚音时，接收方设置到“非亚音接收状态”一定能接收，设置到“亚音接收状态”时，必须亚音类型一致、同时亚音码一致才能接收。
 
+### 调整功率
+
+参考 [泉盛UV-K6---功率调整](https://www.bilibili.com/video/BV1BG41197Sb)。
+
 ### VFO / MR
 
 - VFO: 第一种方式是 VFO 或可变频率振荡器。当您处于此模式并按下向上箭头向下箭头按钮时，频率将上升或下降。而在 VFO 模式下，您可以通过数字键盘编辑频率，并将其输入到菜单列表中进行信息编辑。当您在户外没有电脑时，可以快速编辑VFO，实现交流。它就像一个临时的沟通渠道。当然，如果你支持电台，你可以直接将 VFO 保存到频道模式。
@@ -90,13 +98,37 @@ tags: ['Radio', 'UV-K6']
 
 人话：VFO 模式下自由设定频率等参数，而 MR 模式下直接调用或切换存储好的（就是我们常说的“写频”）频率信息。
 
+### 收音机
+
+参考 [泉盛UV-K6--- 收音机功能](https://www.bilibili.com/video/BV1nc411R7en)。
+
+### 一键对频
+
+参考 [泉盛UV-K6---一键对频](https://www.bilibili.com/video/BV11w411K72h)
+
+### 声控功能
+
+参考 [泉盛UV-K6---声控功能](https://www.bilibili.com/video/BV1sz4y1P7kz)。
+
+### 倒频
+
+倒频（Reverse）功能为将发射频率与接收频率对调。
+
+对于超短波通讯(U/V段)来说，一般中继的有效覆盖范围在几十公里或稍远一点，怎么才能更远呢？多个中继接力是目前唯一的办法。频率怎么设才能让多个中继实现接力？相邻的中继发射/接收频率对调。假设1号中继发射频率为A，接收频率为B，2号中继发射频率为B，接收频率为A。当你用手台在1号中继覆盖区域时，A接收B发射。当你移动到2号中继覆盖区域时怎么办？利用倒频功能让发射/接收频率对调，B接收A发射，这样你就很容易的上2号中继了。
+
+具体参考 [泉盛UV-K6--- 导倒频功能](https://www.bilibili.com/video/BV1yu4y187Z6)。
+
+### 键盘锁
+
+长按 <kbd>F</kbd> 触发，同样方式解锁。
+
 ### DTMF
 
 DTMF（双音多频）是一种在电话系统中广泛使用的模拟信号协议，用于在音频频率范围内传递数字信息。这种技术在业余无线电中也被广泛应用，它允许用户通过按下一个或多个特定的按键来选择要拨打的号码、启用特殊功能等。泉盛uvk5的DTMF功能可以让您使用电台的话筒按钮或者其他可编程的控制设备发送DTMF信号。这可以用来拨打和控制其他设备的自动应答系统、远程基地站操作、以及许多其他的基于互联网的应用程序。一些现代的对讲机也可以接收和识别这些信号。具体的使用方法可能因设备和配置而异，建议您参考您的对讲机的说明书或者联系制造商以获取更详细的信息和使用指南。
 
 ### DTMF 联系人
 
-DTMF 信令：https://www.bilibili.com/video/BV1yg411d7Zy
+DTMF 信令：<https://www.bilibili.com/video/BV1yg411d7Zy>
 
 ## 三方固件
 
@@ -124,18 +156,13 @@ Losehu 长按 <kbd>\* Scan</kbd> 按键触发，运行时屏幕左上会显示 `
 
 ### MDC 信令
 
-https://www.douyin.com/video/7378726519192997129
+<https://www.douyin.com/video/7378726519192997129>
 
 ### 开普勒模式
 
 目前是 Losehu 提供对应 [教程](https://github.com/losehu/uv-k5-firmware-custom/tree/main/doc)。
 
 使用 <kbd>F + Down</kbd> 开启；需要提前使用 K5Web 传入对应数据。
-
-对于卫星数据查找：
-
-- [N2YO](https://www.n2yo.com/)
-- [Heavens Above](https://www.heavens-above.com/AmateurSats.aspx?lat=29.060973&lng=119.657291&loc=Unspecified&alt=0&tz=ChST)
 
 ### 自定义引导
 
