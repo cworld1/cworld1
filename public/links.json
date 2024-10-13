@@ -160,10 +160,11 @@
           "avatar": "https://cdn.arthals.ink/Arthals.png"
         },
         {
-          "name": "L1nSn0w’s Blog",
+          "name": "L1nSn0w’s Site",
           "intro": "无限进步.🎈",
-          "link": "https://blog.linsnow.cn/",
-          "avatar": "https://blog.linsnow.cn/img/avatar.png"
+          "link": "https://linsnow.cn/",
+          "avatar": "https://cravatar.cn/avatar/9702b0e102b4524329aca1d057d3b65e?d=retro",
+          "status": "unverified"
         },
         {
           "name": "HamCQ 社区",
@@ -223,6 +224,13 @@
           "intro": "蓝天依旧，明眸如初",
           "link": "https://www.zywvvd.com/",
           "avatar": "https://www.zywvvd.com/image/avatar.png",
+          "status": "unverified"
+        },
+        {
+          "name": "颢天",
+          "intro": "无限进步！",
+          "link": "https://www.zouht.com/",
+          "avatar": "https://assets.zouht.com/img/icon/chriskim-text-64x.png",
           "status": "unverified"
         }
       ]
