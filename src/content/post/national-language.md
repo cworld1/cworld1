@@ -2,8 +2,7 @@
 title: 各国语言缩写
 publishDate: 2019-07-04 22:42:30
 description: '鉴于经常要用这些，所以写出来，方便自己用。'
-tags:
-  - Language
+tags: ['Language']
 ---
 
 鉴于经常要用这些，所以写出来，方便自己用。

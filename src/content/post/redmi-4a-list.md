@@ -2,8 +2,7 @@
 title: Xiaomi Redmi 4A (Rolex) 刷机集合
 publishDate: 2019-07-03 12:19:12
 description: '主要是一些刷机包，也有一些已知的 xda 刷机集合贴'
-tags:
-  - Readmi 4A
+tags: ['Redmi 4A']
 ---
 
 主要是一些刷机包，也有一些已知的 xda 刷机集合贴
