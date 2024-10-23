@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 import { fetchSitemap, askForConfirmation, sitemapUrls } from './sitemap-lib.mjs'
 
-const HOST = 'cworld.top'
+const HOST = 'cworld0.com'
 
 async function main() {
   for (const sitemapUrl of sitemapUrls) {

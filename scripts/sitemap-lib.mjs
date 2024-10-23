@@ -3,7 +3,7 @@ import readline from 'readline'
 
 const sitemapUrls = [
   // CWorld Site
-  'https://cworld.top/sitemap-0.xml',
+  'https://cworld0.com/sitemap-0.xml',
   // CWorld Blog v2
   'https://blogv2.cworld.top/sitemap.xml',
   // Linux Learning

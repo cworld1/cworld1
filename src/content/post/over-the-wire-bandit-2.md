@@ -7,7 +7,7 @@ tags: ['Over the Wire', 'Bandit', 'Hacking Games', 'CTF', 'Linux']
 language: 'English'
 ---
 
-> This is the article chapter 02 of the series "Over the Wire - [01]Bandit". Checkout [Over the Wire - \[01\]Bandit (1)](https://cworld.top/blog/over-the-wire-bandit-1) for more infomation.
+> This is the article chapter 02 of the series "Over the Wire - [01]Bandit". Checkout [Over the Wire - \[01\]Bandit (1)](/blog/over-the-wire-bandit-1) for more infomation.
 
 ## Level 14
 

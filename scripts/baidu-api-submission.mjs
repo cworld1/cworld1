@@ -2,8 +2,8 @@ import fetch from 'node-fetch'
 import { fetchSitemap, askForConfirmation, sitemapUrls } from './sitemap-lib.mjs'
 
 const BATCH_SIZE = 4 // Size of each batch of URLs to submit
-// const API_ENDPOINT = `http://data.zz.baidu.com/urls?site=https://www.cworld.top&token=${process.env.BAIDU_API_KEY}`
-const API_ENDPOINT = `http://data.zz.baidu.com/urls?site=https://cworld.top&token=${process.env.BAIDU_API_KEY}`
+// const API_ENDPOINT = `http://data.zz.baidu.com/urls?site=https://www.cworld0.com&token=${process.env.BAIDU_API_KEY}`
+const API_ENDPOINT = `http://data.zz.baidu.com/urls?site=https://cworld0.com&token=${process.env.BAIDU_API_KEY}`
 
 async function main() {
   const urlList = []

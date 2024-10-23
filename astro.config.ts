@@ -16,7 +16,7 @@ import rehypeExternalLinks from 'rehype-external-links'
 // https://astro.build/config
 export default defineConfig({
   // Top-Level Options
-  site: 'https://cworld.top',
+  site: 'https://cworld0.com',
   // base: '/docs',
   trailingSlash: 'never',
   output: 'server',

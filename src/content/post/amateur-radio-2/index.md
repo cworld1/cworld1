@@ -2,7 +2,7 @@
 title: '业余无线电进阶玩法'
 description: '简单呼中继以外的进阶玩法。因为玩法太多，所以单独开一篇文章继续记录'
 publishDate: '2024-10-07'
-updatedDate: '2024-10-07'
+updatedDate: '2024-10-11'
 tags: ['Radio', 'HAM']
 coverImage: { src: './thumbnail.jpg', color: '#56C4FF' }
 ---

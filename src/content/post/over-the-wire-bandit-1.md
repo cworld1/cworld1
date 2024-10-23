@@ -11,9 +11,9 @@ language: 'English'
 
 Series content:
 
-- [Over the Wire - \[01\]Bandit (1)](https://cworld.top/blog/over-the-wire-bandit-1)
-- [Over the Wire - \[01\]Bandit (2)](https://cworld.top/blog/over-the-wire-bandit-2)
-- [Over the Wire - \[01\]Bandit (3)](https://cworld.top/blog/over-the-wire-bandit-3)
+- [Over the Wire - \[01\]Bandit (1)](/blog/over-the-wire-bandit-1)
+- [Over the Wire - \[01\]Bandit (2)](/blog/over-the-wire-bandit-2)
+- [Over the Wire - \[01\]Bandit (3)](/blog/over-the-wire-bandit-3)
 
 ## You May Need to Know
 
