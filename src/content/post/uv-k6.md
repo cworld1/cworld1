@@ -142,7 +142,9 @@ DTMF 信令：<https://www.bilibili.com/video/BV1yg411d7Zy>
 主流的固件：
 
 - [losehu 萝狮虎](https://github.com/losehu/uv-k5-firmware-custom) (强力推荐，截至目前最后一次更新为 2024-09-22)
-- [uvk7cec](https://github.com/phdlee/uvk7cec) (截至目前最近一次更新为 2024-06-13)
+- [uvk5cec](https://github.com/phdlee/uvk5cec) (截至目前最近一次更新为 2024-06-13，特色包含好看的设置菜单、数字通联、APRS、WSPR 支持等，[作者博客](http://www.hamskey.com/) 似乎还有一些进阶东西，正常使用方法参考 [泉盛UV-K5(6) CEC固件 HF 0.5版（全频段接收版）介绍](https://zhuanlan.zhihu.com/p/691551012))
+- [fagci](https://github.com/fagci/uv-k5-firmware-fagci-mod) (截至目前最后一次更新为 2023-10-03，有超过一年了，不建议使用)
+- [官方原版](https://qsfj.com/products/3268) (还附带了一些实用程序、说明书，作为兜底选择)
 
 ### 写频
 
