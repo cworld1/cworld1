@@ -8,7 +8,6 @@ import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import mdx from '@astrojs/mdx'
 import icon from 'astro-icon'
-import playformCompress from '@playform/compress'
 // Markdown
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images'
@@ -37,7 +36,7 @@ export default defineConfig({
     sitemap(),
     mdx(),
     icon(),
-    // playformCompress({ SVG: false })
+    (await import('@playform/compress')).default({ SVG: false })
   ],
   // root: './my-project-directory',
 
