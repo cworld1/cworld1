@@ -10,6 +10,10 @@ import { siteConfig, menuLinks } from '@/site-config'
       class='relative mx-auto flex w-full items-center justify-between sm:flex sm:items-center'
       aria-label='global'
     >
+      <div
+        class='absolute -left-4 -top-8 -z-10 box-content hidden h-20 w-[calc(100%+2rem)] !duration-0 max-sm:group-[.expanded]:block max-sm:group-[.expanded.not-top]:hidden max-sm:group-[.expanded]:bg-white dark:max-sm:group-[.expanded]:bg-primary-foreground'
+      >
+      </div>
       <a
         class='flex-none text-xl font-semibold transition-all duration-300 group-[.not-top]:ms-3 sm:group-[.not-top]:ms-5'
         href='/'
@@ -22,6 +26,10 @@ import { siteConfig, menuLinks } from '@/site-config'
           id='headerExpandConetent'
           class='end-0 start-0 top-12 z-20 grid transition-all duration-300 group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-primary-foreground max-md:border-b max-sm:absolute max-sm:pb-4 max-sm:pt-0 max-sm:opacity-0 max-sm:group-[.not-top]:border max-sm:group-[.expanded]:bg-background max-sm:group-[.not-top]:px-4 max-sm:group-[.not-top]:pb-2 max-sm:group-[.not-top]:pt-2 sm:grid-rows-1 sm:border-0'
         >
+          <div
+            class='absolute -left-4 top-0 -z-10 box-content hidden h-full w-[calc(100%+2rem)] bg-white max-md:border-b max-sm:group-[.expanded]:block max-sm:group-[.expanded.not-top]:hidden dark:max-sm:group-[.expanded]:bg-primary-foreground'
+          >
+          </div>
           <div
             class='flex flex-col items-center justify-center gap-x-5 gap-y-2 overflow-hidden transition-colors sm:flex-row sm:gap-x-7'
           >

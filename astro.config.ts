@@ -1,22 +1,27 @@
 import { defineConfig } from 'astro/config'
 // Adapter
+// if you want deploy on vercel
 import vercel from '@astrojs/vercel/serverless'
+// ---
+// if you want deploy locally
+// import node from '@astrojs/node'
 // Integrations
-import expressiveCode from 'astro-expressive-code'
-import { expressiveCodeOptions } from './src/site.config.ts'
-import tailwind from '@astrojs/tailwind'
-import sitemap from '@astrojs/sitemap'
 import mdx from '@astrojs/mdx'
+import sitemap from '@astrojs/sitemap'
+import tailwind from '@astrojs/tailwind'
 import icon from 'astro-icon'
 // Markdown
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import rehypeExternalLinks from 'rehype-external-links'
+import expressiveCode from 'astro-expressive-code'
+import { siteConfig } from './src/site.config.ts'
+import { expressiveCodeOptions } from './src/site.config.ts'
 
 // https://astro.build/config
 export default defineConfig({
   // Top-Level Options
-  site: 'https://cworld0.com',
+  site: siteConfig.site,
   // base: '/docs',
   trailingSlash: 'never',
   output: 'server',
@@ -24,12 +29,12 @@ export default defineConfig({
     webAnalytics: {
       enabled: true
     }
-    // imagesConfig: {
-    //   sizes: [320, 640, 1280]
-    // }
-    // imageService: true
-    // isr: true // cache
   }),
+  // ---
+  // if you want deploy locally
+  // adapter: node({
+  //   mode: 'standalone'
+  // }),
   integrations: [
     expressiveCode(expressiveCodeOptions),
     tailwind({ applyBaseStyles: false }),

@@ -62,8 +62,8 @@ const GET = async (context: AstroGlobal) => {
         pubDate: post.data.publishDate,
         link: `/blog/${post.slug}`,
         customData: `
-                <h:img src="${post.data.coverImage?.src.src}" />
-                <enclosure url="${post.data.coverImage?.src.src}" />
+                <h:img src="${typeof post.data.coverImage?.src === 'string' ? post.data.coverImage?.src : post.data.coverImage?.src.src}" />
+                <enclosure url="${typeof post.data.coverImage?.src === 'string' ? post.data.coverImage?.src : post.data.coverImage?.src.src}" />
             `,
         content: await renderContent(post, siteUrl),
         ...post.data

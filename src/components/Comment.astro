@@ -11,6 +11,7 @@ const { class: className } = Astro.props
 </comment-component>
 
 <script>
+  import { siteConfig } from '@/site-config'
   import { init } from '@waline/client'
   import '@waline/client/style'
 
@@ -22,7 +23,7 @@ const { class: className } = Astro.props
     connectedCallback() {
       init({
         el: '#waline',
-        serverURL: 'https://waline.cworld.top',
+        serverURL: siteConfig.walineServerUrl,
         emoji: [
           'https://cdn.cbd.int/@waline/emojis@1.2.0/bmoji',
           'https://cdn.cbd.int/@waline/emojis@1.2.0/weibo'
@@ -95,6 +96,22 @@ const { class: className } = Astro.props
   }
   #waline :global(.wl-reaction) {
     overflow: visible;
+  }
+
+  #waline :global(blockquote) {
+    position: relative;
+    border-inline-start: 4px solid transparent !important;
+    background:;
+  }
+  #waline :global(blockquote)::before {
+    content: '';
+    height: 100%;
+    width: 4px;
+    left: -4px;
+    top: 0;
+    position: absolute;
+    border: 2px solid var(--waline-bq-color) !important;
+    border-radius: 9999px;
   }
 
   @media (max-width: 640px) {

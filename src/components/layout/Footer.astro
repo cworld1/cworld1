@@ -1,4 +1,6 @@
 ---
+import { socialLinks, siteConfig } from '@/site-config'
+import { SocialMediaIconId } from '@/types'
 const year = new Date().getFullYear()
 ---
 
@@ -7,7 +9,7 @@ const year = new Date().getFullYear()
     <div
       class='flex flex-col items-center gap-y-3 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-y-0'
     >
-      <div class='flex gap-x-2 text-sm sm:gap-x-4'>
+      <div class='flex flex-col items-center gap-2 text-sm sm:flex-row sm:gap-x-4'>
         <!-- <a
           class='inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
           href='/terms'>Terms</a
@@ -17,15 +19,22 @@ const year = new Date().getFullYear()
           class='inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
           href='/privacy'>Privacy</a
         > -->
-        <a
-          class='py-[3px] text-xs text-muted-foreground'
-          href='https://icp.gov.moe/?keyword=20240147'
-          target='_blank'>萌备20240147</a
-        >
-        <script is:inline src="https://vercount.cworld.top/js"></script>
+        {
+          siteConfig.registration && (
+            <a
+              class='py-[3px] text-xs text-muted-foreground'
+              href={siteConfig.registration.url}
+              target='_blank'
+            >
+              {siteConfig.registration.text}
+            </a>
+          )
+        }
+        <script is:inline src='https://vercount.cworld.top/js'></script>
         <p>
-          ©{year} <a href='https://github.com/cworld1/cworld1' target='_blank'>CWorld</a>.
-          <span id="busuanzi_value_site_pv">Loading</span> visits
+          ©{year}
+          <a href='https://github.com/cworld1/cworld1' target='_blank'>CWorld</a>.
+          <span id='busuanzi_value_site_pv'>Loading</span> visits
         </p>
       </div>
 
@@ -33,36 +42,19 @@ const year = new Date().getFullYear()
         <!-- Social Brands -->
         <!-- https://icones.js.org/collection/mingcute -->
         <div class='flex items-center gap-x-4'>
-          <!-- Coolapk -->
-          <a
-            class='inline-block text-muted-foreground transition-all hover:text-muted-foreground/75'
-            href='https://t.me/cworld0_cn'
-            aria-label='telegram'
-          >
-            <svg class='size-6'>
-              <use href='/icons/footer.svg#coolapk-line'></use>
-            </svg>
-          </a>
-          <!-- Telegram -->
-          <a
-            class='inline-block text-muted-foreground transition-all hover:text-muted-foreground/75'
-            href='https://t.me/cworld0_cn'
-            aria-label='telegram'
-          >
-            <svg class='size-6'>
-              <use href='/icons/footer.svg#mingcute-telegram-line'></use>
-            </svg>
-          </a>
-          <!-- Github -->
-          <a
-            class='inline-block text-muted-foreground transition-all hover:text-muted-foreground/75'
-            href='https://github.com/cworld1'
-            aria-label='github'
-          >
-            <svg class='size-6'>
-              <use href='/icons/footer.svg#mingcute-github-line'></use>
-            </svg>
-          </a>
+          {
+            socialLinks.map((platform) => (
+              <a
+                class='inline-block text-muted-foreground transition-all hover:text-muted-foreground/75'
+                href={platform.url}
+                aria-label={platform.name}
+              >
+                <svg class='size-6'>
+                  <use href={`/icons/social.svg#${SocialMediaIconId[platform.name]}`} />
+                </svg>
+              </a>
+            ))
+          }
           <!-- Rss -->
           <a
             class='inline-block text-muted-foreground transition-all hover:text-muted-foreground/75'
@@ -70,7 +62,7 @@ const year = new Date().getFullYear()
             aria-label='rss'
           >
             <svg class='size-6'>
-              <use href='/icons/footer.svg#mingcute-rss-2-line'></use>
+              <use href='/icons/social.svg#mingcute-rss-2-line'></use>
             </svg>
           </a>
           <!-- End Social Brands -->

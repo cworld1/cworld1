@@ -4,6 +4,7 @@ import Timeline from '@/components/Timeline.astro'
 import FriendList from '@/components/links/FriendList.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Comment from '@/components/Comment.astro'
+import { siteConfig } from '@/site-config'
 
 import links from 'public/links.json'
 import '@/assets/styles/links.css'
@@ -104,10 +105,10 @@ const friendlist = links.friends
   <h2 id='apply-links'>Apply Links</h2>
   <p>本站信息如下：</p>
   <blockquote class='not-prose border-s-4 ps-4'>
-    <p>名称：<code>CWorld Site</code></p>
-    <p>简介：<code>求知若愚，虚怀若谷</code></p>
-    <p>链接：<code>https://cworld0.com/</code></p>
-    <p>图标：<code>https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200</code></p>
+    <p>名称：<code>{siteConfig.applyFriendTip.name}</code></p>
+    <p>简介：<code>{siteConfig.applyFriendTip.slogan}</code></p>
+    <p>链接：<code>{siteConfig.applyFriendTip.url}</code></p>
+    <p>图标：<code>{siteConfig.applyFriendTip.avatar}</code></p>
   </blockquote>
 
   <p>

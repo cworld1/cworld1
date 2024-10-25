@@ -21,7 +21,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
 {
   data.coverImage && (
-    <div class='hero-image animate prose relative mb-6'>
+    <div class='hero-image animate prose relative mb-6 max-lg:mx-auto'>
       <Image
         alt={data.coverImage.alt || data.title}
         class='cover-image relative z-10 h-auto w-full rounded-2xl object-contain'
@@ -43,7 +43,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
 {data.draft ? <span class='text-red-500'>(Draft)</span> : null}
 
-<div class='article-info animate'>
+<div class='article-info animate max-w-[65ch] max-lg:mx-auto'>
   <div class='flex flex-wrap gap-x-4 gap-y-2 text-xs leading-6 text-muted-foreground'>
     <!-- article date -->
     <div class='flex items-center gap-1'>
@@ -99,7 +99,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
               aria-label={`View more blogs with the tag ${tag}`}
               class="inline-block before:content-['#'] hover:underline hover:underline-offset-4"
               data-pagefind-filter='tag'
-              href={`/tags/${tag}/`}
+              href={`/tags/${tag}`}
             >
               {tag}
             </a>
@@ -116,7 +116,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
   </div>
 </div>
 
-<div class='mt-4 w-1/2 border-t sm:mt-6 sm:w-1/3'></div>
+<div class='mt-4 w-1/2 border-t max-lg:mx-auto sm:mt-6 sm:w-1/3'></div>
 
 <script>
   const viewportHeight = window.innerHeight

@@ -28,3 +28,34 @@ html.dark {
       transform 0.1s ease;
   }
 }
+
+/* Scroll bar */
+:root {
+  --scrollbar-width: 6px;
+  --scrollbar-bg: #e0e0e0;
+  --scrollbar-thumb-bg: #c0c0c0;
+}
+html.dark {
+  --scrollbar-bg: #2e2e2e;
+  --scrollbar-thumb-bg: #4e4e4e;
+}
+body::-webkit-scrollbar {
+  height: 0;
+}
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+  background: #0000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 999px;
+  border: 2px solid var(--scrollbar-thumb-bg);
+  opacity: 0.5;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

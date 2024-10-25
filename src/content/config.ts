@@ -23,7 +23,7 @@ const post = defineCollection({
         .transform((str) => (str ? new Date(str) : undefined)),
       coverImage: z
         .object({
-          src: image(),
+          src: z.union([image(), z.string()]),
           alt: z.string().optional(),
           color: z.string().optional()
         })

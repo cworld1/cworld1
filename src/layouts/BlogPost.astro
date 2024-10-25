@@ -20,7 +20,13 @@ const { post } = Astro.props
 const {
   data: { description, ogImage, coverImage, publishDate, title, updatedDate }
 } = post
-const socialImage = ogImage ?? (coverImage ? coverImage.src.src : '/images/social-card.png')
+const socialImage =
+  ogImage ??
+  (coverImage
+    ? typeof coverImage.src === 'string'
+      ? coverImage.src
+      : coverImage.src.src
+    : '/images/social-card.png')
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString()
 const { headings } = await post.render()
 const primaryColor = post.data.coverImage?.color ?? 'hsl(var(--primary) / var(--tw-text-opacity))'
@@ -42,7 +48,7 @@ const primaryColor = post.data.coverImage?.color ?? 'hsl(var(--primary) / var(--
         <div id='blog-hero'><BlogHero content={post} /></div>
         <div
           id='content'
-          class='animate prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+          class='animate prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none max-lg:mx-auto'
         >
           <slot />
         </div>
@@ -81,17 +87,24 @@ const primaryColor = post.data.coverImage?.color ?? 'hsl(var(--primary) / var(--
   #content :global(blockquote) {
     position: relative;
     overflow: hidden;
-    padding-inline-end: 1.4rem !important;
   }
   #content :global(blockquote::after) {
     position: absolute;
     content: '”';
     top: -5.4rem;
-    right: 0;
+    right: -1.4rem;
     font-size: 10rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
       sans-serif;
     transform: rotate(-15deg);
     opacity: 5%;
+  }
+
+  #content :global(blockquote) {
+    @apply !pe-[1.4rem];
+  }
+
+  #content :global(img) {
+    @apply mx-auto;
   }
 </style>

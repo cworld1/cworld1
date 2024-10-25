@@ -102,8 +102,15 @@ const toc = generateToc(headings)
       this.tocLinks.forEach((link) => {
         link.element.addEventListener('click', (e) => {
           e.preventDefault()
+          // Push the history to add the hash at the end of the URL
           const directHeading = this.headings.find((heading) => heading.id === link.slug)
-          directHeading?.scrollIntoView({ behavior: 'smooth' })
+          if (directHeading) {
+            // Push the history to add the hash at the end of the URL
+            history.pushState(null, directHeading.textContent || '', this.getAttribute('href'))
+            directHeading.scrollIntoView({ behavior: 'smooth' })
+          } else {
+            console.warn(`No heading found for slug: ${link.slug}`)
+          }
         })
       })
 

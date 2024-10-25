@@ -48,20 +48,20 @@ const next = items[(index + 1) % items.length]
         class='translate-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1'
       ></polyline>
     </svg>
-    <div class='flex grow flex-col gap-0.5 sm:gap-1.5'>
+    <div class='flex max-w-[80%] grow flex-col gap-0.5 sm:gap-1.5'>
       <div class='text-sm font-normal uppercase text-muted-foreground'>Prev</div>
-      <div class='whitespace-nowrap font-medium transition-colors'>
+      <div class='truncate whitespace-nowrap font-medium transition-colors'>
         {prev.data.title}
       </div>
     </div>
   </a>
   <a
     href={`/blog/${next.slug}`}
-    class='group flex items-center gap-3 rounded-lg border border-transparent px-4 py-2 text-right no-underline transition-colors duration-300 hover:bg-primary-foreground sm:py-4'
+    class='group flex items-center justify-end gap-3 rounded-lg border border-transparent px-4 py-2 text-right no-underline transition-colors duration-300 hover:bg-primary-foreground sm:py-4'
   >
-    <div class='flex grow flex-col gap-0.5 sm:gap-1.5'>
+    <div class='flex max-w-[80%] grow flex-col gap-0.5 sm:gap-1.5'>
       <div class='text-sm font-normal uppercase text-muted-foreground'>Next</div>
-      <div class='whitespace-nowrap font-medium transition-colors'>
+      <div class='truncate whitespace-nowrap font-medium transition-colors'>
         {next.data.title}
       </div>
     </div>
