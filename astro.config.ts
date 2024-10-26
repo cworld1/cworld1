@@ -14,9 +14,7 @@ import icon from 'astro-icon'
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import rehypeExternalLinks from 'rehype-external-links'
-import expressiveCode from 'astro-expressive-code'
 import { siteConfig } from './src/site.config.ts'
-import { expressiveCodeOptions } from './src/site.config.ts'
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,15 +34,14 @@ export default defineConfig({
   //   mode: 'standalone'
   // }),
   integrations: [
-    expressiveCode(expressiveCodeOptions),
     tailwind({ applyBaseStyles: false }),
     sitemap(),
     mdx(),
     icon()
     // (await import('@playform/compress')).default({
-//   SVG: false,
-//   Exclude: ['index.*.js']
-// })
+    //   SVG: false,
+    //   Exclude: ['index.*.js']
+    // })
   ],
   // root: './my-project-directory',
 
@@ -69,6 +66,12 @@ export default defineConfig({
     remarkRehype: {
       footnoteLabelProperties: {
         className: ['']
+      }
+    },
+    shikiConfig: {
+      themes: {
+        dark: 'github-dark',
+        light: 'github-light'
       }
     }
   }
