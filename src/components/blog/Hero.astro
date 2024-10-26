@@ -22,6 +22,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 {
   data.coverImage && (
     <div class='hero-image animate prose relative mb-6 max-lg:mx-auto'>
+      {/* @ts-ignore */}
       <Image
         alt={data.coverImage.alt || data.title}
         class='cover-image relative z-10 h-auto w-full rounded-2xl object-contain'
@@ -29,6 +30,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
         loading='eager'
         src={data.coverImage.src}
       />
+      {/* @ts-ignore */}
       <Image
         alt={data.coverImage.alt || data.title}
         fetchpriority='high'
