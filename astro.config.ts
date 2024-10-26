@@ -40,11 +40,11 @@ export default defineConfig({
     tailwind({ applyBaseStyles: false }),
     sitemap(),
     mdx(),
-    icon(),
-    (await import('@playform/compress')).default({
-      SVG: false,
-      Exclude: ['index.*.js']
-    })
+    icon()
+    // (await import('@playform/compress')).default({
+//   SVG: false,
+//   Exclude: ['index.*.js']
+// })
   ],
   // root: './my-project-directory',
 
