@@ -310,18 +310,18 @@ ONEPUSH={"notifier":"bark","params":{"markdown":false,"key":"xxxxxx"}}
 }
 ```
 
-|配置项|描述|
-|---|---|
-|method|必填，请求方式。默认：post|
-|url|必填，完整的自定义推送链接|
-|data|选填，发送的data。默认为空，可自行添加额外参数|
-|retcode_key|必填，响应体返回的状态码的key|
-|retcode_value|必填，响应体返回的状态码的value|
-|data_type|选填，发送data的方式，可选params|json|data，默认：data|
-|merge_title_and_desp|选填，是否将标题（应用名+运行状态）和运行结果合并。默认：false|
-|set_data_title|必填，推送方式data中消息标题的key|
-|set_data_sub_title|选填，推送方式data中消息正文的key。有的推送方式正文的key有次级结构，需配合set_data_title构造子级，与set_data_desp互斥。例如：企业微信中，set_data_title填text，set_data_sub_title填content|
-|set_data_desp|选填，推送方式data中消息正文的key。例如：server酱的为desp，与set_data_sub_title互斥，两者都填则本项不生效|
+| 配置项               | 描述                                                                                                                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- | ---------------- |
+| method               | 必填，请求方式。默认：post                                                                                                                                                                 |
+| url                  | 必填，完整的自定义推送链接                                                                                                                                                                 |
+| data                 | 选填，发送的data。默认为空，可自行添加额外参数                                                                                                                                             |
+| retcode_key          | 必填，响应体返回的状态码的key                                                                                                                                                              |
+| retcode_value        | 必填，响应体返回的状态码的value                                                                                                                                                            |
+| data_type            | 选填，发送data的方式，可选params                                                                                                                                                           | json | data，默认：data |
+| merge_title_and_desp | 选填，是否将标题（应用名+运行状态）和运行结果合并。默认：false                                                                                                                             |
+| set_data_title       | 必填，推送方式data中消息标题的key                                                                                                                                                          |
+| set_data_sub_title   | 选填，推送方式data中消息正文的key。有的推送方式正文的key有次级结构，需配合set_data_title构造子级，与set_data_desp互斥。例如：企业微信中，set_data_title填text，set_data_sub_title填content |
+| set_data_desp        | 选填，推送方式data中消息正文的key。例如：server酱的为desp，与set_data_sub_title互斥，两者都填则本项不生效                                                                                  |
 
 例如写一个 ServerChan 的自定义推送。
 

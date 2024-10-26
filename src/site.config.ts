@@ -53,7 +53,7 @@ export const socialLinks: SocialLinks = [
   },
   {
     name: 'github',
-    url: 'https://github.com/cworld1/theme-astro-pure'
+    url: 'https://github.com/cworld1'
   }
 ]
 
