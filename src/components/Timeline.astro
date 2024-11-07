@@ -14,7 +14,7 @@ const { class: className, events, ...props } = Astro.props
   <ul class='ps-0 sm:ps-2'>
     {
       events.map((event, index) => (
-        <li class='group relative flex list-none gap-2 rounded-full ps-0 sm:gap-4'>
+        <li class='group relative flex list-none gap-x-3 rounded-full ps-0 sm:gap-x-2'>
           {/* circle */}
           <span class='z-10 my-2 ms-2 h-3 w-3 min-w-3 rounded-full border-2 border-muted-foreground transition-transform group-hover:scale-125' />
           {/* line */}
@@ -24,9 +24,13 @@ const { class: className, events, ...props } = Astro.props
               style={{ height: 'calc(100% - 4px)' }}
             />
           )}
-          <samp class='my-1 min-w-[80px] text-right text-sm sm:min-w-[90px]'>{event.date}</samp>
-          <div>
-            <Fragment set:html={event.content} />
+          <div class='flex gap-2 max-sm:flex-col'>
+            <samp class='w-fit grow-0 rounded-md py-1 text-sm max-sm:bg-muted max-sm:px-2 sm:min-w-[82px] sm:text-right'>
+              {event.date}
+            </samp>
+            <div>
+              <Fragment set:html={event.content} />
+            </div>
           </div>
         </li>
       ))
