@@ -76,3 +76,4 @@ node_modules/
 old_blog
 ignore.*
 /scripts/*.sh
+bunfig.toml

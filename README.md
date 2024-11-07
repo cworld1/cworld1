@@ -3,7 +3,7 @@
 <img
 src="https://github-readme-stats.vercel.app/api?username=cworld1&count_private=true&theme=vue-dark&show_icons=true&hide_border=true&border_radius=10&bg_color=2738493B&text_color=808080" alt="Stats" width="400" align="right"/>
 
-Dreams to be data analyst & software engineer
+Dreams to be data analyst & fullstack developer
 
 Checkout <a href="https://cworld0.com/" target="_blank">𝑪𝑾𝒐𝒓𝒍𝒅 𝑺𝒊𝒕𝒆</a> for more.
 
@@ -11,40 +11,24 @@ Checkout <a href="https://cworld0.com/" target="_blank">𝑪𝑾𝒐𝒓𝒍𝒅
 [![RSS](https://img.shields.io/badge/RSS%20%E2%86%92-FFA500?style=for-the-badge&logo=rss&logoColor=white)](https://cworld0.com/rss.xml)&nbsp;
 [![visits](https://komarev.com/ghpvc/?username=cworld1&style=for-the-badge&label=View&color=555555)](https://cworld0.com/)
 
-Lans & Frameworks:
+### Languages
 
-![R](https://img.shields.io/badge/-276DC3?logo=r&logoColor=white)
-![GO](https://img.shields.io/badge/-00ADD8?logo=go&logoColor=white)
-![PHP](https://img.shields.io/badge/-777BB4?logo=php&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?&logo=csharp&logoColor=white)
-![Lua](https://img.shields.io/badge/-2C2D72?logo=lua&logoColor=white)
-![Rust](https://img.shields.io/badge/-FFF0E5?logo=rust&logoColor=black)
-
-<details>
-<summary style="cursor: pointer">More language details...</summary>
-
-### Basic languages
-
-![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-F80000?logo=oracle&logoColor=white)
-<br/>
-![HTML](https://img.shields.io/badge/-E34F26?logo=html5&logoColor=white)
-![TS](https://img.shields.io/badge/-007ACC?logo=typescript&logoColor=white)
-![C/C++](https://img.shields.io/badge/-%2300599C.svg?logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/-FFD43B?logo=python&logoColor=blue)
+[![Lans](https://skillicons.dev/icons?i=r,go,php,lua,rust,matlab,unity,java,html,css,js,ts,py,powershell,bash,kotlin,c,cpp,cs&perline=13)](https://skillicons.dev)
 
 ### Frameworks
 
-![Spring](https://img.shields.io/badge/Spring-6DB33F?logo=spring&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?&logo=Jupyter&logoColor=white)
-![astro](https://img.shields.io/badge/Astro-0C1222?logo=astro&logoColor=FDFDFE)
-<br/>
-![Qt](https://img.shields.io/badge/-41CD52?logo=qt&logoColor=white)
-![Android](https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white)
-![Unity](https://img.shields.io/badge/-100000?logo=unity&logoColor=white)
-![Vue](https://img.shields.io/badge/-35495E?logo=vuedotjs&logoColor=4FC08D)
-![React](https://img.shields.io/badge/-20232A?logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/-B73BFE?logo=vite&logoColor=FFD62E)
+[![Frameworks](https://skillicons.dev/icons?i=qt,dotnet,astro,deno,react,redux,nextjs,nodejs,vue,pinia,vite,webpack,less,sass,tailwind,bootstrap,spring,opencv,flask,fastapi&perline=13)](https://skillicons.dev)
+
+<details>
+<summary style="cursor: pointer">More details...</summary>
+
+### Support tools
+
+[![Support tools](https://skillicons.dev/icons?i=nginx,bun,pnpm,cmake,docker,git,mysql,redis,sqlite,workers,postgres,mysql&perline=13)](https://skillicons.dev)
+
+### Softwares & Platforms
+
+[![Softwares](https://skillicons.dev/icons?i=arch,debian,apple,windows,androidstudio,au,ps,pr,cloudflare,netlify,vercel,vscode,neovim,github,gitlab&perline=13)](https://skillicons.dev)
 
 ### Most used languages
 
@@ -60,13 +44,5 @@ Lans & Frameworks:
 </details>
 <br/>
 
-Coding with IDEs & Envs:
-
-![NeoVim](https://img.shields.io/badge/-57A143?logo=neovim&logoColor=white)
-![VSCode](https://img.shields.io/badge/VSC-0078D4?logo=visual%20studio%20code&logoColor=white)
-![Zed](https://img.shields.io/badge/-white?logo=zedindustries&logoColor=084CCF)
-![macOS](https://img.shields.io/badge/-000000?logo=apple&logoColor=white)
-![Windows](https://img.shields.io/badge/Win-0078d4?logo=windows-11&logoColor=white)
-![Arch Linux](https://img.shields.io/badge/-1793D1?logo=arch-linux&logoColor=white)
-
 <!-- Shields badge fom: https://github.com/alexandresanlim/Badges4-README.md-Profile -->
+<!-- Skill icons from: https://github.com/tandpfun/skill-icons -->
