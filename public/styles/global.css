@@ -6,22 +6,21 @@ html.dark {
   color-scheme: dark;
 }
 
+/* Animation */
 .animate {
-  opacity: 0;
-  transform: translateY(10px);
+  opacity: 0.05;
+  transform: translateY(15px);
   transition:
-    opacity 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
+    opacity 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
 }
-
 .animate.show {
   opacity: 1;
   transform: translateY(0);
 }
-
 @media (prefers-reduced-motion) {
   .animate {
-    opacity: 0;
+    opacity: 0.5;
     transform: translateY(5px);
     transition:
       opacity 0.1s ease,

@@ -62,8 +62,8 @@ const paginationProps = {
       ) : (
         <>
           <div class='grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8'>
-            <section class='animate' aria-label='Blog posts list'>
-              <div class='mb-3 flex flex-col justify-between text-sm sm:mb-5 sm:flex-row'>
+            <section aria-label='Blog posts list'>
+              <div class='animate mb-3 flex flex-col justify-between text-sm sm:mb-5 sm:flex-row'>
                 <span class='text-muted-foreground'>
                   Page {page.currentPage} - Showing {page.data.length} of {totalPosts} posts
                 </span>
@@ -71,7 +71,7 @@ const paginationProps = {
                   View posts by years →
                 </a>
               </div>
-              <ul class='flex flex-col gap-y-4 text-start'>
+              <ul class='animate flex flex-col gap-y-4 text-start'>
                 {page.data.map((p) => (
                   <PostPreview post={p} detailed />
                 ))}
