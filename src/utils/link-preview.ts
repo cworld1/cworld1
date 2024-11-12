@@ -61,7 +61,7 @@ function makeSafeGetter<T>(
       cache.set(url, result)
       return result
     } catch (e: any) {
-      console.error(formatError(`[error] astro-embed`, e?.message ?? e))
+      console.error(formatError(`[error] astro-embed`, e?.message ?? e, `URL: ${url}`))
       return undefined
     }
   }
