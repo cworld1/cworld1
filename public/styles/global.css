@@ -75,6 +75,9 @@ pre:hover {
   button.copy {
     opacity: 1;
   }
+  .language {
+    opacity: 0;
+  }
 }
 
 /* Scroll bar */

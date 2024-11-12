@@ -53,3 +53,40 @@ export const addCopyButton = (timeout?: number): ShikiTransformer => {
     }
   }
 }
+
+// export const addFilename = (filename?: string): ShikiTransformer => {
+//   return {
+//     name: 'shiki-transformer-add-filename',
+//     pre(node) {
+//       if (!filename) return
+
+//       const span = h(
+//         'span',
+//         {
+//           class: 'filename'
+//         },
+//         filename
+//       )
+
+//       node.children.push(span)
+//     }
+//   }
+// }
+
+export const addLanguage = (): ShikiTransformer => {
+  return {
+    name: 'shiki-transformer-add-filename',
+    pre(node) {
+      const span = h(
+        'span',
+        {
+          class:
+            'language transition-opacity duration-300 absolute top-3 right-4 text-sm text-muted-foreground'
+        },
+        this.options.lang
+      )
+
+      node.children.push(span)
+    }
+  }
+}
