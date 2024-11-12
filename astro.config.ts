@@ -15,6 +15,7 @@ import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import rehypeExternalLinks from 'rehype-external-links'
 import { siteConfig } from './src/site.config.ts'
+import { addCopyButton } from './src/utils/shiki.ts'
 
 // https://astro.build/config
 export default defineConfig({
@@ -69,7 +70,8 @@ export default defineConfig({
       themes: {
         light: 'github-light',
         dark: 'github-dark'
-      }
+      },
+      transformers: [addCopyButton(2000)]
     }
   }
 })
