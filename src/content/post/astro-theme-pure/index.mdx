@@ -1,10 +1,10 @@
 ---
-title: 'Astro Theme Resume 项目总结'
+title: 'Astro Theme Pure 项目'
 description: '前段时间写了个前端项目，一时兴起，就顺便把博客也翻新了一遍。'
 publishDate: '2024-04-19'
 updatedDate: '2024-06-29'
-coverImage: { src: './theme-astro-cover.jpg', alt: 'astro theme resume', color: '#3BA0C5' }
-tags: ['resume', 'astro', 'theme']
+coverImage: { src: './theme-astro-cover.jpg', alt: 'astro theme pure', color: '#3BA0C5' }
+tags: ['pure', 'astro', 'theme']
 ---
 
 import LinkPreview from '@/components/LinkPreview.astro'
@@ -45,7 +45,7 @@ import LinkPreview from '@/components/LinkPreview.astro'
 
 好马配好鞍，除了新的框架外，我还配合了一些新的东西：
 
-1. 基于知名优秀主题 [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus) 最新改进的 [Astro Resume](https://github.com/srleom/astro-theme-resume?tab=readme-ov-file) 主题；
+1. 基于知名优秀主题 [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus) 最新改进的 [Astro Resume](https://github.com/srleom/astro-theme-resume?tab=readme-ov-file) 主题为基底；
 2. 采用了 [Tailwind CSS](https://tailwindcss.com)，帮助我快速搭建组件、布局样式；
 3. 后端改为有服务属性的 Vercel，能够在后端完成渲染。
 
@@ -131,6 +131,8 @@ import LinkPreview from '@/components/LinkPreview.astro'
 - [x] 添加载入渐变动画 (Tks for project [markhorn-dev/astro-nano](https://github.com/markhorn-dev/astro-nano))
 - [x] 添加链接预览/卡片组件 (Tks for project [delucis/astro-embed](https://github.com/delucis/astro-embed))
 - [x] 迁移到新域名 [cworld0.com](https://cworld0.com/)
+- [x] 使用 Shiki 优化代码块渲染
+- [x] 为 Shiki 添加复制按钮、语言展示等 (Tks for project [Myphz/Myphzshiki-filename-copy-transformers](https://github.com/Myphz/shiki-filename-copy-transformers))
 - [ ] 通知友链好友们修改信息
 - [ ] ...
 
