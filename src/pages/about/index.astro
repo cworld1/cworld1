@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 import Collapse from '@/components/Collapse.astro'
 import Timeline from '@/components/Timeline.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
@@ -7,6 +9,8 @@ import ToolSection from '@/components/about/ToolSection.astro'
 import Button from '@/components/Button.astro'
 import Substats from '@/components/about/Substats.astro'
 import Spoiler from '@/components/Spoiler.astro'
+
+import notByAIImage from '@/assets/not-by-ai-badge.svg'
 
 const headings = [
   {
@@ -256,18 +260,27 @@ const headings = [
     <li>
       CI/CD: <a href='https://vercel.com/workflow' target='_blank'>Vercel Workflow</a>
     </li>
-    <!-- <li>资源加速：<a href='https://cdn.cbd.int/' target='_blank'>CBD CDN</a></li> -->
-    <li>Comment system：<a href='https://waline.js.org' target='_blank'>Waline</a></li>
+    <!-- <li>Resources speedup: <a href='https://cdn.cbd.int/' target='_blank'>CBD CDN</a></li> -->
+    <li>Comment system: <a href='https://waline.js.org' target='_blank'>Waline</a></li>
     <li>
-      Visits： <a href='https://console.leancloud.app/' target='_blank'>LeanCloud</a> +
+      Visits: <a href='https://console.leancloud.app/' target='_blank'>LeanCloud</a> +
       <a href='https://waline.js.org/' target='_blank'>Waline</a>
     </li>
     <li>
-      Other statistics:<a href='https://github.com/spencerwooo/substats' target='_blank'>Substats</a
-      >、<a href='https://github.com/Rock-Candy-Tea/hexo-circle-of-friends' target='_blank'
+      Other statistics: <a href='https://github.com/spencerwooo/substats' target='_blank'
+        >Substats</a
+      > & <a href='https://github.com/Rock-Candy-Tea/hexo-circle-of-friends' target='_blank'
         >Circle of friends</a
       >
     </li>
   </ul>
+  <p>... and one thing I have been insisting on so far:</p>
+  <Image
+    src={notByAIImage}
+    alt='Written by Human Not by AI'
+    width='131'
+    height='42'
+    style='border-radius:unset'
+  />
   <Comment slot='bottom' />
 </PageLayout>
