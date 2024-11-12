@@ -29,6 +29,18 @@ html.dark {
   }
 }
 
+/* Shiki */
+& .astro-code {
+  background-color: hsl(var(--primary-foreground)) !important;
+}
+.dark {
+  & .astro-code,
+  & .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+  }
+}
+
 /* Scroll bar */
 :root {
   --scrollbar-width: 6px;

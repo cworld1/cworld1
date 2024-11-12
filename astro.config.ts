@@ -63,15 +63,12 @@ export default defineConfig({
         }
       ]
     ],
-    remarkRehype: {
-      footnoteLabelProperties: {
-        className: ['']
-      }
-    },
+    // remarkRehype: { },
+    // https://docs.astro.build/en/guides/syntax-highlighting/
     shikiConfig: {
       themes: {
-        dark: 'github-dark',
-        light: 'github-light'
+        light: 'github-light',
+        dark: 'github-dark'
       }
     }
   }
