@@ -21,23 +21,21 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
 {
   data.heroImage && (
-    <div class='hero-image animate prose relative mb-6 max-lg:mx-auto'>
-      {/* @ts-ignore */}
+    <div class='hero-image animate relative mb-6'>
       <Image
         alt={data.heroImage.alt || data.title}
-        class='cover-image relative z-10 h-auto w-full rounded-2xl object-contain'
+        class='cover-image relative z-10 h-auto w-full max-w-[65ch] rounded-2xl object-contain'
         fetchpriority='high'
         loading='eager'
         src={data.heroImage.src}
       />
-      {/* @ts-ignore */}
       <Image
         alt={data.heroImage.alt || data.title}
         fetchpriority='high'
         loading='eager'
         src={data.heroImage.src}
         id='blurImage'
-        class='absolute start-0 top-4 z-0 mt-0 h-full w-full opacity-40 blur-xl transition-opacity duration-300'
+        class='absolute end-0 top-4 z-0 mt-0 h-full max-w-[65ch] rounded-3xl opacity-60 blur-xl transition-opacity duration-300'
       />
     </div>
   )
@@ -137,11 +135,11 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
       // console.log(scrollDistance, threshold1, threshold2, threshold3)
 
       if (scrollDistance >= threshold3) {
-        image.style.opacity = '0.1'
+        image.style.opacity = '0.15'
       } else if (scrollDistance >= threshold2) {
-        image.style.opacity = '0.2'
-      } else if (scrollDistance >= threshold1) {
         image.style.opacity = '0.3'
+      } else if (scrollDistance >= threshold1) {
+        image.style.opacity = '0.45'
       }
     })
   }
