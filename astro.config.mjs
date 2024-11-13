@@ -1,10 +1,13 @@
+// @ts-check
 import { defineConfig } from 'astro/config'
+
 // Adapter
 // if you want deploy on vercel
 import vercel from '@astrojs/vercel/serverless'
-// ---
 // if you want deploy locally
 // import node from '@astrojs/node'
+// ---
+
 // Integrations
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
@@ -12,7 +15,6 @@ import tailwind from '@astrojs/tailwind'
 import icon from 'astro-icon'
 // Markdown
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
-import remarkUnwrapImages from 'remark-unwrap-images'
 import rehypeExternalLinks from 'rehype-external-links'
 import { siteConfig } from './src/site.config.ts'
 import { addCopyButton, addLanguage } from './src/utils/shiki.ts'
@@ -54,7 +56,7 @@ export default defineConfig({
   },
   // Markdown Options
   markdown: {
-    remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+    remarkPlugins: [remarkReadingTime],
     rehypePlugins: [
       [
         rehypeExternalLinks,
