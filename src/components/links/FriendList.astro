@@ -42,7 +42,7 @@ const { title, list: friendlist, ...props } = Astro.props
                   height={80}
                   width={80}
                   alt='avatar'
-                  loading='eager'
+                  loading='lazy'
                 />
                 <div class='absolute start-0 top-0 h-full w-full'>
                   <div class='flex h-full w-full items-center justify-center rounded-full bg-foreground opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50'>
@@ -85,7 +85,7 @@ const { title, list: friendlist, ...props } = Astro.props
               height={80}
               width={80}
               alt='avatar bg'
-              loading='eager'
+              loading='lazy'
               style={{
                 maskImage: 'linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
                 msMaskImage:

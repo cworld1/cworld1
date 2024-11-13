@@ -41,7 +41,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 class='absolute end-0 z-0 m-0 h-full w-1/2 object-cover opacity-40'
                 src={images[imagePath]()}
                 alt={project.name}
-                loading='eager'
+                loading='lazy'
                 style={{
                   maskImage:
                     'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
