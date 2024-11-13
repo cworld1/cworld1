@@ -49,25 +49,29 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
         )
         /* class='animate sticky top-24 z-10 basis-60 max-lg:bottom-0 max-lg:left-0 max-lg:hidden max-lg:w-full max-lg:bg-primary-foreground max-lg:p-4 lg:order-2' */
       }
-<article class='flex-1'>
+      <article class='flex-1'>
         <div id='blog-hero'><BlogHero content={post} /></div>
         <div
           id='content'
-          class='animate prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none max-lg:mx-auto'
+          class='animate prose prose-base prose-zinc mt-8 max-w-none text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground md:min-w-[45ch]'
         >
           <slot />
         </div>
       </article>
     </div>
-    <div
-      class='prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
-    >
-      <!-- copyright -->
-      <Copyright content={post} />
-      <!-- article recommend -->
-      <ArticleBottom content={post} class='mt-3 sm:mt-6' />
-      <!-- comment -->
-      {!post.data.draft && <Comment class='mt-3 sm:mt-6' />}
+
+    <div class='mt-8 w-full items-start gap-x-10 md:flex'>
+      <div class='mt-8 flex-1 text-muted-foreground md:min-w-[50ch]'>
+        <!-- copyright -->
+        <Copyright content={post} />
+        <!-- article recommend -->
+        <ArticleBottom content={post} class='mt-3 sm:mt-6' />
+        <!-- comment -->
+        {!post.data.draft && <Comment class='mt-3 sm:mt-6' />}
+      </div>
+      <div class='min-w-40 basis-60'>
+        <slot name='bottom' />
+      </div>
     </div>
     <BackToTop header='blog-hero' content='content' />
   </div>

@@ -52,16 +52,19 @@ const { title, headings, info, ...props } = Astro.props
         </div>
         <div
           id='content'
-          class='prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
+          class='prose prose-base prose-zinc mt-8 max-w-none text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground md:min-w-[45ch]'
         >
           <slot />
         </div>
       </article>
     </div>
-    <div
-      class='prose prose-base prose-zinc mt-8 text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
-    >
-      <slot name='bottom' />
+    <div class='mt-8 w-full items-start gap-x-10 md:flex'>
+      <div class='mt-8 flex-1 text-muted-foreground md:min-w-[50ch]'>
+        <slot name='bottom' />
+      </div>
+      <div class='min-w-40 basis-60'>
+        <slot name='bottom-sidebar' />
+      </div>
     </div>
     <BackToTop header='hero' content='content' />
   </div>
