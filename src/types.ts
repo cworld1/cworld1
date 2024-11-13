@@ -9,11 +9,14 @@ export type SiteConfig = {
     locale: string | string[] | undefined
     options: Intl.DateTimeFormatOptions
   }
+
   pageSize: number
+  externalLinkArrow: boolean
   registration?: {
     url: string
     text: string
   }
+
   walineServerUrl: string
   applyFriendTip: {
     name: string
