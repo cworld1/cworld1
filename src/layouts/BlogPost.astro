@@ -39,13 +39,17 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
 >
   <div class='w-full'>
     <Button title='Back' href='/blog' style='back' />
-    <div class='mt-8 gap-x-10 lg:flex lg:items-start'>
-      {!!headings.length && <TOC headings={headings} />}
-      <article
-        class='flex-grow break-words'
-        style='flex-grow: 3; flex-shrink: 1; flex-basis: 60%;'
-        data-pagefind-body
-      >
+    <div class='mt-6 w-full items-start gap-x-10 md:flex'>
+      {
+        !!headings.length && (
+          <TOC
+            class='animate top-24 z-10 min-w-40 basis-60 max-md:hidden md:sticky md:order-2'
+            headings={headings}
+          />
+        )
+        /* class='animate sticky top-24 z-10 basis-60 max-lg:bottom-0 max-lg:left-0 max-lg:hidden max-lg:w-full max-lg:bg-primary-foreground max-lg:p-4 lg:order-2' */
+      }
+<article class='flex-1'>
         <div id='blog-hero'><BlogHero content={post} /></div>
         <div
           id='content'
