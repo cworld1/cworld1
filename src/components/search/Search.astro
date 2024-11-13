@@ -31,55 +31,57 @@ const { class: className } = Astro.props
 </search-component>
 
 <script>
-  import DOMPurify from 'dompurify'
   import Fuse from 'fuse.js'
   import { getAllPosts } from '@/utils'
 
   class SearchComponent extends HTMLElement {
+    searchReadout!: HTMLElement
+    resultsList!: HTMLElement
+
     constructor() {
       super()
     }
 
-    connectedCallback() {
-      // selectors
-      const search = document.querySelector('#search') as HTMLInputElement
-      const searchReadout = document.querySelector('#searchReadout') as HTMLElement
-      const resultsList = document.querySelector('#searchResults') as HTMLElement
+    // Add a custom sanitization function
+    sanitize(input: string) {
+      const element = document.createElement('div')
+      element.innerText = input
+      return element.innerHTML
+    }
 
-      // functions
-      function updateSearchPageURL(search: string) {
-        const url = new URL(window.location.href)
-        url.searchParams.set('q', search)
-        window.history.replaceState(null, '', url)
-      }
+    // Update the URL with the search term
+    updateSearchPageURL(search: string) {
+      const url = new URL(window.location.href)
+      url.searchParams.set('q', search)
+      window.history.replaceState(null, '', url)
+    }
 
-      function hlText(text: string, matches: any[], key: string) {
-        const match = matches.find((m) => m.key === key)
-        if (match) {
-          const { indices } = match
-          let highlightedText = ''
-          let lastIndex = 0
-
-          for (const [start, end] of indices) {
-            highlightedText += text.slice(lastIndex, start) // add part that doesn't match
-            highlightedText += `<span class="font-semibold underline">${text.slice(start, end + 1)}</span>` // add matched
-            lastIndex = end + 1
-          }
-
-          highlightedText += text.slice(lastIndex) // continuing add exsists
-          return highlightedText
+    // Highlight the search term in the results
+    hlText(text: string, matches: any[], key: string) {
+      const match = matches.find((m) => m.key === key)
+      if (match) {
+        const { indices } = match
+        let highlightedText = ''
+        let lastIndex = 0
+        for (const [start, end] of indices) {
+          highlightedText += text.slice(lastIndex, start) // add part that doesn't match
+          highlightedText += `<span class="font-semibold underline">${text.slice(start, end + 1)}</span>` // add matched
+          lastIndex = end + 1
         }
-
-        return text
+        highlightedText += text.slice(lastIndex) // continuing add exsists
+        return highlightedText
       }
+      return text
+    }
 
-      function generateSearchList(results: any[]) {
-        return results
-          .map((r) => {
-            const { data, slug } = r.item
-            const hlTitle = hlText(data.title, r.matches, 'data.title')
-            const hlDesc = hlText(data.description, r.matches, 'data.description')
-            return `<a href="/blog/${slug}" class='text-muted-foreground hover:text-muted-foreground'>
+    // Generate the search results list
+    generateSearchList(results: any[]) {
+      return results
+        .map((r) => {
+          const { data, slug } = r.item
+          const hlTitle = this.hlText(data.title, r.matches, 'data.title')
+          const hlDesc = this.hlText(data.description, r.matches, 'data.description')
+          return `<a href="/blog/${slug}" class='text-muted-foreground hover:text-muted-foreground'>
                 <li class='group py-2 sm:py-3 px-3 sm:px-5 flex flex-col gap-y-2 border rounded-xl transition-colors hover:bg-primary-foreground'>
                   <h2 class='text-base text-foreground group-hover:text-primary transition-colors'>${hlTitle}</h2>
                   <p class='text-sm'>${hlDesc}</p>
@@ -92,20 +94,28 @@ const { class: className } = Astro.props
                   </div>
                 </li>
               </a>`
-          })
-          .join('')
-      }
+        })
+        .join('')
+    }
 
-      function fetchSearchResults(fuse: any, search: string) {
-        const searchResult = fuse.search(search)
+    // Fetch search results
+    fetchSearchResults(fuse: Fuse<unknown>, search: string) {
+      const searchResult = fuse.search(search)
 
-        searchReadout.textContent = search ? `Search results for “${search}”` : ''
-        resultsList.innerHTML =
-          searchResult.length > 0
-            ? generateSearchList(searchResult)
-            : '<p class="text-center py-12">No results found…</p>'
-      }
+      this.searchReadout.textContent = search ? `Search results for “${search}”` : ''
+      this.resultsList.innerHTML =
+        searchResult.length > 0
+          ? this.generateSearchList(searchResult)
+          : '<p class="text-center py-12">No results found…</p>'
+    }
 
+    connectedCallback() {
+      // Selectors
+      const search = document.querySelector('#search') as HTMLInputElement
+      this.searchReadout = document.querySelector('#searchReadout') as HTMLElement
+      this.resultsList = document.querySelector('#searchResults') as HTMLElement
+
+      // Fetch posts and initialize Fuse
       ;(async () => {
         try {
           const posts = await getAllPosts()
@@ -116,22 +126,24 @@ const { class: className } = Astro.props
             threshold: 0.4
           })
 
-          const urlParams = DOMPurify.sanitize(
+          const urlParams = this.sanitize(
             new URLSearchParams(window.location.search).get('q') ?? ''
           )
           if (urlParams) {
-            search.innerText = urlParams
-            fetchSearchResults(fuse, urlParams)
+            search.value = urlParams
+            this.fetchSearchResults(fuse, urlParams)
           }
           search.focus()
 
           // event listeners
           search.addEventListener('input', () => {
-            const searchTerm = DOMPurify.sanitize(search.value)
-            fetchSearchResults(fuse, searchTerm)
-            updateSearchPageURL(searchTerm)
+            const searchTerm = this.sanitize(search.value)
+            this.fetchSearchResults(fuse, searchTerm)
+            this.updateSearchPageURL(searchTerm)
           })
-        } catch (e) {}
+        } catch (e) {
+          console.error('Error fetching posts:', e)
+        }
       })()
     }
   }
