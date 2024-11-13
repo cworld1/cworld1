@@ -24,7 +24,6 @@ const typographyConfig = {
         margin: '0 auto'
       },
       table: {
-        tableLayout: 'fixed !important',
         width: '100%'
       },
       blockquote: {
