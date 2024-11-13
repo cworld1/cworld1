@@ -17,7 +17,7 @@ import icon from 'astro-icon'
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import rehypeExternalLinks from 'rehype-external-links'
 import { siteConfig } from './src/site.config.ts'
-import { addCopyButton, addLanguage } from './src/utils/shiki.ts'
+import { addCopyButton, addTitle, addLanguage, updateStyle } from './src/utils/shiki.ts'
 
 // https://astro.build/config
 export default defineConfig({
@@ -84,7 +84,7 @@ export default defineConfig({
         light: 'github-light',
         dark: 'github-dark'
       },
-      transformers: [addLanguage(), addCopyButton(2000)]
+      transformers: [updateStyle(), addTitle(), addLanguage(), addCopyButton(2000)]
     }
   }
 })

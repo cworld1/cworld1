@@ -29,21 +29,28 @@ html.dark {
 }
 
 /* Shiki */
-& .astro-code {
-  background-color: hsl(var(--primary-foreground)) !important;
+.astro-code {
+  background-color: transparent !important;
+  & pre {
+    background-color: hsl(var(--primary-foreground));
+    margin: 0 !important;
+  }
 }
 .dark {
-  & .astro-code,
-  & .astro-code span {
+  .astro-code pre,
+  .astro-code pre span {
     color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
+    background-color: var(--shiki-dark-bg);
   }
 }
 /* Shiki transformer */
-pre:has(code) {
+.astro-code:has(code) {
   position: relative;
 }
-pre button.copy {
+.astro-code:has(div.title) pre {
+  padding-top: 2.25rem;
+}
+.astro-code button.copy {
   & .success::before {
     content: 'Copied!';
     position: absolute;
@@ -71,7 +78,7 @@ pre button.copy {
     }
   }
 }
-pre:hover {
+.astro-code:hover {
   button.copy {
     opacity: 1;
   }
