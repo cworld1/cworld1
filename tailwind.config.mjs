@@ -3,17 +3,48 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 const typographyConfig = {
   DEFAULT: {
     css: {
+      h2: {
+        '&:target::before': {
+          display: 'inline-block',
+          content: '"#"',
+          marginInlineStart: '-30px',
+          width: '30px'
+        }
+      },
+      h3: {
+        '&:target::before': {
+          display: 'inline-block',
+          content: '"#"',
+          marginInlineStart: '-30px',
+          width: '30px'
+        }
+      },
       img: {
-        borderRadius: 'var(--radius)'
+        borderRadius: 'var(--radius)',
+        margin: '0 auto'
       },
       table: {
         tableLayout: 'fixed !important',
         width: '100%'
       },
       blockquote: {
+        position: 'relative',
+        overflow: 'hidden',
         borderWidth: '0.1rem',
-        borderRadius: '0.5rem',
-        paddingInline: '1.4rem 0 !important',
+        borderRadius: 'var(--radius)',
+        paddingInlineStart: '1.6rem !important',
+        paddingInlineEnd: '1.6rem !important',
+        '&::after': {
+          position: 'absolute',
+          content: '"”"',
+          top: '-5.4rem',
+          right: '-1.4rem',
+          fontSize: '10rem',
+          fontFamily:
+            '"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif',
+          transform: 'rotate(-15deg)',
+          opacity: '5%'
+        },
         p: {
           '&:first-of-type:before, &:first-of-type:after': {
             display: 'none'
@@ -29,10 +60,7 @@ const config = {
   darkMode: ['class'],
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   safelist: ['dark'],
-  corePlugins: {
-    aspectRatio: false
-  },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
+  plugins: [require('@tailwindcss/typography')],
 
   theme: {
     container: {
