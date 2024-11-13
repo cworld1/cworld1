@@ -11,7 +11,7 @@ import Hitokoto from '@/components/home/Hitokoto.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 import Button from '@/components/Button.astro'
 import { siteConfig } from '@/site-config'
-import { getAllPosts, sortMDByDate } from '@/utils'
+import { getAllCollections, sortMDByDate } from '@/utils'
 
 import avatar from '@/assets/avatar.png'
 
@@ -50,7 +50,7 @@ const backend = ['Flask', 'Nginx', 'NextJS']
 const others = ['Qt', 'PyQt', 'Qml', 'Android', 'Unity', 'Jinja']
 
 const MAX_POSTS = 10
-const allPosts = await getAllPosts()
+const allPosts = await getAllCollections()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 

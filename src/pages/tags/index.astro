@@ -1,9 +1,9 @@
 ---
 import Button from '@/components/Button.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
-import { cn, getAllPosts, getUniqueTagsWithCount } from '@/utils'
+import { cn, getAllCollections, getUniqueTagsWithCount } from '@/utils'
 
-const allPosts = await getAllPosts()
+const allPosts = await getAllCollections()
 const allTags = getUniqueTagsWithCount(allPosts)
 
 const meta = {

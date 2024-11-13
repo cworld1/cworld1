@@ -32,7 +32,7 @@ const { class: className } = Astro.props
 
 <script>
   import Fuse from 'fuse.js'
-  import { getAllPosts } from '@/utils'
+  import { getAllCollections } from '@/utils'
 
   class SearchComponent extends HTMLElement {
     searchReadout!: HTMLElement
@@ -118,7 +118,7 @@ const { class: className } = Astro.props
       // Fetch posts and initialize Fuse
       ;(async () => {
         try {
-          const posts = await getAllPosts()
+          const posts = await getAllCollections()
           const fuse = new Fuse(posts, {
             keys: ['slug', 'data.title', 'data.description', 'data.tags'],
             includeMatches: true,

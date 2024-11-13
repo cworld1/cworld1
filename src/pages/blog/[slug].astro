@@ -2,11 +2,11 @@
 export const prerender = true
 
 import PostLayout from '@/layouts/BlogPost.astro'
-import { getAllPosts } from '@/utils'
+import { getAllCollections } from '@/utils'
 import { type CollectionEntry } from 'astro:content'
 
 export async function getStaticPaths() {
-  const posts = await getAllPosts()
+  const posts = await getAllCollections()
   return posts.map((post: CollectionEntry<'post'>) => ({
     params: { slug: post.slug },
     props: post

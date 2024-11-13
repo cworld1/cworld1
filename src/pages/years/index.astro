@@ -4,9 +4,9 @@ export const prerender = true
 import Button from '@/components/Button.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
-import { getAllPosts, groupAllPostsByYear, sortMDByDate } from '@/utils'
+import { getAllCollections, groupAllPostsByYear, sortMDByDate } from '@/utils'
 
-const allPosts = await getAllPosts()
+const allPosts = await getAllCollections()
 const allPostsByDate = sortMDByDate(allPosts)
 const allPostsByYear = groupAllPostsByYear(allPostsByDate)
 

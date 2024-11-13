@@ -8,11 +8,11 @@ import Pagination from '@/components/blog/Paginator.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import Button from '@/components/Button.astro'
-import { getAllPosts, getUniqueTags, sortMDByDate } from '@/utils'
+import { getAllCollections, getUniqueTags, sortMDByDate } from '@/utils'
 import { siteConfig } from '@/site-config'
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-  const allPosts = await getAllPosts()
+  const allPosts = await getAllCollections()
   const allPostsByDate = sortMDByDate(allPosts)
   const uniqueTags = getUniqueTags(allPostsByDate)
 

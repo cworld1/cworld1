@@ -4,7 +4,7 @@ import { getImage } from 'astro:assets'
 import rss from '@astrojs/rss'
 
 import { siteConfig } from '@/site-config'
-import { getAllPosts, sortMDByDate } from '@/utils'
+import { getAllCollections, sortMDByDate } from '@/utils'
 
 import rehypeStringify from 'rehype-stringify'
 import remarkParse from 'remark-parse'
@@ -55,7 +55,7 @@ const renderContent = async (post: CollectionEntry<'post'>, site: URL) => {
 }
 
 const GET = async (context: AstroGlobal) => {
-  const allPostsByDate = sortMDByDate(await getAllPosts())
+  const allPostsByDate = sortMDByDate(await getAllCollections())
   const siteUrl = context.site ?? new URL(import.meta.env.SITE)
 
   return rss({

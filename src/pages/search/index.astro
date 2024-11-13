@@ -4,9 +4,9 @@ export const prerender = true
 import Button from '@/components/Button.astro'
 import Search from '@/components/search/Search.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
-import { getAllPosts } from '@/utils'
+import { getAllCollections } from '@/utils'
 
-const allPosts = await getAllPosts()
+const allPosts = await getAllCollections()
 
 const meta = {
   description: 'Search relative posts of the whole blog',

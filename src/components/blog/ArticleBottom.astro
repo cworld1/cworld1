@@ -1,5 +1,5 @@
 ---
-import { cn } from '@/utils'
+import { cn, getAllCollections } from '@/utils'
 import { type CollectionEntry, getCollection } from 'astro:content'
 
 type Props = {
@@ -12,7 +12,7 @@ const { content, class: className } = Astro.props
 const { collection } = content
 
 // Get the next and prev entries (modulo to wrap index)
-const items = (await getCollection(collection))
+const items = ((await getAllCollections(collection)) as CollectionEntry<typeof collection>[])
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
 const index = items.findIndex((x) => x.slug === content.slug)
