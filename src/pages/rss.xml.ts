@@ -19,6 +19,7 @@ const imagesGlob = import.meta.glob<{ default: ImageMetadata }>(
 )
 
 const renderContent = async (post: CollectionEntry<'post'>, site: URL) => {
+  // Replace image links with the correct path
   function remarkReplaceImageLink() {
     /**
      * @param {Root} tree
@@ -71,10 +72,8 @@ const GET = async (context: AstroGlobal) => {
       allPostsByDate.map(async (post) => ({
         pubDate: post.data.publishDate,
         link: `/blog/${post.slug}`,
-        customData: `
-                <h:img src="${typeof post.data.coverImage?.src === 'string' ? post.data.coverImage?.src : post.data.coverImage?.src.src}" />
-                <enclosure url="${typeof post.data.coverImage?.src === 'string' ? post.data.coverImage?.src : post.data.coverImage?.src.src}" />
-            `,
+        customData: `<h:img src="${typeof post.data.heroImage?.src === 'string' ? post.data.heroImage?.src : post.data.heroImage?.src.src}" />
+          <enclosure url="${typeof post.data.heroImage?.src === 'string' ? post.data.heroImage?.src : post.data.heroImage?.src.src}" />`,
         content: await renderContent(post, siteUrl),
         ...post.data
       }))
