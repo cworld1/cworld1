@@ -21,7 +21,7 @@ const post = defineCollection({
         .string()
         .optional()
         .transform((str) => (str ? new Date(str) : undefined)),
-      coverImage: z
+      heroImage: z
         .object({
           src: z.union([image(), z.string()]),
           alt: z.string().optional(),
@@ -30,7 +30,6 @@ const post = defineCollection({
         .optional(),
       draft: z.boolean().default(false),
       tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
-      ogImage: z.string().optional(),
       language: z.string().optional()
     })
 })

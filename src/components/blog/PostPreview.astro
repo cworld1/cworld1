@@ -35,16 +35,16 @@ const { remarkPluginFrontmatter } = await render()
     class={cn(
       'group/link w-full flex flex-col transition-all hover:text-primary',
       !detailed && 'sm:flex-row',
-      detailed && data.coverImage && 'max-md:pt-24'
+      detailed && data.heroImage && 'max-md:pt-24'
     )}
     href={`/blog/${slug}`}
     data-astro-prefetch
   >
     {
-      detailed && data.coverImage && (
+      detailed && data.heroImage && (
         <Image
-          src={data.coverImage.src}
-          alt={data.coverImage.alt || data.title}
+          src={data.heroImage.src}
+          alt={data.heroImage.alt || data.title}
           class='cover-image absolute end-0 top-0 z-0 h-2/3 w-full rounded-2xl object-cover opacity-40 transition-opacity duration-300 group-hover/card:opacity-70 md:h-full md:w-3/5'
           loading='eager'
         />
@@ -89,7 +89,7 @@ const { remarkPluginFrontmatter } = await render()
             <p
               class={cn(
                 'line-clamp-2 pt-1 text-sm text-muted-foreground sm:line-clamp-3',
-                data.coverImage && 'sm:me-24'
+                data.heroImage && 'sm:me-24'
               )}
             >
               {data.description}

@@ -1,7 +1,7 @@
 ---
-title: '自制/手搓八木天线记录'
+title: '自制/手搓麦克森八木天线记录'
 description: 'Moxon-Yagi 麦克森 UV 双段卫星八木天线手动制作记录'
-publishDate: '2024-10-013'
+publishDate: '2024-10-13'
 updatedDate: '2024-10-13'
 tags: ['Radio', 'YAGI', 'Antenna']
 ---

@@ -4,7 +4,7 @@ publishDate: 2020-03-22 21:02:06
 description: '迟到一年的文章，本来不准备发出来的，如今发出来，也就算是最后的纪念吧。'
 tags:
   - Coolapk
-coverImage: { src: './thumbnail.jpg', color: '#28B17F' }
+heroImage: { src: './thumbnail.jpg', color: '#28B17F' }
 ---
 
 我们暂且用『载入酷安史册』来形容这 7 天的历史。

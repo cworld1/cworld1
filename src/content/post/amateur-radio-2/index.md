@@ -4,7 +4,7 @@ description: '简单呼中继以外的进阶玩法。因为玩法太多，所以
 publishDate: '2024-10-07'
 updatedDate: '2024-10-11'
 tags: ['Radio', 'HAM']
-coverImage: { src: './thumbnail.jpg', color: '#56C4FF' }
+heroImage: { src: './thumbnail.jpg', color: '#56C4FF' }
 ---
 
 ## 信号调制模式
