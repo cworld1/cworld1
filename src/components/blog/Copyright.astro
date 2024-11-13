@@ -33,23 +33,23 @@ const {
   <!-- common info -->
   <div class='flex flex-row flex-wrap justify-start gap-x-5 gap-y-1 sm:gap-x-8'>
     <div class='flex gap-x-2 sm:flex-col'>
-      <span class='text-foreground'>Author</span>
-      <span class='text-sm max-sm:place-self-center'>{siteConfig.author}</span>
+      <span>Author</span>
+      <span class='text-sm text-foreground max-sm:place-self-center'>{siteConfig.author}</span>
     </div>
     <div class='flex gap-x-2 sm:min-w-16 sm:flex-col'>
-      <span class='text-foreground'>Update date</span>
-      <span class='text-sm max-sm:place-self-center'
+      <span>Published at</span>
+      <span class='text-sm text-foreground max-sm:place-self-center'
         >{
-          getFormattedDate(data.updatedDate ? data.updatedDate : data.publishDate, {
+          getFormattedDate(data.publishDate, {
             month: 'long'
           })
         }</span
       >
     </div>
     <div class='flex gap-x-2 sm:flex-col'>
-      <span class='text-foreground'>Copyright</span>
+      <span>Copyright</span>
       <a
-        class='text-sm text-muted-foreground max-sm:place-self-center'
+        class='text-sm text-foreground max-sm:place-self-center'
         href='https://creativecommons.org/licenses/by/4.0/'
         target='_blank'
       >
