@@ -49,8 +49,7 @@ const headings = [
       src='https://ghchart.rshah.org/659eb9/cworld1'
       alt='github activities'
       inferSize
-      loading='eager'
-      decoding='async'
+      loading='lazy'
     />
   </p>
   <p>
@@ -398,7 +397,7 @@ const headings = [
             </svg>
           </div>
           <Image
-            class='mx-auto my-0 max-w-72 opacity-30 blur-sm transition-opacity group-hover:opacity-100 group-hover:blur-none'
+            class='mx-auto my-0 max-w-60 opacity-30 blur-sm transition-opacity group-hover:opacity-100 group-hover:blur-none'
             src={item.image}
             alt={item.name}
             loading='lazy'

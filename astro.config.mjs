@@ -26,6 +26,8 @@ export default defineConfig({
   // base: '/docs',
   trailingSlash: 'never',
   output: 'server',
+
+  // Adapter
   adapter: vercel({
     webAnalytics: {
       enabled: true
@@ -36,6 +38,14 @@ export default defineConfig({
   // adapter: node({
   //   mode: 'standalone'
   // }),
+
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    },
+    domains: ['astro.build']
+  },
+
   integrations: [
     tailwind({ applyBaseStyles: false }),
     sitemap(),
