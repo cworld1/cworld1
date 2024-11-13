@@ -58,8 +58,12 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
           <div class='flex items-center gap-1'>
             <span> / </span>
             <span>
-              Updated:
-              <FormattedDate date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
+              Update
+              <FormattedDate
+                class='font-sans'
+                date={data.updatedDate}
+                dateTimeOptions={dateTimeOptions}
+              />
             </span>
           </div>
         )
