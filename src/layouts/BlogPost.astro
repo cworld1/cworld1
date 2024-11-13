@@ -11,12 +11,14 @@ import Button from '@/components/Button.astro'
 import BackToTop from '@/components/pages/BackToTop.astro'
 
 import '@waline/client/style'
+import type { MarkdownHeading } from 'astro'
 
 interface Props {
   post: CollectionEntry<'post'>
+  headings: MarkdownHeading[]
 }
 
-const { post } = Astro.props
+const { post, headings } = Astro.props
 const {
   data: { description, ogImage, heroImage, publishDate, title, updatedDate }
 } = post
