@@ -51,7 +51,7 @@ ADIF（Amateur Data Interchange Format，[官网](https://adif.org/)）是一种
     height='320'
     scrolling='yes'
     src='https://logbook.qrz.com/lbstat/BH8GHG/'
-    width='640'
+    width='600'
     style='border-radius:10px'
   ></iframe>
 </div>

@@ -20,15 +20,13 @@ interface Props {
 
 const { post, headings } = Astro.props
 const {
-  data: { description, ogImage, heroImage, publishDate, title, updatedDate }
+  data: { description, heroImage, publishDate, title, updatedDate }
 } = post
-const socialImage =
-  ogImage ??
-  (heroImage
-    ? typeof heroImage.src === 'string'
-      ? heroImage.src
-      : heroImage.src.src
-    : '/images/social-card.png')
+const socialImage = heroImage
+  ? typeof heroImage.src === 'string'
+    ? heroImage.src
+    : heroImage.src.src
+  : '/images/social-card.png'
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString()
 const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--tw-text-opacity))'
 ---
