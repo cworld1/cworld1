@@ -13,22 +13,22 @@ Checkout <a href="https://cworld0.com/" target="_blank">𝑪𝑾𝒐𝒓𝒍𝒅
 
 ### Languages
 
-[![Lans](https://skillicons.dev/icons?i=r,go,php,lua,rust,matlab,unity,java,html,css,js,ts,py,powershell,bash,kotlin,c,cpp,cs&perline=13)](https://skillicons.dev)
+[![Lans](https://skillicons.dev/icons?i=r,go,php,lua,rust,matlab,unity,java,html,css,js,ts,py,powershell,bash,kotlin,c,cpp,cs&perline=14&theme=light)](https://skillicons.dev)
 
 ### Frameworks
 
-[![Frameworks](https://skillicons.dev/icons?i=qt,dotnet,astro,deno,react,redux,nextjs,nodejs,vue,pinia,vite,webpack,less,sass,tailwind,bootstrap,spring,opencv,flask,fastapi&perline=13)](https://skillicons.dev)
+[![Frameworks](https://skillicons.dev/icons?i=qt,dotnet,astro,deno,react,redux,nextjs,nodejs,vue,pinia,vite,webpack,less,sass,tailwind,bootstrap,spring,opencv,flask,fastapi&perline=14&theme=light)](https://skillicons.dev)
 
 <details>
 <summary style="cursor: pointer">More details...</summary>
 
 ### Support tools
 
-[![Support tools](https://skillicons.dev/icons?i=nginx,bun,pnpm,cmake,docker,git,mysql,redis,sqlite,workers,postgres,mysql&perline=13)](https://skillicons.dev)
+[![Support tools](https://skillicons.dev/icons?i=nginx,bun,pnpm,cmake,docker,git,mysql,redis,sqlite,workers,postgres,mysql&perline=14&theme=light)](https://skillicons.dev)
 
 ### Softwares & Platforms
 
-[![Softwares](https://skillicons.dev/icons?i=arch,debian,apple,windows,androidstudio,au,ps,pr,cloudflare,netlify,vercel,vscode,neovim,github,gitlab&perline=13)](https://skillicons.dev)
+[![Softwares](https://skillicons.dev/icons?i=arch,debian,apple,windows,androidstudio,au,ps,pr,cloudflare,netlify,vercel,vscode,neovim,github,gitlab&perline=14&theme=light)](https://skillicons.dev)
 
 ### Most used languages
 
