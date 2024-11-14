@@ -34,7 +34,7 @@ export const siteConfig: SiteConfig = {
   },
 
   // Comment system service backend link
-  walineServerUrl: 'https://waline.cworld.top',
+  walineServerUrl: 'https://waline.cworld0.com',
 
   // Link info
   applyFriendTip: {
