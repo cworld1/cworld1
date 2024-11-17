@@ -28,7 +28,7 @@ const { class: className } = Astro.props
           'https://cdn.cbd.int/@waline/emojis@1.2.0/bmoji',
           'https://cdn.cbd.int/@waline/emojis@1.2.0/weibo'
         ],
-        reaction: ['/images/comment-like.png'],
+        reaction: ['/icons/heart-item.svg'],
         // search: false,
         pageview: true,
         comment: true,
@@ -44,21 +44,18 @@ const { class: className } = Astro.props
 </script>
 
 <style>
-  /* 基础配色 */
+  /* Basic theme */
   #waline {
-    /* 字体大小 */
+    /* Font size */
     --waline-font-size: 16px;
-
-    /* 常规颜色 */
+    /* Basic color */
     --waline-white: hsl(var(--background) / var(--tw-bg-opacity));
     --waline-light-grey: #999;
     --waline-dark-grey: #666;
-
-    /* 主题色 */
+    /* Theme color */
     --waline-theme-color: hsl(var(--foreground) / var(--tw-text-opacity));
     --waline-active-color: hsl(var(--primary) / var(--tw-text-opacity));
-
-    /* 布局颜色 */
+    /* Layout */
     --waline-color: hsl(var(--muted-foreground) / var(--tw-text-opacity));
     --waline-bg-color: hsl(var(--primary-foreground) / var(--tw-bg-opacity));
     --waline-bg-color-light: hsl(var(--input) / var(--tw-bg-opacity));
@@ -67,51 +64,74 @@ const { class: className } = Astro.props
     --waline-disable-bg-color: #f8f8f8;
     --waline-disable-color: #bbb;
     --waline-code-bg-color: #282c34;
-
-    /* 特殊颜色 */
+    /* Special */
     --waline-bq-color: #f0f0f0;
-
-    /* 头像 */
+    /* Avatar */
     --waline-avatar-size: 3.25rem;
     --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
-
-    /* 徽章 */
+    /* Badge */
     --waline-badge-color: #3498db;
     --waline-badge-font-size: 0.775em;
-
-    /* 信息 */
+    /* Info */
     --waline-info-bg-color: var(--waline-bg-color-light);
     --waline-info-color: var(--waline-color);
     --waline-info-font-size: 0.625em;
-
-    /* 渲染选择 */
+    /* Render selection */
     --waline-border: 1px solid var(--waline-border-color);
     --waline-avatar-radius: 50%;
     --waline-box-shadow: none;
   }
 
-  /* reaction buttons */
-  #waline :global(.wl-reaction-title) {
-    display: none !important;
+  /* Reaction buttons */
+  #waline :global(.wl-reaction-title, .wl-reaction-text) {
+    display: none;
   }
   #waline :global(.wl-reaction) {
     overflow: visible;
+    margin-bottom: 0.5em;
+  }
+  #waline :global(.wl-reaction-img) {
+    width: auto;
+    display: flex;
+    height: 35px;
+    align-items: center;
+    column-gap: 0.4rem;
+  }
+  #waline :global(.wl-reaction-votes) {
+    position: inherit;
+    top: inherit;
+    min-width: inherit;
+    inset-inline-end: inherit;
+    display: flex;
+    font-weight: normal;
+    border: none;
+    background: none;
+    color: inherit;
+    padding: 0.2rem 0.4rem;
+    border-radius: 6px;
+  }
+  #waline :global(.wl-reaction-loading) {
+    position: inherit;
+    top: inherit;
+    min-width: inherit;
+  }
+  #waline :global(.wl-reaction-item.active .wl-reaction-votes) {
+    background: var(--waline-theme-color);
+    color: var(--waline-bg-color);
   }
 
-  #waline :global(blockquote) {
-    position: relative;
-    border-inline-start: 4px solid transparent !important;
-    background:;
+  #waline :global(.wl-reaction-votes:after) {
+    margin-left: 0.25em;
+    content: 'Like(s)';
+    display: inline-block;
+    clear: both;
+    border: 0;
   }
-  #waline :global(blockquote)::before {
-    content: '';
-    height: 100%;
-    width: 4px;
-    left: -4px;
-    top: 0;
-    position: absolute;
-    border: 2px solid var(--waline-bq-color) !important;
-    border-radius: 9999px;
+  #waline :global(.wl-reaction img) {
+    filter: invert(25%);
+  }
+  :global(.dark) #waline :global(.wl-reaction img) {
+    filter: invert(75%);
   }
 
   @media (max-width: 640px) {
