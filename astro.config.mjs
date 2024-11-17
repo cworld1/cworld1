@@ -1,4 +1,3 @@
-// @ts-check
 import { defineConfig } from 'astro/config'
 
 // Adapter
@@ -33,17 +32,17 @@ export default defineConfig({
       enabled: true
     }
   }),
-  // ---
   // if you want deploy locally
   // adapter: node({
   //   mode: 'standalone'
   // }),
+  // ---
 
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp'
     },
-    domains: ['astro.build']
+    domains: ['ghchart.rshah.org']
   },
 
   integrations: [
