@@ -12,14 +12,14 @@ const allPostsByYear = groupAllPostsByYear(allPostsByDate)
 
 const meta = {
   description: 'A list of all the years of creating my posts',
-  title: 'All Years'
+  title: 'Archives'
 }
 ---
 
 <PageLayout meta={meta}>
   <div class='w-full'>
     <Button title='Back' href='/blog' style='back' />
-    <h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Posts by Years</h1>
+    <h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Archives</h1>
 
     {allPosts.length === 0 && <p>No posts yet.</p>}
 
@@ -27,11 +27,14 @@ const meta = {
       allPostsByYear.map(([year, posts]) => (
         <div class='animate relative mt-20'>
           <h2
-            class='absolute -start-6 -top-20 z-0 text-9xl font-bold text-transparent opacity-10'
+            class='absolute -start-6 -top-16 z-0 text-9xl font-bold text-transparent opacity-10'
             style='-webkit-text-stroke-width:2px;-webkit-text-stroke-color:hsl(var(--foreground)/var(--tw-text-opacity))'
           >
             <samp>{year}</samp>
           </h2>
+          <p class='px-5 text-muted-foreground'>
+            {posts.length} post{posts.length > 1 && 's'}
+          </p>
           <ul class='flex flex-col text-start'>
             {posts.map((p) => (
               <PostPreview post={p} class='border-0 bg-transparent py-2 hover:bg-transparent' />
