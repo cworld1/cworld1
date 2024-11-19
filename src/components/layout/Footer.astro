@@ -31,17 +31,23 @@ const year = new Date().getFullYear()
             </a>
           )
         }
-        <script is:inline src='https://vercount.cworld.top/js'></script>
-        <p>
+        <div class='text-muted-foreground [&_a]:text-foreground'>
           ©{year}
-          <a href='https://github.com/cworld1/cworld1' target='_blank'>CWorld</a>.
+          <a href={socialLinks[0]?.url} target='_blank'>{siteConfig.author}</a> |
+          <a href='https://github.com/withastro/astro' target='_blank'>Astro</a>
+          &
+          <a href='https://github.com/cworld1/astro-theme-pure' target='_blank'>Pure</a> theme powered
+        </div>
+
+        {/* Vercount */}
+        <script is:inline src='https://vercount.cworld.top/js'></script>
+        <div>
           <span id='busuanzi_value_site_pv'>Loading</span> visits
-        </p>
+        </div>
       </div>
 
       <div class='flex items-center justify-between'>
-        <!-- Social Brands -->
-        <!-- https://icones.js.org/collection/mingcute -->
+        {/* Social Brands */}
         <div class='flex items-center gap-x-4'>
           {
             socialLinks.map((platform) => (
@@ -56,7 +62,7 @@ const year = new Date().getFullYear()
               </a>
             ))
           }
-          <!-- Rss -->
+          {/* Rss */}
           <a
             class='inline-block text-muted-foreground transition-all hover:text-muted-foreground/75'
             href='/rss.xml'
@@ -66,7 +72,6 @@ const year = new Date().getFullYear()
               <use href='/icons/social.svg#mingcute-rss-2-line'></use>
             </svg>
           </a>
-          <!-- End Social Brands -->
         </div>
       </div>
     </div>

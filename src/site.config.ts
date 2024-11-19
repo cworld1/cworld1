@@ -47,21 +47,22 @@ export const siteConfig: SiteConfig = {
 
 // Will be used in Footer.astro
 export const socialLinks: SocialLinks = [
-  // {
-  //   name: 'mail',
-  //   url: 'mailto:test@example.com'
-  // },
+  // First link will be used as the site's default social link
   {
-    name: 'coolapk',
-    url: 'http://www.coolapk.com/u/1384771'
+    name: 'github',
+    url: 'https://github.com/cworld1'
+  },
+  {
+    name: 'mail',
+    url: 'mailto:cworldo@qq.com'
   },
   {
     name: 'telegram',
     url: 'https://t.me/cworld0_cn'
   },
   {
-    name: 'github',
-    url: 'https://github.com/cworld1'
+    name: 'coolapk',
+    url: 'http://www.coolapk.com/u/1384771'
   }
 ]
 
