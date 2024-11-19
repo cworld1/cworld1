@@ -2,7 +2,7 @@
   "friends": [
     {
       "id_name": "cf-links",
-      "desc": "列入友链朋友圈的好友",
+      "desc": "Common links included in circle friends",
       "link_list": [
         {
           "name": "CyanFalse's Weblog",
@@ -21,8 +21,8 @@
         {
           "name": "喵二の小博客",
           "intro": "缘，妙不可言",
-          "link": "https://www.miaoer.xyz/",
-          "avatar": "https://www.miaoer.xyz/avatar.webp",
+          "link": "https://www.miaoer.net/",
+          "avatar": "https://static.miaoer.net/logo/avatar.webp",
           "status": "old"
         },
         {
@@ -100,7 +100,7 @@
           "avatar": "https://q3.qlogo.cn/g?b=sdk&k=UeVu6eVo5SdL2Eu7PiczvTw&s=640"
         },
         {
-          "name": "KD 的网络小屋",
+          "name": "KINDYEAR",
           "intro": "技施于手，道养于心",
           "link": "https://www.kindyear.cn/",
           "avatar": "https://cravatar.cn/avatar/d4dafb023c76824a3bf05566cc322af1?s=169"
@@ -154,20 +154,6 @@
           "avatar": "https://cdn.arthals.ink/Arthals.png"
         },
         {
-          "name": "L1nSn0w’s Site",
-          "intro": "无限进步.🎈",
-          "link": "https://linsnow.cn/",
-          "avatar": "https://cravatar.cn/avatar/9702b0e102b4524329aca1d057d3b65e?d=retro",
-          "status": "unverified"
-        },
-        {
-          "name": "HamCQ 社区",
-          "intro": "业余无线电爱好者社区",
-          "link": "https://forum.hamcq.cn/",
-          "avatar": "https://forum.hamcq.cn/assets/avatars/f4HJalvYcIsdJdNZ.png",
-          "status": "unverified"
-        },
-        {
           "name": "Ordis",
           "intro": "船到桥头自然直，柳暗花明又一村",
           "link": "https://imbhj.com/",
@@ -196,12 +182,64 @@
           "intro": "蓝天依旧，明眸如初",
           "link": "https://www.zywvvd.com/",
           "avatar": "https://www.zywvvd.com/image/avatar.png"
+        },
+        {
+          "name": "Bore's Notes",
+          "intro": "博观而约取，厚积而薄发",
+          "link": "https://bore.vip/",
+          "avatar": "https://bore.vip/img/avatar.jpg"
+        },
+        {
+          "name": "Fomalhaut🥝",
+          "intro": "Future is now 🍭🍭🍭",
+          "link": "https://www.fomal.cc/",
+          "avatar": "https://www.fomal.cc/assets/avatar.webp",
+          "status": "unverified"
+        },
+        {
+          "name": "Tianli",
+          "intro": "自知之明是最可贵的知识！",
+          "link": "https://blog.tianli0.top/",
+          "avatar": "https://q2.qlogo.cn/headimg_dl?dst_uin=507249007&spec=640",
+          "status": "unverified"
+        },
+        {
+          "name": "梦爱吃鱼",
+          "intro": "但愿日子清静抬头遇见的满是柔情",
+          "link": "https://blog.bsgun.cn/",
+          "avatar": "https://oss-cdn.bsgun.cn/logo/avatar.256.png"
+        },
+        {
+          "name": "青桔气球",
+          "intro": "分享网络安全与科技生活",
+          "link": "https://blog.qjqq.cn/",
+          "avatar": "https://q2.qlogo.cn/headimg_dl?dst_uin=1645253&spec=640",
+          "status": "unverified"
+        },
+        {
+          "name": "無名小栈",
+          "intro": "分享技术与科技生活",
+          "link": "https://blog.imsyy.top/",
+          "avatar": "https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png"
+        },
+        {
+          "name": "FloatSheep",
+          "intro": "On the other side of obstacles",
+          "link": "https://blog.hesiy.cn/",
+          "avatar": "https://registry.npmmirror.com/@floatsheep/fsl-fim/1.0.23/files/avatar%202024.main.webp",
+          "status": "unverified"
+        },
+        {
+          "name": "清羽飞扬",
+          "intro": "柳影曳曳，清酒孤灯，扬笔撒墨，心境如霜",
+          "link": "https://blog.liushen.fun/",
+          "avatar": "https://blog.liushen.fun/info/avatar.ico"
         }
       ]
     },
     {
       "id_name": "inactive-links",
-      "desc": "不太活跃的好友",
+      "desc": "Inactive or rule-breaking friends",
       "link_list": [
         {
           "name": "hiCasper",
@@ -217,29 +255,24 @@
           "status": "unverified"
         },
         {
-          "name": "Bore's Notes",
-          "intro": "博观而约取，厚积而薄发",
-          "link": "https://bore.vip/",
-          "avatar": "https://bore.vip/img/avatar.jpg"
-        },
-        {
-          "name": "颢天",
-          "intro": "无限进步！",
-          "link": "https://www.zouht.com/",
-          "avatar": "https://assets.zouht.com/img/icon/chriskim-text-64x.png",
+          "name": "HamCQ 社区",
+          "intro": "业余无线电爱好者社区",
+          "link": "https://forum.hamcq.cn/",
+          "avatar": "https://forum.hamcq.cn/assets/avatars/f4HJalvYcIsdJdNZ.png",
           "status": "unverified"
         },
         {
-          "name": "lee’s blog",
-          "intro": "内心丰盈者，独行也如众",
-          "link": "https://happylee.cn/",
-          "avatar": "https://happylee.cn/img/avatar.jpg"
+          "name": "L1nSn0w’s Site",
+          "intro": "无限进步.🎈",
+          "link": "https://linsnow.cn/",
+          "avatar": "https://cravatar.cn/avatar/9702b0e102b4524329aca1d057d3b65e?d=retro",
+          "status": "unverified"
         }
       ]
     },
     {
       "id_name": "special-links",
-      "desc": "其他特殊链接",
+      "desc": "Other special links",
       "link_list": [
         {
           "name": "米坛",
@@ -251,13 +284,14 @@
           "name": "Lythriel Gallery",
           "intro": "A website for sharing photography works",
           "link": "https://lythriel.cn/",
-          "avatar": "https://q1.qlogo.cn/g?b=qq&amp;nk=1692892052&amp;s=200"
+          "avatar": "https://cravatar.cn/avatar/7c9c38d4bebc764f1034527834f63c7d"
         },
         {
           "name": "十年之约",
           "intro": "本站已签约十年之约",
-          "link": "https://www.foreverblog.cn/",
-          "avatar": "https://avatars.githubusercontent.com/u/39395618?s=200&v=4"
+          "link": "https://foreverblog.cn/blog/2788.html",
+          "avatar": "https://avatars.githubusercontent.com/u/39395618?s=200&v=4",
+          "status": "unverified"
         },
         {
           "name": "虫洞",
@@ -277,6 +311,13 @@
           "link": "https://bf.zzxworld.com/s",
           "avatar": "https://bf.zzxworld.com/images/favicon.png"
         },
+        {
+          "name": "博友圈",
+          "intro": "博客人的朋友圈",
+          "link": "https://www.boyouquan.com/",
+          "avatar": "https://www.boyouquan.com/assets/images/sites/logo/logo-small.png"
+        },
+
         {
           "name": "前端大刘",
           "intro": "记录和分享，每天进步一点点！",
