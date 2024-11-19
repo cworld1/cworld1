@@ -418,8 +418,8 @@ const headings = [
 </PageLayout>
 
 <script is:inline type='module' data-astro-rerun>
-  import { siteConfig } from '@/site-config'
-  import { pageviewCount } from 'https://unpkg.com/@waline/client@v3/dist/pageview.js'
+  import { siteConfig } from '/src/site.config.ts'
+  import { pageviewCount } from 'https://cdn.smartcis.cn/npm/@waline/client@v3/dist/pageview.js'
 
   pageviewCount({
     serverURL: siteConfig.walineServerUrl,
