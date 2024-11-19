@@ -7,7 +7,7 @@ import Comment from '@/components/Comment.astro'
 import { siteConfig } from '@/site-config'
 
 import links from 'public/links.json'
-import '@/assets/styles/links.css'
+import '@/assets/styles/fc.css'
 
 const headings = [
   {
@@ -100,7 +100,17 @@ const friendlist = links.friends
   <FriendList list={friendlist[2]} title='Special Links' />
 
   <h2 id='small-circle'>Small Circle</h2>
-  <div id='hexo-circle-of-friends-root' class='mt-5'></div>
+  <div id='friend-circle-lite-root' class='not-prose'>Loading...</div>
+  <script>
+    import { FriendCircle } from '@/utils/friend-circle'
+    const fc = new FriendCircle()
+    fc.init({
+      private_api_url: 'https://cworld-fc.netlify.app/',
+      page_turning_number: 10,
+      error_img: 'https://cravatar.cn/avatar/57d8260dfb55501c37dde588e7c3852c'
+    })
+    fc.load()
+  </script>
 
   <!-- apply-links -->
   <h2 id='apply-links'>Apply Links</h2>
@@ -125,22 +135,3 @@ const friendlist = links.friends
   </ul>
   <Comment slot='bottom' />
 </PageLayout>
-
-<script is:inline>
-  let UserConfig = {
-    // 填写你的api地址
-    private_api_url: 'https://links.cworld.top/',
-    // 初始加载几篇文章
-    page_init_number: 10,
-    // 点击加载更多时，一次最多加载几篇文章，默认10
-    page_turning_number: 10,
-    // 头像加载失败时，默认头像地址
-    error_img: 'https://cravatar.cn/avatar/57d8260dfb55501c37dde588e7c3852c',
-    // 进入页面时第一次的排序规则
-    sort_rule: 'created',
-    // 本地文章缓存数据过期时间（天）
-    expire_days: 1
-  }
-  UserConfig = { ...UserConfig } // 这行只是为了让TypeScript不报错
-</script>
-<script src='https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.13/dist/fcircle.min.js'></script>
