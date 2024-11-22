@@ -1,11 +1,11 @@
 export { cn } from './tailwind'
 export {
   getAllCollections,
-  groupAllPostsByYear,
+  groupCollectionsByYear,
   sortMDByDate,
   getUniqueTags,
   getUniqueTagsWithCount
-} from './post'
+} from './collections'
 export { getFormattedDate } from './date'
 export { generateToc } from './generateToc'
 export type { TocItem } from './generateToc'
