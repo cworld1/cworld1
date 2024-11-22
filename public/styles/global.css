@@ -7,25 +7,36 @@ html.dark {
 }
 
 /* Animation */
-.animate {
-  opacity: 0.05;
-  transform: translateY(15px);
-  transition:
-    opacity 0.15s ease-in-out,
-    transform 0.15s ease-in-out;
+@keyframes fade-in-up {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-.animate.show {
-  opacity: 1;
-  transform: translateY(0);
+.animate {
+  opacity: 0;
+  animation: 300ms fade-in-up;
+  animation-fill-mode: forwards;
 }
 @media (prefers-reduced-motion) {
   .animate {
-    opacity: 0.5;
-    transform: translateY(5px);
-    transition:
-      opacity 0.1s ease,
-      transform 0.1s ease;
+    opacity: 0;
+    animation: 100ms fade-in-up;
+    animation-fill-mode: forwards;
   }
+}
+#navbar {
+  animation-delay: 0ms;
+}
+#header {
+  animation-delay: 50ms;
+}
+#sidebar {
+  animation-delay: 100ms;
 }
 
 /* Shiki */

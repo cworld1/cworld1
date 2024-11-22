@@ -9,12 +9,12 @@ interface Props {
   class?: string
 }
 
-const { headings, class: className } = Astro.props
+const { headings, class: className, ...props } = Astro.props
 
 const toc = generateToc(headings)
 ---
 
-<aside class={className}>
+<aside class={className} id='sidebar' {...props}>
   <toc-heading>
     <h2 class='font-semibold'>TABLE OF CONTENTS</h2>
     <ul class='mt-4 max-h-[70vh] overflow-y-scroll text-card-foreground'>

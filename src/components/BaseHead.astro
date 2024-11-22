@@ -91,26 +91,6 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 {/* Styles */}
 <link rel='stylesheet' href='/styles/global.css' />
 
-{/* Transitions */}
-<script>
-  import type { TransitionBeforeSwapEvent } from 'astro:transitions/client'
-  document.addEventListener('astro:before-swap', (e) =>
-    [
-      ...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll('link[as="font"]')
-    ].forEach((link) => link.remove())
-  )
-
-  function animate() {
-    document.querySelectorAll('.animate').forEach((el, i) => {
-      setTimeout(() => {
-        el.classList.add('show')
-      }, i * 90)
-    })
-  }
-  document.addEventListener('DOMContentLoaded', animate)
-  document.addEventListener('astro:after-swap', animate)
-</script>
-
 {/* Vercel speed insights */}
 {isProd && <SpeedInsights />}
 

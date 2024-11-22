@@ -55,8 +55,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
 <PageLayout meta={{ title: 'Home' }} highlightColor='#659EB966'>
-  <div class='flex w-full flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
-    <section class='animate flex flex-col items-center gap-y-7'>
+  <div class='w-full'>
+    <section class='animate mb-10 flex flex-col items-center gap-y-7' id='header'>
       <Image
         src={avatar}
         alt='profile'
@@ -81,31 +81,32 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       </div>
     </section>
 
-    <Section title='About'>
-      <p class='text-muted-foreground'>Developer / Designer</p>
-      <p class='text-muted-foreground'>
-        Full-time undergraduate student of Computer Science. Slightly accomplished in researching
-        big data, front-end development and neural network learning.
-      </p>
-      <Button title='More about me' class='w-fit self-end' href='/about' style='ahead' />
-    </Section>
-    {
-      allPostsByDate.length > 0 && (
-        <Section title='Posts'>
-          <ul class='flex flex-col gap-y-1.5 sm:gap-y-2'>
-            {allPostsByDate.map((p) => (
-              <li class='flex flex-col gap-x-2 sm:flex-row'>
-                <PostPreview post={p} />
-              </li>
-            ))}
-          </ul>
-          <Button title='More posts' class='w-fit self-end' href='/blog' style='ahead' />
-        </Section>
-      )
-    }
+    <div id='content' class='flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
+      <Section title='About'>
+        <p class='text-muted-foreground'>Developer / Designer</p>
+        <p class='text-muted-foreground'>
+          Full-time undergraduate student of Computer Science. Slightly accomplished in researching
+          big data, front-end development and neural network learning.
+        </p>
+        <Button title='More about me' class='w-fit self-end' href='/about' style='ahead' />
+      </Section>
+      {
+        allPostsByDate.length > 0 && (
+          <Section title='Posts'>
+            <ul class='flex flex-col gap-y-1.5 sm:gap-y-2'>
+              {allPostsByDate.map((p) => (
+                <li class='flex flex-col gap-x-2 sm:flex-row'>
+                  <PostPreview post={p} />
+                </li>
+              ))}
+            </ul>
+            <Button title='More posts' class='w-fit self-end' href='/blog' style='ahead' />
+          </Section>
+        )
+      }
 
-    {
-      /* <Section title='Experience'>
+      {
+        /* <Section title='Experience'>
       <Card
         heading='Lorem Ipsum'
         subheading='Sit amet consectetur'
@@ -132,72 +133,73 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         imageClass='h-12 w-auto md:-start-16'
       />
     </Section> */
-    }
-    <Section title='Education'>
-      <Card
-        as='a'
-        heading='Southwestern University'
-        subheading='Full-time undergraduate student'
-        date='August 2021 - July 2025'
-        href='http://swu.edu.cn/'
-      >
-        {
-          /* <ul class='ms-4 list-disc text-muted-foreground'>
+      }
+      <Section title='Education'>
+        <Card
+          as='a'
+          heading='Southwestern University'
+          subheading='Full-time undergraduate student'
+          date='August 2021 - July 2025'
+          href='http://swu.edu.cn/'
+        >
+          {
+            /* <ul class='ms-4 list-disc text-muted-foreground'>
           <li>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
             molestiae laboriosam pariatur!
           </li>
           <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
         </ul> */
-        }
-      </Card>
-    </Section>
+          }
+        </Card>
+      </Section>
 
-    <Section title='Website List'>
-      <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-        <ProjectCard
-          href='https://status.cworld0.com/'
-          heading='Website status'
-          subheading='Record status of CWorld websites'
-          imagePath='/src/assets/projects/status.png'
-        />
-        <ProjectCard
-          href='https://waline.cworld0.com/ui/login'
-          heading='Waline comment system'
-          subheading='Back-end control comment panel'
-          imagePath='/src/assets/projects/waline.png'
-        />
-        <ProjectCard
-          href='https://onedrive.cworld0.com/'
-          heading='Onedrive share'
-          subheading='A share space for onedrive'
-          imagePath='/src/assets/projects/onedrive.png'
-        />
-        <ProjectCard
-          href='/projects'
-          heading='More projects'
-          subheading='Check out more projects'
-          imagePath='/src/assets/projects/coming-soon.png'
-        />
-      </div>
-    </Section>
+      <Section title='Website List'>
+        <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
+          <ProjectCard
+            href='https://status.cworld0.com/'
+            heading='Website status'
+            subheading='Record status of CWorld websites'
+            imagePath='/src/assets/projects/status.png'
+          />
+          <ProjectCard
+            href='https://waline.cworld0.com/ui/login'
+            heading='Waline comment system'
+            subheading='Back-end control comment panel'
+            imagePath='/src/assets/projects/waline.png'
+          />
+          <ProjectCard
+            href='https://onedrive.cworld0.com/'
+            heading='Onedrive share'
+            subheading='A share space for onedrive'
+            imagePath='/src/assets/projects/onedrive.png'
+          />
+          <ProjectCard
+            href='/projects'
+            heading='More projects'
+            subheading='Check out more projects'
+            imagePath='/src/assets/projects/coming-soon.png'
+          />
+        </div>
+      </Section>
 
-    <Section title='Certifications'>
-      <Card
-        as='a'
-        heading='Mathematical Modeling Competition'
-        subheading='Won the first prize of the national award in the National Mathematical Modeling Competition of "Higher Education Society"'
-        date='October 2023'
-        href='http://www.mcm.edu.cn'
-      />
-    </Section>
+      <Section title='Certifications'>
+        <Card
+          as='a'
+          heading='Mathematical Modeling Competition'
+          subheading='Won the first prize of the national award in the National Mathematical Modeling Competition of "Higher Education Society"'
+          date='October 2023'
+          href='http://www.mcm.edu.cn'
+        />
+      </Section>
 
-    <Section title='Skills'>
-      <SkillLayout title='Languages' skills={languages} />
-      <SkillLayout title='Frontend' skills={frontend} />
-      <SkillLayout title='Backend' skills={backend} />
-      <SkillLayout title='Others' skills={others} />
-    </Section>
+      <Section title='Skills'>
+        <SkillLayout title='Languages' skills={languages} />
+        <SkillLayout title='Frontend' skills={frontend} />
+        <SkillLayout title='Backend' skills={backend} />
+        <SkillLayout title='Others' skills={others} />
+      </Section>
+    </div>
   </div>
 
   <div
