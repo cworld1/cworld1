@@ -37,8 +37,12 @@ const { header: headerName, content: contentName, needPercent = true } = Astro.p
   scrollBtn.addEventListener('click', () => {
     document.documentElement.scrollTo({ behavior: 'smooth', top: 0 })
   })
-  const observer = new IntersectionObserver(callback)
-  observer.observe(targetHeader)
+  if (targetHeader) {
+    const observer = new IntersectionObserver(callback)
+    observer.observe(targetHeader)
+  } else {
+    console.error(`Element with ID ${headerName} not found.`)
+  }
 
   if (needPercent) {
     // scroll percentage

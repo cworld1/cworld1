@@ -48,7 +48,7 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
         /* class='animate sticky top-24 z-10 basis-60 max-lg:bottom-0 max-lg:left-0 max-lg:hidden max-lg:w-full max-lg:bg-primary-foreground max-lg:p-4 lg:order-2' */
       }
       <article class='min-w-0 grow'>
-        <div id='blog-hero header' class='animate'><BlogHero content={post} /></div>
+        <div id='content-header' class='animate'><BlogHero content={post} /></div>
         <div
           id='content'
           class='animate prose prose-base prose-zinc mt-8 max-w-none text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground md:min-w-[45ch]'
@@ -71,7 +71,7 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
         <slot name='bottom' />
       </div>
     </div>
-    <BackToTop header='blog-hero' content='content' />
+    <BackToTop header='content-header' content='content' />
   </div>
 </PageLayout>
 

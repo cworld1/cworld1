@@ -34,7 +34,7 @@ const { title, headings, info, ...props } = Astro.props
         )
       }
       <article class='flex-1'>
-        <div id='hero'>
+        <div id='content-header'>
           <h1 class='text-2xl font-medium sm:mb-2 sm:text-3xl'>
             {title}
           </h1>
@@ -66,6 +66,6 @@ const { title, headings, info, ...props } = Astro.props
         <slot name='bottom-sidebar' />
       </div>
     </div>
-    <BackToTop header='hero' content='content' />
+    <BackToTop header='content-header' content='content' />
   </div>
 </PageLayout>
