@@ -31,9 +31,9 @@ const formatError = (...lines: string[]) => lines.join('\n         ')
 /**
  * Fetch a URL and parse it as JSON, but catch errors to stop builds erroring.
  * @param url URL to fetch
- * @returns {Promise<Record<string, any> | undefined>}
+ * @returns {Promise<Record<string, unknown> | undefined>}
  */
-export const safeGet = makeSafeGetter<Record<string, any>>((res) => res.json())
+export const safeGet = makeSafeGetter<Record<string, unknown>>((res) => res.json())
 
 /**
  * Fetch a URL and parse it as HTML, but catch errors to stop builds erroring.
@@ -60,8 +60,8 @@ function makeSafeGetter<T>(
       const result = await handleResponse(response)
       cache.set(url, result)
       return result
-    } catch (e: any) {
-      console.error(formatError(`[error] astro-embed`, e?.message ?? e, `URL: ${url}`))
+    } catch (e) {
+      console.error(formatError(`[error] astro-embed`, (e as Error)?.message ?? e, `URL: ${url}`))
       return undefined
     }
   }

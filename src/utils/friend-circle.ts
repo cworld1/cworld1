@@ -1,10 +1,10 @@
-type Config = {
+interface Config {
   private_api_url: string
   page_turning_number: number
   error_img: string
 }
 
-type Article = {
+interface Article {
   title: string
   link: string | URL
   avatar: string
@@ -12,7 +12,7 @@ type Article = {
   created: string
 }
 
-type ArticleData = {
+interface ArticleData {
   article_data: Article[]
   statistical_data: {
     friends_num: number
@@ -25,7 +25,7 @@ type ArticleData = {
 export class FriendCircle {
   config!: Config
   root!: HTMLElement
-  start: number = 0
+  start = 0
   allArticles: Article[] = []
   container!: HTMLElement
   randomArticleContainer!: HTMLElement

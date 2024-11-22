@@ -1,4 +1,4 @@
-export type SiteConfig = {
+export interface SiteConfig {
   author: string
   title: string
   site: string
@@ -26,15 +26,15 @@ export type SiteConfig = {
   }
 }
 
-export type MenuLinks = Array<{ link: string; label: string }>
+export type MenuLinks = { link: string; label: string }[]
 
-export type PaginationLink = {
+export interface PaginationLink {
   url: string
   text?: string
   srLabel?: string
 }
 
-export type SiteMeta = {
+export interface SiteMeta {
   title: string
   description?: string
   ogImage?: string | undefined
@@ -53,7 +53,7 @@ export const SocialMediaIconId: Record<string, string> = {
   mail: 'mingcute-mail-line'
 }
 
-export type SocialLink = {
+export interface SocialLink {
   name:
     | 'coolapk'
     | 'telegram'
@@ -67,4 +67,4 @@ export type SocialLink = {
   url: string
 }
 
-export type SocialLinks = Array<SocialLink>
+export type SocialLinks = SocialLink[]

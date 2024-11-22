@@ -9,8 +9,8 @@ export async function getAllCollections(contentType: CollectionKey = 'post') {
 }
 
 export function groupCollectionsByYear<T extends CollectionKey>(
-  collections: Array<CollectionEntry<T>>
-): Array<[string, Array<CollectionEntry<T>>]> {
+  collections: CollectionEntry<T>[]
+): [string, CollectionEntry<T>[]][] {
   const collectionsByYear = collections.reduce(
     (acc, collection) => {
       const year = new Date(
@@ -22,12 +22,12 @@ export function groupCollectionsByYear<T extends CollectionKey>(
       acc[year].push(collection)
       return acc
     },
-    {} as Record<number, Array<CollectionEntry<T>>>
+    {} as Record<number, CollectionEntry<T>[]>
   )
   return Object.entries(collectionsByYear).sort((a, b) => Number(b[0]) - Number(a[0]))
 }
 
-export function sortMDByDate<T extends CollectionKey>(collections: Array<CollectionEntry<T>>) {
+export function sortMDByDate<T extends CollectionKey>(collections: CollectionEntry<T>[]) {
   return collections.sort((a, b) => {
     const aDate = new Date(a.data.updatedDate ?? a.data.publishDate).valueOf()
     const bDate = new Date(b.data.updatedDate ?? b.data.publishDate).valueOf()
@@ -36,19 +36,19 @@ export function sortMDByDate<T extends CollectionKey>(collections: Array<Collect
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
-export function getAllTags<T extends CollectionKey>(collections: Array<CollectionEntry<T>>) {
+export function getAllTags<T extends CollectionKey>(collections: CollectionEntry<T>[]) {
   return collections.flatMap((collection) => [...collection.data.tags])
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
-export function getUniqueTags<T extends CollectionKey>(collections: Array<CollectionEntry<T>>) {
+export function getUniqueTags<T extends CollectionKey>(collections: CollectionEntry<T>[]) {
   return [...new Set(getAllTags(collections))]
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
 export function getUniqueTagsWithCount<T extends CollectionKey>(
-  collections: Array<CollectionEntry<T>>
-): Array<[string, number]> {
+  collections: CollectionEntry<T>[]
+): [string, number][] {
   return [
     ...getAllTags(collections).reduce(
       (acc, t) => acc.set(t, (acc.get(t) || 0) + 1),
