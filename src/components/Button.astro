@@ -43,7 +43,9 @@ const { as: Tag = 'a', class: className, title, href, style = 'button', ...props
       )
     }
   </slot>
-  {title && <p class='my-0'>{title}</p>}
+  <slot>
+    {title && <p class='my-0'>{title}</p>}
+  </slot>
   <slot name='after'>
     {
       style === 'ahead' && (
