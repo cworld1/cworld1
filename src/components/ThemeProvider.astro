@@ -43,25 +43,26 @@
 
 {/* Use inline mode to quick load color, which can avoid splash */}
 <script is:inline>
-  const lightModePref = window.matchMedia('(prefers-color-scheme: light)')
+  const theme = localStorage.getItem('theme') || (colorPref.matches ? 'light' : 'dark')
+  document.documentElement.classList.toggle('dark', theme === 'dark')
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute('content', theme === 'dark' ? '#0B0B10' : '#FCFCFD')
+</script>
+<script>
+  const colorPref = window.matchMedia('(prefers-color-scheme: light)')
   function getUserPref() {
-    return localStorage.getItem('theme') || (lightModePref.matches ? 'light' : 'dark')
+    return localStorage.getItem('theme') || (colorPref.matches ? 'light' : 'dark')
   }
-  function setTheme(theme, save = false) {
+  function setTheme(theme: string, save = false) {
     if (!['light', 'dark'].includes(theme)) return
     if (save) localStorage.setItem('theme', theme)
     document.documentElement.classList.toggle('dark', theme === 'dark')
-    const metaColor = theme === 'dark' ? '#0B0B10' : '#FCFCFD'
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', metaColor)
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', theme === 'dark' ? '#0B0B10' : '#FCFCFD')
   }
-  setTheme(getUserPref())
   document.addEventListener('astro:after-swap', () => setTheme(getUserPref()))
-  document.addEventListener('theme-change', (e) => {
-    const theme = e.detail.theme
-    localStorage.setItem('theme', theme)
-    setTheme(e.detail.theme, true)
-  })
-  lightModePref.addEventListener('change', (e) => {
-    setTheme(e.matches ? 'light' : 'dark')
-  })
+  document.addEventListener('theme-change', (e) => setTheme((e as CustomEvent).detail.theme, true))
+  colorPref.addEventListener('change', (e) => setTheme(e.matches ? 'light' : 'dark'))
 </script>

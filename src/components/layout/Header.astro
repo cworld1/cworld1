@@ -25,7 +25,7 @@ import { siteConfig, menuLinks } from '@/site-config'
       <div class='flex gap-x-4 sm:gap-x-6'>
         <div
           id='headerExpandConetent'
-          class='end-0 start-0 top-12 z-20 grid transition-all duration-300 group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-primary-foreground max-md:border-b max-sm:absolute max-sm:pb-4 max-sm:pt-0 max-sm:opacity-0 max-sm:group-[.not-top]:border max-sm:group-[.expanded]:bg-background max-sm:group-[.not-top]:px-4 max-sm:group-[.not-top]:pb-2 max-sm:group-[.not-top]:pt-2 sm:grid-rows-1 sm:border-0'
+          class='end-0 start-0 top-12 z-20 grid transition-colors transition-opacity duration-300 group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-primary-foreground max-md:border-b max-sm:absolute max-sm:pb-4 max-sm:pt-0 max-sm:opacity-0 max-sm:group-[.not-top]:border max-sm:group-[.expanded]:bg-background max-sm:group-[.not-top]:px-4 max-sm:group-[.not-top]:pb-2 max-sm:group-[.not-top]:pt-2 sm:grid-rows-1 sm:border-0'
         >
           <div
             class='absolute -left-4 top-0 -z-10 box-content hidden h-full w-[calc(100%+2rem)] bg-white max-md:border-b max-sm:group-[.expanded]:block max-sm:group-[.expanded.not-top]:hidden dark:max-sm:group-[.expanded]:bg-primary-foreground'
@@ -68,19 +68,19 @@ import { siteConfig, menuLinks } from '@/site-config'
         <div class='flex gap-x-4 transition-all group-[.not-top]:me-1.5 group-[.not-top]:gap-x-2'>
           <button
             id='toggleDarkMode'
-            class='group/dark rounded-md border p-1.5 transition-all hover:bg-border sm:group-[.not-top]:rounded-xl'
+            class='group/dark rounded-md border p-1.5 transition-colors hover:bg-border sm:group-[.not-top]:rounded-xl'
           >
             <span class='sr-only'>Dark Theme</span>
-            <svg class='size-5 transition-all group-hover/dark:text-primary dark:hidden'>
+            <svg class='size-5 transition-colors group-hover/dark:text-primary dark:hidden'>
               <use href='/icons/header.svg#mingcute-sun-line'></use>
             </svg>
-            <svg class='hidden size-5 transition-all group-hover/dark:text-primary dark:block'>
+            <svg class='hidden size-5 transition-colors group-hover/dark:text-primary dark:block'>
               <use href='/icons/header.svg#mingcute-moon-stars-line'></use>
             </svg>
           </button>
           <button
             id='toggleMenu'
-            class='rounded-md border p-1.5 transition-all hover:bg-border sm:hidden sm:group-[.not-top]:rounded-xl'
+            class='rounded-md border p-1.5 transition-colors hover:bg-border sm:hidden sm:group-[.not-top]:rounded-xl'
           >
             <span class='sr-only'>Menu</span>
             <svg class='size-5'>
@@ -103,32 +103,26 @@ import { siteConfig, menuLinks } from '@/site-config'
       // Header
       let preScrollY = window.scrollY
       this.classList.toggle('not-top', preScrollY > 20)
-
       window.addEventListener('scroll', () => {
         this.classList.toggle('not-top', window.scrollY > 20)
         this.dataset.show = (window.scrollY < 350 || window.scrollY < preScrollY).toString()
         preScrollY = window.scrollY
       })
 
+      // Menu
+      this.querySelector('#toggleMenu')?.addEventListener('click', () => {
+        this.classList.toggle('expanded')
+      })
       // Dark Mode
-      function getCurrentTheme() {
-        return localStorage.getItem('theme')
-      }
-      const toggleDarkModeButton = this.querySelector('#toggleDarkMode')
-      toggleDarkModeButton?.addEventListener('click', () => {
+      this.querySelector('#toggleDarkMode')?.addEventListener('click', () => {
         const toggleDarkModeEvent = new CustomEvent('theme-change', {
-          detail: { theme: getCurrentTheme() === 'light' ? 'dark' : 'light' }
+          detail: { theme: localStorage.getItem('theme') === 'light' ? 'dark' : 'light' }
         })
         document.dispatchEvent(toggleDarkModeEvent)
       })
-
-      // Menu
-      const toggleMenuButton = this.querySelector('#toggleMenu')
-      toggleMenuButton?.addEventListener('click', () => {
-        this.classList.toggle('expanded')
-      })
     }
   }
+
   customElements.define('header-component', Header)
 </script>
 
