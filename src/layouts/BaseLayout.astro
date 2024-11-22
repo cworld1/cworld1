@@ -24,6 +24,7 @@ const {
 <html lang={siteConfig.lang}>
   <head>
     <BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
+    <ThemeProvider />
   </head>
 
   <body class='flex justify-center bg-background transition-colors'>
@@ -35,7 +36,6 @@ const {
         />
       )
     }
-    <ThemeProvider />
     <main
       class='z-10 flex min-h-screen w-screen max-w-[70rem] flex-col items-center px-4 pb-10 text-[0.92rem] leading-relaxed sm:px-7 lg:px-10'
     >
