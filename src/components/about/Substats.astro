@@ -79,12 +79,16 @@ const stats: item[] = [
 
 async function fetchCount(item: item) {
   if (!item.api) return
-  const response = await fetch(`https://api.swo.moe/stats/${item.api}`)
-  const data = await response.json()
-  if (data.failed) {
-    console.error(data.message)
-  } else {
-    item.count = data.count
+  try {
+    const response = await fetch(`https://api.swo.moe/stats/${item.api}`)
+    const data = await response.json()
+    if (data.failed) {
+      throw new Error(data.message)
+    } else {
+      item.count = data.count
+    }
+  } catch (error) {
+    console.error('Error in Substatus fetching: ' + error)
   }
 }
 
@@ -102,7 +106,7 @@ for (let item of stats) {
         target='_blank'
         rel='noopener noreferrer'
       >
-        <div class='flex items-center gap-3 rounded-lg border border-transparent px-3 py-2 transition-all hover:border-border hover:bg-muted '>
+        <div class='flex items-center gap-3 rounded-lg border border-transparent px-3 py-2 transition-all hover:border-border hover:bg-muted'>
           {icon && (
             <svg
               class='size-6'
