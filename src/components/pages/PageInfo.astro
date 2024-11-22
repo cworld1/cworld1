@@ -10,9 +10,9 @@ const { class: className, hideComment, path, ...props } = Astro.props
   </>
   {
     !hideComment && (
-      <>
+      <a href='#waline'>
         | <span class='waline-comment-count' data-path={path} /> comments
-      </>
+      </a>
     )
   }
 </div>
