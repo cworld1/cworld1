@@ -4,11 +4,11 @@ export const prerender = true
 import Button from '@/components/Button.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
-import { getAllCollections, groupAllPostsByYear, sortMDByDate } from '@/utils'
+import { getAllCollections, groupCollectionsByYear, sortMDByDate } from '@/utils'
 
 const allPosts = await getAllCollections()
 const allPostsByDate = sortMDByDate(allPosts)
-const allPostsByYear = groupAllPostsByYear(allPostsByDate)
+const allPostsByYear = groupCollectionsByYear(allPostsByDate)
 
 const meta = {
   description: 'A list of all the years of creating my posts',
