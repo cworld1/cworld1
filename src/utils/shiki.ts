@@ -51,10 +51,10 @@ export const addTitle = (): ShikiTransformer => {
       const rawMeta = this.options.meta?.__raw
       if (!rawMeta) return
       const meta = parseMetaString(rawMeta)
-      if (this.options.meta) {
-        Object.assign(this.options.meta, meta)
-      }
-      console.log(this.options.meta)
+      // If meta is needed to parse in other transformers
+      // if (this.options.meta) {
+      //   Object.assign(this.options.meta, meta)
+      // }
 
       if (!meta.title) return
 
