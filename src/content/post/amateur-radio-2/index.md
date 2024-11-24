@@ -44,7 +44,7 @@ ADIF（Amateur Data Interchange Format，[官网](https://adif.org/)）是一种
 
 比如下面这个 iframe 就展示了我在 QRZ 上上传的通联日志：
 
-<div align='center'>
+<div align='center' style='overflow-x:scroll'>
   <iframe
     align='top'
     frameborder='0'
