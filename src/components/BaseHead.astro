@@ -2,7 +2,7 @@
 import SpeedInsights from '@vercel/speed-insights/astro'
 import type { SiteMeta } from '@/types'
 import { siteConfig } from '@/site-config'
-const isProd = import.meta.env.PROD
+import { prod } from '@/utils'
 
 type Props = SiteMeta
 
@@ -94,9 +94,9 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 {/* Vercel speed insights */}
 {isProd && <SpeedInsights />}
 
-{/* user script */}
 {
-  isProd && (
+  /* Umami analytics & user script*/
+  prod && (
     <script>
       console.log( '%c CWorld Site %c https://cworld0.com/',
       'color:#fff;background:linear-gradient(90deg,#448bff,#44e9ff);padding:5px 0;',

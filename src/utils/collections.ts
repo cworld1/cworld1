@@ -1,10 +1,11 @@
 import type { CollectionEntry, CollectionKey } from 'astro:content'
 import { getCollection } from 'astro:content'
+import { prod } from '.'
 
 /** Note: this function filters out draft posts based on the environment */
 export async function getAllCollections(contentType: CollectionKey = 'post') {
   return await getCollection(contentType, ({ data }: CollectionEntry<typeof contentType>) => {
-    return import.meta.env.PROD ? data.draft !== true : true
+    return prod ? data.draft !== true : true
   })
 }
 
