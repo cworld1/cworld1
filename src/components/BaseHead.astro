@@ -93,6 +93,12 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 {
   /* Umami analytics & user script*/
   prod && (
+    <script
+      is:inline
+      defer
+      src='https://umami.cworld0.com/script.js'
+      data-website-id='fec7cfb1-6749-4290-8e3d-a230da396b45'
+    />
     <script>
       console.log( '%c CWorld Site %c https://cworld0.com/',
       'color:#fff;background:linear-gradient(90deg,#448bff,#44e9ff);padding:5px 0;',

@@ -1,14 +1,15 @@
 ---
 import { Image } from 'astro:assets'
 
+import Button from '@/components/Button.astro'
 import Collapse from '@/components/Collapse.astro'
 import Timeline from '@/components/Timeline.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Comment from '@/components/Comment.astro'
-import ToolSection from '@/components/about/ToolSection.astro'
-import Button from '@/components/Button.astro'
-import Substats from '@/components/about/Substats.astro'
 import Spoiler from '@/components/Spoiler.astro'
+import ToolSection from '@/components/about/ToolSection.astro'
+import Substats from '@/components/about/Substats.astro'
+import Umami from '@/components/about/Umami.astro'
 
 import notByAIImage from '@/assets/not-by-ai-badge.svg'
 
@@ -49,7 +50,8 @@ const headings = [
   </p>
   <p>My motto: Stay hungry, Stay foolish. <Spoiler>求知若愚，虚怀若谷。</Spoiler></p>
   <Button title='Sponsor Me' class='w-fit' href='/projects#sponsorship' style='ahead' />
-  <!-- general-talk -->
+
+  {/* general-talk */}
   <h2 id='hobbies'>Hobbies</h2>
   <ul>
     <li><b>Coding</b>: favorite editors are Neovim and VSCode (sometimes Zed is also used).</li>
@@ -72,7 +74,7 @@ const headings = [
     </li>
   </ul>
 
-  <!-- tools -->
+  {/* tools */}
   <h2 id='tools'>Tools</h2>
   <p>Current support tools as follow:</p>
   <ToolSection
@@ -183,7 +185,8 @@ const headings = [
       }
     ]}
   />
-  <!-- social-networks -->
+
+  {/* social-networks */}
   <h2 id='social-networks'>Social Networks</h2>
   <p>
     The main network usernames include <code>CWorld</code>, <code>CWorld0</code>, and <code
@@ -192,7 +195,7 @@ const headings = [
   </p>
   <Substats />
 
-  <!-- gossips -->
+  {/* gossips */}
   <h2 id='gossips'>Gossips</h2>
   <Collapse title='Why called CWorld?'>
     The original name is actually ChangingWorld, and "C" is the elder of high-level languages in the
@@ -205,8 +208,12 @@ const headings = [
     Lanota, Musedash, etc. I have played Yang Chun Bai Xue, Phigros, Rhythm Doctor, and Ice and Fire
     Dance before.
   </Collapse>
-  <!-- about-blog -->
+
+  {/* about-blog */}
   <h2 id='about-blog'>About Blog</h2>
+  <p>Visit statistics:</p>
+  <Umami class='not-prose' />
+  <p>Website history:</p>
   <Timeline
     events={[
       {
@@ -235,7 +242,6 @@ const headings = [
         content:
           'Website refectered using <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://github.com/srleom/astro-theme-resume" target="_blank">Astro Theme Resume</a>'
       },
-
       {
         date: '2024-10-23',
         content: 'Bought new domain <a href="https://cworld0.com/" target="_blank">cworld0.com</a>'

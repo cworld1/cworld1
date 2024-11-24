@@ -1,0 +1,81 @@
+---
+import { cn } from '@/utils'
+
+const { link = 'https://uma-info.cworld.workers.dev/', class: className } = Astro.props
+---
+
+<uma-info
+  class={cn(
+    'grid grid-cols-1 gap-3 rounded-xl border px-3 py-2 sm:grid-cols-2 sm:px-4 sm:py-3 sm:gap-x-4',
+    className
+  )}
+  data-message={link}
+>
+  <p>
+    <span class='text-foreground'>Today</span>
+    <span class='float-end'>
+      <span id='today_uv'>???</span> users, <span id='today_pv'>???</span> visits
+    </span>
+  </p>
+  <p>
+    <span class='text-foreground'>Today</span>
+    <span class='float-end'>
+      <span id='yesterday_uv'>???</span> users, <span id='yesterday_pv'>???</span> visits
+    </span>
+  </p>
+  <p>
+    <span class='text-foreground'>Last Month</span>
+    <span class='float-end'><span id='last_month_pv'>???</span> visits</span>
+  </p>
+  <p>
+    <span class='text-foreground'>Last Year</span>
+    <span class='float-end'><span id='last_year_pv'>???</span> visits</span>
+  </p>
+</uma-info>
+
+<script>
+  interface UmamiProps {
+    today_uv: number
+    today_pv: number
+    yesterday_uv: number
+    yesterday_pv: number
+    last_month_pv: number
+    last_year_pv: number
+  }
+
+  class UmaInfo extends HTMLElement {
+    async fetchUmami(umami_url: string): Promise<UmamiProps | null> {
+      try {
+        const res = await fetch(umami_url)
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`)
+        }
+        return (await res.json()) as UmamiProps
+      } catch (e) {
+        console.error('Failed to fetch Umami data:', e)
+        return null
+      }
+    }
+
+    async connectedCallback() {
+      if (!this.dataset.message) return
+
+      try {
+        const umamiData = await this.fetchUmami(this.dataset.message)
+        if (!umamiData) return
+
+        const keys = Object.keys(umamiData) as (keyof UmamiProps)[]
+        keys.forEach((key) => {
+          const element = this.querySelector(`#${key}`)
+          if (element) {
+            element.textContent = umamiData[key].toString()
+          }
+        })
+      } catch (e) {
+        console.error('Error setting Umami data:', e)
+      }
+    }
+  }
+
+  customElements.define('uma-info', UmaInfo)
+</script>
