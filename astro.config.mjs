@@ -1,3 +1,5 @@
+// @ts-check
+
 import { defineConfig } from 'astro/config'
 
 // Adapter
@@ -15,10 +17,10 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import icon from 'astro-icon'
 // Markdown
-import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
+import { remarkReadingTime } from './src/utils/remarkPlugins.ts'
 import rehypeExternalLinks from 'rehype-external-links'
 import { siteConfig } from './src/site.config.ts'
-import { addCopyButton, addTitle, addLanguage, updateStyle } from './src/utils/shiki.ts'
+import { addCopyButton, addTitle, addLanguage, updateStyle } from './src/utils/shikiTransformers.ts'
 
 // https://astro.build/config
 export default defineConfig({
@@ -64,7 +66,7 @@ export default defineConfig({
   },
   // Markdown Options
   markdown: {
-    remarkPlugins: [remarkReadingTime],
+    remarkPlugins: [remarkReadingTime()],
     rehypePlugins: [
       [
         rehypeExternalLinks,
