@@ -32,7 +32,9 @@ export default defineConfig({
 
   // Adapter
   // 1. Vercel (serverless)
-  adapter: vercelServerless({}),
+  adapter: vercelServerless({
+    isr: true
+  }),
   // 2. Vercel (static)
   // adapter: vercelStatic(),
   // 3. Local (standalone)
