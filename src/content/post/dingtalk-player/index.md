@@ -100,7 +100,7 @@ tags:
 
 把图中的下面这段：
 
-```javascript
+```typescript
 static function OnBeforeResponse(oSession: Session) {
     if (m_Hide304s && oSession.responseCode == 304) {
         oSession["ui-hide"] = "true";
@@ -114,7 +114,7 @@ static function OnBeforeResponse(oSession: Session) {
 > 以下代码部分来自 [HTML5 播放器增强插件](https://greasyfork.org/users/49622)，对原作者深表感谢！  
 > 以下代码参考 [aneasystone's blog: 通过 FiddlerScript 实现根据条件重发请求](https://www.aneasystone.com/archives/2015/03/reissue-requests-by-conditions-using-fiddlerscript.html)，对博主深表感谢！
 
-```javascript
+```typescript
 public static RulesOption("视频增强插件")
 var m_H5VideoPlayerExtension: boolean = true;
 public static RulesOption("自动学习")

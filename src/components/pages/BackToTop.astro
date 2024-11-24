@@ -51,7 +51,7 @@ const { header: headerName, content: contentName, needPercent = true } = Astro.p
     const clientHeight = document.documentElement.clientHeight // client height
 
     function calculateScrollPercent() {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       if (scrollTop < articleTop) return
       return Math.round(((scrollTop - articleTop) / (scrollHeight - clientHeight)) * 100)
     }

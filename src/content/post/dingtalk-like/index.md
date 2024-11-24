@@ -58,7 +58,7 @@ uploadLikesClick(B, 10000000)
 故我们可以做到如下图一般的骚操作：
 
 ```javascript
-uploadLikesClick(B,Math.ceil(10000000*Math.random()+1)),t.favorCountCache=1)},1e2)
+uploadLikesClick(B, Math.ceil(10000000 * Math.random() + 1))
 ```
 
 至此理论部分结束。如有技术可以自己实现了。经过实验钉钉存赞数的变量为 32 位有符号 int 其最大值约为 21 亿左右，超出后变成负值，直播间会显示为 0 。如果还有人点赞，赞数会增加但是 -21 亿没什么人会点的过来的...除了这样改。

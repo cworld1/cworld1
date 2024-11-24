@@ -22,9 +22,9 @@ const { class: className } = Astro.props
 
     connectedCallback() {
       // Prevent Vue log errors
-      ;(globalThis as any).__VUE_OPTIONS_API__ = true
-      ;(globalThis as any).__VUE_PROD_DEVTOOLS__ = false
-      ;(globalThis as any).__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = false
+      ;(globalThis as unknown as { __VUE_OPTIONS_API__: boolean }).__VUE_OPTIONS_API__ = true
+      ;(globalThis as unknown as { __VUE_PROD_DEVTOOLS__: boolean }).__VUE_PROD_DEVTOOLS__ = false
+      ;(globalThis as unknown as { __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: boolean }).__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = false
       init({
         el: '#waline',
         serverURL: siteConfig.walineServerUrl,

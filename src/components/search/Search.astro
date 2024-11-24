@@ -31,8 +31,10 @@ const { class: className } = Astro.props
 </search-component>
 
 <script>
-  import Fuse from 'fuse.js'
+  import Fuse, { type FuseResult, type FuseResultMatch } from 'fuse.js'
   import { getAllCollections } from '@/utils'
+import type { CollectionEntry } from 'astro:content'
+import type { CollectionKey } from 'astro:content'
 
   class SearchComponent extends HTMLElement {
     searchReadout!: HTMLElement
@@ -57,7 +59,7 @@ const { class: className } = Astro.props
     }
 
     // Highlight the search term in the results
-    hlText(text: string, matches: any[], key: string) {
+    hlText(text: string, matches: FuseResultMatch[], key: string) {
       const match = matches.find((m) => m.key === key)
       if (match) {
         const { indices } = match
@@ -75,12 +77,12 @@ const { class: className } = Astro.props
     }
 
     // Generate the search results list
-    generateSearchList(results: any[]) {
+    generateSearchList(results: FuseResult<CollectionEntry<CollectionKey>>[]) {
       return results
         .map((r) => {
           const { data, slug } = r.item
-          const hlTitle = this.hlText(data.title, r.matches, 'data.title')
-          const hlDesc = this.hlText(data.description, r.matches, 'data.description')
+          const hlTitle = this.hlText(data.title, [...(r.matches ?? [])], 'data.title')
+          const hlDesc = this.hlText(data.description, [...(r.matches ?? [])], 'data.description')
           return `<a href="/blog/${slug}" class='text-muted-foreground hover:text-muted-foreground'>
                 <li class='group py-2 sm:py-3 px-3 sm:px-5 flex flex-col gap-y-2 border rounded-xl transition-colors hover:bg-primary-foreground'>
                   <h2 class='text-base text-foreground group-hover:text-primary transition-colors'>${hlTitle}</h2>
@@ -99,7 +101,7 @@ const { class: className } = Astro.props
     }
 
     // Fetch search results
-    fetchSearchResults(fuse: Fuse<unknown>, search: string) {
+    fetchSearchResults(fuse: Fuse<CollectionEntry<CollectionKey>>, search: string) {
       const searchResult = fuse.search(search)
 
       this.searchReadout.textContent = search ? `Search results for “${search}”` : ''

@@ -16,7 +16,7 @@
       fetch('https://v1.hitokoto.cn')
         .then((response) => response.json())
         .then((data) => {
-          let hitokotoElement = this.querySelector('#hitokoto') as HTMLElement
+          const hitokotoElement = this.querySelector('#hitokoto') as HTMLElement
           if (!hitokotoElement) return
           hitokotoElement.innerText = data.hitokoto
         })
