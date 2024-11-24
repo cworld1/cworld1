@@ -43,7 +43,9 @@
 
 {/* Use inline mode to quick load color, which can avoid splash */}
 <script is:inline>
-  const theme = localStorage.getItem('theme') || (colorPref.matches ? 'light' : 'dark')
+  const theme =
+    localStorage.getItem('theme') ||
+    (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
   document.documentElement.classList.toggle('dark', theme === 'dark')
   document
     .querySelector('meta[name="theme-color"]')
