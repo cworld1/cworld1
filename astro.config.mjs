@@ -68,7 +68,8 @@ export default defineConfig({
   },
   // Markdown Options
   markdown: {
-    remarkPlugins: [remarkReadingTime()],
+    // @ts-ignore
+    remarkPlugins: [remarkReadingTime],
     rehypePlugins: [
       [
         rehypeExternalLinks,
