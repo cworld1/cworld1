@@ -1,5 +1,4 @@
 ---
-import SpeedInsights from '@vercel/speed-insights/astro'
 import type { SiteMeta } from '@/types'
 import { siteConfig } from '@/site-config'
 import { prod } from '@/utils'
@@ -90,9 +89,6 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 
 {/* Styles */}
 <link rel='stylesheet' href='/styles/global.css' />
-
-{/* Vercel speed insights */}
-{isProd && <SpeedInsights />}
 
 {
   /* Umami analytics & user script*/
