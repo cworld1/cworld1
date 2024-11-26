@@ -29,9 +29,6 @@ html.dark {
     animation-fill-mode: forwards;
   }
 }
-#navbar {
-  animation-delay: 0ms;
-}
 #content-header {
   animation-delay: 50ms;
 }
@@ -43,8 +40,24 @@ html.dark {
 .astro-code {
   background-color: transparent !important;
   & pre {
+    border-radius: 0.5rem;
     background-color: hsl(var(--primary-foreground));
     margin: 0 !important;
+
+    & code {
+      counter-reset: step;
+      counter-increment: step 0;
+
+      & .line::before {
+        content: counter(step);
+        counter-increment: step;
+        color: hsl(var(--muted-foreground) / 0.6);
+        margin-inline-end: 0.75rem;
+        justify-content: end;
+        display: inline-flex;
+        width: 1rem;
+      }
+    }
   }
 }
 .dark {
