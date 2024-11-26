@@ -2,7 +2,7 @@
 title: '业余无线电进阶玩法'
 description: '简单呼中继以外的进阶玩法。因为玩法太多，所以单独开一篇文章继续记录'
 publishDate: '2024-10-07'
-updatedDate: '2024-10-11'
+updatedDate: '2024-11-26'
 tags: ['Radio', 'HAM']
 heroImage: { src: './thumbnail.jpg', color: '#56C4FF' }
 ---
@@ -168,5 +168,37 @@ KiwiSDR 较 WebSDR 的优点：
 - 虚拟声卡：[VB-Audio Virtual Apps](https://vb-audio.com/Cable/index.htm)
 - SSTV 各种功能小工具：[SSTV Tools](http://dxatlas.com/SstvTools/)
 - 在线 SSTV 生成：[SSTV Generator](https://www.vr2woa.com/sstv/)
+
+## NOAA
+
+## WSPR
+
+待补充
+
+[无线电-短波QRP新玩法-WSPR（弱信号传播报告器）](https://zhuanlan.zhihu.com/p/31592701)
+
+## 卫星云图 APT
+
+## ARPS
+
+## 摩尔斯电码
+
+练习网页：https://morse.youlingxi.cn/#/
+
+## 数字
+
+D-Star、DMR、C4FM、APCO P25等数字语音模式
+
+[数字互联46023 (DMR,YSF,P25,D-STAR 互通)](http://tg46023.cn/infor.php)
+
+[什么是 BrandMeister](https://www.chinaham.cn/MMDVM/98.html)
+
+http://bbs.cqcqcq.com/thread-34008-1-1.html
+
+https://www.bg7iae.com/?p=127
+
+## 最后
+
+一个老 Ham 的网盘资源：[BA7LCE的临时仓库](http://yc-yjwp.ysepan.com/)
 
 [[待补充]]
