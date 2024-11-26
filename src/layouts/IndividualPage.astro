@@ -1,0 +1,77 @@
+---
+import type { MarkdownLayoutProps } from 'astro'
+
+import PageLayout from '@/layouts/BaseLayout.astro'
+import TOC from '@/components/pages/TOC.astro'
+import Button from '@/components/Button.astro'
+import BackToTop from '@/components/pages/BackToTop.astro'
+
+import type { MarkdownHeading } from 'astro'
+
+type Props = MarkdownLayoutProps<{
+  title: string
+  description: string
+  heroImage?: { src: string }
+  language?: string
+  back?: string
+}> & {
+  headings: MarkdownHeading[]
+}
+
+const { frontmatter, headings } = Astro.props
+const { title, description, heroImage, language, back } = frontmatter
+const socialImage = heroImage?.src ?? '/images/social-card.png'
+---
+
+<PageLayout meta={{ title, description, ogImage: socialImage }}>
+  <div class='w-full'>
+    <Button title='Back' href={back ?? '/'} style='back' />
+    <div class='mt-6 w-full items-start gap-x-10 md:flex'>
+      {
+        !!headings.length && (
+          <TOC
+            class='animate top-24 z-10 min-w-40 basis-60 max-md:hidden md:sticky md:order-2 lg:shrink-0'
+            headings={headings}
+          />
+        )
+      }
+      <article class='min-w-0 grow'>
+        <div id='content-header' class='animate'>
+          <div class='article-info animate max-lg:mx-auto'>
+            <h1 class='mt-4 text-2xl font-medium sm:mb-2 sm:mt-6 sm:text-3xl'>
+              {title}
+            </h1>
+
+            <div
+              class='mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs leading-6 text-muted-foreground'
+            >
+              {
+                // Language
+                language && (
+                  <span class='flex items-center gap-1'>
+                    <svg class='size-5'>
+                      <use href='/icons/project.svg#mingcute-earth-2-line' />
+                    </svg>
+                    {language}
+                  </span>
+                )
+              }
+              {/* Description */}
+              <blockquote class='text-sm italic text-muted-foreground'>
+                <q>{description}</q>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div
+          id='content'
+          class='animate prose prose-base prose-zinc mt-8 max-w-none text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground md:min-w-[45ch]'
+        >
+          <slot />
+        </div>
+      </article>
+    </div>
+
+    <BackToTop header='content-header' content='content' />
+  </div>
+</PageLayout>

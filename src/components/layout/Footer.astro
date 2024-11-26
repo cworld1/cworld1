@@ -31,11 +31,13 @@ const year = new Date().getFullYear()
             </a>
           )
         }
-        <div class='text-muted-foreground [&_a]:text-foreground'>
-          ©{year}
-          <a href={socialLinks[0]?.url} target='_blank'>{siteConfig.author}</a> |
-          <a href='https://github.com/withastro/astro' target='_blank'>Astro</a>
-          &
+        <div class='text-muted-foreground [&_a:hover]:text-primary [&_a]:text-foreground'>
+          © {year}
+          {siteConfig.author} &
+          <a href='/terms/list' class='text-muted-foreground'>Site policy</a>
+        </div>
+        <div class='text-muted-foreground [&_a:hover]:text-primary [&_a]:text-foreground'>
+          <a href='https://github.com/withastro/astro' target='_blank'>Astro</a> &
           <a href='https://github.com/cworld1/astro-theme-pure' target='_blank'>Pure</a> theme powered
         </div>
 

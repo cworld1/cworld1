@@ -1,0 +1,52 @@
+---
+export const prerender = true
+
+import Button from '@/components/Button.astro'
+import PageLayout from '@/layouts/BaseLayout.astro'
+
+const meta = {
+  title: 'Site policy',
+  description: 'Site policy documentation'
+}
+
+const terms = [
+  {
+    title: 'Privacy Policy',
+    link: '/terms/privacy-policy'
+  },
+  {
+    title: 'Terms and Conditions',
+    link: '/terms/terms-and-conditions'
+  },
+  {
+    title: 'Copyright',
+    link: '/terms/copyright'
+  },
+  {
+    title: 'Disclaimer',
+    link: '/terms/disclaimer'
+  }
+]
+---
+
+<PageLayout meta={meta}>
+  <div class='w-full'>
+    <Button title='Back' href='/' style='back' />
+    <h1 id='content-header' class='animate mb-6 mt-6 text-3xl font-medium sm:mt-10'>Site policy</h1>
+
+    <div class='animate flex flex-col gap-y-4'>
+      <h2 class='text-xl font-medium'>Site policy documentation</h2>
+      <ul class='flex flex-col gap-y-3 rounded-xl border px-4 py-3 text-start'>
+        {
+          terms.map((term) => (
+            <li>
+              <a href={term.link}>{term.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <h2 class='text-xl font-medium'>Help Infomation</h2>
+      <p>Email: <a href='mailto:cworldo@qq.com'>cworld0@qq.com</a></p>
+    </div>
+  </div>
+</PageLayout>
