@@ -10,7 +10,8 @@
           "link": "https://blog.eurekac.cn/",
           "avatar": "https://cravatar.cn/avatar/15359b6f2fe293366156959c8ab9476f",
           "email": "chenyf@cyfan.top",
-          "status": "request_update"
+          "status": "request_update",
+          "method": "https://github.com/ChenYFan/CyanBlog/pull/12"
         },
         {
           "name": "喵二の小博客",
@@ -18,8 +19,7 @@
           "link": "https://www.miaoer.net/",
           "avatar": "https://static.miaoer.net/logo/avatar.webp",
           "rss": "https://www.miaoer.net/feed",
-          "email": "i@miaoer.net",
-          "status": "request_update"
+          "email": "i@miaoer.net"
         },
         {
           "name": "张洪 Heo",
@@ -78,7 +78,6 @@
           "rss": "https://owo.cab/atom.xml",
           "email": "i@owo.cab"
         },
-
         {
           "name": "丘卡饮品店",
           "intro": "要来点喝的吗？",
@@ -127,9 +126,7 @@
           "link": "https://www.maoyv.com/",
           "avatar": "https://love-1307045615.cos.ap-chongqing.myqcloud.com/tx_574aac60d580c9f1_ys.jpg",
           "rss": "https://www.maoyv.com/feed/",
-          "email": "shinanay@qq.com",
-          "status": "request_update",
-          "method": "leave_message"
+          "email": "shinanay@qq.com"
         },
         {
           "name": "陆陆侠的生活",
@@ -139,19 +136,10 @@
           "status": "request_update"
         },
         {
-          "name": "字节君",
-          "intro": "热爱漫无边际，生活自有分寸",
-          "link": "https://blog.lvbyte.top/",
-          "avatar": "https://npm.elemecdn.com/lvbyte-cdn/20230104/%E8%8B%B9%E6%9E%9C.156l7bksen40.jpg",
-          "rss": "https://blog.lvbyte.top/atom.xml",
-          "email": "2015078351@qq.com",
-          "status": "request_update"
-        },
-        {
           "name": "大大的小蜗牛",
           "intro": "机会总是垂青于有准备的人",
           "link": "https://www.eallion.com",
-          "avatar": "https://www.eallion.com/eallion.png",
+          "avatar": "https://cravatar.cn/avatar/171e4c30959e8c077a6c58b958624b31",
           "rss": "https://www.eallion.com/index.xml",
           "email": "eallions@gmail.com",
           "status": "request_update",
@@ -203,7 +191,6 @@
           "avatar": "https://pic.en.icu/Xingluo.webp",
           "rss": "https://blog.en.icu/rss.xml"
         },
-
         {
           "name": "又见苍岚",
           "intro": "蓝天依旧，明眸如初",
@@ -246,19 +233,22 @@
           "name": "Tianli",
           "intro": "自知之明是最可贵的知识！",
           "link": "https://blog.tianli0.top/",
-          "avatar": "https://q2.qlogo.cn/headimg_dl?dst_uin=507249007&spec=640"
+          "avatar": "https://q2.qlogo.cn/headimg_dl?dst_uin=507249007&spec=640",
+          "email": "wutianli@tianli0.top"
         },
         {
           "name": "青桔气球",
           "intro": "分享网络安全与科技生活",
           "link": "https://blog.qjqq.cn/",
-          "avatar": "https://q2.qlogo.cn/headimg_dl?dst_uin=1645253&spec=640"
+          "avatar": "https://q2.qlogo.cn/headimg_dl?dst_uin=1645253&spec=640",
+          "email": "chenl@76.al"
         },
         {
           "name": "Fomalhaut🥝",
           "intro": "Future is now 🍭🍭🍭",
           "link": "https://www.fomal.cc/",
           "avatar": "https://www.fomal.cc/assets/avatar.webp",
+          "email": "1174008660@qq.com",
           "status": "unverified"
         },
         {
@@ -266,6 +256,7 @@
           "intro": "On the other side of obstacles",
           "link": "https://blog.hesiy.cn/",
           "avatar": "https://registry.npmmirror.com/@floatsheep/fsl-fim/1.0.23/files/avatar%202024.main.webp",
+          "email": "admin@hesiy.cn",
           "status": "unverified"
         },
         {
@@ -273,6 +264,13 @@
           "intro": "风暴前夕",
           "link": "https://xaoxuu.com/",
           "avatar": "https://bu.dusays.com/2021/09/24/2f74810ceb3d3.png",
+          "status": "unverified"
+        },
+        {
+          "name": "伍十七",
+          "intro": "我是一名正在上大一的前端爱好者，专注于构建优秀的应用程序。",
+          "link": "https://blog.everfu.cn/",
+          "avatar": "https://ui.everfu.cn/c625e37b3cf9054d92a52ec04ce8abf0.png/avatar",
           "status": "unverified"
         }
       ]
@@ -321,6 +319,15 @@
           "intro": "以梦为马，不负韶华。",
           "link": "https://wrans.top/",
           "avatar": "https://cravatar.cn/avatar/5dcd1e147f801b62d5fe858f241dae64?s=169"
+        },
+        {
+          "name": "字节君",
+          "intro": "热爱漫无边际，生活自有分寸",
+          "link": "https://blog.lvbyte.top/",
+          "avatar": "https://npm.elemecdn.com/lvbyte-cdn/20230104/%E8%8B%B9%E6%9E%9C.156l7bksen40.jpg",
+          "rss": "https://blog.lvbyte.top/atom.xml",
+          "email": "2015078351@qq.com",
+          "status": "request_update"
         }
       ]
     },
