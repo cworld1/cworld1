@@ -47,14 +47,13 @@ export const siteConfig: SiteConfig = {
 
 // Will be used in Footer.astro
 export const socialLinks: SocialLinks = [
-  // First link will be used as the site's default social link
+  // {
+  //   name: 'mail',
+  //   url: 'mailto:cworld0@qq.com'
+  // },
   {
     name: 'github',
     url: 'https://github.com/cworld1'
-  },
-  {
-    name: 'mail',
-    url: 'mailto:cworldo@qq.com'
   },
   {
     name: 'telegram',
