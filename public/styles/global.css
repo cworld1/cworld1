@@ -57,6 +57,10 @@ html.dark {
         display: inline-flex;
         width: 1rem;
       }
+      & .line:last-child:empty,
+      & .line:last-child:has(> span:empty:only-child) {
+        display: none;
+      }
     }
   }
 }
