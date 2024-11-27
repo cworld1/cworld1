@@ -10,28 +10,30 @@ export interface SiteConfig {
     options: Intl.DateTimeFormatOptions
   }
 
+  npmCDN: string
+
   commonPage: {
     walineServerUrl: string
   }
 
   blog: {
-  pageSize: number
-  externalLinkArrow: boolean
+    pageSize: number
+    externalLinkArrow: boolean
   }
 
   footer: {
-  registration?: {
-    url: string
-    text: string
+    registration?: {
+      url: string
+      text: string
     }
   }
 
   links: {
     applyTip: {
-    name: string
+      name: string
       desc: string
-    url: string
-    avatar: string
+      url: string
+      avatar: string
     }
   }
 

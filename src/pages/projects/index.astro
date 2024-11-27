@@ -419,10 +419,14 @@ const headings = [
 
 <script is:inline type='module' data-astro-rerun>
   import { siteConfig } from '/src/site.config.ts'
-  import { pageviewCount } from 'https://cdn.smartcis.cn/npm/@waline/client@v3/dist/pageview.js'
 
-  pageviewCount({
+  const loadPageviewCount = async () => {
+    const pageviewCount = await import(`${siteConfig.npmCDN}/@waline/client@v3/dist/pageview.js`)
+    pageviewCount({
       serverURL: siteConfig.commonPage.walineServerUrl,
-    path: window.location.pathname
-  })
+      path: window.location.pathname
+    })
+  }
+
+  loadPageviewCount()
 </script>

@@ -24,6 +24,13 @@ export const siteConfig: SiteConfig = {
     }
   },
 
+  // Mirror (remove ending trailing slash)
+  npmCDN: 'https://cdn.jsdelivr.net/npm',
+  // Recommend:
+  // - https://cdn.jsdelivr.net/npm
+  // - https://cdn.smartcis.cn/npm
+  // - https://unkpg.com
+
   // === Customize options ===
   commonPage: {
     // Comment system service backend link
@@ -31,25 +38,25 @@ export const siteConfig: SiteConfig = {
   },
 
   blog: {
-  pageSize: 8, // blog page size for pagination
+    pageSize: 8, // blog page size for pagination
     externalLinkArrow: true // show external link arrow
   },
 
   footer: {
-  // Registration information for ICP (optional)
-  registration: {
-    url: 'https://icp.gov.moe/?keyword=20240147',
-    text: '萌备20240147'
+    // Registration information for ICP (optional)
+    registration: {
+      url: 'https://icp.gov.moe/?keyword=20240147',
+      text: '萌备20240147'
     }
   },
 
   links: {
-  // Link info
+    // Link info
     applyTip: {
-    name: 'CWorld Site',
+      name: 'CWorld Site',
       desc: '求知若愚，虚怀若谷',
-    url: 'https://cworld0.com/',
-    avatar: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
+      url: 'https://cworld0.com/',
+      avatar: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
     }
   },
 
