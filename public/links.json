@@ -244,6 +244,12 @@
           "email": "chenl@76.al"
         },
         {
+          "name": "伍十七",
+          "intro": "我是一名正在上大一的前端爱好者，专注于构建优秀的应用程序。",
+          "link": "https://blog.everfu.cn/",
+          "avatar": "https://7.isyangs.cn/66/6745e058e1578-66.webp"
+        },
+        {
           "name": "Fomalhaut🥝",
           "intro": "Future is now 🍭🍭🍭",
           "link": "https://www.fomal.cc/",
@@ -264,13 +270,6 @@
           "intro": "风暴前夕",
           "link": "https://xaoxuu.com/",
           "avatar": "https://bu.dusays.com/2021/09/24/2f74810ceb3d3.png",
-          "status": "unverified"
-        },
-        {
-          "name": "伍十七",
-          "intro": "我是一名正在上大一的前端爱好者，专注于构建优秀的应用程序。",
-          "link": "https://blog.everfu.cn/",
-          "avatar": "https://ui.everfu.cn/c625e37b3cf9054d92a52ec04ce8abf0.png/avatar",
           "status": "unverified"
         }
       ]
