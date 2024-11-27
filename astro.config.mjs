@@ -17,10 +17,15 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import icon from 'astro-icon'
 // Markdown
-import { remarkReadingTime } from './src/utils/remarkPlugins.ts'
+import { remarkReadingTime } from './src/plugins/remarkPlugins.ts'
 import rehypeExternalLinks from 'rehype-external-links'
 import { siteConfig } from './src/site.config.ts'
-import { addCopyButton, addTitle, addLanguage, updateStyle } from './src/utils/shikiTransformers.ts'
+import {
+  addCopyButton,
+  addTitle,
+  addLanguage,
+  updateStyle
+} from './src/plugins/shikiTransformers.ts'
 
 // https://astro.build/config
 export default defineConfig({
