@@ -1,7 +1,7 @@
 ---
 title: 利用腾讯云无服务器云函数搭建 OneDrive 网盘
 publishDate: 2020-02-13 8:44:58
-description: '原理是用腾讯云的无服务器云函数配合 API 网关实现，不需要自己的服务器。'
+description: '用腾讯云的无服务器云函数配合 API 网关实现，无需自己的服务器'
 tags:
   - Onedrive
   - Serverless
