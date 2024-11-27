@@ -20,4 +20,4 @@ export { generateToc } from './generateToc'
 export type { TocItem } from './generateToc'
 
 // Link Preview
-export { safeGetDOM, parseOpenGraph } from './link-preview'
+export { safeGetDOM, parseOpenGraph } from './linkPreview'
