@@ -49,6 +49,34 @@ const frontend = [
 const backend = ['Flask', 'Nginx', 'NextJS']
 const others = ['Qt', 'PyQt', 'Qml', 'Android', 'Unity', 'Jinja']
 
+const websiteList = [
+  {
+    href: 'https://status.cworld0.com/',
+    heading: 'Website status',
+    subheading: 'Record status of CWorld websites',
+    imagePath: '/src/assets/projects/site-status.png'
+  },
+
+  {
+    href: 'https://waline.cworld0.com/ui/login',
+    heading: 'Waline comment system',
+    subheading: 'Back-end control comment panel',
+    imagePath: '/src/assets/projects/site-waline.png'
+  },
+  {
+    href: 'https://onedrive.cworld0.com/',
+    heading: 'Onedrive share',
+    subheading: 'A share space for onedrive',
+    imagePath: '/src/assets/projects/site-onedrive.png'
+  },
+  {
+    href: 'https://onedrive.cworld0.com/',
+    heading: 'Umami',
+    subheading: 'Web analytics',
+    imagePath: '/src/assets/projects/site-umami.png'
+  }
+]
+
 const MAX_POSTS = 10
 const allPosts = await getAllCollections()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
@@ -156,30 +184,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
       <Section title='Website List'>
         <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-          <ProjectCard
-            href='https://status.cworld0.com/'
-            heading='Website status'
-            subheading='Record status of CWorld websites'
-            imagePath='/src/assets/projects/status.png'
-          />
-          <ProjectCard
-            href='https://waline.cworld0.com/ui/login'
-            heading='Waline comment system'
-            subheading='Back-end control comment panel'
-            imagePath='/src/assets/projects/waline.png'
-          />
-          <ProjectCard
-            href='https://onedrive.cworld0.com/'
-            heading='Onedrive share'
-            subheading='A share space for onedrive'
-            imagePath='/src/assets/projects/onedrive.png'
-          />
-          <ProjectCard
-            href='/projects'
-            heading='More projects'
-            subheading='Check out more projects'
-            imagePath='/src/assets/projects/coming-soon.png'
-          />
+          {
+            websiteList.map((site) => (
+              <ProjectCard
+                href={site.href}
+                heading={site.heading}
+                subheading={site.subheading}
+                imagePath={site.imagePath}
+              />
+            ))
+          }
         </div>
       </Section>
 
