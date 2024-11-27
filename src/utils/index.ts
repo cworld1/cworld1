@@ -24,3 +24,6 @@ export { safeGetDOM, parseOpenGraph } from './linkPreview'
 
 // Theme
 export { getTheme, listenThemeChange, setTheme } from './theme'
+
+// Toast
+export { showToast } from './toast'

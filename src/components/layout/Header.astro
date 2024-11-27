@@ -95,14 +95,15 @@ import { siteConfig, menuLinks } from '@/site-config'
   </header>
 </header-component>
 
+{/* Use inline to load icon quicker firstly */}
 <script is:inline>
   const toggleDarkModeElement = document.getElementById('toggleDarkMode')
   if (toggleDarkModeElement) {
-    toggleDarkModeElement.dataset.theme = theme || 'system'
+    toggleDarkModeElement.dataset.theme = localStorage.getItem('theme') || 'system'
   }
 </script>
 <script>
-  import { setTheme } from '@/utils'
+  import { setTheme, showToast } from '@/utils'
 
   class Header extends HTMLElement {
     constructor() {
@@ -129,6 +130,7 @@ import { siteConfig, menuLinks } from '@/site-config'
         // document.dispatchEvent(toggleDarkModeEvent)
         const newTheme = setTheme(undefined, true)
         darkModeBtn.dataset.theme = newTheme
+        showToast({ message: `Set theme to ${newTheme}` })
       })
 
       // Menu

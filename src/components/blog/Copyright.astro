@@ -96,14 +96,17 @@ const {
   </a>
 </div>
 
-<script is:inline type='module'>
-  import QRCode from '/scripts/qrcode.js'
+<script>
+  import { showToast } from '@/utils'
+
   const link = window.location.href
 
   // Copy link
   const copyLink = document.getElementById('copy-link')
   copyLink?.addEventListener('click', () => {
     navigator.clipboard.writeText(link)
+    // Show toast
+    showToast({ message: 'Link copied!' })
   })
 
   // Share weibo
