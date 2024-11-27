@@ -4,7 +4,7 @@
 
 {/* Use inline mode to quick load color, which can avoid splash */}
 <script is:inline>
-  const theme = localStorage.getItem('theme')
+  let theme = localStorage.getItem('theme')
   // If undefined or 'system', get from system
   if (!theme || theme === 'system') {
     theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'

@@ -95,8 +95,14 @@ import { siteConfig, menuLinks } from '@/site-config'
   </header>
 </header-component>
 
+<script is:inline>
+  const toggleDarkModeElement = document.getElementById('toggleDarkMode')
+  if (toggleDarkModeElement) {
+    toggleDarkModeElement.dataset.theme = theme || 'system'
+  }
+</script>
 <script>
-  import { getTheme, setTheme } from '@/utils'
+  import { setTheme } from '@/utils'
 
   class Header extends HTMLElement {
     constructor() {
@@ -115,7 +121,6 @@ import { siteConfig, menuLinks } from '@/site-config'
 
       // Dark Mode
       const darkModeBtn = this.querySelector('#toggleDarkMode') as HTMLElement
-      darkModeBtn.dataset.theme = getTheme() || 'system'
       darkModeBtn.addEventListener('click', () => {
         // Old way: dispatch event
         // const toggleDarkModeEvent = new CustomEvent('theme-change', {
