@@ -1,5 +1,7 @@
 import getReadingTime from 'reading-time'
 import { toString } from 'mdast-util-to-string'
+import type { Plugin } from 'unified'
+import type { Root } from 'mdast'
 
 export const remarkReadingTime: Plugin<[], Root> = function () {
   return function (tree, { data }) {
