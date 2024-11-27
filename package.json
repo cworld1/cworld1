@@ -10,7 +10,8 @@
     "astro": "astro",
     "check": "astro check",
     "format": "prettier --write  '**/*.{js,jsx,ts,tsx,md,mdx,astro}'",
-    "lint": "eslint --fix 'src/**/*.{js,ts,jsx,tsx,astro}'"
+    "lint": "eslint --fix 'src/**/*.{js,ts,jsx,tsx,astro}'",
+    "yijiansanlian": "bun lint && bun check && bun format"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
