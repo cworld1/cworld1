@@ -74,8 +74,8 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 
 {
   /* Telegram channel */
-  siteConfig.telegramChannel && (
-    <meta name='telegram:channel' content={siteConfig.telegramChannel} />
+  siteConfig.seo.telegramChannel && (
+    <meta name='telegram:channel' content={siteConfig.seo.telegramChannel} />
   )
 }
 

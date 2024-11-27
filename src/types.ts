@@ -10,20 +10,33 @@ export interface SiteConfig {
     options: Intl.DateTimeFormatOptions
   }
 
+  commonPage: {
+    walineServerUrl: string
+  }
+
+  blog: {
   pageSize: number
   externalLinkArrow: boolean
+  }
+
+  footer: {
   registration?: {
     url: string
     text: string
+    }
   }
 
-  telegramChannel: string
-  walineServerUrl: string
-  applyFriendTip: {
+  links: {
+    applyTip: {
     name: string
-    slogan: string
+      desc: string
     url: string
     avatar: string
+    }
+  }
+
+  seo: {
+    telegramChannel: string
   }
 }
 

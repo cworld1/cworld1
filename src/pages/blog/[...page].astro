@@ -17,7 +17,7 @@ export const getStaticPaths = (async ({ paginate }) => {
   const uniqueTags = getUniqueTags(allPosts)
   const totalPosts = allPosts.length
   return paginate(allPostsByDate, {
-    pageSize: siteConfig.pageSize,
+    pageSize: siteConfig.blog.pageSize,
     props: { uniqueTags, totalPosts }
   })
 }) satisfies GetStaticPaths
@@ -79,7 +79,7 @@ const paginationProps = {
               <Pagination {...paginationProps} />
             </section>
             {!!uniqueTags.length && (
-              <aside class='animate'>
+              <aside class='animate' id='sidebar'>
                 <h2 class='mb-4 flex items-center text-lg font-semibold'>
                   <svg class='me-2 size-6'>
                     <use href='/icons/ui.svg#mingcute-tag-2-line' />

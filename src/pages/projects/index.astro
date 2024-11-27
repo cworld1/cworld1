@@ -422,7 +422,7 @@ const headings = [
   import { pageviewCount } from 'https://cdn.smartcis.cn/npm/@waline/client@v3/dist/pageview.js'
 
   pageviewCount({
-    serverURL: siteConfig.walineServerUrl,
+      serverURL: siteConfig.commonPage.walineServerUrl,
     path: window.location.pathname
   })
 </script>

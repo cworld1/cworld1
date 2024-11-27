@@ -25,27 +25,38 @@ export const siteConfig: SiteConfig = {
   },
 
   // === Customize options ===
+  commonPage: {
+    // Comment system service backend link
+    walineServerUrl: 'https://waline.cworld0.com/'
+  },
+
+  blog: {
   pageSize: 8, // blog page size for pagination
-  externalLinkArrow: true, // show external link arrow
+    externalLinkArrow: true // show external link arrow
+  },
+
+  footer: {
   // Registration information for ICP (optional)
   registration: {
     url: 'https://icp.gov.moe/?keyword=20240147',
     text: '萌备20240147'
+    }
   },
 
-  // Comment system service backend link
-  walineServerUrl: 'https://waline.cworld0.com',
-
-  // Telegram channel (Only to link with telegram instant view.
-  // If you don't know what it is, you can ignore it)
-  telegramChannel: '@cworld0_cn',
-
+  links: {
   // Link info
-  applyFriendTip: {
+    applyTip: {
     name: 'CWorld Site',
-    slogan: '求知若愚，虚怀若谷',
+      desc: '求知若愚，虚怀若谷',
     url: 'https://cworld0.com/',
     avatar: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
+    }
+  },
+
+  seo: {
+    // Telegram channel (Only to link with telegram instant view.
+    // If you don't know what it is, you can ignore it)
+    telegramChannel: '@cworld0_cn'
   }
 }
 

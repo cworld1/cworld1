@@ -21,13 +21,13 @@ const year = new Date().getFullYear()
         > */
         }
         {
-          siteConfig.registration && (
+          siteConfig.footer.registration && (
             <a
               class='py-[3px] text-xs text-muted-foreground'
-              href={siteConfig.registration.url}
+              href={siteConfig.footer.registration.url}
               target='_blank'
             >
-              {siteConfig.registration.text}
+              {siteConfig.footer.registration.text}
             </a>
           )
         }

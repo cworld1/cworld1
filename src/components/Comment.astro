@@ -24,10 +24,12 @@ const { class: className } = Astro.props
       // Prevent Vue log errors
       ;(globalThis as unknown as { __VUE_OPTIONS_API__: boolean }).__VUE_OPTIONS_API__ = true
       ;(globalThis as unknown as { __VUE_PROD_DEVTOOLS__: boolean }).__VUE_PROD_DEVTOOLS__ = false
-      ;(globalThis as unknown as { __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: boolean }).__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = false
+      ;(
+        globalThis as unknown as { __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: boolean }
+      ).__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = false
       init({
         el: '#waline',
-        serverURL: siteConfig.walineServerUrl,
+        serverURL: siteConfig.commonPage.walineServerUrl,
         emoji: [
           'https://cdn.cbd.int/@waline/emojis@1.2.0/bmoji',
           'https://cdn.cbd.int/@waline/emojis@1.2.0/weibo'
