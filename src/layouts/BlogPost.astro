@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import type { MarkdownHeading } from 'astro'
 
 import PageLayout from '@/layouts/BaseLayout.astro'
 import TOC from '@/components/pages/TOC.astro'
@@ -10,8 +11,8 @@ import Comment from '@/components/Comment.astro'
 import Button from '@/components/Button.astro'
 import BackToTop from '@/components/pages/BackToTop.astro'
 
+// Plugin styles
 import '@waline/client/style'
-import type { MarkdownHeading } from 'astro'
 
 interface Props {
   post: CollectionEntry<'post'>
