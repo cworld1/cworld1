@@ -17,6 +17,7 @@ export interface SiteConfig {
     text: string
   }
 
+  telegramChannel: string
   walineServerUrl: string
   applyFriendTip: {
     name: string

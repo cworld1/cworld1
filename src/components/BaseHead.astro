@@ -72,8 +72,12 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 <meta content={description} property='twitter:description' />
 <meta content={socialImageURL} property='twitter:image' />
 
-{/* Telegram */}
-<meta name='telegram:channel' content='@cworld0_cn' />
+{
+  /* Telegram channel */
+  siteConfig.telegramChannel && (
+    <meta name='telegram:channel' content={siteConfig.telegramChannel} />
+  )
+}
 
 {/* Sitemap */}
 <link href='/sitemap-index.xml' rel='sitemap' />

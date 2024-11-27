@@ -36,6 +36,10 @@ export const siteConfig: SiteConfig = {
   // Comment system service backend link
   walineServerUrl: 'https://waline.cworld0.com',
 
+  // Telegram channel (Only to link with telegram instant view.
+  // If you don't know what it is, you can ignore it)
+  telegramChannel: '@cworld0_cn',
+
   // Link info
   applyFriendTip: {
     name: 'CWorld Site',
