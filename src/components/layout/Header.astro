@@ -67,13 +67,16 @@ import { siteConfig, menuLinks } from '@/site-config'
         <div class='flex gap-x-4 transition-all group-[.not-top]:me-1.5 group-[.not-top]:gap-x-2'>
           <button
             id='toggleDarkMode'
-            class='group/dark rounded-md border p-1.5 transition-colors hover:bg-border sm:group-[.not-top]:rounded-xl'
+            class='group/dark box-content size-5 rounded-md border p-1.5 transition-colors hover:bg-border sm:group-[.not-top]:rounded-xl'
           >
             <span class='sr-only'>Dark Theme</span>
-            <svg class='size-5 transition-colors group-hover/dark:text-primary dark:hidden'>
+            <svg class='system size-5 transition-colors group-hover/dark:text-primary'>
+              <use href='/icons/header.svg#mingcute-moonlight-line'></use>
+            </svg>
+            <svg class='light hidden size-5 transition-colors group-hover/dark:text-primary'>
               <use href='/icons/header.svg#mingcute-sun-line'></use>
             </svg>
-            <svg class='hidden size-5 transition-colors group-hover/dark:text-primary dark:block'>
+            <svg class='dark hidden size-5 transition-colors group-hover/dark:text-primary'>
               <use href='/icons/header.svg#mingcute-moon-stars-line'></use>
             </svg>
           </button>
@@ -93,6 +96,8 @@ import { siteConfig, menuLinks } from '@/site-config'
 </header-component>
 
 <script>
+  import { getTheme, setTheme } from '@/utils'
+
   class Header extends HTMLElement {
     constructor() {
       super()
@@ -108,16 +113,22 @@ import { siteConfig, menuLinks } from '@/site-config'
         preScrollY = window.scrollY
       })
 
+      // Dark Mode
+      const darkModeBtn = this.querySelector('#toggleDarkMode') as HTMLElement
+      darkModeBtn.dataset.theme = getTheme() || 'system'
+      darkModeBtn.addEventListener('click', () => {
+        // Old way: dispatch event
+        // const toggleDarkModeEvent = new CustomEvent('theme-change', {
+        //   detail: { theme: localStorage.getItem('theme') === 'light' ? 'dark' : 'light' }
+        // })
+        // document.dispatchEvent(toggleDarkModeEvent)
+        const newTheme = setTheme(undefined, true)
+        darkModeBtn.dataset.theme = newTheme
+      })
+
       // Menu
       this.querySelector('#toggleMenu')?.addEventListener('click', () => {
         this.classList.toggle('expanded')
-      })
-      // Dark Mode
-      this.querySelector('#toggleDarkMode')?.addEventListener('click', () => {
-        const toggleDarkModeEvent = new CustomEvent('theme-change', {
-          detail: { theme: localStorage.getItem('theme') === 'light' ? 'dark' : 'light' }
-        })
-        document.dispatchEvent(toggleDarkModeEvent)
       })
     }
   }
@@ -156,6 +167,26 @@ import { siteConfig, menuLinks } from '@/site-config'
         rgba(24, 24, 27, 0.08) 0px 0px 0px 1px,
         rgba(39, 39, 42, 0.08) 0px 10px 15px -3px,
         rgba(39, 39, 42, 0.08) 0px 4px 6px -4px;
+    }
+  }
+
+  /* dark light mode toggle */
+  #toggleDarkMode {
+    &[data-theme='dark'] {
+      & .system {
+        display: none;
+      }
+      & .dark {
+        display: block;
+      }
+    }
+    &[data-theme='light'] {
+      & .system {
+        display: none;
+      }
+      .light {
+        display: block;
+      }
     }
   }
 </style>
