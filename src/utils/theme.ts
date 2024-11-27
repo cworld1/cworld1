@@ -1,6 +1,5 @@
 export function getTheme() {
-  const savedTheme = localStorage.getItem('theme')
-  if (savedTheme) return savedTheme
+  return localStorage.getItem('theme')
 }
 
 export function listenThemeChange(theme?: string) {
@@ -19,7 +18,7 @@ export function setTheme(theme?: string, save = false) {
     }
     if (save) localStorage.setItem('theme', theme)
   } else {
-    theme = getTheme()
+    theme = getTheme() ?? undefined
 
     if (save) {
       // System equals null, switch cycle in ['system', 'dark', 'light']
