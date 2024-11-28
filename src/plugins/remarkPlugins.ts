@@ -9,8 +9,7 @@ export const remarkReadingTime: Plugin<[], Root> = function () {
     const readingTime = getReadingTime(textOnPage)
     // readingTime.text will give us minutes read as a friendly string,
     // i.e. "3 min read"
-    const typedData = data as { astro: { frontmatter: { minutesRead: string } } }
-    typedData.astro.frontmatter.minutesRead = readingTime.text
-    data.astro.frontmatter.minutesRead = readingTime.text
+    const astroData = data as { astro: { frontmatter: { minutesRead: string } } }
+    astroData.astro.frontmatter.minutesRead = readingTime.text
   }
 }
