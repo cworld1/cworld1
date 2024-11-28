@@ -38,7 +38,7 @@ export interface SiteConfig {
   }
 
   seo: {
-    telegramChannel: string
+    telegramChannel?: string
   }
 }
 
