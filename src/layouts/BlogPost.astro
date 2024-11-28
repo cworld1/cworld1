@@ -13,6 +13,7 @@ import BackToTop from '@/components/pages/BackToTop.astro'
 
 // Plugin styles
 import '@waline/client/style'
+import MediumZoom from '@/components/blog/MediumZoom.astro'
 
 interface Props {
   post: CollectionEntry<'post'>
@@ -75,6 +76,8 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
     <BackToTop header='content-header' content='content' />
   </div>
 </PageLayout>
+
+<MediumZoom />
 
 <style define:vars={{ primaryColor }}>
   :global(.highlight) {

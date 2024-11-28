@@ -17,7 +17,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import icon from 'astro-icon'
 // Markdown
-import { remarkReadingTime } from './src/plugins/remarkPlugins.ts'
+import { remarkReadingTime, remarkAddZoomable } from './src/plugins/remarkPlugins.ts'
 import rehypeExternalLinks from 'rehype-external-links'
 import { siteConfig } from './src/site.config.ts'
 import {
@@ -71,8 +71,7 @@ export default defineConfig({
   },
   // Markdown Options
   markdown: {
-    // @ts-ignore
-    remarkPlugins: [remarkReadingTime],
+    remarkPlugins: [remarkReadingTime, remarkAddZoomable],
     rehypePlugins: [
       [
         rehypeExternalLinks,
