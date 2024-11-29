@@ -1,32 +1,13 @@
 ---
-export const prerender = true
-
 import Button from '@/components/Button.astro'
+import CardList from '@/components/pages/CardList.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
+import { terms } from '@/site-config'
 
 const meta = {
   title: 'Site policy',
   description: 'Site policy documentation'
 }
-
-const terms = [
-  {
-    title: 'Privacy Policy',
-    link: '/terms/privacy-policy'
-  },
-  {
-    title: 'Terms and Conditions',
-    link: '/terms/terms-and-conditions'
-  },
-  {
-    title: 'Copyright',
-    link: '/terms/copyright'
-  },
-  {
-    title: 'Disclaimer',
-    link: '/terms/disclaimer'
-  }
-]
 ---
 
 <PageLayout meta={meta}>
@@ -36,15 +17,7 @@ const terms = [
 
     <div class='animate flex flex-col gap-y-4'>
       <h2 class='text-xl font-medium'>Site policy documentation</h2>
-      <ul class='flex flex-col gap-y-3 rounded-xl border px-4 py-3 text-start'>
-        {
-          terms.map((term) => (
-            <li>
-              <a href={term.link}>{term.title}</a>
-            </li>
-          ))
-        }
-      </ul>
+      <CardList {...terms} />
       <h2 class='text-xl font-medium'>Help Infomation</h2>
       <p>Email: <a href='mailto:cworldo@qq.com'>cworld0@qq.com</a></p>
     </div>

@@ -1,0 +1,24 @@
+---
+import type { CardList, CardListData } from '@/types'
+import CardListChildren from './CardListChildren.astro'
+import Collapse from '../Collapse.astro'
+
+type Props = CardListData & {
+  collapse?: boolean
+}
+
+const { title, list, collapse } = Astro.props
+---
+
+{
+  collapse ? (
+    <Collapse title={title} class='not-prose'>
+      <CardListChildren children={list} />
+    </Collapse>
+  ) : (
+    <div class='not-prose flex flex-col gap-y-2 rounded-xl border px-4 py-3 sm:py-4'>
+      <p class='text-lg font-medium text-foreground'>{title}</p>
+      <CardListChildren children={list} />
+    </div>
+  )
+}
