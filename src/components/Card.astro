@@ -6,9 +6,9 @@ const { as: Tag = 'div', class: className, href, heading, subheading, date } = A
 
 <Tag
   class={cn(
-    className,
-    'relative rounded-2xl border border-border bg-primary-foreground px-5 py-3',
-    href && 'transition-all hover:border-foreground/25 hover:shadow-sm'
+    'not-prose block relative rounded-2xl border border-border bg-primary-foreground px-5 py-3',
+    href && 'transition-all hover:border-foreground/25 hover:shadow-sm',
+    className
   )}
   href={href}
 >
