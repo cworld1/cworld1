@@ -25,7 +25,8 @@ const typographyConfig = {
         margin: '0 auto'
       },
       table: {
-        width: '100%'
+        display: 'block',
+        overflowX: 'scroll'
       },
       blockquote: {
         position: 'relative',
