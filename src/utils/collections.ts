@@ -22,7 +22,9 @@ export function groupCollectionsByYear<T extends CollectionKey>(
     return acc
   }, new Map<number, Collections<T>>())
 
-  return Array.from(collectionsByYear.entries()).sort((a, b) => b[0] - a[0])
+  return Array.from(
+    collectionsByYear.entries() as IterableIterator<[number, CollectionEntry<T>[]]>
+  ).sort((a, b) => b[0] - a[0])
 }
 
 export function sortMDByDate<T extends CollectionKey>(collections: Collections<T>) {
