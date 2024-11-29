@@ -76,7 +76,7 @@ html.dark {
   position: relative;
 }
 .astro-code:has(div.title) pre {
-  padding-top: 2.25rem;
+  padding-top: 2.5rem;
 }
 .astro-code button.copy {
   & .success::before {

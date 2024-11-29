@@ -7,7 +7,6 @@ import Comment from '@/components/Comment.astro'
 import { siteConfig } from '@/site-config'
 
 import links from 'public/links.json'
-import '@/assets/styles/fc.css'
 
 const headings = [
   {
@@ -106,6 +105,7 @@ const friendlist = links.friends
   <h2 id='small-circle'>Small Circle</h2>
   <div id='friend-circle-lite-root' class='not-prose'>Loading...</div>
   <script>
+    import '@/assets/styles/fc.css'
     import { FriendCircle } from '@/plugins/friendCircle'
     const fc = new FriendCircle()
     fc.init({
