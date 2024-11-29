@@ -1,4 +1,4 @@
-import type { SiteConfig, MenuLinks, SocialLinks } from '@/types'
+import type { SiteConfig, FooterConfig, IntegrationConfig, MenuLinks, CardListData } from '@/types'
 
 export const siteConfig: SiteConfig = {
   // === Required meta properties ===
@@ -30,24 +30,12 @@ export const siteConfig: SiteConfig = {
   // - https://cdn.jsdelivr.net/npm
   // - https://cdn.smartcis.cn/npm
   // - https://unkpg.com
+  // - https://cdn.cbd.int
 
   // === Customize options ===
-  commonPage: {
-    // Comment system service backend link
-    walineServerUrl: 'https://waline.cworld0.com/'
-  },
-
   blog: {
     pageSize: 8, // blog page size for pagination
     externalLinkArrow: true // show external link arrow
-  },
-
-  footer: {
-    // Registration information for ICP (optional)
-    registration: {
-      url: 'https://icp.gov.moe/?keyword=20240147',
-      text: '萌备20240147'
-    }
   },
 
   links: {
@@ -67,25 +55,52 @@ export const siteConfig: SiteConfig = {
   }
 }
 
-// Will be used in Footer.astro
-export const socialLinks: SocialLinks = [
-  // {
-  //   name: 'mail',
-  //   url: 'mailto:cworld0@qq.com'
-  // },
-  {
-    name: 'github',
-    url: 'https://github.com/cworld1'
+// Footer configuration, which contains the registration and social links
+// and will be used in Footer.astro
+export const footerConfig: FooterConfig = {
+  // Registration information for ICP (optional)
+  registration: {
+    url: 'https://icp.gov.moe/?keyword=20240147',
+    text: '萌备20240147'
   },
-  {
-    name: 'telegram',
-    url: 'https://t.me/cworld0_cn'
-  },
-  {
-    name: 'coolapk',
-    url: 'http://www.coolapk.com/u/1384771'
+  socialLinks: [
+    // {
+    //   name: 'mail',
+    //   url: 'mailto:cworld0@qq.com'
+    // },
+    {
+      name: 'github',
+      url: 'https://github.com/cworld1'
+    },
+    {
+      name: 'telegram',
+      url: 'https://t.me/cworld0_cn'
+    },
+    {
+      name: 'coolapk',
+      url: 'http://www.coolapk.com/u/1384771'
+    }
+  ]
+}
+
+export const integrationConfig: IntegrationConfig = {
+  waline: {
+    // Comment system service link (no link to disable)
+    server: 'https://waline.cworld0.com/',
+    // Refer https://waline.js.org/en/guide/features/emoji.html
+    emoji: ['bmoji', 'weibo'],
+    // Refer https://waline.js.org/en/reference/client/props.html
+    additionalConfigs: {
+      // search: false,
+      pageview: true,
+      comment: true,
+      locale: {
+        reaction0: 'Like',
+        placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
+      }
+    }
   }
-]
+}
 
 export const menuLinks: MenuLinks = [
   {
@@ -105,3 +120,25 @@ export const menuLinks: MenuLinks = [
     label: 'About'
   }
 ]
+
+export const terms: CardListData = {
+  title: 'Terms content',
+  list: [
+    {
+      title: 'Privacy Policy',
+      link: '/terms/privacy-policy'
+    },
+    {
+      title: 'Terms and Conditions',
+      link: '/terms/terms-and-conditions'
+    },
+    {
+      title: 'Copyright',
+      link: '/terms/copyright'
+    },
+    {
+      title: 'Disclaimer',
+      link: '/terms/disclaimer'
+    }
+  ]
+}
