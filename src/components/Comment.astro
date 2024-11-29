@@ -1,18 +1,24 @@
 ---
+import { integrationConfig } from '@/site-config'
 import { cn } from '@/utils'
 
 const { class: className } = Astro.props
 ---
 
-<comment-component>
-  <div id='waline' class={cn('not-prose', className)}>
-    Comment seems to stuck. Try to refresh?✨
-  </div>
-</comment-component>
+{
+  integrationConfig.waline.server && (
+    <comment-component>
+      <div id='waline' class={cn('not-prose', className)}>
+        Comment seems to stuck. Try to refresh?✨
+      </div>
+    </comment-component>
+  )
+}
 
 <script>
-  import { siteConfig } from '@/site-config'
-  import { init } from '@waline/client'
+  import { integrationConfig, siteConfig } from '@/site-config'
+  import { init as walineInit } from '@waline/client'
+  import type { WalineEmojiPresets } from '@waline/client'
   import '@waline/client/style'
 
   class Comment extends HTMLElement {
@@ -27,21 +33,17 @@ const { class: className } = Astro.props
       ;(
         globalThis as unknown as { __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: boolean }
       ).__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = false
-      init({
+
+      const emoji = integrationConfig.waline.emoji?.map(
+        (preset) => `${siteConfig.npmCDN}/@waline/emojis@1.2.0/${preset}` as WalineEmojiPresets
+      )
+
+      walineInit({
         el: '#waline',
-        serverURL: siteConfig.commonPage.walineServerUrl,
-        emoji: [
-          'https://cdn.cbd.int/@waline/emojis@1.2.0/bmoji',
-          'https://cdn.cbd.int/@waline/emojis@1.2.0/weibo'
-        ],
+        serverURL: integrationConfig.waline.server || '',
+        emoji,
         reaction: ['/icons/heart-item.svg'],
-        // search: false,
-        pageview: true,
-        comment: true,
-        locale: {
-          reaction0: 'Like',
-          placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
-        }
+        ...integrationConfig.waline.additionalConfigs
       })
     }
   }
