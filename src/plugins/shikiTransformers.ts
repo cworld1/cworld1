@@ -1,6 +1,8 @@
 import { h } from 'hastscript'
 import type { ShikiTransformer } from 'shiki'
 
+export { transformerNotationDiff } from './shikiOfficialTransformers'
+
 function parseMetaString(str = '') {
   return Object.fromEntries(
     str.split(' ').reduce((acc: [string, string | true][], cur) => {
@@ -14,6 +16,7 @@ function parseMetaString(str = '') {
   )
 }
 
+// Nest a div in the outer layer
 export const updateStyle = (): ShikiTransformer => {
   return {
     name: 'shiki-transformer-update-style',
@@ -31,6 +34,7 @@ export const updateStyle = (): ShikiTransformer => {
   }
 }
 
+// Process meta string, like ```ts title="test.ts"
 export const processMeta = (): ShikiTransformer => {
   return {
     name: 'shiki-transformer-process-meta',
@@ -44,6 +48,7 @@ export const processMeta = (): ShikiTransformer => {
   }
 }
 
+// Add a title to the code block
 export const addTitle = (): ShikiTransformer => {
   return {
     name: 'shiki-transformer-add-title',
@@ -71,6 +76,7 @@ export const addTitle = (): ShikiTransformer => {
   }
 }
 
+// Add a language tag to the code block
 export const addLanguage = (): ShikiTransformer => {
   return {
     name: 'shiki-transformer-add-language',
@@ -88,6 +94,7 @@ export const addLanguage = (): ShikiTransformer => {
   }
 }
 
+// Add a copy button to the code block
 export const addCopyButton = (timeout?: number): ShikiTransformer => {
   const toggleMs = timeout || 3000
 

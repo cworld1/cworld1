@@ -1,16 +1,11 @@
 // https://github.com/withastro/starlight/blob/main/packages/starlight/user-components/rehype-steps.ts
 
 import { AstroError } from 'astro/errors'
-
 import type { Element, Root } from 'hast'
-
 import { rehype } from 'rehype'
-
-import rehypeFormat from 'rehype-format'
-
 import type { VFile } from 'vfile'
 
-const prettyPrintProcessor = rehype().data('settings', { fragment: true }).use(rehypeFormat)
+const prettyPrintProcessor = rehype().data('settings', { fragment: true })
 
 const prettyPrintHtml = (html: string) =>
   prettyPrintProcessor.processSync({ value: html }).toString()

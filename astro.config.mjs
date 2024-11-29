@@ -24,7 +24,8 @@ import {
   addCopyButton,
   addTitle,
   addLanguage,
-  updateStyle
+  updateStyle,
+  transformerNotationDiff
 } from './src/plugins/shikiTransformers.ts'
 
 // https://astro.build/config
@@ -76,7 +77,7 @@ export default defineConfig({
       [
         rehypeExternalLinks,
         {
-          ...(siteConfig.blog.externalLinkArrow && { content: { type: 'text', value: ' ↗' } }),
+          ...(siteConfig.content.externalLinkArrow && { content: { type: 'text', value: ' ↗' } }),
           target: '_blank',
           rel: ['nofollow, noopener, noreferrer']
         }
@@ -89,7 +90,13 @@ export default defineConfig({
         light: 'github-light',
         dark: 'github-dark'
       },
-      transformers: [updateStyle(), addTitle(), addLanguage(), addCopyButton(2000)]
+      transformers: [
+        transformerNotationDiff(),
+        updateStyle(),
+        addTitle(),
+        addLanguage(),
+        addCopyButton(2000)
+      ]
     }
   }
 })

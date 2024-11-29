@@ -1,19 +1,22 @@
 ---
-import type { CollectionEntry } from 'astro:content'
 import type { MarkdownHeading } from 'astro'
-
 import PageLayout from '@/layouts/BaseLayout.astro'
-import TOC from '@/components/pages/TOC.astro'
-import BlogHero from '@/components/blog/Hero.astro'
-import Copyright from '@/components/blog/Copyright.astro'
+import type { CollectionEntry } from 'astro:content'
+
 import ArticleBottom from '@/components/blog/ArticleBottom.astro'
-import Comment from '@/components/Comment.astro'
-import Button from '@/components/Button.astro'
+import Copyright from '@/components/blog/Copyright.astro'
+import BlogHero from '@/components/blog/Hero.astro'
 import BackToTop from '@/components/pages/BackToTop.astro'
+import Comment from '@/components/pages/Comment.astro'
+import TOC from '@/components/pages/TOC.astro'
+import { Button } from '@/components/user'
 
 // Plugin styles
 import '@waline/client/style'
+
 import MediumZoom from '@/components/blog/MediumZoom.astro'
+import { cn } from '@/utils'
+import { siteConfig } from '@/site-config'
 
 interface Props {
   post: CollectionEntry<'post'>
@@ -53,7 +56,7 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
         <div id='content-header' class='animate'><BlogHero content={post} /></div>
         <div
           id='content'
-          class='animate prose prose-base prose-zinc mt-8 max-w-none text-muted-foreground dark:prose-invert prose-headings:font-medium prose-headings:text-foreground md:min-w-[45ch]'
+          class={cn('animate mt-8 max-w-none md:min-w-[45ch]', siteConfig.content.typographyProse)}
         >
           <slot />
         </div>

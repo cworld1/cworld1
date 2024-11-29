@@ -1,8 +1,9 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+
+import QRCode from '@/components/blog/QRCode.astro'
 import { cn, getFormattedDate } from '@/utils'
 import { siteConfig } from '@/site-config'
-import QRCode from './QRCode.astro'
 
 interface Props {
   content: CollectionEntry<'post'>

@@ -31,10 +31,10 @@ const { class: className } = Astro.props
 </search-component>
 
 <script>
+  import type { CollectionEntry, CollectionKey } from 'astro:content'
   import Fuse, { type FuseResult, type FuseResultMatch } from 'fuse.js'
+
   import { getAllCollections } from '@/utils'
-  import type { CollectionEntry } from 'astro:content'
-  import type { CollectionKey } from 'astro:content'
 
   class SearchComponent extends HTMLElement {
     searchReadout!: HTMLElement

@@ -1,9 +1,18 @@
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import typography from '@tailwindcss/typography'
 
-const typographyConfig = {
-  DEFAULT: {
+const fg = 'hsl(var(--foreground) / var(--tw-text-opacity, 1))'
+const fgMuted = 'hsl(var(--muted-foreground) / var(--tw-text-opacity, 1))'
+
+const typographyConfig = ({ theme }) => ({
+  pure: {
     css: {
+      '--tw-prose-headings': fg,
+      '--tw-prose-body': fgMuted,
+      '--tw-prose-links': fg,
+      '--tw-prose-quotes': fgMuted,
+      '--tw-prose-code:': fg,
+
       h2: {
         '&:target::before': {
           display: 'inline-block',
@@ -21,7 +30,7 @@ const typographyConfig = {
         }
       },
       img: {
-        borderRadius: 'var(--radius)',
+        borderRadius: theme('borderRadius.lg'),
         margin: '0 auto'
       },
       table: {
@@ -32,7 +41,7 @@ const typographyConfig = {
         position: 'relative',
         overflow: 'hidden',
         borderWidth: '0.1rem',
-        borderRadius: 'var(--radius)',
+        borderRadius: theme('borderRadius.lg'),
         paddingInlineStart: '1.6rem !important',
         paddingInlineEnd: '1.6rem !important',
         '&::after': {
@@ -54,7 +63,7 @@ const typographyConfig = {
       }
     }
   }
-}
+})
 
 /** @type {import('tailwindcss').Config} */
 const config = {

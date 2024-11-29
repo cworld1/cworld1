@@ -1,10 +1,9 @@
 ---
-import type { HTMLTag, Polymorphic } from 'astro/types'
-import type { CollectionEntry } from 'astro:content'
 import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+import type { HTMLTag, Polymorphic } from 'astro/types'
 
-import FormattedDate from '../FormattedDate.astro'
-import Button from '../Button.astro'
+import { Button, FormattedDate } from '@/components/user'
 import { cn } from '@/utils'
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {

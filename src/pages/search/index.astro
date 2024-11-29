@@ -1,10 +1,11 @@
 ---
-export const prerender = true
-
-import Button from '@/components/Button.astro'
-import Search from '@/components/search/Search.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
+
+import Search from '@/components/search/Search.astro'
+import { Button } from '@/components/user'
 import { getAllCollections } from '@/utils'
+
+export const prerender = true
 
 const allPosts = await getAllCollections()
 

@@ -1,6 +1,7 @@
 ---
-import Button from '@/components/Button.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
+
+import { Button } from '@/components/user'
 import { cn, getAllCollections, getUniqueTagsWithCount } from '@/utils'
 
 const allPosts = await getAllCollections()

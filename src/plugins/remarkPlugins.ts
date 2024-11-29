@@ -1,8 +1,9 @@
+import type { Node, Root } from 'mdast'
 import getReadingTime from 'reading-time'
-import { toString } from 'mdast-util-to-string'
-import { visit } from 'unist-util-visit'
 import type { Plugin } from 'unified'
-import type { Root, Node } from 'mdast'
+import { visit } from 'unist-util-visit'
+
+import toString from './mdastUtilToString'
 
 export const remarkReadingTime: Plugin<[], Root> = function () {
   return function (tree, { data }) {

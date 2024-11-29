@@ -1,9 +1,10 @@
 ---
-export const prerender = true
-
 import PostLayout from '@/layouts/BlogPost.astro'
-import { getAllCollections } from '@/utils'
 import { type CollectionEntry } from 'astro:content'
+
+import { getAllCollections } from '@/utils'
+
+export const prerender = true
 
 export async function getStaticPaths() {
   const posts = await getAllCollections()

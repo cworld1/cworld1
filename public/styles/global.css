@@ -39,12 +39,16 @@ html.dark {
 /* Shiki */
 .astro-code {
   background-color: transparent !important;
+
   & pre {
     border-radius: 0.5rem;
     background-color: hsl(var(--primary-foreground));
     margin: 0 !important;
 
     & code {
+      display: block;
+      width: fit-content;
+      min-width: 100%;
       counter-reset: step;
       counter-increment: step 0;
 
@@ -63,55 +67,80 @@ html.dark {
       }
     }
   }
+
+  /* Shiki transformer */
+  &:has(code) {
+    position: relative;
+  }
+  &:has(div.title) pre {
+    padding-top: 2.5rem;
+  }
+  & button.copy {
+    & .success::before {
+      content: 'Copied!';
+      position: absolute;
+      right: 100%;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.75rem;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      border-radius: 0.25rem;
+      color: hsl(var(--muted-foreground));
+      background-color: hsl(var(--primary-foreground));
+      border: 1px solid hsl(var(--border));
+    }
+    &.copied {
+      & .success {
+        display: block;
+      }
+
+      & .ready {
+        display: none;
+      }
+    }
+  }
+
+  &:hover {
+    button.copy {
+      opacity: 1;
+    }
+    .language {
+      opacity: 0;
+    }
+  }
+
+  & .diff {
+    margin: 0 -15px;
+    padding: 0 15px;
+    min-width: calc(100% + 30px);
+    display: inline-block;
+    &.remove {
+      background-color: rgba(244, 63, 94, 0.16);
+      opacity: 0.7;
+      &::before {
+        content: '-';
+        color: var(--vp-code-line-diff-remove-symbol-color);
+      }
+    }
+    &.add {
+      background-color: rgba(16, 185, 129, 0.16);
+      &::before {
+        content: '+';
+        color: var(--vp-code-line-diff-add-symbol-color);
+      }
+    }
+  }
 }
 .dark {
-  .astro-code pre,
-  .astro-code pre span {
-    color: var(--shiki-dark) !important;
+  .astro-code pre {
     background-color: var(--shiki-dark-bg);
   }
-}
-/* Shiki transformer */
-.astro-code:has(code) {
-  position: relative;
-}
-.astro-code:has(div.title) pre {
-  padding-top: 2.5rem;
-}
-.astro-code button.copy {
-  & .success::before {
-    content: 'Copied!';
-    position: absolute;
-    right: 100%;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75rem;
-    padding: 0.5rem;
-    margin-right: 0.5rem;
-    border-radius: 0.25rem;
-    color: hsl(var(--muted-foreground));
-    background-color: hsl(var(--primary-foreground));
-    border: 1px solid hsl(var(--border));
-  }
-  &.copied {
-    & .success {
-      display: block;
-    }
-
-    & .ready {
-      display: none;
-    }
-  }
-}
-.astro-code:hover {
-  button.copy {
-    opacity: 1;
-  }
-  .language {
-    opacity: 0;
+  .astro-code pre span {
+    color: var(--shiki-dark) !important;
   }
 }
 

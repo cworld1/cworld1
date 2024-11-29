@@ -1,18 +1,16 @@
-import type { AstroGlobal } from 'astro'
-import type { CollectionEntry } from 'astro:content'
-import { getImage } from 'astro:assets'
+import type { AstroGlobal, ImageMetadata } from 'astro'
 import rss from '@astrojs/rss'
-
-import { siteConfig } from '@/site-config'
-import { getAllCollections, sortMDByDate } from '@/utils'
-
+import { getImage } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+import type { Root } from 'mdast'
 import rehypeStringify from 'rehype-stringify'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
 import { visit } from 'unist-util-visit'
-import type { Root } from 'mdast'
-import type { ImageMetadata } from 'astro'
+
+import { getAllCollections, sortMDByDate } from '@/utils'
+import { siteConfig } from '@/site-config'
 
 // Get dynamic import of images as a map collection
 const imagesGlob = import.meta.glob<{ default: ImageMetadata }>(

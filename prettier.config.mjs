@@ -26,7 +26,28 @@ export default {
   vueIndentScriptAndStyle: false,
 
   // Prettier plugins
-  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  plugins: [
+    'prettier-plugin-astro',
+    'prettier-plugin-tailwindcss',
+    '@ianvs/prettier-plugin-sort-imports'
+  ],
+  importOrder: [
+    '^(astro/(:*)$)|^(astro$)',
+    '<THIRD_PARTY_MODULES>',
+    '',
+    '^@/types/(.*)$',
+    '^@/layout/(.*)$',
+    '^@/pages/(.*)$',
+    '^@/components/(.*)$',
+    '^@/utils$',
+    '^@/utils/(.*)$',
+    '^@/plugins/(.*)$',
+    '^@/assets/(.*)$',
+    '^@/site-config$',
+    '',
+    '^[./]'
+  ],
+  importOrderParserPlugins: ['astro', 'typescript', 'jsx', 'decorators-legacy'],
   overrides: [
     {
       files: '*.astro',

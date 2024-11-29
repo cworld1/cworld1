@@ -1,12 +1,11 @@
 ---
-import Collapse from '@/components/Collapse.astro'
-import Timeline from '@/components/Timeline.astro'
-import FriendList from '@/components/links/FriendList.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
-import Comment from '@/components/Comment.astro'
-import { siteConfig } from '@/site-config'
-
 import links from 'public/links.json'
+
+import FriendList from '@/components/links/FriendList.astro'
+import Comment from '@/components/pages/Comment.astro'
+import { Collapse, Timeline } from '@/components/user'
+import { siteConfig } from '@/site-config'
 
 const headings = [
   {
@@ -106,7 +105,9 @@ const friendlist = links.friends
   <div id='friend-circle-lite-root' class='not-prose'>Loading...</div>
   <script>
     import '@/assets/styles/fc.css'
+
     import { FriendCircle } from '@/plugins/friendCircle'
+
     const fc = new FriendCircle()
     fc.init({
       private_api_url: 'https://cworld-fc.netlify.app/',

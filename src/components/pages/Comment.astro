@@ -1,6 +1,6 @@
 ---
-import { integrationConfig } from '@/site-config'
 import { cn } from '@/utils'
+import { integrationConfig } from '@/site-config'
 
 const { class: className } = Astro.props
 ---
@@ -16,9 +16,11 @@ const { class: className } = Astro.props
 }
 
 <script>
-  import { integrationConfig, siteConfig } from '@/site-config'
   import { init as walineInit } from '@waline/client'
   import type { WalineEmojiPresets } from '@waline/client'
+
+  import { integrationConfig, siteConfig } from '@/site-config'
+
   import '@waline/client/style'
 
   class Comment extends HTMLElement {

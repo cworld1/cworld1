@@ -1,16 +1,12 @@
 ---
+import PageLayout from '@/layouts/CommonPage.astro'
 import { Image } from 'astro:assets'
 
-import Button from '@/components/Button.astro'
-import Collapse from '@/components/Collapse.astro'
-import Timeline from '@/components/Timeline.astro'
-import PageLayout from '@/layouts/CommonPage.astro'
-import Comment from '@/components/Comment.astro'
-import Spoiler from '@/components/Spoiler.astro'
-import ToolSection from '@/components/about/ToolSection.astro'
 import Substats from '@/components/about/Substats.astro'
+import ToolSection from '@/components/about/ToolSection.astro'
 import Umami from '@/components/about/Umami.astro'
-
+import Comment from '@/components/pages/Comment.astro'
+import { Button, Collapse, Spoiler, Timeline } from '@/components/user'
 import notByAIImage from '@/assets/not-by-ai-badge.svg'
 
 const headings = [

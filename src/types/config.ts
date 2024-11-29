@@ -16,7 +16,6 @@ export interface SiteConfig {
 
   blog: {
     pageSize: number
-    externalLinkArrow: boolean
   }
 
   links: {
@@ -30,6 +29,11 @@ export interface SiteConfig {
 
   seo: {
     telegramChannel?: string
+  }
+
+  content: {
+    externalLinkArrow: boolean
+    typographyProse: string
   }
 }
 
