@@ -53,7 +53,9 @@ export const siteConfig: SiteConfig = {
     telegramChannel: '@cworld0_cn'
   },
   content: {
-    externalLinkArrow: true // show external link arrow
+    externalLinkArrow: true, // show external link arrow
+    // Currently support weibo, x, bluesky
+    share: ['weibo', 'x', 'bluesky']
   }
 }
 

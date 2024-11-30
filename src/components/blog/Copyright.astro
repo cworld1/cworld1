@@ -14,6 +14,23 @@ const {
   content: { slug, data },
   class: className
 } = Astro.props
+
+const link = `${import.meta.env.SITE}/blog/${slug}`
+
+const shares = {
+  weibo: {
+    icon: 'mingcute-weibo-line',
+    link: `http://service.weibo.com/share/share.php?url=${encodeURIComponent(link)}&title=${data.title}&pic=${data.heroImage.src.src}`
+  },
+  x: {
+    icon: 'mingcute-social-x-line',
+    link: `https://x.com/intent/tweet?text='${data.title}'&url='${encodeURIComponent(link)}'&via='${siteConfig.author}'`
+  },
+  bluesky: {
+    icon: 'mingcute-bluesky-social-line',
+    link: `https://bsky.app/intent/compose?text=${data.title}%0A${encodeURIComponent(link)}`
+  }
+}
 ---
 
 <div
@@ -63,20 +80,34 @@ const {
   {/* functions */}
   <div class='relative'>
     <div class='flex flex-row gap-3'>
+      <button
+        id='copy-link'
+        class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+      >
+        <svg class='size-5'>
+          <use href='/icons/copyright-sponsor.svg#mingcute-link-2-line'></use>
+        </svg>
+      </button>
+      <button
+        id='get-qrcode'
+        class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+      >
+        <svg class='size-5'>
+          <use href='/icons/copyright-sponsor.svg#mingcute-qrcode-2-line'></use>
+        </svg>
+      </button>
       {
-        [
-          { id: 'copy-link', icon: 'mingcute-link-2-line' },
-          { id: 'get-qrcode', icon: 'mingcute-qrcode-2-line' },
-          { id: 'share-weibo', icon: 'mingcute-weibo-line' }
-        ].map(({ id, icon }) => (
-          <button
-            id={id}
-            class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
-          >
-            <svg class='size-5'>
-              <use href={`/icons/copyright-sponsor.svg#${icon}`} />
-            </svg>
-          </button>
+        siteConfig.content.share.map((share) => (
+          <a href={shares[share].link} target='_blank'>
+            <button
+              id={`share-${share}`}
+              class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+            >
+              <svg class='size-5'>
+                <use href={`/icons/copyright-sponsor.svg#${shares[share].icon}`} />
+              </svg>
+            </button>
+          </a>
         ))
       }
     </div>
@@ -100,20 +131,11 @@ const {
 <script>
   import { showToast } from '@/utils'
 
-  const link = window.location.href
-
   // Copy link
   const copyLink = document.getElementById('copy-link')
   copyLink?.addEventListener('click', () => {
-    navigator.clipboard.writeText(link)
+    navigator.clipboard.writeText(window.location.href)
     // Show toast
     showToast({ message: 'Link copied!' })
-  })
-
-  // Share weibo
-  const shareWeibo = document.getElementById('share-weibo')
-  shareWeibo?.addEventListener('click', () => {
-    const shareUrl = `http://service.weibo.com/share/share.php?url=${link}&title=${document.title}&pic=https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=400`
-    window.open(shareUrl, '_blank')
   })
 </script>

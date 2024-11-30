@@ -27,6 +27,8 @@ export interface SocialLink {
   url: string
 }
 
+export type ShareItem = 'weibo' | 'x' | 'bluesky'
+
 export type CardListData = {
   title: string
   list: CardList

@@ -1,4 +1,4 @@
-import type { SocialLink } from './common'
+import type { ShareItem, SocialLink } from './common'
 
 export interface SiteConfig {
   author: string
@@ -33,6 +33,7 @@ export interface SiteConfig {
 
   content: {
     externalLinkArrow: boolean
+    share: ShareItem[]
   }
 }
 
