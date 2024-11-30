@@ -1,25 +1,17 @@
 // @ts-check
 
-import { defineConfig } from 'astro/config'
-
-// Adapter
-// 1. Vercel (serverless)
-import vercelServerless from '@astrojs/vercel/serverless'
-// 2. Vercel (static)
-// import vercelStatic from '@astrojs/vercel/static';
-// 3. Local (standalone)
-// import node from '@astrojs/node'
-// ---
-
-// Integrations
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
+// Adapter
+import vercelServerless from '@astrojs/vercel/serverless'
 import icon from 'astro-icon'
-// Markdown
-import { remarkReadingTime, remarkAddZoomable } from './src/plugins/remarkPlugins.ts'
+import { defineConfig } from 'astro/config'
+// Integrations
 import rehypeExternalLinks from 'rehype-external-links'
-import { siteConfig } from './src/site.config.ts'
+
+// Markdown
+import { remarkAddZoomable, remarkReadingTime } from './src/plugins/remarkPlugins.ts'
 import {
   addCopyButton,
   addLanguage,
@@ -28,6 +20,7 @@ import {
   transformerNotationHighlight,
   updateStyle
 } from './src/plugins/shikiTransformers.ts'
+import { integrationConfig, siteConfig } from './src/site.config.ts'
 
 // https://astro.build/config
 export default defineConfig({
@@ -73,7 +66,14 @@ export default defineConfig({
   },
   // Markdown Options
   markdown: {
-    remarkPlugins: [remarkReadingTime, remarkAddZoomable],
+    remarkPlugins: [
+      remarkReadingTime,
+      remarkAddZoomable,
+      // @ts-ignore
+      ...(integrationConfig.mediumZoom.enable
+        ? [[remarkAddZoomable, integrationConfig.mediumZoom.options]] // Wrap in array to ensure it's iterable
+        : [])
+    ],
     rehypePlugins: [
       [
         rehypeExternalLinks,
