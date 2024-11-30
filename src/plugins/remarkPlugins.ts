@@ -16,7 +16,9 @@ export const remarkReadingTime: Plugin<[], Root> = function () {
   }
 }
 
-export const remarkAddZoomable: Plugin<[string], Root> = function (className = 'zoomable') {
+export const remarkAddZoomable: Plugin<[{ className?: string }], Root> = function ({
+  className = 'zoomable'
+}) {
   return function (tree) {
     visit(tree, 'image', (node: Node) => {
       node.data = { hProperties: { class: className } }

@@ -51,4 +51,9 @@ export interface IntegrationConfig {
     emoji?: string[]
     additionalConfigs: Record<string, unknown>
   }
+  mediumZoom: {
+    enable: boolean
+    selector: string
+    options: Record<string, unknown>
+  }
 }

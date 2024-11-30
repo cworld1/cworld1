@@ -14,9 +14,10 @@ import { Button } from '@/components/user'
 // Plugin styles
 import '@waline/client/style'
 
-import MediumZoom from '@/components/blog/MediumZoom.astro'
+import { MediumZoom } from '@/components/advanced'
 import { cn } from '@/utils'
 import { siteConfig } from '@/site-config'
+import { integrationConfig } from '@/site-config'
 
 interface Props {
   post: CollectionEntry<'post'>
@@ -80,7 +81,7 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
   </div>
 </PageLayout>
 
-<MediumZoom />
+{integrationConfig.mediumZoom.enable && <MediumZoom />}
 
 <style define:vars={{ primaryColor }}>
   :global(.highlight) {

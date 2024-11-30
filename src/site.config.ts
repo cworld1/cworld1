@@ -103,6 +103,14 @@ export const integrationConfig: IntegrationConfig = {
         placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
       }
     }
+  },
+  // A lightbox library that can add zoom effect
+  mediumZoom: {
+    enable: true, // disable it will not load the whole library
+    selector: '.prose .zoomable',
+    options: {
+      className: 'zoomable'
+    }
   }
 }
 
