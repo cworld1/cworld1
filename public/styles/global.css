@@ -39,6 +39,8 @@ html.dark {
 /* Shiki */
 .astro-code {
   background-color: transparent !important;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 
   & pre {
     border-radius: 0.5rem;
@@ -113,24 +115,30 @@ html.dark {
     }
   }
 
+  & .highlighted,
   & .diff {
     margin: 0 -15px;
     padding: 0 15px;
     min-width: calc(100% + 30px);
     display: inline-block;
+  }
+
+  & .highlighted {
+    background-color: rgba(101, 117, 133, 0.32);
+  }
+
+  & .diff {
     &.remove {
       background-color: rgba(244, 63, 94, 0.16);
       opacity: 0.7;
       &::before {
         content: '-';
-        color: var(--vp-code-line-diff-remove-symbol-color);
       }
     }
     &.add {
       background-color: rgba(16, 185, 129, 0.16);
       &::before {
         content: '+';
-        color: var(--vp-code-line-diff-add-symbol-color);
       }
     }
   }

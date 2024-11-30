@@ -1,7 +1,7 @@
 import { h } from 'hastscript'
 import type { ShikiTransformer } from 'shiki'
 
-export { transformerNotationDiff } from './shikiOfficialTransformers'
+export { transformerNotationDiff, transformerNotationHighlight } from './shikiOfficialTransformers'
 
 function parseMetaString(str = '') {
   return Object.fromEntries(

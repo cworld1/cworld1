@@ -22,10 +22,11 @@ import rehypeExternalLinks from 'rehype-external-links'
 import { siteConfig } from './src/site.config.ts'
 import {
   addCopyButton,
-  addTitle,
   addLanguage,
-  updateStyle,
-  transformerNotationDiff
+  addTitle,
+  transformerNotationDiff,
+  transformerNotationHighlight,
+  updateStyle
 } from './src/plugins/shikiTransformers.ts'
 
 // https://astro.build/config
@@ -92,6 +93,7 @@ export default defineConfig({
       },
       transformers: [
         transformerNotationDiff(),
+        transformerNotationHighlight(),
         updateStyle(),
         addTitle(),
         addLanguage(),
