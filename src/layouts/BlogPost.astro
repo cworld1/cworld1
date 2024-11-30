@@ -16,7 +16,6 @@ import '@waline/client/style'
 
 import { MediumZoom } from '@/components/advanced'
 import { cn } from '@/utils'
-import { siteConfig } from '@/site-config'
 import { integrationConfig } from '@/site-config'
 
 interface Props {
@@ -57,7 +56,7 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
         <div id='content-header' class='animate'><BlogHero content={post} /></div>
         <div
           id='content'
-          class={cn('animate mt-8 max-w-none md:min-w-[45ch]', siteConfig.content.typographyProse)}
+          class={cn('animate mt-8 max-w-none md:min-w-[45ch]', integrationConfig.typography.class)}
         >
           <slot />
         </div>

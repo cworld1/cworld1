@@ -33,7 +33,6 @@ export interface SiteConfig {
 
   content: {
     externalLinkArrow: boolean
-    typographyProse: string
   }
 }
 
@@ -50,6 +49,9 @@ export interface IntegrationConfig {
     server?: string
     emoji?: string[]
     additionalConfigs: Record<string, unknown>
+  }
+  typography: {
+    class: string
   }
   mediumZoom: {
     enable: boolean
