@@ -17,10 +17,13 @@ const {
 
 const link = `${import.meta.env.SITE}/blog/${slug}`
 
+const image =
+  typeof data.heroImage?.src === 'string' ? data.heroImage?.src : (data.heroImage?.src?.src ?? '')
+
 const shares = {
   weibo: {
     icon: 'mingcute-weibo-line',
-    link: `http://service.weibo.com/share/share.php?url=${encodeURIComponent(link)}&title=${data.title}&pic=${data.heroImage?.src?.src ?? ''}`
+    link: `http://service.weibo.com/share/share.php?url=${encodeURIComponent(link)}&title=${data.title}&pic=${image}`
   },
   x: {
     icon: 'mingcute-social-x-line',
