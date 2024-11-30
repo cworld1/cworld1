@@ -20,7 +20,7 @@ const link = `${import.meta.env.SITE}/blog/${slug}`
 const shares = {
   weibo: {
     icon: 'mingcute-weibo-line',
-    link: `http://service.weibo.com/share/share.php?url=${encodeURIComponent(link)}&title=${data.title}&pic=${data.heroImage.src.src}`
+    link: `http://service.weibo.com/share/share.php?url=${encodeURIComponent(link)}&title=${data.title}&pic=${data.heroImage?.src?.src ?? ''}`
   },
   x: {
     icon: 'mingcute-social-x-line',
