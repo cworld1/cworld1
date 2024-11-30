@@ -80,12 +80,3 @@ const primaryColor = post.data.heroImage?.color ?? 'hsl(var(--primary) / var(--t
 </PageLayout>
 
 {integrationConfig.mediumZoom.enable && <MediumZoom />}
-
-<style define:vars={{ primaryColor }}>
-  :global(.highlight) {
-    color: var(--primaryColor) !important;
-  }
-  :global(.highlight-bg) {
-    background-color: var(--primaryColor) !important;
-  }
-</style>

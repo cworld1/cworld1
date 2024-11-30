@@ -31,10 +31,20 @@ const {
   <body class='flex justify-center bg-background transition-colors'>
     {
       highlightColor && highlightColor != 'hsl(var(--primary) / var(--tw-text-opacity))' && (
-        <div
-          class='pointer-events-none absolute start-0 top-0 z-0 h-1/2 w-full opacity-25'
-          style={{ backgroundImage: `linear-gradient(${highlightColor}, transparent)` }}
-        />
+        <>
+          <div
+            class='pointer-events-none absolute start-0 top-0 z-0 h-1/2 w-full opacity-25'
+            style={{ backgroundImage: `linear-gradient(${highlightColor}, transparent)` }}
+          />
+          <style define:vars={{ highlightColor }}>
+            :global(.highlight) {
+              color: var(--highlightColor) !important;
+            }
+            :global(.highlight-bg) {
+              background-color: var(--highlightColor) !important;
+            }
+          </style>
+        </>
       )
     }
     <main
