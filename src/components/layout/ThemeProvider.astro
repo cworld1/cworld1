@@ -29,7 +29,7 @@
     const { message } = (e as CustomEvent).detail
     const toast = document.createElement('div')
     toast.className =
-      'animate fixed bottom-8 start-1/2 z-20 px-4 py-2 bg-primary-foreground text-foreground rounded-lg border border-border shadow-lg flex items-center gap-2 transform -translate-x-1/2'
+      'animate fixed bottom-8 start-1/2 z-20 px-4 py-2 bg-muted text-foreground rounded-lg border border-border shadow-lg flex items-center gap-2 transform -translate-x-1/2'
     toast.innerHTML = `<svg class='size-6'><use href='/icons/ui.svg#mingcute-information-line' /></svg> <span>${message}</span>`
     document.body.appendChild(toast)
     setTimeout(() => {
