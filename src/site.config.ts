@@ -79,8 +79,10 @@ export const footerConfig: FooterConfig = {
 }
 
 export const integrationConfig: IntegrationConfig = {
+  // Comment system
   waline: {
-    // Comment system service link (no link to disable)
+    enable: true,
+    // Server service link
     server: 'https://waline.cworld0.com/',
     // Refer https://waline.js.org/en/guide/features/emoji.html
     emoji: ['bmoji', 'weibo'],
