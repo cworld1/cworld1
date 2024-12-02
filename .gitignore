@@ -75,5 +75,5 @@ node_modules/
 .DS_Store
 old_blog
 ignore.*
-/scripts/*.sh
+/scripts-web/*.sh
 bunfig.toml
