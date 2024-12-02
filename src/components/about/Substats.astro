@@ -1,5 +1,5 @@
 ---
-interface item {
+interface SubstatsItem {
   platform: string
   icon: string
   color?: string
@@ -8,76 +8,14 @@ interface item {
   api?: string
   count?: number
 }
-const stats: item[] = [
-  {
-    platform: 'GitHub',
-    icon: 'social.svg#mingcute-github-line',
-    link: 'https://github.com/cworld1',
-    text: 'followers',
-    api: 'github/cworld1'
-  },
-  {
-    platform: 'Telegram',
-    icon: 'social.svg#mingcute-telegram-line',
-    color: '#2ca5e0',
-    link: 'https://t.me/cworld0_cn',
-    text: 'subscribers',
-    api: 'telegram/cworld0_cn'
-  },
-  {
-    platform: 'Coolapk',
-    icon: 'social.svg#coolapk-line',
-    color: '#11ab60',
-    link: 'https://www.coolapk.com/u/1384771',
-    text: 'fans',
-    // api: 'coolapk/1384771',
-    count: 6393
-  },
-  {
-    platform: 'Bilibili',
-    icon: 'social.svg#ri-bilibili-line',
-    color: '#fe7398',
-    link: 'https://space.bilibili.com/388346465',
-    text: 'fans',
-    // api: 'bilibili/388346465',
-    count: 55
-  },
-  {
-    platform: 'Twitter',
-    icon: 'social.svg#mingcute-twitter-line',
-    color: '#1da1f2',
-    link: 'https://twitter.com/CWorld0',
-    text: 'followers',
-    // api: 'twitter/cworld0',
-    count: 34
-  },
-  {
-    platform: 'Weibo',
-    icon: 'copyright-sponsor.svg#mingcute-weibo-line',
-    color: '#e71f19',
-    link: 'https://weibo.com/cworld0',
-    text: 'followers',
-    api: 'weibo/5501674056'
-  },
-  {
-    platform: 'Zhihu',
-    icon: 'social.svg#ri-zhihu-line',
-    color: '#0084ff',
-    link: 'https://www.zhihu.com/people/wolf-03/answers',
-    text: 'followers',
-    api: 'zhihu/wolf-03'
-  },
-  {
-    platform: 'Steam',
-    icon: 'social.svg#ri-steam-line',
-    color: '#50769d',
-    link: 'https://steamcommunity.com/id/cworld',
-    text: 'games',
-    api: 'steamgames/76561199021278120'
-  }
-]
 
-async function fetchCount(item: item) {
+type Props = {
+  stats: SubstatsItem[]
+}
+
+const { stats } = Astro.props as Props
+
+async function fetchCount(item: SubstatsItem) {
   if (!item.api) return
   try {
     const response = await fetch(`https://api.swo.moe/stats/${item.api}`)
