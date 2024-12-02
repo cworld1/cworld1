@@ -4,6 +4,7 @@ export type {
   SiteMeta,
   SocialLink,
   CardListData,
-  CardList
+  CardList,
+  TimelineEvent
 } from './common'
 export type { SiteConfig, FooterConfig, IntegrationConfig } from './config'

@@ -1,10 +1,9 @@
 ---
+import type { TimelineEvent } from '@/types'
+
 interface Props {
   class?: string
-  events: {
-    date: string
-    content: string
-  }[]
+  events: TimelineEvent[]
 }
 
 const { class: className, events, ...props } = Astro.props

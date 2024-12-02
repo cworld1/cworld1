@@ -51,6 +51,8 @@ export interface IntegrationConfig {
     emoji?: string[]
     additionalConfigs: Record<string, unknown>
   }
+  links: {
+    logbook: TimelineEvent[]
   typography: {
     class: string
   }

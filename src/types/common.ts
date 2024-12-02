@@ -39,3 +39,8 @@ export type CardList = {
   link?: string
   children?: CardList
 }[]
+
+export type TimelineEvent = {
+  date: string
+  content: string
+}
