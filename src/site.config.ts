@@ -116,7 +116,7 @@ export const integrationConfig: IntegrationConfig = {
       className: 'zoomable'
     }
   },
-  // https://developer.hitokoto.cn/
+  // Add a random quote to the footer (default on homepage footer)
   quote: {
     // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
     // server: 'https://v1.hitokoto.cn/?c=i',
