@@ -1,5 +1,6 @@
 // @ts-check
 
+import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
@@ -10,6 +11,8 @@ import { defineConfig } from 'astro/config'
 // Integrations
 import rehypeExternalLinks from 'rehype-external-links'
 
+// Local rehype & remark plugins
+import rehypeAutolinkHeadings from './src/plugins/rehypeAutolinkHeadings.ts'
 // Markdown
 import { remarkAddZoomable, remarkReadingTime } from './src/plugins/remarkPlugins.ts'
 import {
@@ -81,6 +84,15 @@ export default defineConfig({
           ...(siteConfig.content.externalLinkArrow && { content: { type: 'text', value: ' ↗' } }),
           target: '_blank',
           rel: ['nofollow, noopener, noreferrer']
+        }
+      ],
+      rehypeHeadingIds,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: 'append',
+          properties: { className: ['anchor'] },
+          content: { type: 'text', value: '#' }
         }
       ]
     ],
