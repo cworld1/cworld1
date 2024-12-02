@@ -85,7 +85,7 @@ const shares = {
     <div class='flex flex-row gap-3'>
       <button
         id='copy-link'
-        class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+        class='group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
       >
         <svg class='size-5'>
           <use href='/icons/copyright-sponsor.svg#mingcute-link-2-line'></use>
@@ -93,7 +93,7 @@ const shares = {
       </button>
       <button
         id='get-qrcode'
-        class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+        class='group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
       >
         <svg class='size-5'>
           <use href='/icons/copyright-sponsor.svg#mingcute-qrcode-2-line'></use>
@@ -104,7 +104,7 @@ const shares = {
           <a href={shares[share].link} target='_blank'>
             <button
               id={`share-${share}`}
-              class='group rounded-full bg-primary-foreground p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+              class='group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
             >
               <svg class='size-5'>
                 <use href={`/icons/copyright-sponsor.svg#${shares[share].icon}`} />

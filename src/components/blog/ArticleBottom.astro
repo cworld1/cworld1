@@ -27,7 +27,7 @@ const next = items[index + 1]
       prev && (
         <a
           href={`/blog/${prev.slug}`}
-          class='group flex items-center gap-3 rounded-lg border border-transparent px-4 py-2 no-underline transition-colors duration-300 hover:bg-primary-foreground sm:py-4'
+          class='group flex items-center gap-3 rounded-lg border border-transparent px-4 py-2 no-underline transition-colors duration-300 hover:bg-muted sm:py-4'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -68,7 +68,7 @@ const next = items[index + 1]
       next && (
         <a
           href={`/blog/${next.slug}`}
-          class='group flex items-center justify-end gap-3 rounded-lg border border-transparent px-4 py-2 text-right no-underline transition-colors duration-300 hover:bg-primary-foreground sm:py-4'
+          class='group flex items-center justify-end gap-3 rounded-lg border border-transparent px-4 py-2 text-right no-underline transition-colors duration-300 hover:bg-muted sm:py-4'
         >
           <div class='flex max-w-[80%] grow flex-col gap-0.5 sm:gap-1.5'>
             <div class='text-sm font-normal uppercase text-muted-foreground'>Next</div>
