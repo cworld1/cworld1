@@ -5,7 +5,7 @@ import links from 'public/links.json'
 import { Comment } from '@/components/advanced'
 import FriendList from '@/components/links/FriendList.astro'
 import { Collapse, Timeline } from '@/components/user'
-import { siteConfig } from '@/site-config'
+import { integrationConfig } from '@/site-config'
 
 const headings = [
   {
@@ -30,20 +30,21 @@ const headings = [
   }
 ]
 
-const friendlist = links.friends
+const { friends } = links
+const linksConfig = integrationConfig.links
 ---
 
-<PageLayout title='Links' headings={headings} info='/links'>
+<PageLayout title='Links' {headings} info='/links'>
   <p>怎么可能有顺序呢，当然是随机的~</p>
   <h2 id='common-links'>Common Links</h2>
-  <FriendList list={friendlist[0]} />
+  <FriendList list={friends[0]} />
   <Collapse title='Links with Bad Status'>
-    <FriendList list={friendlist[1]} />
+    <FriendList list={friends[1]} />
   </Collapse>
   <Collapse title='Link History Book'>
     <Timeline events={linksConfig.logbook} />
   </Collapse>
-  <FriendList list={friendlist[2]} title='Special Links' />
+  <FriendList list={friends[2]} title='Special Links' />
 
   <h2 id='small-circle'>Small Circle</h2>
   <div id='friend-circle-lite-root' class='not-prose'>Loading...</div>
@@ -65,10 +66,10 @@ const friendlist = links.friends
   <h2 id='apply-links'>Apply Links</h2>
   <p>本站信息如下：</p>
   <blockquote class='not-prose break-words border-s-4 ps-4'>
-    <p>名称：<code>{siteConfig.links.applyTip.name}</code></p>
-    <p>简介：<code>{siteConfig.links.applyTip.desc}</code></p>
-    <p>链接：<code>{siteConfig.links.applyTip.url}</code></p>
-    <p>图标：<code>{siteConfig.links.applyTip.avatar}</code></p>
+    <p>名称：<code>{linksConfig.applyTip.name}</code></p>
+    <p>简介：<code>{linksConfig.applyTip.desc}</code></p>
+    <p>链接：<code>{linksConfig.applyTip.url}</code></p>
+    <p>图标：<code>{linksConfig.applyTip.avatar}</code></p>
   </blockquote>
 
   <p>

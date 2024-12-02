@@ -1,4 +1,4 @@
-import type { ShareItem, SocialLink } from './common'
+import type { ShareItem, SocialLink, TimelineEvent } from './common'
 
 export interface SiteConfig {
   author: string
@@ -16,15 +16,6 @@ export interface SiteConfig {
 
   blog: {
     pageSize: number
-  }
-
-  links: {
-    applyTip: {
-      name: string
-      desc: string
-      url: string
-      avatar: string
-    }
   }
 
   seo: {
@@ -53,6 +44,13 @@ export interface IntegrationConfig {
   }
   links: {
     logbook: TimelineEvent[]
+    applyTip: {
+      name: string
+      desc: string
+      url: string
+      avatar: string
+    }
+  }
   typography: {
     class: string
   }

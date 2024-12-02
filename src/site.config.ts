@@ -31,20 +31,11 @@ export const siteConfig: SiteConfig = {
   // - https://cdn.smartcis.cn/npm
   // - https://unkpg.com
   // - https://cdn.cbd.int
+  // - https://esm.sh
 
   // === Customize options ===
   blog: {
     pageSize: 8 // blog page size for pagination
-  },
-
-  links: {
-    // Link info
-    applyTip: {
-      name: 'CWorld Site',
-      desc: '求知若愚，虚怀若谷',
-      url: 'https://cworld0.com/',
-      avatar: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
-    }
   },
 
   seo: {
@@ -161,6 +152,15 @@ export const integrationConfig: IntegrationConfig = {
         { date: '2024-11-19', content: '[流年轻迹] lost' },
         { date: '2024-11-26', content: '[字节君] stagnated' }
     ],
+    // Yourself link info
+    applyTip: {
+      name: siteConfig.title,
+      desc: '求知若愚，虚怀若谷',
+      url: siteConfig.site + '/',
+      avatar: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
+    }
+  },
+  // Tailwindcss typography
   typography: {
     // https://github.com/tailwindlabs/tailwindcss-typography
     class: 'prose prose-pure dark:prose-invert dark:prose-pure prose-headings:font-medium'
