@@ -7,7 +7,7 @@ heroImage: { src: './theme-astro-cover.jpg', alt: 'astro theme pure', color: '#3
 tags: ['pure', 'astro', 'theme']
 ---
 
-import LinkPreview from '@/components/LinkPreview.astro'
+import { LinkPreview, GithubCard } from '@/components/advanced'
 
 ## When
 
@@ -144,7 +144,7 @@ import LinkPreview from '@/components/LinkPreview.astro'
 
 同以往一样，博客已开源至 Github，如果喜欢博客，欢迎 Fork 和 Star。
 
-<LinkPreview id='https://github.com/cworld1/cworld1' />
+<GithubCard repo='cworld1/cworld1' />
 
 但是请注意：
 
@@ -154,8 +154,10 @@ import LinkPreview from '@/components/LinkPreview.astro'
 
 ## End
 
-在好友的帮助下，我创建了一个新的主题仓库~ 个人精力有限，可能更多交给朋友维护这个主题。希望大家喜欢：
+在好友的帮助下，我创建了一个新的主题仓库~ 目前正在积极维护，希望大家喜欢：
 
-<LinkPreview id='https://github.com/cworld1/astro-theme-pure' />
+<GithubCard repo='https://github.com/cworld1/astro-theme-pure' />
 
-{/* <!-- <LinkPreview id='https://astro.build/themes/details/pure/' /> --> */}
+以及上架到的 Astro 官网的信息：
+
+<LinkPreview href='https://astro.build/themes/details/pure/' />

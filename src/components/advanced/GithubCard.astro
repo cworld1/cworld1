@@ -1,0 +1,148 @@
+---
+const { repo: repoRaw } = Astro.props
+
+// Remove 'https://github.com/' headings from the repo string
+const repo = repoRaw.replace(/^https:\/\/github\.com\//, '')
+
+const [owner, repoName] = repo.split('/')
+---
+
+<github-card class='not-prose loading' data-repo={repo}>
+  <a
+    href={`https://github.com/${repo}`}
+    target='_blank'
+    class='group block flex flex-col gap-y-2 rounded-xl border border-border px-5 py-4 transition-colors hover:bg-muted hover:text-muted-foreground'
+  >
+    <div class='flex items-center justify-between'>
+      <div class='flex items-center gap-x-2 text-foreground group-hover:text-primary'>
+        <div id='gh-avatar' class='gh-text me-2 size-8 bg-cover' style='border-radius:999px'></div>
+        <span class='text-lg transition-colors'>{owner}</span>
+        <span class='text-muted-foreground'>/</span>
+        <span class='text-lg font-bold transition-colors'>{repoName}</span>
+      </div>
+      <div class='rounded-full bg-primary-foreground p-1'>
+        <svg class='size-6'>
+          <use href='/icons/social.svg#mingcute-github-line'></use>
+        </svg>
+      </div>
+    </div>
+    <p id='gh-description' class='gh-text'>Waiting for api.github.com...</p>
+    <div class='flex items-center justify-between'>
+      <div class='gh-text flex flex-wrap items-center gap-x-5'>
+        <div class='flex items-center gap-x-2'>
+          <svg class='size-5'><use href='/icons/github-card.svg#mingcute-star-line'></use></svg>
+          <span id='gh-stars' class='leading-tight'>???</span>
+        </div>
+        <div class='flex items-center gap-x-2'>
+          <svg class='size-5'
+            ><use href='/icons/github-card.svg#mingcute-git-branch-line'></use></svg
+          >
+          <span id='gh-forks' class='leading-tight'>???</span>
+        </div>
+        <div class='flex items-center gap-x-2'>
+          <svg class='size-5'><use href='/icons/github-card.svg#mingcute-balance-line'></use></svg>
+          <span id='gh-license' class='leading-tight'>???</span>
+        </div>
+      </div>
+      <span id='gh-language' class='gh-text leading-tight'>?????</span>
+    </div>
+  </a>
+</github-card>
+
+<style>
+  @keyframes pulsate {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .loading .gh-text {
+    color: transparent;
+    border-radius: calc(var(--radius) - 3px);
+    background-color: hsl(var(--primary-foreground) / var(--tw-text-opacity));
+    animation: pulsate 2s infinite linear;
+    user-select: none;
+  }
+  .loading .gh-text:nth-child(2) {
+    animation-delay: 1s;
+  }
+</style>
+
+<script>
+  interface GithubProps {
+    stargazers_count: number
+    forks: number
+    language: string
+    owner: { avatar_url: string }
+    license?: { spdx_id: string }
+    description: string
+  }
+
+  class GithubCard extends HTMLElement {
+    async fetchGithub(repo: string): Promise<GithubProps | null> {
+      try {
+        const res = await fetch(`https://api.github.com/repos/${repo}`, {
+          referrerPolicy: 'no-referrer'
+        })
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`)
+        }
+        return (await res.json()) as GithubProps
+      } catch (e) {
+        console.error('Failed to fetch Github data:', e)
+        return null
+      }
+    }
+
+    numberFormat(value: number): string {
+      return Intl.NumberFormat('en-us', {
+        notation: 'compact',
+        maximumFractionDigits: 1
+      }).format(value)
+    }
+
+    async connectedCallback() {
+      if (!this.dataset.repo) return
+      try {
+        const data = await this.fetchGithub(this.dataset.repo)
+        if (!data) return
+        ;(this.querySelector('#gh-stars') as HTMLElement).textContent = this.numberFormat(
+          data.stargazers_count
+        )
+        ;(this.querySelector('#gh-forks') as HTMLElement).textContent = this.numberFormat(
+          data.forks
+        )
+        ;(this.querySelector('#gh-language') as HTMLElement).textContent = data.language || 'N/A'
+        ;(this.querySelector('#gh-description') as HTMLElement).textContent =
+          typeof data.description === 'string'
+            ? data.description.replace(/:[a-zA-Z0-9_]+:/g, '')
+            : 'Description not set'
+
+        const licenseEl = this.querySelector('#gh-license') as HTMLElement
+        if (data.license?.spdx_id) {
+          licenseEl.textContent = data.license.spdx_id
+        } else {
+          licenseEl.classList.add('no-license')
+        }
+
+        const avatarEl = this.querySelector('#gh-avatar') as HTMLElement
+        if (avatarEl) {
+          avatarEl.style.backgroundImage = `url(${data.owner.avatar_url})`
+          avatarEl.style.backgroundColor = 'transparent'
+        }
+
+        this.classList.remove('loading')
+      } catch (e) {
+        console.error('Error setting Github data:', e)
+        ;(this.querySelector('#gh-description') as HTMLElement).textContent = 'Failed to fetch data'
+      }
+    }
+  }
+
+  customElements.define('github-card', GithubCard)
+</script>
