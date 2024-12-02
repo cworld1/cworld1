@@ -29,14 +29,14 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
         class='cover-image relative z-10 h-auto w-full max-w-[65ch] rounded-2xl object-contain'
         fetchpriority='high'
         loading='eager'
-        src={typeof data.heroImage === 'string' ? data.heroImage : (data.heroImage.src as string)}
+        src={data.heroImage.src}
       />
       {/* @ts-expect-error: image support this type */}
       <Image
         alt={data.heroImage.alt || data.title}
         fetchpriority='high'
         loading='eager'
-        src={typeof data.heroImage === 'string' ? data.heroImage : (data.heroImage.src as string)}
+        src={data.heroImage.src}
         id='blurImage'
         class='absolute end-0 top-4 z-0 mt-0 h-full max-w-[65ch] rounded-3xl opacity-60 blur-xl transition-opacity duration-300'
       />
