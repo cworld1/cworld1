@@ -6,15 +6,20 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 // Adapter
 import vercelServerless from '@astrojs/vercel/serverless'
+// Integrations
 import icon from 'astro-icon'
 import { defineConfig } from 'astro/config'
-// Integrations
+// Rehype & remark packages
 import rehypeExternalLinks from 'rehype-external-links'
 
 // Local rehype & remark plugins
 import rehypeAutolinkHeadings from './src/plugins/rehypeAutolinkHeadings.ts'
 // Markdown
-import { remarkAddZoomable, remarkReadingTime } from './src/plugins/remarkPlugins.ts'
+import {
+  remarkAddZoomable,
+  remarkReadingTime
+} from './src/plugins/remarkPlugins.ts'
+// Shiki
 import {
   addCopyButton,
   addLanguage,
@@ -71,7 +76,6 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
       remarkReadingTime,
-      remarkAddZoomable,
       // @ts-ignore
       ...(integrationConfig.mediumZoom.enable
         ? [[remarkAddZoomable, integrationConfig.mediumZoom.options]] // Wrap in array to ensure it's iterable
@@ -96,7 +100,6 @@ export default defineConfig({
         }
       ]
     ],
-    // remarkRehype: { },
     // https://docs.astro.build/en/guides/syntax-highlighting/
     shikiConfig: {
       themes: {
