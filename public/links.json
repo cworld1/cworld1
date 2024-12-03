@@ -248,42 +248,31 @@
           "avatar": "https://7.isyangs.cn/66/6745e058e1578-66.webp"
         },
         {
-          "name": "Fomalhaut🥝",
-          "intro": "Future is now 🍭🍭🍭",
-          "link": "https://www.fomal.cc/",
-          "avatar": "https://www.fomal.cc/assets/avatar.webp",
-          "email": "1174008660@qq.com",
-          "status": "unverified"
-        },
-        {
           "name": "FloatSheep",
           "intro": "On the other side of obstacles",
           "link": "https://blog.hesiy.cn/",
           "avatar": "https://registry.npmmirror.com/@floatsheep/fsl-fim/1.0.23/files/avatar%202024.main.webp",
-          "email": "admin@hesiy.cn",
-          "status": "unverified"
-        },
-        {
-          "name": "xaoxuu",
-          "intro": "风暴前夕",
-          "link": "https://xaoxuu.com/",
-          "avatar": "https://bu.dusays.com/2021/09/24/2f74810ceb3d3.png",
-          "status": "unverified"
+          "email": "admin@hesiy.cn"
         },
         {
           "name": "Yutong's Site",
           "intro": "My compass is curiosity.",
           "link": "https://www.lyt0112.com/",
           "avatar": "https://cdn.lyt0112.com/avatars/square_d&t.jpeg",
-          "email": "lyt0112@outlook.com",
-          "status": "unverified"
+          "email": "lyt0112@outlook.com"
         },
         {
           "name": "XingJiのBlog",
           "intro": "迄今所有人生都大写着失败，但不妨碍我继续向前✨",
           "link": "https://love.xingji.fun/",
           "avatar": "https://i.p-i.vip/47/20240920-66ed7b168c38c.jpg",
-          "email": "33260502459@qq.com",
+          "email": "33260502459@qq.com"
+        },
+        {
+          "name": "xaoxuu",
+          "intro": "风暴前夕",
+          "link": "https://xaoxuu.com/",
+          "avatar": "https://bu.dusays.com/2021/09/24/2f74810ceb3d3.png",
           "status": "unverified"
         }
       ]
@@ -341,6 +330,14 @@
           "rss": "https://blog.lvbyte.top/atom.xml",
           "email": "2015078351@qq.com",
           "status": "request_update"
+        },
+        {
+          "name": "Fomalhaut🥝",
+          "intro": "Future is now 🍭🍭🍭",
+          "link": "https://www.fomal.cc/",
+          "avatar": "https://www.fomal.cc/assets/avatar.webp",
+          "email": "1174008660@qq.com",
+          "status": "unverified"
         }
       ]
     },
