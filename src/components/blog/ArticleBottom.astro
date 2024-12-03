@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
-import { cn, getAllCollections } from '@/utils'
+import { cn, getAllCollections, sortMDByDate } from '@/utils'
 
 type Props = {
   content: CollectionEntry<'post'>
@@ -10,24 +10,21 @@ type Props = {
 
 // Get the requested entry
 const { content, class: className } = Astro.props
-const { collection } = content
 
 // Get the next and prev entries (modulo to wrap index)
-const items = ((await getAllCollections(collection)) as CollectionEntry<typeof collection>[])
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
-const index = items.findIndex((x) => x.slug === content.slug)
-const prev = items[index - 1]
-const next = items[index + 1]
+const collections = sortMDByDate(await getAllCollections(content.collection))
+const index = collections.findIndex((x) => x.slug === content.slug)
+const prev = collections[index - 1]
+const next = collections[index + 1]
 ---
 
-<div class={cn('grid grid-cols-1 gap-2 sm:gap-4 sm:grid-cols-2', className)}>
-  <div>
+<div class={cn('flex max-sm:flex-col sm:justify-between gap-2', className)}>
+  <span class='min-w-0'>
     {
       prev && (
         <a
           href={`/blog/${prev.slug}`}
-          class='group flex items-center gap-3 rounded-lg border border-transparent px-4 py-2 no-underline transition-colors duration-300 hover:bg-muted sm:py-4'
+          class='group inline-flex items-center gap-x-2 rounded-xl px-4 py-2 no-underline transition-colors duration-300 hover:bg-muted max-sm:max-w-[80%] sm:flex'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -38,8 +35,9 @@ const next = items[index + 1]
             stroke-width='2.5'
             stroke-linecap='round'
             stroke-linejoin='round'
-            class='rotate-180 stroke-muted-foreground transition-colors group-hover:stroke-primary'
+            class='shrink-0 rotate-180 stroke-muted-foreground transition-colors group-hover:stroke-primary'
           >
+            {' '}
             <line
               x1='5'
               y1='12'
@@ -52,30 +50,20 @@ const next = items[index + 1]
               class='translate-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1'
             />
           </svg>
-          <div class='flex max-w-[80%] grow flex-col gap-0.5 sm:gap-1.5'>
-            <div class='text-sm font-normal uppercase text-muted-foreground'>Prev</div>
-            <div class='truncate whitespace-nowrap font-medium transition-colors'>
-              {prev.data.title}
-            </div>
-          </div>
+          <p class='truncate font-medium transition-colors'>{prev.data.title}</p>
         </a>
       )
     }
-  </div>
+  </span>
 
-  <div>
+  <span class='min-w-0'>
     {
       next && (
         <a
           href={`/blog/${next.slug}`}
-          class='group flex items-center justify-end gap-3 rounded-lg border border-transparent px-4 py-2 text-right no-underline transition-colors duration-300 hover:bg-muted sm:py-4'
+          class='group float-end inline-flex items-center gap-x-2 rounded-xl px-4 py-2 text-right no-underline transition-colors duration-300 hover:bg-muted max-sm:max-w-[80%] sm:flex'
         >
-          <div class='flex max-w-[80%] grow flex-col gap-0.5 sm:gap-1.5'>
-            <div class='text-sm font-normal uppercase text-muted-foreground'>Next</div>
-            <div class='truncate whitespace-nowrap font-medium transition-colors'>
-              {next.data.title}
-            </div>
-          </div>
+          <p class='truncate font-medium transition-colors'>{next.data.title}</p>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='20'
@@ -85,7 +73,7 @@ const next = items[index + 1]
             stroke-width='2.5'
             stroke-linecap='round'
             stroke-linejoin='round'
-            class='stroke-muted-foreground transition-colors group-hover:stroke-primary'
+            class='shrink-0 stroke-muted-foreground transition-colors group-hover:stroke-primary'
           >
             <line
               x1='5'
@@ -102,5 +90,5 @@ const next = items[index + 1]
         </a>
       )
     }
-  </div>
+  </span>
 </div>
