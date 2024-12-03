@@ -1,0 +1,64 @@
+---
+title: 'rehype-autolink-headings Simple Version'
+description: '关于我看不下去 rehype-autolink-headings 过于复杂这件事'
+publishDate: 2024-12-03
+tags: ['astro', 'npm']
+language: 'En & 简中'
+---
+
+import { GithubCard } from '@/components/advanced'
+
+咱也不知道为啥，`rehype-autolink-headings` 塞了一堆乱七八糟的东西和依赖，所以就...重写了。
+
+[![bundlejs](https://img.shields.io/bundlejs/size/rehype-autolink-headings-simple)](https://bundlejs.com/?q=rehype-autolink-headings-simple)
+
+其他用法应该都是兼容旧库的。就这样吧。
+
+## Links
+
+<GithubCard repo='cworld1/rehype-autolink-headings-simple' />
+
+- [npm package](https://www.npmjs.com/package/rehype-autolink-headings-simple)
+
+## Detail
+
+A simple version of [rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings).
+
+Less dependencies and less useless code. Using typescript to develop.
+
+## Usage
+
+```bash
+npm install rehype-autolink-headings-simple
+```
+
+```js
+import { rehypeAutolinkHeadings } from 'rehype-autolink-headings-simple'
+import { parse } from 'rehype-parse'
+import { stringify } from 'rehype-stringify'
+import { unified } from 'unified'
+
+const processor = unified()
+  .use(parse)
+  .use(rehypeAutolinkHeadings, {
+    behavior: 'append',
+    properties: {
+      behavior: 'append',
+      properties: { className: ['anchor'] },
+      content: { type: 'text', value: '#' }
+    }
+  })
+  .use(stringify)
+
+const result = processor.processSync('<h1>Heading</h1>').toString()
+```
+
+## Known issues
+
+Astro should change render order manually. See [Astro: Heading IDs and plugins](https://docs.astro.build/en/guides/markdown-content/#heading-ids-and-plugins)
+
+https://www.npmjs.com/package/rehype-autolink-headings-simple
+
+## License
+
+The MIT License (MIT).
