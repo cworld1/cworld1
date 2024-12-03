@@ -12,23 +12,22 @@ import { siteConfig } from '@/site-config'
 export const prerender = true
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const allPosts = await getAllCollections()
-  const allPostsByDate = sortMDByDate(allPosts)
-  const uniqueTags = getUniqueTags(allPosts)
-  const totalPosts = allPosts.length
-  return paginate(allPostsByDate, {
+  const collections = sortMDByDate(await getAllCollections())
+  const uniqueTags = getUniqueTags(collections)
+  const collectionsCount = collections.length
+  return paginate(collections, {
     pageSize: siteConfig.blog.pageSize,
-    props: { uniqueTags, totalPosts }
+    props: { uniqueTags, collectionsCount }
   })
 }) satisfies GetStaticPaths
 
 interface Props {
   page: Page<CollectionEntry<'post'>>
   uniqueTags: string[]
-  totalPosts: number
+  collectionsCount: number
 }
 
-const { page, uniqueTags, totalPosts } = Astro.props
+const { page, uniqueTags, collectionsCount } = Astro.props
 
 const meta = {
   description: 'Some posts or archieves of my blog',
@@ -65,7 +64,7 @@ const paginationProps = {
             <section aria-label='Blog posts list'>
               <div class='animate mb-3 flex flex-col justify-between text-sm sm:mb-5 sm:flex-row'>
                 <span class='text-muted-foreground'>
-                  Page {page.currentPage} - Showing {page.data.length} of {totalPosts} posts
+                  Page {page.currentPage} - Showing {page.data.length} of {collectionsCount} posts
                 </span>
                 <a aria-label='View all blog by years' href='/archives' data-astro-prefetch>
                   View all posts by years →
