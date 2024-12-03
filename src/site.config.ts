@@ -46,7 +46,7 @@ export const siteConfig: SiteConfig = {
   content: {
     externalLinkArrow: true, // show external link arrow
     // Currently support weibo, x, bluesky
-    share: ['weibo', 'x', 'bluesky']
+    share: ['weibo', 'bluesky']
   }
 }
 
