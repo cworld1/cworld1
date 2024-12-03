@@ -11,12 +11,14 @@ const post = defineCollection({
   type: 'content',
   schema: ({ image }) =>
     z.object({
+      // Required
       title: z.string().max(60),
       description: z.string().min(10).max(160),
       publishDate: z
         .string()
         .or(z.date())
         .transform((val) => new Date(val)),
+      // Optional
       updatedDate: z
         .string()
         .optional()
@@ -28,9 +30,11 @@ const post = defineCollection({
           color: z.string().optional()
         })
         .optional(),
-      draft: z.boolean().default(false),
       tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
-      language: z.string().optional()
+      language: z.string().optional(),
+      draft: z.boolean().default(false),
+      // Integrations
+      comment: z.boolean().default(true)
     })
 })
 

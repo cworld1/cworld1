@@ -25,7 +25,15 @@ interface Props {
 
 const { post, headings } = Astro.props
 const {
-  data: { description, heroImage, publishDate, title, updatedDate }
+  data: {
+    description,
+    heroImage,
+    publishDate,
+    title,
+    updatedDate,
+    draft: isDraft,
+    comment: enableComment
+  }
 } = post
 const socialImage = heroImage
   ? typeof heroImage.src === 'string'
