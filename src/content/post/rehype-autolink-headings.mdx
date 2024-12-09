@@ -2,13 +2,14 @@
 title: 'rehype-autolink-headings Simple Version'
 description: '关于我看不下去 rehype-autolink-headings 过于复杂这件事'
 publishDate: 2024-12-03
+updatedDate: 2024-12-09
 tags: ['astro', 'npm']
 language: 'En & 简中'
 ---
 
 import { GithubCard } from '@/components/advanced'
 
-咱也不知道为啥，`rehype-autolink-headings` 塞了一堆乱七八糟的东西和依赖，所以就...重写了。
+本来 `rehype-autolink-headings` 是一个 `@unified` 系列的 `rehype` 插件，用于给标题添加链接锚点。但是咱也不知道为啥，就这么一个简单的添加链接的插件，却塞了一堆乱七八糟的东西和依赖，所以就...重写了。
 
 [![bundlejs](https://img.shields.io/bundlejs/size/rehype-autolink-headings-simple)](https://bundlejs.com/?q=rehype-autolink-headings-simple)
 
@@ -56,8 +57,6 @@ const result = processor.processSync('<h1>Heading</h1>').toString()
 ## Known issues
 
 Astro should change render order manually. See [Astro: Heading IDs and plugins](https://docs.astro.build/en/guides/markdown-content/#heading-ids-and-plugins)
-
-https://www.npmjs.com/package/rehype-autolink-headings-simple
 
 ## License
 
