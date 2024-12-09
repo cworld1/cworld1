@@ -78,6 +78,7 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
   siteConfig.seo.telegramChannel && (
     <meta name='telegram:channel' content={siteConfig.seo.telegramChannel} />
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <script is:inline>window.Telegram.WebApp.requestFullscreen()</script>
   )
 }
 
