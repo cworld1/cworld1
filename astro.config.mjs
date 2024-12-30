@@ -1,24 +1,16 @@
 // @ts-check
 
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
-import mdx from '@astrojs/mdx'
-import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
 // Adapter
-import vercelServerless from '@astrojs/vercel/serverless'
+import vercel from '@astrojs/vercel'
 // Integrations
-import icon from 'astro-icon'
+import AstroPureIntegration from 'astro-pure'
 import { defineConfig } from 'astro/config'
-// Rehype & remark packages
-import rehypeExternalLinks from 'rehype-external-links'
 
+// Local integrations
+import { outputCopier } from './src/plugins/output-copier.ts'
 // Local rehype & remark plugins
-import rehypeAutolinkHeadings from './src/plugins/rehypeAutolinkHeadings.ts'
-// Markdown
-import {
-  remarkAddZoomable,
-  remarkReadingTime
-} from './src/plugins/remarkPlugins.ts'
+import rehypeAutolinkHeadings from './src/plugins/rehype-auto-link-headings.ts'
 // Shiki
 import {
   addCopyButton,
@@ -27,20 +19,20 @@ import {
   transformerNotationDiff,
   transformerNotationHighlight,
   updateStyle
-} from './src/plugins/shikiTransformers.ts'
-import { integrationConfig, siteConfig } from './src/site.config.ts'
+} from './src/plugins/shiki-transformers.ts'
+import config from './src/site.config.ts'
 
 // https://astro.build/config
 export default defineConfig({
   // Top-Level Options
-  site: siteConfig.site,
+  site: 'https://astro-docs.vercel.app',
   // base: '/docs',
   trailingSlash: 'never',
-  output: 'server',
 
   // Adapter
   // 1. Vercel (serverless)
-  adapter: vercelServerless(),
+  adapter: vercel(),
+  output: 'server',
   // 2. Vercel (static)
   // adapter: vercelStatic(),
   // 3. Local (standalone)
@@ -55,13 +47,20 @@ export default defineConfig({
   },
 
   integrations: [
-    tailwind({ applyBaseStyles: false }),
-    sitemap(),
-    mdx(),
-    icon(),
+    // astro-pure will automatically add sitemap, mdx & tailwind
+    // sitemap(),
+    // mdx(),
+    // tailwind({ applyBaseStyles: false }),
+    AstroPureIntegration(config),
     (await import('@playform/compress')).default({
       SVG: false,
       Exclude: ['index.*.js']
+    }),
+
+    // Temporary fix vercel adapter
+    // static build method is not needed
+    outputCopier({
+      integ: ['sitemap', 'pagefind']
     })
   ],
   // root: './my-project-directory',
@@ -74,22 +73,7 @@ export default defineConfig({
   },
   // Markdown Options
   markdown: {
-    remarkPlugins: [
-      remarkReadingTime,
-      // @ts-ignore
-      ...(integrationConfig.mediumZoom.enable
-        ? [[remarkAddZoomable, integrationConfig.mediumZoom.options]] // Wrap in array to ensure it's iterable
-        : [])
-    ],
     rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        {
-          ...(siteConfig.content.externalLinkArrow && { content: { type: 'text', value: ' ↗' } }),
-          target: '_blank',
-          rel: ['nofollow, noopener, noreferrer']
-        }
-      ],
       rehypeHeadingIds,
       [
         rehypeAutolinkHeadings,
@@ -115,5 +99,8 @@ export default defineConfig({
         addCopyButton(2000)
       ]
     }
+  },
+  experimental: {
+    svg: true
   }
 })

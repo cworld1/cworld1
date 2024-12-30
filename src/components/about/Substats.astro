@@ -1,7 +1,10 @@
 ---
+import { socialLinks, type iconsType } from 'astro-pure/types'
+import { Icon } from 'astro-pure/user'
+
 interface SubstatsItem {
   platform: string
-  icon: string
+  icon: (typeof socialLinks)[number]
   color?: string
   link?: string
   text: string
@@ -43,14 +46,7 @@ await Promise.all(stats.map(fetchCount))
         rel='noopener noreferrer'
       >
         <div class='flex items-center gap-3 rounded-lg border border-transparent px-3 py-2 transition-all hover:border-border hover:bg-muted'>
-          {icon && (
-            <svg
-              class='size-6'
-              style={{ color: color ? color : 'hsl(var(--foreground) / var(--tw-text-opacity))' }}
-            >
-              <use href={`/icons/${icon}`} />
-            </svg>
-          )}
+          {icon && <Icon name={icon as iconsType} color={color} />}
           <div class='flex-1 text-foreground transition-colors group-hover:text-primary'>
             {platform}
           </div>

@@ -1,11 +1,17 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
   "compilerOptions": {
-    "declaration": true,
-    "strictNullChecks": true,
+    // Basic
     "allowJs": true,
-    "baseUrl": ".",
+    // Building for a library
+    "declaration": true,
+    // Code runs in the DOM
     "lib": ["es2022", "dom", "dom.iterable"],
+    // Others
+    "baseUrl": ".",
+    "strictNullChecks": true,
+    // Paths
     "paths": {
       "@/assets/*": ["src/assets/*"],
       "@/components/*": ["src/components/*"],
@@ -18,5 +24,5 @@
       "@/site-config": ["src/site.config.ts"]
     }
   },
-  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist", "public/scripts/*"]
+  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist", "public/scripts/*", "test/*"]
 }

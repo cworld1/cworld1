@@ -1,16 +1,16 @@
 ---
-import PageLayout from '@/layouts/BaseLayout.astro'
 import { Image } from 'astro:assets'
 
-import { Quote } from '@/components/advanced'
-import PostPreview from '@/components/blog/PostPreview.astro'
+import { Quote } from 'astro-pure/advanced'
+import { PostPreview } from 'astro-pure/components/pages'
+import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
+import { Button, Card, Icon, Label } from 'astro-pure/user'
+import PageLayout from '@/layouts/BaseLayout.astro'
 import ProjectCard from '@/components/home/ProjectCard.astro'
 import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
-import { Button, Card, Label } from '@/components/user'
-import { getAllCollections, sortMDByDate } from '@/utils'
 import avatar from '@/assets/avatar.png'
-import { siteConfig } from '@/site-config'
+import config from '@/site-config'
 
 const languages = [
   'Python',
@@ -53,7 +53,6 @@ const websiteList = [
     subheading: 'Record status of CWorld websites',
     imagePath: '/src/assets/projects/site-status.png'
   },
-
   {
     href: 'https://waline.cworld0.com/ui/login',
     heading: 'Waline comment system',
@@ -75,12 +74,12 @@ const websiteList = [
 ]
 
 const MAX_POSTS = 10
-const allPosts = await getAllCollections()
+const allPosts = await getBlogCollection()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
 <PageLayout meta={{ title: 'Home' }} highlightColor='#659EB966'>
-  <div class='flex w-full flex-col items-center'>
+  <main class='flex w-full flex-col items-center'>
     <section class='animate mb-10 flex flex-col items-center gap-y-7' id='content-header'>
       <Image
         src={avatar}
@@ -90,23 +89,19 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       />
 
       <div class='flex flex-col items-center gap-y-4'>
-        <h1 class='text-3xl font-bold'>{siteConfig.author}</h1>
+        <h1 class='text-3xl font-bold'>{config.author}</h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
           <Label title='China'>
-            <svg class='size-5' slot='icon'>
-              <use href='/icons/social.svg#mingcute-location-line'></use>
-            </svg>
+            <Icon name='location' class='size-5' slot='icon' />
           </Label>
-          <Label title='Follow My Github' as='a' href='https://github.com/cworld1' target='_blank'>
-            <svg class='size-5' slot='icon'>
-              <use href='/icons/social.svg#mingcute-github-line'></use>
-            </svg>
+          <Label title='Source code' as='a' href='https://github.com/cworld1' target='_blank'>
+            <Icon name='github' class='size-5' slot='icon' />
           </Label>
         </div>
       </div>
     </section>
 
-    <div id='content' class='flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
+    <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
         <p class='text-muted-foreground'>Developer / Designer</p>
         <p class='text-muted-foreground'>
@@ -211,7 +206,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         <SkillLayout title='Others' skills={others} />
       </Section>
     </div>
-  </div>
-
-  <Quote class='mt-12' />
+    <Quote class='mt-12' />
+  </main>
 </PageLayout>

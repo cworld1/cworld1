@@ -1,37 +1,21 @@
 ---
-import PageLayout from '@/layouts/CommonPage.astro'
 import links from 'public/links.json'
+import config from 'virtual:config'
 
-import { Comment } from '@/components/advanced'
+import { Comment } from 'astro-pure/advanced'
+import { Collapse, Timeline } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
 import FriendList from '@/components/links/FriendList.astro'
-import { Collapse, Timeline } from '@/components/user'
-import { integrationConfig } from '@/site-config'
 
 const headings = [
-  {
-    depth: 2,
-    slug: 'common-links',
-    text: 'Common Links'
-  },
-  {
-    depth: 2,
-    slug: 'special-links',
-    text: 'Special Links'
-  },
-  {
-    depth: 2,
-    slug: 'small-circle',
-    text: 'Small Circle'
-  },
-  {
-    depth: 2,
-    slug: 'apply-links',
-    text: 'Apply Links'
-  }
+  { depth: 2, slug: 'common-links', text: 'Common Links' },
+  { depth: 2, slug: 'special-links', text: 'Special Links' },
+  { depth: 2, slug: 'apply-links', text: 'Apply Links' },
+  { depth: 2, slug: 'small-circle', text: 'Small Circle' }
 ]
 
 const { friends } = links
-const linksConfig = integrationConfig.links
+const linksConfig = config.integ.links
 ---
 
 <PageLayout title='Links' {headings} info='/links'>
@@ -44,14 +28,15 @@ const linksConfig = integrationConfig.links
   <Collapse title='Link History Book'>
     <Timeline events={linksConfig.logbook} />
   </Collapse>
-  <FriendList list={friends[2]} title='Special Links' />
+  <h2 id='special-links'>Special Links</h2>
+  <FriendList list={friends[2]} />
 
   <h2 id='small-circle'>Small Circle</h2>
   <div id='friend-circle-lite-root' class='not-prose'>Loading...</div>
   <script>
     import '@/assets/styles/fc.css'
 
-    import { FriendCircle } from '@/plugins/friendCircle'
+    import { FriendCircle } from '@/plugins/friend-circle'
 
     const fc = new FriendCircle()
     fc.init({

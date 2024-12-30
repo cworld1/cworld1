@@ -1,10 +1,10 @@
 ---
+import { getBlogCollection, getUniqueTagsWithCount } from 'astro-pure/server'
+import { Button } from 'astro-pure/user'
+import { cn } from 'astro-pure/utils'
 import PageLayout from '@/layouts/BaseLayout.astro'
 
-import { Button } from '@/components/user'
-import { cn, getAllCollections, getUniqueTagsWithCount } from '@/utils'
-
-const allPosts = await getAllCollections()
+const allPosts = await getBlogCollection()
 const allTags = getUniqueTagsWithCount(allPosts)
 
 const meta = {
@@ -14,32 +14,36 @@ const meta = {
 ---
 
 <PageLayout {meta}>
-  <div class='w-full'>
-    <Button title='Back' href='/blog' style='back' />
-    <h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Tags</h1>
+  <Button title='Back' href='/blog' style='back' />
+  <main class='mt-6 lg:mt-10'>
+    <div id='content-header' class='animate'>
+      <h1 class='mb-6 text-3xl font-medium'>Tags</h1>
+    </div>
 
-    {
-      allTags.length > 0 ? (
-        <ul class='animate flex flex-wrap gap-4'>
-          {allTags.map(([tag, val]) => (
-            <li>
-              <Button
-                href={`/tags/${tag}`}
-                style='pill'
-                class={cn(
-                  'items-start gap-x-1',
-                  val > 2 ? 'rounded-2xl px-3.5 py-1 text-xl' : val > 1 && 'text-lg'
-                )}
-              >
-                {tag}
-                <span class={val > 2 ? 'text-base' : 'text-xs'}>{val}</span>
-              </Button>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>Any tag yet.</p>
-      )
-    }
-  </div>
+    <div id='content' class='animate'>
+      {
+        allTags.length > 0 ? (
+          <ul class='flex flex-wrap gap-4'>
+            {allTags.map(([tag, val]) => (
+              <li>
+                <Button
+                  href={`/tags/${tag}`}
+                  style='pill'
+                  class={cn(
+                    'items-start gap-x-1',
+                    val > 2 ? 'rounded-xl px-3 py-1 text-xl' : val > 1 && 'text-lg'
+                  )}
+                >
+                  {tag}
+                  <span class={val > 2 ? 'text-base' : 'text-xs'}>{val}</span>
+                </Button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>Any tag yet.</p>
+        )
+      }
+    </div>
+  </main>
 </PageLayout>

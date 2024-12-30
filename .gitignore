@@ -77,3 +77,5 @@ old_blog
 ignore.*
 /scripts-web/*.sh
 bunfig.toml
+/src/content/blog/test.*
+/test/

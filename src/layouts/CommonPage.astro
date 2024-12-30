@@ -1,13 +1,11 @@
 ---
 import type { MarkdownHeading } from 'astro'
-import PageLayout from '@/layouts/BaseLayout.astro'
 
-import BackToTop from '@/components/pages/BackToTop.astro'
-import PageInfo from '@/components/pages/PageInfo.astro'
-import TOC from '@/components/pages/TOC.astro'
-import { Button } from '@/components/user'
-import { cn } from '@/utils'
-import { integrationConfig } from '@/site-config'
+import { BackToTop, PageInfo, TOC } from 'astro-pure/components/pages'
+import { Button } from 'astro-pure/user'
+import { cn } from 'astro-pure/utils'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import { integ } from '@/site-config'
 
 interface Props {
   title: string
@@ -24,50 +22,48 @@ const { title, headings, info, ...props } = Astro.props
 ---
 
 <PageLayout meta={{ title }} {...props}>
-  <div class='w-full'>
-    <Button title='Back' href='/' style='back' />
-    <div class='mt-6 w-full items-start gap-x-10 md:flex'>
-      {
-        !!headings?.length && (
-          <TOC
-            class='animate top-24 z-10 min-w-40 basis-60 max-md:hidden md:sticky md:order-2'
-            {headings}
-          />
-        )
-      }
-      <article class='flex-1'>
-        <div id='content-header'>
-          <h1 class='text-2xl font-medium sm:mb-2 sm:text-3xl'>
-            {title}
-          </h1>
-          {
-            info && (
-              <PageInfo
-                path={typeof info === 'string' ? info : info.slug}
-                hideComment={
-                  typeof info === 'object' && info.hideComment ? info.hideComment : false
-                }
-                class='italic'
-              />
-            )
-          }
-        </div>
-        <div
-          id='content'
-          class={cn('mt-8 max-w-none md:min-w-[45ch]', integrationConfig.typography.class)}
-        >
-          <slot />
-        </div>
-      </article>
-    </div>
-    <div class='mt-8 w-full items-start gap-x-10 md:flex'>
-      <div class='mt-8 flex-1 text-muted-foreground md:min-w-[50ch]'>
-        <slot name='bottom' />
+  <Button title='Back' href='/' style='back' />
+  <main class='mt-6 items-start gap-x-10 md:flex'>
+    {
+      !!headings?.length && (
+        <TOC
+          class='animate top-24 z-10 min-w-48 basis-60 max-md:hidden md:sticky md:order-2'
+          {headings}
+        />
+      )
+    }
+
+    <article class='min-w-0 grow'>
+      <div id='content-header' class='animate'>
+        <h1 class='text-2xl font-medium sm:mb-2 sm:text-3xl'>
+          {title}
+        </h1>
+        {
+          info && (
+            <PageInfo
+              path={typeof info === 'string' ? info : info.slug}
+              hideComment={typeof info === 'object' && info.hideComment ? info.hideComment : false}
+              class='italic'
+            />
+          )
+        }
       </div>
-      <div class='min-w-40 basis-60'>
-        <slot name='bottom-sidebar' />
+      <div
+        id='content'
+        class={cn('max-w-none animate mt-8 md:min-w-[45ch]', integ.typography.class)}
+      >
+        <slot />
       </div>
+    </article>
+  </main>
+
+  <div class='mt-6 items-start gap-x-10 md:flex'>
+    <div class='mt-8 flex-1 text-muted-foreground md:min-w-[50ch]'>
+      <slot name='bottom' />
     </div>
-    <BackToTop header='content-header' content='content' />
+    <div class='min-w-48 basis-60'>
+      <slot name='bottom-sidebar' />
+    </div>
   </div>
+  <BackToTop header='content-header' content='content' />
 </PageLayout>

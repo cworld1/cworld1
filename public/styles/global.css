@@ -32,8 +32,11 @@ html.dark {
 #content-header {
   animation-delay: 50ms;
 }
-#sidebar {
+#content {
   animation-delay: 100ms;
+}
+#sidebar {
+  animation-delay: 150ms;
 }
 
 /* Shiki */
@@ -69,7 +72,7 @@ html.dark {
       }
 
       & .line {
-        padding-inline-end: 0.75rem;
+        padding-inline-end: 3rem;
         &::before {
           position: sticky;
           content: counter(step);
@@ -118,7 +121,7 @@ html.dark {
       border-radius: 0.25rem;
       color: hsl(var(--muted-foreground) / var(--tw-text-opacity, 1));
       background-color: hsl(var(--primary-foreground) / var(--tw-bg-opacity, 1));
-      border: 1px solid hsl(var(--border));
+      border: 1px solid hsl(var(--border) / var(--tw-border-opacity, 1));
     }
     &.copied {
       & .success {
@@ -146,7 +149,7 @@ html.dark {
   }
   & .highlighted,
   & .highlighted::before {
-    background-color: rgba(101, 117, 133, 0.32);
+    background-color: rgba(149, 166, 183, 0.32) !important;
   }
 
   & .diff {

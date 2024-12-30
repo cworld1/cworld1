@@ -16,12 +16,16 @@ const typographyConfig = ({ theme }) => ({
       '--tw-prose-pre-code': fgMuted,
       '--tw-prose-pre-bg': bgMuted,
 
-      'h2, h3, h4, h5, h6, h7': {
+      'h2, h3, h4, h5, h6': {
+        scrollMarginTop: '3rem',
         '& > a': {
           marginInlineStart: '0.75rem',
           color: fgMuted,
           transition: 'opacity 0.2s ease',
-          opacity: '0'
+          opacity: '0',
+          '&:focus': {
+            opacity: 1
+          }
         },
         '&:hover > a, &:target > a': {
           opacity: '1'
@@ -32,7 +36,6 @@ const typographyConfig = ({ theme }) => ({
         margin: '0 auto'
       },
       table: {
-        display: 'block',
         overflowX: 'scroll'
       },
       blockquote: {
@@ -65,7 +68,10 @@ const typographyConfig = ({ theme }) => ({
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    './node_modules/astro-pure/components/**/*.astro'
+  ],
   darkMode: ['class'],
   safelist: ['dark'],
   plugins: [typography()],

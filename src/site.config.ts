@@ -1,102 +1,94 @@
-import type { CardListData, FooterConfig, IntegrationConfig, MenuLinks, SiteConfig } from '@/types'
+import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } from 'astro-pure/types'
 
-export const siteConfig: SiteConfig = {
-  // === Required meta properties ===
-  // Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-  author: 'CWorld',
-  // Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
+export const theme: ThemeUserConfig = {
+  // === Basic configuration ===
+  /** Title for your website. Will be used in metadata and as browser tab title. */
   title: 'CWorld Site',
-  // Meta property used to generate your sitemap and canonical URLs in your final build
-  site: 'https://cworld0.com',
-  // Meta property used as the default description meta property
+  /** Will be used in index page & copyright declaration */
+  author: 'CWorld',
+  /** Description metadata for your website. Can be used in page metadata. */
   description: 'Stay hungry, stay foolish',
-  // HTML lang property, found in src/layouts/Base.astro L:18
-  lang: 'zh-CN, en-US',
-  // Meta property, found in src/components/BaseHead.astro L:42
-  ogLocale: 'en_US',
-  // Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
-  date: {
-    locale: 'en-US',
-    options: {
+  /** The default favicon for your site which should be a path to an image in the `public/` directory. */
+  favicon: '/favicon/favicon.ico',
+  /** Specify the default language for this site. */
+  locale: {
+    lang: 'en-US',
+    attrs: 'en_US',
+    // Date locale
+    dateLocale: 'en-US',
+    dateOptions: {
       day: 'numeric',
       month: 'short',
       year: 'numeric'
     }
   },
+  /** Set a logo image to show in the homepage. */
+  logo: {
+    src: 'src/assets/avatar.png',
+    alt: 'Avatar'
+  },
 
-  // Mirror (remove ending trailing slash)
-  npmCDN: 'https://cdn.jsdelivr.net/npm',
+  // === Global configuration ===
+  titleDelimiter: '•',
+  prerender: true,
+
   // Recommend:
   // - https://cdn.jsdelivr.net/npm
   // - https://cdn.smartcis.cn/npm
   // - https://unkpg.com
   // - https://cdn.cbd.int
   // - https://esm.sh
+  npmCDN: 'https://cdn.jsdelivr.net/npm',
 
-  // === Customize options ===
-  blog: {
-    pageSize: 8 // blog page size for pagination
+  // in test
+  head: [
+    /* Telegram channel */
+    // {
+    //   tag: 'meta',
+    //   attrs: { name: 'telegram:channel', content: '@cworld0_cn' },
+    //   content: ''
+    // }
+  ],
+  customCss: [],
+
+  /** Configure the header of your site. */
+  header: {
+    menu: [
+      { title: 'Blog', link: '/blog' },
+      { title: 'Projects', link: '/projects' },
+      { title: 'Links', link: '/links' },
+      { title: 'About', link: '/about' }
+    ]
   },
 
-  seo: {
-    // Telegram channel (Only to link with telegram instant view.
-    // If you don't know what it is, you can ignore it)
-    telegramChannel: '@cworld0_cn'
+  /** Configure the footer of your site. */
+  footer: {
+    // Registration information for ICP (optional)
+    registration: {
+      url: 'https://icp.gov.moe/?keyword=20240147',
+      text: '萌备20240147'
+    },
+    /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
+    credits: true,
+    /** Optional details about the social media accounts for this site. */
+    social: {
+      github: 'https://github.com/cworld1',
+      telegram: 'https://t.me/cworld0_cn',
+      coolapk: 'http://www.coolapk.com/u/1384771'
+    }
   },
+
   content: {
+    externalLinksContent: ' ↗',
+    /** Blog page size for pagination (optional) */
+    blogPageSize: 8,
     externalLinkArrow: true, // show external link arrow
     // Currently support weibo, x, bluesky
     share: ['weibo', 'bluesky']
   }
 }
 
-// Footer configuration, which contains the registration and social links
-// and will be used in Footer.astro
-export const footerConfig: FooterConfig = {
-  // Registration information for ICP (optional)
-  registration: {
-    url: 'https://icp.gov.moe/?keyword=20240147',
-    text: '萌备20240147'
-  },
-  socialLinks: [
-    // {
-    //   name: 'mail',
-    //   url: 'mailto:cworld0@qq.com'
-    // },
-    {
-      name: 'github',
-      url: 'https://github.com/cworld1'
-    },
-    {
-      name: 'telegram',
-      url: 'https://t.me/cworld0_cn'
-    },
-    {
-      name: 'coolapk',
-      url: 'http://www.coolapk.com/u/1384771'
-    }
-  ]
-}
-
-export const integrationConfig: IntegrationConfig = {
-  // Comment system
-  waline: {
-    enable: true,
-    // Server service link
-    server: 'https://waline.cworld0.com/',
-    // Refer https://waline.js.org/en/guide/features/emoji.html
-    emoji: ['bmoji', 'weibo'],
-    // Refer https://waline.js.org/en/reference/client/props.html
-    additionalConfigs: {
-      // search: false,
-      pageview: true,
-      comment: true,
-      locale: {
-        reaction0: 'Like',
-        placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
-      }
-    }
-  },
+export const integ: IntegrationUserConfig = {
   links: {
     // Friend logbook
     logbook: [
@@ -156,16 +148,28 @@ export const integrationConfig: IntegrationConfig = {
     ],
     // Yourself link info
     applyTip: {
-      name: siteConfig.title,
+      name: theme.title,
       desc: '求知若愚，虚怀若谷',
-      url: siteConfig.site + '/',
+      url: 'https://cworld0.com/',
       avatar: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
     }
+  },
+  // Enable page search function
+  pagefind: true,
+  // Add a random quote to the footer (default on homepage footer)
+  quote: {
+    // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
+    // server: 'https://v1.hitokoto.cn/?c=i',
+    // target: (data) => (data as { hitokoto: string }).hitokoto || 'Error'
+    // https://github.com/lukePeavey/quotable
+    server: 'https://api.quotable.io/quotes/random?maxLength=60',
+    target: `(data) => data[0].content || 'Error'`
   },
   // Tailwindcss typography
   typography: {
     // https://github.com/tailwindlabs/tailwindcss-typography
-    class: 'prose prose-pure dark:prose-invert dark:prose-pure prose-headings:font-medium'
+    class:
+      'break-words prose prose-pure dark:prose-invert dark:prose-pure prose-headings:font-medium'
   },
   // A lightbox library that can add zoom effect
   mediumZoom: {
@@ -175,35 +179,25 @@ export const integrationConfig: IntegrationConfig = {
       className: 'zoomable'
     }
   },
-  // Add a random quote to the footer (default on homepage footer)
-  quote: {
-    // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
-    // server: 'https://v1.hitokoto.cn/?c=i',
-    // target: (data) => (data as { hitokoto: string }).hitokoto || 'Error'
-    // https://github.com/lukePeavey/quotable
-    server: 'https://api.quotable.io/quotes/random?maxLength=60',
-    target: (data) => (data as { content: string }[])[0].content || 'Error'
+  // Comment system
+  waline: {
+    enable: true,
+    // Server service link
+    server: 'https://waline.cworld0.com/',
+    // Refer https://waline.js.org/en/guide/features/emoji.html
+    emoji: ['bmoji', 'weibo'],
+    // Refer https://waline.js.org/en/reference/client/props.html
+    additionalConfigs: {
+      // search: false,
+      pageview: true,
+      comment: true,
+      locale: {
+        reaction0: 'Like',
+        placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
+      }
+    }
   }
 }
-
-export const menuLinks: MenuLinks = [
-  {
-    link: '/blog',
-    label: 'Blog'
-  },
-  {
-    link: '/projects',
-    label: 'Projects'
-  },
-  {
-    link: '/links',
-    label: 'Links'
-  },
-  {
-    link: '/about',
-    label: 'About'
-  }
-]
 
 export const terms: CardListData = {
   title: 'Terms content',
@@ -226,3 +220,6 @@ export const terms: CardListData = {
     }
   ]
 }
+
+const config = { ...theme, integ } as Config
+export default config

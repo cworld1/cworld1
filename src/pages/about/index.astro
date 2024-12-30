@@ -1,40 +1,20 @@
 ---
-import PageLayout from '@/layouts/CommonPage.astro'
 import { Image } from 'astro:assets'
 
+import { Comment } from 'astro-pure/advanced'
+import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 import Umami from '@/components/about/Umami.astro'
-import { Comment } from '@/components/advanced'
-import { Button, Collapse, Spoiler, Timeline } from '@/components/user'
 import notByAIImage from '@/assets/not-by-ai-badge.svg'
 
 const headings = [
-  {
-    depth: 2,
-    slug: 'hobbies',
-    text: 'Hobbies'
-  },
-  {
-    depth: 2,
-    slug: 'tools',
-    text: 'Tools'
-  },
-  {
-    depth: 2,
-    slug: 'social-networks',
-    text: 'Social Networks'
-  },
-  {
-    depth: 2,
-    slug: 'gossips',
-    text: 'Gossips'
-  },
-  {
-    depth: 2,
-    slug: 'about-blog',
-    text: 'About Blog'
-  }
+  { depth: 2, slug: 'hobbies', text: 'Hobbies' },
+  { depth: 2, slug: 'tools', text: 'Tools' },
+  { depth: 2, slug: 'social-networks', text: 'Social Networks' },
+  { depth: 2, slug: 'gossips', text: 'Gossips' },
+  { depth: 2, slug: 'about-blog', text: 'About Blog' }
 ]
 ---
 
@@ -81,19 +61,19 @@ const headings = [
         name: 'Photoshop',
         description: 'Picture Editing',
         href: 'https://www.adobe.com/products/photoshop',
-        iconPath: 'photoshop'
+        icon: import('@/assets/icons/photoshop.svg?raw')
       },
       {
         name: 'Premiere Pro',
         description: 'Video Editing',
         href: 'https://www.adobe.com/products/premiere',
-        iconPath: 'premiere'
+        icon: import('@/assets/icons/premiere.svg?raw')
       },
       {
         name: 'Animate',
         description: 'Animation Creating',
         href: 'https://www.adobe.com/products/animate',
-        iconPath: 'animate'
+        icon: import('@/assets/icons/animate.svg?raw')
       }
     ]}
   />
@@ -105,13 +85,13 @@ const headings = [
         name: 'Firefox',
         description: 'Broswer',
         href: 'https://www.mozilla.org/en-US/firefox',
-        iconPath: 'firefox'
+        icon: import('@/assets/icons/firefox.svg?raw')
       },
       {
         name: 'Zerotier',
         description: 'Remote Collaboration',
         href: 'https://www.zerotier.com//',
-        iconPath: 'zerotier'
+        icon: import('@/assets/icons/zerotier.svg?raw')
       }
     ]}
   />
@@ -123,37 +103,37 @@ const headings = [
         name: 'VS Code',
         description: 'IDE',
         href: 'https://code.visualstudio.com/',
-        iconPath: 'vscode'
+        icon: import('@/assets/icons/vscode.svg?raw')
       },
       {
         name: 'Neovim',
         description: 'IDE',
         href: 'https://neovim.io/',
-        iconPath: 'neovim'
+        icon: import('@/assets/icons/neovim.svg?raw')
       },
       {
         name: 'Sublime Text',
         description: 'IDE',
         href: 'https://www.sublimetext.com/',
-        iconPath: 'sublime'
+        icon: import('@/assets/icons/sublime.svg?raw')
       },
       {
         name: 'Unity Editor',
         description: 'Game Engine',
         href: 'https://unity.com/',
-        iconPath: 'unity'
+        icon: import('@/assets/icons/unity.svg?raw')
       },
       {
         name: 'Android Studio',
         description: 'Android Development',
         href: 'https://developer.android.com/studio',
-        iconPath: 'androidstudio'
+        icon: import('@/assets/icons/androidstudio.svg?raw')
       },
       {
         name: 'QT',
         description: 'C++ Compontent Development',
         href: 'https://www.qt.io/',
-        iconPath: 'qt'
+        icon: import('@/assets/icons/qt.svg?raw')
       }
     ]}
   />
@@ -165,19 +145,19 @@ const headings = [
         name: 'Arch Linux',
         description: 'Linux Distribution',
         href: 'https://archlinux.org/',
-        iconPath: 'archlinux'
+        icon: import('@/assets/icons/archlinux.svg?raw')
       },
       {
         name: 'MacOS Sonoma',
         description: 'MacBook Air',
         href: 'https://www.apple.com/macos/',
-        iconPath: 'apple'
+        icon: import('@/assets/icons/apple.svg?raw')
       },
       {
         name: 'Windows 11',
         description: 'Leigion Y7000P',
         href: 'https://news.microsoft.com/windows11-general-availability/',
-        iconPath: 'windows11'
+        icon: import('@/assets/icons/windows11.svg?raw')
       }
     ]}
   />
@@ -193,14 +173,14 @@ const headings = [
     stats={[
       {
         platform: 'GitHub',
-        icon: 'social.svg#mingcute-github-line',
+        icon: 'github',
         link: 'https://github.com/cworld1',
         text: 'followers',
         api: 'github/cworld1'
       },
       {
         platform: 'Telegram',
-        icon: 'social.svg#mingcute-telegram-line',
+        icon: 'telegram',
         color: '#2ca5e0',
         link: 'https://t.me/cworld0_cn',
         text: 'subscribers',
@@ -208,7 +188,7 @@ const headings = [
       },
       {
         platform: 'Coolapk',
-        icon: 'social.svg#coolapk-line',
+        icon: 'coolapk',
         color: '#11ab60',
         link: 'https://www.coolapk.com/u/1384771',
         text: 'fans',
@@ -217,7 +197,7 @@ const headings = [
       },
       {
         platform: 'Bilibili',
-        icon: 'social.svg#ri-bilibili-line',
+        icon: 'bilibili',
         color: '#fe7398',
         link: 'https://space.bilibili.com/388346465',
         text: 'fans',
@@ -225,17 +205,16 @@ const headings = [
         count: 55
       },
       {
-        platform: 'Twitter',
-        icon: 'social.svg#mingcute-twitter-line',
-        color: '#1da1f2',
-        link: 'https://twitter.com/CWorld0',
+        platform: 'X',
+        icon: 'x',
+        link: 'https://x.com/CWorld0',
         text: 'followers',
         // api: 'twitter/cworld0',
         count: 34
       },
       {
         platform: 'Weibo',
-        icon: 'copyright-sponsor.svg#mingcute-weibo-line',
+        icon: 'weibo',
         color: '#e71f19',
         link: 'https://weibo.com/cworld0',
         text: 'followers',
@@ -243,7 +222,7 @@ const headings = [
       },
       {
         platform: 'Zhihu',
-        icon: 'social.svg#ri-zhihu-line',
+        icon: 'zhihu',
         color: '#0084ff',
         link: 'https://www.zhihu.com/people/wolf-03/answers',
         text: 'followers',
@@ -251,7 +230,7 @@ const headings = [
       },
       {
         platform: 'Steam',
-        icon: 'social.svg#ri-steam-line',
+        icon: 'steam',
         color: '#50769d',
         link: 'https://steamcommunity.com/id/cworld',
         text: 'games',

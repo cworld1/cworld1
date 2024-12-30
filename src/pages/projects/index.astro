@@ -1,48 +1,27 @@
 ---
-import PageLayout from '@/layouts/CommonPage.astro'
 import { Image } from 'astro:assets'
 
+import type { iconsType } from 'astro-pure/types'
+import { Button, Collapse, Icon } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
 import Sponsors from '@/components/projects/Sponsors.astro'
-import { Button, Collapse } from '@/components/user'
 import alipay from '@/assets/alipay-qrcode.jpg'
+import KeyIcon from '@/assets/icons/key.svg'
 import wechat from '@/assets/wechat-qrcode.jpg'
+import config from '@/site-config'
 
 const headings = [
-  {
-    depth: 2,
-    slug: 'applications',
-    text: 'Applications'
-  },
-  {
-    depth: 2,
-    slug: 'programs',
-    text: 'Programs'
-  },
-  {
-    depth: 2,
-    slug: 'learnings',
-    text: 'Learnings'
-  },
-  {
-    depth: 2,
-    slug: 'others',
-    text: 'Others'
-  },
-  {
-    depth: 2,
-    slug: 'gpg-signature',
-    text: 'GPG Signature'
-  },
-  {
-    depth: 2,
-    slug: 'sponsorship',
-    text: 'Sponsorship'
-  }
+  { depth: 2, slug: 'applications', text: 'Applications' },
+  { depth: 2, slug: 'programs', text: 'Programs' },
+  { depth: 2, slug: 'learnings', text: 'Learnings' },
+  { depth: 2, slug: 'others', text: 'Others' },
+  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
+  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
 ]
 ---
 
-<PageLayout title='Projects' headings={headings} info={{ slug: '/projects', hideComment: true }}>
+<PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
   <p>Github Activities:</p>
   <p>
     <Image
@@ -57,9 +36,7 @@ const headings = [
     support my work or contact me to discuss a project.
   </p>
   <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
-    <svg class='size-5' slot='before'>
-      <use href='/icons/copyright-sponsor.svg#mingcute-receive-money-line'></use>
-    </svg>
+    <Icon class='size-5' name='receive-money' slot='before' />
   </Button>
 
   <h2 id='applications'>Applications</h2>
@@ -376,9 +353,7 @@ const headings = [
     title='Checkout my key'
     target='_blank'
   >
-    <svg class='size-5' slot='before'>
-      <use href='/icons/project.svg#mingcute-key-2-line'></use>
-    </svg>
+    <KeyIcon class='size-5' slot='before' />
   </Button>
 
   <!-- sponsorship -->
@@ -387,14 +362,12 @@ const headings = [
   <div class='flex flex-col justify-center gap-4 sm:flex-row'>
     {
       [
-        { name: 'WeChat', icon: 'mingcute-wechat-pay-line', image: wechat },
-        { name: 'Alipay', icon: 'mingcute-alipay-line', image: alipay }
+        { name: 'WeChat', icon: 'wechat-pay', image: wechat },
+        { name: 'Alipay', icon: 'alipay', image: alipay }
       ].map((item) => (
         <div class='group relative justify-center overflow-hidden rounded-xl border bg-white'>
           <div class='absolute bottom-0 end-0 start-0 top-0 flex items-center justify-center transition-opacity group-hover:opacity-0'>
-            <svg class='size-20'>
-              <use href={`/icons/copyright-sponsor.svg#${item.icon}`} />
-            </svg>
+            <Icon class='size-20' name={item.icon as iconsType} />
           </div>
           <Image
             class='mx-auto my-0 max-w-60 opacity-30 blur-sm transition-opacity group-hover:opacity-100 group-hover:blur-none'
@@ -417,16 +390,19 @@ const headings = [
   />
 </PageLayout>
 
-<script is:inline type='module' data-astro-rerun>
-  import { siteConfig } from '/src/site.config.ts'
-
+<script
+  is:inline
+  type='module'
+  data-astro-rerun
+  define:vars={{ npmCDN: config.npmCDN, walineServer: config.integ.waline.server }}
+>
   const loadPageviewCount = async () => {
-    const pageviewCount = await import(`${siteConfig.npmCDN}/@waline/client@v3/dist/pageview.js`)
-    pageviewCount({
-      serverURL: siteConfig.commonPage.walineServerUrl,
+    const pageview = await import(`${npmCDN}/@waline/client@v3/dist/pageview.js`)
+    pageview.pageviewCount({
+      serverURL: walineServer,
       path: window.location.pathname
     })
   }
 
-  loadPageviewCount()
+  await loadPageviewCount()
 </script>

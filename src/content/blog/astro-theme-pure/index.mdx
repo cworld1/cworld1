@@ -1,0 +1,163 @@
+---
+title: 'Astro Theme Pure 项目'
+description: '前段时间写了个前端项目，一时兴起，就顺便把博客也翻新了一遍。'
+publishDate: '2024-04-19'
+updatedDate: '2024-06-29'
+heroImage: { src: './theme-astro-cover.jpg', alt: 'astro theme pure', color: '#3BA0C5' }
+tags: ['pure', 'astro', 'theme']
+---
+
+import { GithubCard, LinkPreview } from 'astro-pure/advanced'
+
+## When
+
+前段时间写了个前端项目（React + Antd），感叹前端变化太快，开发体验已经比几年前学 Vue 好上不少了。一时兴起 ~~（上瘾）~~ ，就顺便把博客也翻新了一遍。然而过程还蛮曲折的，有些东西要推翻重来，前前后后花了一个多月，也是挺令人感叹的。
+
+## Why
+
+这事倒是早就想做了，因为旧博客问题实在是不少：
+
+1. 框架为 Hexo，稍有过时，更新不够积极；
+2. 主题大多不是很满意；
+3. 使用的主题已经快3年不更新了（并且没找到别的好看的）；
+4. 使用的主题有一些莫名其妙的 Bug，比如本地预览重复使用导致崩溃；
+5. 使用的主题自定义能力太弱，实现方式不太优雅；
+6. 使用的主题在脚本兼容方面不够友好；
+7. 与我的主域名耦合度不好，很容易造成割裂体验；
+8. 子域名导致的链接较长。
+
+新的框架使用 Astro，简单体验下来有以下优点：
+
+1. 大量优质主题（但更新可能不怎么勤快）；
+2. 主题与源码耦合，能够随意拆解、修改主题代码（但更新可能更为困难）；
+3. 对 Typescript 极其友好（可能会有一堆类型报错问题）；
+4. 导入调用体验很好，并且会有针对性优化，不再需要强行塞进 `public` 文件夹了
+5. 性能强悍，渲染速度快、访问流畅，懒加载技术立竿见影；
+6. 支持 MDX 语法，文档内也能够自定义组件和内容（暂时用不上。？）；
+7. 支持 Web Component 和文件拆分、Slot，使得源码能够组件话，抽丝剥茧、方便复用；
+8. 框架的说明文档丰富好用；
+9. 生态极其强大，对主流框架/服务平台支持极其完善
+10. 开发模式会有开发者工具栏，调试省心省力，优化建议更是避免了疏漏。
+
+缺点也在括号里。不过明显是利大于弊了。
+
+## What
+
+好马配好鞍，除了新的框架外，我还配合了一些新的东西：
+
+1. 基于知名优秀主题 [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus) 最新改进的 [Astro Resume](https://github.com/srleom/astro-theme-resume?tab=readme-ov-file) 主题为基底；
+2. 采用了 [Tailwind CSS](https://tailwindcss.com)，帮助我快速搭建组件、布局样式；
+3. 后端改为有服务属性的 Vercel，能够在后端完成渲染。
+
+## Where
+
+新的框架顺利帮助我完成了主页和博客页面的无缝衔接，顺利成章地合并进主域名，博客页面也就改为了[cworld0.com/blog](https://cworld0.com/blog)。希望新博客能让我多一些更新动力吧。
+
+## Who
+
+合并后名称改为了 `CWorld Site`，毕竟是主域名嘛。
+
+## How
+
+目前博客的翻新进度：
+
+### Stage 1: Initial
+
+- [x] 更换框架
+- [x] 更换主题
+- [x] 修改主页
+- [x] 修改关于界面
+- [x] 添加折叠组件
+- [x] 完善博客列表展示，加入头图预览
+- [x] 完善详情页面头图组件
+- [x] 对接后端，完成首次部署
+- [x] 利用 CI/CD 实现全自动部署
+- [x] 添加时间轴组件
+
+### Stage 2: Fix
+
+- [x] 清洗友链数据
+- [x] 添加友链组件
+- [x] 清洗评论数据，迁移到新博客
+- [x] 添加评论组件
+- [x] 完善页脚信息
+- [x] 添加浏览数、评论数统计组件 (Tks for project [Waline](https://waline.js.org/guide/features/pageview.html))
+- [x] 关闭旧博客评论区
+- [x] 将旧博客地址迁移到 [blogv2.cworld.top](https://blogv2.cworld.top/)
+- [x] 添加旧域名跳转页面，实现文章直接跳转
+
+### Stage 3: Update
+
+- [x] 优化手机端顶部导航栏样式（为点击展开菜单式）
+- [x] 优化图标存储位置和存储方式
+- [x] 为部分内容添加图标，用以替换原有的文本描述
+- [x] 添加社交卡片（实时加载粉丝数等）
+- [x] 优化 RSS，添加简单样式和完整内容预览
+- [x] 完善使用工具组件
+
+### Stage 4: Develop
+
+- [x] 添加朋友圈组件
+- [x] 添加项目组件，把我写的一些有脸面的项目放进去
+- [x] 添加 GPG Key 板块， ~~证明是我写的代码~~
+- [x] 添加版权组件
+- [x] 添加打赏板块
+- [x] 版权组件优化，添加打赏、复制链接、分享等简单功能
+- [x] 添加前后文章快速跳转
+- [x] 添加文章数统计
+- [x] 添加目录指示高亮功能
+- [x] 优化回顶按钮显示当前阅读百分比
+- [x] 添加按年份归档展示文章功能
+
+### Stage 5: Prove
+
+- [x] 绑定内容同步到部分社区/频道
+- [x] 添加内容搜索功能 (Tks for code [markhorn-dev/astro-sphere](https://github.com/markhorn-dev/astro-sphere/blob/main/src/components/Search.tsx))
+- [x] 优化顶部导航栏逻辑，实现下滚隐藏、上滚呼出
+- [x] 优化文章内容展示样式
+- [x] 优化文章内容表格的展示和手机端优化
+- [x] 添加图片配色渐变特效
+- [x] 完善主页网页小卡片
+- [x] 部分组件针对移动端优化
+
+### Stage 6: Optimize
+
+- [x] 优化版权声明样式 (Tks for theme [Hexo Theme Fluid](https://hexo.fluid-dev.com/posts/hello-fluid/))
+- [x] 解决 RSS 中的图片资源链接问题 (Tks for article [Adding RSS Feed Content and Fixing Markdown Image Paths in Astro](https://billyle.dev/posts/adding-rss-feed-content-and-fixing-markdown-image-paths-in-astro))
+- [x] 优化目录树 (Tks for code [jw-12138/jw-12138.github.io](https://github.com/jw-12138/jw-12138.github.io/blob/main/src/components/toc.jsx))
+- [x] 优化 SEO
+- [x] 开启 SPA 路由
+- [x] 优化 Transition 性能，减少加载带来的闪烁
+- [x] 添加载入渐变动画 (Tks for project [markhorn-dev/astro-nano](https://github.com/markhorn-dev/astro-nano))
+- [x] 添加链接预览/卡片组件 (Tks for project [delucis/astro-embed](https://github.com/delucis/astro-embed))
+- [x] 迁移到新域名 [cworld0.com](https://cworld0.com/)
+- [x] 使用 Shiki 优化代码块渲染
+- [x] 为 Shiki 添加复制按钮、语言展示等 (Tks for project [Myphz/Myphzshiki-filename-copy-transformers](https://github.com/Myphz/shiki-filename-copy-transformers))
+- [ ] 通知友链好友们修改信息
+- [ ] ...
+
+要改的东西真的挺多的。不过样式好看，写起来得心应手，还算是愉快的。展示一下 [PageSpeed Insights Result](https://pagespeed.web.dev/analysis/https-cworld-top/o229zrt5o4?form_factor=mobile&hl=en)：
+
+![pagespeed insights](./page-speed-insights.png)
+
+~~拜托，满昏超帅的好不好！~~
+
+同以往一样，博客已开源至 Github，如果喜欢博客，欢迎 Fork 和 Star。
+
+<GithubCard repo='cworld1/cworld1' />
+
+但是请注意：
+
+- 不能保留与我有关的原创个人向内容，包括但不限于：我的主页信息、所有博文、项目展示、友链、关于（你的经历跟我又不一样）；
+- 根据 GPL-3 协议规定，项目应当仍然保持开源；
+- 可以不保留原仓库指向或文本说明。
+
+## End
+
+在好友的帮助下，我创建了一个新的主题仓库~ 目前正在积极维护，希望大家喜欢：
+
+<GithubCard repo='https://github.com/cworld1/astro-theme-pure' />
+
+以及上架到的 Astro 官网的信息：
+
+<LinkPreview href='https://astro.build/themes/details/pure/' />
