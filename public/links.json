@@ -171,8 +171,8 @@
         {
           "name": "Ordis",
           "intro": "船到桥头自然直，柳暗花明又一村",
-          "link": "https://imbhj.com/",
-          "avatar": "https://www.imbhj.com/img/avatar1.png"
+          "link": "https://blog.imbhj.com/",
+          "avatar": "https://blog.imbhj.com/upload/icon/bailuobo.jpg"
         },
         {
           "name": "Kris Yan",
@@ -297,13 +297,6 @@
           "status": "stagnation"
         },
         {
-          "name": "安知鱼",
-          "intro": "生活明朗，万物可爱",
-          "link": "https://blog.anheyu.com/",
-          "avatar": "https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg",
-          "status": "unverified"
-        },
-        {
           "name": "HamCQ 社区",
           "intro": "业余无线电爱好者社区",
           "link": "https://forum.hamcq.cn/",
@@ -338,14 +331,6 @@
           "rss": "https://blog.lvbyte.top/atom.xml",
           "email": "2015078351@qq.com",
           "status": "request_update"
-        },
-        {
-          "name": "Fomalhaut🥝",
-          "intro": "Future is now 🍭🍭🍭",
-          "link": "https://www.fomal.cc/",
-          "avatar": "https://www.fomal.cc/assets/avatar.webp",
-          "email": "1174008660@qq.com",
-          "status": "unverified"
         }
       ]
     },
