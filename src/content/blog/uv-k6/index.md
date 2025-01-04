@@ -4,6 +4,7 @@ description: '解决 UV-K6 买来不会玩 & 拓展玩法'
 publishDate: '2024-10-06'
 updatedDate: '2024-10-06'
 tags: ['Radio', 'UV-K6']
+heroImage: { src: './thumbnail.jpg', color: '#DC6E2F' }
 ---
 
 下文将泉盛 UV-K5/6 简称为泉盛，萝狮虎固件简称 Losehu。
