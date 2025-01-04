@@ -1,0 +1,218 @@
+---
+title: Vim 与 VSCode 天衣无缝的配合
+description: '众所周知 Vim 是一种码代码习惯，自然也少不了 VScode 的水乳交融。'
+publishDate: 2025-01-03
+tags:
+  - Vim
+  - VSCode
+heroImage: { src: './thumbnail.jpg', color: '#2B91C9' }
+---
+
+export function FunctionTable({ name, desc, vim, rank, children }) {
+  return (
+    <div className='border rounded-xl p-4'>
+      <div class='inline-flex items-stretch gap-2 rounded-full border pe-3'>
+        <span class='flex items-center shrink-0 text-sm bg-primary-foreground text-primary px-2.5 rounded-full'>
+          Setting ID
+        </span>
+        <samp class='break-all text-foreground'>{name}</samp>
+      </div>
+      <p class='flex items-center gap-x-3'>
+        <svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24'>
+          <g fill='none'>
+            <path d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z' />
+            <path
+              fill='currentColor'
+              d='M13 20a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2zM12 2c4.41 0 8 3.543 8 7.933c0 3.006-1.522 5.196-2.78 6.494l-.284.283l-.27.252l-.252.22l-.33.27l-.328.244c-.196.138-.34.329-.466.535l-.145.251l-.141.252c-.24.412-.518.766-1.111.766h-3.786c-.593 0-.871-.354-1.11-.766l-.213-.378c-.145-.253-.305-.494-.54-.66l-.232-.171l-.199-.155l-.227-.188l-.252-.22l-.27-.252l-.285-.283C5.522 15.129 4 12.939 4 9.933C4 5.543 7.59 2 12 2m0 2C8.677 4 6 6.665 6 9.933c0 2.624 1.533 4.494 2.593 5.471l.245.218l.22.182l.27.208l.072.052c.315.222.549.531.762.854l.373.582h2.93l.373-.582c.213-.323.447-.632.762-.854l.243-.182l.206-.165l.233-.2C16.342 14.576 18 12.662 18 9.933C18 6.665 15.323 4 12 4m.293 2.293a1 1 0 0 1 1.497 1.32l-.083.094L12.414 9l1.286 1.286c.364.364.392.937.084 1.333l-.084.095l-1.993 1.993a1 1 0 0 1-1.497-1.32l.083-.094L11.586 11L10.3 9.714a1.01 1.01 0 0 1-.084-1.333l.084-.095z'
+            />
+          </g>
+        </svg>
+        {desc}
+      </p>
+      <p class='flex items-center gap-x-3'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          class='px-1 box-content'
+          width='20'
+          height='20'
+          viewBox='0 0 15 15'
+        >
+          <path
+            fill='none'
+            stroke='currentColor'
+            d='M1.5 3.5h1v10h3l8-10v-2h-5v2h2l-5 6v-6h1v-2h-5z'
+          />
+        </svg>
+        {vim ?? 'Null'}
+      </p>
+      <div class='function-table-content'>{children}</div>
+      <div class='inline-flex gap-x-1 items-center bg-muted border rounded-full px-3 [&_svg]:text-foreground'>
+        推荐指数：
+        {
+          // print stars (count rank)
+          Array.from({ length: rank }, (_) => (
+            <svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'>
+              <g fill='none' fill-rule='evenodd'>
+                <path d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z' />
+                <path
+                  fill='currentColor'
+                  d='M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176zM12 4.987L9.687 8.959a1.25 1.25 0 0 1-.816.592l-4.492.973l3.062 3.427c.234.262.347.61.312.959l-.463 4.573l4.206-1.854a1.25 1.25 0 0 1 1.008 0l4.206 1.854l-.463-4.573a1.25 1.25 0 0 1 .311-.959l3.063-3.427l-4.492-.973a1.25 1.25 0 0 1-.816-.592z'
+                />
+              </g>
+            </svg>
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+
+毕竟 VSCode 现在可是正统的 “宇宙第一 IDE”，Vim 或者 Nvim 在很多方面显然要甘拜下风，很多时候都不得不重新捡起 VSCode 写代码（甚至尤其是 Windows 上糟糕的终端体验）。所以作为 Vim 的第二期教程，就来讲讲在 VSCode 上如何优雅地使用 Vim。
+
+此外这里也给出了对应的 Vim 插件名称，读者也可以在正常的 Vim 或者 Neovim 上使用这些插件，体验完全一致。
+
+## 插件
+
+对于 VSCode，Vim 插件少不了！[VSCodeVim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) 速速装完了再看下文。
+
+### Input Method
+
+<FunctionTable name='vim.autoSwitchInputMethod.enable' desc='在进入 Vim 编辑模式时自动切换输入法' rank={5}>
+
+对于非英文用户，在退出 Insert 模式后需要切换回英文输入模式，这对于偶尔频繁用非英文输入内容时很烦人（比如我正在输入的这篇文章）。这个配置可以在退出 Insert 模式时自动切换到英文，重新回到 Insert 的时候切换回上次退出时候的输入法，大幅降低你的血压。
+
+这可能需要 `im-select` 或者 `fcitx` 等工具的支持。不过对于 Windows 官方的微软输入法，推荐使用 [AIMSwitcher](https://github.com/A-23187/AIMSwitcher)。它能在不切换输入法语言的请款下，调用微软拼音输入法的中英文切换。
+
+配置参考：
+
+```json
+{
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.switchIMCmd": "C:/Users/cworld/.local/bin/AIMSwitcher.exe --imm {im}",
+  "vim.autoSwitchInputMethod.defaultIM": "0",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "C:/Users/cworld/.local/bin/AIMSwitcher.exe --imm"
+}
+```
+
+</FunctionTable>
+
+### vim-surround
+
+<FunctionTable name='vim.surround' desc='快速帮你选择和操作外框字符' vim='surround.vim' rank={4}>
+
+写代码经常碰到外框 `<>`、`""`、`{}` 等？`surround.vim` 插件可以帮你快速选择和操作这些外框字符。即使是 `<p>hello world</p>` 这样选择起来非常麻烦的内容，也可以通过 `yit` 来快速选择外框。当然，不只是选择，添加、替换、删除都是一应俱全的。
+
+| Surround Command           | Description                                              |
+| -------------------------- | -------------------------------------------------------- |
+| `y s <motion> <desired>`   | Add `desired` surround around text defined by `<motion>` |
+| `d s <existing>`           | Delete `existing` surround                               |
+| `c s <existing> <desired>` | Change `existing` surround to `desired`                  |
+| `S <desired>`              | Surround when in visual modes (surrounds full selection) |
+
+具体玩法 VScode 内部给了快速跳转链接，这里就不展开了。
+
+</FunctionTable>
+
+### vim-easymotion
+
+<FunctionTable name='vim.easymotion' desc='快速移动光标' vim='vim-easymotion' rank={2}>
+
+移动光标确实常常力不从心，从一头跳到另一头可能最快的方法还是鼠标。所以我们有了 `easymotion` 插件，快速输入你想要找的字母，然后快速跳转（或者快速跳转到后文的任意单词的开头/结尾）。
+
+使用指令很多，这里贴官方表：
+
+| Motion Command                      | Description                                                                                                    |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `<leader><leader> s <char>`         | Search character                                                                                               |
+| `<leader><leader> f <char>`         | Find character forwards                                                                                        |
+| `<leader><leader> F <char>`         | Find character backwards                                                                                       |
+| `<leader><leader> t <char>`         | Til character forwards                                                                                         |
+| `<leader><leader> T <char>`         | Til character backwards                                                                                        |
+| `<leader><leader> w`                | Start of word forwards                                                                                         |
+| `<leader><leader> b`                | Start of word backwards                                                                                        |
+| `<leader><leader> l`                | Matches beginning & ending of word, camelCase, after `_`, and after `#` forwards                               |
+| `<leader><leader> h`                | Matches beginning & ending of word, camelCase, after `_`, and after `#` backwards                              |
+| `<leader><leader> e`                | End of word forwards                                                                                           |
+| `<leader><leader> ge`               | End of word backwards                                                                                          |
+| `<leader><leader> j`                | Start of line forwards                                                                                         |
+| `<leader><leader> k`                | Start of line backwards                                                                                        |
+| `<leader><leader> / <char>... <CR>` | Search n-character                                                                                             |
+| `<leader><leader><leader> bdt`      | Til character                                                                                                  |
+| `<leader><leader><leader> bdw`      | Start of word                                                                                                  |
+| `<leader><leader><leader> bde`      | End of word                                                                                                    |
+| `<leader><leader><leader> bdjk`     | Start of line                                                                                                  |
+| `<leader><leader><leader> j`        | JumpToAnywhere motion; default behavior matches beginning & ending of word, camelCase, after `_` and after `#` |
+
+缺点大概是要动脑子快速输入对应位置，很多时候其实快速行跳转 + `f` 就定位了。这个都是习惯问题，习惯了肯定好用，故更适用于高阶玩家。
+
+</FunctionTable>
+
+### vim-commentary
+
+<FunctionTable name='No need' desc='快速注释/反注释你的代码行或块' vim='vim-commentary' rank={5}>
+
+这玩意被默认启用！使用方法很简单：
+
+- `gc` 注释选中行（`gcc` 注释当前行，同理 `gc2j` 注释当前两行、`gcap` 注释当前段落）；
+- `gC` 注释选中段落（同理 `gCC`、`gC2j`）。
+
+</FunctionTable>
+
+### vim-sneak
+
+<FunctionTable name='vim.sneak' desc='使用两个字符跳转并操作' vim='vim-sneak' rank={3}>
+
+这样的描述会很奇怪，我们需要举例说明：
+
+```js
+something.data.set(
+  'rounded-t-2xl',
+  inView &&
+    (this.target.index
+      ? !this.headingProgress[this.tocLinks[i - 1]?.slug].inView
+      : 'rounded-b-2xl'),
+  true
+)
+```
+
+假设我想把代码中的 `(this.target.index ? ...)` 表达式替换为 `(this.target. index && <new content>)`，使用传统的查找选择编辑就很是捉襟见肘。但是如果使用了这个插件，我们就可以简化为：
+
+1. 前往关键位置 `?`
+2. 输入 `cz),`
+3. 后续内容全部被清空，进入编辑模式。
+
+指令构成其实是 `<operator>z<char><char>`，`z` 换 `Z` 就是向前查找。
+
+此外还可以使用 `s<char><char>` 或 `S<char><char>` 快速跳转！甚至可以使用 `;` 或 `,` 重复跳转，可谓是非常便捷了。Vim 还提供了 “把原生的 `f` 替换成这个插件的” 以及忽略大小写功能，可以按需开启。
+
+</FunctionTable>
+
+### vim-textobj-arguments
+
+<FunctionTable name='vim.sneak' desc='快速选择/处理参数' vim='targets.vim' rank={5}>
+
+函数作为现代编程的基本单元，参数经常涉及修改。这个插件就能快速选择对应参数：
+
+```js
+foo(a.test.backwards, b, c, d)
+```
+
+光标放在第一个参数上，`daa` 就能删除整个参数（含分割逗号），`cia` 就能替换整个参数。这个插件还支持 `a`、`i`、`r`、`l`、`c`、`d`、`y` 等操作，非常方便。
+
+</FunctionTable>
+
+## VSCodeVim tricks!
+
+这部分内容似乎有点进阶？没事看看就行。
+
+- `gd` - jump to definition.（一键跳注释，很方便吧？）
+- `gq` - on a visual selection reflow and wordwrap blocks of text, preserving commenting style. Great for formatting documentation comments.
+- `gb` - adds another cursor on the next word it finds which is the same as the word under the cursor.
+- `af` - visual mode command which selects increasingly large blocks of text. For example, if you had "blah (foo [bar 'ba|z'])" then it would select 'baz' first. If you pressed `af` again, it'd then select [bar 'baz'], and if you did it a third time it would select "(foo [bar 'baz'])".
+- `gh` - equivalent to hovering your mouse over wherever the cursor is. Handy for seeing types and error messages without reaching for the mouse!
+
+### FAQ
+
+- There are annoying intellisense/notifications/popups that I can't close with `<esc>`! Or I'm in a snippet and I want to close intellisense
+
+  Press `shift+<esc>` to close all of those boxes.
