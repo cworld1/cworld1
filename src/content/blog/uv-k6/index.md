@@ -2,7 +2,7 @@
 title: '泉盛 UV-K6 上手指南'
 description: '解决 UV-K6 买来不会玩 & 拓展玩法'
 publishDate: '2024-10-06'
-updatedDate: '2024-10-06'
+updatedDate: '2024-01-19'
 tags: ['Radio', 'UV-K6']
 heroImage: { src: './thumbnail.jpg', color: '#DC6E2F' }
 ---
@@ -11,7 +11,7 @@ heroImage: { src: './thumbnail.jpg', color: '#DC6E2F' }
 
 ## 魔改版本
 
-> 摘自 [UV-K6折腾记](https://www.nishikino-maki.com/archives/UV-K6-mod.html)
+> 摘自 [UV-K6折腾记](https://nishikino-maki.com/archives/UV-K6-mod.html)
 
 ### 扩容
 
@@ -161,7 +161,7 @@ Losehu 长按 <kbd>\* Scan</kbd> 按键触发，运行时屏幕左上会显示 `
 
 <https://www.douyin.com/video/7378726519192997129>
 
-### 开普勒模式
+### 多普勒模式
 
 目前是 Losehu 提供对应 [教程](https://github.com/losehu/uv-k5-firmware-custom/tree/main/doc)。
 
