@@ -289,12 +289,11 @@
           "status": "unverified"
         },
         {
-          "name": "EvanNotFound",
-          "intro": "Evan的部落阁，用香港记者的速度更新文章",
-          "link": "https://ohevan.com/",
-          "avatar": "https://assets.ohevan.com/avatars/avatar-min.png",
-          "email": "contact@ohevan.com",
-          "status": "unverified"
+          "name": "Oyiso's Blog",
+          "intro": "The shortest answer is doing",
+          "link": "https://oyiso.cn/",
+          "avatar": "https://oyiso.cn/logo.png",
+          "email": "me@onll.cn"
         }
       ]
     },
@@ -344,6 +343,14 @@
           "rss": "https://blog.lvbyte.top/atom.xml",
           "email": "2015078351@qq.com",
           "status": "request_update"
+        },
+        {
+          "name": "EvanNotFound",
+          "intro": "Evan的部落阁，用香港记者的速度更新文章",
+          "link": "https://ohevan.com/",
+          "avatar": "https://assets.ohevan.com/avatars/avatar-min.png",
+          "email": "contact@ohevan.com",
+          "status": "unverified"
         }
       ]
     },
