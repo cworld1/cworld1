@@ -1,6 +1,7 @@
 ---
 title: Vim 的一些键位知识
 publishDate: 2023-12-15 19:00:02
+updateDate: 2025-02-11 01:15:00
 description: '用了几年 Vim 有了一些心得，故有此文。'
 tags:
   - Vim
@@ -35,9 +36,14 @@ heroImage: { src: './thumbnail.jpg', color: '#65AF5B' }
 - 单独向下创建一行输入：`o` (open below)
 - 单独向上创建一行输入：`O` (open above)
 
-> 还有个冷门的：`s` 删除当前字符并进入输入模式。
+> 还有冷门的：
+>
+> - `s` 删除当前字符并进入输入模式（等价于 `cl`，l 即 letter）
+> - `S` 删除当前行并进入输入模式（等价于 `cc`）
 
-使用 Esc 退出该模式。
+![vim insert](./vim-insert.webp)
+
+使用 `Esc`（或 `c-[`）退出该模式。
 
 ### 编辑器的常见操作
 
@@ -71,10 +77,10 @@ heroImage: { src: './thumbnail.jpg', color: '#65AF5B' }
 > 大写的对应按键也有奇效，但是一般不用，这里不展开。
 
 - 前往行首：0 ("hard" bol)
-- 前往行第一个非空字符：^ ("soft" bol)（你也可以用 0 和 w 配合使用达到同样的效果，不用按住 Shift）
+- 前往行第一个非空字符：^ ("soft" bol)（你也可以用 0 和 w 配合使用达到同样的效果，优点是不用按住 Shift）
 - 前往行末：$ (eol)
 
-既能行内也能行外的跳转：
+![vim move cursor](./vim-move-cursor.webp)
 
 - 从各种括号的一头跳到另一头：`%`
 - 重复执行以便快速移动：数字 + hjkl
@@ -84,6 +90,8 @@ heroImage: { src: './thumbnail.jpg', color: '#65AF5B' }
   > ```vim
   > set number relativenumber
   > ```
+  >
+  > ![vim set relative number](./vim-set-relative-number.webp)
   >
   > 此外向下移动光标还有：数字 + 回车。
 
@@ -125,21 +133,26 @@ heroImage: { src: './thumbnail.jpg', color: '#65AF5B' }
 
 使用 Esc 退出该模式。
 
+![vim visual](./vim-visual.webp)
+
 ### 更多样地选择内容
 
-进入选择模式后，你可以使用正常的光标移动技巧，以及一些更加灵活的选择方式：
+进入选择模式后，你可以使用正常的光标移动技巧，以及一些更加灵活的选择方式。这种方式被称作 “文本对象（text object）”，能够让我们不移动光标的情况下来操作一定区域内的内容。
 
 - 选择单词（从光标到下一个符号/空格，包括符号）：`w` (word)
 - 选择当前单词：`iw` (in word)
 - 选择当前单词（包括下一个符号/空格）：`aw` (around word)
+- 选择到下一个对应字符：`f<char>` 或 `t<char>`
 
   > 同理，可将 `w` 换成别的，比如：
   >
+  > - 字母 `l`（letter），使用时需要重写，如 `yll`。个人更倾向于使用 `vy`
   > - 大写单词 `W` (WORD)
   > - 以逗号句号感叹号等收尾的句子（没有的话就是全段了）：`s` (sentence)
-  > - 段落：`p` (paregraph)
-  > - 引号：`"`、`'`
-  > - 括号：`[]`、`()` 等。
+  > - 行：`L`
+  > - 以空行间隔开的段落：`p` (paregraph)
+  > - 引号：`'`、`"`、"``"
+  > - 括号：`()`、`[]`、`{}` 等。
 
 ### 修改内容
 
@@ -165,12 +178,14 @@ heroImage: { src: './thumbnail.jpg', color: '#65AF5B' }
 
   > 复制本行也可以用 `Y`
 
-- 缩进选择内容：`>` 以及反缩进 `<`。这个命令可以重复表示缩进/反缩进多少格，如：`3>`。
+- 缩进选择内容：`>` 以及反缩进 `<`。这个命令可以重复表示缩进/反缩进多少格，如：`v3>` 表示当前行缩进一格，`>3>` 或 `3>>` 表示接下来三行都缩进一格。
 
 此外还可以：
 
 - 重复输入两次以便快速使用，效果为作用于该行整行，相当于 V + 对应命令。目前已知的命令包括：`cc`、`dd`、`yy`、`>>`、`<<`。
 - 搭配数字实现对于多少汗的重复，如 `y3y`、`3yy`。已知可用的命令同上。
+
+![vim yank text object](./vim-yank-text-object.webp)
 
 ### 复制与粘贴
 
@@ -204,6 +219,8 @@ set clipboard+=unnamed
 > - 跳转到行内上一个字符（但是光标往后挪一个）：`T` ("back" find ch)
 >
 > 但是不知道有什么用。？
+
+> ![vim move find](./vim-move-find.webp)
 
 可配合 `c`、`d`、`y` 命令。使用 `;` 可以持续执行上面说的这个跳转操作，只要当前 buffer 没有被关闭就能一直保存跳转字符的记录，随时可用。而 `,` 则做相反方向的查找。
 
@@ -344,8 +361,15 @@ set clipboard+=unnamed
 
 嗯... 文章有亿点长了。如果实在不喜欢记这些东西，并且真的感觉 Vim 很反人类的话，建议停止尝试。适合自己的才是最好的。
 
-最后给一个一图流链接吧，个人感觉这个写的还蛮不错的。
+最后给点自己觉得还不错的资料：
 
-[Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
+- [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)：Vim 一图流
 
-![vi-vim-cheat-sheet](vi-vim-cheat-sheet.png)
+  ![vi-vim-cheat-sheet](vim-cheat-sheet.png)
+
+- [Learn Vim (the Smart Way)](https://github.com/iggredible/Learn-Vim)：这是一本非常好的开源的 Vim 入门书籍，它会带你从 Vim 的基础操作，到 Vim 的高级操作，再到 Vim 的插件开发
+- [Vim Adventures](https://vim-adventures.com/)：相对有趣的 Vim 游戏，能不那么枯燥地带你一步步的学习 Vim 的基础操作
+
+鸣谢：
+
+- [Yuexun：写给 VS Code 用户的 Vim 入坑指南](https://yuexun.blogit.io/the-vim-guide-for-vs-code-users)
