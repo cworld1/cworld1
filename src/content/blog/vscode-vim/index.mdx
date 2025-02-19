@@ -2,6 +2,7 @@
 title: Vim 与 VSCode 天衣无缝的配合
 description: '众所周知 Vim 是一种码代码习惯，自然也少不了 VScode 的水乳交融。'
 publishDate: 2025-01-03
+updateDate: 2025-02-11
 tags:
   - Vim
   - VSCode
@@ -191,13 +192,24 @@ something.data.set(
 
 <FunctionTable name='vim.sneak' desc='快速选择/处理参数' vim='targets.vim' rank={5}>
 
-函数作为现代编程的基本单元，参数经常涉及修改。这个插件就能快速选择对应参数：
+
+众所周知，Vim 的 Text Object 是其相当强大的特性之一，如 `w` 代表 Word, `L` 代表 `Line`。VSCodeVim 也提供了一些额外的 Text Object 支持，比如：函数作为现代编程的基本单元，参数经常涉及修改。这个插件就能快速选择对应参数：
 
 ```js
 foo(a.test.backwards, b, c, d)
 ```
 
-光标放在第一个参数上，`daa` 就能删除整个参数（含分割逗号），`cia` 就能替换整个参数。这个插件还支持 `a`、`i`、`r`、`l`、`c`、`d`、`y` 等操作，非常方便。
+光标放在第一个参数上，`daa` 就能删除整个参数（Argument）（含分割逗号），`cia` 就能替换整个参数。这个插件还支持 `a`、`i`、`r`、`l`、`c`、`d`、`y` 等操作，非常方便。
+
+后来似乎这个插件做了很多衍生的 Text Object：
+
+(11(22))
+
+- `2<scope>(` 选择当前第二层括号内的内容，如在单词 `inside` 位置执行 `d2i)` 会将 `out(middle (inside))` 清除为 `out()`。同理多层
+- `t` 即 Tag，选择 HTML 标签。修改标签名称操作就应该为 `cstt`，意为 Change Surround from Tag to Tag，也就是 「修改围绕的标签为另一个标签」
+- `q` 即 Quote，选择双引号
+- `b` 即 Bracket，选择小括号
+- `B` 即 Bigger Bracket，选择大括号
 
 </FunctionTable>
 
@@ -205,14 +217,17 @@ foo(a.test.backwards, b, c, d)
 
 这部分内容似乎有点进阶？没事看看就行。
 
+- `zc` `zo` 可以开关折叠，`zR` `zM` 可以折叠所有或者展开所有
 - `gd` - jump to definition.（一键跳注释，很方便吧？）
 - `gq` - on a visual selection reflow and wordwrap blocks of text, preserving commenting style. Great for formatting documentation comments.
 - `gb` - adds another cursor on the next word it finds which is the same as the word under the cursor.
 - `af` - visual mode command which selects increasingly large blocks of text. For example, if you had "blah (foo [bar 'ba|z'])" then it would select 'baz' first. If you pressed `af` again, it'd then select [bar 'baz'], and if you did it a third time it would select "(foo [bar 'baz'])".
 - `gh` - equivalent to hovering your mouse over wherever the cursor is. Handy for seeing types and error messages without reaching for the mouse!
 
-### FAQ
+## 资料
 
-- There are annoying intellisense/notifications/popups that I can't close with `<esc>`! Or I'm in a snippet and I want to close intellisense
+[Boost Your Coding Fu With VSCode and Vim](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim)：你敢信，有人真的为 VSCode + Vim 写了本书。这抽象程度简直就跟这发布网址一样，抽象的域名配合抽象的路径，最后搭配抽象的内容量，绝了（值得一提，排版和标题字号也很抽象）。不过内容详实巨细无遗，值得一读。
 
-  Press `shift+<esc>` to close all of those boxes.
+### References
+
+- [编辑器进化 VSCode + Vim](https://zhuanlan.zhihu.com/p/613666124)
