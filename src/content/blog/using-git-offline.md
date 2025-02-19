@@ -7,7 +7,7 @@ tags: ['git', 'offline']
 language: English
 ---
 
-> This is an article reffered from [/james/notes/computers](https://www.gibbard.me/using_git_offline/)
+> This is an article referred from [/james/notes/computers](https://www.gibbard.me/using_git_offline/)
 
 Some companies use an isolated network or even the complete lack of a network as a security measure to protect from unauthorized access. Working on these systems can be a struggle but it is still possible, and perhaps even more important, to use a proper version control tool like Git.
 
@@ -144,7 +144,7 @@ git pull /path/to/repoName.bundle
 
 ### Creating a local remote repository
 
-Bundles solve the problem of synchronising Git repositories without a network, but we are still left with multiple computers all likely to be slightly out of sync with each other. If a new developer joins the team who do they copy the repository from? The best option is to select one development machine that will act as the “server”. A bare Git repository can be created on this development machine in addition to a local clone of the repository where the developer will actually work.
+Bundles solve the problem of synchronizing Git repositories without a network, but we are still left with multiple computers all likely to be slightly out of sync with each other. If a new developer joins the team who do they copy the repository from? The best option is to select one development machine that will act as the “server”. A bare Git repository can be created on this development machine in addition to a local clone of the repository where the developer will actually work.
 
 ```bash
 cd /path/to/store/main/repo
@@ -169,4 +169,4 @@ git push origin branchName
 
 ## Summary
 
-The distributed nature of Git allows it to work well without a central server. While the options presented will never be as convenient as just pushing to github they certainly beat the alternative of: `main_v1_final version_with_bobs_extra_patch finalfinal_version`.
+The distributed nature of Git allows it to work well without a central server. While the options presented will never be as convenient as just pushing to github they certainly beat the alternative of: `main_v1_final version_with_bobs_extra_patch final_final_version`.
