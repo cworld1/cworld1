@@ -294,6 +294,47 @@
           "link": "https://oyiso.cn/",
           "avatar": "https://oyiso.cn/logo.png",
           "email": "me@onll.cn"
+        },
+        {
+          "name": "EvanNotFound",
+          "intro": "Evan的部落阁，用香港记者的速度更新文章",
+          "link": "https://ohevan.com/",
+          "avatar": "https://assets.ohevan.com/avatars/avatar-min.png",
+          "email": "contact@ohevan.com",
+          "status": "unverified"
+        },
+        {
+          "name": "Ethan",
+          "intro": "Don’t stay awake for too long.",
+          "link": "https://hanlife02.com/",
+          "avatar": "https://hanlife02.com/api/v2/objects/avatar/evcvs61h0ajgvoai07.jpeg",
+          "email": "han@hanlife02.com.cn",
+          "status": "verified"
+        },
+        {
+          "name": "王小明的杂物堆",
+          "intro": "乱七八糟就像我一样",
+          "link": "https://imwzj.uk/",
+          "avatar": "https://avatars.githubusercontent.com/u/87957461",
+          "email": "zhuo0107@foxmail.com",
+          "status": "verified"
+        },
+        {
+          "name": "小码同学",
+          "intro": "喜欢的东西就努力去追求，万一成功了呢!",
+          "link": "https://blog.hikki.site/",
+          "avatar": "https://bu.dusays.com/2025/03/02/67c4531250141.jpg",
+          "email": "wu-tianliang@qq.com",
+          "status": "verified"
+        },
+        {
+          "name": "蘇 SU",
+          "intro": "在数字的海洋中，寻找属于自己的星辰。",
+          "link": "https://suus.me/",
+          "avatar": "https://cravatar.cn/avatar/4924b5f45b6b65e4925c35f9056fe3e7?s=200",
+          "rss": "https://suus.me/index.xml",
+          "email": "wu-tianliang@qq.com",
+          "status": "verified"
         }
       ]
     },
@@ -343,14 +384,6 @@
           "rss": "https://blog.lvbyte.top/atom.xml",
           "email": "2015078351@qq.com",
           "status": "request_update"
-        },
-        {
-          "name": "EvanNotFound",
-          "intro": "Evan的部落阁，用香港记者的速度更新文章",
-          "link": "https://ohevan.com/",
-          "avatar": "https://assets.ohevan.com/avatars/avatar-min.png",
-          "email": "contact@ohevan.com",
-          "status": "unverified"
         }
       ]
     },
