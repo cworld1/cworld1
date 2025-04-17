@@ -146,7 +146,10 @@ export const integ: IntegrationUserConfig = {
       { date: '2024-11-19', content: "[Wayne's Blog] lost" },
       { date: '2024-11-19', content: '[流年轻迹] lost' },
       { date: '2024-11-26', content: '[字节君] stagnated' },
-      { date: '2025-01-21', content: '[一叶竹] returned' }
+      { date: '2025-01-21', content: '[一叶竹] returned' },
+      { date: '2025-04-06', content: '[L1nSn0w] returned' },
+      { date: '2025-04-06', content: '[伍十七] lost' },
+      { date: '2025-04-06', content: '[LanM蓝莓Blog] lost' }
     ],
     // Yourself link info
     applyTip: {

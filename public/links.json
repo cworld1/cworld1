@@ -83,16 +83,7 @@
           "avatar": "https://cdn.zerolacqua.top/images/avatar.png",
           "rss": "https://blog.zerolacqua.top/atom.xml",
           "email": "hlc118@outlook.com",
-          "status": "request_update"
-        },
-        {
-          "name": "LanM蓝莓Blog",
-          "intro": "据说最高级的快乐有三种：自律，爱，创造",
-          "link": "https://lanm.love/",
-          "avatar": "https://www.lanm.love/img/3.ico",
-          "rss": "https://lanm.love/rss.xml",
-          "email": "xiaoteng.one@gmail.com",
-          "status": "request_update"
+          "status": "verified"
         },
         {
           "name": "七云's Blog",
@@ -131,7 +122,7 @@
           "intro": "安安~这里是陆陆侠的生活",
           "link": "https://llx.life/",
           "avatar": "https://llx.life/touxiang.png",
-          "status": "request_update"
+          "status": "verified"
         },
         {
           "name": "大大的小蜗牛",
@@ -140,25 +131,15 @@
           "avatar": "https://cravatar.cn/avatar/171e4c30959e8c077a6c58b958624b31",
           "rss": "https://www.eallion.com/index.xml",
           "email": "eallions@gmail.com",
-          "status": "request_update",
-          "method": "email"
+          "status": "verified"
         },
         {
-          "name": "一四三随笔",
-          "intro": "路在脚下，心系远方",
+          "name": "Young143's Blog",
+          "intro": "如果我死在追逐自由的路上,那便是我的终点.",
           "link": "https://www.young143.top/",
           "avatar": "https://www.young143.top/a.jpg",
           "rss": "https://www.young143.top/feed",
           "email": "young143@yeah.net"
-        },
-        {
-          "name": "Wittoy’s Blog",
-          "intro": "摸鱼天下第一",
-          "link": "https://blog.wittoy.com/",
-          "avatar": "https://cdn.jsdelivr.net/gh/1rz/static/images/me.webp",
-          "rss": "https://blog.wittoy.com/index.xml",
-          "email": "Wittoy@pm.me",
-          "status": "request_update"
         },
         {
           "name": "Arthals' ink",
@@ -242,12 +223,6 @@
           "email": "chenl@76.al"
         },
         {
-          "name": "伍十七",
-          "intro": "我是一名正在上大一的前端爱好者，专注于构建优秀的应用程序。",
-          "link": "https://blog.everfu.cn/",
-          "avatar": "https://7.isyangs.cn/66/6745e058e1578-66.webp"
-        },
-        {
           "name": "FloatSheep",
           "intro": "On the other side of obstacles",
           "link": "https://blog.hesiy.cn/",
@@ -282,13 +257,6 @@
           "rss": "https://blog.akiday.com/feed"
         },
         {
-          "name": "xaoxuu",
-          "intro": "风暴前夕",
-          "link": "https://xaoxuu.com/",
-          "avatar": "https://bu.dusays.com/2021/09/24/2f74810ceb3d3.png",
-          "status": "unverified"
-        },
-        {
           "name": "Oyiso's Blog",
           "intro": "The shortest answer is doing",
           "link": "https://oyiso.cn/",
@@ -301,7 +269,7 @@
           "link": "https://ohevan.com/",
           "avatar": "https://assets.ohevan.com/avatars/avatar-min.png",
           "email": "contact@ohevan.com",
-          "status": "unverified"
+          "status": "verified"
         },
         {
           "name": "Ethan",
@@ -335,6 +303,13 @@
           "rss": "https://suus.me/index.xml",
           "email": "wu-tianliang@qq.com",
           "status": "verified"
+        },
+        {
+          "name": "L1nSn0w",
+          "intro": "无限进步.🎈",
+          "link": "https://linsnow.cn/",
+          "avatar": "https://linsnow.cn/avatar.png",
+          "status": "verified"
         }
       ]
     },
@@ -343,11 +318,27 @@
       "desc": "Inactive or rule-breaking friends",
       "link_list": [
         {
-          "name": "hiCasper",
-          "intro": "没有 BUG 的代码是不完美的",
-          "link": "http://hicasper.com/",
-          "avatar": "https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44",
-          "status": "stagnation"
+          "name": "Wayne's Blog",
+          "intro": "以梦为马，不负韶华。",
+          "link": "https://wrans.top/",
+          "avatar": "https://cravatar.cn/avatar/5dcd1e147f801b62d5fe858f241dae64?s=169",
+          "status": "returning"
+        },
+        {
+          "name": "LanM蓝莓Blog",
+          "intro": "据说最高级的快乐有三种：自律，爱，创造",
+          "link": "https://lanm.love/",
+          "avatar": "https://www.lanm.love/img/3.ico",
+          "rss": "https://lanm.love/rss.xml",
+          "email": "xiaoteng.one@gmail.com",
+          "status": "lost"
+        },
+        {
+          "name": "伍十七",
+          "intro": "我是一名正在上大一的前端爱好者，专注于构建优秀的应用程序。",
+          "link": "https://blog.everfu.cn/",
+          "avatar": "https://7.isyangs.cn/66/6745e058e1578-66.webp",
+          "status": "lost"
         },
         {
           "name": "HamCQ 社区",
@@ -357,11 +348,22 @@
           "status": "unverified"
         },
         {
-          "name": "L1nSn0w’s Site",
-          "intro": "无限进步.🎈",
-          "link": "https://linsnow.cn/",
-          "avatar": "https://cravatar.cn/avatar/9702b0e102b4524329aca1d057d3b65e?d=retro",
-          "status": "unverified"
+          "name": "字节君",
+          "intro": "热爱漫无边际，生活自有分寸",
+          "link": "https://blog.lvbyte.top/",
+          "avatar": "https://npm.elemecdn.com/lvbyte-cdn/20230104/%E8%8B%B9%E6%9E%9C.156l7bksen40.jpg",
+          "rss": "https://blog.lvbyte.top/atom.xml",
+          "email": "2015078351@qq.com",
+          "status": "losing"
+        },
+        {
+          "name": "Wittoy’s Blog",
+          "intro": "摸鱼天下第一",
+          "link": "https://blog.wittoy.com/",
+          "avatar": "https://cdn.jsdelivr.net/gh/1rz/static/images/me.webp",
+          "rss": "https://blog.wittoy.com/index.xml",
+          "email": "Wittoy@pm.me",
+          "status": "losing"
         },
         {
           "name": "Joyer 的博客",
@@ -371,19 +373,11 @@
           "status": "stagnation"
         },
         {
-          "name": "Wayne's Blog",
-          "intro": "以梦为马，不负韶华。",
-          "link": "https://wrans.top/",
-          "avatar": "https://cravatar.cn/avatar/5dcd1e147f801b62d5fe858f241dae64?s=169"
-        },
-        {
-          "name": "字节君",
-          "intro": "热爱漫无边际，生活自有分寸",
-          "link": "https://blog.lvbyte.top/",
-          "avatar": "https://npm.elemecdn.com/lvbyte-cdn/20230104/%E8%8B%B9%E6%9E%9C.156l7bksen40.jpg",
-          "rss": "https://blog.lvbyte.top/atom.xml",
-          "email": "2015078351@qq.com",
-          "status": "request_update"
+          "name": "hiCasper",
+          "intro": "没有 BUG 的代码是不完美的",
+          "link": "http://hicasper.com/",
+          "avatar": "https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44",
+          "status": "stagnation"
         }
       ]
     },
@@ -407,8 +401,7 @@
           "name": "十年之约",
           "intro": "本站已签约十年之约",
           "link": "https://foreverblog.cn/blog/2788.html",
-          "avatar": "https://avatars.githubusercontent.com/u/39395618?s=200&v=4",
-          "status": "unverified"
+          "avatar": "https://avatars.githubusercontent.com/u/39395618?s=200&v=4"
         },
         {
           "name": "虫洞",
