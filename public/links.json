@@ -310,6 +310,14 @@
           "link": "https://linsnow.cn/",
           "avatar": "https://linsnow.cn/avatar.png",
           "status": "verified"
+        },
+        {
+          "name": "小林的小窝",
+          "intro": "分享技术、日常",
+          "link": "https://www.xiaorin.com/",
+          "avatar": "https://www.xiaorin.com/Image.jpg",
+          "email": "kylin930@xiaorin.com",
+          "status": "verified"
         }
       ]
     },
