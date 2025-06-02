@@ -25,7 +25,7 @@ const {
     <ThemeProvider />
   </head>
 
-  <body class='flex justify-center bg-background'>
+  <body class='flex justify-center bg-background text-foreground'>
     {
       highlightColor && (
         <div
@@ -44,12 +44,12 @@ const {
     {/* Set highlight color */}
     <style define:vars={{ highlightColor }}>
       :global(.highlight) {
-        color: var(--highlightColor, hsl(var(--primary) / var(--tw-text-opacity))) !important;
+        color: var(--highlightColor, hsl(var(--primary) / var(--un-text-opacity))) !important;
       }
       :global(.highlight-bg) {
         background-color: var(
           --highlightColor,
-          hsl(var(--primary) / var(--tw-text-opacity))
+          hsl(var(--primary) / var(--un-text-opacity))
         ) !important;
       }
     </style>

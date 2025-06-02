@@ -64,7 +64,7 @@ export const addTitle = (): ShikiTransformer => {
         'div',
         {
           class:
-            'title absolute top-0 left-0 m-2 text-sm text-foreground px-3 py-1 bg-primary-foreground rounded-lg border border-border'
+            'title absolute top-0 left-0 m-2 text-sm text-foreground px-3 py-1 bg-primary-foreground rounded-lg border'
         },
         meta.title.toString()
       )
@@ -81,8 +81,7 @@ export const addLanguage = (): ShikiTransformer => {
       const span = h(
         'span',
         {
-          class:
-            'language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none'
+          class: 'language ps-1 pe-3 text-sm bg-muted text-muted-foreground'
         },
         this.options.lang
       )
@@ -101,8 +100,7 @@ export const addCopyButton = (timeout?: number): ShikiTransformer => {
       const button = h(
         'button',
         {
-          class:
-            'copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground',
+          class: 'copy text-muted-foreground p-1 box-content border rounded bg-primary-foreground',
           'data-code': this.source,
           onclick: `
           navigator.clipboard.writeText(this.dataset.code);

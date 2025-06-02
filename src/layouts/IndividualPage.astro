@@ -50,7 +50,7 @@ const socialImage = heroImage?.src ?? '/images/social-card.png'
             )
           }
           {
-            /* Description */
+            // Description
             description && (
               <blockquote class='text-sm italic text-muted-foreground'>
                 <q>{description}</q>
@@ -62,7 +62,10 @@ const socialImage = heroImage?.src ?? '/images/social-card.png'
 
       <div
         id='content'
-        class={cn('animate mt-8 max-w-none md:min-w-[45ch]', integ.typography.class)}
+        class={cn(
+          'animate mt-8 max-w-none md:min-w-[45ch] overflow-x-hidden',
+          integ.typography.class
+        )}
       >
         <slot />
       </div>

@@ -1,14 +1,11 @@
 // @ts-check
 
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
-// Adapter
 import vercel from '@astrojs/vercel'
-// Integrations
 import AstroPureIntegration from 'astro-pure'
 import { defineConfig } from 'astro/config'
 
 // Local integrations
-import { outputCopier } from './src/plugins/output-copier.ts'
 // Local rehype & remark plugins
 import rehypeAutolinkHeadings from './src/plugins/rehype-auto-link-headings.ts'
 // Shiki
@@ -30,6 +27,7 @@ export default defineConfig({
   trailingSlash: 'never',
 
   // Adapter
+  // https://docs.astro.build/en/guides/deploy/
   // 1. Vercel (serverless)
   adapter: vercel(),
   output: 'server',
@@ -37,28 +35,29 @@ export default defineConfig({
   // adapter: vercelStatic(),
   // 3. Local (standalone)
   // adapter: node({ mode: 'standalone' }),
+  // output: 'server',
   // ---
 
   image: { service: { entrypoint: 'astro/assets/services/sharp' }, domains: ['ghchart.rshah.org'] },
 
   integrations: [
-    // astro-pure will automatically add sitemap, mdx & tailwind
+    // astro-pure will automatically add sitemap, mdx & unocss
     // sitemap(),
     // mdx(),
-    // tailwind({ applyBaseStyles: false }),
     AstroPureIntegration(config),
     (await import('@playform/compress')).default({ SVG: false, Exclude: ['index.*.js'] }),
 
     // Temporary fix vercel adapter
     // static build method is not needed
-    outputCopier({ integ: ['sitemap', 'pagefind'] })
   ],
   // root: './my-project-directory',
 
   // Prefetch Options
   prefetch: true,
   // Server Options
-  server: { host: true },
+  server: {
+    host: true
+  },
   // Markdown Options
   markdown: {
     rehypePlugins: [
@@ -74,7 +73,10 @@ export default defineConfig({
     ],
     // https://docs.astro.build/en/guides/syntax-highlighting/
     shikiConfig: {
-      themes: { light: 'github-light', dark: 'github-dark' },
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark'
+      },
       transformers: [
         transformerNotationDiff(),
         transformerNotationHighlight(),
@@ -84,5 +86,8 @@ export default defineConfig({
         addCopyButton(2000)
       ]
     }
+  },
+  experimental: {
+    contentIntellisense: true
   }
 })

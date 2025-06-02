@@ -1,11 +1,3 @@
-html {
-  font-family: 'Satoshi', sans-serif;
-}
-
-html.dark {
-  color-scheme: dark;
-}
-
 /* Animation */
 @keyframes fade-in-up {
   0% {
@@ -44,8 +36,9 @@ html.dark {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
-  background-color: var(--tw-prose-pre-bg) !important;
+  background-color: hsl(var(--muted) / var(--un-bg-opacity, 1)) !important;
 
+  /* Code container */
   & pre {
     margin: 0;
     padding-inline: 0;
@@ -67,10 +60,9 @@ html.dark {
         bottom: 0;
         content: '';
         display: block;
-        background-color: hsl(var(--muted) / var(--tw-bg-opacity, 1));
+        background-color: hsl(var(--muted) / var(--un-bg-opacity, 1));
         z-index: 1;
       }
-
       & .line {
         padding-inline-end: 3rem;
         &::before {
@@ -78,7 +70,7 @@ html.dark {
           content: counter(step);
           counter-increment: step;
           color: hsl(var(--muted-foreground) / 0.6);
-          background-color: hsl(var(--muted) / var(--tw-bg-opacity, 1));
+          background-color: hsl(var(--muted) / var(--un-bg-opacity, 1));
           inset-inline-start: 0;
           justify-content: end;
           display: inline-flex;
@@ -105,7 +97,20 @@ html.dark {
       top: calc(2rem + 0.8571429em);
     }
   }
+  & .language {
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 0.75rem;
+    right: 0;
+  }
   & button.copy {
+    transition: opacity 0.3s;
+    opacity: 0;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    user-select: none;
+
     & .success::before {
       content: 'Copied!';
       position: absolute;
@@ -119,9 +124,9 @@ html.dark {
       padding: 0.5rem;
       margin-right: 0.5rem;
       border-radius: 0.25rem;
-      color: hsl(var(--muted-foreground) / var(--tw-text-opacity, 1));
-      background-color: hsl(var(--primary-foreground) / var(--tw-bg-opacity, 1));
-      border: 1px solid hsl(var(--border) / var(--tw-border-opacity, 1));
+      color: hsl(var(--muted-foreground) / var(--un-text-opacity, 1));
+      background-color: hsl(var(--primary-foreground) / var(--un-bg-opacity, 1));
+      border: 1px solid hsl(var(--border) / var(--un-border-opacity, 1));
     }
     &.copied {
       & .success {

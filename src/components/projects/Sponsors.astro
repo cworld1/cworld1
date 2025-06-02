@@ -14,19 +14,23 @@ const { class: className, sponsors, ...props } = Astro.props
 
 <div class={cn('border px-3 sm:px-4 py-2 rounded-xl', className)} {...props}>
   <table class='my-0'>
-    <tr class='text-start'>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>Date</th>
-    </tr>
-    {
-      sponsors.map((sponsor) => (
-        <tr>
-          <td>{sponsor.name}</td>
-          <td>{sponsor.amount}</td>
-          <td>{sponsor.date}</td>
-        </tr>
-      ))
-    }
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        sponsors.map((sponsor) => (
+          <tr>
+            <td>{sponsor.name}</td>
+            <td>{sponsor.amount}</td>
+            <td>{sponsor.date}</td>
+          </tr>
+        ))
+      }
+    </tbody>
   </table>
 </div>

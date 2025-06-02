@@ -24,13 +24,17 @@ const blog = defineCollection({
         .object({
           src: image(),
           alt: z.string().optional(),
+          inferSize: z.boolean().optional(),
+          width: z.number().optional(),
+          height: z.number().optional(),
+
           color: z.string().optional()
         })
         .optional(),
       tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
       language: z.string().optional(),
       draft: z.boolean().default(false),
-      // Integrations
+      // Special fields
       comment: z.boolean().default(true)
     })
 })

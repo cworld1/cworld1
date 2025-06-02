@@ -12,7 +12,7 @@ export const theme: ThemeUserConfig = {
   favicon: '/favicon/favicon.ico',
   /** Specify the default language for this site. */
   locale: {
-    lang: 'en-US',
+    language: 'en-US',
     attrs: 'en_US',
     // Date locale
     dateLocale: 'en-US',
@@ -31,16 +31,9 @@ export const theme: ThemeUserConfig = {
   // === Global configuration ===
   titleDelimiter: '•',
   prerender: true,
-
-  // Recommend:
-  // - https://cdn.jsdelivr.net/npm
-  // - https://cdn.smartcis.cn/npm
-  // - https://unkpg.com
-  // - https://cdn.cbd.int
-  // - https://esm.sh
   npmCDN: 'https://cdn.jsdelivr.net/npm',
 
-  // in test
+  // Still in test
   head: [
     /* Telegram channel */
     // {
@@ -64,11 +57,25 @@ export const theme: ThemeUserConfig = {
 
   /** Configure the footer of your site. */
   footer: {
-    // Registration information for ICP (optional)
-    registration: {
-      url: 'https://icp.gov.moe/?keyword=20240147',
-      text: '萌备20240147'
-    },
+    links: [
+      // Registration link
+      {
+        title: '萌备20240147',
+        link: 'https://icp.gov.moe/?keyword=20240147',
+        style: 'text-sm' // Uno/TW CSS class
+      },
+      {
+        title: 'Travelling',
+        link: 'https://www.travellings.cn/go.html',
+        style: 'text-sm'
+      },
+      // Privacy Policy link
+      {
+        title: 'Site Policy',
+        link: '/terms/list',
+        pos: 2 // position set to 2 will be appended to copyright line
+      }
+    ],
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
@@ -90,6 +97,8 @@ export const theme: ThemeUserConfig = {
 }
 
 export const integ: IntegrationUserConfig = {
+  // Links management
+  // See: https://astro-pure.js.org/docs/integrations/links
   links: {
     // Friend logbook
     logbook: [
@@ -152,16 +161,17 @@ export const integ: IntegrationUserConfig = {
       { date: '2025-04-06', content: '[LanM蓝莓Blog] lost' }
     ],
     // Yourself link info
-    applyTip: {
-      name: theme.title,
-      desc: '求知若愚，虚怀若谷',
-      url: 'https://cworld0.com/',
-      avatar: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
-    }
+    applyTip: [
+      { name: 'Name', val: theme.title },
+      { name: 'Desc', val: '求知若愚，虚怀若谷' },
+      { name: 'Link', val: 'https://cworld0.com/' },
+      { name: 'Avatar', val: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200' }
+    ]
   },
   // Enable page search function
   pagefind: true,
   // Add a random quote to the footer (default on homepage footer)
+  // See: https://astro-pure.js.org/docs/integrations/advanced#web-content-render
   quote: {
     // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
     // server: 'https://v1.hitokoto.cn/?c=i',
@@ -170,13 +180,13 @@ export const integ: IntegrationUserConfig = {
     server: 'https://api.quotable.io/quotes/random?maxLength=60',
     target: `(data) => data[0].content || 'Error'`
   },
-  // Tailwindcss typography
+  // UnoCSS typography
+  // See: https://unocss.dev/presets/typography
   typography: {
-    // https://github.com/tailwindlabs/tailwindcss-typography
-    class:
-      'break-words prose prose-pure dark:prose-invert dark:prose-pure prose-headings:font-medium'
+    class: 'prose text-base text-muted-foreground'
   },
   // A lightbox library that can add zoom effect
+  // See: https://astro-pure.js.org/docs/integrations/others#medium-zoom
   mediumZoom: {
     enable: true, // disable it will not load the whole library
     selector: '.prose .zoomable',
