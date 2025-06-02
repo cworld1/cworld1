@@ -10,7 +10,7 @@ tags: ['双拼']
 
 ## 搜狗双拼
 
-搜狗双拼是用定义好的单字母代替较长的多字母韵母或声母来进行输入的一种方式。例如： 如果T=t，M=ian，键入两个字母"TM"就会输入拼音"tian"。使用双拼可以减少击键次数，但是需要记忆字母对应的键位，但是熟练之后效率会有一定提高。
+搜狗双拼是用定义好的单字母代替较长的多字母韵母或声母来进行输入的一种方式。例如： 如果 `T=t`，`M=ian`，键入两个字母 `TM` 就会输入拼音 `tian`。使用双拼可以减少击键次数，但是需要记忆字母对应的键位，但是熟练之后效率会有一定提高。
 
 官方网站：[双拼 - 搜狗输入法](https://pinyin.sogou.com/help.php?list=3&q=4)
 
@@ -18,15 +18,21 @@ tags: ['双拼']
 
 **声母**：
 
+```text
 ch=I sh=U zh=V
+```
 
 **韵母**：
 
+```text
 ai=L an=J ang=H ao=K ei=Z en=F eng=G er=R ia=W ian=M iang=D iao=C ie=X in=N ing=; iong=S iu=Q ong=S ou=B ua=W uai=Y uan=R uang=D ue=T ui=V un=P uo=O v=Y ve=T
+```
 
 **零声母音节的韵母**：
 
+```text
 a=OA ai=OL an=OJ ang=OH ao=OK e=OE ei=OZ en=OF eng=OG er=OR o=OO ou=OB
+```
 
 下面只做简单的分类，方便键位的记忆，并不完整。
 
@@ -90,7 +96,7 @@ Z(ei)贼X(ie)邪C(iao)要，V(zh/ui)追B(ou)殴N(in)您M(ian)焉。
 
 CMD Ver.
 
-```shell
+```cmd
 reg add HKCU\Software\Microsoft\InputMethod\Settings\CHS /v UserDefinedDoublePinyinScheme0 /t REG_SZ /d "小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt"
 ```
 
@@ -154,3 +160,11 @@ Y和B按键用得较多，纯双拼情况下打字容易累。故弃坑。
 
 - 最好用最好看的：[纸砚](https://ninglo.github.io/shuangpin/#/) （顺带一提它还开源，地址就是这个 GitHub 链接）
 - 可自定义程度最高的：[keySpell双拼在线练习](https://www.keyspell.top/)
+
+### 记录
+
+2025-05-19
+
+![alt text](./image.png)
+
+基本恢复正常打字速度了。不容易不容易
