@@ -12,7 +12,7 @@ export const theme: ThemeUserConfig = {
   favicon: '/favicon/favicon.ico',
   /** Specify the default language for this site. */
   locale: {
-    language: 'en-US',
+    lang: 'en-US',
     attrs: 'en_US',
     // Date locale
     dateLocale: 'en-US',
