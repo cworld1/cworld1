@@ -4,7 +4,7 @@ description: 'Sometimes you may need to use Git offline, and build a workflow th
 publishDate: '2024-05-17'
 updatedDate: '2024-05-18'
 tags: ['git', 'offline']
-language: English
+language: 'English'
 ---
 
 > This is an article referred from [/james/notes/computers](https://www.gibbard.me/using_git_offline/)

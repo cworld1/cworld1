@@ -1,8 +1,7 @@
 ---
-title: 双拼真的有那么难吗
+title: '双拼真的有那么难吗'
 description: '个人向记录学习双拼的过程。说难也难，这东西贵在坚持'
-publishDate: 2025-04-30
-language: zh
+publishDate: '2025-04-30'
 tags: ['双拼']
 ---
 

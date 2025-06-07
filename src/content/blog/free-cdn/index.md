@@ -1,9 +1,8 @@
 ---
-title: 那些好用的前端 CDN 推荐
-publishDate: 2020-03-01 21:11:00
+title: '那些好用的前端 CDN 推荐'
 description: '最近总感觉自己的网站速度不行，又不想重新搭建（Hexo 的宗旨就是打造响应速度超快的轻量级博客嘛），所以这篇文章也就由此应运而生了。'
-tags:
-  - CDN
+publishDate: '2020-03-01'
+tags: ['CDN']
 heroImage: { src: './thumbnail.png', color: '#6CBBF9' }
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: 钉钉云课堂提取视频 & 倍速播放 & 学习进度
-publishDate: 2020-03-03 23:21:47
+title: '钉钉云课堂提取视频 & 倍速播放 & 学习进度'
 description: '钉钉的云课堂比较反人类，不仅有水印影响观看体验，而且不支持倍速播放。'
+publishDate: '2020-03-03'
 tags:
   - DingTalk
   - Fiddler

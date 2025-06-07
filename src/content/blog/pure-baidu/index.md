@@ -1,10 +1,8 @@
 ---
-title: Pure 百度 - 质形色，始方圆
-publishDate: 2019-07-12 09:50:18
+title: 'Pure 百度 - 质形色，始方圆'
+publishDate: '2019-07-12'
 description: 'Pure 百度 - 质形色，始方圆。'
-tags:
-  - Userstyle
-  - CSS
+tags: ['UserStyle', 'CSS']
 heroImage: { src: './thumbnail.jpg', color: '#DBDBDB' }
 ---
 
@@ -12,15 +10,15 @@ heroImage: { src: './thumbnail.jpg', color: '#DBDBDB' }
 
 ### 宣传图
 
-![1](1.jpg)
+![1](./1.jpg)
 
-![2](2.jpg)
+![2](./2.jpg)
 
-![3](3.jpg)
+![3](./3.jpg)
 
-![4](4.jpg)
+![4](./4.jpg)
 
-![5](5.jpg)
+![5](./5.jpg)
 
 ### 酷安链接
 
@@ -59,48 +57,47 @@ heroImage: { src: './thumbnail.jpg', color: '#DBDBDB' }
 
 - 支持手机浏览器：
 
-  [`Firefox`](https://www.coolapk.com/apk/org.mozilla.firefox)、[`Kiwi Broswer`](https://www.coolapk.com/apk/com.kiwibrowser.browser)、[`Via`](https://www.coolapk.com/apk/mark.via)
+  [`Firefox`](https://www.coolapk.com/apk/org.mozilla.firefox)、[`Kiwi Browser`](https://www.coolapk.com/apk/com.kiwibrowser.browser)、[`Via`](https://www.coolapk.com/apk/mark.via)
 
 由于 Via 还没有研究好，添加后不生效，所以暂时不介绍这种，如果有会折腾的可以告诉我
 
 ### 支持插件
 
-- Userscript：油猴脚本 Tampermonkey，ODM Sandbox 等
+- UserScript：油猴脚本 TamperMonkey，ODM Sandbox 等
 - CSS：Stylish，Stylus 等
 
 ### 步骤
 
 1. 下载上述插件任意一个，建议 Stylish（方便日后更新）。
-   ![image](di3ir3hbj30qh06awfg.jpg)
+
+   ![image](./di3ir3hbj30qh06awfg.jpg)
 
 2. 点击上述 Pure 百度的网址。
-   ![image](di4eg10wj30c2012a9u.jpg)
+
+   ![image](./di4eg10wj30c2012a9u.jpg)
 
 3. 如果你用的 CSS 类，直接点击蓝色的“Install Style”，即可生效（如果没有看到，说明可能你的第一步没有完成）。
-   ![image](di21c2t7j30ld0f80wy.jpg)
-   如果你用的 Userscript 类，网页下翻后点击蓝色小字“Install style as userscript”即可（这种方法甚至可以在不进行第一步的操作下进行）。
-   ![image](dm9ki2afj30bq0elglu.jpg)
+
+   ![image](./di21c2t7j30ld0f80wy.jpg)
+   如果你用的 UserScript 类，网页下翻后点击蓝色小字“Install style as userscript”即可（这种方法甚至可以在不进行第一步的操作下进行）。
+   ![image](./dm9ki2afj30bq0elglu.jpg)
 
 ## 新增
 
 ### 自定义选项
 
-![image](h79y767sg30qs0msqd9.gif)
+![image](./h79y767sg30qs0msqd9.gif)
 
 ## 推荐
 
 感谢一下推荐 Pure 百度的网友们：
 
-::: collapse [你从未见过的全新百度！PURE 纯净百度安装教程](https://www.bilibili.com/video/av81381716/)
+1. [你从未见过的全新百度！PURE 纯净百度安装教程](https://www.bilibili.com/video/av81381716/)
 
-- 作者：[彬彬有礼的有礼](https://space.bilibili.com/274565604)
-- 日期：2019-12-31
+   - 作者：[彬彬有礼的有礼](https://space.bilibili.com/274565604)
+   - 日期：2019-12-31
 
-:::
+2. collapse [这样搞百度！我是舒服了,你们随意 Pure 百度主题美化](https://www.yijingying.com/592.html)
 
-::: collapse [这样搞百度！我是舒服了,你们随意 Pure 百度主题美化](https://www.yijingying.com/592.html)
-
-- 作者：[Healer](https://www.yijingying.com/592)
-- 日期：2020-01-05
-
-:::
+   - 作者：[Healer](https://www.yijingying.com/592)
+   - 日期：2020-01-05

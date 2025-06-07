@@ -1,10 +1,8 @@
 ---
-title: Hexo 主题之 Inside 拓展篇
-publishDate: 2022-02-14 23:15:28
+title: 'Hexo 主题之 Inside 拓展篇'
 description: 'Inside 是一款采用 SPA 打造的轻量级和功能丰富的 Hexo 主题。'
-tags:
-  - Inside
-  - Hexo
+publishDate: '2022-02-14'
+tags: ['Inside', 'Hexo']
 heroImage: { src: './thumbnail.jpg', color: '#5F7D8C' }
 ---
 

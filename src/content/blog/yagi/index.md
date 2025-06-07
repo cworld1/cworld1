@@ -90,7 +90,7 @@ heroImage: { src: './thumbnail.jpg', color: '#FF4E2D' }
 
 结果当然是大获全胜了😉
 
-![ISS Activity SSTV Image](img_182508.jpeg)
+![ISS Activity SSTV Image](./img_182508.jpeg)
 
 已经上传到 [ARISS SSTV 官网](https://ariss-usa.org/ARISS_SSTV/)，被永久保存下来了：
 

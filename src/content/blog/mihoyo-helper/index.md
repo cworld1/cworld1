@@ -1,11 +1,8 @@
 ---
-title: 米哈游游戏（原神/崩坏3）自动签到
-publishDate: 2022-04-17 17:10:14
+title: '米哈游自动签到'
 description: '这是一个关于原神签到小助手（genshinhelper）的指导教程'
-tags:
-  - Mihoyo
-  - Python
-  - Serverless
+publishDate: '2022-04-17'
+tags: ['Mihoyo', 'Python', 'Serverless']
 ---
 
 这是一个关于 [原神签到小助手](https://github.com/y1ndan/genshinhelper2) 的指导教程。

@@ -1,5 +1,5 @@
 ---
-title: 'Mumu 模拟器国际版优化指北'
+title: 'Mumu 模拟器国际版优化'
 description: '最近重装了系统，发现 Mumu 模拟器的国际版已经跟进国内的进度，来到 Android 12 了。本着尝鲜的原则，打算优化优化作为日常使用。'
 publishDate: '2024-06-09'
 updatedDate: '2024-06-15'
@@ -12,17 +12,17 @@ Mumu 国际版地址：[Mumu Player](https://www.mumuplayer.com/index.html)
 
 官网好像展示了不少国内手游...不知道是团队没有做本地化还是国内手游崛起了。简单体验下来感觉跟国内版区别不大，该有的功能一个没落下。
 
-![Mumu player](PixPin_2024-06-09_16-23-23.png)
+![Mumu player](./PixPin_2024-06-09_16-23-23.png)
 
 开机过程无广告。启动后右上角有一块牛皮藓。上方无搜索框。顶栏右侧无消息中心、无软件专区。主页无换装功能，推荐程序换成了 Chrome 和 Amaze。
 
 应用克隆不确定是不是国际版专属。游戏专区移植来了，但是安静待在箭头小面板里，基本没啥影响。自带的软件商城应该是国际特供专区，仅提供预览功能，有跳转到 Play Store。
 
-![app center](PixPin_2024-06-09_16-29-05.png)
+![app center](./PixPin_2024-06-09_16-29-05.png)
 
 自带谷歌四件套，但是系统设置内可停用，不用担心后台反复请求失败耗电了，这点算是非常舒适。
 
-![disable google service](PixPin_2024-06-09_16-31-58.png)
+![disable google service](./PixPin_2024-06-09_16-31-58.png)
 
 系统设置可以调中文，模拟器本身不清楚，不过能不能都没啥影响了。模拟器设置与国内版完全保持一致，设置内可一键开启 Root（但是游戏玩家请注意，Root 可能会导致某些游戏触发外挂误封、封号等恶劣影响，慎用）。
 
@@ -36,29 +36,29 @@ Mumu 国际版地址：[Mumu Player](https://www.mumuplayer.com/index.html)
 
 1. 首先前往菜单中的问题检测（Problem Diagnosis），你可能需要按提示关闭 Hyper-V。按提示重启后再次检测，应该显示全绿。
 
-   ![problem diagnosis](PixPin_2024-06-09_16-55-39.png)
+   ![problem diagnosis](./PixPin_2024-06-09_16-55-39.png)
 
 2. 前往系统的 Windows Security（安全中心），按照图示路径关闭内存隔离，有效提示运行效率。重启生效。
 
-   ![windows security](PixPin_2024-06-09_16-57-53.png)
+   ![windows security](./PixPin_2024-06-09_16-57-53.png)
 
 3. 使用你喜爱的清理工具清理注册表，残余注册表可能对模拟器运行效率造成一定程度的影响（玄学，但可能有用）。
 
 4. 前往系统设置 - 系统 - 可选功能 - 更多 Windows 功能，使图示两个选项保持关闭状态，避免与 Mumu 发生直接冲突。
 
-   ![system optional functions](PixPin_2024-06-09_17-03-54.png)
+   ![system optional functions](./PixPin_2024-06-09_17-03-54.png)
 
 5. 前往系统设置 - 系统 - 显示 - 显卡，将 Mumu 添加进去，然后按需设置，不会设置可直接选择高性能。
 
-   ![system graphic settings](PixPin_2024-06-09_17-09-43.png)
+   ![system graphic settings](./PixPin_2024-06-09_17-09-43.png)
 
 6. 加固设定：如果你是 N 卡用户，前往 GeFore Experience / Nvidia App，手动加入到游戏列表，保证一定被 Nvidia 应用优化到。
 
-   ![nvidia app](PixPin_2024-06-09_17-13-34.png)
+   ![nvidia app](./PixPin_2024-06-09_17-13-34.png)
 
 7. 前往 Mumu 本身设置，拉高配置，也可一定程度缓解卡顿问题。
 
-   ![mumu settings](PixPin_2024-06-09_17-05-48.png)
+   ![mumu settings](./PixPin_2024-06-09_17-05-48.png)
 
 此外官网也有一些优化指南，如有必要可作参考。
 
@@ -70,19 +70,19 @@ Mumu 国际版地址：[Mumu Player](https://www.mumuplayer.com/index.html)
 
 通过提取启动器安装包后，MT 等工具逆向搜索，可发现类 `AppStoreApi` 内含广告 API 接口。
 
-![luancher analysis](PixPin_2024-06-09_17-22-47.png)
+![launcher analysis](./PixPin_2024-06-09_17-22-47.png)
 
 易发现链接 API 对应的 IP 基本固定，故屏蔽 IP 即可。通过终端可获取：
 
-![terminal](PixPin_2024-06-09_17-23-43.png)
+![terminal](./PixPin_2024-06-09_17-23-43.png)
 
 前往 Windows 防火墙（Firewall Defender），添加如图规则，注意对应程序路径，绿色打勾处默认即可：
 
-![add rule](PixPin_2024-06-09_17-30-40.png)
+![add rule](./PixPin_2024-06-09_17-30-40.png)
 
 继续双击规则，在范围选项卡添加对应的拦截远程 IP 地址即可：
 
-![add block ip](PixPin_2024-06-09_17-34-48.png)
+![add block ip](./PixPin_2024-06-09_17-34-48.png)
 
 IP 可能有变化，建议大家自行测试确认。测试代码：
 

@@ -1,10 +1,8 @@
 ---
-title: 利用腾讯云无服务器云函数搭建 OneDrive 网盘
-publishDate: 2020-02-13 8:44:58
+title: '利用腾讯云无服务器云函数搭建 OneDrive 网盘'
 description: '用腾讯云的无服务器云函数配合 API 网关实现，无需自己的服务器'
-tags:
-  - Onedrive
-  - Serverless
+publishDate: '2020-02-13'
+tags: ['Onedrive', 'Serverless']
 heroImage: { src: './thumbnail.jpg', color: '#0588B0' }
 ---
 

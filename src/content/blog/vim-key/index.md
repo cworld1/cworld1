@@ -1,10 +1,9 @@
 ---
-title: Vim 的一些键位知识
-publishDate: 2023-12-15 19:00:02
-updateDate: 2025-02-11 01:15:00
+title: 'Vim 的一些键位知识'
+publishDate: '2023-12-15'
+updatedDate: '2025-02-11'
 description: '用了几年 Vim 有了一些心得，故有此文。'
-tags:
-  - Vim
+tags: ['Vim']
 heroImage: { src: './thumbnail.jpg', color: '#65AF5B' }
 ---
 
@@ -150,7 +149,7 @@ heroImage: { src: './thumbnail.jpg', color: '#65AF5B' }
   > - 大写单词 `W` (WORD)
   > - 以逗号句号感叹号等收尾的句子（没有的话就是全段了）：`s` (sentence)
   > - 行：`L`
-  > - 以空行间隔开的段落：`p` (paregraph)
+  > - 以空行间隔开的段落：`p` (paragraph)
   > - 引号：`'`、`"`、"``"
   > - 括号：`()`、`[]`、`{}` 等。
 
@@ -365,7 +364,7 @@ set clipboard+=unnamed
 
 - [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)：Vim 一图流
 
-  ![vi-vim-cheat-sheet](vim-cheat-sheet.png)
+  ![vi-vim-cheat-sheet](./vim-cheat-sheet.png)
 
 - [Learn Vim (the Smart Way)](https://github.com/iggredible/Learn-Vim)：这是一本非常好的开源的 Vim 入门书籍，它会带你从 Vim 的基础操作，到 Vim 的高级操作，再到 Vim 的插件开发
 - [Vim Adventures](https://vim-adventures.com/)：相对有趣的 Vim 游戏，能不那么枯燥地带你一步步的学习 Vim 的基础操作

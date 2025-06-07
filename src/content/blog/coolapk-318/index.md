@@ -1,9 +1,8 @@
 ---
-title: 酷安 318 事件
-publishDate: 2020-03-22 21:02:06
+title: '酷安 318 事件'
 description: '迟到一年的文章，本来不准备发出来的，如今发出来，也就算是最后的纪念吧。'
-tags:
-  - Coolapk
+publishDate: '2020-03-22'
+tags: ['Coolapk']
 heroImage: { src: './thumbnail.jpg', color: '#28B17F' }
 ---
 

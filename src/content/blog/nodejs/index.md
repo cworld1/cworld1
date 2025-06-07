@@ -1,6 +1,6 @@
 ---
-title: NodeJS 的一些相关技术
-publishDate: 2023-07-19 13:24:36
+title: 'NodeJS 的一些相关技术'
+publishDate: '2023-07-19'
 description: 'Node.js® is an open-source, cross-platform JavaScript runtime environment.'
 tags:
   - NodeJS

@@ -1,7 +1,7 @@
 ---
-title: Alist 自建0成本部署
-publishDate: 2022-12-15 02:06:47
+title: 'Alist 自建0成本部署'
 description: 'Alist 是一款支持多种存储的目录文件列表程序，后端基于 `gin`，前端使用 `react`。'
+publishDate: '2022-12-15'
 tags: ['Alist']
 heroImage: { src: './thumbnail.jpg', color: '#3796ED' }
 ---
