@@ -1,5 +1,5 @@
 ---
-title: 业余无线电B证不完全指南
+title: '业余无线电B证不完全指南'
 description: 'B证考试有关错题总结'
 publishDate: '2025-04-11'
 updatedDate: '2025-05-16'
