@@ -305,13 +305,6 @@
           "status": "verified"
         },
         {
-          "name": "L1nSn0w",
-          "intro": "无限进步.🎈",
-          "link": "https://linsnow.cn/",
-          "avatar": "https://linsnow.cn/avatar.png",
-          "status": "verified"
-        },
-        {
           "name": "小林的小窝",
           "intro": "分享技术、日常",
           "link": "https://www.xiaorin.com/",
@@ -326,29 +319,6 @@
       "desc": "Inactive or rule-breaking friends",
       "link_list": [
         {
-          "name": "Wayne's Blog",
-          "intro": "以梦为马，不负韶华。",
-          "link": "https://wrans.top/",
-          "avatar": "https://cravatar.cn/avatar/5dcd1e147f801b62d5fe858f241dae64?s=169",
-          "status": "returning"
-        },
-        {
-          "name": "LanM蓝莓Blog",
-          "intro": "据说最高级的快乐有三种：自律，爱，创造",
-          "link": "https://lanm.love/",
-          "avatar": "https://www.lanm.love/img/3.ico",
-          "rss": "https://lanm.love/rss.xml",
-          "email": "xiaoteng.one@gmail.com",
-          "status": "lost"
-        },
-        {
-          "name": "伍十七",
-          "intro": "我是一名正在上大一的前端爱好者，专注于构建优秀的应用程序。",
-          "link": "https://blog.everfu.cn/",
-          "avatar": "https://7.isyangs.cn/66/6745e058e1578-66.webp",
-          "status": "lost"
-        },
-        {
           "name": "HamCQ 社区",
           "intro": "业余无线电爱好者社区",
           "link": "https://forum.hamcq.cn/",
@@ -362,7 +332,7 @@
           "avatar": "https://npm.elemecdn.com/lvbyte-cdn/20230104/%E8%8B%B9%E6%9E%9C.156l7bksen40.jpg",
           "rss": "https://blog.lvbyte.top/atom.xml",
           "email": "2015078351@qq.com",
-          "status": "losing"
+          "status": "stagnation"
         },
         {
           "name": "Wittoy’s Blog",
@@ -386,6 +356,13 @@
           "link": "http://hicasper.com/",
           "avatar": "https://cravatar.cn/avatar/b9fa18886cd3acb13fcd8ebfb6140c44",
           "status": "stagnation"
+        },
+        {
+          "name": "L1nSn0w",
+          "intro": "无限进步.🎈",
+          "link": "https://linsnow.cn/",
+          "avatar": "https://linsnow.cn/avatar.png",
+          "status": "losing"
         }
       ]
     },
