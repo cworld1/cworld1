@@ -2,7 +2,7 @@
 title: 'iChrome CSS 美化'
 description: '一个 Chrome 插件 iChrome，功能齐全，但是有广告，所以以下代码就是来美化插件并去除“牛皮藓”。'
 publishDate: '2019-07-24'
-tags: ['CSS']
+tags: ['CSS', 'Chrome']
 ---
 
 ![iChrome](ichrome.jpg)

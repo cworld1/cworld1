@@ -2,10 +2,7 @@
 title: 'NodeJS 的一些相关技术'
 publishDate: '2023-07-19'
 description: 'Node.js® is an open-source, cross-platform JavaScript runtime environment.'
-tags:
-  - NodeJS
-  - nvm
-  - fnm
+tags: ['NodeJS']
 ---
 
 ## nvm

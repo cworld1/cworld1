@@ -2,7 +2,7 @@
 title: '高考随笔 —— 我想'
 description: '博主已经踏入高三的坎了，所以给自己写诗歌随笔来激励自己。'
 publishDate: 2020-09-26
-tags: ['Personal']
+tags: ['Thoughts']
 ---
 
 博主已经踏入高三的坎了，所以给自己写诗歌随笔来激励自己。

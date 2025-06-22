@@ -3,7 +3,7 @@ title: 'Over the Wire - [01]Bandit (1)'
 description: 'The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames.'
 publishDate: '2024-07-10'
 updatedDate: '2024-07-10'
-tags: ['Over the Wire', 'Bandit', 'Hacking Games', 'CTF', 'Linux']
+tags: ['Over-the-wire', 'Bandit', 'Hacking-Games', 'CTF', 'Linux']
 language: 'English'
 ---
 
