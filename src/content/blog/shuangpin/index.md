@@ -2,7 +2,9 @@
 title: '双拼真的有那么难吗'
 description: '个人向记录学习双拼的过程。说难也难，这东西贵在坚持'
 publishDate: '2025-04-30'
-tags: ['shuangpin']
+updatedDate: '2025-05-19'
+tags: ['Shuangpin']
+heroImage: { src: './thumbnail.jpg', color: '#2784B2' }
 ---
 
 按照我学习的曲折经历来展开后文吧。
@@ -101,7 +103,7 @@ reg add HKCU\Software\Microsoft\InputMethod\Settings\CHS /v UserDefinedDoublePin
 
 PowerShell Ver.
 
-```pwsh
+```shell
 Set-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\InputMethod\Settings\CHS' -Name 'UserDefinedDoublePinyinScheme0' -Type String -Value '小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt'
 ```
 
