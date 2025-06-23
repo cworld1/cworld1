@@ -1,0 +1,306 @@
+---
+title: 'F1 车队汇总'
+description: '网上很多这样的资料大都有些老旧，部分甚至跟不上时代了'
+publishDate: '2025-06-22'
+updatedDate: '2025-06-22'
+tags: ['F1']
+heroImage: { src: './thumbnail.jpg', color: '#E10600' }
+---
+
+export function Container({ color, children }) {
+  return (
+    <div className='f1-ct border rounded-xl p-4 flex flex-col gap-4'
+      style={`background-color:${color}15; --team-color:${color}`}>
+      {children}
+      <style>{".f1-ct p{margin:0};"}</style>
+    </div>
+  )
+}
+
+export function TeamTable({ link, name, desc, techChief, color, reserve, year, children }) {
+  return (
+    <div className='grid gap-4 md:grid-cols-2'>
+      <div className='max-md:max-w-100'>{children}</div>
+      <div className='flex flex-col gap-4'>
+        <div className='max-md:flex items-end gap-x-2'>
+          <a className='text-foreground text-lg font-bold my-0'
+            href={link} target='_blank'>{name}</a>
+          {desc && <div className='text-muted-foreground my-0'>{desc}</div>}
+        </div>
+        <div className='flex flex-wrap gap-x-8 gap-y-2'>
+          <div>
+            <div className='text-xs text-muted-foreground'>技术总监</div>
+            <div className='text-foreground mt-0'>{techChief}</div>
+          </div>
+          <div>
+            <div className='text-xs text-muted-foreground'>预备车手</div>
+            <div className='text-foreground mt-0'>{reserve || "-"}</div>
+          </div>
+          <div>
+            <div className='text-xs text-muted-foreground'>年份</div>
+            <div className='text-foreground mt-0'>{year}</div>
+          </div>
+          <div>
+            <div className='text-xs text-muted-foreground'>涂装</div>
+            <div className='text-foreground mt-0'>{color}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export function DriversTable({ drivers, children }) {
+  return (
+    <div>
+      {children}
+      <div className='flex-1 pt-4 grid grid-cols-2 gap-x-4'>
+        {drivers.map((driver, idx) => (
+          <div key={idx} className='flex flex-col gap-y-2'>
+            <div className='max-sm:flex flex-wrap items-center gap-y-2'>
+              <span className='font-mono me-2 rounded border px-1.5 sm:py-0.5'
+                style="border-color:var(--team-color);color:var(--team-color)">{driver.abbr}</span>
+              <a className='max-sm:order-3 text-foreground'
+                href={driver.link} target='_blank'>{driver.name}</a>
+              <span className='max-sm:flex-1 float-right text-right text-muted-foreground'>#{driver.num}</span>
+            </div>
+            <div className='max-sm:flex flex-col'>
+              <span>{new Date().getFullYear() - driver.birth} 岁 / </span>
+              <span>{driver.nation} / </span>
+              <span>{driver.award} 次领奖</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+其实官网本来就有长期在做 [F1 Teams 2025](https://www.formula1.com/en/teams)，但是纯英文有时候会不那么对应的上（同样的还有缩写），并且网络大部份资料还较为老旧，这就由此引出了本文。简单声明：
+
+1. 本文按照官网顺序依次介绍所有车队，确保没有隐性个人倾向。
+2. 领奖（登上领奖台，Podiums）次数是截至 2025 年初的统计数据。
+3. 车手年龄为按照当前年份减去出生年份实时计算。
+
+那么祝大家查阅愉快。
+
+## McLaren
+
+<Container color="#F47600">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/mclaren"
+    name="迈凯伦"
+    desc="McLaren Formula 1 Team"
+    techChief="Peter Prodromou / Neil Houldey"
+    reserve="-"
+    year="1966"
+    color="橙、黑">
+    ![McLaren](./ScreenShot_2025-06-22_17.42.24.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "PIA", name: "奥斯卡 · 皮亚斯特里", num: "81", birth: 2001, nation: "澳大利亚", award: "10", link: "https://www.formula1.com/en/drivers/oscar-piastri" },
+      { abbr: "NOR", name: "兰多 · 诺里斯", num: "4", birth: 1999, nation: "英国", award: "26", link: "https://www.formula1.com/en/drivers/lando-norris" }
+    ]}
+  >
+    ![McLaren drivers](./ScreenShot_2025-06-22_21.43.28.png)
+  </DriversTable>
+</Container>
+
+## Mercedes
+
+<Container color="#00D7B6">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/mercedes"
+    name="梅赛德斯"
+    desc="Mercedes-AMG Petronas Formula One Team"
+    techChief="James Allison"
+    reserve="Valtteri Bottas, Fred Vesti"
+    year="1970"
+    color="黑、薄荷绿、白">
+    ![Mercedes drivers](./ScreenShot_2025-06-22_17.48.47.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "RUS", name: "乔治 · 拉塞尔", num: "63", birth: 1998, nation: "英国", award: "15", link: "https://www.formula1.com/en/drivers/george-russell" },
+      { abbr: "ANT", name: "基米 · 安东内利", num: "12", birth: 2006, nation: "意大利", award: "0", link: "https://www.formula1.com/en/drivers/kimi-antonelli" }
+    ]}>
+    ![Mercedes](./ScreenShot_2025-06-23_00.04.41.png)
+  </DriversTable>
+</Container>
+
+## Ferrari
+
+<Container color="#ED1131">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/ferrari"
+    name="法拉利"
+    desc="Scuderia Ferrari HP"
+    techChief="Loic Serra / Enrico Gualtieri"
+    reserve="Antonio Giovinazzi, Zhou Guanyu"
+    year="1950"
+    color="红、白">
+    ![Ferrari](./ScreenShot_2025-06-22_17.48.52.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "LEC", name: "查尔斯 · 勒克莱尔", num: "16", birth: 1997, nation: "摩纳哥", award: "43", link: "https://www.formula1.com/en/drivers/charles-leclerc" },
+      { abbr: "HAM", name: "刘易斯 · 汉密尔顿", num: "44", birth: 1985, nation: "英国", award: "202", link: "https://www.formula1.com/en/drivers/lewis-hamilton" }
+    ]}>
+    ![Ferrari drivers](./ScreenShot_2025-06-23_00.25.07.png)
+  </DriversTable>
+</Container>
+
+## Red Bull Racing
+
+<Container color="#4781D7">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/red-bull-racing"
+    name="红牛"
+    desc="Oracle Red Bull Racing"
+    techChief="Pierre Waché"
+    reserve="-"
+    year="1985"
+    color="深蓝、红">
+    ![Red Bull Racing](./ScreenShot_2025-06-22_17.48.55.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "VER", name: "马克斯 · 维斯塔潘（维神）", num: "1", birth: 1997, nation: "荷兰", award: "85", link: "https://www.formula1.com/en/drivers/max-verstappen" },
+      { abbr: "TSU", name: "角田裕毅", num: "22", birth: 2000, nation: "日本", award: "0", link: "https://www.formula1.com/en/drivers/yuki-tsunoda" }
+    ]}>
+    ![Red Bull Racing drivers](./ScreenShot_2025-06-23_00.25.26.png)
+  </DriversTable>
+</Container>
+
+## Williams
+
+<Container color="#1868DB">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/williams"
+    name="威廉姆斯"
+    desc="Atlassian Williams Racing"
+    techChief="Pat Fry"
+    reserve="-"
+    year="1978"
+    color="宝蓝、白">
+    ![Williams](./ScreenShot_2025-06-22_17.49.02.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "ALB", name: "亚历山大 · 阿尔本", num: "23", birth: 1996, nation: "泰国", award: "2", link: "https://www.formula1.com/en/drivers/alexander-albon" },
+      { abbr: "SAI", name: "卡洛斯 · 塞恩斯", num: "55", birth: 1994, nation: "西班牙", award: "27", link: "https://www.formula1.com/en/drivers/carlos-sainz" }
+    ]}>
+    ![Williams drivers](./ScreenShot_2025-06-23_00.25.44.png)
+  </DriversTable>
+</Container>
+
+## Haas
+
+<Container color="#9C9FA2">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/haas"
+    name="哈斯"
+    desc="MoneyGram Haas F1 Team"
+    techChief="Andrea De Zordo"
+    reserve="Ryo Hirakawa"
+    year="2016"
+    color="黑、红、白">
+    ![Haas](./ScreenShot_2025-06-22_17.49.05.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "OCO", name: "埃斯特班 · 奥康", num: "31", birth: 1996, nation: "法国", award: "4", link: "https://www.formula1.com/en/drivers/esteban-ocon" },
+      { abbr: "BEA", name: "奥利弗 · 贝尔曼", num: "87", birth: 2005, nation: "英国", award: "0", link: "https://www.formula1.com/en/drivers/oliver-bearman" }
+    ]}>
+    ![Haas drivers](./ScreenShot_2025-06-23_00.26.05.png)
+  </DriversTable>
+</Container>
+
+## Racing Bulls
+
+<Container color="#6C98FF">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/racing-bulls"
+    name="红牛二队 / 小红牛 / 青年红牛"
+    desc="Visa Cash App Racing Bulls Formula One Team"
+    techChief="Tim Goss"
+    reserve="Ayumu Iwasa"
+    year="1985"
+    color="白、蓝">
+    ![Racing Bulls](./ScreenShot_2025-06-22_17.49.08.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "LAW", name: "‌利亚姆 · 劳森", num: "30", birth: 2002, nation: "新西兰", award: "0", link: "https://www.formula1.com/en/drivers/liam-lawson" },
+      { abbr: "HAD", name: "伊萨克 · 哈贾尔", num: "6", birth: 2004, nation: "法国", award: "0", link: "https://www.formula1.com/en/drivers/isack-hadjar" }
+    ]}>
+    ![Racing Bulls drivers](./ScreenShot_2025-06-23_00.26.32.png)
+  </DriversTable>
+</Container>
+
+## Aston Martin
+
+<Container color="#229971">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/aston-martin"
+    name="阿斯顿马丁"
+    desc="Aston Martin Aramco Formula One Team"
+    techChief="Eric Blandin"
+    reserve="Felipe Drugovich, Stoffel Vandoorne"
+    year="2018"
+    color="马尔代夫绿、白">
+    ![Aston Martin](./ScreenShot_2025-06-22_17.49.11.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "STR", name: "兰斯 · 斯特罗尔（太子 / 少爷）", num: "18", birth: 1998, nation: "加拿大", award: "3", link: "https://www.formula1.com/en/drivers/lance-stroll" },
+      { abbr: "ALO", name: "费尔南多 · 阿隆索（头哥）", num: "14", birth: 1981, nation: "西班牙", award: "106", link: "https://www.formula1.com/en/drivers/fernando-alonso" }
+    ]}>
+    ![Aston Martin drivers](./ScreenShot_2025-06-23_00.27.10.png)
+  </DriversTable>
+</Container>
+
+## Kick Sauber
+
+<Container color="#01C00E">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/kick-sauber"
+    name="Kick 索伯"
+    desc="Stake F1 Team Kick Sauber"
+    techChief="James Key"
+    reserve="-"
+    year="1993"
+    color="绿、黑">
+    ![Kick Sauber](./ScreenShot_2025-06-22_17.49.13.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "HUL", name: "尼科 · 霍肯伯格", num: "27", birth: 1987, nation: "德国", award: "0", link: "https://www.formula1.com/en/drivers/nico-hulkenberg" },
+      { abbr: "BOR", name: "加布里埃尔 · 博托莱托", num: "5", birth: 2004, nation: "巴西", award: "0", link: "https://www.formula1.com/en/drivers/gabriel-bortoleto" }
+    ]}>
+    ![Kick Sauber drivers](./ScreenShot_2025-06-23_00.27.30.png)
+  </DriversTable>
+</Container>
+
+## Alpine
+
+<Container color="#00A1E8">
+  <TeamTable
+    link="https://www.formula1.com/en/teams/alpine"
+    name="Alpine"
+    desc="BWT Alpine Formula One Team"
+    techChief="David Sanchez"
+    reserve="Jack Doohan, Paul Aron, Kush Maini"
+    year="1986"
+    color="粉、蓝、黑">
+    ![Alpine](./ScreenShot_2025-06-22_17.49.37.png)
+  </TeamTable>
+  <DriversTable
+    drivers={[
+      { abbr: "GAS", name: "皮埃尔 · 加斯利", num: "10", birth: 1996, nation: "法国", award: "5", link: "https://www.formula1.com/en/drivers/pierre-gasly" },
+      { abbr: "COL", name: "弗兰科 · 科拉平托", num: "43", birth: 2003, nation: "阿根廷", award: "0", link: "https://www.formula1.com/en/drivers/franco-colapinto" }
+    ]}>
+    ![Alpine drivers](./ScreenShot_2025-06-23_00.27.42.png)
+  </DriversTable>
+</Container>
