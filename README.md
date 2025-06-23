@@ -18,29 +18,22 @@ Checkout <a href="https://cworld0.com/" target="_blank">𝑪𝑾𝒐𝒓𝒍𝒅
 
 ### Languages
 
-[![Languages](https://skillicons.dev/icons?i=r,go,php,lua,rust,matlab,unity,java,html,css,js,ts,py,powershell,bash,kotlin,c,cpp,cs&perline=15&theme=light)](https://skillicons.dev)
+[![Languages](https://go-skill-icons.vercel.app/api/icons?i=r,go,php,lua,rust,matlab,unity,java,html,css,js,ts,py,powershell,bash,c,cpp,cs&perline=15)](https://github.com/LelouchFR/skill-icons)
 
 ### Frameworks
 
-[![Frameworks](https://skillicons.dev/icons?i=qt,dotnet,astro,deno,lit,react,redux,nextjs,nodejs,vue,pinia,nuxt,vite,webpack,babel,less,sass,tailwind,bootstrap,spring,opencv,flask,fastapi&perline=15&theme=light)](https://skillicons.dev)
+[![Frameworks](https://go-skill-icons.vercel.app/api/icons?i=qt,dotnet,astro,lit,react,nextjs,vue,nuxt,vite,babel,stylus,less,unocss,opencv,flask&perline=15)](https://github.com/LelouchFR/skill-icons)
 
 <details>
 <summary style="cursor: pointer">More details...</summary>
 
 ### Support tools
 
-[![Support tools](https://skillicons.dev/icons?i=nginx,bun,pnpm,deno,cmake,docker,git,mysql,redis,sqlite,workers,postgres,mysql&perline=15&theme=light)](https://skillicons.dev)
+[![Support tools](https://go-skill-icons.vercel.app/api/icons?i=nginx,bun,pnpm,deno,cmake,docker,git,mysql,redis,sqlite,workers,postgres,mysql,zellij,prettier&perline=15)](https://github.com/LelouchFR/skill-icons)
 
-### Softwares & Platforms
+### Platforms & Professional
 
-[![Softwares](https://skillicons.dev/icons?i=arch,debian,apple,windows,androidstudio,ps,pr,au,cloudflare,netlify,vercel,vscode,neovim,github,gitlab&perline=15&theme=light)](https://skillicons.dev)
-
-### Most used languages
-
-<img
-  height="200"
-  src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=cworld1&width=600&height=150&show-other-skills=true"
-/>
+[![Softwares](https://go-skill-icons.vercel.app/api/icons?i=arch,debian,apple,windows,androidstudio,vscode,neovim,zed,ps,pr,au,davinci,cloudflare,netlify,vercel&perline=15)](https://github.com/LelouchFR/skill-icons)
 
 </details>
 <br/>
