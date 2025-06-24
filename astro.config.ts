@@ -1,5 +1,3 @@
-// @ts-check
-
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import vercel from '@astrojs/vercel'
 import AstroPureIntegration from 'astro-pure'
@@ -45,7 +43,7 @@ export default defineConfig({
     // sitemap(),
     // mdx(),
     AstroPureIntegration(config),
-    (await import('@playform/compress')).default({ SVG: false, Exclude: ['index.*.js'] }),
+    (await import('@playform/compress')).default({ SVG: false, Exclude: ['index.*.js'] })
 
     // Temporary fix vercel adapter
     // static build method is not needed
