@@ -144,7 +144,6 @@ We may disclose personal information that we collect, or you provide:
 If we or our subsidiaries are involved in a merger, acquisition or asset sale, your Personal Data may be transferred.
 
 2. **Other cases. We may disclose your information also:**
-
    1. to our subsidiaries and affiliates;
    2. to contractors, service providers, and other third parties we use to support our business;
    3. to fulfill the purpose for which you provide it;
@@ -208,7 +207,6 @@ You can enable or disable Do Not Track by visiting the Preferences or Settings p
 If you are a California resident, you are entitled to learn what data we collect about you, ask to delete your data and not to sell (share) it. To exercise your data protection rights, you can make certain requests and ask us:
 
 1. What personal information we have about you. If you make this request, we will return to you:
-
    1. The categories of personal information we have collected about you.
 
    2. The categories of sources from which we collect your personal information.

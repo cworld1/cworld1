@@ -18,17 +18,17 @@ tags:
 
 首先，下载一个 IDM（internet download manager），这个软件平时当多核下载器拿来下浏览器里的文件也是非常不错的。百度一下网上都有 IDM 的下载链接，浏览器插件也行。
 
-![image](uzjvsj3j30k00bvgmj.jpg)
+![image](./uzjvsj3j30k00bvgmj.jpg)
 
 安装完成以后在后台运行，点开你的课堂网址，右上角就会出现这样的标识：
 
-![image](v06dn82j30v50b676t.jpg)
+![image](./v06dn82j30v50b676t.jpg)
 
 如果没有出现，多刷新几次页面就可以了
 
 下载到你电脑的视频就可以任你宰割了，你只需要随便用一个支持倍速播放的播放器即可
 
-![image](v14raoxj30k00ap754.jpg)
+![image](./v14raoxj30k00ap754.jpg)
 
 ## 使用 HttpCanary 抓取
 
@@ -50,7 +50,7 @@ tags:
 
 7. 使用下载器下载该视频（例如 ADM 下载器），并使用支持倍速播放的播放器播放即可。
 
-![image](vbxemrvj32pg1ww1kx.jpg)
+![image](./vbxemrvj32pg1ww1kx.jpg)
 
 ## 利用 Fiddler 注入 JS
 
@@ -76,27 +76,27 @@ tags:
 
 打开 Fiddler，点击顶栏 “Tools”，在弹出的菜单中点击 “Options…”。
 
-![image](vh9k0nhj30i606e3zo.jpg)
+![image](./vh9k0nhj30i606e3zo.jpg)
 
 在弹出的窗口中切换到顶部的 “HTTPS” 菜单，勾选 “Capture HTTPS CONNECTs” 和 “Decrypt HTTPS traffic” 复选框，然后点击 OK。
 
 勾选后会弹出安装证书的窗口，确认即可。
 
-![image](vhi47apj30iu0csjti.jpg)
+![image](./vhi47apj30iu0csjti.jpg)
 
 如果出现下面这样的黄条，点击黄条即可。
 
-![image](vhvlkxjj311y02sweo.jpg)
+![image](./vhvlkxjj311y02sweo.jpg)
 
 #### 写入脚本
 
 在 Fiddler 中按下 `Ctrl+R` 。弹出一个代码编辑器窗口。
 
-![image](vkq3jhyj311y0k6abe.jpg)
+![image](./vkq3jhyj311y0k6abe.jpg)
 
 在代码编辑器窗口按下 `Ctrl+F` ，在弹出的窗口中输入 OnBeforeResponse 并按下回车。找到 OnBeforeResponse 函数（下图所示）。
 
-![image](vkxu4tuj317c0im0ve.jpg)
+![image](./vkxu4tuj317c0im0ve.jpg)
 
 把图中的下面这段：
 
@@ -161,15 +161,15 @@ static function OnBeforeResponse(oSession: Session) {
 
 Log 选项卡中，每出现一条`Resquest has been Send.`说明学习进度增加了 1 min。快速出现大量`Resquest has been Send.`时，可能是刷新过于频繁或程序错误，请立刻关闭 Fiddler。如果 Fiddler 未响应，可能是陷入死循环，立刻在任务管理器里结束进程。
 
-![image](vq1jr7cj311y0k7gns.jpg)
+![image](./vq1jr7cj311y0k7gns.jpg)
 
 在 Rules 中可以启用或关闭 `视频增强插件` 和 `自动学习`。
 
-![image](vqev3o5j30kj0js75k.jpg)
+![image](./vqev3o5j30kj0js75k.jpg)
 
 #### 快捷键说明
 
-![image](vrdyq2aj311y0k8dj5.jpg)
+![image](./vrdyq2aj311y0k8dj5.jpg)
 
 ##### 播放速度调节
 
@@ -227,17 +227,17 @@ oSession.utilDecodeResponse()
 oSession.utilReplaceOnceInResponse('</head>', sToInsert + '</head>', 0)
 ```
 
-![image](vyxkvitj30vu091jrp.jpg)
+![image](./vyxkvitj30vu091jrp.jpg)
 
-![image](vz89e42j30uv05p3yv.jpg)
+![image](./vz89e42j30uv05p3yv.jpg)
 
 ### 直接在钉钉内倍速播放
 
 打开钉钉的云课堂，点开一个视频，可以看到右下角多了一个绿色按钮。点击它。
 
-![image](vzunz4tj30xf0pddmo.jpg)
+![image](./vzunz4tj30xf0pddmo.jpg)
 
-![image](w03m4v3j30xf0pdjsn.jpg)
+![image](./w03m4v3j30xf0pdjsn.jpg)
 
 点击之后，弹出了一个菜单。
 
@@ -261,7 +261,7 @@ console.log(document.querySelector('video').src)
 
 点击 OK 后，上面的列表出现了一个地址，这个地址就是该云课堂视频的源文件地址。复制这个地址，在浏览器打开即可下载该视频。或者，也可以用 Potplayer 直接打开该地址来倍速播放。
 
-![image](w1tw7bkj30xf0pd75h.jpg)
+![image](./w1tw7bkj30xf0pd75h.jpg)
 
 ### 附：使用 Potplayer 倍速观看视频
 
@@ -269,21 +269,21 @@ console.log(document.querySelector('video').src)
 
 下载并安装 Potplayer 后，在 Potplayer 的左上角点击如图的菜单，或者直接按下 `Ctrl+U`。
 
-![image](w2iyuawj30cf04cwef.jpg)
+![image](./w2iyuawj30cf04cwef.jpg)
 
 在弹出的窗口中粘贴刚才的复制的那个视频链接，点击确定。
 
-![image](w2t03cgj30dd05umx7.jpg)
+![image](./w2t03cgj30dd05umx7.jpg)
 
 可以看到，视频已经开始播放。
 
-![image](w36gu36j30qu0hyaaq.jpg)
+![image](./w36gu36j30qu0hyaaq.jpg)
 
 按下 `C` 键来加速，按下 `X` 键来减速，按下 `Z` 键来恢复原速。
 
 按下按键后在视频左上角可以看到当前的倍速速率。
 
-![image](w3zf24dj303s0100sm.jpg)
+![image](./w3zf24dj303s0100sm.jpg)
 
 ## 尾声
 

@@ -93,11 +93,9 @@ heroImage: { src: './thumbnail.jpg', color: '#DBDBDB' }
 感谢一下推荐 Pure 百度的网友们：
 
 1. [你从未见过的全新百度！PURE 纯净百度安装教程](https://www.bilibili.com/video/av81381716/)
-
    - 作者：[彬彬有礼的有礼](https://space.bilibili.com/274565604)
    - 日期：2019-12-31
 
 2. collapse [这样搞百度！我是舒服了,你们随意 Pure 百度主题美化](https://www.yijingying.com/592.html)
-
    - 作者：[Healer](https://www.yijingying.com/592)
    - 日期：2020-01-05

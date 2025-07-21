@@ -2,7 +2,7 @@
 title: 'ChatGPT 深度使用与日用方案'
 description: 'ChatGPT 是一个基于 GPT-3.5-turbo 的聊天机器人，它可以通过简单的 API 调用来实现与人类的对话。'
 publishDate: '2023-03-27'
-tags: [ 'ChatGPT', 'Python']
+tags: ['ChatGPT', 'Python']
 ---
 
 import { Steps } from 'astro-pure/user'
@@ -41,7 +41,6 @@ import { Steps } from 'astro-pure/user'
    首先，你需要一个 Telegram 账号，然后在 [BotFather](https://t.me/BotFather) 上创建一个机器人，按照提示操作即可。
 
 2. 部署 Workers
-
    1. 在 [Cloudflare Workers](https://dash.cloudflare.com/sign-up/workers) 上注册账号
    2. 点击右上角的 Create a Service
    3. 进入新建的 workers，选择 Quick Edit，将 [../dist/index.js](https://github.com/TBXark/ChatGPT-Telegram-Workers/blob/master/dist/index.js) 代码复制到编辑器中，保存。
@@ -71,7 +70,6 @@ import { Steps } from 'astro-pure/user'
    | \*WORKERS_DOMAIN            | Workers 域名                | `null`               | 例如 workers_name.username.workers.dev                                                                 |
 
 4. 配置 KV 数据库
-
    1. 前往侧栏的 Workers -> KV，点击右上角的 `Create a Namespace`, 名字随便取, 但是绑定的时候必须设定为`DATABASE`
    2. 点击右上角的 Setting -> Variables
    3. 在 `KV Namespace Bindings` 中点击 `Edit variables`
@@ -79,7 +77,6 @@ import { Steps } from 'astro-pure/user'
    5. 设置名字为`DATABASE` 并选择刚刚创建的 KV 数据
 
 5. 初始化
-
    1. 运行 `https://workers_name.username.workers.dev/init` 自动绑定 telegram 的 webhook 和设定所有指令
    2. 开始新对话,使用`/new`指令开始,之后每次都会将聊天上下文发送到 ChatGPT
    3. 使用`/setenv KEY=VALUE`指令修改用户配置,例如`SETENV SYSTEM_INIT_MESSAGE=现在开始是喵娘,每句话已喵结尾`
