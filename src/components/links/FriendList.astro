@@ -24,14 +24,14 @@ interface Props {
   title?: string
   list: friend_list
 }
-const { title, list: friend_list, ...props } = Astro.props
+const { title, list: friendList, ...props } = Astro.props
 ---
 
-{title && <h2 id={friend_list.id_name}>{title}</h2>}
+{title && <h2 id={friendList.id_name}>{title}</h2>}
 <div class='grid gap-3.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3' {...props}>
   {
-    friend_list.link_list.length > 0 ? (
-      shuffle(friend_list.link_list).map((frd: friend) => (
+    friendList.link_list.length > 0 ? (
+      shuffle(friendList.link_list).map((frd: friend) => (
         <a href={frd.link} target='_blank' class='no-underline'>
           <div class='group relative h-full overflow-hidden rounded-2xl border bg-background px-2.5 py-1.5 transition-colors hover:bg-muted sm:px-4 sm:py-2'>
             <div class='relative z-10 flex h-full items-center gap-3'>
