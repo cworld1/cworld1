@@ -418,6 +418,12 @@
           "intro": "记录和分享，每天进步一点点！",
           "link": "https://lzwdot.com/",
           "avatar": "https://lzwdot.com/logo.svg"
+        },
+        {
+          "name": "彬红茶博客",
+          "intro": "记录分享优质美化与个人技术教程！",
+          "link": "https://blog.redcha.cn/",
+          "avatar": "https://blog.redcha.cn/favicon.ico"
         }
       ]
     }
