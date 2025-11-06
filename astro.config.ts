@@ -50,6 +50,7 @@ export default defineConfig({
     // sitemap(),
     // mdx(),
     AstroPureIntegration(config)
+    // @playform/compress have potential build issue with this template
     // (await import('@playform/compress')).default({ SVG: false, Exclude: ['index.*.js'] })
 
     // Temporary fix vercel adapter
