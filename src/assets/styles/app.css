@@ -1,5 +1,5 @@
 /* Font */
-/* @font-face {
+@font-face {
   font-family: 'Satoshi';
   src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
   font-style: normal;
@@ -13,7 +13,7 @@
 }
 html {
   font-family: 'Satoshi', sans-serif;
-} */
+}
 
 /* Theme */
 :root {

@@ -38,11 +38,11 @@ export default defineConfig({
   // ---
 
   image: {
-    responsiveStyles: true
-    // service: {
-    //   entrypoint: 'astro/assets/services/sharp'
-    // },
-    // domains: ['ghchart.rshah.org']
+    responsiveStyles: true,
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    },
+    domains: ['ghchart.rshah.org']
   },
 
   integrations: [
