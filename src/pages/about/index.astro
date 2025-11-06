@@ -4,7 +4,7 @@ import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 import Umami from '@/components/about/Umami.astro'
-import notByAIImage from '@/assets/not-by-ai-badge.svg'
+import NotByAISvg from '@/assets/not-by-ai-badge.svg'
 
 const headings = [
   { depth: 2, slug: 'hobbies', text: 'Hobbies' },
@@ -372,12 +372,6 @@ const headings = [
   </ul>
   <p>... and one thing I have been insisting on so far:</p>
   <a href='https://notbyai.fyi/' target='_blank'>
-    <Image
-      src={notByAIImage}
-      alt='Written by Human Not by AI'
-      width='131'
-      height='42'
-      style='border-radius:unset'
-    />
+    <NotByAISvg width='131' height='42' />
   </a>
 </PageLayout>
