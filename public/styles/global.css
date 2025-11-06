@@ -41,6 +41,8 @@
   /* Code container */
   & pre {
     margin: 0;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
     padding-inline: 0;
     background: none;
     overflow-x: scroll;
@@ -96,6 +98,12 @@
     & code::before {
       top: calc(2rem + 0.8571429em);
     }
+  }
+  & .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
   }
   & .language {
     transition: opacity 0.3s;

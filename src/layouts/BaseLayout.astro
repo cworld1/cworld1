@@ -15,7 +15,8 @@ interface Props {
 
 const {
   meta: { articleDate, description = config.description, ogImage, title },
-  highlightColor
+  highlightColor,
+  ...props
 } = Astro.props
 ---
 
@@ -25,7 +26,7 @@ const {
     <ThemeProvider />
   </head>
 
-  <body class='flex justify-center bg-background text-foreground'>
+  <body class='flex justify-center bg-background text-foreground' {...props}>
     {
       highlightColor && (
         <div
@@ -35,9 +36,13 @@ const {
         />
       )
     }
-    <div class='w-full max-w-[70rem] px-4 sm:px-7 lg:px-10'>
+    <div
+      class='w-full max-w-[70rem] px-4 sm:px-7 lg:px-10 min-h-[100dvh] flex flex-col justify-between'
+    >
       <Header />
-      <slot />
+      <div class='flex-1 w-full'>
+        <slot />
+      </div>
       <Footer />
     </div>
 

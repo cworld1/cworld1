@@ -56,6 +56,9 @@ export const theme: ThemeUserConfig = {
 
   /** Configure the footer of your site. */
   footer: {
+    // Year format
+    year: `© ${new Date().getFullYear()}`,
+    // year: `© 2019 - ${new Date().getFullYear()}`,
     links: [
       // Registration link
       {
@@ -80,16 +83,22 @@ export const theme: ThemeUserConfig = {
     /** Optional details about the social media accounts for this site. */
     social: {
       github: 'https://github.com/cworld1',
-      telegram: 'https://t.me/cworld0_cn',
+      telegram: 'https://t.me/s/cworld0_cn',
       coolapk: 'http://www.coolapk.com/u/1384771'
     }
   },
 
   content: {
-    externalLinksContent: ' ↗',
+    /** External links configuration */
+    externalLinks: {
+      content: ' ↗',
+      /** Properties for the external links element */
+      properties: {
+        style: 'user-select:none'
+      }
+    },
     /** Blog page size for pagination (optional) */
     blogPageSize: 8,
-    externalLinkArrow: true, // show external link arrow
     // Currently support weibo, x, bluesky
     share: ['weibo', 'bluesky']
   }
@@ -173,17 +182,26 @@ export const integ: IntegrationUserConfig = {
   // Add a random quote to the footer (default on homepage footer)
   // See: https://astro-pure.js.org/docs/integrations/advanced#web-content-render
   quote: {
+    // Hitokoto
     // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
     // server: 'https://v1.hitokoto.cn/?c=i',
-    // target: (data) => (data as { hitokoto: string }).hitokoto || 'Error'
+    // target: `(data) => (data.hitokoto || 'Error')`
+    // Quoteable API (down temporarily)
     // https://github.com/lukePeavey/quotable
-    server: 'https://api.quotable.io/quotes/random?maxLength=60',
-    target: `(data) => data[0].content || 'Error'`
+    // server: 'https://api.quotable.io/quotes/random?maxLength=60',
+    // target: `(data) => data[0].content || 'Error'`
+    // DummyJSON
+    server: 'https://dummyjson.com/quotes/random',
+    target: `(data) => (data.quote.length > 80 ? \`\${data.quote.slice(0, 80)}...\` : data.quote || 'Error')`
   },
   // UnoCSS typography
   // See: https://unocss.dev/presets/typography
   typography: {
-    class: 'prose text-base text-muted-foreground'
+    class: 'prose text-base text-muted-foreground',
+    // The style of blockquote font, normal or italic (default to italic in typography)
+    blockquoteStyle: 'italic',
+    // The style of inline code block, code or modern (default to code in typography)
+    inlineCodeBlockStyle: 'code'
   },
   // A lightbox library that can add zoom effect
   // See: https://astro-pure.js.org/docs/integrations/others#medium-zoom

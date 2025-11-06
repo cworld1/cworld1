@@ -1,8 +1,18 @@
 ---
 import type { ImageMetadata } from 'astro'
 import { Image } from 'astro:assets'
+import type { HTMLTag, Polymorphic } from 'astro/types'
 
 import { cn } from 'astro-pure/utils'
+
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
+  heading: string
+  subheading: string
+  imagePath: string
+  altText?: string
+  href?: string
+  class?: string
+}
 
 const {
   as: Tag = 'a',
@@ -14,11 +24,11 @@ const {
   altText
 } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/projects/*.{jpeg,jpg,png,gif}'
+  '/src/assets/projects/*.{jpeg,jpg,png,gif,avif,webp}'
 )
 if (!images[imagePath])
   throw new Error(
-    `"${imagePath}" does not exist in glob: "src/assets/projects/*.{jpeg,jpg,png,gif}"`
+    `"${imagePath}" does not exist in glob: "src/assets/projects/*.{jpeg,jpg,png,gif,avif,webp}"`
   )
 ---
 

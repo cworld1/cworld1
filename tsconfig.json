@@ -8,6 +8,8 @@
     "declaration": true,
     // Code runs in the DOM
     "lib": ["es2022", "dom", "dom.iterable"],
+    // Type Imports
+    "verbatimModuleSyntax": true,
     // Others
     "baseUrl": ".",
     "strictNullChecks": true,

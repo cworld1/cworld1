@@ -9,7 +9,6 @@ import Sponsorship from '@/components/projects/Sponsorship.astro'
 import alipay from '@/assets/alipay-qrcode.jpg'
 import KeyIcon from '@/assets/icons/key.svg'
 import wechat from '@/assets/wechat-qrcode.jpg'
-import config from '@/site-config'
 
 const headings = [
   { depth: 2, slug: 'applications', text: 'Applications' },
@@ -21,7 +20,7 @@ const headings = [
 ]
 ---
 
-<PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
+<PageLayout title='Projects' {headings} view>
   <p>Github Activities:</p>
   <p>
     <Image
@@ -41,7 +40,7 @@ const headings = [
 
   <h2 id='applications'>Applications</h2>
   <ProjectSection
-    project={[
+    projects={[
       {
         name: '➕ Pure New Tab [Browser Extension]',
         description: 'A open-source, clean and minimalistic new tab page extension',
@@ -95,7 +94,7 @@ const headings = [
   />
   <Collapse title='Some old projects'>
     <ProjectSection
-      project={[
+      projects={[
         {
           name: 'Poker Hover Effect [Web]',
           description: 'A demo HTML program that shows poker hover effect only using CSS',
@@ -139,7 +138,7 @@ const headings = [
 
   <h2 id='programs'>Programs</h2>
   <ProjectSection
-    project={[
+    projects={[
       {
         name: '🎨 Astro Theme Pure',
         description: 'A simple, fast and powerful blog theme built by Astro',
@@ -210,7 +209,7 @@ const headings = [
   />
   <Collapse title='Some old projects'>
     <ProjectSection
-      project={[
+      projects={[
         {
           name: 'Search Switcher',
           description: 'Add links to each other in search engines',
@@ -231,7 +230,7 @@ const headings = [
   <h2 id='learnings'>Learnings</h2>
   <ProjectSection
     class='my-2'
-    project={[
+    projects={[
       {
         name: 'Rust Learning',
         description: 'Some notes and code about CWorld learning Rust',
@@ -320,7 +319,7 @@ const headings = [
 
   <Collapse title='Some old projects'>
     <ProjectSection
-      project={[
+      projects={[
         {
           name: 'Java Learning',
           description: 'Some notes and code about learning Java',
@@ -342,7 +341,7 @@ const headings = [
 
   <h2 id='others'>Others</h2>
   <ProjectSection
-    project={[
+    projects={[
       {
         name: 'Dotfiles',
         description: 'Personal *unix dotfiles',
@@ -387,32 +386,17 @@ const headings = [
   />
   <p>Thanks to the following sponsors:</p>
   <Sponsors
+    progressMax={25}
     sponsors={[
-      { name: '顾**', amount: '28.00', date: '2025-06-23' },
-      { name: 'Anonymous', amount: '20.00', date: '2022-04-06' },
-      { name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
-      { name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
-      { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' }
+      { name: 'Arthal', platform: 'Wechat', amount: 50, date: '2025-11-06' },
+      { name: '顾**', platform: 'Wechat', amount: 28, date: '2025-06-23' },
+      { name: 'Anonymous', platform: 'Wechat', amount: 20, date: '2022-04-06' },
+      { name: '华雄 (1300****71)', platform: 'QQ', amount: 5, date: '2019-12-30' },
+      { name: '◌ (1934****45)', platform: 'QQ', amount: 3, date: '2019-12-30' },
+      { name: 'C*a (酷安@暴走の蜗牛)', amount: 2, date: '2019-07-02' }
     ]}
   />
 </PageLayout>
-
-<script
-  is:inline
-  type='module'
-  data-astro-rerun
-  define:vars={{ npmCDN: config.npmCDN, walineServer: config.integ.waline.server }}
->
-  const loadPageviewCount = async () => {
-    const pageview = await import(`${npmCDN}/@waline/client@v3/dist/pageview.js`)
-    pageview.pageviewCount({
-      serverURL: walineServer,
-      path: window.location.pathname
-    })
-  }
-
-  await loadPageviewCount()
-</script>
 
 <style>
   .sponsorship-card {

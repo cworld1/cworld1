@@ -17,10 +17,7 @@ const { class: className, title, tools, ...props } = Astro.props
 ---
 
 <div
-  class={cn(
-    'not-prose flex flex-col rounded-xl border border-border py-3 px-3 gap-y-3 sm:gap-y-4',
-    className
-  )}
+  class={cn('not-prose flex flex-col rounded-xl border py-3 px-3 gap-y-3 sm:gap-y-4', className)}
   {...props}
 >
   <div class='m-0 px-2 text-lg font-medium'>{title}</div>

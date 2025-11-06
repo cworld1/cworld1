@@ -36,7 +36,13 @@ export default defineConfig({
   // output: 'server',
   // ---
 
-  image: { service: { entrypoint: 'astro/assets/services/sharp' }, domains: ['ghchart.rshah.org'] },
+  image: {
+    responsiveStyles: true,
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    },
+    domains: ['ghchart.rshah.org']
+  },
 
   integrations: [
     // astro-pure will automatically add sitemap, mdx & unocss
