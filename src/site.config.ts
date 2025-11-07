@@ -167,7 +167,17 @@ export const integ: IntegrationUserConfig = {
       { date: '2025-04-06', content: '[L1nSn0w] returned' },
       { date: '2025-04-06', content: '[伍十七] lost' },
       { date: '2025-04-06', content: '[LanM蓝莓Blog] lost' },
-      { date: '2025-06-10', content: '[L1nSn0w] lost' }
+      { date: '2025-06-10', content: '[L1nSn0w] lost' },
+      { date: '2025-11-07', content: '[字节君] active' },
+      { date: '2025-11-07', content: "[CyanFalse's Weblog] stagnated" },
+      { date: '2025-11-07', content: '[Wallleap] stagnated' },
+      { date: '2025-11-07', content: '[猫羽のブログす] lost' },
+      { date: '2025-11-07', content: '[OrdisBlog] stagnated' },
+      { date: '2025-11-07', content: '[Kris Yan] stagnated' },
+      { date: '2025-11-07', content: "[Bore's Notes] stagnated" },
+      { date: '2025-11-07', content: '[無名小栈] stagnated' },
+      { date: '2025-11-07', content: '[EvanNotFound] stagnated' },
+      { date: '2025-11-07', content: '[FloatSheep] lost' }
     ],
     // Yourself link info
     applyTip: [
@@ -186,7 +196,7 @@ export const integ: IntegrationUserConfig = {
     // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
     // server: 'https://v1.hitokoto.cn/?c=i',
     // target: `(data) => (data.hitokoto || 'Error')`
-    // Quoteable API (down temporarily)
+    // Quotable API (down temporarily)
     // https://github.com/lukePeavey/quotable
     // server: 'https://api.quotable.io/quotes/random?maxLength=60',
     // target: `(data) => data[0].content || 'Error'`

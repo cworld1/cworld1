@@ -42,7 +42,42 @@ const headings = [
   <ProjectSection
     projects={[
       {
-        name: '➕ Pure New Tab [Browser Extension]',
+        name: '🔄 Ext Case Converter [Desktop]',
+        description:
+          'A simple tool to convert file extension cases between uppercase and lowercase',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/ext-case-converter' },
+          { type: 'release', href: 'https://github.com/cworld1/ext-case-converter/releases' }
+        ]
+      },
+      {
+        name: '📋 Nas Dashboard [Web]',
+        description: 'A beautiful and minimalistic dashboard for your NAS. Static as possible ',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/nas-dashboard' },
+          { type: 'site', href: 'https://cworld1.github.io/nas-dashboard' }
+        ]
+      },
+      {
+        name: '💡 DDC Control [CLI]',
+        description:
+          'A pure Rust application that adjusts monitor brightness using the DDC/CI protocol',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/ddc-control' },
+          { type: 'release', href: 'https://github.com/cworld1/ddc-control/releases' }
+        ]
+      },
+      {
+        name: '🎵 flac2mp3 [CLI]',
+        description:
+          'A pure rust-driven application that converts your flac audio files to mp3 format',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/flac2mp3' },
+          { type: 'release', href: 'https://github.com/cworld1/flac2mp3/releases' }
+        ]
+      },
+      {
+        name: '➕ Pure New Tab [Browser Ext]',
         description: 'A open-source, clean and minimalistic new tab page extension',
         links: [
           { type: 'github', href: 'https://github.com/cworld1/pure-new-tab' },
@@ -77,14 +112,6 @@ const headings = [
         ]
       },
       {
-        name: '⛅ PureWeather [Android]',
-        description: 'Weather at a glance! Current and forecast weather for anywhere in the world',
-        links: [
-          { type: 'github', href: 'https://github.com/cworld1/PureWeather' },
-          { type: 'release', href: 'https://github.com/cworld1/PureWeather/releases' }
-        ]
-      },
-      {
         name: '📷 Kinect Camera Neural [Desktop]',
         description:
           'An AI program that using Kinect camera and shows neural networks and human skeleton',
@@ -92,23 +119,17 @@ const headings = [
       }
     ]}
   />
-  <Collapse title='Some old projects'>
+  <Collapse title='Archived Projects'>
     <ProjectSection
       projects={[
         {
-          name: 'Poker Hover Effect [Web]',
-          description: 'A demo HTML program that shows poker hover effect only using CSS',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/poker-hover-effect' }]
-        },
-        {
-          name: 'Effect of Browser Multi-Window Stacking [Web]',
-          description: 'A demo program that shows effect of browser multi-window stacking',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/browser-multiwin-stack' }]
-        },
-        {
-          name: 'Vue Login [Web]',
-          description: 'A simple Vue designed login program',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/vue-login' }]
+          name: 'PureWeather [Android]',
+          description:
+            'Weather at a glance! Current and forecast weather for anywhere in the world',
+          links: [
+            { type: 'github', href: 'https://github.com/cworld1/PureWeather' },
+            { type: 'release', href: 'https://github.com/cworld1/PureWeather/releases' }
+          ]
         },
         {
           name: 'Student Score System [Desktop]',
@@ -141,12 +162,51 @@ const headings = [
     projects={[
       {
         name: '🎨 Astro Theme Pure',
-        description: 'A simple, fast and powerful blog theme built by Astro',
+        description: 'A simple, fast and powerful blog & document theme built by Astro',
         links: [
           { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
           { type: 'site', href: 'https://astro-pure.js.org/' },
           { type: 'doc', href: 'https://astro-pure.js.org/docs/list' },
           { type: 'release', href: 'https://www.npmjs.com/package/astro-pure' }
+        ]
+      },
+      {
+        name: '🤖 Health Assistant AI',
+        description:
+          'A professional AI-driven health consulting platform that provides users with personalized health advice',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/health-assistant-ai' }]
+      },
+      {
+        name: '📺 Five Star Sports Stream',
+        description: 'Watch Five Sports Stream as you like',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/five-star-stream' },
+          { type: 'release', href: 'https://github.com/cworld1/five-star-stream/releases' }
+        ]
+      },
+      {
+        name: '🎨 Pure CSDN',
+        description:
+          'A usercss script for CSDN purification and optimization of reading experience',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/pure-csdn' },
+          { type: 'site', href: 'https://github.com/cworld1/pure-csdn/raw/main/pure-csdn.user.css' }
+        ]
+      },
+      {
+        name: '🧑 Ark Avatar',
+        description: 'Generate Arknights style avatar online',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/ark-avatar' },
+          { type: 'site', href: 'https://ark-avatar.netlify.app/' }
+        ]
+      },
+      {
+        name: '🧩 rehype-autolink-headings-simple',
+        description: 'A simple version of rehype-autolink-headings',
+        links: [
+          { type: 'github', href: 'https://github.com/cworld1/rehype-autolink-headings-simple' },
+          { type: 'release', href: 'https://www.npmjs.com/package/rehype-autolink-headings-simple' }
         ]
       },
       {
@@ -158,62 +218,77 @@ const headings = [
         name: '🏓 pingpong-simulation',
         description: 'A simulation and calculation of pingpong play sport using unity 3d',
         links: [{ type: 'github', href: 'https://github.com/cworld1/pingpong-simulation' }]
-      },
-      {
-        name: '🤖 Arknights Telegram Bot',
-        description: 'Telegram Bot for Arknights',
-        links: [
-          { type: 'github', href: 'https://github.com/IJNKAWAKAZE/arknights_bot' },
-          { type: 'site', href: 'https://t.me/PtiIopsis_bot' },
-          {
-            type: 'doc',
-            href: 'https://github.com/IJNKAWAKAZE/arknights_bot/blob/main/docs/Development.md'
-          }
-        ]
-      },
-      {
-        name: '🤖 PaiGram',
-        description: 'Telegram robot, query the official Genshin information',
-        links: [
-          { type: 'github', href: 'https://github.com/PaiGramTeam/PaiGram' },
-          { type: 'site', href: 'https://t.me/PaimonMasterBot' },
-          { type: 'doc', href: 'https://docs.paimon.vip/' }
-        ]
-      },
-      {
-        name: '📊 Novel Data',
-        description: 'The data repository of novel analysis',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/novel-data' }]
-      },
-      {
-        name: '🧮 N Queens Problem',
-        description: 'A solution of solving N Queens Problem',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/nqueens-problem' }]
-      },
-      {
-        name: '🛠️ Gaussian NB',
-        description:
-          'Simulating the Parsimonious Bayesian Algorithm with Python and Finding the Probability Prediction of Breast Cancer ',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/gaussian-nb' }]
-      },
-      {
-        name: '📊 Business Data Analysis',
-        description:
-          'Using python and jupyter notebook to analyze the data of electrical appliances, and then using the data to predict the sales of electrical appliances',
-        links: [
-          { type: 'github', href: 'https://github.com/cworld1/business-data' },
-          { type: 'site', href: 'https://github.com/cworld1/business-data/blob/main/main.ipynb' }
-        ]
       }
     ]}
   />
-  <Collapse title='Some old projects'>
+  <Collapse title='Archived Projects'>
     <ProjectSection
       projects={[
+        {
+          name: '🤖 Arknights Telegram Bot',
+          description: 'Telegram Bot for Arknights',
+          links: [
+            { type: 'github', href: 'https://github.com/IJNKAWAKAZE/arknights_bot' },
+            { type: 'site', href: 'https://t.me/PtiIopsis_bot' },
+            {
+              type: 'doc',
+              href: 'https://github.com/IJNKAWAKAZE/arknights_bot/blob/main/docs/Development.md'
+            }
+          ]
+        },
+        {
+          name: '🤖 PaiGram',
+          description: 'Telegram robot, query the official Genshin information',
+          links: [
+            { type: 'github', href: 'https://github.com/PaiGramTeam/PaiGram' },
+            { type: 'site', href: 'https://t.me/PaimonMasterBot' },
+            { type: 'doc', href: 'https://docs.paimon.vip/' }
+          ]
+        },
+        {
+          name: 'Novel Data',
+          description: 'The data repository of novel analysis',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/novel-data' }]
+        },
+        {
+          name: 'N Queens Problem',
+          description: 'A solution of solving N Queens Problem',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/nqueens-problem' }]
+        },
+        {
+          name: 'Gaussian NB',
+          description:
+            'Simulating the Parsimonious Bayesian Algorithm with Python and Finding the Probability Prediction of Breast Cancer ',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/gaussian-nb' }]
+        },
+        {
+          name: 'Business Data Analysis',
+          description:
+            'Using python and jupyter notebook to analyze the data of electrical appliances, and then using the data to predict the sales of electrical appliances',
+          links: [
+            { type: 'github', href: 'https://github.com/cworld1/business-data' },
+            { type: 'site', href: 'https://github.com/cworld1/business-data/blob/main/main.ipynb' }
+          ]
+        },
         {
           name: 'Search Switcher',
           description: 'Add links to each other in search engines',
           links: [{ type: 'github', href: 'https://github.com/cworld1/search-switcher' }]
+        },
+        {
+          name: 'Poker Hover Effect [Web]',
+          description: 'A demo HTML program that shows poker hover effect only using CSS',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/poker-hover-effect' }]
+        },
+        {
+          name: 'Effect of Browser Multi-Window Stacking [Web]',
+          description: 'A demo program that shows effect of browser multi-window stacking',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/browser-multiwin-stack' }]
+        },
+        {
+          name: 'Vue Login [Web]',
+          description: 'A simple Vue designed login program',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/vue-login' }]
         },
         {
           name: 'Pure Baidu',
@@ -231,21 +306,6 @@ const headings = [
   <ProjectSection
     class='my-2'
     projects={[
-      {
-        name: 'Rust Learning',
-        description: 'Some notes and code about CWorld learning Rust',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
-      },
-      {
-        name: 'Unity Learning',
-        description: 'Some notes and code about learning Unity',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/unity-learning' }]
-      },
-      {
-        name: 'Matlab Learning',
-        description: 'Some notes and code about learning Matlab',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/matlab-learning' }]
-      },
       {
         name: 'Operation System Principle Learning',
         description: 'Some notes and code about CWorld learning Operating System Principle',
@@ -272,8 +332,7 @@ const headings = [
         image: 'db-learning.png',
         links: [
           { type: 'github', href: 'https://github.com/cworld1/db-learning' },
-          { type: 'site', href: 'https://cworld1.github.io/db-learning' },
-          { type: 'doc', href: 'https://cworld1.github.io/db-learning/intro' }
+          { type: 'site', href: 'https://cworld1.github.io/db-learning' }
         ]
       },
       {
@@ -282,8 +341,7 @@ const headings = [
         image: 'cn-learning.png',
         links: [
           { type: 'github', href: 'https://github.com/cworld1/cn-learning' },
-          { type: 'site', href: 'https://cworld1.github.io/cn-learning' },
-          { type: 'doc', href: 'https://cworld1.github.io/cn-learning/intro' }
+          { type: 'site', href: 'https://cworld1.github.io/cn-learning' }
         ]
       },
       {
@@ -301,8 +359,7 @@ const headings = [
         image: 'linux-learning.png',
         links: [
           { type: 'github', href: 'https://github.com/cworld1/linux-learning' },
-          { type: 'site', href: 'https://cworld1.github.io/linux-learning' },
-          { type: 'doc', href: 'https://cworld1.github.io/linux-learning/docs' }
+          { type: 'site', href: 'https://cworld1.github.io/linux-learning' }
         ]
       },
       {
@@ -317,9 +374,24 @@ const headings = [
     ]}
   />
 
-  <Collapse title='Some old projects'>
+  <Collapse title='Archived Projects'>
     <ProjectSection
       projects={[
+        {
+          name: 'Rust Learning',
+          description: 'Some notes and code about CWorld learning Rust',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
+        },
+        {
+          name: 'Unity Learning',
+          description: 'Some notes and code about learning Unity',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/unity-learning' }]
+        },
+        {
+          name: 'Matlab Learning',
+          description: 'Some notes and code about learning Matlab',
+          links: [{ type: 'github', href: 'https://github.com/cworld1/matlab-learning' }]
+        },
         {
           name: 'Java Learning',
           description: 'Some notes and code about learning Java',
