@@ -31,18 +31,7 @@ const languages = [
   'Rust',
   'ShellScript'
 ]
-const frontend = [
-  'TypeScript',
-  'React',
-  'Redux',
-  'Vue',
-  'Pinia',
-  'Vite',
-  'Webpack',
-  'Astro',
-  'Hexo',
-  'Hugo'
-]
+const frontend = ['TypeScript', 'React', 'Vue', 'NextJS', 'NuxtJS', 'Vite', 'Astro', 'Hexo']
 const backend = ['Flask', 'Nginx', 'NextJS']
 const others = ['Qt', 'PyQt', 'Qml', 'Android', 'Unity', 'Jinja']
 
@@ -66,7 +55,7 @@ const websiteList = [
     imagePath: '/src/assets/projects/site-onedrive.png'
   },
   {
-    href: 'https://onedrive.cworld0.com/',
+    href: 'https://umami.cworld0.com/',
     heading: 'Umami',
     subheading: 'Web analytics',
     imagePath: '/src/assets/projects/site-umami.png'
@@ -126,35 +115,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         )
       }
 
-      {
-        /* <Section title='Experience'>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      >
-        <ul class='ms-4 list-disc text-muted-foreground'>
-          <li>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-            molestiae laboriosam pariatur!
-
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-          </li>
-        </ul>
-      </Card>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      />
-    </Section> */
-      }
       <Section title='Education'>
         <Card
           as='a'
@@ -182,10 +142,15 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
       <Section title='Certifications'>
         <Card
+          heading='National Encouragement Scholarship'
+          subheading='Won the National Inspirational Scholarship for the 2024 academic year'
+          date='December 2024'
+        />
+        <Card
           as='a'
           heading='Mathematical Modeling Competition'
           subheading='Won the first prize of the national award in the National Mathematical Modeling Competition of "Higher Education Society"'
-          date='October 2023'
+          date='November 2023'
           href='http://www.mcm.edu.cn'
         />
       </Section>
