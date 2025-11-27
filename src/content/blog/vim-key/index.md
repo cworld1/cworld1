@@ -1,7 +1,7 @@
 ---
 title: 'Vim 的一些键位知识'
 publishDate: '2023-12-15'
-updatedDate: '2025-02-11'
+updatedDate: '2025-11-27'
 description: '用了几年 Vim 有了一些心得，故有此文。'
 tags: ['Vim']
 heroImage: { src: './thumbnail.jpg', color: '#65AF5B' }
@@ -342,6 +342,8 @@ set clipboard+=unnamed
   反选删除行：`:{作用范围}g!/{关键词}/d` 或 `:{作用范围}v/{关键词}/d`
 
   大部分时候结合正则可能更好用，如：`:g/^\s*$/d` 表示删除空白行
+
+- 打开目录界面新建文件：`%`
 
 ### 实用大功能
 
