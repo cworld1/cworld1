@@ -61,11 +61,11 @@ export const theme: ThemeUserConfig = {
     // year: `© 2019 - ${new Date().getFullYear()}`,
     links: [
       // Registration link
-      {
-        title: '萌备20240147',
-        link: 'https://icp.gov.moe/?keyword=20240147',
-        style: 'text-sm' // Uno/TW CSS class
-      },
+      // {
+      //   title: '萌备20240147',
+      //   link: 'https://icp.gov.moe/?keyword=20240147',
+      //   style: 'text-sm' // Uno/TW CSS class
+      // },
       {
         title: 'Travelling',
         link: 'https://www.travellings.cn/go.html',
