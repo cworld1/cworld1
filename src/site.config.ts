@@ -177,7 +177,8 @@ export const integ: IntegrationUserConfig = {
       { date: '2025-11-07', content: "[Bore's Notes] stagnated" },
       { date: '2025-11-07', content: '[無名小栈] stagnated' },
       { date: '2025-11-07', content: '[EvanNotFound] stagnated' },
-      { date: '2025-11-07', content: '[FloatSheep] lost' }
+      { date: '2025-11-07', content: '[FloatSheep] lost' },
+      { date: '2025-12-02', content: '[Xingluo’s Blog] lost' }
     ],
     // Yourself link info
     applyTip: [

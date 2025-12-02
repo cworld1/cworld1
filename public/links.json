@@ -107,21 +107,6 @@
           "email": "young143@yeah.net"
         },
         {
-          "name": "Arthals' ink",
-          "intro": "所见高山远木，阔云流风；所幸岁月盈余，了无拘束",
-          "link": "https://arthals.ink/",
-          "avatar": "https://cdn.arthals.ink/Arthals.png",
-          "rss": "https://arthals.ink/rss.xml",
-          "email": "zhuozhiyongde@126.com"
-        },
-        {
-          "name": "Xingluo’s Blog",
-          "intro": "内心丰盈者独行也如众",
-          "link": "https://blog.en.icu/",
-          "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1390882631&s=100",
-          "rss": "https://blog.en.icu/rss.xml"
-        },
-        {
           "name": "又见苍岚",
           "intro": "蓝天依旧，明眸如初",
           "link": "https://www.zywvvd.com/",
@@ -158,14 +143,6 @@
           "link": "https://blog.qjqq.cn/",
           "avatar": "https://q2.qlogo.cn/headimg_dl?dst_uin=1645253&spec=640",
           "email": "chenl@76.al"
-        },
-        {
-          "name": "Yutong's Site",
-          "intro": "My compass is curiosity.",
-          "link": "https://www.lyt0112.com/",
-          "avatar": "https://cdn.lyt0112.com/avatars/square_d&t.jpeg",
-          "email": "lyt0112@outlook.com",
-          "rss": "https://www.lyt0112.com/rss.xml"
         },
         {
           "name": "XingJiのBlog",
@@ -251,11 +228,33 @@
           "avatar": "https://gongz.moe/favicon.ico"
         },
         {
-          "name": "Avery’s Blog",
-          "intro": "Everyday is a new beginning",
-          "link": "https://shuoer.top/",
-          "avatar": "https://shuoer.top/favicon/favicon.ico",
-          "rss": "https://shuoer.top/rss.xml"
+          "name": "icsteam.cn",
+          "intro": "工控万金油",
+          "link": "https://blog.icsteam.cn/",
+          "avatar": "https://blog.icsteam.cn/myimg/avatar.jpg",
+          "email": "i@icsteam.cn"
+        }
+      ]
+    },
+    {
+      "id_name": "astro-theme-pure",
+      "desc": "Astro theme pure links",
+      "link_list": [
+        {
+          "name": "Arthals' ink",
+          "intro": "所见高山远木，阔云流风；所幸岁月盈余，了无拘束",
+          "link": "https://arthals.ink/",
+          "avatar": "https://cdn.arthals.ink/Arthals.png",
+          "rss": "https://arthals.ink/rss.xml",
+          "email": "zhuozhiyongde@126.com"
+        },
+        {
+          "name": "Yutong's Site",
+          "intro": "My compass is curiosity.",
+          "link": "https://www.lyt0112.com/",
+          "avatar": "https://cdn.lyt0112.com/avatars/square_d&t.jpeg",
+          "email": "lyt0112@outlook.com",
+          "rss": "https://www.lyt0112.com/rss.xml"
         },
         {
           "name": "Shuoer’s blog",
@@ -265,12 +264,25 @@
           "rss": "https://www.averyc.top/rss.xml"
         },
         {
-          "name": "icsteam.cn",
-          "intro": "工控万金油",
-          "link": "https://blog.icsteam.cn/",
-          "avatar": "https://blog.icsteam.cn/myimg/home_img.jpg",
-          "rss": "https://www.averyc.top/rss.xml",
-          "email": "i@icsteam.cn"
+          "name": "Avery’s Blog",
+          "intro": "Everyday is a new beginning",
+          "link": "https://shuoer.top/",
+          "avatar": "https://shuoer.top/favicon/favicon.ico",
+          "rss": "https://shuoer.top/rss.xml"
+        },
+        {
+          "name": "梨尽兴",
+          "intro": "A place for peace",
+          "link": "https://blog.ljx.icu/",
+          "avatar": "https://blog.ljx.icu/favicon.png",
+          "rss": "https://blog.ljx.icu/rss.xml"
+        },
+        {
+          "name": "星河避难所",
+          "intro": "写代码，也写自己",
+          "link": "https://hejunjie.life/",
+          "avatar": "https://hejunjie.life/avatar.jpg",
+          "rss": "https://hejunjie.life/rss.xml"
         }
       ]
     },
@@ -279,12 +291,11 @@
       "desc": "Inactive or rule-breaking friends",
       "link_list": [
         {
-          "name": "FloatSheep",
-          "intro": "On the other side of obstacles",
-          "link": "https://blog.hesiy.cn/",
-          "avatar": "https://registry.npmmirror.com/@floatsheep/fsl-fim/1.0.23/files/avatar%202024.main.webp",
-          "email": "admin@hesiy.cn",
-          "status": "lost"
+          "name": "Xingluo’s Blog",
+          "intro": "内心丰盈者独行也如众",
+          "link": "https://blog.en.icu/",
+          "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1390882631&s=100",
+          "rss": "https://blog.en.icu/rss.xml"
         },
         {
           "name": "EvanNotFound",
