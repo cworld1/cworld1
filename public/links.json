@@ -233,6 +233,12 @@
           "link": "https://blog.icsteam.cn/",
           "avatar": "https://blog.icsteam.cn/myimg/avatar.jpg",
           "email": "i@icsteam.cn"
+        },
+        {
+          "name": "Lane’s Blog",
+          "intro": "探索未知，解码未来",
+          "link": "https://www.laneljc.cn/",
+          "avatar": "https://www.laneljc.cn/assets/favicon.png"
         }
       ]
     },
