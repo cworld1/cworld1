@@ -1,4 +1,4 @@
-interface Config {
+export interface Config {
   private_api_url: string
   page_turning_number: number
   error_img: string

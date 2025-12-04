@@ -4,6 +4,7 @@ import config from 'virtual:config'
 
 import { Collapse, Timeline } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
+import FriendCircle from '@/components/links/FriendCircle.astro'
 import FriendList from '@/components/links/FriendList.astro'
 
 const headings = [
@@ -38,20 +39,7 @@ const linkEditPage = 'https://github.com/cworld1/cworld1/blob/main/public/links.
   <FriendList list={friends[3]} />
 
   <h2 id='small-circle'>Small Circle</h2>
-  <div id='friend-circle-lite-root' class='not-prose'>Loading...</div>
-  <script>
-    import '@/assets/styles/fc.css'
-
-    import { FriendCircle } from '@/plugins/friend-circle'
-
-    const fc = new FriendCircle()
-    fc.init({
-      private_api_url: 'https://cworld-fc.netlify.app/',
-      page_turning_number: 10,
-      error_img: 'https://cravatar.cn/avatar/57d8260dfb55501c37dde588e7c3852c'
-    })
-    fc.load()
-  </script>
+  <FriendCircle />
 
   <h2 id='apply-links'>Apply Links</h2>
   <p>本站信息（点击复制）The site information (click to copy)：</p>

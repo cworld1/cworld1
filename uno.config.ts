@@ -118,7 +118,7 @@ const typographyConfig: TypographyOptions = {
     img: { 'border-radius': radius, margin: '0 auto' },
     kbd: {
       'border-color': border,
-      'box-shadow': '0 0 0 1px hsl(var(--card) / 1), 0 3px hsl(var(--primary-foreground) / 1)'
+      'box-shadow': '0 0 0 1px hsl(var(--card) / 1), 0 3px hsl(var(--card) / 1)'
     },
     'sup>a': { 'scroll-margin-top': '4rem' }
   }
