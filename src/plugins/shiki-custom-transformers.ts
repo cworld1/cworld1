@@ -1,11 +1,6 @@
 import { h } from 'hastscript'
 import type { ShikiTransformer } from 'shiki'
 
-export {
-  transformerNotationDiff,
-  transformerNotationHighlight
-} from './shiki-official-transformers'
-
 function parseMetaString(str = '') {
   return Object.fromEntries(
     str.split(' ').reduce((acc: [string, string | true][], cur) => {
@@ -57,13 +52,12 @@ export const addTitle = (): ShikiTransformer => {
       // if (this.options.meta) {
       //   Object.assign(this.options.meta, meta)
       // }
-
       if (!meta.title) return
 
       const div = h(
         'div',
         {
-          class: 'title text-sm text-foreground px-3 py-1 bg-primary-foreground rounded-lg border'
+          class: 'title text-sm text-muted-foreground px-3 py-1 rounded-lg border'
         },
         meta.title.toString()
       )
@@ -91,15 +85,15 @@ export const addLanguage = (): ShikiTransformer => {
 
 // Add a copy button to the code block
 export const addCopyButton = (timeout?: number): ShikiTransformer => {
-  const toggleMs = timeout || 3000
-
+  const toggleMs = timeout || 2000
   return {
     name: 'shiki-transformer-copy-button',
     pre(node) {
       const button = h(
         'button',
         {
-          class: 'copy text-muted-foreground p-1 box-content border rounded bg-primary-foreground',
+          class: 'copy text-muted-foreground p-1 box-content border rounded-lg bg-card',
+          'aria-label': 'Copy code',
           'data-code': this.source,
           onclick: `
           navigator.clipboard.writeText(this.dataset.code);
@@ -136,8 +130,46 @@ export const addCopyButton = (timeout?: number): ShikiTransformer => {
           ])
         ]
       )
-
       node.children.push(button)
+    }
+  }
+}
+
+// Add a copy button to the code block
+export const addCollapse = (displayLineCount?: number): ShikiTransformer => {
+  const line = displayLineCount || 15
+  return {
+    name: 'shiki-transformer-add-collapse',
+    pre(node) {
+      if (this.lines.length <= line) return
+      node.properties = {
+        ...node.properties,
+        class: ((node.properties?.class as string) || '') + ' collapsed'
+      }
+      const collapse = h(
+        'button',
+        {
+          class: 'collapse-toggle bg-card text-muted-foreground rounded-lg m-2',
+          'aria-label': 'Toggle collapse code block',
+          onclick: "this.parentElement.classList.toggle('collapsed')"
+        },
+        [
+          h(
+            'svg',
+            {
+              class: 'size-5'
+            },
+            [
+              h('use', {
+                href: '/icons/code.svg#mingcute-arrow-down-line'
+              })
+            ]
+          ),
+          h('span', { class: 'desc' }, ' code')
+        ]
+      )
+      node.children.push(collapse)
+      node.children.push(h('div', { class: 'collapse-fade' }))
     }
   }
 }

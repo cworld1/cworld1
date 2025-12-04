@@ -106,9 +106,6 @@ const { class: className } = Astro.props
   #waline :global(a) {
     display: inline-block;
   }
-  #waline :global(.wl-item, .wl-card-item) {
-    overflow: hidden;
-  }
 
   /* Reaction buttons */
   #waline :global(.wl-reaction-title, .wl-reaction-text) {
@@ -147,7 +144,6 @@ const { class: className } = Astro.props
     background: var(--waline-theme-color);
     color: var(--waline-bg-color);
   }
-
   #waline :global(.wl-reaction-votes:after) {
     margin-left: 0.25em;
     content: 'Like(s)';
