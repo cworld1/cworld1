@@ -239,6 +239,21 @@
           "intro": "探索未知，解码未来",
           "link": "https://www.laneljc.cn/",
           "avatar": "https://www.laneljc.cn/assets/favicon.png"
+        },
+        {
+          "name": "Amiracle",
+          "intro": "向往之处，便是归途",
+          "link": "https://amiracle.site/",
+          "avatar": "https://cdn.amiracle.site/sm_avatar.jpg",
+          "email": "amiracletm@gmail.com"
+        },
+        {
+          "name": "小慧博客",
+          "intro": "小慧的技术博客",
+          "link": "https://www.itxiaohui.top/",
+          "avatar": "https://blogoss.itxiaohui.top/logo -uhlgnmrf.png",
+          "rss": "https://www.itxiaohui.top/rss.xml",
+          "email": "193942343@qq.com"
         }
       ]
     },
