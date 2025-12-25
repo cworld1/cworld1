@@ -219,7 +219,7 @@ set clipboard+=unnamed
 >
 > 但是不知道有什么用。？
 
-> ![vim move find](./vim-move-find.webp)
+![vim move find](./vim-move-find.webp)
 
 可配合 `c`、`d`、`y` 命令。使用 `;` 可以持续执行上面说的这个跳转操作，只要当前 buffer 没有被关闭就能一直保存跳转字符的记录，随时可用。而 `,` 则做相反方向的查找。
 
