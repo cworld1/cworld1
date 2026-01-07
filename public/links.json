@@ -303,6 +303,13 @@
           "link": "https://hejunjie.life/",
           "avatar": "https://hejunjie.life/avatar.jpg",
           "rss": "https://hejunjie.life/rss.xml"
+        },
+        {
+          "name": "The Sejolyn Memo",
+          "intro": "让其如是所示，而非如我所愿。",
+          "link": "https://sejolyn.fyi/",
+          "avatar": "https://sejolyn.fyi/avatar.jpg",
+          "rss": "https://sejolyn.fyi/rss.xml"
         }
       ]
     },
