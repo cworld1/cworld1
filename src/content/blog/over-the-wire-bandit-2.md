@@ -4,7 +4,7 @@ description: 'This is the article chapter 02 of the series "Over the Wire - [01]
 publishDate: '2024-07-26'
 updatedDate: '2024-07-26'
 tags: ['Over-the-wire', 'Bandit', 'Hacking-Games', 'CTF', 'Linux']
-language: 'English'
+language: 'en'
 ---
 
 > This is the article chapter 02 of the series "Over the Wire - [01]Bandit". Checkout [Over the Wire - \[01\]Bandit (1)](/blog/over-the-wire-bandit-1) for more information.

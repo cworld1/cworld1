@@ -4,7 +4,7 @@ description: 'The Bandit wargame is aimed at absolute beginners. It will teach t
 publishDate: '2024-07-10'
 updatedDate: '2024-07-10'
 tags: ['Over-the-wire', 'Bandit', 'Hacking-Games', 'CTF', 'Linux']
-language: 'English'
+language: 'en'
 ---
 
 > Is only has great fun playing it by yourself. I'm here just to write a post recommend you try it and give some good solutions that tell you a new way to solve the problem.
