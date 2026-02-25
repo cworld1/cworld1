@@ -189,7 +189,10 @@ export const integ: IntegrationUserConfig = {
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: '求知若愚，虚怀若谷' },
       { name: 'Link', val: 'https://cworld0.com/' },
-      { name: 'Avatar', val: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200' }
+      {
+        name: 'Avatar',
+        val: 'https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200'
+      }
     ],
     // Cache avatars in `public/avatars/` to improve user experience.
     cacheAvatar: false
