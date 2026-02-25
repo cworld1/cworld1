@@ -277,13 +277,6 @@
           "rss": "https://www.lyt0112.com/rss.xml"
         },
         {
-          "name": "Shuoer’s blog",
-          "intro": "透过窗户看星星",
-          "link": "https://www.averyc.top/",
-          "avatar": "https://www.averyc.top/images/image.jpg",
-          "rss": "https://www.averyc.top/rss.xml"
-        },
-        {
           "name": "Avery’s Blog",
           "intro": "Everyday is a new beginning",
           "link": "https://shuoer.top/",
@@ -310,6 +303,13 @@
           "link": "https://sejolyn.fyi/",
           "avatar": "https://sejolyn.fyi/avatar.jpg",
           "rss": "https://sejolyn.fyi/rss.xml"
+        },
+        {
+          "name": "Xingluo’s Blog",
+          "intro": "内心丰盈者独行也如众",
+          "link": "https://blog.en.icu/",
+          "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1390882631&s=100",
+          "rss": "https://blog.en.icu/rss.xml"
         }
       ]
     },
@@ -318,11 +318,12 @@
       "desc": "Inactive or rule-breaking friends",
       "link_list": [
         {
-          "name": "Xingluo’s Blog",
-          "intro": "内心丰盈者独行也如众",
-          "link": "https://blog.en.icu/",
-          "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1390882631&s=100",
-          "rss": "https://blog.en.icu/rss.xml"
+          "name": "Shuoer’s blog",
+          "intro": "透过窗户看星星",
+          "link": "https://www.averyc.top/",
+          "avatar": "https://www.averyc.top/images/image.jpg",
+          "rss": "https://www.averyc.top/rss.xml",
+          "status": "lost"
         },
         {
           "name": "EvanNotFound",
