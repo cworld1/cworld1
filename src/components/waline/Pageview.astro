@@ -23,8 +23,5 @@ import config from '@/site-config'
       console.error('Failed to load Waline pageview:', e)
     }
   }
-
-  const abort = await loadPageview()
-  // After 500ms, if the network request has not been completed, cancel this operation
-  setTimeout(() => abort(), 500)
+  loadPageview()
 </script>
