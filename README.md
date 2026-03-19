@@ -16,14 +16,14 @@ Web Fullstack / Software Dev / Data Analysis
 
 ### Languages & frameworks
 
-[![Languages & frameworks](https://go-skill-icons.vercel.app/api/icons?i=r,go,php,lua,rust,matlab,unity,java,html,css,js,ts,py,powershell,bash,c,cpp,cs,qt,dotnet,astro,lit,react,nextjs,vue,nuxt,vite&perline=15)](https://github.com/LelouchFR/skill-icons)
+[![Languages & frameworks](https://go-skill-icons.vercel.app/api/icons?i=r,go,lua,rust,php,matlab,unity,java,mysql,py,powershell,bash,c,cpp,cs,qt,dotnet,css,ts,astro,hexo,lit,react,nextjs,vue,nuxt,vite&perline=15)](https://github.com/LelouchFR/skill-icons)
 
 <details>
 <summary style="cursor: pointer">More details...</summary>
 
 ### Platforms & support tools
 
-[![Platforms & support tools](https://go-skill-icons.vercel.app/api/icons?i=arch,debian,apple,windows,bun,cmake,docker,git,postgres,zellij,prettier,androidstudio,neovim,vscode,zed,ps,lrc,pr,au,davinci&perline=15)](https://github.com/LelouchFR/skill-icons)
+[![Platforms & support tools](https://go-skill-icons.vercel.app/api/icons?i=arch,debian,apple,windows,bun,cmake,docker,git,zellij,biome,prettier,androidstudio,neovim,vscode,zed,ps,lrc,pr,au,davinci&perline=15)](https://github.com/LelouchFR/skill-icons)
 
 </details>
 <br/>
