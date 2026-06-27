@@ -1,4 +1,4 @@
-Web Fullstack / Software Dev / Data Analysis
+web fullstack / software dev / data analysis
 
 [![Site](https://img.shields.io/badge/Site%20%e2%86%97-2CA5E0?style=flat&color=black&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZTRmZGZmIiBkPSJNMTIgMjJDNi40NzcgMjIgMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJzMTAgNC40NzcgMTAgMTBzLTQuNDc3IDEwLTEwIDEwbS0yLjI5LTIuMzMzQTE3LjkgMTcuOSAwIDAgMSA4LjAyNyAxM0g0LjA2MmE4LjAxIDguMDEgMCAwIDAgNS42NDggNi42NjdNMTAuMDMgMTNjLjE1MSAyLjQzOS44NDggNC43MyAxLjk3IDYuNzUyQTE1LjkgMTUuOSAwIDAgMCAxMy45NyAxM3ptOS45MDggMGgtMy45NjVhMTcuOSAxNy45IDAgMCAxLTEuNjgzIDYuNjY3QTguMDEgOC4wMSAwIDAgMCAxOS45MzggMTNNNC4wNjIgMTFoMy45NjVBMTcuOSAxNy45IDAgMCAxIDkuNzEgNC4zMzNBOC4wMSA4LjAxIDAgMCAwIDQuMDYyIDExbTUuOTY5IDBoMy45MzhBMTUuOSAxNS45IDAgMCAwIDEyIDQuMjQ4QTE1LjkgMTUuOSAwIDAgMCAxMC4wMyAxMW00LjI1OS02LjY2N0ExNy45IDE3LjkgMCAwIDEgMTUuOTczIDExaDMuOTY1YTguMDEgOC4wMSAwIDAgMC01LjY0OC02LjY2NyIvPjwvc3ZnPg==)](https://cworld0.com/)&nbsp;
 [![RSS](https://img.shields.io/badge/RSS%20%e2%86%97-FFA500?style=flat&color=black&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZlM2QxIiBkPSJNMyAxN2E0IDQgMCAwIDEgNCA0SDN6bTAtN2M2LjA3NSAwIDExIDQuOTI1IDExIDExaC0yYTkgOSAwIDAgMC05LTl6bTAtN2M5Ljk0MSAwIDE4IDguMDU5IDE4IDE4aC0yYzAtOC44MzctNy4xNjMtMTYtMTYtMTZ6Ii8+PC9zdmc+)](https://cworld0.com/rss.xml)&nbsp;
@@ -16,21 +16,19 @@ Web Fullstack / Software Dev / Data Analysis
 
 ### Languages & frameworks
 
-[![Languages & frameworks](https://go-skill-icons.vercel.app/api/icons?i=r,go,lua,rust,php,matlab,unity,java,mysql,py,powershell,bash,c,cpp,cs,qt,dotnet,css,ts,astro,hexo,lit,react,nextjs,vue,nuxt,vite&perline=15)](https://github.com/LelouchFR/skill-icons)
+[![Languages & frameworks](https://go-skill-icons.vercel.app/api/icons?i=r,go,lua,rust,php,excel,matlab,unity,java,mysql,py,powershell,bash,c,cpp,cs,qt,ts,astro,hexo,lit,react,nextjs,vue,nuxt,vite&perline=15)](https://github.com/LelouchFR/skill-icons)
 
 <details>
 <summary style="cursor: pointer">More details...</summary>
 
 ### Platforms & support tools
 
-[![Platforms & support tools](https://go-skill-icons.vercel.app/api/icons?i=arch,debian,apple,windows,bun,cmake,docker,git,zellij,biome,prettier,androidstudio,neovim,vscode,zed,ps,lrc,pr,au,davinci&perline=15)](https://github.com/LelouchFR/skill-icons)
-
-</details>
-<br/>
+[![Platforms & support tools](https://go-skill-icons.vercel.app/api/icons?i=arch,debian,apple,windows,bun,cmake,docker,git,zellij,biome,prettier,androidstudio,neovim,vscode,ps,lrc,pr,au,davinci&perline=15)](https://github.com/LelouchFR/skill-icons)
 
 <!-- https://yhype.me/github/profile-views -->
-
 ![](https://hit.yhype.me/github/profile?account_id=37377181)
+
+</details>
 
 <!-- Analytics from: [OSS Insight](https://ossinsight.io/) -->
 <!-- Shields badge fom: https://github.com/alexandresanlim/Badges4-README.md-Profile -->
