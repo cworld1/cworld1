@@ -253,13 +253,6 @@
           "avatar": "https://blogoss.itxiaohui.top/logo -uhlgnmrf.png",
           "rss": "https://www.itxiaohui.top/rss.xml",
           "email": "193942343@qq.com"
-        },
-        {
-          "name": "Moningf's Blog",
-          "intro": "You only live once",
-          "link": "https://moningf.top/",
-          "avatar": "https://moningf.top/images/avatar.png",
-          "email": "themoningf@gmail.com"
         }
       ]
     },
@@ -267,6 +260,13 @@
       "id_name": "astro-theme-pure",
       "desc": "Astro theme pure links",
       "link_list": [
+        {
+          "name": "Moningf's Blog",
+          "intro": "You only live once",
+          "link": "https://moningf.top/",
+          "avatar": "https://moningf.top/images/avatar.png",
+          "email": "themoningf@gmail.com"
+        },
         {
           "name": "Arthals' ink",
           "intro": "所见高山远木，阔云流风；所幸岁月盈余，了无拘束",
