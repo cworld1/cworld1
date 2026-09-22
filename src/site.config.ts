@@ -114,6 +114,7 @@ export const integ: IntegrationUserConfig = {
   links: {
     // Friend logbook
     logbook: [
+      { date: '2026-09-22', content: '[青桔气球] left' },
       { date: '2026-09-22', content: "[Bore's Notes] left" },
       { date: '2025-02-25', content: '[Shuoer’s blog] lost' },
       { date: '2025-02-25', content: '[Xingluo’s Blog] returned' },
