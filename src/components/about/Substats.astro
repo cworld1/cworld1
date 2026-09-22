@@ -1,39 +1,39 @@
 ---
-import { type iconsType, socialLinks } from "astro-pure/types";
-import { Icon } from "astro-pure/user";
+import { type IconsType } from 'astro-pure/types'
+import { Icon } from 'astro-pure/user'
 
 interface SubstatsItem {
-	platform: string;
-	icon: (typeof socialLinks)[number];
-	color?: string;
-	link?: string;
-	text: string;
-	api?: string;
-	count?: number;
+  platform: string
+  icon: IconsType
+  color?: string
+  link?: string
+  text: string
+  api?: string
+  count?: number
 }
 
 type Props = {
-	stats: SubstatsItem[];
-};
-
-const { stats } = Astro.props as Props;
-
-async function fetchCount(item: SubstatsItem) {
-	if (!item.api) return;
-	try {
-		const response = await fetch(`https://api.swo.moe/stats/${item.api}`);
-		const data = await response.json();
-		if (data.failed) {
-			throw new Error(data.message);
-		} else {
-			item.count = data.count;
-		}
-	} catch (error) {
-		console.error(`Error in Substats fetching: ${error}`);
-	}
+  stats: SubstatsItem[]
 }
 
-await Promise.all(stats.map(fetchCount));
+const { stats } = Astro.props as Props
+
+async function fetchCount(item: SubstatsItem) {
+  if (!item.api) return
+  try {
+    const response = await fetch(`https://api.swo.moe/stats/${item.api}`)
+    const data = await response.json()
+    if (data.failed) {
+      throw new Error(data.message)
+    } else {
+      item.count = data.count
+    }
+  } catch (error) {
+    console.error(`Error in Substats fetching: ${error}`)
+  }
+}
+
+await Promise.all(stats.map(fetchCount))
 ---
 
 <div class='grid grid-cols-1 gap-3 rounded-xl border p-2 sm:grid-cols-2 sm:p-3'>
@@ -46,7 +46,7 @@ await Promise.all(stats.map(fetchCount));
         rel='noopener noreferrer'
       >
         <div class='flex items-center gap-3 rounded-lg border border-transparent px-3 py-2 transition-all hover:border-border hover:bg-muted'>
-          {icon && <Icon name={icon as iconsType} color={color} />}
+          {icon && <Icon name={icon} color={color} />}
           <div class='flex-1 text-foreground transition-colors group-hover:text-primary'>
             {platform}
           </div>
