@@ -89,15 +89,25 @@ export default defineConfig({
         dark: 'github-dark'
       },
       transformers: [
+        // Two copies of @shikijs/types (one under node_modules
+        // and another nested under @astrojs/markdown-remark → shiki).
         // Official transformers
+        // @ts-ignore this happens due to multiple versions of shiki types
         transformerNotationDiff(),
+        // @ts-ignore this happens due to multiple versions of shiki types
         transformerNotationHighlight(),
+        // @ts-ignore this happens due to multiple versions of shiki types
         transformerRemoveNotationEscape(),
         // Custom transformers
+        // @ts-ignore this happens due to multiple versions of shiki types
         updateStyle(),
+        // @ts-ignore this happens due to multiple versions of shiki types
         addTitle(),
+        // @ts-ignore this happens due to multiple versions of shiki types
         addLanguage(),
+        // @ts-ignore this happens due to multiple versions of shiki types
         addCopyButton(2000), // timeout in ms
+        // @ts-ignore this happens due to multiple versions of shiki types
         addCollapse(15) // max lines that needs to collapse
       ]
     }
