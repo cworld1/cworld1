@@ -114,6 +114,7 @@ export const integ: IntegrationUserConfig = {
   links: {
     // Friend logbook
     logbook: [
+      { date: '2026-09-22', content: "[Bore's Notes] left" },
       { date: '2025-02-25', content: '[Shuoer’s blog] lost' },
       { date: '2025-02-25', content: '[Xingluo’s Blog] returned' },
       { date: '2025-12-02', content: '[Xingluo’s Blog] lost' },
@@ -124,7 +125,6 @@ export const integ: IntegrationUserConfig = {
       { date: '2025-11-07', content: '[Kris Yan] stagnated' },
       { date: '2025-11-07', content: '[OrdisBlog] stagnated' },
       { date: '2025-11-07', content: '[猫羽のブログす] lost' },
-      { date: '2025-11-07', content: '[Wallleap] stagnated' },
       { date: '2025-11-07', content: "[CyanFalse's Weblog] stagnated" },
       { date: '2025-11-07', content: '[字节君] active' },
       { date: '2025-06-10', content: '[L1nSn0w] lost' },

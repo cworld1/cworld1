@@ -49,7 +49,7 @@
           "intro": "银汉凝睫上，璇玑坠瞳渊",
           "link": "https://owo.cab/",
           "avatar": "https://static.owo.cab/avatar.webp",
-          "rss": "https://owo.cab/atom.xml",
+          "rss": "https://owo.cab/feed",
           "email": "i@owo.cab"
         },
         {
@@ -114,14 +114,6 @@
           "rss": "https://www.zywvvd.com/atom.xml"
         },
         {
-          "name": "梦爱吃鱼",
-          "intro": "但愿日子清静抬头遇见的满是柔情",
-          "link": "https://blog.bsgun.cn/",
-          "avatar": "https://oss-cdn.bsgun.cn/logo/avatar.256.png",
-          "rss": "https://blog.bsgun.cn/atom.xml",
-          "email": "Ruoms@qq.com"
-        },
-        {
           "name": "清羽飞扬",
           "intro": "柳影曳曳，清酒孤灯，扬笔撒墨，心境如霜",
           "link": "https://blog.liushen.fun/",
@@ -144,14 +136,6 @@
           "email": "chenl@76.al"
         },
         {
-          "name": "XingJiのBlog",
-          "intro": "迄今所有人生都大写着失败，但不妨碍我继续向前✨",
-          "link": "https://love.xingji.fun/",
-          "avatar": "https://i.p-i.vip/47/20240920-66ed7b168c38c.jpg",
-          "email": "33260502459@qq.com",
-          "rss": "https://love.xingji.fun/atom.xml"
-        },
-        {
           "name": "一叶竹",
           "intro": "期待下雨天的夜晚",
           "link": "https://iyyz.org/",
@@ -166,13 +150,6 @@
           "rss": "https://blog.akiday.com/feed"
         },
         {
-          "name": "Oyiso's Blog",
-          "intro": "The shortest answer is doing",
-          "link": "https://oyiso.cn/",
-          "avatar": "https://oyiso.cn/logo.png",
-          "email": "me@onll.cn"
-        },
-        {
           "name": "Ethan",
           "intro": "Don’t stay awake for too long.",
           "link": "https://hanlife02.com/",
@@ -181,44 +158,12 @@
           "rss": "https://hanlife02.com/feed"
         },
         {
-          "name": "王小明的杂物堆",
-          "intro": "乱七八糟就像我一样",
-          "link": "https://imwzj.uk/",
-          "avatar": "https://avatars.githubusercontent.com/u/87957461",
-          "email": "zhuo0107@foxmail.com",
-          "rss": "https://imwzj.uk/rss.xml"
-        },
-        {
-          "name": "小码同学",
-          "intro": "喜欢的东西就努力去追求，万一成功了呢!",
-          "link": "https://blog.hikki.site/",
-          "avatar": "https://bu.dusays.com/2025/03/02/67c4531250141.jpg",
-          "email": "wu-tianliang@qq.com",
-          "rss": "https://blog.hikki.site/atom.xml"
-        },
-        {
           "name": "SUSU",
           "intro": "在数字的海洋中，寻找属于自己的星辰。",
           "link": "https://suus.me/",
           "avatar": "https://gravatar.loli.net/avatar/4924b5f45b6b65e4925c35f9056fe3e7?s=200",
           "email": "wu-tianliang@qq.com",
           "rss": "https://suus.me/atom.xml"
-        },
-        {
-          "name": "小林的小窝",
-          "intro": "分享技术、日常",
-          "link": "https://www.xiaorin.com/",
-          "avatar": "https://www.xiaorin.com/Image.jpg",
-          "email": "kylin930@xiaorin.com",
-          "rss": "https://www.xiaorin.com/feed"
-        },
-        {
-          "name": "字节君",
-          "intro": "热爱漫无边际，生活自有分寸",
-          "link": "https://blog.lvbyte.top/",
-          "avatar": "https://npm.elemecdn.com/lvbyte-cdn/20230104/%E8%8B%B9%E6%9E%9C.156l7bksen40.jpg",
-          "rss": "https://blog.lvbyte.top/atom.xml",
-          "email": "2015078351@qq.com"
         },
         {
           "name": "Zhen 的小站",
@@ -250,9 +195,31 @@
           "name": "小慧博客",
           "intro": "小慧的技术博客",
           "link": "https://www.itxiaohui.top/",
-          "avatar": "https://blogoss.itxiaohui.top/logo -uhlgnmrf.png",
+          "avatar": "https://blogoss.itxiaohui.top/logo%20-uhlgnmrf.png",
           "rss": "https://www.itxiaohui.top/rss.xml",
           "email": "193942343@qq.com"
+        },
+        {
+          "name": "愧怍",
+          "intro": "道阻且长，行则将至",
+          "link": "https://kuizuo.cn/",
+          "avatar": "https://kuizuo.cn/img/logo.png",
+          "rss": "https://kuizuo.cn/blog/rss.xml",
+          "email": "hi@kuizuo.cn",
+          "method": "email"
+        },
+        {
+          "name": "Wallleap",
+          "intro": "Luwang's Blog",
+          "link": "https://myblog.wallleap.cn/",
+          "avatar": "https://gravatar.loli.net/avatar/be1ccdcf025a92b98a92e331e1b3662a?size=256",
+          "email": "luwang@oicode.cn"
+        },
+        {
+          "name": "素心",
+          "intro": "我来互联网是当皇帝的",
+          "link": "https://haiy.space/",
+          "avatar": "https://haiy.space/uploads/images/2026/05/04ea5fddc86ae2ca.jpg"
         }
       ]
     },
@@ -284,18 +251,11 @@
           "rss": "https://www.lyt0112.com/rss.xml"
         },
         {
-          "name": "Avery’s Blog",
+          "name": "Shuoer’s blog",
           "intro": "Everyday is a new beginning",
           "link": "https://shuoer.top/",
           "avatar": "https://shuoer.top/favicon/favicon.ico",
           "rss": "https://shuoer.top/rss.xml"
-        },
-        {
-          "name": "梨尽兴",
-          "intro": "A place for peace",
-          "link": "https://blog.ljx.icu/",
-          "avatar": "https://blog.ljx.icu/favicon.png",
-          "rss": "https://blog.ljx.icu/rss.xml"
         },
         {
           "name": "星河避难所",
@@ -305,18 +265,29 @@
           "rss": "https://hejunjie.life/rss.xml"
         },
         {
-          "name": "The Sejolyn Memo",
-          "intro": "让其如是所示，而非如我所愿。",
-          "link": "https://sejolyn.fyi/",
-          "avatar": "https://sejolyn.fyi/avatar.jpg",
-          "rss": "https://sejolyn.fyi/rss.xml"
-        },
-        {
           "name": "Xingluo’s Blog",
           "intro": "内心丰盈者独行也如众",
           "link": "https://blog.en.icu/",
           "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1390882631&s=100",
           "rss": "https://blog.en.icu/rss.xml"
+        },
+        {
+          "name": "JiaXin’s Blog",
+          "intro": "心有山海，静而无边",
+          "link": "https://saneko.me/",
+          "avatar": "https://cdn.blog.saneko.me/Web/Avatar.png"
+        },
+        {
+          "name": "Saneko",
+          "intro": "Do the things that I like.",
+          "link": "https://jiaxin404.top/",
+          "avatar": "https://jiaxin404.top/images/avatar.jpg"
+        },
+        {
+          "name": "魈枫Hub",
+          "intro": "不筑悬崖之台，只凿深谷之基🐔",
+          "link": "https://xfhub.com/",
+          "avatar": "https://xfhub.com/avatar.png"
         }
       ]
     },
@@ -324,14 +295,6 @@
       "id_name": "inactive-links",
       "desc": "Inactive or rule-breaking friends",
       "link_list": [
-        {
-          "name": "Shuoer’s blog",
-          "intro": "透过窗户看星星",
-          "link": "https://www.averyc.top/",
-          "avatar": "https://www.averyc.top/images/image.jpg",
-          "rss": "https://www.averyc.top/rss.xml",
-          "status": "lost"
-        },
         {
           "name": "EvanNotFound",
           "intro": "Evan的部落阁，用香港记者的速度更新文章",
@@ -347,15 +310,6 @@
           "avatar": "https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png",
           "rss": "https://blog.imsyy.top/rss.xml",
           "email": "one@imsyy.top",
-          "status": "stagnated"
-        },
-        {
-          "name": "Bore's Notes",
-          "intro": "博观而约取，厚积而薄发",
-          "link": "https://bore.vip/",
-          "avatar": "https://bore.vip/img/avatar.jpg",
-          "rss": "https://bore.vip/rss2.xml",
-          "email": "455343442@qq.com",
           "status": "stagnated"
         },
         {
@@ -375,39 +329,89 @@
           "status": "stagnated"
         },
         {
-          "name": "猫羽のブログす",
-          "intro": "空中有颗星为你而亮",
-          "link": "https://www.maoyv.com/",
-          "avatar": "https://love-1307045615.cos.ap-chongqing.myqcloud.com/tx_574aac60d580c9f1_ys.jpg",
-          "rss": "https://www.maoyv.com/feed/",
-          "email": "shinanay@qq.com",
-          "status": "lost"
-        },
-        {
-          "name": "Wallleap",
-          "intro": "Luwang's Blog",
-          "link": "https://myblog.wallleap.cn/",
-          "avatar": "https://gravatar.loli.net/avatar/be1ccdcf025a92b98a92e331e1b3662a?size=256",
-          "email": "luwang@oicode.cn",
-          "status": "stagnated"
-        },
-        {
-          "name": "愧怍",
-          "intro": "道阻且长，行则将至",
-          "link": "https://kuizuo.cn/",
-          "avatar": "https://kuizuo.cn/img/logo.png",
-          "rss": "https://kuizuo.cn/blog/rss.xml",
-          "email": "hi@kuizuo.cn",
-          "method": "email",
-          "status": "request_update"
-        },
-        {
           "name": "CyanFalse's Weblog",
           "intro": "I'm CyanFalse,New to Here.",
           "link": "https://blog.eurekac.cn/",
           "avatar": "https://gravatar.loli.net/avatar/15359b6f2fe293366156959c8ab9476f",
           "email": "chenyf@cyfan.top",
           "status": "stagnated"
+        },
+        {
+          "name": "XingJiのBlog",
+          "intro": "迄今所有人生都大写着失败，但不妨碍我继续向前✨",
+          "link": "https://love.xingji.fun/",
+          "avatar": "https://i.p-i.vip/47/20240920-66ed7b168c38c.jpg",
+          "email": "33260502459@qq.com",
+          "rss": "https://love.xingji.fun/atom.xml",
+          "status": "lost"
+        },
+        {
+          "name": "梦爱吃鱼",
+          "intro": "但愿日子清静抬头遇见的满是柔情",
+          "link": "https://blog.bsgun.cn/",
+          "avatar": "https://oss-cdn.bsgun.cn/logo/avatar.256.png",
+          "rss": "https://blog.bsgun.cn/atom.xml",
+          "email": "Ruoms@qq.com",
+          "status": "stagnated"
+        },
+        {
+          "name": "王小明的杂物堆",
+          "intro": "乱七八糟就像我一样",
+          "link": "https://imwzj.uk/",
+          "avatar": "https://avatars.githubusercontent.com/u/87957461",
+          "email": "zhuo0107@foxmail.com",
+          "rss": "https://imwzj.uk/rss.xml",
+          "status": "lost"
+        },
+        {
+          "name": "字节君",
+          "intro": "热爱漫无边际，生活自有分寸",
+          "link": "https://blog.lvbyte.top/",
+          "avatar": "https://npm.elemecdn.com/lvbyte-cdn/20230104/%E8%8B%B9%E6%9E%9C.156l7bksen40.jpg",
+          "rss": "https://blog.lvbyte.top/atom.xml",
+          "email": "2015078351@qq.com",
+          "status": "stagnated"
+        },
+        {
+          "name": "小码同学",
+          "intro": "喜欢的东西就努力去追求，万一成功了呢!",
+          "link": "https://blog.hikki.site/",
+          "avatar": "https://bu.dusays.com/2025/03/02/67c4531250141.jpg",
+          "email": "wu-tianliang@qq.com",
+          "rss": "https://blog.hikki.site/atom.xml",
+          "status": "lost"
+        },
+        {
+          "name": "小林的小窝",
+          "intro": "分享技术、日常",
+          "link": "https://www.xiaorin.com/",
+          "avatar": "https://www.xiaorin.com/Image.jpg",
+          "email": "kylin930@xiaorin.com",
+          "rss": "https://www.xiaorin.com/feed",
+          "status": "lost"
+        },
+        {
+          "name": "Oyiso's Blog",
+          "intro": "The shortest answer is doing",
+          "link": "https://oyiso.cn/",
+          "avatar": "https://oyiso.cn/logo.png",
+          "email": "me@onll.cn",
+          "status": "stagnated"
+        },
+        {
+          "name": "The Sejolyn Memo",
+          "intro": "让其如是所示，而非如我所愿。",
+          "link": "https://sejolyn.fyi/",
+          "avatar": "https://sejolyn.fyi/avatar.jpg",
+          "rss": "https://sejolyn.fyi/rss.xml",
+          "status": "lost"
+        },
+        {
+          "name": "梨尽兴",
+          "intro": "A place for peace",
+          "link": "https://blog.ljx.icu/",
+          "avatar": "https://blog.ljx.icu/favicon.png",
+          "rss": "https://blog.ljx.icu/rss.xml"
         }
       ]
     },
