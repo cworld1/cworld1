@@ -252,8 +252,11 @@ export const integ: IntegrationUserConfig = {
       pageview: true,
       comment: true,
       locale: {
-        reaction0: 'Like',
-        placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
+        nick: 'Name',
+        mail: 'Email',
+        login: 'Login (Optional)',
+        placeholder: 'Comment here... (Email to receive replies)',
+        reaction0: 'Like'
       }
     }
   }
