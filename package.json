@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.9",
-    "@astrojs/rss": "4.0.18",
+    "@astrojs/rss": "4.0.19",
     "@astrojs/vercel": "10.0.6",
     "@waline/client": "^3.15.2",
     "astro": "6.2.1",
